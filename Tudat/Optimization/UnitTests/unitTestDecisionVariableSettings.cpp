@@ -67,14 +67,7 @@ BOOST_AUTO_TEST_CASE( testDecisionVariableFromTerminationSettings )
     bodyMap[ "SC1" ] = boost::shared_ptr< Body >();
     bodyMap[ "SC2" ] = boost::shared_ptr< Body >();
 
-    Eigen::Vector3d pos = bodyMap[ "SC1" ]->getPosition();
-    std::cout << pos[1] << std::endl;
-
-    pos = bodyMap[ "SC2" ]->getPosition();
-        std::cout << pos[1] << std::endl;
-
-
-    //setGlobalFrameBodyEphemerides( bodyMap, "SSB", "J2000" );
+    setGlobalFrameBodyEphemerides( bodyMap, "SSB", "J2000" );
 
     std::vector< std::string > bodiesToPropagate;
     bodiesToPropagate.push_back( "SC1" );
