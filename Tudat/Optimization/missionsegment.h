@@ -1,4 +1,0 @@
-#ifndef MISSIONSEGMENT_H
-#define MISSIONSEGMENT_H
-
-#endif // MISSIONSEGMENT_H

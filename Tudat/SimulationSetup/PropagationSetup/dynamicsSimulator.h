@@ -306,6 +306,19 @@ public:
         return propagationTerminationCondition_;
     }
 
+    //! Function to reset the object that checks whether the simulation has finished from
+    //! (newly defined) propagation settings.
+    /*!
+     *  Function to reset the object that checks whether the simulation has finished from
+     *  (newly defined) propagation settings.
+     */
+    void resetPropagationTerminationConditions( void )
+    {
+        propagationTerminationCondition_ = createPropagationTerminationConditions(
+                    propagatorSettings_->getTerminationSettings(), bodyMap_,
+                            integratorSettings_->initialTime_ );
+    }
+
 protected:
 
     //! This function updates the environment with the numerical solution of the propagation.

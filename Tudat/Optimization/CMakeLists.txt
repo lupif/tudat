@@ -11,15 +11,17 @@
 # Add source files.
 set(OPTIMIZATION_SOURCES
   "${SRCROOT}${OPTIMIZATIONDIR}/decisionVariableSettings.cpp"
-  "${SRCROOT}${OPTIMIZATIONDIR}/missionLinking.cpp"
+  "${SRCROOT}${OPTIMIZATIONDIR}/missionLinker.cpp"
   "${SRCROOT}${OPTIMIZATIONDIR}/objectiveFunction.cpp"
+  "${SRCROOT}${OPTIMIZATIONDIR}/missionSegmentSettings.cpp"
 )
 
 # Add header files.
 set(OPTIMIZATION_HEADERS 
   "${SRCROOT}${OPTIMIZATIONDIR}/decisionVariableSettings.h"
-  "${SRCROOT}${OPTIMIZATIONDIR}/missionLinking.h"
+  "${SRCROOT}${OPTIMIZATIONDIR}/missionLinker.h"
   "${SRCROOT}${OPTIMIZATIONDIR}/objectiveFunction.h"
+  "${SRCROOT}${OPTIMIZATIONDIR}/missionSegmentSettings.h"
 )
 
 # Add unit test files.
@@ -32,8 +34,23 @@ add_library(tudat_optimization STATIC ${OPTIMIZATION_SOURCES} ${OPTIMIZATION_HEA
 setup_tudat_library_target(tudat_optimization "${SRCROOT}${OPTIMIZATIONDIR}")
 
 # Add unit tests.
-add_executable(test_decision_variable_settings "${SRCROOT}${OPTIMIZATIONDIR}/UnitTests/unitTestDecisionVariableSettings.cpp")
-setup_custom_test_program(test_decision_variable_settings "${SRCROOT}${OPTIMIZATIONDIR}")
-target_link_libraries(test_decision_variable_settings ${TUDAT_PROPAGATION_LIBRARIES}
+add_executable(test_DecisionVariableSettings "${SRCROOT}${OPTIMIZATIONDIR}/UnitTests/unitTestDecisionVariableSettings.cpp")
+setup_custom_test_program(test_DecisionVariableSettings "${SRCROOT}${OPTIMIZATIONDIR}")
+target_link_libraries(test_DecisionVariableSettings ${TUDAT_PROPAGATION_LIBRARIES}
+    tudat_basic_astrodynamics pthread ${Boost_LIBRARIES} tudat_optimization )
+
+add_executable(test_ObjectiveFunctionSettings "${SRCROOT}${OPTIMIZATIONDIR}/UnitTests/unitTestObjectiveFunctionSettings.cpp")
+setup_custom_test_program(test_ObjectiveFunctionSettings "${SRCROOT}${OPTIMIZATIONDIR}")
+target_link_libraries(test_ObjectiveFunctionSettings ${TUDAT_PROPAGATION_LIBRARIES}
+    tudat_basic_astrodynamics pthread ${Boost_LIBRARIES} tudat_optimization )
+
+add_executable(test_MissionSegmentSettings "${SRCROOT}${OPTIMIZATIONDIR}/UnitTests/unitTestMissionSegmentSettings.cpp")
+setup_custom_test_program(test_MissionSegmentSettings "${SRCROOT}${OPTIMIZATIONDIR}")
+target_link_libraries(test_MissionSegmentSettings ${TUDAT_PROPAGATION_LIBRARIES}
+    tudat_basic_astrodynamics pthread ${Boost_LIBRARIES} tudat_optimization )
+
+add_executable(test_MissionLinker "${SRCROOT}${OPTIMIZATIONDIR}/UnitTests/unitTestMissionLinker.cpp")
+setup_custom_test_program(test_MissionLinker "${SRCROOT}${OPTIMIZATIONDIR}")
+target_link_libraries(test_MissionLinker ${TUDAT_PROPAGATION_LIBRARIES}
     tudat_basic_astrodynamics pthread ${Boost_LIBRARIES} tudat_optimization )
 

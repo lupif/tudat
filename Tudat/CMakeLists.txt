@@ -218,7 +218,7 @@ endif()
 # Set whether to use the GSL library integration with Tudat or not. If it not supplied by the
 # user (either directly as an argument or through the "UserSettings.txt" file, the default setting
 # is "OFF").
-if(NOT USE_PAGMO)
+if(NOT USE_PAGMO OR NOT USE_OPTIMIZATION_PACKAGE)
   message(STATUS "PaGMO disabled!")
   add_definitions(-DUSE_PAGMO=0)
 else()
@@ -234,7 +234,7 @@ else()
   endif( )
   
   message(STATUS "PaGMO include dir: ${PAGMO_INCLUDE_DIR}")
-  message(STATUS "PaGMO version :${PAGMO_VERSION}")
+  message(STATUS "PaGMO version: ${PAGMO_VERSION}")
 endif()
 
 
@@ -253,8 +253,8 @@ if(USE_GSL)
   list(APPEND TUDAT_EXTERNAL_LIBRARIES gsl)
 endif()
 
-if(USE_PAGMO)
-  list(APPEND TUDAT_EXTERNAL_LIBRARIES pagmo)
+if(USE_PAGMO OR USE_OPTIMIZATION_PACKAGE)
+  list(APPEND TUDAT_EXTERNAL_LIBRARIES pthread)
 endif()
 
 
@@ -269,14 +269,20 @@ list(APPEND TUDAT_ESTIMATION_LIBRARIES tudat_simulation_setup tudat_ground_stati
     tudat_electro_magnetism tudat_propulsion tudat_ephemerides tudat_numerical_integrators tudat_reference_frames
     tudat_basic_astrodynamics tudat_basic_mathematics tudat_propagators tudat_input_output tudat_basics ${TUDAT_EXTERNAL_LIBRARIES})
 
+# add optimization library
+if(USE_OPTIMIZATION_PACKAGE)
+  list(APPEND TUDAT_PROPAGATION_LIBRARIES tudat_optimization)
+  list(APPEND TUDAT_ESTIMATION_LIBRARIES tudat_optimization)
+endif()
+
 
 
 # Set sub-directories.
 set(SUBDIRS ${APPLICATIONSDIR} ${ASTRODYNAMICSDIR} ${BASICSDIR} ${INPUTOUTPUTDIR} ${MATHEMATICSDIR} ${EXTERNALDIR} ${SIMULATIONSETUPDIR})
 
 # add optimization
-if(USE_PAGMO)
-  #list(APPEND SUBDIRS ${OPTIMIZATIONDIR})
+if(USE_OPTIMIZATION_PACKAGE)
+  list(APPEND SUBDIRS ${OPTIMIZATIONDIR})
 endif()
 
 # Add sub-directories to CMake process.

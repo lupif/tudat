@@ -218,7 +218,7 @@ struct SingleCartesianComponentDecisionVariableSettings : public SingleDecisionV
 struct SingleKeplerElementDecisionVariableSettings : public SingleDecisionVariableSettings{
 
     SingleKeplerElementDecisionVariableSettings( orbital_elements::KeplerianElements keplerElement,
-                                                 std::string& centralBody, double lowerBoundary,
+                                                 std::string centralBody, double lowerBoundary,
                                                  double upperBoundary ) :
         SingleDecisionVariableSettings( singleKeplerOrbitalElement, lowerBoundary, upperBoundary),
         centralBody_( centralBody ), keplerElement_(keplerElement) { }
@@ -245,35 +245,16 @@ struct SingleSphericalOrbitalElementDecisionVariableSettings : public SingleDeci
 };
 
 
-//! Function
-/*!
- * \brief getInitialOrbitalState
- * \param dynamicsSimulator
- * \param selectedBodyName
- * \param initialSegmentSize
- * \return
- */
-Eigen::Vector6d getInitialOrbitalState( boost::shared_ptr< propagators::SingleArcDynamicsSimulator< > > dynamicsSimulator,
-                                        const std::string& selectedBodyName, int* initialSegmentSize );
+struct DecisionVariableSettings{
 
+    DecisionVariableSettings( std::vector< boost::shared_ptr< SingleDecisionVariableSettings > >
+            multiDecisionVariableSettings ) : decisionVariableSettings_( multiDecisionVariableSettings )
+    { }
 
-void resetOrbitalState( boost::shared_ptr< propagators::SingleArcDynamicsSimulator< > > dynamicsSimulator,
-                        Eigen::Vector6d& modifiedState, int initialSegmentSize );
+    std::vector< boost::shared_ptr< SingleDecisionVariableSettings > > decisionVariableSettings_;
 
-void modifyCartesianComponent( orbital_elements::CartesianElements cartesianComponent,
-                               boost::shared_ptr< propagators::SingleArcDynamicsSimulator< > > dynamicsSimulator,
-                               const std::string& selectedBodyName, const double newValue );
+};
 
-
-void modifyKeplerElement(orbital_elements::KeplerianElements keplerElement,
-                         boost::shared_ptr< propagators::SingleArcDynamicsSimulator< > > dynamicsSimulator,
-                         const std::string& selectedBodyName, const std::string& centralBody,
-                         const double newValue );
-
-
-void modifySphericalComponent( orbital_elements::SphericalOrbitalStateElements sphericalOrbitalElement,
-                               boost::shared_ptr< propagators::SingleArcDynamicsSimulator< > > dynamicsSimulator,
-                               const std::string& selectedBodyName, const double newValue );
 
 }
 
