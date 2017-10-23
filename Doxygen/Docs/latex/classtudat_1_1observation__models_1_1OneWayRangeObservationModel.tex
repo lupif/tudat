@@ -1,0 +1,165 @@
+\hypertarget{classtudat_1_1observation__models_1_1OneWayRangeObservationModel}{}\section{tudat\+:\+:observation\+\_\+models\+:\+:One\+Way\+Range\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ Class Template Reference}
+\label{classtudat_1_1observation__models_1_1OneWayRangeObservationModel}\index{tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$@{tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}}
+
+
+Class for simulating one-\/way range observables.  
+
+
+
+
+{\ttfamily \#include $<$one\+Way\+Range\+Observation\+Model.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:observation\+\_\+models\+:\+:One\+Way\+Range\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1observation__models_1_1OneWayRangeObservationModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:observation\+\_\+models\+:\+:One\+Way\+Range\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1observation__models_1_1OneWayRangeObservationModel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ {\bfseries State\+Type}\hypertarget{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_acbbf08e274c07f3669f92a59fa75248e}{}\label{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_acbbf08e274c07f3669f92a59fa75248e}
+
+\item 
+typedef Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 3, 1 $>$ {\bfseries Position\+Type}\hypertarget{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_a4c1e8b7673cf6811660d3639bbe8b560}{}\label{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_a4c1e8b7673cf6811660d3639bbe8b560}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_a250d02c750c666f8b2dc5622aeeb8dc5}{One\+Way\+Range\+Observation\+Model} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator}{observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ $>$ light\+Time\+Calculator, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1ObservationBias}{Observation\+Bias}$<$ 1 $>$ $>$ observation\+Bias\+Calculator=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_ab70b2fe05931a4c321fd11b2812e9f2b}{$\sim$\+One\+Way\+Range\+Observation\+Model} ()\hypertarget{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_ab70b2fe05931a4c321fd11b2812e9f2b}{}\label{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_ab70b2fe05931a4c321fd11b2812e9f2b}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ Observation\+Scalar\+Type, 1, 1 $>$ \hyperlink{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_a5769a9cb140e316bbd5f7d18009bfbbe}{compute\+Ideal\+Observations} (const Time\+Type time, const Link\+End\+Type link\+End\+Associated\+With\+Time)
+\begin{DoxyCompactList}\small\item\em Function to compute ideal one-\/way range observation at given time. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ Observation\+Scalar\+Type, 1, 1 $>$ \hyperlink{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_a114b3c63a963459b4f0cdfb314d10401}{compute\+Ideal\+Observations\+With\+Link\+End\+Data} (const Time\+Type time, const Link\+End\+Type link\+End\+Associated\+With\+Time, std\+::vector$<$ Time\+Type $>$ \&link\+End\+Times, std\+::vector$<$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ $>$ \&link\+End\+States)
+\begin{DoxyCompactList}\small\item\em Function to compute one-\/way range observable without any corrections. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator}{observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ $>$ \hyperlink{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_a5ce2b4ba94b5a2a230953142a194314e}{get\+Light\+Time\+Calculator} ()
+\begin{DoxyCompactList}\small\item\em Function to get the object to calculate light time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Observation\+Scalar\+Type = double, typename Time\+Type = double, typename State\+Scalar\+Type = Observation\+Scalar\+Type$>$\\*
+class tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}
+
+Class for simulating one-\/way range observables. 
+
+Class for simulating one-\/way range, based on light-\/time and light-\/time corrections. The one-\/way range is defined as the light time multiplied by speed of light. The user may add observation biases to model system-\/dependent deviations between measured and true observation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model}!One\+Way\+Range\+Observation\+Model@{One\+Way\+Range\+Observation\+Model}}
+\index{One\+Way\+Range\+Observation\+Model@{One\+Way\+Range\+Observation\+Model}!tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model}}
+\subsubsection[{\texorpdfstring{One\+Way\+Range\+Observation\+Model(const boost\+::shared\+\_\+ptr$<$ observation\+\_\+models\+::\+Light\+Time\+Calculator$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ $>$ light\+Time\+Calculator, const boost\+::shared\+\_\+ptr$<$ Observation\+Bias$<$ 1 $>$ $>$ observation\+Bias\+Calculator=\+N\+U\+L\+L)}{OneWayRangeObservationModel(const boost::shared_ptr< observation_models::LightTimeCalculator< ObservationScalarType, TimeType, StateScalarType > > lightTimeCalculator, const boost::shared_ptr< ObservationBias< 1 > > observationBiasCalculator=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ {\bf tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::{\bf One\+Way\+Range\+Observation\+Model} (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ $>$}]{light\+Time\+Calculator, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Observation\+Bias}$<$ 1 $>$ $>$}]{observation\+Bias\+Calculator = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_a250d02c750c666f8b2dc5622aeeb8dc5}{}\label{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_a250d02c750c666f8b2dc5622aeeb8dc5}
+
+
+Constructor. 
+
+Constructor, 
+\begin{DoxyParams}{Parameters}
+{\em light\+Time\+Calculator} & Object to compute the light-\/time (including any corrections w.\+r.\+t. Euclidean case) \\
+\hline
+{\em observation\+Bias\+Calculator} & Object for calculating system-\/dependent errors in the observable, i.\+e. deviations from the physically ideal observable between reference points (default none). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model}!compute\+Ideal\+Observations@{compute\+Ideal\+Observations}}
+\index{compute\+Ideal\+Observations@{compute\+Ideal\+Observations}!tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model}}
+\subsubsection[{\texorpdfstring{compute\+Ideal\+Observations(const Time\+Type time, const Link\+End\+Type link\+End\+Associated\+With\+Time)}{computeIdealObservations(const TimeType time, const LinkEndType linkEndAssociatedWithTime)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ Eigen\+::\+Matrix$<$ Observation\+Scalar\+Type, 1, 1 $>$ {\bf tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::compute\+Ideal\+Observations (
+\begin{DoxyParamCaption}
+\item[{const Time\+Type}]{time, }
+\item[{const Link\+End\+Type}]{link\+End\+Associated\+With\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_a5769a9cb140e316bbd5f7d18009bfbbe}{}\label{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_a5769a9cb140e316bbd5f7d18009bfbbe}
+
+
+Function to compute ideal one-\/way range observation at given time. 
+
+This function compute ideal the one-\/way observation at a given time. The time argument can be either the reception or transmission time (defined by link\+End\+Associated\+With\+Time input) Note that this observable does include e.\+g. light-\/time corrections, which represent physically true corrections. It does not include e.\+g. system-\/dependent measurement. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which observation is to be simulated \\
+\hline
+{\em link\+End\+Associated\+With\+Time} & Link end at which given time is valid, i.\+e. link end for which associated time is kept constant (to input value) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Calculated observed one-\/way range value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1observation__models_1_1ObservationModel_a72d060cec8d6cc8f0e6109d6d09e53ec}{tudat\+::observation\+\_\+models\+::\+Observation\+Model$<$ 1, Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}.
+
+\index{tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model}!compute\+Ideal\+Observations\+With\+Link\+End\+Data@{compute\+Ideal\+Observations\+With\+Link\+End\+Data}}
+\index{compute\+Ideal\+Observations\+With\+Link\+End\+Data@{compute\+Ideal\+Observations\+With\+Link\+End\+Data}!tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model}}
+\subsubsection[{\texorpdfstring{compute\+Ideal\+Observations\+With\+Link\+End\+Data(const Time\+Type time, const Link\+End\+Type link\+End\+Associated\+With\+Time, std\+::vector$<$ Time\+Type $>$ \&link\+End\+Times, std\+::vector$<$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ $>$ \&link\+End\+States)}{computeIdealObservationsWithLinkEndData(const TimeType time, const LinkEndType linkEndAssociatedWithTime, std::vector< TimeType > &linkEndTimes, std::vector< Eigen::Matrix< StateScalarType, 6, 1 > > &linkEndStates)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ Eigen\+::\+Matrix$<$ Observation\+Scalar\+Type, 1, 1 $>$ {\bf tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::compute\+Ideal\+Observations\+With\+Link\+End\+Data (
+\begin{DoxyParamCaption}
+\item[{const Time\+Type}]{time, }
+\item[{const Link\+End\+Type}]{link\+End\+Associated\+With\+Time, }
+\item[{std\+::vector$<$ Time\+Type $>$ \&}]{link\+End\+Times, }
+\item[{std\+::vector$<$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ $>$ \&}]{link\+End\+States}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_a114b3c63a963459b4f0cdfb314d10401}{}\label{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_a114b3c63a963459b4f0cdfb314d10401}
+
+
+Function to compute one-\/way range observable without any corrections. 
+
+Function to compute one-\/way range observable without any corrections, i.\+e. the true physical range as computed from the defined link ends. Note that this observable does include light-\/time corrections, which represent physically true corrections. It does not include e.\+g. system-\/dependent measurement errors, such as biases or clock errors. The times and states of the link ends are also returned in full precision (determined by class template arguments). These states and times are returned by reference. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which observable is to be evaluated. \\
+\hline
+{\em link\+End\+Associated\+With\+Time} & Link end at which given time is valid, i.\+e. link end for which associated time is kept constant (to input value) \\
+\hline
+{\em link\+End\+Times} & List of times at each link end during observation. \\
+\hline
+{\em link\+End\+States} & List of states at each link end during observation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ideal one-\/way range observable. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1observation__models_1_1ObservationModel_aaa82da2eb90342259242e4cf06c7e3ff}{tudat\+::observation\+\_\+models\+::\+Observation\+Model$<$ 1, Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}.
+
+\index{tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model}!get\+Light\+Time\+Calculator@{get\+Light\+Time\+Calculator}}
+\index{get\+Light\+Time\+Calculator@{get\+Light\+Time\+Calculator}!tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model}}
+\subsubsection[{\texorpdfstring{get\+Light\+Time\+Calculator()}{getLightTimeCalculator()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ boost\+::shared\+\_\+ptr$<$ {\bf observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ $>$ {\bf tudat\+::observation\+\_\+models\+::\+One\+Way\+Range\+Observation\+Model}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::get\+Light\+Time\+Calculator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_a5ce2b4ba94b5a2a230953142a194314e}{}\label{classtudat_1_1observation__models_1_1OneWayRangeObservationModel_a5ce2b4ba94b5a2a230953142a194314e}
+
+
+Function to get the object to calculate light time. 
+
+Function to get the object to calculate light time. \begin{DoxyReturn}{Returns}
+Object to calculate light time. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Observation\+Models/one\+Way\+Range\+Observation\+Model.\+h\end{DoxyCompactItemize}

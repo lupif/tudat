@@ -1,0 +1,89 @@
+\hypertarget{structtudat_1_1optimization_1_1SingleKeplerElementDecisionVariableSettings}{}\section{tudat\+:\+:optimization\+:\+:Single\+Kepler\+Element\+Decision\+Variable\+Settings Struct Reference}
+\label{structtudat_1_1optimization_1_1SingleKeplerElementDecisionVariableSettings}\index{tudat\+::optimization\+::\+Single\+Kepler\+Element\+Decision\+Variable\+Settings@{tudat\+::optimization\+::\+Single\+Kepler\+Element\+Decision\+Variable\+Settings}}
+
+
+Class to define a kepler element as decision variable.  
+
+
+
+
+{\ttfamily \#include $<$decision\+Variable\+Settings.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:optimization\+:\+:Single\+Kepler\+Element\+Decision\+Variable\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{structtudat_1_1optimization_1_1SingleKeplerElementDecisionVariableSettings__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:optimization\+:\+:Single\+Kepler\+Element\+Decision\+Variable\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{structtudat_1_1optimization_1_1SingleKeplerElementDecisionVariableSettings__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtudat_1_1optimization_1_1SingleKeplerElementDecisionVariableSettings_a11ff32aec7a2ed9a6f9d623b24081efc}{Single\+Kepler\+Element\+Decision\+Variable\+Settings} (orbital\+\_\+elements\+::\+Keplerian\+Elements kepler\+Element, std\+::string central\+Body, double lower\+Boundary, double upper\+Boundary, std\+::string associated\+Body)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{structtudat_1_1optimization_1_1SingleKeplerElementDecisionVariableSettings_a8758bf783611a52e2479f0f0e7a36ba0}{central\+Body\+\_\+}
+\item 
+orbital\+\_\+elements\+::\+Keplerian\+Elements \hyperlink{structtudat_1_1optimization_1_1SingleKeplerElementDecisionVariableSettings_ae4d07a0a1ae7e6f25579411680f6d76a}{kepler\+Element\+\_\+}\hypertarget{structtudat_1_1optimization_1_1SingleKeplerElementDecisionVariableSettings_ae4d07a0a1ae7e6f25579411680f6d76a}{}\label{structtudat_1_1optimization_1_1SingleKeplerElementDecisionVariableSettings_ae4d07a0a1ae7e6f25579411680f6d76a}
+
+\begin{DoxyCompactList}\small\item\em Kepler element chosen among the 6 defining orbit and anomaly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to define a kepler element as decision variable. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::optimization\+::\+Single\+Kepler\+Element\+Decision\+Variable\+Settings@{tudat\+::optimization\+::\+Single\+Kepler\+Element\+Decision\+Variable\+Settings}!Single\+Kepler\+Element\+Decision\+Variable\+Settings@{Single\+Kepler\+Element\+Decision\+Variable\+Settings}}
+\index{Single\+Kepler\+Element\+Decision\+Variable\+Settings@{Single\+Kepler\+Element\+Decision\+Variable\+Settings}!tudat\+::optimization\+::\+Single\+Kepler\+Element\+Decision\+Variable\+Settings@{tudat\+::optimization\+::\+Single\+Kepler\+Element\+Decision\+Variable\+Settings}}
+\subsubsection[{\texorpdfstring{Single\+Kepler\+Element\+Decision\+Variable\+Settings(orbital\+\_\+elements\+::\+Keplerian\+Elements kepler\+Element, std\+::string central\+Body, double lower\+Boundary, double upper\+Boundary, std\+::string associated\+Body)}{SingleKeplerElementDecisionVariableSettings(orbital_elements::KeplerianElements keplerElement, std::string centralBody, double lowerBoundary, double upperBoundary, std::string associatedBody)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::optimization\+::\+Single\+Kepler\+Element\+Decision\+Variable\+Settings\+::\+Single\+Kepler\+Element\+Decision\+Variable\+Settings (
+\begin{DoxyParamCaption}
+\item[{orbital\+\_\+elements\+::\+Keplerian\+Elements}]{kepler\+Element, }
+\item[{std\+::string}]{central\+Body, }
+\item[{double}]{lower\+Boundary, }
+\item[{double}]{upper\+Boundary, }
+\item[{std\+::string}]{associated\+Body}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structtudat_1_1optimization_1_1SingleKeplerElementDecisionVariableSettings_a11ff32aec7a2ed9a6f9d623b24081efc}{}\label{structtudat_1_1optimization_1_1SingleKeplerElementDecisionVariableSettings_a11ff32aec7a2ed9a6f9d623b24081efc}
+
+
+Constructor. 
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em kepler\+Element} & Kepler element chosen among the 6 defining orbit and anomaly \\
+\hline
+{\em central\+Body} & name of the central massive body as stored in the dynamics simulator\textquotesingle{}s body\+Map around which the (osculating) orbit is defined \\
+\hline
+{\em lower\+Boundary} & lower boundary of decision variable \\
+\hline
+{\em upper\+Boundary} & upper boundary of decision variable \\
+\hline
+{\em associated\+Body} & name of the simulated body as stored in the dynamics simulator\textquotesingle{}s body\+Map. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::optimization\+::\+Single\+Kepler\+Element\+Decision\+Variable\+Settings@{tudat\+::optimization\+::\+Single\+Kepler\+Element\+Decision\+Variable\+Settings}!central\+Body\+\_\+@{central\+Body\+\_\+}}
+\index{central\+Body\+\_\+@{central\+Body\+\_\+}!tudat\+::optimization\+::\+Single\+Kepler\+Element\+Decision\+Variable\+Settings@{tudat\+::optimization\+::\+Single\+Kepler\+Element\+Decision\+Variable\+Settings}}
+\subsubsection[{\texorpdfstring{central\+Body\+\_\+}{centralBody_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::optimization\+::\+Single\+Kepler\+Element\+Decision\+Variable\+Settings\+::central\+Body\+\_\+}\hypertarget{structtudat_1_1optimization_1_1SingleKeplerElementDecisionVariableSettings_a8758bf783611a52e2479f0f0e7a36ba0}{}\label{structtudat_1_1optimization_1_1SingleKeplerElementDecisionVariableSettings_a8758bf783611a52e2479f0f0e7a36ba0}
+central\+Body name of the central massive body as stored in the dynamics simulator\textquotesingle{}s body\+Map around which the (osculating) orbit is defined 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Optimization/decision\+Variable\+Settings.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,140 @@
+\hypertarget{classtudat_1_1observation__models_1_1PositionObservationModel}{}\section{tudat\+:\+:observation\+\_\+models\+:\+:Position\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ Class Template Reference}
+\label{classtudat_1_1observation__models_1_1PositionObservationModel}\index{tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$@{tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}}
+
+
+Class for simulating observations of three-\/dimensional position.  
+
+
+
+
+{\ttfamily \#include $<$position\+Observation\+Model.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:observation\+\_\+models\+:\+:Position\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1observation__models_1_1PositionObservationModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:observation\+\_\+models\+:\+:Position\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1observation__models_1_1PositionObservationModel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1observation__models_1_1PositionObservationModel_acaf9d4df7091073b5234b099358afad8}{Position\+Observation\+Model} (const boost\+::function$<$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$(const Time\+Type \&) $>$ state\+Function, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1ObservationBias}{Observation\+Bias}$<$ 3 $>$ $>$ observation\+Bias\+Calculator=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1observation__models_1_1PositionObservationModel_a45cde15f6e1d5ee638b8e5e16eff7f1f}{$\sim$\+Position\+Observation\+Model} ()\hypertarget{classtudat_1_1observation__models_1_1PositionObservationModel_a45cde15f6e1d5ee638b8e5e16eff7f1f}{}\label{classtudat_1_1observation__models_1_1PositionObservationModel_a45cde15f6e1d5ee638b8e5e16eff7f1f}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ Observation\+Scalar\+Type, 3, 1 $>$ \hyperlink{classtudat_1_1observation__models_1_1PositionObservationModel_af5cb758c7a81aeac27e89e4c933838ea}{compute\+Ideal\+Observations} (const Time\+Type time, const Link\+End\+Type link\+End\+Associated\+With\+Time=observed\+\_\+body)
+\begin{DoxyCompactList}\small\item\em Function to compute ideal position observation at given time. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 3, 1 $>$ \hyperlink{classtudat_1_1observation__models_1_1PositionObservationModel_ac0d1c09733ce49796321973755908173}{compute\+Ideal\+Observations\+With\+Link\+End\+Data} (const Time\+Type time, const Link\+End\+Type link\+End\+Associated\+With\+Time, std\+::vector$<$ Time\+Type $>$ \&link\+End\+Times, std\+::vector$<$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ $>$ \&link\+End\+States)
+\begin{DoxyCompactList}\small\item\em Function to compute ideal position observation at given time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Observation\+Scalar\+Type = double, typename Time\+Type = double, typename State\+Scalar\+Type = Observation\+Scalar\+Type$>$\\*
+class tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}
+
+Class for simulating observations of three-\/dimensional position. 
+
+Class for simulating observations of three-\/dimensional position. This observable is typically not realized in practice, but its use can be very valuable in simulation studies 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model}!Position\+Observation\+Model@{Position\+Observation\+Model}}
+\index{Position\+Observation\+Model@{Position\+Observation\+Model}!tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model}}
+\subsubsection[{\texorpdfstring{Position\+Observation\+Model(const boost\+::function$<$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$(const Time\+Type \&) $>$ state\+Function, const boost\+::shared\+\_\+ptr$<$ Observation\+Bias$<$ 3 $>$ $>$ observation\+Bias\+Calculator=\+N\+U\+L\+L)}{PositionObservationModel(const boost::function< Eigen::Matrix< StateScalarType, 6, 1 >(const TimeType &) > stateFunction, const boost::shared_ptr< ObservationBias< 3 > > observationBiasCalculator=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ {\bf tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::{\bf Position\+Observation\+Model} (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$(const Time\+Type \&) $>$}]{state\+Function, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Observation\+Bias}$<$ 3 $>$ $>$}]{observation\+Bias\+Calculator = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1observation__models_1_1PositionObservationModel_acaf9d4df7091073b5234b099358afad8}{}\label{classtudat_1_1observation__models_1_1PositionObservationModel_acaf9d4df7091073b5234b099358afad8}
+
+
+Constructor. 
+
+Constructor, 
+\begin{DoxyParams}{Parameters}
+{\em state\+Function} & Function that returns the Cartesian state of the observed body as a function of time. \\
+\hline
+{\em observation\+Bias\+Calculator} & Object for calculating system-\/dependent errors in the observable, i.\+e. deviations from the physically ideal observable (default none). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model}!compute\+Ideal\+Observations@{compute\+Ideal\+Observations}}
+\index{compute\+Ideal\+Observations@{compute\+Ideal\+Observations}!tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model}}
+\subsubsection[{\texorpdfstring{compute\+Ideal\+Observations(const Time\+Type time, const Link\+End\+Type link\+End\+Associated\+With\+Time=observed\+\_\+body)}{computeIdealObservations(const TimeType time, const LinkEndType linkEndAssociatedWithTime=observed_body)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ Eigen\+::\+Matrix$<$ Observation\+Scalar\+Type, 3, 1 $>$ {\bf tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::compute\+Ideal\+Observations (
+\begin{DoxyParamCaption}
+\item[{const Time\+Type}]{time, }
+\item[{const Link\+End\+Type}]{link\+End\+Associated\+With\+Time = {\ttfamily observed\+\_\+body}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1observation__models_1_1PositionObservationModel_af5cb758c7a81aeac27e89e4c933838ea}{}\label{classtudat_1_1observation__models_1_1PositionObservationModel_af5cb758c7a81aeac27e89e4c933838ea}
+
+
+Function to compute ideal position observation at given time. 
+
+This function computes the ideal position observation at a given time (without biases). 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which observation is to be simulated \\
+\hline
+{\em link\+End\+Associated\+With\+Time} & Link end at which given time is valid (must be observed\+\_\+body for this derived class) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Calculated observed position of body. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1observation__models_1_1ObservationModel_a72d060cec8d6cc8f0e6109d6d09e53ec}{tudat\+::observation\+\_\+models\+::\+Observation\+Model$<$ 3, Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}.
+
+\index{tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model}!compute\+Ideal\+Observations\+With\+Link\+End\+Data@{compute\+Ideal\+Observations\+With\+Link\+End\+Data}}
+\index{compute\+Ideal\+Observations\+With\+Link\+End\+Data@{compute\+Ideal\+Observations\+With\+Link\+End\+Data}!tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model}}
+\subsubsection[{\texorpdfstring{compute\+Ideal\+Observations\+With\+Link\+End\+Data(const Time\+Type time, const Link\+End\+Type link\+End\+Associated\+With\+Time, std\+::vector$<$ Time\+Type $>$ \&link\+End\+Times, std\+::vector$<$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ $>$ \&link\+End\+States)}{computeIdealObservationsWithLinkEndData(const TimeType time, const LinkEndType linkEndAssociatedWithTime, std::vector< TimeType > &linkEndTimes, std::vector< Eigen::Matrix< StateScalarType, 6, 1 > > &linkEndStates)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 3, 1 $>$ {\bf tudat\+::observation\+\_\+models\+::\+Position\+Observation\+Model}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::compute\+Ideal\+Observations\+With\+Link\+End\+Data (
+\begin{DoxyParamCaption}
+\item[{const Time\+Type}]{time, }
+\item[{const Link\+End\+Type}]{link\+End\+Associated\+With\+Time, }
+\item[{std\+::vector$<$ Time\+Type $>$ \&}]{link\+End\+Times, }
+\item[{std\+::vector$<$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ $>$ \&}]{link\+End\+States}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1observation__models_1_1PositionObservationModel_ac0d1c09733ce49796321973755908173}{}\label{classtudat_1_1observation__models_1_1PositionObservationModel_ac0d1c09733ce49796321973755908173}
+
+
+Function to compute ideal position observation at given time. 
+
+This function computes the ideal position observation at a given time (without biases). The times and states of the link ends are also returned in full precision (determined by class template arguments). These states and times are returned by reference. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which observable is to be evaluated. \\
+\hline
+{\em link\+End\+Associated\+With\+Time} & Link end at which given time is valid (must be observed\+\_\+body for this derived class) \\
+\hline
+{\em link\+End\+Times} & List of times at each link end during observation. \\
+\hline
+{\em link\+End\+States} & List of states at each link end during observation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ideal position observable. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1observation__models_1_1ObservationModel_aaa82da2eb90342259242e4cf06c7e3ff}{tudat\+::observation\+\_\+models\+::\+Observation\+Model$<$ 3, Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Observation\+Models/position\+Observation\+Model.\+h\end{DoxyCompactItemize}

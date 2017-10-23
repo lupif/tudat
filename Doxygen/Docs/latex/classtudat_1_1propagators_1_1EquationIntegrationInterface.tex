@@ -1,0 +1,69 @@
+\hypertarget{classtudat_1_1propagators_1_1EquationIntegrationInterface}{}\section{tudat\+:\+:propagators\+:\+:Equation\+Integration\+Interface$<$ State\+Type, Time\+Type $>$ Class Template Reference}
+\label{classtudat_1_1propagators_1_1EquationIntegrationInterface}\index{tudat\+::propagators\+::\+Equation\+Integration\+Interface$<$ State\+Type, Time\+Type $>$@{tudat\+::propagators\+::\+Equation\+Integration\+Interface$<$ State\+Type, Time\+Type $>$}}
+
+
+Interface class for integrating some state derivative function.  
+
+
+
+
+{\ttfamily \#include $<$integrate\+Equations.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classtudat_1_1propagators_1_1EquationIntegrationInterface_ad2a5d747afded7138730b957f74a3624}{integrate\+Equations} (boost\+::function$<$ State\+Type(const Time\+Type, const State\+Type \&) $>$ state\+Derivative\+Function, std\+::map$<$ Time\+Type, State\+Type $>$ \&solution\+History, const State\+Type initial\+State, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1numerical__integrators_1_1IntegratorSettings}{numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ Time\+Type $>$ $>$ integrator\+Settings, const boost\+::function$<$ bool(const double) $>$ stop\+Propagation\+Function, std\+::map$<$ Time\+Type, Eigen\+::\+Vector\+Xd $>$ \&dependent\+Variable\+History, const boost\+::function$<$ Eigen\+::\+Vector\+Xd() $>$ dependent\+Variable\+Function=boost\+::function$<$ Eigen\+::\+Vector\+Xd() $>$(), const Time\+Type print\+Interval=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Function to numerically integrate a given first order differential equation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename State\+Type = Eigen\+::\+Matrix\+Xd, typename Time\+Type = double$>$\\*
+class tudat\+::propagators\+::\+Equation\+Integration\+Interface$<$ State\+Type, Time\+Type $>$}
+
+Interface class for integrating some state derivative function. 
+
+Interface class for integrating some state derivative function.. This class is used instead of a single templated free function to allow Observation\+Model the integrator etc. to adapt its time step variable to long double if the \hyperlink{classtudat_1_1Time}{Time} object is used as Time\+Type. This class has template specializations for double/\+Time Time\+Type, and contains a single integrate\+Equations function that performs the required operation. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::propagators\+::\+Equation\+Integration\+Interface@{tudat\+::propagators\+::\+Equation\+Integration\+Interface}!integrate\+Equations@{integrate\+Equations}}
+\index{integrate\+Equations@{integrate\+Equations}!tudat\+::propagators\+::\+Equation\+Integration\+Interface@{tudat\+::propagators\+::\+Equation\+Integration\+Interface}}
+\subsubsection[{\texorpdfstring{integrate\+Equations(boost\+::function$<$ State\+Type(const Time\+Type, const State\+Type \&) $>$ state\+Derivative\+Function, std\+::map$<$ Time\+Type, State\+Type $>$ \&solution\+History, const State\+Type initial\+State, const boost\+::shared\+\_\+ptr$<$ numerical\+\_\+integrators\+::\+Integrator\+Settings$<$ Time\+Type $>$ $>$ integrator\+Settings, const boost\+::function$<$ bool(const double) $>$ stop\+Propagation\+Function, std\+::map$<$ Time\+Type, Eigen\+::\+Vector\+Xd $>$ \&dependent\+Variable\+History, const boost\+::function$<$ Eigen\+::\+Vector\+Xd() $>$ dependent\+Variable\+Function=boost\+::function$<$ Eigen\+::\+Vector\+Xd() $>$(), const Time\+Type print\+Interval=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{integrateEquations(boost::function< StateType(const TimeType, const StateType &) > stateDerivativeFunction, std::map< TimeType, StateType > &solutionHistory, const StateType initialState, const boost::shared_ptr< numerical_integrators::IntegratorSettings< TimeType > > integratorSettings, const boost::function< bool(const double) > stopPropagationFunction, std::map< TimeType, Eigen::VectorXd > &dependentVariableHistory, const boost::function< Eigen::VectorXd() > dependentVariableFunction=boost::function< Eigen::VectorXd() >(), const TimeType printInterval=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Type = Eigen\+::\+Matrix\+Xd, typename Time\+Type = double$>$ static void {\bf tudat\+::propagators\+::\+Equation\+Integration\+Interface}$<$ State\+Type, Time\+Type $>$\+::integrate\+Equations (
+\begin{DoxyParamCaption}
+\item[{boost\+::function$<$ State\+Type(const Time\+Type, const State\+Type \&) $>$}]{state\+Derivative\+Function, }
+\item[{std\+::map$<$ Time\+Type, State\+Type $>$ \&}]{solution\+History, }
+\item[{const State\+Type}]{initial\+State, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ Time\+Type $>$ $>$}]{integrator\+Settings, }
+\item[{const boost\+::function$<$ bool(const double) $>$}]{stop\+Propagation\+Function, }
+\item[{std\+::map$<$ Time\+Type, Eigen\+::\+Vector\+Xd $>$ \&}]{dependent\+Variable\+History, }
+\item[{const boost\+::function$<$ Eigen\+::\+Vector\+Xd() $>$}]{dependent\+Variable\+Function = {\ttfamily boost\+:\+:function$<$~Eigen\+:\+:VectorXd()~$>$()}, }
+\item[{const Time\+Type}]{print\+Interval = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classtudat_1_1propagators_1_1EquationIntegrationInterface_ad2a5d747afded7138730b957f74a3624}{}\label{classtudat_1_1propagators_1_1EquationIntegrationInterface_ad2a5d747afded7138730b957f74a3624}
+
+
+Function to numerically integrate a given first order differential equation. 
+
+Function to numerically integrate a given first order differential equation, with the state derivative a function of a single independent variable and the current state 
+\begin{DoxyParams}{Parameters}
+{\em state\+Derivative\+Function} & Function returning the state derivative from current time and state. \\
+\hline
+{\em solution\+History} & History of numerical states given as map (time as key; returned by reference) \\
+\hline
+{\em initial\+State} & Initial state \\
+\hline
+{\em integrator\+Settings} & Settings for numerical integrator. \\
+\hline
+{\em stop\+Propagation\+Function} & Function determining whether the propagation is to be stopped at the current time. \\
+\hline
+{\em dependent\+Variable\+History} & History of dependent variables that are to be saved given as map (time as key; returned by reference) \\
+\hline
+{\em dependent\+Variable\+Function} & Function returning dependent variables (obtained from environment and state derivative model). \\
+\hline
+{\em print\+Interval} & Frequency with which to print progress to console (nan = never). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Propagators/integrate\+Equations.\+h\end{DoxyCompactItemize}

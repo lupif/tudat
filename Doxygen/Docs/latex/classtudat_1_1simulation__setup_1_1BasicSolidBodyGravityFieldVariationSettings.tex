@@ -1,0 +1,148 @@
+\hypertarget{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings}{}\section{tudat\+:\+:simulation\+\_\+setup\+:\+:Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings Class Reference}
+\label{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings}\index{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings}}
+
+
+{\ttfamily \#include $<$create\+Gravity\+Field\+Variations.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:simulation\+\_\+setup\+:\+:Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:simulation\+\_\+setup\+:\+:Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a26cb151a6e02b2c97fcc6f912795ecc9}{Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings} (const std\+::vector$<$ std\+::string $>$ deforming\+Bodies, const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ double $>$ $>$ $>$ love\+Numbers, const double body\+Reference\+Radius, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings}{Model\+Interpolation\+Settings} $>$ interpolator\+Settings=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a31ba2f956752d37ffae251e8ca66c5d3}{get\+Deforming\+Bodies} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve list of bodies causing tidal deformation. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ double $>$ $>$ $>$ \hyperlink{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a2ea95f5725700d6160bde8bf265a477c}{get\+Love\+Numbers} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve list of Love number for the deformed body. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a3782fe04779b35885aac8a6a671a5ffe}{get\+Body\+Reference\+Radius} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve reference (typically equatorial) radius of body being deformed. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a5821016b4eb75b3e119b3d60f4d7cfcc}{reset\+Deforming\+Bodies} (const std\+::vector$<$ std\+::string $>$ \&deforming\+Bodies)
+\begin{DoxyCompactList}\small\item\em Function to reset list of bodies causing tidal deformation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a698538439d1b9d1bf280d935b94f4e19}{deforming\+Bodies\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a698538439d1b9d1bf280d935b94f4e19}{}\label{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a698538439d1b9d1bf280d935b94f4e19}
+
+\begin{DoxyCompactList}\small\item\em List of bodies causing tidal deformation. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ double $>$ $>$ $>$ \hyperlink{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_aa4d7846c73f4a451ecf328dad7143008}{love\+Numbers\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_aa4d7846c73f4a451ecf328dad7143008}{}\label{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_aa4d7846c73f4a451ecf328dad7143008}
+
+\begin{DoxyCompactList}\small\item\em List of Love number for the deformed body. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a7ffd8ccb084f4506edd3a09b899143dc}{body\+Reference\+Radius\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a7ffd8ccb084f4506edd3a09b899143dc}{}\label{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a7ffd8ccb084f4506edd3a09b899143dc}
+
+\begin{DoxyCompactList}\small\item\em Reference (typically equatorial) radius of body being deformed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to define settings for basic tidal gravity field variations, i.\+e. according to Eq. (6.\+6) of I\+E\+RS 2010 conventions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings}!Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings@{Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings}}
+\index{Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings@{Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings}}
+\subsubsection[{\texorpdfstring{Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings(const std\+::vector$<$ std\+::string $>$ deforming\+Bodies, const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ double $>$ $>$ $>$ love\+Numbers, const double body\+Reference\+Radius, const boost\+::shared\+\_\+ptr$<$ Model\+Interpolation\+Settings $>$ interpolator\+Settings=\+N\+U\+L\+L)}{BasicSolidBodyGravityFieldVariationSettings(const std::vector< std::string > deformingBodies, const std::vector< std::vector< std::complex< double > > > loveNumbers, const double bodyReferenceRadius, const boost::shared_ptr< ModelInterpolationSettings > interpolatorSettings=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$}]{deforming\+Bodies, }
+\item[{const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ double $>$ $>$ $>$}]{love\+Numbers, }
+\item[{const double}]{body\+Reference\+Radius, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Model\+Interpolation\+Settings} $>$}]{interpolator\+Settings = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a26cb151a6e02b2c97fcc6f912795ecc9}{}\label{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a26cb151a6e02b2c97fcc6f912795ecc9}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em deforming\+Bodies} & List of bodies causing tidal deformation \\
+\hline
+{\em love\+Numbers} & List of Love number for the deformed body. First vector level denotes degree (index 0 = degree 2), second vector level denotes order and must be of maximum size (love\+Numbers.\+size( ) + 2, i.\+e. maximum degree $>$= maximum order) \\
+\hline
+{\em body\+Reference\+Radius} & Reference (typically equatorial) radius of body being deformed \\
+\hline
+{\em interpolator\+Settings} & Settings that are to be used to create an interpolator for the gravity field variations immediately upon creation (to be used during propagation). Default is N\+U\+LL, in which no interpolation is used, and the model is evaluated during propagation. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings}!get\+Body\+Reference\+Radius@{get\+Body\+Reference\+Radius}}
+\index{get\+Body\+Reference\+Radius@{get\+Body\+Reference\+Radius}!tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Body\+Reference\+Radius()}{getBodyReferenceRadius()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings\+::get\+Body\+Reference\+Radius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a3782fe04779b35885aac8a6a671a5ffe}{}\label{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a3782fe04779b35885aac8a6a671a5ffe}
+
+
+Function to retrieve reference (typically equatorial) radius of body being deformed. 
+
+Function to retrieve reference (typically equatorial) radius of body being deformed \begin{DoxyReturn}{Returns}
+Reference (typically equatorial) radius of body being deformed 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings}!get\+Deforming\+Bodies@{get\+Deforming\+Bodies}}
+\index{get\+Deforming\+Bodies@{get\+Deforming\+Bodies}!tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Deforming\+Bodies()}{getDeformingBodies()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings\+::get\+Deforming\+Bodies (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a31ba2f956752d37ffae251e8ca66c5d3}{}\label{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a31ba2f956752d37ffae251e8ca66c5d3}
+
+
+Function to retrieve list of bodies causing tidal deformation. 
+
+Function to retrieve list of bodies causing tidal deformation \begin{DoxyReturn}{Returns}
+List of bodies causing tidal deformation 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings}!get\+Love\+Numbers@{get\+Love\+Numbers}}
+\index{get\+Love\+Numbers@{get\+Love\+Numbers}!tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Love\+Numbers()}{getLoveNumbers()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ double $>$ $>$ $>$ tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings\+::get\+Love\+Numbers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a2ea95f5725700d6160bde8bf265a477c}{}\label{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a2ea95f5725700d6160bde8bf265a477c}
+
+
+Function to retrieve list of Love number for the deformed body. 
+
+Function to retrieve list of Love number for the deformed body. \begin{DoxyReturn}{Returns}
+List of Love number for the deformed body. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings}!reset\+Deforming\+Bodies@{reset\+Deforming\+Bodies}}
+\index{reset\+Deforming\+Bodies@{reset\+Deforming\+Bodies}!tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings}}
+\subsubsection[{\texorpdfstring{reset\+Deforming\+Bodies(const std\+::vector$<$ std\+::string $>$ \&deforming\+Bodies)}{resetDeformingBodies(const std::vector< std::string > &deformingBodies)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Basic\+Solid\+Body\+Gravity\+Field\+Variation\+Settings\+::reset\+Deforming\+Bodies (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{deforming\+Bodies}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a5821016b4eb75b3e119b3d60f4d7cfcc}{}\label{classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings_a5821016b4eb75b3e119b3d60f4d7cfcc}
+
+
+Function to reset list of bodies causing tidal deformation. 
+
+Function to reset list of bodies causing tidal deformation 
+\begin{DoxyParams}{Parameters}
+{\em deforming\+Bodies} & New list of bodies causing tidal deformation \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Environment\+Setup/create\+Gravity\+Field\+Variations.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="tudat::observation_models::LightTimeCorrection" name="tudat::observation_models::LightTimeCorrection">
+<area shape="rect" id="node2" href="$classtudat_1_1observation__models_1_1FirstOrderLightTimeCorrectionCalculator.html" title="Class to calculate first order relativistic light time correction (Shapiro time delay) due to a set o..." alt="" coords="250,5,445,61"/>
+<area shape="rect" id="node3" href="$classtudat_1_1observation__models_1_1LightTimeCorrectionFunctionWrapper.html" title="tudat::observation\l_models::LightTimeCorrection\lFunctionWrapper" alt="" coords="249,85,445,141"/>
+</map>

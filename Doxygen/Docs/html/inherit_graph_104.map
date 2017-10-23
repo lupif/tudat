@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1propagators_1_1PropagationTerminationCondition.html" title="Base class for checking whether the numerical propagation is to be stopped at current time step or no..." alt="" coords="5,93,228,134"/>
+<area shape="rect" id="node2" href="$classtudat_1_1propagators_1_1FixedTimePropagationTerminationCondition.html" title="Class for stopping the propagation after a fixed amount of time (i.e. for certain independent variabl..." alt="" coords="276,5,504,61"/>
+<area shape="rect" id="node3" href="$classtudat_1_1propagators_1_1HybridPropagationTerminationCondition.html" title="Class for stopping the propagation when one or all of a given set of stopping conditions is reached..." alt="" coords="287,85,493,141"/>
+<area shape="rect" id="node4" href="$classtudat_1_1propagators_1_1SingleVariableLimitPropagationTerminationCondition.html" title="Class for stopping the propagation when a dependent variable reaches a given value (either upper or l..." alt="" coords="285,165,495,221"/>
+</map>

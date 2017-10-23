@@ -1,0 +1,83 @@
+\hypertarget{classtudat_1_1numerical__quadrature_1_1NumericalQuadrature}{}\section{tudat\+:\+:numerical\+\_\+quadrature\+:\+:Numerical\+Quadrature$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$ Class Template Reference}
+\label{classtudat_1_1numerical__quadrature_1_1NumericalQuadrature}\index{tudat\+::numerical\+\_\+quadrature\+::\+Numerical\+Quadrature$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$@{tudat\+::numerical\+\_\+quadrature\+::\+Numerical\+Quadrature$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}}
+
+
+Base class for numerical quadrature.  
+
+
+
+
+{\ttfamily \#include $<$numerical\+Quadrature.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:numerical\+\_\+quadrature\+:\+:Numerical\+Quadrature$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1numerical__quadrature_1_1NumericalQuadrature__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classtudat_1_1numerical__quadrature_1_1NumericalQuadrature_a602011cbb2341401407f5221bc016a79}{$\sim$\+Numerical\+Quadrature} ()\hypertarget{classtudat_1_1numerical__quadrature_1_1NumericalQuadrature_a602011cbb2341401407f5221bc016a79}{}\label{classtudat_1_1numerical__quadrature_1_1NumericalQuadrature_a602011cbb2341401407f5221bc016a79}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual Dependent\+Variable\+Type \hyperlink{classtudat_1_1numerical__quadrature_1_1NumericalQuadrature_ab47826b9612a50e5dfc1b1c17d0d0b1c}{get\+Quadrature} ()=0
+\begin{DoxyCompactList}\small\item\em This function returns the value of the numerical integration performed by quadrature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classtudat_1_1numerical__quadrature_1_1NumericalQuadrature_a878612c6ed5f9f606ac537071ca67f15}{perform\+Quadrature} ()=0
+\begin{DoxyCompactList}\small\item\em Function that is called to perform the numerical quadrature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type$>$\\*
+class tudat\+::numerical\+\_\+quadrature\+::\+Numerical\+Quadrature$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}
+
+Base class for numerical quadrature. 
+
+Base class for the numerical quadrature methods included in Tudat, the dependent and independent variable types are specified as template parameters. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::numerical\+\_\+quadrature\+::\+Numerical\+Quadrature@{tudat\+::numerical\+\_\+quadrature\+::\+Numerical\+Quadrature}!get\+Quadrature@{get\+Quadrature}}
+\index{get\+Quadrature@{get\+Quadrature}!tudat\+::numerical\+\_\+quadrature\+::\+Numerical\+Quadrature@{tudat\+::numerical\+\_\+quadrature\+::\+Numerical\+Quadrature}}
+\subsubsection[{\texorpdfstring{get\+Quadrature()=0}{getQuadrature()=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type , typename Dependent\+Variable\+Type $>$ virtual Dependent\+Variable\+Type {\bf tudat\+::numerical\+\_\+quadrature\+::\+Numerical\+Quadrature}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::get\+Quadrature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1numerical__quadrature_1_1NumericalQuadrature_ab47826b9612a50e5dfc1b1c17d0d0b1c}{}\label{classtudat_1_1numerical__quadrature_1_1NumericalQuadrature_ab47826b9612a50e5dfc1b1c17d0d0b1c}
+
+
+This function returns the value of the numerical integration performed by quadrature. 
+
+This function returns the value of the numerical integration. It must be implemented in derived classes. \begin{DoxyReturn}{Returns}
+Integral of the data. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1numerical__quadrature_1_1TrapezoidNumericalQuadrature_a07f87eae9444f7bbafb53fb83318d356}{tudat\+::numerical\+\_\+quadrature\+::\+Trapezoid\+Numerical\+Quadrature$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}.
+
+\index{tudat\+::numerical\+\_\+quadrature\+::\+Numerical\+Quadrature@{tudat\+::numerical\+\_\+quadrature\+::\+Numerical\+Quadrature}!perform\+Quadrature@{perform\+Quadrature}}
+\index{perform\+Quadrature@{perform\+Quadrature}!tudat\+::numerical\+\_\+quadrature\+::\+Numerical\+Quadrature@{tudat\+::numerical\+\_\+quadrature\+::\+Numerical\+Quadrature}}
+\subsubsection[{\texorpdfstring{perform\+Quadrature()=0}{performQuadrature()=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type , typename Dependent\+Variable\+Type $>$ virtual void {\bf tudat\+::numerical\+\_\+quadrature\+::\+Numerical\+Quadrature}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::perform\+Quadrature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1numerical__quadrature_1_1NumericalQuadrature_a878612c6ed5f9f606ac537071ca67f15}{}\label{classtudat_1_1numerical__quadrature_1_1NumericalQuadrature_a878612c6ed5f9f606ac537071ca67f15}
+
+
+Function that is called to perform the numerical quadrature. 
+
+Function that is called to perform the numerical quadrature. It must be implemented in derived classes. Any implementation of perform\+Quadrature must be made consistent with that of get\+Quadrature. 
+
+Implemented in \hyperlink{classtudat_1_1numerical__quadrature_1_1TrapezoidNumericalQuadrature_a2f675b21a3a8176da38893bd7632c702}{tudat\+::numerical\+\_\+quadrature\+::\+Trapezoid\+Numerical\+Quadrature$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Numerical\+Quadrature/numerical\+Quadrature.\+h\end{DoxyCompactItemize}

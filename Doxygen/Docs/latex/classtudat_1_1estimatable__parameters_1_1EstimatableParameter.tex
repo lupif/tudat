@@ -1,0 +1,160 @@
+\hypertarget{classtudat_1_1estimatable__parameters_1_1EstimatableParameter}{}\section{tudat\+:\+:estimatable\+\_\+parameters\+:\+:Estimatable\+Parameter$<$ Parameter\+Type $>$ Class Template Reference}
+\label{classtudat_1_1estimatable__parameters_1_1EstimatableParameter}\index{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ Parameter\+Type $>$@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ Parameter\+Type $>$}}
+
+
+Base class for a parameter that is to be estimated.  
+
+
+
+
+{\ttfamily \#include $<$estimatable\+Parameter.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a4012bde7f5f26c5c590c0a149283dd4d}{Estimatable\+Parameter} (const Estimateble\+Parameters\+Enum parameter\+Name, const std\+::string \&associated\+Body, const std\+::string \&point\+On\+Body\+Id=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a211a379e14476e36a7693f43be29cb11}{$\sim$\+Estimatable\+Parameter} ()\hypertarget{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a211a379e14476e36a7693f43be29cb11}{}\label{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a211a379e14476e36a7693f43be29cb11}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual Parameter\+Type \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a63413b914f9e8b68705aba7048780200}{get\+Parameter\+Value} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to retrieve the value of the parameter. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a5df35bde257a6db401ca3c3613056554}{set\+Parameter\+Value} (const Parameter\+Type parameter\+Value)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to (re)set the value of the parameter. \end{DoxyCompactList}\item 
+Estimateble\+Parameter\+Identifier \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a23de3d6116f1414d5bb905f1b523cfdc}{get\+Parameter\+Name} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the type and associated body of the parameter. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a989d54bab5c5e09ab6f1b709755b22e8}{get\+Parameter\+Size} ()=0
+\begin{DoxyCompactList}\small\item\em Function to retrieve the size of the parameter. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_ae97f1a8ef867dcaf72ceeb5050e64629}{get\+Secondary\+Identifier} ()
+\begin{DoxyCompactList}\small\item\em Function to return additional identifier for parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Estimateble\+Parameter\+Identifier \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a3d43d2db730c707b789768dad4de5ae6}{parameter\+Name\+\_\+}\hypertarget{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a3d43d2db730c707b789768dad4de5ae6}{}\label{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a3d43d2db730c707b789768dad4de5ae6}
+
+\begin{DoxyCompactList}\small\item\em Identifier of parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Parameter\+Type$>$\\*
+class tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ Parameter\+Type $>$}
+
+Base class for a parameter that is to be estimated. 
+
+Base class for a parameter that is to be estimated. A separate derived class is to be made for each type of parameter (i.\+e. gravitational parameter, initial translational state, etc. ). 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}!Estimatable\+Parameter@{Estimatable\+Parameter}}
+\index{Estimatable\+Parameter@{Estimatable\+Parameter}!tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}}
+\subsubsection[{\texorpdfstring{Estimatable\+Parameter(const Estimateble\+Parameters\+Enum parameter\+Name, const std\+::string \&associated\+Body, const std\+::string \&point\+On\+Body\+Id="""")}{EstimatableParameter(const EstimatebleParametersEnum parameterName, const std::string &associatedBody, const std::string &pointOnBodyId="")}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Parameter\+Type$>$ {\bf tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ Parameter\+Type $>$\+::{\bf Estimatable\+Parameter} (
+\begin{DoxyParamCaption}
+\item[{const Estimateble\+Parameters\+Enum}]{parameter\+Name, }
+\item[{const std\+::string \&}]{associated\+Body, }
+\item[{const std\+::string \&}]{point\+On\+Body\+Id = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a4012bde7f5f26c5c590c0a149283dd4d}{}\label{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a4012bde7f5f26c5c590c0a149283dd4d}
+
+
+Constructor. 
+
+Constructor taking parameter name and associated body. All parameters are identified by a these two variables. Any additional information that may be required for uniquely defining a parameter is to be defined in the derived class. 
+\begin{DoxyParams}{Parameters}
+{\em parameter\+Name} & Enum value defining the type of the parameter. \\
+\hline
+{\em associated\+Body} & Name of body associated with patameters \\
+\hline
+{\em point\+On\+Body\+Id} & Reference point on body associated with parameter (empty by default). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}!get\+Parameter\+Name@{get\+Parameter\+Name}}
+\index{get\+Parameter\+Name@{get\+Parameter\+Name}!tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}}
+\subsubsection[{\texorpdfstring{get\+Parameter\+Name()}{getParameterName()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Parameter\+Type$>$ Estimateble\+Parameter\+Identifier {\bf tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ Parameter\+Type $>$\+::get\+Parameter\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a23de3d6116f1414d5bb905f1b523cfdc}{}\label{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a23de3d6116f1414d5bb905f1b523cfdc}
+
+
+Function to retrieve the type and associated body of the parameter. 
+
+Function to retrieve the type and associated body of the parameter. \begin{DoxyReturn}{Returns}
+Identifier of parameter as a pair of parameter type and body of which parameter is a property. 
+\end{DoxyReturn}
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}!get\+Parameter\+Size@{get\+Parameter\+Size}}
+\index{get\+Parameter\+Size@{get\+Parameter\+Size}!tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}}
+\subsubsection[{\texorpdfstring{get\+Parameter\+Size()=0}{getParameterSize()=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Parameter\+Type$>$ virtual int {\bf tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ Parameter\+Type $>$\+::get\+Parameter\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a989d54bab5c5e09ab6f1b709755b22e8}{}\label{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a989d54bab5c5e09ab6f1b709755b22e8}
+
+
+Function to retrieve the size of the parameter. 
+
+Pure virtual function to retrieve the size of the parameter (i.\+e. 1 for double parameters) \begin{DoxyReturn}{Returns}
+Size of parameter value. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1estimatable__parameters_1_1SphericalHarmonicsCosineCoefficients_a321eb698efe3468fd266620fa426b042}{tudat\+::estimatable\+\_\+parameters\+::\+Spherical\+Harmonics\+Cosine\+Coefficients}, \hyperlink{classtudat_1_1estimatable__parameters_1_1SphericalHarmonicsSineCoefficients_a6bc279795f8d3018b578a0bc519607d9}{tudat\+::estimatable\+\_\+parameters\+::\+Spherical\+Harmonics\+Sine\+Coefficients}, \hyperlink{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_a4222aa85e840c929eda9b6185c35d519}{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation}, \hyperlink{classtudat_1_1estimatable__parameters_1_1RotationRate_a9d0c87adc47873d0b8ec3fc59408fa03}{tudat\+::estimatable\+\_\+parameters\+::\+Rotation\+Rate}, \hyperlink{classtudat_1_1estimatable__parameters_1_1RadiationPressureCoefficient_ae7282eeffa763137a4d633d7dec4e10f}{tudat\+::estimatable\+\_\+parameters\+::\+Radiation\+Pressure\+Coefficient}, \hyperlink{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_af5ed822fe6786c76b9d522ad37230fb1}{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter$<$ Initial\+State\+Parameter\+Type $>$}, and \hyperlink{classtudat_1_1estimatable__parameters_1_1GravitationalParameter_a2ba9a012c83544ca802ff58044c6bb78}{tudat\+::estimatable\+\_\+parameters\+::\+Gravitational\+Parameter}.
+
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}!get\+Parameter\+Value@{get\+Parameter\+Value}}
+\index{get\+Parameter\+Value@{get\+Parameter\+Value}!tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}}
+\subsubsection[{\texorpdfstring{get\+Parameter\+Value()=0}{getParameterValue()=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Parameter\+Type$>$ virtual Parameter\+Type {\bf tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ Parameter\+Type $>$\+::get\+Parameter\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a63413b914f9e8b68705aba7048780200}{}\label{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a63413b914f9e8b68705aba7048780200}
+
+
+Pure virtual function to retrieve the value of the parameter. 
+
+Pure virtual function to retrieve the value of the parameter \begin{DoxyReturn}{Returns}
+Current value of parameter. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1estimatable__parameters_1_1SphericalHarmonicsCosineCoefficients_af6d41ec450351355acfc0926a1f48c45}{tudat\+::estimatable\+\_\+parameters\+::\+Spherical\+Harmonics\+Cosine\+Coefficients}, \hyperlink{classtudat_1_1estimatable__parameters_1_1SphericalHarmonicsSineCoefficients_a7f35c3406fdf98248ae2093dc10293e0}{tudat\+::estimatable\+\_\+parameters\+::\+Spherical\+Harmonics\+Sine\+Coefficients}, \hyperlink{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_ae5d7a223838d362632d8e1ac95833a88}{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation}, \hyperlink{classtudat_1_1estimatable__parameters_1_1RotationRate_ac024f33645b293e73cb610f402e7a7ee}{tudat\+::estimatable\+\_\+parameters\+::\+Rotation\+Rate}, \hyperlink{classtudat_1_1estimatable__parameters_1_1RadiationPressureCoefficient_a1ff0890df59c45352030750744f9d121}{tudat\+::estimatable\+\_\+parameters\+::\+Radiation\+Pressure\+Coefficient}, \hyperlink{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_a127b7255f01047b7e25b44ffa8a15870}{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter$<$ Initial\+State\+Parameter\+Type $>$}, and \hyperlink{classtudat_1_1estimatable__parameters_1_1GravitationalParameter_a86a5d5c5cbc0c898525a0cc8385d931e}{tudat\+::estimatable\+\_\+parameters\+::\+Gravitational\+Parameter}.
+
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}!get\+Secondary\+Identifier@{get\+Secondary\+Identifier}}
+\index{get\+Secondary\+Identifier@{get\+Secondary\+Identifier}!tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}}
+\subsubsection[{\texorpdfstring{get\+Secondary\+Identifier()}{getSecondaryIdentifier()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Parameter\+Type$>$ virtual std\+::string {\bf tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ Parameter\+Type $>$\+::get\+Secondary\+Identifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_ae97f1a8ef867dcaf72ceeb5050e64629}{}\label{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_ae97f1a8ef867dcaf72ceeb5050e64629}
+
+
+Function to return additional identifier for parameter. 
+
+Function to return additional identifier for parameter, beyond information stored in parameter\+Name\+\_\+, default none. \begin{DoxyReturn}{Returns}
+Additional identifier for parameter (default empty string). 
+\end{DoxyReturn}
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}!set\+Parameter\+Value@{set\+Parameter\+Value}}
+\index{set\+Parameter\+Value@{set\+Parameter\+Value}!tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}}
+\subsubsection[{\texorpdfstring{set\+Parameter\+Value(const Parameter\+Type parameter\+Value)=0}{setParameterValue(const ParameterType parameterValue)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Parameter\+Type$>$ virtual void {\bf tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ Parameter\+Type $>$\+::set\+Parameter\+Value (
+\begin{DoxyParamCaption}
+\item[{const Parameter\+Type}]{parameter\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a5df35bde257a6db401ca3c3613056554}{}\label{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a5df35bde257a6db401ca3c3613056554}
+
+
+Pure virtual function to (re)set the value of the parameter. 
+
+Pure virtual function to (re)set the value of the parameter. 
+\begin{DoxyParams}{Parameters}
+{\em parameter\+Value} & to which the parameter is to be set. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classtudat_1_1estimatable__parameters_1_1SphericalHarmonicsCosineCoefficients_a83b148618a4198a251bf8c651c19427b}{tudat\+::estimatable\+\_\+parameters\+::\+Spherical\+Harmonics\+Cosine\+Coefficients}, \hyperlink{classtudat_1_1estimatable__parameters_1_1SphericalHarmonicsSineCoefficients_addf046d353ecbacb2564945ef44e7a42}{tudat\+::estimatable\+\_\+parameters\+::\+Spherical\+Harmonics\+Sine\+Coefficients}, \hyperlink{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_a7bd1cbe847e0d1db60c8cd8e3f6c5943}{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation}, \hyperlink{classtudat_1_1estimatable__parameters_1_1RotationRate_afad73852fa105de2616b9be5c607f489}{tudat\+::estimatable\+\_\+parameters\+::\+Rotation\+Rate}, \hyperlink{classtudat_1_1estimatable__parameters_1_1RadiationPressureCoefficient_afa6dd3600b17a9d92c64c804e3596319}{tudat\+::estimatable\+\_\+parameters\+::\+Radiation\+Pressure\+Coefficient}, \hyperlink{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_a99775f766b178257618227c2f03d7d72}{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter$<$ Initial\+State\+Parameter\+Type $>$}, and \hyperlink{classtudat_1_1estimatable__parameters_1_1GravitationalParameter_ab1610caa2f08b3b4988d56f60ab9ac89}{tudat\+::estimatable\+\_\+parameters\+::\+Gravitational\+Parameter}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Orbit\+Determination/\+Estimatable\+Parameters/estimatable\+Parameter.\+h\end{DoxyCompactItemize}

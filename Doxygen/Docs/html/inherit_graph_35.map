@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1basic__astrodynamics_1_1AccelerationModel.html" title="tudat::basic_astrodynamics\l::AccelerationModel\&lt; StateMatrix \&gt;" alt="" coords="17,5,245,47"/>
+<area shape="rect" id="node2" href="$classtudat_1_1gravitation_1_1CentralGravitationalAccelerationModel.html" title="Template class for central gravitational acceleration model. " alt="" coords="304,34,521,90"/>
+<area shape="rect" id="node3" href="$classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase.html" title="Template base class for spherical harmonics gravitational acceleration models. " alt="" coords="5,70,256,126"/>
+</map>

@@ -1,0 +1,100 @@
+\hypertarget{classtudat_1_1observation__models_1_1ConstantObservationBias}{}\section{tudat\+:\+:observation\+\_\+models\+:\+:Constant\+Observation\+Bias$<$ Observation\+Size $>$ Class Template Reference}
+\label{classtudat_1_1observation__models_1_1ConstantObservationBias}\index{tudat\+::observation\+\_\+models\+::\+Constant\+Observation\+Bias$<$ Observation\+Size $>$@{tudat\+::observation\+\_\+models\+::\+Constant\+Observation\+Bias$<$ Observation\+Size $>$}}
+
+
+Class for a constant observation bias of a given size.  
+
+
+
+
+{\ttfamily \#include $<$observation\+Bias.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:observation\+\_\+models\+:\+:Constant\+Observation\+Bias$<$ Observation\+Size $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classtudat_1_1observation__models_1_1ConstantObservationBias__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:observation\+\_\+models\+:\+:Constant\+Observation\+Bias$<$ Observation\+Size $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classtudat_1_1observation__models_1_1ConstantObservationBias__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1observation__models_1_1ConstantObservationBias_a216252c1c33f3cbcee7bf3114fb1c720}{Constant\+Observation\+Bias} (const Eigen\+::\+Matrix$<$ double, Observation\+Size, 1 $>$ observation\+Bias)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1observation__models_1_1ConstantObservationBias_ab6f48f10712444f0ab736eea7bd89a47}{$\sim$\+Constant\+Observation\+Bias} ()\hypertarget{classtudat_1_1observation__models_1_1ConstantObservationBias_ab6f48f10712444f0ab736eea7bd89a47}{}\label{classtudat_1_1observation__models_1_1ConstantObservationBias_ab6f48f10712444f0ab736eea7bd89a47}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, Observation\+Size, 1 $>$ \hyperlink{classtudat_1_1observation__models_1_1ConstantObservationBias_aaf3dcb13a6094ddb048226b7579f6de1}{get\+Observation\+Bias} (const std\+::vector$<$ double $>$ \&link\+End\+Times, const std\+::vector$<$ Eigen\+::\+Matrix$<$ double, 6, 1 $>$ $>$ \&link\+End\+States)
+\begin{DoxyCompactList}\small\item\em Function to retrieve the constant observation bias. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int Observation\+Size = 1$>$\\*
+class tudat\+::observation\+\_\+models\+::\+Constant\+Observation\+Bias$<$ Observation\+Size $>$}
+
+Class for a constant observation bias of a given size. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::observation\+\_\+models\+::\+Constant\+Observation\+Bias@{tudat\+::observation\+\_\+models\+::\+Constant\+Observation\+Bias}!Constant\+Observation\+Bias@{Constant\+Observation\+Bias}}
+\index{Constant\+Observation\+Bias@{Constant\+Observation\+Bias}!tudat\+::observation\+\_\+models\+::\+Constant\+Observation\+Bias@{tudat\+::observation\+\_\+models\+::\+Constant\+Observation\+Bias}}
+\subsubsection[{\texorpdfstring{Constant\+Observation\+Bias(const Eigen\+::\+Matrix$<$ double, Observation\+Size, 1 $>$ observation\+Bias)}{ConstantObservationBias(const Eigen::Matrix< double, ObservationSize, 1 > observationBias)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int Observation\+Size = 1$>$ {\bf tudat\+::observation\+\_\+models\+::\+Constant\+Observation\+Bias}$<$ Observation\+Size $>$\+::{\bf Constant\+Observation\+Bias} (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix$<$ double, Observation\+Size, 1 $>$}]{observation\+Bias}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1observation__models_1_1ConstantObservationBias_a216252c1c33f3cbcee7bf3114fb1c720}{}\label{classtudat_1_1observation__models_1_1ConstantObservationBias_a216252c1c33f3cbcee7bf3114fb1c720}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em observation\+Bias} & Constant (entry-\/wise) observation bias. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::observation\+\_\+models\+::\+Constant\+Observation\+Bias@{tudat\+::observation\+\_\+models\+::\+Constant\+Observation\+Bias}!get\+Observation\+Bias@{get\+Observation\+Bias}}
+\index{get\+Observation\+Bias@{get\+Observation\+Bias}!tudat\+::observation\+\_\+models\+::\+Constant\+Observation\+Bias@{tudat\+::observation\+\_\+models\+::\+Constant\+Observation\+Bias}}
+\subsubsection[{\texorpdfstring{get\+Observation\+Bias(const std\+::vector$<$ double $>$ \&link\+End\+Times, const std\+::vector$<$ Eigen\+::\+Matrix$<$ double, 6, 1 $>$ $>$ \&link\+End\+States)}{getObservationBias(const std::vector< double > &linkEndTimes, const std::vector< Eigen::Matrix< double, 6, 1 > > &linkEndStates)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int Observation\+Size = 1$>$ Eigen\+::\+Matrix$<$ double, Observation\+Size, 1 $>$ {\bf tudat\+::observation\+\_\+models\+::\+Constant\+Observation\+Bias}$<$ Observation\+Size $>$\+::get\+Observation\+Bias (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{link\+End\+Times, }
+\item[{const std\+::vector$<$ Eigen\+::\+Matrix$<$ double, 6, 1 $>$ $>$ \&}]{link\+End\+States}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1observation__models_1_1ConstantObservationBias_aaf3dcb13a6094ddb048226b7579f6de1}{}\label{classtudat_1_1observation__models_1_1ConstantObservationBias_aaf3dcb13a6094ddb048226b7579f6de1}
+
+
+Function to retrieve the constant observation bias. 
+
+Function to retrieve the constant observation bias. 
+\begin{DoxyParams}{Parameters}
+{\em link\+End\+Times} & List of times at each link end during observation (unused). \\
+\hline
+{\em link\+End\+States} & List of states at each link end during observation (unused). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Constant observation bias. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1observation__models_1_1ObservationBias_a58e9f9e041804d67b69a478e4ed855c1}{tudat\+::observation\+\_\+models\+::\+Observation\+Bias$<$ Observation\+Size $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Observation\+Models/observation\+Bias.\+h\end{DoxyCompactItemize}

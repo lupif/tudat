@@ -1,0 +1,5 @@
+<map id="tudat::ephemerides::ApproximatePlanetPositionsCircularCoplanar" name="tudat::ephemerides::ApproximatePlanetPositionsCircularCoplanar">
+<area shape="rect" id="node2" href="$classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase.html" title="Ephemeris base class using JPL &quot;Approximate Positions of Major Planets&quot;. " alt="" coords="415,41,639,83"/>
+<area shape="rect" id="node3" href="$classtudat_1_1ephemerides_1_1Ephemeris.html" title="Ephemeris base class. " alt="" coords="36,5,169,47"/>
+<area shape="rect" id="node4" href="$structtudat_1_1ephemerides_1_1ApproximatePlanetPositionsDataContainer.html" title="JPL &quot;Approximate Positions of Major Planets&quot; data container class. " alt="" coords="5,70,200,126"/>
+</map>

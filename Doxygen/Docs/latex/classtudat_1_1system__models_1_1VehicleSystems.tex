@@ -1,0 +1,214 @@
+\hypertarget{classtudat_1_1system__models_1_1VehicleSystems}{}\section{tudat\+:\+:system\+\_\+models\+:\+:Vehicle\+Systems Class Reference}
+\label{classtudat_1_1system__models_1_1VehicleSystems}\index{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}}
+
+
+Wrapper class that contains the relevant hardware systems of a vehicle.  
+
+
+
+
+{\ttfamily \#include $<$vehicle\+Systems.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1system__models_1_1VehicleSystems_a784bfb562166238a1b85f2825ace7145}{Vehicle\+Systems} (const double dry\+Mass=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1system__models_1_1VehicleSystems_aab806f1b17f94930edf161990897f171}{$\sim$\+Vehicle\+Systems} ()\hypertarget{classtudat_1_1system__models_1_1VehicleSystems_aab806f1b17f94930edf161990897f171}{}\label{classtudat_1_1system__models_1_1VehicleSystems_aab806f1b17f94930edf161990897f171}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1system__models_1_1EngineModel}{Engine\+Model} $>$ $>$ \hyperlink{classtudat_1_1system__models_1_1VehicleSystems_a4460e33e2458d497713386eeb71a8d76}{get\+Engine\+Models} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the engine models. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1system__models_1_1VehicleSystems_a5a478d0d03a313c63c2afadb45813802}{set\+Engine\+Model} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1system__models_1_1EngineModel}{Engine\+Model} $>$ engine\+Model, const std\+::string engine\+Name=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Function to set a single engine in the vehicle. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1system__models_1_1VehicleSystems_aba36aa4e54902724f789a50c9329a77a}{get\+Dry\+Mass} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the total dry mass of the vehicle. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1system__models_1_1VehicleSystems_aa7e18ba2906694277ccd5e5206fd7f8e}{set\+Current\+Control\+Surface\+Deflection} (const std\+::string \&control\+Surface\+Id, const double deflection\+Angle)
+\begin{DoxyCompactList}\small\item\em Function to set the current deflection of a single control surface. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1system__models_1_1VehicleSystems_a68510241c2af9ba0b05e922fdafa1be7}{get\+Current\+Control\+Surface\+Deflection} (const std\+::string \&control\+Surface\+Id)
+\begin{DoxyCompactList}\small\item\em Function to retrieve the current deflection of a single control surface. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1system__models_1_1VehicleSystems_a6053ba75d0a3fbd618a0e4dabdc22635}{set\+Nose\+Radius} (const double nose\+Radius)
+\begin{DoxyCompactList}\small\item\em Function to (re)set the vehicle nose radius. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1system__models_1_1VehicleSystems_aa66a21c1a6096701d4396de981d3f268}{get\+Nose\+Radius} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the vehicle nose radius. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1system__models_1_1VehicleSystems_a336efcac875c575d2627be9d1d756adb}{set\+Wall\+Emissivity} (const double wall\+Emissivity)
+\begin{DoxyCompactList}\small\item\em Function to (re)set the vehicle wall emissivity. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1system__models_1_1VehicleSystems_a52daa570a304ad4287e482508d2833e2}{get\+Wall\+Emissivity} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the vehicle wall emissivity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Wrapper class that contains the relevant hardware systems of a vehicle. 
+
+Wrapper class that contains the relevant hardware systems of a vehicle. Not all member objects need to be set; N\+U\+LL member objects denote that the vehicle does not contain the associated hardware. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}!Vehicle\+Systems@{Vehicle\+Systems}}
+\index{Vehicle\+Systems@{Vehicle\+Systems}!tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}}
+\subsubsection[{\texorpdfstring{Vehicle\+Systems(const double dry\+Mass=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{VehicleSystems(const double dryMass=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::system\+\_\+models\+::\+Vehicle\+Systems\+::\+Vehicle\+Systems (
+\begin{DoxyParamCaption}
+\item[{const double}]{dry\+Mass = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1system__models_1_1VehicleSystems_a784bfb562166238a1b85f2825ace7145}{}\label{classtudat_1_1system__models_1_1VehicleSystems_a784bfb562166238a1b85f2825ace7145}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em dry\+Mass} & Total dry mass of the vehicle (not defined; NaN by default). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}!get\+Current\+Control\+Surface\+Deflection@{get\+Current\+Control\+Surface\+Deflection}}
+\index{get\+Current\+Control\+Surface\+Deflection@{get\+Current\+Control\+Surface\+Deflection}!tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}}
+\subsubsection[{\texorpdfstring{get\+Current\+Control\+Surface\+Deflection(const std\+::string \&control\+Surface\+Id)}{getCurrentControlSurfaceDeflection(const std::string &controlSurfaceId)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::system\+\_\+models\+::\+Vehicle\+Systems\+::get\+Current\+Control\+Surface\+Deflection (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{control\+Surface\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1system__models_1_1VehicleSystems_a68510241c2af9ba0b05e922fdafa1be7}{}\label{classtudat_1_1system__models_1_1VehicleSystems_a68510241c2af9ba0b05e922fdafa1be7}
+
+
+Function to retrieve the current deflection of a single control surface. 
+
+Function to retrieve the current deflection of a single control surface 
+\begin{DoxyParams}{Parameters}
+{\em control\+Surface\+Id} & Name of control surface for which deflection is to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current deflection of control surface that is requested. 
+\end{DoxyReturn}
+\index{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}!get\+Dry\+Mass@{get\+Dry\+Mass}}
+\index{get\+Dry\+Mass@{get\+Dry\+Mass}!tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}}
+\subsubsection[{\texorpdfstring{get\+Dry\+Mass()}{getDryMass()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::system\+\_\+models\+::\+Vehicle\+Systems\+::get\+Dry\+Mass (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1system__models_1_1VehicleSystems_aba36aa4e54902724f789a50c9329a77a}{}\label{classtudat_1_1system__models_1_1VehicleSystems_aba36aa4e54902724f789a50c9329a77a}
+
+
+Function to retrieve the total dry mass of the vehicle. 
+
+Function to retrieve the total dry mass of the vehicle \begin{DoxyReturn}{Returns}
+Total dry mass of the vehicle 
+\end{DoxyReturn}
+\index{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}!get\+Engine\+Models@{get\+Engine\+Models}}
+\index{get\+Engine\+Models@{get\+Engine\+Models}!tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}}
+\subsubsection[{\texorpdfstring{get\+Engine\+Models()}{getEngineModels()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ std\+::string, boost\+::shared\+\_\+ptr$<$ {\bf Engine\+Model} $>$ $>$ tudat\+::system\+\_\+models\+::\+Vehicle\+Systems\+::get\+Engine\+Models (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1system__models_1_1VehicleSystems_a4460e33e2458d497713386eeb71a8d76}{}\label{classtudat_1_1system__models_1_1VehicleSystems_a4460e33e2458d497713386eeb71a8d76}
+
+
+Function to retrieve the engine models. 
+
+Function to retrieve the engine models \begin{DoxyReturn}{Returns}
+Named list of engine models in the vehicle 
+\end{DoxyReturn}
+\index{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}!get\+Nose\+Radius@{get\+Nose\+Radius}}
+\index{get\+Nose\+Radius@{get\+Nose\+Radius}!tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}}
+\subsubsection[{\texorpdfstring{get\+Nose\+Radius()}{getNoseRadius()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::system\+\_\+models\+::\+Vehicle\+Systems\+::get\+Nose\+Radius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1system__models_1_1VehicleSystems_aa66a21c1a6096701d4396de981d3f268}{}\label{classtudat_1_1system__models_1_1VehicleSystems_aa66a21c1a6096701d4396de981d3f268}
+
+
+Function to retrieve the vehicle nose radius. 
+
+Function to retrieve the vehicle nose radius \begin{DoxyReturn}{Returns}
+The vehicle nose radius 
+\end{DoxyReturn}
+\index{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}!get\+Wall\+Emissivity@{get\+Wall\+Emissivity}}
+\index{get\+Wall\+Emissivity@{get\+Wall\+Emissivity}!tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}}
+\subsubsection[{\texorpdfstring{get\+Wall\+Emissivity()}{getWallEmissivity()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::system\+\_\+models\+::\+Vehicle\+Systems\+::get\+Wall\+Emissivity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1system__models_1_1VehicleSystems_a52daa570a304ad4287e482508d2833e2}{}\label{classtudat_1_1system__models_1_1VehicleSystems_a52daa570a304ad4287e482508d2833e2}
+
+
+Function to retrieve the vehicle wall emissivity. 
+
+Function to retrieve the vehicle wall emissivity \begin{DoxyReturn}{Returns}
+The vehicle wall emissivity 
+\end{DoxyReturn}
+\index{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}!set\+Current\+Control\+Surface\+Deflection@{set\+Current\+Control\+Surface\+Deflection}}
+\index{set\+Current\+Control\+Surface\+Deflection@{set\+Current\+Control\+Surface\+Deflection}!tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}}
+\subsubsection[{\texorpdfstring{set\+Current\+Control\+Surface\+Deflection(const std\+::string \&control\+Surface\+Id, const double deflection\+Angle)}{setCurrentControlSurfaceDeflection(const std::string &controlSurfaceId, const double deflectionAngle)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::system\+\_\+models\+::\+Vehicle\+Systems\+::set\+Current\+Control\+Surface\+Deflection (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{control\+Surface\+Id, }
+\item[{const double}]{deflection\+Angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1system__models_1_1VehicleSystems_aa7e18ba2906694277ccd5e5206fd7f8e}{}\label{classtudat_1_1system__models_1_1VehicleSystems_aa7e18ba2906694277ccd5e5206fd7f8e}
+
+
+Function to set the current deflection of a single control surface. 
+
+Function to set the current deflection of a single control surface 
+\begin{DoxyParams}{Parameters}
+{\em control\+Surface\+Id} & Name of control surface for which deflection is to be set \\
+\hline
+{\em deflection\+Angle} & Current deflection of control surface that is to be set. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}!set\+Engine\+Model@{set\+Engine\+Model}}
+\index{set\+Engine\+Model@{set\+Engine\+Model}!tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}}
+\subsubsection[{\texorpdfstring{set\+Engine\+Model(const boost\+::shared\+\_\+ptr$<$ Engine\+Model $>$ engine\+Model, const std\+::string engine\+Name="""")}{setEngineModel(const boost::shared_ptr< EngineModel > engineModel, const std::string engineName="")}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::system\+\_\+models\+::\+Vehicle\+Systems\+::set\+Engine\+Model (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Engine\+Model} $>$}]{engine\+Model, }
+\item[{const std\+::string}]{engine\+Name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1system__models_1_1VehicleSystems_a5a478d0d03a313c63c2afadb45813802}{}\label{classtudat_1_1system__models_1_1VehicleSystems_a5a478d0d03a313c63c2afadb45813802}
+
+
+Function to set a single engine in the vehicle. 
+
+Function to set a single engine in the vehicle. Each engine can be identified by a string. If only a single engine is set, the default (empty string) can be used. 
+\begin{DoxyParams}{Parameters}
+{\em engine\+Model} & Model of engine that is to be set \\
+\hline
+{\em engine\+Name} & Reference id of the engine that is to be set. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}!set\+Nose\+Radius@{set\+Nose\+Radius}}
+\index{set\+Nose\+Radius@{set\+Nose\+Radius}!tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}}
+\subsubsection[{\texorpdfstring{set\+Nose\+Radius(const double nose\+Radius)}{setNoseRadius(const double noseRadius)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::system\+\_\+models\+::\+Vehicle\+Systems\+::set\+Nose\+Radius (
+\begin{DoxyParamCaption}
+\item[{const double}]{nose\+Radius}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1system__models_1_1VehicleSystems_a6053ba75d0a3fbd618a0e4dabdc22635}{}\label{classtudat_1_1system__models_1_1VehicleSystems_a6053ba75d0a3fbd618a0e4dabdc22635}
+
+
+Function to (re)set the vehicle nose radius. 
+
+Function to (re)set the vehicle nose radius 
+\begin{DoxyParams}{Parameters}
+{\em nose\+Radius} & The vehicle nose radius that is to be set \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}!set\+Wall\+Emissivity@{set\+Wall\+Emissivity}}
+\index{set\+Wall\+Emissivity@{set\+Wall\+Emissivity}!tudat\+::system\+\_\+models\+::\+Vehicle\+Systems@{tudat\+::system\+\_\+models\+::\+Vehicle\+Systems}}
+\subsubsection[{\texorpdfstring{set\+Wall\+Emissivity(const double wall\+Emissivity)}{setWallEmissivity(const double wallEmissivity)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::system\+\_\+models\+::\+Vehicle\+Systems\+::set\+Wall\+Emissivity (
+\begin{DoxyParamCaption}
+\item[{const double}]{wall\+Emissivity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1system__models_1_1VehicleSystems_a336efcac875c575d2627be9d1d756adb}{}\label{classtudat_1_1system__models_1_1VehicleSystems_a336efcac875c575d2627be9d1d756adb}
+
+
+Function to (re)set the vehicle wall emissivity. 
+
+Function to (re)set the vehicle wall emissivity 
+\begin{DoxyParams}{Parameters}
+{\em wall\+Emissivity} & The vehicle wall emissivity that is to be set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+System\+Models/vehicle\+Systems.\+h\end{DoxyCompactItemize}

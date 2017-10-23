@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1simulation__setup_1_1GravityFieldSettings.html" title="Class for providing settings for gravity field model. " alt="" coords="5,41,163,83"/>
+<area shape="rect" id="node2" href="$classtudat_1_1simulation__setup_1_1CentralGravityFieldSettings.html" title="Derived class of GravityFieldSettings defining settings of point mass gravity field. " alt="" coords="224,5,415,47"/>
+<area shape="rect" id="node3" href="$classtudat_1_1simulation__setup_1_1SphericalHarmonicsGravityFieldSettings.html" title="tudat::simulation_setup\l::SphericalHarmonicsGravityField\lSettings" alt="" coords="211,70,428,126"/>
+</map>

@@ -1,0 +1,157 @@
+\hypertarget{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter}{}\section{tudat\+:\+:estimatable\+\_\+parameters\+:\+:Initial\+Translational\+State\+Parameter$<$ Initial\+State\+Parameter\+Type $>$ Class Template Reference}
+\label{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter}\index{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter$<$ Initial\+State\+Parameter\+Type $>$@{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter$<$ Initial\+State\+Parameter\+Type $>$}}
+
+
+Interface class for the estimation of an initial translational state.  
+
+
+
+
+{\ttfamily \#include $<$initial\+Translational\+State.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:estimatable\+\_\+parameters\+:\+:Initial\+Translational\+State\+Parameter$<$ Initial\+State\+Parameter\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:estimatable\+\_\+parameters\+:\+:Initial\+Translational\+State\+Parameter$<$ Initial\+State\+Parameter\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_acf9521e63317dfcec39505fc183685f7}{Initial\+Translational\+State\+Parameter} (const std\+::string \&associated\+Body, const Eigen\+::\+Matrix$<$ Initial\+State\+Parameter\+Type, Eigen\+::\+Dynamic, 1 $>$ \&initial\+Translational\+State, const std\+::string \&central\+Body=\char`\"{}S\+SB\char`\"{}, const std\+::string \&frame\+Orientation=\char`\"{}E\+C\+L\+I\+P\+J2000\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor, sets initial value of translational state. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ Initial\+State\+Parameter\+Type, Eigen\+::\+Dynamic, 1 $>$ \hyperlink{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_a127b7255f01047b7e25b44ffa8a15870}{get\+Parameter\+Value} ()
+\begin{DoxyCompactList}\small\item\em Function to get the current value of initial state w.\+r.\+t. central\+Body. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_a99775f766b178257618227c2f03d7d72}{set\+Parameter\+Value} (Eigen\+::\+Matrix$<$ Initial\+State\+Parameter\+Type, Eigen\+::\+Dynamic, 1 $>$ parameter\+Value)
+\begin{DoxyCompactList}\small\item\em Function to reset the current value of initial state w.\+r.\+t. central\+Body. \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_af5ed822fe6786c76b9d522ad37230fb1}{get\+Parameter\+Size} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the size of the parameter (always 6). \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_ad48cafad51ed877bc215295ecd0b8319}{get\+Central\+Body} ()
+\begin{DoxyCompactList}\small\item\em Function to get the name of the body w.\+r.\+t. which the initial state is to be estimated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Initial\+State\+Parameter\+Type = double$>$\\*
+class tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter$<$ Initial\+State\+Parameter\+Type $>$}
+
+Interface class for the estimation of an initial translational state. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}!Initial\+Translational\+State\+Parameter@{Initial\+Translational\+State\+Parameter}}
+\index{Initial\+Translational\+State\+Parameter@{Initial\+Translational\+State\+Parameter}!tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}}
+\subsubsection[{\texorpdfstring{Initial\+Translational\+State\+Parameter(const std\+::string \&associated\+Body, const Eigen\+::\+Matrix$<$ Initial\+State\+Parameter\+Type, Eigen\+::\+Dynamic, 1 $>$ \&initial\+Translational\+State, const std\+::string \&central\+Body=""S\+SB"", const std\+::string \&frame\+Orientation=""E\+C\+L\+I\+P\+J2000"")}{InitialTranslationalStateParameter(const std::string &associatedBody, const Eigen::Matrix< InitialStateParameterType, Eigen::Dynamic, 1 > &initialTranslationalState, const std::string &centralBody="SSB", const std::string &frameOrientation="ECLIPJ2000")}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Initial\+State\+Parameter\+Type  = double$>$ {\bf tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}$<$ Initial\+State\+Parameter\+Type $>$\+::{\bf Initial\+Translational\+State\+Parameter} (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{associated\+Body, }
+\item[{const Eigen\+::\+Matrix$<$ Initial\+State\+Parameter\+Type, Eigen\+::\+Dynamic, 1 $>$ \&}]{initial\+Translational\+State, }
+\item[{const std\+::string \&}]{central\+Body = {\ttfamily \char`\"{}SSB\char`\"{}}, }
+\item[{const std\+::string \&}]{frame\+Orientation = {\ttfamily \char`\"{}ECLIPJ2000\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_acf9521e63317dfcec39505fc183685f7}{}\label{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_acf9521e63317dfcec39505fc183685f7}
+
+
+Constructor, sets initial value of translational state. 
+
+Constructor, sets initial value of translational state. 
+\begin{DoxyParams}{Parameters}
+{\em associated\+Body} & Body for which initial state is to be estimated. \\
+\hline
+{\em initial\+Translational\+State} & Current value of initial state (w.\+r.\+t. central\+Body) \\
+\hline
+{\em central\+Body} & Body w.\+r.\+t. which the initial state is to be estimated. \\
+\hline
+{\em frame\+Orientation} & Orientation of the frame in which the state is defined. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}!get\+Central\+Body@{get\+Central\+Body}}
+\index{get\+Central\+Body@{get\+Central\+Body}!tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}}
+\subsubsection[{\texorpdfstring{get\+Central\+Body()}{getCentralBody()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Initial\+State\+Parameter\+Type  = double$>$ std\+::string {\bf tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}$<$ Initial\+State\+Parameter\+Type $>$\+::get\+Central\+Body (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_ad48cafad51ed877bc215295ecd0b8319}{}\label{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_ad48cafad51ed877bc215295ecd0b8319}
+
+
+Function to get the name of the body w.\+r.\+t. which the initial state is to be estimated. 
+
+Function to get the name of the body w.\+r.\+t. which the initial state is to be estimated. \begin{DoxyReturn}{Returns}
+Name of the body w.\+r.\+t. which the initial state is to be estimated. 
+\end{DoxyReturn}
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}!get\+Parameter\+Size@{get\+Parameter\+Size}}
+\index{get\+Parameter\+Size@{get\+Parameter\+Size}!tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}}
+\subsubsection[{\texorpdfstring{get\+Parameter\+Size()}{getParameterSize()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Initial\+State\+Parameter\+Type  = double$>$ int {\bf tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}$<$ Initial\+State\+Parameter\+Type $>$\+::get\+Parameter\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_af5ed822fe6786c76b9d522ad37230fb1}{}\label{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_af5ed822fe6786c76b9d522ad37230fb1}
+
+
+Function to retrieve the size of the parameter (always 6). 
+
+Function to retrieve the size of the parameter (always 6). \begin{DoxyReturn}{Returns}
+Size of parameter value (always 6). 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a989d54bab5c5e09ab6f1b709755b22e8}{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ Eigen\+::\+Matrix$<$ Initial\+State\+Parameter\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$}.
+
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}!get\+Parameter\+Value@{get\+Parameter\+Value}}
+\index{get\+Parameter\+Value@{get\+Parameter\+Value}!tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}}
+\subsubsection[{\texorpdfstring{get\+Parameter\+Value()}{getParameterValue()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Initial\+State\+Parameter\+Type  = double$>$ Eigen\+::\+Matrix$<$ Initial\+State\+Parameter\+Type, Eigen\+::\+Dynamic, 1 $>$ {\bf tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}$<$ Initial\+State\+Parameter\+Type $>$\+::get\+Parameter\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_a127b7255f01047b7e25b44ffa8a15870}{}\label{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_a127b7255f01047b7e25b44ffa8a15870}
+
+
+Function to get the current value of initial state w.\+r.\+t. central\+Body. 
+
+Function to get the current value of initial state w.\+r.\+t. central\+Body. \begin{DoxyReturn}{Returns}
+The current value of initial state w.\+r.\+t. central\+Body. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a63413b914f9e8b68705aba7048780200}{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ Eigen\+::\+Matrix$<$ Initial\+State\+Parameter\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$}.
+
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}!set\+Parameter\+Value@{set\+Parameter\+Value}}
+\index{set\+Parameter\+Value@{set\+Parameter\+Value}!tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter@{tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}}
+\subsubsection[{\texorpdfstring{set\+Parameter\+Value(\+Eigen\+::\+Matrix$<$ Initial\+State\+Parameter\+Type, Eigen\+::\+Dynamic, 1 $>$ parameter\+Value)}{setParameterValue(Eigen::Matrix< InitialStateParameterType, Eigen::Dynamic, 1 > parameterValue)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Initial\+State\+Parameter\+Type  = double$>$ void {\bf tudat\+::estimatable\+\_\+parameters\+::\+Initial\+Translational\+State\+Parameter}$<$ Initial\+State\+Parameter\+Type $>$\+::set\+Parameter\+Value (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Matrix$<$ Initial\+State\+Parameter\+Type, Eigen\+::\+Dynamic, 1 $>$}]{parameter\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_a99775f766b178257618227c2f03d7d72}{}\label{classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter_a99775f766b178257618227c2f03d7d72}
+
+
+Function to reset the current value of initial state w.\+r.\+t. central\+Body. 
+
+Function to reset the current value of initial state w.\+r.\+t. central\+Body. 
+\begin{DoxyParams}{Parameters}
+{\em parameter\+Value} & The new value of initial state w.\+r.\+t. central\+Body. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a5df35bde257a6db401ca3c3613056554}{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ Eigen\+::\+Matrix$<$ Initial\+State\+Parameter\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Orbit\+Determination/\+Estimatable\+Parameters/initial\+Translational\+State.\+h\end{DoxyCompactItemize}

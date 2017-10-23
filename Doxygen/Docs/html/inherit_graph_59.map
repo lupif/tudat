@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1interpolators_1_1LookUpScheme.html" title="Look&#45;up scheme class for nearest left neighbour search. " alt="" coords="5,45,212,101"/>
+<area shape="rect" id="node2" href="$classtudat_1_1interpolators_1_1BinarySearchLookupScheme.html" title="Look&#45;up scheme class for nearest left neighbour search using binary search algorithm. " alt="" coords="271,5,469,61"/>
+<area shape="rect" id="node3" href="$classtudat_1_1interpolators_1_1HuntingAlgorithmLookupScheme.html" title="Look&#45;up scheme class for nearest left neighbour search using hunting algorithm. " alt="" coords="260,85,480,141"/>
+</map>

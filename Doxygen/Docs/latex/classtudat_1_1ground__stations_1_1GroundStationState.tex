@@ -1,0 +1,205 @@
+\hypertarget{classtudat_1_1ground__stations_1_1GroundStationState}{}\section{tudat\+:\+:ground\+\_\+stations\+:\+:Ground\+Station\+State Class Reference}
+\label{classtudat_1_1ground__stations_1_1GroundStationState}\index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}}
+
+
+Class storing and computing the (time-\/variable) state of a ground station in a body-\/fixed frame.  
+
+
+
+
+{\ttfamily \#include $<$ground\+Station\+State.\+h$>$}
+
+
+
+Collaboration diagram for tudat\+:\+:ground\+\_\+stations\+:\+:Ground\+Station\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classtudat_1_1ground__stations_1_1GroundStationState__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1ground__stations_1_1GroundStationState_ac633824ae9fa6c8a1a8cdc3e1309c35d}{Ground\+Station\+State} (const Eigen\+::\+Vector3d station\+Position, const coordinate\+\_\+conversions\+::\+Position\+Element\+Types input\+Element\+Type=coordinate\+\_\+conversions\+::cartesian\+\_\+position, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__astrodynamics_1_1BodyShapeModel}{basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model} $>$ body\+Surface=boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__astrodynamics_1_1BodyShapeModel}{basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model} $>$())
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector6d \hyperlink{classtudat_1_1ground__stations_1_1GroundStationState_a852d6bf1c17c7228b738ba792eeaf40d}{get\+Cartesian\+State\+In\+Time} (const double seconds\+Since\+Epoch, const double input\+Reference\+Epoch=basic\+\_\+astrodynamics\+::\+J\+U\+L\+I\+A\+N\+\_\+\+D\+A\+Y\+\_\+\+O\+N\+\_\+\+J2000)
+\begin{DoxyCompactList}\small\item\em Function to obtain the Cartesian state of the ground station in the local frame at a given time. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1ground__stations_1_1GroundStationState_a9aa8bfcfa00107b8727ff9cacff2ca52}{get\+Nominal\+Cartesian\+Position} ()
+\begin{DoxyCompactList}\small\item\em Function to return the nominal (unperturbed) Cartesian position of the station. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1ground__stations_1_1GroundStationState_acc884d85ea5331749bc7ac6bec9b0b7c}{get\+Nominal\+Spherical\+Position} ()
+\begin{DoxyCompactList}\small\item\em Function to return the nominal (unperturbed) spherical position of the station. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1ground__stations_1_1GroundStationState_a33bc2b3d84acddff0bb2bd94d6b6e272}{get\+Nominal\+Geodetic\+Position} ()
+\begin{DoxyCompactList}\small\item\em Function to return the nominal (unperturbed) geodetic position of the station. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1ground__stations_1_1GroundStationState_a8974c59ff3436e23fcd8302536c21a38}{reset\+Ground\+Station\+Position\+At\+Epoch} (const Eigen\+::\+Vector3d station\+Position, const coordinate\+\_\+conversions\+::\+Position\+Element\+Types input\+Element\+Type=coordinate\+\_\+conversions\+::cartesian\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Function to (re)set the nominal state of the station. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__astrodynamics_1_1BodyShapeModel}{basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model} $>$ \hyperlink{classtudat_1_1ground__stations_1_1GroundStationState_a6676b031478c2d73a226ee5789d953d3}{get\+Body\+Surface} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the shape of body on which state is defined. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1ground__stations_1_1GroundStationState_acc4e35ba9f9a797f000eb848982706ba}{cartesian\+Position\+\_\+}
+\begin{DoxyCompactList}\small\item\em Cartesian position of station. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1ground__stations_1_1GroundStationState_aed814dd2ad671f8df67be153d92c1966}{spherical\+Position\+\_\+}
+\begin{DoxyCompactList}\small\item\em Spherical position of station. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1ground__stations_1_1GroundStationState_a2af20fd123b1e5ca703c4ee7c9b25bc8}{geodetic\+Position}
+\begin{DoxyCompactList}\small\item\em Geodetic position of station. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__astrodynamics_1_1BodyShapeModel}{basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model} $>$ \hyperlink{classtudat_1_1ground__stations_1_1GroundStationState_a3c63970e8a21c6d219c443c729ace442}{body\+Surface\+\_\+}\hypertarget{classtudat_1_1ground__stations_1_1GroundStationState_a3c63970e8a21c6d219c443c729ace442}{}\label{classtudat_1_1ground__stations_1_1GroundStationState_a3c63970e8a21c6d219c443c729ace442}
+
+\begin{DoxyCompactList}\small\item\em Shape of body on which state is defined. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class storing and computing the (time-\/variable) state of a ground station in a body-\/fixed frame. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}!Ground\+Station\+State@{Ground\+Station\+State}}
+\index{Ground\+Station\+State@{Ground\+Station\+State}!tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}}
+\subsubsection[{\texorpdfstring{Ground\+Station\+State(const Eigen\+::\+Vector3d station\+Position, const coordinate\+\_\+conversions\+::\+Position\+Element\+Types input\+Element\+Type=coordinate\+\_\+conversions\+::cartesian\+\_\+position, const boost\+::shared\+\_\+ptr$<$ basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model $>$ body\+Surface=boost\+::shared\+\_\+ptr$<$ basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model $>$())}{GroundStationState(const Eigen::Vector3d stationPosition, const coordinate_conversions::PositionElementTypes inputElementType=coordinate_conversions::cartesian_position, const boost::shared_ptr< basic_astrodynamics::BodyShapeModel > bodySurface=boost::shared_ptr< basic_astrodynamics::BodyShapeModel >())}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State\+::\+Ground\+Station\+State (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector3d}]{station\+Position, }
+\item[{const coordinate\+\_\+conversions\+::\+Position\+Element\+Types}]{input\+Element\+Type = {\ttfamily coordinate\+\_\+conversions\+:\+:cartesian\+\_\+position}, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model} $>$}]{body\+Surface = {\ttfamily boost\+:\+:shared\+\_\+ptr$<$~{\bf basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model}~$>$(~)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1ground__stations_1_1GroundStationState_ac633824ae9fa6c8a1a8cdc3e1309c35d}{}\label{classtudat_1_1ground__stations_1_1GroundStationState_ac633824ae9fa6c8a1a8cdc3e1309c35d}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em station\+Position} & Position of ground station in body-\/fixed frame \\
+\hline
+{\em input\+Element\+Type} & Element type (e.\+g. Cartesian, spherical, etc.) of ground\+Station\+Position. \\
+\hline
+{\em body\+Surface} & Shape of body on which state is defined. If N\+U\+LL (default), no conversions to/from geodetic position are possible. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}!get\+Body\+Surface@{get\+Body\+Surface}}
+\index{get\+Body\+Surface@{get\+Body\+Surface}!tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}}
+\subsubsection[{\texorpdfstring{get\+Body\+Surface()}{getBodySurface()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model} $>$ tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State\+::get\+Body\+Surface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1ground__stations_1_1GroundStationState_a6676b031478c2d73a226ee5789d953d3}{}\label{classtudat_1_1ground__stations_1_1GroundStationState_a6676b031478c2d73a226ee5789d953d3}
+
+
+Function to retrieve the shape of body on which state is defined. 
+
+Function to retrieve the shape of body on which state is defined \textbackslash{} return Shape of body on which state is defined \index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}!get\+Cartesian\+State\+In\+Time@{get\+Cartesian\+State\+In\+Time}}
+\index{get\+Cartesian\+State\+In\+Time@{get\+Cartesian\+State\+In\+Time}!tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}}
+\subsubsection[{\texorpdfstring{get\+Cartesian\+State\+In\+Time(const double seconds\+Since\+Epoch, const double input\+Reference\+Epoch=basic\+\_\+astrodynamics\+::\+J\+U\+L\+I\+A\+N\+\_\+\+D\+A\+Y\+\_\+\+O\+N\+\_\+\+J2000)}{getCartesianStateInTime(const double secondsSinceEpoch, const double inputReferenceEpoch=basic_astrodynamics::JULIAN_DAY_ON_J2000)}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector6d tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State\+::get\+Cartesian\+State\+In\+Time (
+\begin{DoxyParamCaption}
+\item[{const double}]{seconds\+Since\+Epoch, }
+\item[{const double}]{input\+Reference\+Epoch = {\ttfamily basic\+\_\+astrodynamics\+:\+:JULIAN\+\_\+DAY\+\_\+ON\+\_\+J2000}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1ground__stations_1_1GroundStationState_a852d6bf1c17c7228b738ba792eeaf40d}{}\label{classtudat_1_1ground__stations_1_1GroundStationState_a852d6bf1c17c7228b738ba792eeaf40d}
+
+
+Function to obtain the Cartesian state of the ground station in the local frame at a given time. 
+
+Function to obtain the Cartesian state of the ground station in the local frame (body-\/fixed, not topocentric) at a given time. Adds all position variations to the nominal state (at the requested time) and returns the state. N\+O\+TE\+: poisition variations are as yet not included. 
+\begin{DoxyParams}{Parameters}
+{\em seconds\+Since\+Epoch} & Secons since reference epoch at which the position is to be retrieved. \\
+\hline
+{\em input\+Reference\+Epoch} & Reference epoch julian day \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cartesian state of station in local frame at requested time. 
+\end{DoxyReturn}
+\index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}!get\+Nominal\+Cartesian\+Position@{get\+Nominal\+Cartesian\+Position}}
+\index{get\+Nominal\+Cartesian\+Position@{get\+Nominal\+Cartesian\+Position}!tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}}
+\subsubsection[{\texorpdfstring{get\+Nominal\+Cartesian\+Position()}{getNominalCartesianPosition()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State\+::get\+Nominal\+Cartesian\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1ground__stations_1_1GroundStationState_a9aa8bfcfa00107b8727ff9cacff2ca52}{}\label{classtudat_1_1ground__stations_1_1GroundStationState_a9aa8bfcfa00107b8727ff9cacff2ca52}
+
+
+Function to return the nominal (unperturbed) Cartesian position of the station. 
+
+Function to return the nominal Cartesian (unperturbed, i.\+e. not including linear drift, eccentricity, tidal variations, etc.) position of the station in body-\/fixed system. \begin{DoxyReturn}{Returns}
+Unperturbed Cartesian position of the station 
+\end{DoxyReturn}
+\index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}!get\+Nominal\+Geodetic\+Position@{get\+Nominal\+Geodetic\+Position}}
+\index{get\+Nominal\+Geodetic\+Position@{get\+Nominal\+Geodetic\+Position}!tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}}
+\subsubsection[{\texorpdfstring{get\+Nominal\+Geodetic\+Position()}{getNominalGeodeticPosition()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State\+::get\+Nominal\+Geodetic\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1ground__stations_1_1GroundStationState_a33bc2b3d84acddff0bb2bd94d6b6e272}{}\label{classtudat_1_1ground__stations_1_1GroundStationState_a33bc2b3d84acddff0bb2bd94d6b6e272}
+
+
+Function to return the nominal (unperturbed) geodetic position of the station. 
+
+Function to return the nominal geodetic (unperturbed, i.\+e. not including linear drift, eccentricity, tidal variations, etc.) position of the station in body-\/fixed system. N\+O\+TE\+: This vector is only defined in body\+Surface\+\_\+ was non-\/\+N\+U\+LL at last setting of nominal state (call to reset\+Ground\+Station\+Position\+At\+Epoch). \begin{DoxyReturn}{Returns}
+Unperturbed geodetic position of the station 
+\end{DoxyReturn}
+\index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}!get\+Nominal\+Spherical\+Position@{get\+Nominal\+Spherical\+Position}}
+\index{get\+Nominal\+Spherical\+Position@{get\+Nominal\+Spherical\+Position}!tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}}
+\subsubsection[{\texorpdfstring{get\+Nominal\+Spherical\+Position()}{getNominalSphericalPosition()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State\+::get\+Nominal\+Spherical\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1ground__stations_1_1GroundStationState_acc884d85ea5331749bc7ac6bec9b0b7c}{}\label{classtudat_1_1ground__stations_1_1GroundStationState_acc884d85ea5331749bc7ac6bec9b0b7c}
+
+
+Function to return the nominal (unperturbed) spherical position of the station. 
+
+Function to return the nominal spherical (unperturbed, i.\+e. not including linear drift, eccentricity, tidal variations, etc.) position of the station in body-\/fixed system. \begin{DoxyReturn}{Returns}
+Unperturbed spherical position of the station 
+\end{DoxyReturn}
+\index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}!reset\+Ground\+Station\+Position\+At\+Epoch@{reset\+Ground\+Station\+Position\+At\+Epoch}}
+\index{reset\+Ground\+Station\+Position\+At\+Epoch@{reset\+Ground\+Station\+Position\+At\+Epoch}!tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}}
+\subsubsection[{\texorpdfstring{reset\+Ground\+Station\+Position\+At\+Epoch(const Eigen\+::\+Vector3d station\+Position, const coordinate\+\_\+conversions\+::\+Position\+Element\+Types input\+Element\+Type=coordinate\+\_\+conversions\+::cartesian\+\_\+position)}{resetGroundStationPositionAtEpoch(const Eigen::Vector3d stationPosition, const coordinate_conversions::PositionElementTypes inputElementType=coordinate_conversions::cartesian_position)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State\+::reset\+Ground\+Station\+Position\+At\+Epoch (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector3d}]{station\+Position, }
+\item[{const coordinate\+\_\+conversions\+::\+Position\+Element\+Types}]{input\+Element\+Type = {\ttfamily coordinate\+\_\+conversions\+:\+:cartesian\+\_\+position}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1ground__stations_1_1GroundStationState_a8974c59ff3436e23fcd8302536c21a38}{}\label{classtudat_1_1ground__stations_1_1GroundStationState_a8974c59ff3436e23fcd8302536c21a38}
+
+
+Function to (re)set the nominal state of the station. 
+
+Function to (re)set the nominal state of the station. Input may be in any type of elements defined in Position\+Element\+Types enum. 
+\begin{DoxyParams}{Parameters}
+{\em station\+Position} & Position of ground station in body-\/fixed frame \\
+\hline
+{\em input\+Element\+Type} & Element type (e.\+g. Cartesian, spherical, etc.) of ground\+Station\+Position. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}!cartesian\+Position\+\_\+@{cartesian\+Position\+\_\+}}
+\index{cartesian\+Position\+\_\+@{cartesian\+Position\+\_\+}!tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}}
+\subsubsection[{\texorpdfstring{cartesian\+Position\+\_\+}{cartesianPosition_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State\+::cartesian\+Position\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1ground__stations_1_1GroundStationState_acc4e35ba9f9a797f000eb848982706ba}{}\label{classtudat_1_1ground__stations_1_1GroundStationState_acc4e35ba9f9a797f000eb848982706ba}
+
+
+Cartesian position of station. 
+
+Cartesian position of station, without variations (linear drift, eccentricity, tides, etc.), in the body-\/fixed frame. \index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}!geodetic\+Position@{geodetic\+Position}}
+\index{geodetic\+Position@{geodetic\+Position}!tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}}
+\subsubsection[{\texorpdfstring{geodetic\+Position}{geodeticPosition}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State\+::geodetic\+Position\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1ground__stations_1_1GroundStationState_a2af20fd123b1e5ca703c4ee7c9b25bc8}{}\label{classtudat_1_1ground__stations_1_1GroundStationState_a2af20fd123b1e5ca703c4ee7c9b25bc8}
+
+
+Geodetic position of station. 
+
+Geodetic position of station, without variations (linear drift, eccentricity, tides, etc.), in the body-\/fixed frame. The order of the entries is\+: altitude, geodetic latitude, longitude. This vector is only defined in body\+Surface\+\_\+ was non-\/\+N\+U\+LL at last setting of nominal state (call to reset\+Ground\+Station\+Position\+At\+Epoch). \index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}!spherical\+Position\+\_\+@{spherical\+Position\+\_\+}}
+\index{spherical\+Position\+\_\+@{spherical\+Position\+\_\+}!tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State}}
+\subsubsection[{\texorpdfstring{spherical\+Position\+\_\+}{sphericalPosition_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+State\+::spherical\+Position\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1ground__stations_1_1GroundStationState_aed814dd2ad671f8df67be153d92c1966}{}\label{classtudat_1_1ground__stations_1_1GroundStationState_aed814dd2ad671f8df67be153d92c1966}
+
+
+Spherical position of station. 
+
+Spherical position of station, without variations (linear drift, eccentricity, tides, etc.), in the body-\/fixed frame. The order of the entries is\+: radius, geocentric latitude, longitude. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Ground\+Stations/ground\+Station\+State.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Ground\+Stations/ground\+Station\+State.\+cpp\end{DoxyCompactItemize}

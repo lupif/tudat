@@ -1,0 +1,4 @@
+<map id="tudat::input_output::solar_activity::ParseSolarActivityData" name="tudat::input_output::solar_activity::ParseSolarActivityData">
+<area shape="rect" id="node2" href="$classtudat_1_1input__output_1_1TextParser.html" title="A TextParser is a Parser that specialized in parsing text files. " alt="" coords="29,95,160,136"/>
+<area shape="rect" id="node3" href="$classtudat_1_1input__output_1_1Parser.html" title="Parser interface, indicates that the class can parse passed string and stream data. " alt="" coords="29,5,160,47"/>
+</map>

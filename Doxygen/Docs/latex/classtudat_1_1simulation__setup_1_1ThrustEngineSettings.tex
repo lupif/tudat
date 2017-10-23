@@ -1,0 +1,70 @@
+\hypertarget{classtudat_1_1simulation__setup_1_1ThrustEngineSettings}{}\section{tudat\+:\+:simulation\+\_\+setup\+:\+:Thrust\+Engine\+Settings Class Reference}
+\label{classtudat_1_1simulation__setup_1_1ThrustEngineSettings}\index{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Engine\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Engine\+Settings}}
+
+
+Class defining settings for the thrust magnitude.  
+
+
+
+
+{\ttfamily \#include $<$thrust\+Settings.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:simulation\+\_\+setup\+:\+:Thrust\+Engine\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1simulation__setup_1_1ThrustEngineSettings__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1ThrustEngineSettings_a48e8643cb6be9d8473ff11746cad20d9}{Thrust\+Engine\+Settings} (const Thrust\+Magnitude\+Types thrust\+Magnitude\+Guidance\+Type, const std\+::string \&thrust\+Origin\+Id)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1simulation__setup_1_1ThrustEngineSettings_afe2e50cfc670364359367687aadb56c2}{$\sim$\+Thrust\+Engine\+Settings} ()\hypertarget{classtudat_1_1simulation__setup_1_1ThrustEngineSettings_afe2e50cfc670364359367687aadb56c2}{}\label{classtudat_1_1simulation__setup_1_1ThrustEngineSettings_afe2e50cfc670364359367687aadb56c2}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Thrust\+Magnitude\+Types \hyperlink{classtudat_1_1simulation__setup_1_1ThrustEngineSettings_ac78afab964eff8963de2394bd949f830}{thrust\+Magnitude\+Guidance\+Type\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1ThrustEngineSettings_ac78afab964eff8963de2394bd949f830}{}\label{classtudat_1_1simulation__setup_1_1ThrustEngineSettings_ac78afab964eff8963de2394bd949f830}
+
+\begin{DoxyCompactList}\small\item\em Type of thrust magnitude guidance that is to be used. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1simulation__setup_1_1ThrustEngineSettings_a34d0d201a0dc045ea16ae7bc1ca3601f}{thrust\+Origin\+Id\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1ThrustEngineSettings_a34d0d201a0dc045ea16ae7bc1ca3601f}{}\label{classtudat_1_1simulation__setup_1_1ThrustEngineSettings_a34d0d201a0dc045ea16ae7bc1ca3601f}
+
+\begin{DoxyCompactList}\small\item\em Reference id of thrust origin that is to be used (empty if N/A). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class defining settings for the thrust magnitude. 
+
+Class for providing settings the thrust magnitude of a single thrust model. This class is a functional (base) class for settings of thrust magnitude that require no information in addition to their type. Classes defining settings for thrust magnitude requiring additional information must be derived from this class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Engine\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Engine\+Settings}!Thrust\+Engine\+Settings@{Thrust\+Engine\+Settings}}
+\index{Thrust\+Engine\+Settings@{Thrust\+Engine\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Thrust\+Engine\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Engine\+Settings}}
+\subsubsection[{\texorpdfstring{Thrust\+Engine\+Settings(const Thrust\+Magnitude\+Types thrust\+Magnitude\+Guidance\+Type, const std\+::string \&thrust\+Origin\+Id)}{ThrustEngineSettings(const ThrustMagnitudeTypes thrustMagnitudeGuidanceType, const std::string &thrustOriginId)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::simulation\+\_\+setup\+::\+Thrust\+Engine\+Settings\+::\+Thrust\+Engine\+Settings (
+\begin{DoxyParamCaption}
+\item[{const Thrust\+Magnitude\+Types}]{thrust\+Magnitude\+Guidance\+Type, }
+\item[{const std\+::string \&}]{thrust\+Origin\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1ThrustEngineSettings_a48e8643cb6be9d8473ff11746cad20d9}{}\label{classtudat_1_1simulation__setup_1_1ThrustEngineSettings_a48e8643cb6be9d8473ff11746cad20d9}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em thrust\+Magnitude\+Guidance\+Type} & Type of thrust magnitude guidance that is to be used \\
+\hline
+{\em thrust\+Origin\+Id} & Reference id of thrust origin that is to be used (empty if N/A). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/thrust\+Settings.\+h\end{DoxyCompactItemize}

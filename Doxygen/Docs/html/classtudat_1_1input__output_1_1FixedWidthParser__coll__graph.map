@@ -1,0 +1,4 @@
+<map id="tudat::input_output::FixedWidthParser" name="tudat::input_output::FixedWidthParser">
+<area shape="rect" id="node2" href="$classtudat_1_1input__output_1_1TextParser.html" title="A TextParser is a Parser that specialized in parsing text files. " alt="" coords="7,95,138,136"/>
+<area shape="rect" id="node3" href="$classtudat_1_1input__output_1_1Parser.html" title="Parser interface, indicates that the class can parse passed string and stream data. " alt="" coords="7,5,138,47"/>
+</map>

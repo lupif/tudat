@@ -1,0 +1,278 @@
+\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration}{}\section{tudat\+:\+:propulsion\+:\+:Thrust\+Acceleration Class Reference}
+\label{classtudat_1_1propulsion_1_1ThrustAcceleration}\index{tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}}
+
+
+Class used for computing an acceleration due to a continuous thrust.  
+
+
+
+
+{\ttfamily \#include $<$thrust\+Acceleration\+Model.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:propulsion\+:\+:Thrust\+Acceleration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classtudat_1_1propulsion_1_1ThrustAcceleration__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:propulsion\+:\+:Thrust\+Acceleration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1propulsion_1_1ThrustAcceleration__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a0f1bf2418aab0ea328cbff7be6e1f64c}{Thrust\+Acceleration} (const boost\+::function$<$ double() $>$ thrust\+Magnitude\+Function, const boost\+::function$<$ Eigen\+::\+Vector3d() $>$ thrust\+Direction\+Function, const boost\+::function$<$ double() $>$ body\+Mass\+Function, const boost\+::function$<$ double() $>$ mass\+Rate\+Function, const std\+::string associated\+Throust\+Source=\char`\"{}\char`\"{}, const boost\+::function$<$ void(const double) $>$ thrust\+Update\+Function=boost\+::function$<$ void(const double) $>$(), const boost\+::function$<$ void(const double) $>$ time\+Reset\+Function=boost\+::function$<$ void(const double) $>$(), const std\+::map$<$ propagators\+::\+Environment\+Models\+To\+Update, std\+::vector$<$ std\+::string $>$ $>$ \&required\+Model\+Updates=std\+::map$<$ propagators\+::\+Environment\+Models\+To\+Update, std\+::vector$<$ std\+::string $>$ $>$())
+\item 
+\hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a9106c02d3b2ddda7a6724736d5662ae0}{$\sim$\+Thrust\+Acceleration} ()\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a9106c02d3b2ddda7a6724736d5662ae0}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a9106c02d3b2ddda7a6724736d5662ae0}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a85c999d6b3fc6b093e6990e2997918f6}{get\+Acceleration} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the current acceleration, as set by last call to update\+Members function. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a2ef613d32d6b4cad26aece57d6171127}{reset\+Time} (const double current\+Time=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Function to reset the current time. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a847904c69ea6ced5ac3396f7ecdf2f78}{update\+Members} (const double current\+Time=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Update member variables used by the thrust acceleration model. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a356aa0c4af45bf67d205c480b62546dd}{get\+Current\+Mass\+Rate} ()
+\begin{DoxyCompactList}\small\item\em Function to retreieve the current propellant mass rate, as computed by last call to update\+Members function. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a8225b0a9c42fe43f2a7843eb9928ce7c}{get\+Associated\+Throust\+Source} ()
+\begin{DoxyCompactList}\small\item\em Function to retreieve the ID associated with the source of the thrust (i.\+e. engine name). \end{DoxyCompactList}\item 
+std\+::map$<$ propagators\+::\+Environment\+Models\+To\+Update, std\+::vector$<$ std\+::string $>$ $>$ \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a936393a7c5a988fa3c0bc234eac92587}{get\+Required\+Model\+Updates} ()
+\begin{DoxyCompactList}\small\item\em Function to retreieve the list of environment models that are to be updated before computing the acceleration. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a9cd18b1627b379670313291e3acdf2c5}{set\+Thrust\+Update\+Function} (const boost\+::function$<$ void(const double) $>$ thrust\+Update\+Function)
+\begin{DoxyCompactList}\small\item\em Function to set or add a thrust update function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::function$<$ double() $>$ \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_aadcc088dd4a38db8b8f67ed0853dcc29}{thrust\+Magnitude\+Function\+\_\+}
+\begin{DoxyCompactList}\small\item\em Function returning the current magnitude of the thrust. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Vector3d() $>$ \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_addab21b2c71cc5aa71268590d076a653}{thrust\+Direction\+Function\+\_\+}
+\begin{DoxyCompactList}\small\item\em Function returning the direction of the thrust (as a unit vector). \end{DoxyCompactList}\item 
+boost\+::function$<$ double() $>$ \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a3933986d39fc764eb2b9f3ce6ca9b842}{body\+Mass\+Function\+\_\+}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a3933986d39fc764eb2b9f3ce6ca9b842}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a3933986d39fc764eb2b9f3ce6ca9b842}
+
+\begin{DoxyCompactList}\small\item\em Function returning the current mass of the body being propagated. \end{DoxyCompactList}\item 
+boost\+::function$<$ double() $>$ \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a40e4e949c17b0050e276c9a8c4e42026}{mass\+Rate\+Function\+\_\+}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a40e4e949c17b0050e276c9a8c4e42026}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a40e4e949c17b0050e276c9a8c4e42026}
+
+\begin{DoxyCompactList}\small\item\em Function returning total propellant mass rate from the thrust system. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a2ddb68ef5d71972f74d43d3d5c4f2e73}{associated\+Throust\+Source\+\_\+}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a2ddb68ef5d71972f74d43d3d5c4f2e73}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a2ddb68ef5d71972f74d43d3d5c4f2e73}
+
+\begin{DoxyCompactList}\small\item\em ID associated with the source of the thrust (i.\+e. engine name). \end{DoxyCompactList}\item 
+boost\+::function$<$ void(const double) $>$ \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a9b45c3519c38d2a78e85f04f1f2730b7}{thrust\+Update\+Function\+\_\+}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a9b45c3519c38d2a78e85f04f1f2730b7}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a9b45c3519c38d2a78e85f04f1f2730b7}
+
+\begin{DoxyCompactList}\small\item\em Function used to update the thrust magnitude and direction to current time. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_aae924d2a7c3d42770e3f5cbe5ce9273d}{current\+Acceleration\+\_\+}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_aae924d2a7c3d42770e3f5cbe5ce9273d}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_aae924d2a7c3d42770e3f5cbe5ce9273d}
+
+\begin{DoxyCompactList}\small\item\em Current acceleration, as computed by last call to update\+Members function. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_aaac3ca9b08854671faa09b94f59fef4d}{current\+Acceleration\+Direction\+\_\+}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_aaac3ca9b08854671faa09b94f59fef4d}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_aaac3ca9b08854671faa09b94f59fef4d}
+
+\begin{DoxyCompactList}\small\item\em Current acceleration direction, as computed by last call to update\+Members function. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a0811cf5df46ed03cf7fabb9eda5ba101}{current\+Thrust\+Magnitude\+\_\+}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a0811cf5df46ed03cf7fabb9eda5ba101}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a0811cf5df46ed03cf7fabb9eda5ba101}
+
+\begin{DoxyCompactList}\small\item\em Current thrust magnitude, as computed by last call to update\+Members function. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_ad5c3392c221c16cd520041d3edd308b6}{current\+Mass\+Rate\+\_\+}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_ad5c3392c221c16cd520041d3edd308b6}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_ad5c3392c221c16cd520041d3edd308b6}
+
+\begin{DoxyCompactList}\small\item\em Current propellant mass rate, as computed by last call to update\+Members function. \end{DoxyCompactList}\item 
+const boost\+::function$<$ void(const double) $>$ \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_a0f94d46828ec0f2d9840aa7350c09e67}{time\+Reset\+Function\+\_\+}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a0f94d46828ec0f2d9840aa7350c09e67}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a0f94d46828ec0f2d9840aa7350c09e67}
+
+\begin{DoxyCompactList}\small\item\em Function to reset the time in the classes to which the thrust\+Update\+Function function directs. \end{DoxyCompactList}\item 
+std\+::map$<$ propagators\+::\+Environment\+Models\+To\+Update, std\+::vector$<$ std\+::string $>$ $>$ \hyperlink{classtudat_1_1propulsion_1_1ThrustAcceleration_aa83ab4b82166d24deea116386a9e55c1}{required\+Model\+Updates\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of environment models that are to be updated before computing the acceleration,. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used for computing an acceleration due to a continuous thrust. 
+
+Class used for computing an acceleration due to a continuous thrust. The thrust magnitude and direction (in the propagation frame) are retrieved from separate functions provided by tye user. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}!Thrust\+Acceleration@{Thrust\+Acceleration}}
+\index{Thrust\+Acceleration@{Thrust\+Acceleration}!tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}}
+\subsubsection[{\texorpdfstring{Thrust\+Acceleration(const boost\+::function$<$ double() $>$ thrust\+Magnitude\+Function, const boost\+::function$<$ Eigen\+::\+Vector3d() $>$ thrust\+Direction\+Function, const boost\+::function$<$ double() $>$ body\+Mass\+Function, const boost\+::function$<$ double() $>$ mass\+Rate\+Function, const std\+::string associated\+Throust\+Source="""", const boost\+::function$<$ void(const double) $>$ thrust\+Update\+Function=boost\+::function$<$ void(const double) $>$(), const boost\+::function$<$ void(const double) $>$ time\+Reset\+Function=boost\+::function$<$ void(const double) $>$(), const std\+::map$<$ propagators\+::\+Environment\+Models\+To\+Update, std\+::vector$<$ std\+::string $>$ $>$ \&required\+Model\+Updates=std\+::map$<$ propagators\+::\+Environment\+Models\+To\+Update, std\+::vector$<$ std\+::string $>$ $>$())}{ThrustAcceleration(const boost::function< double() > thrustMagnitudeFunction, const boost::function< Eigen::Vector3d() > thrustDirectionFunction, const boost::function< double() > bodyMassFunction, const boost::function< double() > massRateFunction, const std::string associatedThroustSource="", const boost::function< void(const double) > thrustUpdateFunction=boost::function< void(const double) >(), const boost::function< void(const double) > timeResetFunction=boost::function< void(const double) >(), const std::map< propagators::EnvironmentModelsToUpdate, std::vector< std::string > > &requiredModelUpdates=std::map< propagators::EnvironmentModelsToUpdate, std::vector< std::string > >())}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::propulsion\+::\+Thrust\+Acceleration\+::\+Thrust\+Acceleration (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ double() $>$}]{thrust\+Magnitude\+Function, }
+\item[{const boost\+::function$<$ Eigen\+::\+Vector3d() $>$}]{thrust\+Direction\+Function, }
+\item[{const boost\+::function$<$ double() $>$}]{body\+Mass\+Function, }
+\item[{const boost\+::function$<$ double() $>$}]{mass\+Rate\+Function, }
+\item[{const std\+::string}]{associated\+Throust\+Source = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{const boost\+::function$<$ void(const double) $>$}]{thrust\+Update\+Function = {\ttfamily boost\+:\+:function$<$~void(~const~double~)~$>$(~)}, }
+\item[{const boost\+::function$<$ void(const double) $>$}]{time\+Reset\+Function = {\ttfamily boost\+:\+:function$<$~void(~const~double~)~$>$(~)}, }
+\item[{const std\+::map$<$ propagators\+::\+Environment\+Models\+To\+Update, std\+::vector$<$ std\+::string $>$ $>$ \&}]{required\+Model\+Updates = {\ttfamily std\+:\+:map$<$~propagators\+:\+:EnvironmentModelsToUpdate,~std\+:\+:vector$<$~std\+:\+:string~$>$~$>$(~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a0f1bf2418aab0ea328cbff7be6e1f64c}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a0f1bf2418aab0ea328cbff7be6e1f64c}
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em thrust\+Magnitude\+Function} & Function returning the current magnitude of the thrust. Any dependencies of the thrust on (in)dependent variables is to be handled by the thrust\+Update\+Function. \\
+\hline
+{\em thrust\+Direction\+Function} & Function returning the direction of the thrust (as a unit vector). Any dependencies of the thrust on (in)dependent variables is to be handled by the thrust\+Update\+Function. \\
+\hline
+{\em body\+Mass\+Function} & Function returning the current mass of the body being propagated. \\
+\hline
+{\em mass\+Rate\+Function} & Function returning total propellant mass rate from the thrust system. \\
+\hline
+{\em associated\+Throust\+Source} & ID associated with the source of the thrust (i.\+e. engine name). \\
+\hline
+{\em thrust\+Update\+Function} & Function used to update the thrust magnitude and direction to current time (default empty) \\
+\hline
+{\em time\+Reset\+Function} & Function to reset the time in the classes to which the thrust\+Update\+Function function directs, default empty. \\
+\hline
+{\em required\+Model\+Updates} & List of environment models that are to be updated before computing the acceleration, list is included here to account for versatility of dependencies of thrust model (guidance) algorithms. Default empty. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}!get\+Acceleration@{get\+Acceleration}}
+\index{get\+Acceleration@{get\+Acceleration}!tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}}
+\subsubsection[{\texorpdfstring{get\+Acceleration()}{getAcceleration()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::propulsion\+::\+Thrust\+Acceleration\+::get\+Acceleration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a85c999d6b3fc6b093e6990e2997918f6}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a85c999d6b3fc6b093e6990e2997918f6}
+
+
+Function to retrieve the current acceleration, as set by last call to update\+Members function. 
+
+Function to retrieve the current acceleration, as set by last call to update\+Members function. \begin{DoxyReturn}{Returns}
+Current thrust acceleration. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1basic__astrodynamics_1_1AccelerationModel_a1f59960bc477fc02e7d52697ced99750}{tudat\+::basic\+\_\+astrodynamics\+::\+Acceleration\+Model$<$ Eigen\+::\+Vector3d $>$}.
+
+\index{tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}!get\+Associated\+Throust\+Source@{get\+Associated\+Throust\+Source}}
+\index{get\+Associated\+Throust\+Source@{get\+Associated\+Throust\+Source}!tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}}
+\subsubsection[{\texorpdfstring{get\+Associated\+Throust\+Source()}{getAssociatedThroustSource()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::propulsion\+::\+Thrust\+Acceleration\+::get\+Associated\+Throust\+Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a8225b0a9c42fe43f2a7843eb9928ce7c}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a8225b0a9c42fe43f2a7843eb9928ce7c}
+
+
+Function to retreieve the ID associated with the source of the thrust (i.\+e. engine name). 
+
+Function to retreieve the ID associated with the source of the thrust (i.\+e. engine name). \begin{DoxyReturn}{Returns}
+ID associated with the source of the thrust (i.\+e. engine name). 
+\end{DoxyReturn}
+\index{tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}!get\+Current\+Mass\+Rate@{get\+Current\+Mass\+Rate}}
+\index{get\+Current\+Mass\+Rate@{get\+Current\+Mass\+Rate}!tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}}
+\subsubsection[{\texorpdfstring{get\+Current\+Mass\+Rate()}{getCurrentMassRate()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::propulsion\+::\+Thrust\+Acceleration\+::get\+Current\+Mass\+Rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a356aa0c4af45bf67d205c480b62546dd}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a356aa0c4af45bf67d205c480b62546dd}
+
+
+Function to retreieve the current propellant mass rate, as computed by last call to update\+Members function. 
+
+Function to retreieve the current propellant mass rate, as computed by last call to update\+Members function. \begin{DoxyReturn}{Returns}
+I\+Current propellant mass rate, as computed by last call to update\+Members function. 
+\end{DoxyReturn}
+\index{tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}!get\+Required\+Model\+Updates@{get\+Required\+Model\+Updates}}
+\index{get\+Required\+Model\+Updates@{get\+Required\+Model\+Updates}!tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}}
+\subsubsection[{\texorpdfstring{get\+Required\+Model\+Updates()}{getRequiredModelUpdates()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ propagators\+::\+Environment\+Models\+To\+Update, std\+::vector$<$ std\+::string $>$ $>$ tudat\+::propulsion\+::\+Thrust\+Acceleration\+::get\+Required\+Model\+Updates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a936393a7c5a988fa3c0bc234eac92587}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a936393a7c5a988fa3c0bc234eac92587}
+
+
+Function to retreieve the list of environment models that are to be updated before computing the acceleration. 
+
+Function to retreieve the list of environment models that are to be updated before computing the acceleration. \begin{DoxyReturn}{Returns}
+List of environment models that are to be updated before computing the acceleration. 
+\end{DoxyReturn}
+\index{tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}!reset\+Time@{reset\+Time}}
+\index{reset\+Time@{reset\+Time}!tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}}
+\subsubsection[{\texorpdfstring{reset\+Time(const double current\+Time=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{resetTime(const double currentTime=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void tudat\+::propulsion\+::\+Thrust\+Acceleration\+::reset\+Time (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Time = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a2ef613d32d6b4cad26aece57d6171127}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a2ef613d32d6b4cad26aece57d6171127}
+
+
+Function to reset the current time. 
+
+Function to reset the current time of the acceleration model. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Time} & Current time (default NaN). \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtudat_1_1basic__astrodynamics_1_1AccelerationModel_a325aae81896137d88b756aac15e188da}{tudat\+::basic\+\_\+astrodynamics\+::\+Acceleration\+Model$<$ Eigen\+::\+Vector3d $>$}.
+
+\index{tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}!set\+Thrust\+Update\+Function@{set\+Thrust\+Update\+Function}}
+\index{set\+Thrust\+Update\+Function@{set\+Thrust\+Update\+Function}!tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}}
+\subsubsection[{\texorpdfstring{set\+Thrust\+Update\+Function(const boost\+::function$<$ void(const double) $>$ thrust\+Update\+Function)}{setThrustUpdateFunction(const boost::function< void(const double) > thrustUpdateFunction)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::propulsion\+::\+Thrust\+Acceleration\+::set\+Thrust\+Update\+Function (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ void(const double) $>$}]{thrust\+Update\+Function}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a9cd18b1627b379670313291e3acdf2c5}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a9cd18b1627b379670313291e3acdf2c5}
+
+
+Function to set or add a thrust update function. 
+
+Function to set or add a thrust update function 
+\begin{DoxyParams}{Parameters}
+{\em thrust\+Update\+Function} & Update function that is to be added to class \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}!update\+Members@{update\+Members}}
+\index{update\+Members@{update\+Members}!tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}}
+\subsubsection[{\texorpdfstring{update\+Members(const double current\+Time=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{updateMembers(const double currentTime=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::propulsion\+::\+Thrust\+Acceleration\+::update\+Members (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Time = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_a847904c69ea6ced5ac3396f7ecdf2f78}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_a847904c69ea6ced5ac3396f7ecdf2f78}
+
+
+Update member variables used by the thrust acceleration model. 
+
+Updates member variables used by the thrust acceleration model. Function pointers to retrieve the current values of quantities from which the acceleration is to be calculated are set by constructor. This function calls and combines their output to compute the acceleration. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Time} & \hyperlink{classtudat_1_1Time}{Time} at which acceleration model is to be updated. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1basic__astrodynamics_1_1AccelerationModel_a966e85b72300b8cbc99ba60e40108d71}{tudat\+::basic\+\_\+astrodynamics\+::\+Acceleration\+Model$<$ Eigen\+::\+Vector3d $>$}.
+
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}!required\+Model\+Updates\+\_\+@{required\+Model\+Updates\+\_\+}}
+\index{required\+Model\+Updates\+\_\+@{required\+Model\+Updates\+\_\+}!tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}}
+\subsubsection[{\texorpdfstring{required\+Model\+Updates\+\_\+}{requiredModelUpdates_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ propagators\+::\+Environment\+Models\+To\+Update, std\+::vector$<$ std\+::string $>$ $>$ tudat\+::propulsion\+::\+Thrust\+Acceleration\+::required\+Model\+Updates\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_aa83ab4b82166d24deea116386a9e55c1}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_aa83ab4b82166d24deea116386a9e55c1}
+
+
+List of environment models that are to be updated before computing the acceleration,. 
+
+List of environment models that are to be updated before computing the acceleration, list is included here to account for versatility of dependencies of thrust model (guidance) algorithms. \index{tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}!thrust\+Direction\+Function\+\_\+@{thrust\+Direction\+Function\+\_\+}}
+\index{thrust\+Direction\+Function\+\_\+@{thrust\+Direction\+Function\+\_\+}!tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}}
+\subsubsection[{\texorpdfstring{thrust\+Direction\+Function\+\_\+}{thrustDirectionFunction_}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ Eigen\+::\+Vector3d( ) $>$ tudat\+::propulsion\+::\+Thrust\+Acceleration\+::thrust\+Direction\+Function\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_addab21b2c71cc5aa71268590d076a653}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_addab21b2c71cc5aa71268590d076a653}
+
+
+Function returning the direction of the thrust (as a unit vector). 
+
+Function returning the direction of the thrust (as a unit vector). Any dependencies of the thrust on (in)dependent variables is to be handled by the thrust\+Update\+Function. \index{tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}!thrust\+Magnitude\+Function\+\_\+@{thrust\+Magnitude\+Function\+\_\+}}
+\index{thrust\+Magnitude\+Function\+\_\+@{thrust\+Magnitude\+Function\+\_\+}!tudat\+::propulsion\+::\+Thrust\+Acceleration@{tudat\+::propulsion\+::\+Thrust\+Acceleration}}
+\subsubsection[{\texorpdfstring{thrust\+Magnitude\+Function\+\_\+}{thrustMagnitudeFunction_}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ double( ) $>$ tudat\+::propulsion\+::\+Thrust\+Acceleration\+::thrust\+Magnitude\+Function\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1propulsion_1_1ThrustAcceleration_aadcc088dd4a38db8b8f67ed0853dcc29}{}\label{classtudat_1_1propulsion_1_1ThrustAcceleration_aadcc088dd4a38db8b8f67ed0853dcc29}
+
+
+Function returning the current magnitude of the thrust. 
+
+Function returning the current magnitude of the thrust. Any dependencies of the thrust on (in)dependent variables is to be handled by the thrust\+Update\+Function. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Propulsion/thrust\+Acceleration\+Model.\+h\end{DoxyCompactItemize}

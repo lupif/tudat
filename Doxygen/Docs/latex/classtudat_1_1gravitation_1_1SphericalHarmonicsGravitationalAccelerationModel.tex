@@ -1,0 +1,263 @@
+\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel}{}\section{tudat\+:\+:gravitation\+:\+:Spherical\+Harmonics\+Gravitational\+Acceleration\+Model Class Reference}
+\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel}\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}}
+
+
+Template class for general spherical harmonics gravitational acceleration model.  
+
+
+
+
+{\ttfamily \#include $<$spherical\+Harmonics\+Gravity\+Model.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:gravitation\+:\+:Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:gravitation\+:\+:Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_aa63328c068aae8ae8dcc74a055ce865e}{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model} (const \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4ca706c4f941be481fc5f490e49390d8}{State\+Function} position\+Of\+Body\+Subject\+To\+Acceleration\+Function, const double a\+Gravitational\+Parameter, const double an\+Equatorial\+Radius, const Eigen\+::\+Matrix\+Xd a\+Cosine\+Harmonic\+Coefficient\+Matrix, const Eigen\+::\+Matrix\+Xd a\+Sine\+Harmonic\+Coefficient\+Matrix, const \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4ca706c4f941be481fc5f490e49390d8}{State\+Function} position\+Of\+Body\+Exerting\+Acceleration\+Function=boost\+::lambda\+::constant(Eigen\+::\+Vector3d\+::\+Zero()), const boost\+::function$<$ Eigen\+::\+Quaterniond() $>$ rotation\+From\+Body\+Fixed\+To\+Integration\+Frame\+Function=boost\+::lambda\+::constant(Eigen\+::\+Quaterniond(Eigen\+::\+Matrix3d\+::\+Identity())), const bool is\+Mutual\+Attraction\+Used=0, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__mathematics_1_1SphericalHarmonicsCache}{basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache} $>$ spherical\+Harmonics\+Cache=boost\+::make\+\_\+shared$<$ \hyperlink{classtudat_1_1basic__mathematics_1_1SphericalHarmonicsCache}{basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache} $>$())
+\item 
+\hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_ad222679658a992a85bf0c5dd7870b2a1}{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model} (const \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4ca706c4f941be481fc5f490e49390d8}{State\+Function} position\+Of\+Body\+Subject\+To\+Acceleration\+Function, const boost\+::function$<$ double() $>$ a\+Gravitational\+Parameter\+Function, const double an\+Equatorial\+Radius, const Coefficient\+Matrix\+Returning\+Function cosine\+Harmonic\+Coefficients\+Function, const Coefficient\+Matrix\+Returning\+Function sine\+Harmonic\+Coefficients\+Function, const \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4ca706c4f941be481fc5f490e49390d8}{State\+Function} position\+Of\+Body\+Exerting\+Acceleration\+Function=boost\+::lambda\+::constant(Eigen\+::\+Vector3d\+::\+Zero()), const boost\+::function$<$ Eigen\+::\+Quaterniond() $>$ rotation\+From\+Body\+Fixed\+To\+Integration\+Frame\+Function=boost\+::lambda\+::constant(Eigen\+::\+Quaterniond(Eigen\+::\+Matrix3d\+::\+Identity())), const bool is\+Mutual\+Attraction\+Used=0, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__mathematics_1_1SphericalHarmonicsCache}{basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache} $>$ spherical\+Harmonics\+Cache=boost\+::make\+\_\+shared$<$ \hyperlink{classtudat_1_1basic__mathematics_1_1SphericalHarmonicsCache}{basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache} $>$())
+\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_aae27d6f97cdbee300e8c532b2dc604b3}{get\+Acceleration} ()
+\begin{DoxyCompactList}\small\item\em Get gravitational acceleration. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_a1da9ad8e2fd4daec7c60459175b264f6}{update\+Members} (const double current\+Time=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Update class members. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__mathematics_1_1SphericalHarmonicsCache}{basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache} $>$ \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_af19b3b87fae113b8a77f1d061a092abb}{get\+Spherical\+Harmonics\+Cache} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the spherical harmonics cache for this acceleration. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_a48289f0a802dac258e731e2d758c0cc9}{get\+Reference\+Radius} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the spherical harmonics reference radius. \end{DoxyCompactList}\item 
+Coefficient\+Matrix\+Returning\+Function \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_a3e320a0a322b9b180eba268427933a90}{get\+Cosine\+Harmonic\+Coefficients\+Function} ()
+\begin{DoxyCompactList}\small\item\em Matrix of cosine coefficients. \end{DoxyCompactList}\item 
+Coefficient\+Matrix\+Returning\+Function \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_aa8c3b79d97dba27c633acb07c9f7b8e0}{get\+Sine\+Harmonic\+Coefficients\+Function} ()
+\begin{DoxyCompactList}\small\item\em Matrix of sine coefficients. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_a1fdbcde7f7ca93d3a9051a4086e7e5d7}{get\+Current\+Rotation\+To\+Integration\+Frame} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the current rotation from body-\/fixed frame to integration frame, in the form of a quaternion. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix3d \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_ad8a859958eff18272ebcbb9e467f1cc6}{get\+Current\+Rotation\+To\+Integration\+Frame\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the current rotation from body-\/fixed frame to integration frame, as a rotation matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Template class for general spherical harmonics gravitational acceleration model. 
+
+This templated class implements a general spherical harmonics gravitational acceleration model. The acceleration computed with this class is based on the geodesy-\/normalization described by (Heiskanen \& Moritz, 1967), implemented in the compute\+Geodesy\+Normalized\+Gravitational\+Acceleration\+Sum() function. The acceleration computed is a sum, based on the matrix of coefficients of the model provided. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}!Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}}
+\index{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}}
+\subsubsection[{\texorpdfstring{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model(const State\+Function position\+Of\+Body\+Subject\+To\+Acceleration\+Function, const double a\+Gravitational\+Parameter, const double an\+Equatorial\+Radius, const Eigen\+::\+Matrix\+Xd a\+Cosine\+Harmonic\+Coefficient\+Matrix, const Eigen\+::\+Matrix\+Xd a\+Sine\+Harmonic\+Coefficient\+Matrix, const State\+Function position\+Of\+Body\+Exerting\+Acceleration\+Function=boost\+::lambda\+::constant(\+Eigen\+::\+Vector3d\+::\+Zero()), const boost\+::function$<$ Eigen\+::\+Quaterniond() $>$ rotation\+From\+Body\+Fixed\+To\+Integration\+Frame\+Function=boost\+::lambda\+::constant(\+Eigen\+::\+Quaterniond(\+Eigen\+::\+Matrix3d\+::\+Identity())), const bool is\+Mutual\+Attraction\+Used=0, boost\+::shared\+\_\+ptr$<$ basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache $>$ spherical\+Harmonics\+Cache=boost\+::make\+\_\+shared$<$ basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache $>$())}{SphericalHarmonicsGravitationalAccelerationModel(const StateFunction positionOfBodySubjectToAccelerationFunction, const double aGravitationalParameter, const double anEquatorialRadius, const Eigen::MatrixXd aCosineHarmonicCoefficientMatrix, const Eigen::MatrixXd aSineHarmonicCoefficientMatrix, const StateFunction positionOfBodyExertingAccelerationFunction=boost::lambda::constant(Eigen::Vector3d::Zero()), const boost::function< Eigen::Quaterniond() > rotationFromBodyFixedToIntegrationFrameFunction=boost::lambda::constant(Eigen::Quaterniond(Eigen::Matrix3d::Identity())), const bool isMutualAttractionUsed=0, boost::shared_ptr< basic_mathematics::SphericalHarmonicsCache > sphericalHarmonicsCache=boost::make_shared< basic_mathematics::SphericalHarmonicsCache >())}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model (
+\begin{DoxyParamCaption}
+\item[{const {\bf State\+Function}}]{position\+Of\+Body\+Subject\+To\+Acceleration\+Function, }
+\item[{const double}]{a\+Gravitational\+Parameter, }
+\item[{const double}]{an\+Equatorial\+Radius, }
+\item[{const Eigen\+::\+Matrix\+Xd}]{a\+Cosine\+Harmonic\+Coefficient\+Matrix, }
+\item[{const Eigen\+::\+Matrix\+Xd}]{a\+Sine\+Harmonic\+Coefficient\+Matrix, }
+\item[{const {\bf State\+Function}}]{position\+Of\+Body\+Exerting\+Acceleration\+Function = {\ttfamily boost\+:\+:lambda\+:\+:constant(~Eigen\+:\+:Vector3d\+:\+:Zero(~)~)}, }
+\item[{const boost\+::function$<$ Eigen\+::\+Quaterniond() $>$}]{rotation\+From\+Body\+Fixed\+To\+Integration\+Frame\+Function = {\ttfamily boost\+:\+:lambda\+:\+:constant(~Eigen\+:\+:Quaterniond(~Eigen\+:\+:Matrix3d\+:\+:Identity(~)~)~)}, }
+\item[{const bool}]{is\+Mutual\+Attraction\+Used = {\ttfamily 0}, }
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache} $>$}]{spherical\+Harmonics\+Cache = {\ttfamily boost\+:\+:make\+\_\+shared$<$~{\bf basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache}~$>$(~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_aa63328c068aae8ae8dcc74a055ce865e}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_aa63328c068aae8ae8dcc74a055ce865e}
+Constructor taking position-\/functions for bodies, and constant parameters of spherical harmonics expansion.
+
+Constructor taking a pointer to a function returning the position of the body subject to gravitational acceleration, constant gravitational parameter and equatorial radius of the body exerting the acceleration, constant coefficient matrices for the spherical harmonics expansion, and a pointer to a function returning the position of the body exerting the gravitational acceleration (typically the central body). This constructor uses the Boost\+::lambda library to create a function on-\/the-\/fly that returns the constant gravitational parameter, equatorial radius and coefficient matrices provided. The constructor also updates all the internal members. The position of the body exerting the gravitational acceleration is an optional parameter; the default position is the origin. 
+\begin{DoxyParams}{Parameters}
+{\em position\+Of\+Body\+Subject\+To\+Acceleration\+Function} & Pointer to function returning position of body subject to gravitational acceleration. \\
+\hline
+{\em a\+Gravitational\+Parameter} & A (constant) gravitational parameter \mbox{[}m$^\wedge$2 s$^\wedge$-\/3\mbox{]}. \\
+\hline
+{\em an\+Equatorial\+Radius} & A (constant) equatorial radius \mbox{[}m\mbox{]}. \\
+\hline
+{\em a\+Cosine\+Harmonic\+Coefficient\+Matrix} & A (constant) cosine harmonic coefficient matrix. \\
+\hline
+{\em a\+Sine\+Harmonic\+Coefficient\+Matrix} & A (constant) sine harmonic coefficient matrix. \\
+\hline
+{\em position\+Of\+Body\+Exerting\+Acceleration\+Function} & Pointer to function returning position of body exerting gravitational acceleration (default = (0,0,0)). \\
+\hline
+{\em rotation\+From\+Body\+Fixed\+To\+Integration\+Frame\+Function} & Function providing the rotation from body-\/fixes from to the frame in which the numerical integration is performed. \\
+\hline
+{\em is\+Mutual\+Attraction\+Used} & Variable denoting whether attraction from body undergoing acceleration on body exerting acceleration is included (i.\+e. whether a\+Gravitational\+Parameter refers to the property of the body exerting the acceleration, if variable is false, or the sum of the gravitational parameters, if the variable is true. \\
+\hline
+{\em spherical\+Harmonics\+Cache} & Cache object for computing/retrieving repeated terms in spherical harmonics potential gradient calculation. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}!Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}}
+\index{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}}
+\subsubsection[{\texorpdfstring{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model(const State\+Function position\+Of\+Body\+Subject\+To\+Acceleration\+Function, const boost\+::function$<$ double() $>$ a\+Gravitational\+Parameter\+Function, const double an\+Equatorial\+Radius, const Coefficient\+Matrix\+Returning\+Function cosine\+Harmonic\+Coefficients\+Function, const Coefficient\+Matrix\+Returning\+Function sine\+Harmonic\+Coefficients\+Function, const State\+Function position\+Of\+Body\+Exerting\+Acceleration\+Function=boost\+::lambda\+::constant(\+Eigen\+::\+Vector3d\+::\+Zero()), const boost\+::function$<$ Eigen\+::\+Quaterniond() $>$ rotation\+From\+Body\+Fixed\+To\+Integration\+Frame\+Function=boost\+::lambda\+::constant(\+Eigen\+::\+Quaterniond(\+Eigen\+::\+Matrix3d\+::\+Identity())), const bool is\+Mutual\+Attraction\+Used=0, boost\+::shared\+\_\+ptr$<$ basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache $>$ spherical\+Harmonics\+Cache=boost\+::make\+\_\+shared$<$ basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache $>$())}{SphericalHarmonicsGravitationalAccelerationModel(const StateFunction positionOfBodySubjectToAccelerationFunction, const boost::function< double() > aGravitationalParameterFunction, const double anEquatorialRadius, const CoefficientMatrixReturningFunction cosineHarmonicCoefficientsFunction, const CoefficientMatrixReturningFunction sineHarmonicCoefficientsFunction, const StateFunction positionOfBodyExertingAccelerationFunction=boost::lambda::constant(Eigen::Vector3d::Zero()), const boost::function< Eigen::Quaterniond() > rotationFromBodyFixedToIntegrationFrameFunction=boost::lambda::constant(Eigen::Quaterniond(Eigen::Matrix3d::Identity())), const bool isMutualAttractionUsed=0, boost::shared_ptr< basic_mathematics::SphericalHarmonicsCache > sphericalHarmonicsCache=boost::make_shared< basic_mathematics::SphericalHarmonicsCache >())}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model (
+\begin{DoxyParamCaption}
+\item[{const {\bf State\+Function}}]{position\+Of\+Body\+Subject\+To\+Acceleration\+Function, }
+\item[{const boost\+::function$<$ double() $>$}]{a\+Gravitational\+Parameter\+Function, }
+\item[{const double}]{an\+Equatorial\+Radius, }
+\item[{const Coefficient\+Matrix\+Returning\+Function}]{cosine\+Harmonic\+Coefficients\+Function, }
+\item[{const Coefficient\+Matrix\+Returning\+Function}]{sine\+Harmonic\+Coefficients\+Function, }
+\item[{const {\bf State\+Function}}]{position\+Of\+Body\+Exerting\+Acceleration\+Function = {\ttfamily boost\+:\+:lambda\+:\+:constant(~Eigen\+:\+:Vector3d\+:\+:Zero(~)~)}, }
+\item[{const boost\+::function$<$ Eigen\+::\+Quaterniond() $>$}]{rotation\+From\+Body\+Fixed\+To\+Integration\+Frame\+Function = {\ttfamily boost\+:\+:lambda\+:\+:constant(~Eigen\+:\+:Quaterniond(~Eigen\+:\+:Matrix3d\+:\+:Identity(~)~)~)}, }
+\item[{const bool}]{is\+Mutual\+Attraction\+Used = {\ttfamily 0}, }
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache} $>$}]{spherical\+Harmonics\+Cache = {\ttfamily boost\+:\+:make\+\_\+shared$<$~{\bf basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache}~$>$(~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_ad222679658a992a85bf0c5dd7870b2a1}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_ad222679658a992a85bf0c5dd7870b2a1}
+Constructor taking functions for position of bodies, and parameters of spherical harmonics expansion.
+
+Constructor taking pointer to functions returning the position of the body subject to gravitational acceleration, the gravitational parameter of the body exerting the acceleration (central body), the equatorial radius of the central body, the coefficient matrices of the spherical harmonics expansion, and the position of the central body. The constructor also updates all the internal members. The position of the body exerting the gravitational acceleration is an optional parameter; the default position is the origin. 
+\begin{DoxyParams}{Parameters}
+{\em position\+Of\+Body\+Subject\+To\+Acceleration\+Function} & Pointer to function returning position of body subject to gravitational acceleration. \\
+\hline
+{\em a\+Gravitational\+Parameter\+Function} & Pointer to function returning gravitational parameter. \\
+\hline
+{\em an\+Equatorial\+Radius} & Pointer to function returning equatorial radius. \\
+\hline
+{\em cosine\+Harmonic\+Coefficients\+Function} & Pointer to function returning matrix of cosine-\/coefficients of spherical harmonics expansion. \\
+\hline
+{\em sine\+Harmonic\+Coefficients\+Function} & Pointer to function returning matrix of sine-\/coefficients of spherical harmonics expansion. \\
+\hline
+{\em position\+Of\+Body\+Exerting\+Acceleration\+Function} & Pointer to function returning position of body exerting gravitational acceleration (default = (0,0,0)). \\
+\hline
+{\em rotation\+From\+Body\+Fixed\+To\+Integration\+Frame\+Function} & Function providing the rotation from body-\/fixes from to the frame in which the numerical integration is performed. \\
+\hline
+{\em is\+Mutual\+Attraction\+Used} & Variable denoting whether attraction from body undergoing acceleration on body exerting acceleration is included (i.\+e. whether a\+Gravitational\+Parameter refers to the property of the body exerting the acceleration, if variable is false, or the sum of the gravitational parameters, if the variable is true. \\
+\hline
+{\em spherical\+Harmonics\+Cache} & Cache object for computing/retrieving repeated terms in spherical harmonics potential \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}!get\+Acceleration@{get\+Acceleration}}
+\index{get\+Acceleration@{get\+Acceleration}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}}
+\subsubsection[{\texorpdfstring{get\+Acceleration()}{getAcceleration()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+::get\+Acceleration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_aae27d6f97cdbee300e8c532b2dc604b3}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_aae27d6f97cdbee300e8c532b2dc604b3}
+
+
+Get gravitational acceleration. 
+
+Returns the gravitational acceleration computed using the input parameters provided to the class. This function serves as a wrapper for the compute\+Geodesy\+Normalized\+Gravitational\+Acceleration\+Sum() function. \begin{DoxyReturn}{Returns}
+Computed gravitational acceleration vector. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1basic__astrodynamics_1_1AccelerationModel_a1f59960bc477fc02e7d52697ced99750}{tudat\+::basic\+\_\+astrodynamics\+::\+Acceleration\+Model$<$ Eigen\+::\+Vector3d $>$}.
+
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}!get\+Cosine\+Harmonic\+Coefficients\+Function@{get\+Cosine\+Harmonic\+Coefficients\+Function}}
+\index{get\+Cosine\+Harmonic\+Coefficients\+Function@{get\+Cosine\+Harmonic\+Coefficients\+Function}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}}
+\subsubsection[{\texorpdfstring{get\+Cosine\+Harmonic\+Coefficients\+Function()}{getCosineHarmonicCoefficientsFunction()}}]{\setlength{\rightskip}{0pt plus 5cm}Coefficient\+Matrix\+Returning\+Function tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+::get\+Cosine\+Harmonic\+Coefficients\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_a3e320a0a322b9b180eba268427933a90}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_a3e320a0a322b9b180eba268427933a90}
+
+
+Matrix of cosine coefficients. 
+
+Matrix containing coefficients of cosine terms for spherical harmonics expansion. \index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}!get\+Current\+Rotation\+To\+Integration\+Frame@{get\+Current\+Rotation\+To\+Integration\+Frame}}
+\index{get\+Current\+Rotation\+To\+Integration\+Frame@{get\+Current\+Rotation\+To\+Integration\+Frame}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}}
+\subsubsection[{\texorpdfstring{get\+Current\+Rotation\+To\+Integration\+Frame()}{getCurrentRotationToIntegrationFrame()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Quaterniond tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+::get\+Current\+Rotation\+To\+Integration\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_a1fdbcde7f7ca93d3a9051a4086e7e5d7}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_a1fdbcde7f7ca93d3a9051a4086e7e5d7}
+
+
+Function to retrieve the current rotation from body-\/fixed frame to integration frame, in the form of a quaternion. 
+
+Function to retrieve the current rotation from body-\/fixed frame to integration frame, in the form of a quaternion. \begin{DoxyReturn}{Returns}
+current rotation from body-\/fixed frame to integration frame, in the form of a quaternion. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}!get\+Current\+Rotation\+To\+Integration\+Frame\+Matrix@{get\+Current\+Rotation\+To\+Integration\+Frame\+Matrix}}
+\index{get\+Current\+Rotation\+To\+Integration\+Frame\+Matrix@{get\+Current\+Rotation\+To\+Integration\+Frame\+Matrix}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}}
+\subsubsection[{\texorpdfstring{get\+Current\+Rotation\+To\+Integration\+Frame\+Matrix()}{getCurrentRotationToIntegrationFrameMatrix()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix3d tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+::get\+Current\+Rotation\+To\+Integration\+Frame\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_ad8a859958eff18272ebcbb9e467f1cc6}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_ad8a859958eff18272ebcbb9e467f1cc6}
+
+
+Function to retrieve the current rotation from body-\/fixed frame to integration frame, as a rotation matrix. 
+
+Function to retrieve the current rotation from body-\/fixed frame to integration frame, as a rotation matrix. \begin{DoxyReturn}{Returns}
+current rotation from body-\/fixed frame to integration frame, as a rotation matrix. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}!get\+Reference\+Radius@{get\+Reference\+Radius}}
+\index{get\+Reference\+Radius@{get\+Reference\+Radius}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}}
+\subsubsection[{\texorpdfstring{get\+Reference\+Radius()}{getReferenceRadius()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+::get\+Reference\+Radius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_a48289f0a802dac258e731e2d758c0cc9}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_a48289f0a802dac258e731e2d758c0cc9}
+
+
+Function to retrieve the spherical harmonics reference radius. 
+
+Function to retrieve the spherical harmonics reference radius. \begin{DoxyReturn}{Returns}
+Spherical harmonics reference radius. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}!get\+Sine\+Harmonic\+Coefficients\+Function@{get\+Sine\+Harmonic\+Coefficients\+Function}}
+\index{get\+Sine\+Harmonic\+Coefficients\+Function@{get\+Sine\+Harmonic\+Coefficients\+Function}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}}
+\subsubsection[{\texorpdfstring{get\+Sine\+Harmonic\+Coefficients\+Function()}{getSineHarmonicCoefficientsFunction()}}]{\setlength{\rightskip}{0pt plus 5cm}Coefficient\+Matrix\+Returning\+Function tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+::get\+Sine\+Harmonic\+Coefficients\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_aa8c3b79d97dba27c633acb07c9f7b8e0}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_aa8c3b79d97dba27c633acb07c9f7b8e0}
+
+
+Matrix of sine coefficients. 
+
+Matrix containing coefficients of sine terms for spherical harmonics expansion. \index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}!get\+Spherical\+Harmonics\+Cache@{get\+Spherical\+Harmonics\+Cache}}
+\index{get\+Spherical\+Harmonics\+Cache@{get\+Spherical\+Harmonics\+Cache}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}}
+\subsubsection[{\texorpdfstring{get\+Spherical\+Harmonics\+Cache()}{getSphericalHarmonicsCache()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache} $>$ tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+::get\+Spherical\+Harmonics\+Cache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_af19b3b87fae113b8a77f1d061a092abb}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_af19b3b87fae113b8a77f1d061a092abb}
+
+
+Function to retrieve the spherical harmonics cache for this acceleration. 
+
+Function to retrieve the spherical harmonics cache for this acceleration. \begin{DoxyReturn}{Returns}
+Spherical harmonics cache for this acceleration 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}!update\+Members@{update\+Members}}
+\index{update\+Members@{update\+Members}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}}
+\subsubsection[{\texorpdfstring{update\+Members(const double current\+Time=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{updateMembers(const double currentTime=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+::update\+Members (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Time = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_a1da9ad8e2fd4daec7c60459175b264f6}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel_a1da9ad8e2fd4daec7c60459175b264f6}
+
+
+Update class members. 
+
+Updates all the base class members to their current values and also updates the class members of this class. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Time} & \hyperlink{classtudat_1_1Time}{Time} at which acceleration model is to be updated. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1basic__astrodynamics_1_1AccelerationModel_a966e85b72300b8cbc99ba60e40108d71}{tudat\+::basic\+\_\+astrodynamics\+::\+Acceleration\+Model$<$ Eigen\+::\+Vector3d $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Gravitation/spherical\+Harmonics\+Gravity\+Model.\+h\end{DoxyCompactItemize}

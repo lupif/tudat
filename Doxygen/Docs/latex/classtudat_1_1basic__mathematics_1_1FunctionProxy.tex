@@ -1,0 +1,210 @@
+\hypertarget{classtudat_1_1basic__mathematics_1_1FunctionProxy}{}\section{tudat\+:\+:basic\+\_\+mathematics\+:\+:Function\+Proxy$<$ Independent\+Variable, Dependent\+Variable $>$ Class Template Reference}
+\label{classtudat_1_1basic__mathematics_1_1FunctionProxy}\index{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy$<$ Independent\+Variable, Dependent\+Variable $>$@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy$<$ Independent\+Variable, Dependent\+Variable $>$}}
+
+
+\hyperlink{classtudat_1_1basic__mathematics_1_1Function}{Function} interface to allow evaluation of a mathematical function.  
+
+
+
+
+{\ttfamily \#include $<$function\+Proxy.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:basic\+\_\+mathematics\+:\+:Function\+Proxy$<$ Independent\+Variable, Dependent\+Variable $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1basic__mathematics_1_1FunctionProxy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:basic\+\_\+mathematics\+:\+:Function\+Proxy$<$ Independent\+Variable, Dependent\+Variable $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1basic__mathematics_1_1FunctionProxy__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classtudat_1_1basic__mathematics_1_1BasicFunction}{Basic\+Function}$<$ Independent\+Variable, Dependent\+Variable $>$ \hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy_a36e77082724d43941643c7c32523a319}{Parent}
+\begin{DoxyCompactList}\small\item\em Typedef for a basic function. \end{DoxyCompactList}\item 
+typedef boost\+::function$<$ Dependent\+Variable(Independent\+Variable) $>$ \hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy_a1861c20597dcc1cbce1e7c455f2d82a9}{Function\+Signature}
+\begin{DoxyCompactList}\small\item\em Typedef for the function that relates the dependent variable to the independent variable. \end{DoxyCompactList}\item 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy}{Function\+Proxy} $>$ \hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy_ab350957b6bb15fb811624a5ffc0ab60f}{Function\+Proxy\+Pointer}\hypertarget{classtudat_1_1basic__mathematics_1_1FunctionProxy_ab350957b6bb15fb811624a5ffc0ab60f}{}\label{classtudat_1_1basic__mathematics_1_1FunctionProxy_ab350957b6bb15fb811624a5ffc0ab60f}
+
+\begin{DoxyCompactList}\small\item\em Typedef for a shared pointer to the class \hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy}{Function\+Proxy}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy_a0a135b936dfe7b39852091286c02f79e}{Function\+Proxy} (\hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy_a1861c20597dcc1cbce1e7c455f2d82a9}{Function\+Signature} real\+Function)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classtudat_1_1basic__mathematics_1_1Function}{Function} object, using a specified function pointer. \end{DoxyCompactList}\item 
+virtual Dependent\+Variable \hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy_ab8ef1b8407695652bb20416bbbf5909c}{evaluate} (const Independent\+Variable independent\+Variable)
+\begin{DoxyCompactList}\small\item\em Evaluate the mathematical function. \end{DoxyCompactList}\item 
+Dependent\+Variable \hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy_a5f79c3fef685b7b2eaaec22661680d61}{compute\+Derivative} (const unsigned int order, const Independent\+Variable independent\+Variable)
+\begin{DoxyCompactList}\small\item\em Evaluate the derivative of the function. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy_a9480775191c8926a3877501680db11b3}{add\+Binding} (const int order, \hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy_a1861c20597dcc1cbce1e7c455f2d82a9}{Function\+Signature} function)
+\begin{DoxyCompactList}\small\item\em Add a binding for an explicit form of a function derivative or integral. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy_a1861c20597dcc1cbce1e7c455f2d82a9}{Function\+Signature} \hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy_aae18a04b79478c6318dd2b91c345f2f5}{find\+Binding} (int order=0)
+\begin{DoxyCompactList}\small\item\em Get a function representing the derivative or integral previously set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Independent\+Variable = double, typename Dependent\+Variable = double$>$\\*
+class tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy$<$ Independent\+Variable, Dependent\+Variable $>$}
+
+\hyperlink{classtudat_1_1basic__mathematics_1_1Function}{Function} interface to allow evaluation of a mathematical function. 
+
+Adds the ability for an already defined C++ function to be evaluated as a mathematical function.
+
+You need to set one C++ binding representing the mathematical function in the constructor. Additional derivative and integral forms can be set using the add\+Binding function. If no explicit binding is found, numerical techniques are used to solve for derivatives and integrals. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Independent\+Variable} & Mathematical variable for independent input (e.\+g., x). \\
+\hline
+{\em Dependent\+Variable} & Mathematical variable for dependent output (e.\+g., y=f(x)). \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Typedef Documentation}
+\index{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}!Function\+Signature@{Function\+Signature}}
+\index{Function\+Signature@{Function\+Signature}!tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}}
+\subsubsection[{\texorpdfstring{Function\+Signature}{FunctionSignature}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable  = double, typename Dependent\+Variable  = double$>$ typedef boost\+::function$<$ Dependent\+Variable( Independent\+Variable ) $>$ {\bf tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}$<$ Independent\+Variable, Dependent\+Variable $>$\+::{\bf Function\+Signature}}\hypertarget{classtudat_1_1basic__mathematics_1_1FunctionProxy_a1861c20597dcc1cbce1e7c455f2d82a9}{}\label{classtudat_1_1basic__mathematics_1_1FunctionProxy_a1861c20597dcc1cbce1e7c455f2d82a9}
+
+
+Typedef for the function that relates the dependent variable to the independent variable. 
+
+the independent and dependent variables are both doubles. \index{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}!Parent@{Parent}}
+\index{Parent@{Parent}!tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}}
+\subsubsection[{\texorpdfstring{Parent}{Parent}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable  = double, typename Dependent\+Variable  = double$>$ typedef {\bf Basic\+Function}$<$ Independent\+Variable, Dependent\+Variable $>$ {\bf tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}$<$ Independent\+Variable, Dependent\+Variable $>$\+::{\bf Parent}}\hypertarget{classtudat_1_1basic__mathematics_1_1FunctionProxy_a36e77082724d43941643c7c32523a319}{}\label{classtudat_1_1basic__mathematics_1_1FunctionProxy_a36e77082724d43941643c7c32523a319}
+
+
+Typedef for a basic function. 
+
+the independent and dependent variables are both doubles. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}!Function\+Proxy@{Function\+Proxy}}
+\index{Function\+Proxy@{Function\+Proxy}!tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}}
+\subsubsection[{\texorpdfstring{Function\+Proxy(\+Function\+Signature real\+Function)}{FunctionProxy(FunctionSignature realFunction)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable  = double, typename Dependent\+Variable  = double$>$ {\bf tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}$<$ Independent\+Variable, Dependent\+Variable $>$\+::{\bf Function\+Proxy} (
+\begin{DoxyParamCaption}
+\item[{{\bf Function\+Signature}}]{real\+Function}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1basic__mathematics_1_1FunctionProxy_a0a135b936dfe7b39852091286c02f79e}{}\label{classtudat_1_1basic__mathematics_1_1FunctionProxy_a0a135b936dfe7b39852091286c02f79e}
+
+
+Create a \hyperlink{classtudat_1_1basic__mathematics_1_1Function}{Function} object, using a specified function pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em real\+Function} & C++ function that will be used to evaluate this mathematical function. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}!add\+Binding@{add\+Binding}}
+\index{add\+Binding@{add\+Binding}!tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}}
+\subsubsection[{\texorpdfstring{add\+Binding(const int order, Function\+Signature function)}{addBinding(const int order, FunctionSignature function)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable  = double, typename Dependent\+Variable  = double$>$ void {\bf tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}$<$ Independent\+Variable, Dependent\+Variable $>$\+::add\+Binding (
+\begin{DoxyParamCaption}
+\item[{const int}]{order, }
+\item[{{\bf Function\+Signature}}]{function}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1basic__mathematics_1_1FunctionProxy_a9480775191c8926a3877501680db11b3}{}\label{classtudat_1_1basic__mathematics_1_1FunctionProxy_a9480775191c8926a3877501680db11b3}
+
+
+Add a binding for an explicit form of a function derivative or integral. 
+
+Using this method, you can bind additional C++ functions to either a specific derivative or an integral of the base function.
+
+Don\textquotesingle{}t add 0th order binding\+: it is bound separately (constructor) so no table lookup is required.
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & Order of integration (negative for a derivative function). \\
+\hline
+{\em function} & The functionsignature of the function set by the used. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}!compute\+Derivative@{compute\+Derivative}}
+\index{compute\+Derivative@{compute\+Derivative}!tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}}
+\subsubsection[{\texorpdfstring{compute\+Derivative(const unsigned int order, const Independent\+Variable independent\+Variable)}{computeDerivative(const unsigned int order, const IndependentVariable independentVariable)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable  = double, typename Dependent\+Variable  = double$>$ Dependent\+Variable {\bf tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}$<$ Independent\+Variable, Dependent\+Variable $>$\+::compute\+Derivative (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{order, }
+\item[{const Independent\+Variable}]{independent\+Variable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1basic__mathematics_1_1FunctionProxy_a5f79c3fef685b7b2eaaec22661680d61}{}\label{classtudat_1_1basic__mathematics_1_1FunctionProxy_a5f79c3fef685b7b2eaaec22661680d61}
+
+
+Evaluate the derivative of the function. 
+
+This evaluates the derivative of a given order of this function. 
+\begin{DoxyParams}{Parameters}
+{\em order} & Order of the derivative to evaluate. \\
+\hline
+{\em independent\+Variable} & Location where to evaluate the derivative. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function that gives the derivative. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1basic__mathematics_1_1BasicFunction_ae0a0844b6c72c55ef059039eb147453b}{tudat\+::basic\+\_\+mathematics\+::\+Basic\+Function$<$ Independent\+Variable, Dependent\+Variable $>$}.
+
+\index{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}}
+\subsubsection[{\texorpdfstring{evaluate(const Independent\+Variable independent\+Variable)}{evaluate(const IndependentVariable independentVariable)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable  = double, typename Dependent\+Variable  = double$>$ virtual Dependent\+Variable {\bf tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}$<$ Independent\+Variable, Dependent\+Variable $>$\+::evaluate (
+\begin{DoxyParamCaption}
+\item[{const Independent\+Variable}]{independent\+Variable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1basic__mathematics_1_1FunctionProxy_ab8ef1b8407695652bb20416bbbf5909c}{}\label{classtudat_1_1basic__mathematics_1_1FunctionProxy_ab8ef1b8407695652bb20416bbbf5909c}
+
+
+Evaluate the mathematical function. 
+
+Performs simple delegation of the evaluation to the user set function. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variable} & Location where to evaluate the function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1basic__mathematics_1_1Function_a69b59769da9784abaaa8a0a309d16de8}{Function\+::evaluate( Independent\+Variable )}. 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+the value of the dependent varaible. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1basic__mathematics_1_1Function_a69b59769da9784abaaa8a0a309d16de8}{tudat\+::basic\+\_\+mathematics\+::\+Function$<$ Independent\+Variable, Dependent\+Variable $>$}.
+
+\index{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}!find\+Binding@{find\+Binding}}
+\index{find\+Binding@{find\+Binding}!tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy@{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}}
+\subsubsection[{\texorpdfstring{find\+Binding(int order=0)}{findBinding(int order=0)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable  = double, typename Dependent\+Variable  = double$>$ {\bf Function\+Signature} {\bf tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy}$<$ Independent\+Variable, Dependent\+Variable $>$\+::find\+Binding (
+\begin{DoxyParamCaption}
+\item[{int}]{order = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1basic__mathematics_1_1FunctionProxy_aae18a04b79478c6318dd2b91c345f2f5}{}\label{classtudat_1_1basic__mathematics_1_1FunctionProxy_aae18a04b79478c6318dd2b91c345f2f5}
+
+
+Get a function representing the derivative or integral previously set. 
+
+Retrieves a binding that was set using \hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy_a9480775191c8926a3877501680db11b3}{Function\+Proxy\+::add\+Binding(int, Function\+Signature)} 
+\begin{DoxyParams}{Parameters}
+{\em order} & Order of integration (negative for a derivative function). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the binding 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Basic\+Mathematics/function\+Proxy.\+h\end{DoxyCompactItemize}

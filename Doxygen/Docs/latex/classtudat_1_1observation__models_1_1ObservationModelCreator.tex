@@ -1,0 +1,63 @@
+\hypertarget{classtudat_1_1observation__models_1_1ObservationModelCreator}{}\section{tudat\+:\+:observation\+\_\+models\+:\+:Observation\+Model\+Creator$<$ Observation\+Size, Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ Class Template Reference}
+\label{classtudat_1_1observation__models_1_1ObservationModelCreator}\index{tudat\+::observation\+\_\+models\+::\+Observation\+Model\+Creator$<$ Observation\+Size, Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$@{tudat\+::observation\+\_\+models\+::\+Observation\+Model\+Creator$<$ Observation\+Size, Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}}
+
+
+Interface class for creating observation models.  
+
+
+
+
+{\ttfamily \#include $<$create\+Observation\+Model.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1ObservationModel}{observation\+\_\+models\+::\+Observation\+Model}$<$ Observation\+Size, Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ $>$ \hyperlink{classtudat_1_1observation__models_1_1ObservationModelCreator_a633776bdbcc3f4a20594695bf25c9045}{create\+Observation\+Model} (const Observable\+Type observable\+Type, const Link\+Ends \&link\+Ends, const simulation\+\_\+setup\+::\+Named\+Body\+Map \&body\+Map, const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1LightTimeCorrectionSettings}{Light\+Time\+Correction\+Settings} $>$ $>$ \&single\+Observable\+Corrections=std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1LightTimeCorrectionSettings}{Light\+Time\+Correction\+Settings} $>$ $>$(), const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1ObservationBias}{Observation\+Bias}$<$ Observation\+Size $>$ $>$ observation\+Bias\+Calculator=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Function to create an observation model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int Observation\+Size = 1, typename Observation\+Scalar\+Type = double, typename Time\+Type = double, typename State\+Scalar\+Type = Observation\+Scalar\+Type$>$\\*
+class tudat\+::observation\+\_\+models\+::\+Observation\+Model\+Creator$<$ Observation\+Size, Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}
+
+Interface class for creating observation models. 
+
+Interface class for creating observation models. This class is used instead of a single templated free function to allow \hyperlink{classtudat_1_1observation__models_1_1ObservationModel}{Observation\+Model} deroved classed with different Observation\+Size template arguments to be created using the same interface. This class has template specializations for each value of Observation\+Size, and contains a single create\+Observation\+Model function that performs the required operation. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::observation\+\_\+models\+::\+Observation\+Model\+Creator@{tudat\+::observation\+\_\+models\+::\+Observation\+Model\+Creator}!create\+Observation\+Model@{create\+Observation\+Model}}
+\index{create\+Observation\+Model@{create\+Observation\+Model}!tudat\+::observation\+\_\+models\+::\+Observation\+Model\+Creator@{tudat\+::observation\+\_\+models\+::\+Observation\+Model\+Creator}}
+\subsubsection[{\texorpdfstring{create\+Observation\+Model(const Observable\+Type observable\+Type, const Link\+Ends \&link\+Ends, const simulation\+\_\+setup\+::\+Named\+Body\+Map \&body\+Map, const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ Light\+Time\+Correction\+Settings $>$ $>$ \&single\+Observable\+Corrections=std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ Light\+Time\+Correction\+Settings $>$ $>$(), const boost\+::shared\+\_\+ptr$<$ Observation\+Bias$<$ Observation\+Size $>$ $>$ observation\+Bias\+Calculator=\+N\+U\+L\+L)}{createObservationModel(const ObservableType observableType, const LinkEnds &linkEnds, const simulation_setup::NamedBodyMap &bodyMap, const std::vector< boost::shared_ptr< LightTimeCorrectionSettings > > &singleObservableCorrections=std::vector< boost::shared_ptr< LightTimeCorrectionSettings > >(), const boost::shared_ptr< ObservationBias< ObservationSize > > observationBiasCalculator=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int Observation\+Size = 1, typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ static boost\+::shared\+\_\+ptr$<$ {\bf observation\+\_\+models\+::\+Observation\+Model}$<$ Observation\+Size, Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ $>$ {\bf tudat\+::observation\+\_\+models\+::\+Observation\+Model\+Creator}$<$ Observation\+Size, Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::create\+Observation\+Model (
+\begin{DoxyParamCaption}
+\item[{const Observable\+Type}]{observable\+Type, }
+\item[{const Link\+Ends \&}]{link\+Ends, }
+\item[{const simulation\+\_\+setup\+::\+Named\+Body\+Map \&}]{body\+Map, }
+\item[{const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ {\bf Light\+Time\+Correction\+Settings} $>$ $>$ \&}]{single\+Observable\+Corrections = {\ttfamily std\+:\+:vector$<$~boost\+:\+:shared\+\_\+ptr$<$~{\bf Light\+Time\+Correction\+Settings}~$>$~$>$()}, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Observation\+Bias}$<$ Observation\+Size $>$ $>$}]{observation\+Bias\+Calculator = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classtudat_1_1observation__models_1_1ObservationModelCreator_a633776bdbcc3f4a20594695bf25c9045}{}\label{classtudat_1_1observation__models_1_1ObservationModelCreator_a633776bdbcc3f4a20594695bf25c9045}
+
+
+Function to create an observation model. 
+
+Function to create an observation model. 
+\begin{DoxyParams}{Parameters}
+{\em observable\+Type} & Type of observation model that is to be created. \\
+\hline
+{\em link\+Ends} & Link ends for observation model that is to be created \\
+\hline
+{\em body\+Map} & List of body objects that comprises the environment \\
+\hline
+{\em single\+Observable\+Corrections} & List of light time corrections that are used when computing the observable. \\
+\hline
+{\em observation\+Bias\+Calculator} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Observation model of required settings. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Estimation\+Setup/create\+Observation\+Model.\+h\end{DoxyCompactItemize}

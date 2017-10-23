@@ -1,0 +1,399 @@
+\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions}{}\section{tudat\+:\+:aerodynamics\+:\+:Flight\+Conditions Class Reference}
+\label{classtudat_1_1aerodynamics_1_1FlightConditions}\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+
+
+{\ttfamily \#include $<$flight\+Conditions.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_ad2ec928073866cc7bbe5940a92d78e17}{Flight\+Conditions} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1aerodynamics_1_1AtmosphereModel}{aerodynamics\+::\+Atmosphere\+Model} $>$ atmosphere\+Model, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__astrodynamics_1_1BodyShapeModel}{basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model} $>$ shape\+Model, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface}{Aerodynamic\+Coefficient\+Interface} $>$ aerodynamic\+Coefficient\+Interface, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator}{reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator} $>$ aerodynamic\+Angle\+Calculator=boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator}{reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator} $>$(), const boost\+::function$<$ double(const std\+::string \&)$>$ control\+Surface\+Deflection\+Function=boost\+::function$<$ double(const std\+::string \&)$>$())
+\begin{DoxyCompactList}\small\item\em Constructor, sets objects and functions from which relevant environment and state variables are retrieved. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_aadc4e2d6d38dc4b57f944c73b18060c7}{update\+Conditions} (const double current\+Time)
+\begin{DoxyCompactList}\small\item\em Function to update all flight conditions. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_a9be363eadc6441e9f83ede3110f7399e}{get\+Current\+Altitude} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve (and compute if necessary) the current altitude. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_a7cea9d3de862973c734b27a9d8fc9f63}{get\+Current\+Density} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve (and compute if necessary) the current freestream density. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_af2d0fa06499fae7521ac806a16ebbd0b}{get\+Current\+Freestream\+Temperature} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve (and compute if necessary) the current freestream temperature. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_acbf90152f6cb45e3366fb08a2bb73c8f}{get\+Current\+Dynamic\+Pressure} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve (and compute if necessary) the current freestream dynamic pressure. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_a9143a4ceb811cd9d911d603a58e036ed}{get\+Current\+Pressure} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve (and compute if necessary) the current freestream pressure. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_a92503b7936f9baf95e246d65e969ccee}{get\+Current\+Airspeed} ()
+\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_a9d2787d6c3678aa01c050f81b79b709f}{get\+Current\+Speed\+Of\+Sound} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve (and compute if necessary) the current speed of sound. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_aebdb26331700d0f1c742b6b25625d973}{get\+Current\+Mach\+Number} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve (and compute if necessary) the current Mach number. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_a61e90cedd2518bf5dc83498a46743a0a}{get\+Current\+Geodetic\+Latitude} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve (and compute if necessary) the current geodetic latitude. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_a0be39dd2b49d03fe576e73c3faa28ee8}{get\+Current\+Time} ()
+\begin{DoxyCompactList}\small\item\em Function to return the current time of the \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions}{Flight\+Conditions}. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1aerodynamics_1_1AtmosphereModel}{aerodynamics\+::\+Atmosphere\+Model} $>$ \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_abe7c660416abceb97e068290a21ede22}{get\+Atmosphere\+Model} () const 
+\begin{DoxyCompactList}\small\item\em Function to return atmosphere model object. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_aa6f9223633f404140c8e43da7ce7615a}{set\+Aerodynamic\+Angle\+Calculator} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator}{reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator} $>$ aerodynamic\+Angle\+Calculator)
+\begin{DoxyCompactList}\small\item\em Function to (re)set aerodynamic angle calculator object. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_aec5433b817a438eeecb844d524359708}{set\+Aerodynamic\+Coefficients\+Independent\+Variable\+Function} (const Aerodynamic\+Coefficients\+Independent\+Variables independent\+Variable, const boost\+::function$<$ double() $>$ coefficient\+Dependency)
+\begin{DoxyCompactList}\small\item\em Function to set custom dependency of aerodynamic coefficients. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector6d \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_a52bb2cc9d5748b7f1c0f96ad9d2de54e}{get\+Current\+Body\+Centered\+Body\+Fixed\+State} ()
+\begin{DoxyCompactList}\small\item\em Function to return current central body-\/fixed state of vehicle. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_a00c11388084a2789dd9fc5afb368699f}{get\+Current\+Airspeed\+Based\+Velocity} ()
+\begin{DoxyCompactList}\small\item\em Function to return current central body-\/fixed velocity of vehicle. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator}{reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator} $>$ \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_a8764be01f8e409922da4d773fb922ded}{get\+Aerodynamic\+Angle\+Calculator} ()
+\begin{DoxyCompactList}\small\item\em Function to return aerodynamic angle calculator object. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface}{Aerodynamic\+Coefficient\+Interface} $>$ \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_a34dc838cf637ea11ee10b14c3ebfd1d7}{get\+Aerodynamic\+Coefficient\+Interface} ()
+\begin{DoxyCompactList}\small\item\em Function to return object from which the aerodynamic coefficients are obtained. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_a84146564b6d8a1296760ccd554285956}{get\+Aerodynamic\+Coefficient\+Independent\+Variables} ()
+\begin{DoxyCompactList}\small\item\em Function to return list of independent variables of the aerodynamic coefficient interface. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::vector$<$ double $>$ $>$ \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_ae3a53b8a97eecc77c2b3105f09b6a480}{get\+Control\+Surface\+Aerodynamic\+Coefficient\+Independent\+Variables} ()
+\begin{DoxyCompactList}\small\item\em Function to return list of independent variables of the control surface aerodynamic coefficient interface. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions_a7687127ea0233711d3d4c1dd8cdcdb90}{reset\+Current\+Time} (const double current\+Time=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Function to reset the current time of the flight conditions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for calculating aerodynamic flight characteristics of a vehicle during numerical integration.
+
+Class for calculating aerodynamic flight characteristics of a vehicle during numerical integration. Class is used to ensure that dependent variables such as density, altitude, etc. are only calculated once during each numerical integration step. The get functions of this class are linked to the various models in the code that subsequently require these values. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!Flight\+Conditions@{Flight\+Conditions}}
+\index{Flight\+Conditions@{Flight\+Conditions}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{Flight\+Conditions(const boost\+::shared\+\_\+ptr$<$ aerodynamics\+::\+Atmosphere\+Model $>$ atmosphere\+Model, const boost\+::shared\+\_\+ptr$<$ basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model $>$ shape\+Model, const boost\+::shared\+\_\+ptr$<$ Aerodynamic\+Coefficient\+Interface $>$ aerodynamic\+Coefficient\+Interface, const boost\+::shared\+\_\+ptr$<$ reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator $>$ aerodynamic\+Angle\+Calculator=boost\+::shared\+\_\+ptr$<$ reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator $>$(), const boost\+::function$<$ double(const std\+::string \&)$>$ control\+Surface\+Deflection\+Function=boost\+::function$<$ double(const std\+::string \&)$>$())}{FlightConditions(const boost::shared_ptr< aerodynamics::AtmosphereModel > atmosphereModel, const boost::shared_ptr< basic_astrodynamics::BodyShapeModel > shapeModel, const boost::shared_ptr< AerodynamicCoefficientInterface > aerodynamicCoefficientInterface, const boost::shared_ptr< reference_frames::AerodynamicAngleCalculator > aerodynamicAngleCalculator=boost::shared_ptr< reference_frames::AerodynamicAngleCalculator >(), const boost::function< double(const std::string &)> controlSurfaceDeflectionFunction=boost::function< double(const std::string &)>())}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::aerodynamics\+::\+Flight\+Conditions\+::\+Flight\+Conditions (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf aerodynamics\+::\+Atmosphere\+Model} $>$}]{atmosphere\+Model, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model} $>$}]{shape\+Model, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Aerodynamic\+Coefficient\+Interface} $>$}]{aerodynamic\+Coefficient\+Interface, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator} $>$}]{aerodynamic\+Angle\+Calculator = {\ttfamily boost\+:\+:shared\+\_\+ptr$<$~{\bf reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}~$>$(~)}, }
+\item[{const boost\+::function$<$ double(const std\+::string \&)$>$}]{control\+Surface\+Deflection\+Function = {\ttfamily boost\+:\+:function$<$~double(~const~std\+:\+:string\&~)$>$(~)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_ad2ec928073866cc7bbe5940a92d78e17}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_ad2ec928073866cc7bbe5940a92d78e17}
+
+
+Constructor, sets objects and functions from which relevant environment and state variables are retrieved. 
+
+Constructor, sets objects and functions from which relevant environment and state variables are retrieved. 
+\begin{DoxyParams}{Parameters}
+{\em atmosphere\+Model} & Atmosphere model of atmosphere through which vehicle is flying \\
+\hline
+{\em shape\+Model} & Model describing the shape of the body w.\+r.\+t. which the flight is taking place. \\
+\hline
+{\em aerodynamic\+Coefficient\+Interface} & Class from which the aerodynamic (force and moment) coefficients are retrieved \\
+\hline
+{\em aerodynamic\+Angle\+Calculator} & Object from which the aerodynamic/trajectory angles of the vehicle are calculated. \\
+\hline
+{\em control\+Surface\+Deflection\+Function} & Function returning control surface deflection, with input the control surface identifier. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Aerodynamic\+Angle\+Calculator@{get\+Aerodynamic\+Angle\+Calculator}}
+\index{get\+Aerodynamic\+Angle\+Calculator@{get\+Aerodynamic\+Angle\+Calculator}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Aerodynamic\+Angle\+Calculator()}{getAerodynamicAngleCalculator()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator} $>$ tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Aerodynamic\+Angle\+Calculator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_a8764be01f8e409922da4d773fb922ded}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_a8764be01f8e409922da4d773fb922ded}
+
+
+Function to return aerodynamic angle calculator object. 
+
+Function to return aerodynamic angle calculator object \begin{DoxyReturn}{Returns}
+Aerodynamic angle calculator object 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Aerodynamic\+Coefficient\+Independent\+Variables@{get\+Aerodynamic\+Coefficient\+Independent\+Variables}}
+\index{get\+Aerodynamic\+Coefficient\+Independent\+Variables@{get\+Aerodynamic\+Coefficient\+Independent\+Variables}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Aerodynamic\+Coefficient\+Independent\+Variables()}{getAerodynamicCoefficientIndependentVariables()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ double $>$ tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Aerodynamic\+Coefficient\+Independent\+Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_a84146564b6d8a1296760ccd554285956}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_a84146564b6d8a1296760ccd554285956}
+
+
+Function to return list of independent variables of the aerodynamic coefficient interface. 
+
+Function to return list of independent variables of the aerodynamic coefficient interface \begin{DoxyReturn}{Returns}
+List of independent variables of the aerodynamic coefficient interface 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Aerodynamic\+Coefficient\+Interface@{get\+Aerodynamic\+Coefficient\+Interface}}
+\index{get\+Aerodynamic\+Coefficient\+Interface@{get\+Aerodynamic\+Coefficient\+Interface}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Aerodynamic\+Coefficient\+Interface()}{getAerodynamicCoefficientInterface()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf Aerodynamic\+Coefficient\+Interface} $>$ tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Aerodynamic\+Coefficient\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_a34dc838cf637ea11ee10b14c3ebfd1d7}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_a34dc838cf637ea11ee10b14c3ebfd1d7}
+
+
+Function to return object from which the aerodynamic coefficients are obtained. 
+
+Function to return object from which the aerodynamic coefficients are obtained. \begin{DoxyReturn}{Returns}
+Object from which the aerodynamic coefficients are obtained. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Atmosphere\+Model@{get\+Atmosphere\+Model}}
+\index{get\+Atmosphere\+Model@{get\+Atmosphere\+Model}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Atmosphere\+Model() const }{getAtmosphereModel() const }}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf aerodynamics\+::\+Atmosphere\+Model} $>$ tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Atmosphere\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_abe7c660416abceb97e068290a21ede22}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_abe7c660416abceb97e068290a21ede22}
+
+
+Function to return atmosphere model object. 
+
+Function to return atmosphere model object \begin{DoxyReturn}{Returns}
+Atmosphere model object 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Control\+Surface\+Aerodynamic\+Coefficient\+Independent\+Variables@{get\+Control\+Surface\+Aerodynamic\+Coefficient\+Independent\+Variables}}
+\index{get\+Control\+Surface\+Aerodynamic\+Coefficient\+Independent\+Variables@{get\+Control\+Surface\+Aerodynamic\+Coefficient\+Independent\+Variables}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Control\+Surface\+Aerodynamic\+Coefficient\+Independent\+Variables()}{getControlSurfaceAerodynamicCoefficientIndependentVariables()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ std\+::string, std\+::vector$<$ double $>$ $>$ tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Control\+Surface\+Aerodynamic\+Coefficient\+Independent\+Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_ae3a53b8a97eecc77c2b3105f09b6a480}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_ae3a53b8a97eecc77c2b3105f09b6a480}
+
+
+Function to return list of independent variables of the control surface aerodynamic coefficient interface. 
+
+Function to return list of independent variables of the control surface aerodynamic coefficient interface \begin{DoxyReturn}{Returns}
+List of independent variables of the control surface aerodynamic coefficient interface, with map key the control surface identifiers. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Current\+Airspeed@{get\+Current\+Airspeed}}
+\index{get\+Current\+Airspeed@{get\+Current\+Airspeed}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Current\+Airspeed()}{getCurrentAirspeed()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Current\+Airspeed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_a92503b7936f9baf95e246d65e969ccee}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_a92503b7936f9baf95e246d65e969ccee}
+Function to retrieve (and compute if necessary) the current airspeed \begin{DoxyReturn}{Returns}
+Current airspeed 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Current\+Airspeed\+Based\+Velocity@{get\+Current\+Airspeed\+Based\+Velocity}}
+\index{get\+Current\+Airspeed\+Based\+Velocity@{get\+Current\+Airspeed\+Based\+Velocity}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Current\+Airspeed\+Based\+Velocity()}{getCurrentAirspeedBasedVelocity()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Current\+Airspeed\+Based\+Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_a00c11388084a2789dd9fc5afb368699f}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_a00c11388084a2789dd9fc5afb368699f}
+
+
+Function to return current central body-\/fixed velocity of vehicle. 
+
+Function to return central body-\/fixed velocity of vehicle. \begin{DoxyReturn}{Returns}
+Current central body-\/fixed velocity of vehicle. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Current\+Altitude@{get\+Current\+Altitude}}
+\index{get\+Current\+Altitude@{get\+Current\+Altitude}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Current\+Altitude()}{getCurrentAltitude()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Current\+Altitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_a9be363eadc6441e9f83ede3110f7399e}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_a9be363eadc6441e9f83ede3110f7399e}
+
+
+Function to retrieve (and compute if necessary) the current altitude. 
+
+Function to retrieve (and compute if necessary) the current altitude \begin{DoxyReturn}{Returns}
+Current altitude 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Current\+Body\+Centered\+Body\+Fixed\+State@{get\+Current\+Body\+Centered\+Body\+Fixed\+State}}
+\index{get\+Current\+Body\+Centered\+Body\+Fixed\+State@{get\+Current\+Body\+Centered\+Body\+Fixed\+State}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Current\+Body\+Centered\+Body\+Fixed\+State()}{getCurrentBodyCenteredBodyFixedState()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector6d tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Current\+Body\+Centered\+Body\+Fixed\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_a52bb2cc9d5748b7f1c0f96ad9d2de54e}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_a52bb2cc9d5748b7f1c0f96ad9d2de54e}
+
+
+Function to return current central body-\/fixed state of vehicle. 
+
+Function to return central body-\/fixed state of vehicle. \begin{DoxyReturn}{Returns}
+Current central body-\/fixed state of vehicle. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Current\+Density@{get\+Current\+Density}}
+\index{get\+Current\+Density@{get\+Current\+Density}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Current\+Density()}{getCurrentDensity()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Current\+Density (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_a7cea9d3de862973c734b27a9d8fc9f63}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_a7cea9d3de862973c734b27a9d8fc9f63}
+
+
+Function to retrieve (and compute if necessary) the current freestream density. 
+
+Function to retrieve (and compute if necessary) the current freestream density \begin{DoxyReturn}{Returns}
+Current freestream density 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Current\+Dynamic\+Pressure@{get\+Current\+Dynamic\+Pressure}}
+\index{get\+Current\+Dynamic\+Pressure@{get\+Current\+Dynamic\+Pressure}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Current\+Dynamic\+Pressure()}{getCurrentDynamicPressure()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Current\+Dynamic\+Pressure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_acbf90152f6cb45e3366fb08a2bb73c8f}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_acbf90152f6cb45e3366fb08a2bb73c8f}
+
+
+Function to retrieve (and compute if necessary) the current freestream dynamic pressure. 
+
+Function to retrieve (and compute if necessary) the current freestream dynamic pressure \begin{DoxyReturn}{Returns}
+Current freestream dynamic pressure 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Current\+Freestream\+Temperature@{get\+Current\+Freestream\+Temperature}}
+\index{get\+Current\+Freestream\+Temperature@{get\+Current\+Freestream\+Temperature}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Current\+Freestream\+Temperature()}{getCurrentFreestreamTemperature()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Current\+Freestream\+Temperature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_af2d0fa06499fae7521ac806a16ebbd0b}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_af2d0fa06499fae7521ac806a16ebbd0b}
+
+
+Function to retrieve (and compute if necessary) the current freestream temperature. 
+
+Function to retrieve (and compute if necessary) the current freestream temperature \begin{DoxyReturn}{Returns}
+Current freestream temperature 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Current\+Geodetic\+Latitude@{get\+Current\+Geodetic\+Latitude}}
+\index{get\+Current\+Geodetic\+Latitude@{get\+Current\+Geodetic\+Latitude}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Current\+Geodetic\+Latitude()}{getCurrentGeodeticLatitude()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Current\+Geodetic\+Latitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_a61e90cedd2518bf5dc83498a46743a0a}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_a61e90cedd2518bf5dc83498a46743a0a}
+
+
+Function to retrieve (and compute if necessary) the current geodetic latitude. 
+
+Function to retrieve (and compute if necessary) the current geodetic latitude \begin{DoxyReturn}{Returns}
+Current geodetic latitude 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Current\+Mach\+Number@{get\+Current\+Mach\+Number}}
+\index{get\+Current\+Mach\+Number@{get\+Current\+Mach\+Number}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Current\+Mach\+Number()}{getCurrentMachNumber()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Current\+Mach\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_aebdb26331700d0f1c742b6b25625d973}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_aebdb26331700d0f1c742b6b25625d973}
+
+
+Function to retrieve (and compute if necessary) the current Mach number. 
+
+Function to retrieve (and compute if necessary) the current Mach number \begin{DoxyReturn}{Returns}
+Current Mach number 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Current\+Pressure@{get\+Current\+Pressure}}
+\index{get\+Current\+Pressure@{get\+Current\+Pressure}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Current\+Pressure()}{getCurrentPressure()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Current\+Pressure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_a9143a4ceb811cd9d911d603a58e036ed}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_a9143a4ceb811cd9d911d603a58e036ed}
+
+
+Function to retrieve (and compute if necessary) the current freestream pressure. 
+
+Function to retrieve (and compute if necessary) the current freestream pressure \begin{DoxyReturn}{Returns}
+Current freestream dynamic pressure 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Current\+Speed\+Of\+Sound@{get\+Current\+Speed\+Of\+Sound}}
+\index{get\+Current\+Speed\+Of\+Sound@{get\+Current\+Speed\+Of\+Sound}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Current\+Speed\+Of\+Sound()}{getCurrentSpeedOfSound()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Current\+Speed\+Of\+Sound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_a9d2787d6c3678aa01c050f81b79b709f}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_a9d2787d6c3678aa01c050f81b79b709f}
+
+
+Function to retrieve (and compute if necessary) the current speed of sound. 
+
+Function to retrieve (and compute if necessary) the current speed of sound \begin{DoxyReturn}{Returns}
+Current speed of sound 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!get\+Current\+Time@{get\+Current\+Time}}
+\index{get\+Current\+Time@{get\+Current\+Time}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{get\+Current\+Time()}{getCurrentTime()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Flight\+Conditions\+::get\+Current\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_a0be39dd2b49d03fe576e73c3faa28ee8}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_a0be39dd2b49d03fe576e73c3faa28ee8}
+
+
+Function to return the current time of the \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions}{Flight\+Conditions}. 
+
+Function to return the current time of the \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions}{Flight\+Conditions}. \begin{DoxyReturn}{Returns}
+Current time of the \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions}{Flight\+Conditions} 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!reset\+Current\+Time@{reset\+Current\+Time}}
+\index{reset\+Current\+Time@{reset\+Current\+Time}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{reset\+Current\+Time(const double current\+Time=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{resetCurrentTime(const double currentTime=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::aerodynamics\+::\+Flight\+Conditions\+::reset\+Current\+Time (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Time = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_a7687127ea0233711d3d4c1dd8cdcdb90}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_a7687127ea0233711d3d4c1dd8cdcdb90}
+
+
+Function to reset the current time of the flight conditions. 
+
+Function to reset the current time of the flight conditions. This function is typically sused to set the current time to NaN, indicating the need to recompute all quantities for the next time computation. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Time} & \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!set\+Aerodynamic\+Angle\+Calculator@{set\+Aerodynamic\+Angle\+Calculator}}
+\index{set\+Aerodynamic\+Angle\+Calculator@{set\+Aerodynamic\+Angle\+Calculator}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{set\+Aerodynamic\+Angle\+Calculator(const boost\+::shared\+\_\+ptr$<$ reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator $>$ aerodynamic\+Angle\+Calculator)}{setAerodynamicAngleCalculator(const boost::shared_ptr< reference_frames::AerodynamicAngleCalculator > aerodynamicAngleCalculator)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::aerodynamics\+::\+Flight\+Conditions\+::set\+Aerodynamic\+Angle\+Calculator (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator} $>$}]{aerodynamic\+Angle\+Calculator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_aa6f9223633f404140c8e43da7ce7615a}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_aa6f9223633f404140c8e43da7ce7615a}
+
+
+Function to (re)set aerodynamic angle calculator object. 
+
+Function to (re)set aerodynamic angle calculator object 
+\begin{DoxyParams}{Parameters}
+{\em aerodynamic\+Angle\+Calculator} & Aerodynamic angle calculator object to set. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!set\+Aerodynamic\+Coefficients\+Independent\+Variable\+Function@{set\+Aerodynamic\+Coefficients\+Independent\+Variable\+Function}}
+\index{set\+Aerodynamic\+Coefficients\+Independent\+Variable\+Function@{set\+Aerodynamic\+Coefficients\+Independent\+Variable\+Function}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{set\+Aerodynamic\+Coefficients\+Independent\+Variable\+Function(const Aerodynamic\+Coefficients\+Independent\+Variables independent\+Variable, const boost\+::function$<$ double() $>$ coefficient\+Dependency)}{setAerodynamicCoefficientsIndependentVariableFunction(const AerodynamicCoefficientsIndependentVariables independentVariable, const boost::function< double() > coefficientDependency)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::aerodynamics\+::\+Flight\+Conditions\+::set\+Aerodynamic\+Coefficients\+Independent\+Variable\+Function (
+\begin{DoxyParamCaption}
+\item[{const Aerodynamic\+Coefficients\+Independent\+Variables}]{independent\+Variable, }
+\item[{const boost\+::function$<$ double() $>$}]{coefficient\+Dependency}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_aec5433b817a438eeecb844d524359708}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_aec5433b817a438eeecb844d524359708}
+
+
+Function to set custom dependency of aerodynamic coefficients. 
+
+Function to set custom dependency of aerodynamic coefficients. If needed, the Aerodynamic\+Coefficients\+Independent\+Variables enum may be expanded to include e.\+g. control surface deflections, the values of which will then be retrieved from the function set here 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variable} & Identifier of independent variable \\
+\hline
+{\em coefficient\+Dependency} & Function returning the current value of the independent variable. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}!update\+Conditions@{update\+Conditions}}
+\index{update\+Conditions@{update\+Conditions}!tudat\+::aerodynamics\+::\+Flight\+Conditions@{tudat\+::aerodynamics\+::\+Flight\+Conditions}}
+\subsubsection[{\texorpdfstring{update\+Conditions(const double current\+Time)}{updateConditions(const double currentTime)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::aerodynamics\+::\+Flight\+Conditions\+::update\+Conditions (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1aerodynamics_1_1FlightConditions_aadc4e2d6d38dc4b57f944c73b18060c7}{}\label{classtudat_1_1aerodynamics_1_1FlightConditions_aadc4e2d6d38dc4b57f944c73b18060c7}
+
+
+Function to update all flight conditions. 
+
+Function to update all flight conditions (altitude, density, force coefficients) to current state of vehicle and central body. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Time} & \hyperlink{classtudat_1_1Time}{Time} to which conditions are to be updated. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Aerodynamics/flight\+Conditions.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Aerodynamics/flight\+Conditions.\+cpp\end{DoxyCompactItemize}

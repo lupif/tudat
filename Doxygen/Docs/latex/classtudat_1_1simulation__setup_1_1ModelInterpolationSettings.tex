@@ -1,0 +1,64 @@
+\hypertarget{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings}{}\section{tudat\+:\+:simulation\+\_\+setup\+:\+:Model\+Interpolation\+Settings Class Reference}
+\label{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings}\index{tudat\+::simulation\+\_\+setup\+::\+Model\+Interpolation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Model\+Interpolation\+Settings}}
+
+
+{\ttfamily \#include $<$create\+Gravity\+Field\+Variations.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings_a87aa5eb1389709c989e6d32b72ce3c64}{Model\+Interpolation\+Settings} (const double initial\+Time=0.\+0, const double final\+Time=0.\+0, const double time\+Step=0.\+0, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings}{interpolators\+::\+Interpolator\+Settings} $>$ interpolator\+Settings=boost\+::make\+\_\+shared$<$ \hyperlink{classtudat_1_1interpolators_1_1LagrangeInterpolatorSettings}{interpolators\+::\+Lagrange\+Interpolator\+Settings} $>$(6))
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings}{interpolators\+::\+Interpolator\+Settings} $>$ {\bfseries interpolator\+Settings\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings_ac45ee80ab55623b78754fb8dd718ebba}{}\label{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings_ac45ee80ab55623b78754fb8dd718ebba}
+
+\item 
+double \hyperlink{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings_a4edb62b7b43adb976b774d5208f66ca2}{initial\+Time\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings_a4edb62b7b43adb976b774d5208f66ca2}{}\label{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings_a4edb62b7b43adb976b774d5208f66ca2}
+
+\begin{DoxyCompactList}\small\item\em Start time for interpolator. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings_a27100f33bf4e12b01eca3e554c044d9b}{final\+Time\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings_a27100f33bf4e12b01eca3e554c044d9b}{}\label{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings_a27100f33bf4e12b01eca3e554c044d9b}
+
+\begin{DoxyCompactList}\small\item\em End time for interpolator. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings_a3148abe038357537862c1be22f9ef440}{time\+Step\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings_a3148abe038357537862c1be22f9ef440}{}\label{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings_a3148abe038357537862c1be22f9ef440}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classtudat_1_1Time}{Time} step with which to evaluate model, and provide input to interpolator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Object to define settings to be used for interpolating time-\/variations computed by an environment model.
+
+Object to define settings to be used for interpolating time-\/variations computed by an environment model. For instance, gravity field variations may be computed a priori (in certain cases) and interpolated during propagation, which can significantly reduce the computation time.\+class \hyperlink{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings}{Model\+Interpolation\+Settings} 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Model\+Interpolation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Model\+Interpolation\+Settings}!Model\+Interpolation\+Settings@{Model\+Interpolation\+Settings}}
+\index{Model\+Interpolation\+Settings@{Model\+Interpolation\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Model\+Interpolation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Model\+Interpolation\+Settings}}
+\subsubsection[{\texorpdfstring{Model\+Interpolation\+Settings(const double initial\+Time=0.\+0, const double final\+Time=0.\+0, const double time\+Step=0.\+0, const boost\+::shared\+\_\+ptr$<$ interpolators\+::\+Interpolator\+Settings $>$ interpolator\+Settings=boost\+::make\+\_\+shared$<$ interpolators\+::\+Lagrange\+Interpolator\+Settings $>$(6))}{ModelInterpolationSettings(const double initialTime=0.0, const double finalTime=0.0, const double timeStep=0.0, const boost::shared_ptr< interpolators::InterpolatorSettings > interpolatorSettings=boost::make_shared< interpolators::LagrangeInterpolatorSettings >(6))}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::simulation\+\_\+setup\+::\+Model\+Interpolation\+Settings\+::\+Model\+Interpolation\+Settings (
+\begin{DoxyParamCaption}
+\item[{const double}]{initial\+Time = {\ttfamily 0.0}, }
+\item[{const double}]{final\+Time = {\ttfamily 0.0}, }
+\item[{const double}]{time\+Step = {\ttfamily 0.0}, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf interpolators\+::\+Interpolator\+Settings} $>$}]{interpolator\+Settings = {\ttfamily boost\+:\+:make\+\_\+shared$<$~{\bf interpolators\+::\+Lagrange\+Interpolator\+Settings}~$>$(~6~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings_a87aa5eb1389709c989e6d32b72ce3c64}{}\label{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings_a87aa5eb1389709c989e6d32b72ce3c64}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em initial\+Time} & Start time for interpolator. \\
+\hline
+{\em final\+Time} & End time for interpolator. \\
+\hline
+{\em time\+Step} & \hyperlink{classtudat_1_1Time}{Time} step with which to evaluate model, and provide input to interpolator \\
+\hline
+{\em interpolator\+Settings} & Settings to use to crate the interpolator (i.\+e. type and any required associated information). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Environment\+Setup/create\+Gravity\+Field\+Variations.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,80 @@
+\hypertarget{structtudat_1_1unit__tests_1_1TestFunction2}{}\section{tudat\+:\+:unit\+\_\+tests\+:\+:Test\+Function2 Struct Reference}
+\label{structtudat_1_1unit__tests_1_1TestFunction2}\index{tudat\+::unit\+\_\+tests\+::\+Test\+Function2@{tudat\+::unit\+\_\+tests\+::\+Test\+Function2}}
+
+
+Test function for the root\+\_\+finders.  
+
+
+
+
+{\ttfamily \#include $<$test\+Function2.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:unit\+\_\+tests\+:\+:Test\+Function2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structtudat_1_1unit__tests_1_1TestFunction2__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:unit\+\_\+tests\+:\+:Test\+Function2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structtudat_1_1unit__tests_1_1TestFunction2__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtudat_1_1unit__tests_1_1TestFunction2_ad9fc9e7684261a38d8ba414ed5540e76}{Test\+Function2} (const unsigned int a\+Maximum\+Derivative\+Order)\hypertarget{structtudat_1_1unit__tests_1_1TestFunction2_ad9fc9e7684261a38d8ba414ed5540e76}{}\label{structtudat_1_1unit__tests_1_1TestFunction2_ad9fc9e7684261a38d8ba414ed5540e76}
+
+\begin{DoxyCompactList}\small\item\em Create a function, where a\+Maximum\+Derivative\+Order is the maximum order of the derivative. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunction2_af48f8ec9949c4a3fd79600e945490c9b}{evaluate} (const double input\+Value)\hypertarget{structtudat_1_1unit__tests_1_1TestFunction2_af48f8ec9949c4a3fd79600e945490c9b}{}\label{structtudat_1_1unit__tests_1_1TestFunction2_af48f8ec9949c4a3fd79600e945490c9b}
+
+\begin{DoxyCompactList}\small\item\em Mathematical test function. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunction2_ad4de6c3724f2c6684ece65b7628c3e24}{compute\+Derivative} (const unsigned int order, const double input\+Value)\hypertarget{structtudat_1_1unit__tests_1_1TestFunction2_ad4de6c3724f2c6684ece65b7628c3e24}{}\label{structtudat_1_1unit__tests_1_1TestFunction2_ad4de6c3724f2c6684ece65b7628c3e24}
+
+\begin{DoxyCompactList}\small\item\em Derivatives of mathematical test function. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunction2_a48c8418d145c79eec735d44d96cbf893}{compute\+Definite\+Integral} (const unsigned int order, const double lower\+Bound, const double upperbound)\hypertarget{structtudat_1_1unit__tests_1_1TestFunction2_a48c8418d145c79eec735d44d96cbf893}{}\label{structtudat_1_1unit__tests_1_1TestFunction2_a48c8418d145c79eec735d44d96cbf893}
+
+\begin{DoxyCompactList}\small\item\em Crash on integration as root\+\_\+finders should not execute these. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunction2_a74d93c56da84446dbb75768b681f1ace}{get\+True\+Root\+Location} ()\hypertarget{structtudat_1_1unit__tests_1_1TestFunction2_a74d93c56da84446dbb75768b681f1ace}{}\label{structtudat_1_1unit__tests_1_1TestFunction2_a74d93c56da84446dbb75768b681f1ace}
+
+\begin{DoxyCompactList}\small\item\em Get the expected true location of the root = sqrt(3). \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunction2_a5c3919fbb0e5030d6d33ea49cdf68d02}{get\+True\+Root\+Accuracy} ()\hypertarget{structtudat_1_1unit__tests_1_1TestFunction2_a5c3919fbb0e5030d6d33ea49cdf68d02}{}\label{structtudat_1_1unit__tests_1_1TestFunction2_a5c3919fbb0e5030d6d33ea49cdf68d02}
+
+\begin{DoxyCompactList}\small\item\em Get the accuracy of the true location of the root. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunction2_a04b4e79ea3e2518daf3525244dfdb724}{get\+Initial\+Guess} ()\hypertarget{structtudat_1_1unit__tests_1_1TestFunction2_a04b4e79ea3e2518daf3525244dfdb724}{}\label{structtudat_1_1unit__tests_1_1TestFunction2_a04b4e79ea3e2518daf3525244dfdb724}
+
+\begin{DoxyCompactList}\small\item\em Get a reasonable initial guess of the root location = 3. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunction2_a69bdb49aeaed99b6ee8ab975c597bec8}{get\+Lower\+Bound} ()\hypertarget{structtudat_1_1unit__tests_1_1TestFunction2_a69bdb49aeaed99b6ee8ab975c597bec8}{}\label{structtudat_1_1unit__tests_1_1TestFunction2_a69bdb49aeaed99b6ee8ab975c597bec8}
+
+\begin{DoxyCompactList}\small\item\em Get a reasonable lower boundary for the root location = 2. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunction2_ad43df0e31a82c2d79ceec5b1b180146e}{get\+Upper\+Bound} ()\hypertarget{structtudat_1_1unit__tests_1_1TestFunction2_ad43df0e31a82c2d79ceec5b1b180146e}{}\label{structtudat_1_1unit__tests_1_1TestFunction2_ad43df0e31a82c2d79ceec5b1b180146e}
+
+\begin{DoxyCompactList}\small\item\em Get a reasonable upper boundary for the root location = 4. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{structtudat_1_1unit__tests_1_1TestFunction2_a21b7ba9b5430f9930dd7b06e3d2c6711}{maximum\+Derivative\+Order}\hypertarget{structtudat_1_1unit__tests_1_1TestFunction2_a21b7ba9b5430f9930dd7b06e3d2c6711}{}\label{structtudat_1_1unit__tests_1_1TestFunction2_a21b7ba9b5430f9930dd7b06e3d2c6711}
+
+\begin{DoxyCompactList}\small\item\em Maximum order of the derivative before throwing an exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Test function for the root\+\_\+finders. 
+
+This struct contains functions, necessary to test the various rootfinding methods.
+
+The test function implemented in this case is\+: \[ f(x) = sin(x) \] 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Root\+Finders/\+Unit\+Tests/test\+Function2.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,121 @@
+\hypertarget{classtudat_1_1statistics_1_1GaussianDistributionXd}{}\section{tudat\+:\+:statistics\+:\+:Gaussian\+Distribution\+Xd Class Reference}
+\label{classtudat_1_1statistics_1_1GaussianDistributionXd}\index{tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd@{tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd}}
+
+
+Implementation of multi-\/dimensional Gaussian Probability Distribution.  
+
+
+
+
+{\ttfamily \#include $<$multi\+Variate\+Gaussian\+Probability\+Distributions.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:statistics\+:\+:Gaussian\+Distribution\+Xd\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classtudat_1_1statistics_1_1GaussianDistributionXd__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:statistics\+:\+:Gaussian\+Distribution\+Xd\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classtudat_1_1statistics_1_1GaussianDistributionXd__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1statistics_1_1GaussianDistributionXd_ab8ead3736954d1f2e4fcb914bd25f8b9}{Gaussian\+Distribution\+Xd} (const Eigen\+::\+Vector\+Xd \&mean, const Eigen\+::\+Matrix\+Xd \&covariance\+Matrix)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1GaussianDistributionXd_a8b09ee64c8fe4ddb15bdba86b9eb5a5a}{evaluate\+Pdf} (const Eigen\+::\+Vector\+Xd \&independent\+Variables)
+\begin{DoxyCompactList}\small\item\em Function to evaluate pdf of multivariate Gaussian distribution. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1GaussianDistributionXd_a35b5b2168a1856aa4f93fca963c430e1}{evaluate\+Cdf} (const Eigen\+::\+Vector\+Xd \&independent\+Variables)
+\begin{DoxyCompactList}\small\item\em Function to evaluate cdf of multivariate Gaussian distribution (not yet implemented) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of multi-\/dimensional Gaussian Probability Distribution. 
+
+Implementation of multi-\/dimensional Gaussian Probability Distribution. Only pdf is presently implemented, a runtime error is thrown if the cdf function is called. Model taken from Tong, Y. The Multivariate Normal Distribution Springer-\/\+Verslag, 1990 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd@{tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd}!Gaussian\+Distribution\+Xd@{Gaussian\+Distribution\+Xd}}
+\index{Gaussian\+Distribution\+Xd@{Gaussian\+Distribution\+Xd}!tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd@{tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd}}
+\subsubsection[{\texorpdfstring{Gaussian\+Distribution\+Xd(const Eigen\+::\+Vector\+Xd \&mean, const Eigen\+::\+Matrix\+Xd \&covariance\+Matrix)}{GaussianDistributionXd(const Eigen::VectorXd &mean, const Eigen::MatrixXd &covarianceMatrix)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd\+::\+Gaussian\+Distribution\+Xd (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{mean, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{covariance\+Matrix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1GaussianDistributionXd_ab8ead3736954d1f2e4fcb914bd25f8b9}{}\label{classtudat_1_1statistics_1_1GaussianDistributionXd_ab8ead3736954d1f2e4fcb914bd25f8b9}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em mean} & Mean values of distribution \\
+\hline
+{\em covariance\+Matrix} & Covariance matrix of distribution \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd@{tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd}!evaluate\+Cdf@{evaluate\+Cdf}}
+\index{evaluate\+Cdf@{evaluate\+Cdf}!tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd@{tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd}}
+\subsubsection[{\texorpdfstring{evaluate\+Cdf(const Eigen\+::\+Vector\+Xd \&independent\+Variables)}{evaluateCdf(const Eigen::VectorXd &independentVariables)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd\+::evaluate\+Cdf (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{independent\+Variables}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1statistics_1_1GaussianDistributionXd_a35b5b2168a1856aa4f93fca963c430e1}{}\label{classtudat_1_1statistics_1_1GaussianDistributionXd_a35b5b2168a1856aa4f93fca963c430e1}
+
+
+Function to evaluate cdf of multivariate Gaussian distribution (not yet implemented) 
+
+Function to evaluate cumulative distribution function of multivariate Gaussian distribution at given list of independent variable values. N\+O\+TE\+: function not yet implemented 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & List of independent variable values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Evaluated multivariate Gaussian cdf. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_ad60887b5623ded9e73456dedcbf32a8a}{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution$<$ Eigen\+::\+Vector\+Xd $>$}.
+
+\index{tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd@{tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd}!evaluate\+Pdf@{evaluate\+Pdf}}
+\index{evaluate\+Pdf@{evaluate\+Pdf}!tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd@{tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd}}
+\subsubsection[{\texorpdfstring{evaluate\+Pdf(const Eigen\+::\+Vector\+Xd \&independent\+Variables)}{evaluatePdf(const Eigen::VectorXd &independentVariables)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd\+::evaluate\+Pdf (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{independent\+Variables}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1statistics_1_1GaussianDistributionXd_a8b09ee64c8fe4ddb15bdba86b9eb5a5a}{}\label{classtudat_1_1statistics_1_1GaussianDistributionXd_a8b09ee64c8fe4ddb15bdba86b9eb5a5a}
+
+
+Function to evaluate pdf of multivariate Gaussian distribution. 
+
+Function to evaluate probability distribution function of multivariate Gaussian distribution at given list of independent variable values. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & List of independent variable values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Evaluated multivariate Gaussian pdf 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_a7edfe6753ce63fe4e12409d3fb88e499}{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution$<$ Eigen\+::\+Vector\+Xd $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Statistics/multi\+Variate\+Gaussian\+Probability\+Distributions.\+h\end{DoxyCompactItemize}

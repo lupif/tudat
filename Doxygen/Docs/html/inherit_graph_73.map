@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1observation__models_1_1ObservationBias.html" title="Base class (non&#45;functional) for describing observation biases. " alt="" coords="5,5,180,61"/>
+<area shape="rect" id="node2" href="$classtudat_1_1observation__models_1_1ConstantObservationBias.html" title="Class for a constant observation bias of a given size. " alt="" coords="228,5,431,61"/>
+</map>

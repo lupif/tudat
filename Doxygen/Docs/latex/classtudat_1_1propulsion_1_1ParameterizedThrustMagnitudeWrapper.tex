@@ -1,0 +1,171 @@
+\hypertarget{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper}{}\section{tudat\+:\+:propulsion\+:\+:Parameterized\+Thrust\+Magnitude\+Wrapper Class Reference}
+\label{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper}\index{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper@{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper}}
+
+
+{\ttfamily \#include $<$thrust\+Magnitude\+Wrapper.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:propulsion\+:\+:Parameterized\+Thrust\+Magnitude\+Wrapper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:propulsion\+:\+:Parameterized\+Thrust\+Magnitude\+Wrapper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_a4a26ca8a090f901aabef7ac07aead115}{Parameterized\+Thrust\+Magnitude\+Wrapper} (const boost\+::function$<$ double(const std\+::vector$<$ double $>$ \&) $>$ thrust\+Magnitude\+Function, const boost\+::function$<$ double(const std\+::vector$<$ double $>$ \&) $>$ specific\+Impulse\+Function, const std\+::vector$<$ boost\+::function$<$ double() $>$ $>$ thrust\+Input\+Variable\+Functions, const std\+::vector$<$ boost\+::function$<$ double() $>$ $>$ specific\+Impulse\+Input\+Variable\+Functions, const std\+::vector$<$ propulsion\+::\+Thrust\+Independent\+Variables $>$ thrust\+Independent\+Variables, const std\+::vector$<$ propulsion\+::\+Thrust\+Independent\+Variables $>$ specific\+Impulse\+Dependent\+Variables, const boost\+::function$<$ void(const double) $>$ input\+Update\+Function=boost\+::function$<$ void(const double) $>$())
+\begin{DoxyCompactList}\small\item\em Constructor for parameterized thrust and specific impulse. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_a578598427e7002773a448a398b822f0d}{$\sim$\+Parameterized\+Thrust\+Magnitude\+Wrapper} ()\hypertarget{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_a578598427e7002773a448a398b822f0d}{}\label{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_a578598427e7002773a448a398b822f0d}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_a9986324434fea86a4e9b54d86e0200b3}{update} (const double time)
+\begin{DoxyCompactList}\small\item\em Function to update the thrust magnitude to the current time. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_aad77dd957a787846b3220792bc138fe6}{reset\+Derived\+Class\+Current\+Time} (const double current\+Time=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Function to reset the current time of the thrust model derived class. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_ae58d66ba89046b58507f1245f5184611}{get\+Current\+Thrust\+Magnitude} ()
+\begin{DoxyCompactList}\small\item\em Function to return the current thrust magnitude. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_a20169ccccc57cba8106be96e0a9cc592}{get\+Current\+Mass\+Rate} ()
+\begin{DoxyCompactList}\small\item\em Function to return the current mass rate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class to compute the engine thrust and specific impulse as a parameterized function of any number of indepedent variables.
+
+Class to compute the engine thrust and specific impulse as a parameterized function of any number of indepedent variables. The physical meaning of the variables must be defined here, selecting from the options in the Thrust\+Independent\+Variables enum, and they are automatically retrieved from the relevant environment models during the propagation. Note that any number of user-\/specific functions may be included, as a guidance\+\_\+input\+\_\+dependent\+\_\+thrust type or throttle\+\_\+dependent\+\_\+thrust. Note that a throttle\+\_\+dependent\+\_\+thrust may not be used as one of the independent variables of the thrust magnitude for this class. This setting is parsed through the Parameterized\+Thrust\+Magnitude\+Settings class, which is the class that is typically used to create this class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper@{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper}!Parameterized\+Thrust\+Magnitude\+Wrapper@{Parameterized\+Thrust\+Magnitude\+Wrapper}}
+\index{Parameterized\+Thrust\+Magnitude\+Wrapper@{Parameterized\+Thrust\+Magnitude\+Wrapper}!tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper@{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper}}
+\subsubsection[{\texorpdfstring{Parameterized\+Thrust\+Magnitude\+Wrapper(const boost\+::function$<$ double(const std\+::vector$<$ double $>$ \&) $>$ thrust\+Magnitude\+Function, const boost\+::function$<$ double(const std\+::vector$<$ double $>$ \&) $>$ specific\+Impulse\+Function, const std\+::vector$<$ boost\+::function$<$ double() $>$ $>$ thrust\+Input\+Variable\+Functions, const std\+::vector$<$ boost\+::function$<$ double() $>$ $>$ specific\+Impulse\+Input\+Variable\+Functions, const std\+::vector$<$ propulsion\+::\+Thrust\+Independent\+Variables $>$ thrust\+Independent\+Variables, const std\+::vector$<$ propulsion\+::\+Thrust\+Independent\+Variables $>$ specific\+Impulse\+Dependent\+Variables, const boost\+::function$<$ void(const double) $>$ input\+Update\+Function=boost\+::function$<$ void(const double) $>$())}{ParameterizedThrustMagnitudeWrapper(const boost::function< double(const std::vector< double > &) > thrustMagnitudeFunction, const boost::function< double(const std::vector< double > &) > specificImpulseFunction, const std::vector< boost::function< double() > > thrustInputVariableFunctions, const std::vector< boost::function< double() > > specificImpulseInputVariableFunctions, const std::vector< propulsion::ThrustIndependentVariables > thrustIndependentVariables, const std::vector< propulsion::ThrustIndependentVariables > specificImpulseDependentVariables, const boost::function< void(const double) > inputUpdateFunction=boost::function< void(const double) >())}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ double(const std\+::vector$<$ double $>$ \&) $>$}]{thrust\+Magnitude\+Function, }
+\item[{const boost\+::function$<$ double(const std\+::vector$<$ double $>$ \&) $>$}]{specific\+Impulse\+Function, }
+\item[{const std\+::vector$<$ boost\+::function$<$ double() $>$ $>$}]{thrust\+Input\+Variable\+Functions, }
+\item[{const std\+::vector$<$ boost\+::function$<$ double() $>$ $>$}]{specific\+Impulse\+Input\+Variable\+Functions, }
+\item[{const std\+::vector$<$ propulsion\+::\+Thrust\+Independent\+Variables $>$}]{thrust\+Independent\+Variables, }
+\item[{const std\+::vector$<$ propulsion\+::\+Thrust\+Independent\+Variables $>$}]{specific\+Impulse\+Dependent\+Variables, }
+\item[{const boost\+::function$<$ void(const double) $>$}]{input\+Update\+Function = {\ttfamily boost\+:\+:function$<$~void(~const~double)~$>$(~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_a4a26ca8a090f901aabef7ac07aead115}{}\label{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_a4a26ca8a090f901aabef7ac07aead115}
+
+
+Constructor for parameterized thrust and specific impulse. 
+
+Constructor, defines the functions for thrust and specific impulse, as well as the physical meaning of each of the independent variables. 
+\begin{DoxyParams}{Parameters}
+{\em thrust\+Magnitude\+Function} & Function returning the current thrust as a function of the independent variables. \\
+\hline
+{\em specific\+Impulse\+Function} & Function returning the current specific impulse as a function of the independent variables. \\
+\hline
+{\em thrust\+Input\+Variable\+Functions} & List of functions returning input variables for the thrust The order of the functions in this vector is passed to the thrust\+Magnitude\+Function in the same order as entries of this vector. \\
+\hline
+{\em specific\+Impulse\+Input\+Variable\+Functions} & List of functions returning input variables for the specific impulse. The order of the functions in this vector is passed to the specific\+Impulse\+Function in the same order as entries of this vector. \\
+\hline
+{\em thrust\+Independent\+Variables} & List of identifiers for the physical meaning of each of the entries of the input to the thrust\+Magnitude\+Function function. \\
+\hline
+{\em specific\+Impulse\+Dependent\+Variables} & List of identifiers for the physical meaning of each of the entries of the input to the specific\+Impulse\+Dependent\+Variables function. \\
+\hline
+{\em specific\+Impulse\+Dependent\+Variables} & List of identifiers for the physical meaning of each of the entries of the input to the specific\+Impulse\+Dependent\+Variables function. \\
+\hline
+{\em input\+Update\+Function} & Function that is called to update the user-\/defined guidance to the current time (empty by default). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper@{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper}!get\+Current\+Mass\+Rate@{get\+Current\+Mass\+Rate}}
+\index{get\+Current\+Mass\+Rate@{get\+Current\+Mass\+Rate}!tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper@{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper}}
+\subsubsection[{\texorpdfstring{get\+Current\+Mass\+Rate()}{getCurrentMassRate()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper\+::get\+Current\+Mass\+Rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_a20169ccccc57cba8106be96e0a9cc592}{}\label{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_a20169ccccc57cba8106be96e0a9cc592}
+
+
+Function to return the current mass rate. 
+
+Function to return the current mass rate, computed from quantities set by last call to update member function. \begin{DoxyReturn}{Returns}
+Current mass rate. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1propulsion_1_1ThrustMagnitudeWrapper_abea551383a711c4fe3e04a77df3d3c0c}{tudat\+::propulsion\+::\+Thrust\+Magnitude\+Wrapper}.
+
+\index{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper@{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper}!get\+Current\+Thrust\+Magnitude@{get\+Current\+Thrust\+Magnitude}}
+\index{get\+Current\+Thrust\+Magnitude@{get\+Current\+Thrust\+Magnitude}!tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper@{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper}}
+\subsubsection[{\texorpdfstring{get\+Current\+Thrust\+Magnitude()}{getCurrentThrustMagnitude()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper\+::get\+Current\+Thrust\+Magnitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_ae58d66ba89046b58507f1245f5184611}{}\label{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_ae58d66ba89046b58507f1245f5184611}
+
+
+Function to return the current thrust magnitude. 
+
+Function to return the current thrust magnitude, as computed by last call to update member function. \begin{DoxyReturn}{Returns}
+Current thrust magnitude 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1propulsion_1_1ThrustMagnitudeWrapper_a303af8ecc94a8e0151a58711700dafe2}{tudat\+::propulsion\+::\+Thrust\+Magnitude\+Wrapper}.
+
+\index{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper@{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper}!reset\+Derived\+Class\+Current\+Time@{reset\+Derived\+Class\+Current\+Time}}
+\index{reset\+Derived\+Class\+Current\+Time@{reset\+Derived\+Class\+Current\+Time}!tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper@{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper}}
+\subsubsection[{\texorpdfstring{reset\+Derived\+Class\+Current\+Time(const double current\+Time=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{resetDerivedClassCurrentTime(const double currentTime=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper\+::reset\+Derived\+Class\+Current\+Time (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Time = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_aad77dd957a787846b3220792bc138fe6}{}\label{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_aad77dd957a787846b3220792bc138fe6}
+
+
+Function to reset the current time of the thrust model derived class. 
+
+Function to reset the current time of the thrust model derived class. Function is typically used to reset the time to NaN, signalling the need for a recomputation of all required quantities. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Time} & New current time to be set in model. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtudat_1_1propulsion_1_1ThrustMagnitudeWrapper_acece32d609bb4946504acc94ec86504b}{tudat\+::propulsion\+::\+Thrust\+Magnitude\+Wrapper}.
+
+\index{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper@{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper}!update@{update}}
+\index{update@{update}!tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper@{tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper}}
+\subsubsection[{\texorpdfstring{update(const double time)}{update(const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::propulsion\+::\+Parameterized\+Thrust\+Magnitude\+Wrapper\+::update (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_a9986324434fea86a4e9b54d86e0200b3}{}\label{classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper_a9986324434fea86a4e9b54d86e0200b3}
+
+
+Function to update the thrust magnitude to the current time. 
+
+Function to update the thrust magnitude to the current time. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} to which the model is to be updated. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1propulsion_1_1ThrustMagnitudeWrapper_a6a515296199563f2fcece10923d6dcca}{tudat\+::propulsion\+::\+Thrust\+Magnitude\+Wrapper}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Propulsion/thrust\+Magnitude\+Wrapper.\+h\end{DoxyCompactItemize}

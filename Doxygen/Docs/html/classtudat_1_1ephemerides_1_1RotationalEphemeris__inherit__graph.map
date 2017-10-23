@@ -1,0 +1,4 @@
+<map id="tudat::ephemerides::RotationalEphemeris" name="tudat::ephemerides::RotationalEphemeris">
+<area shape="rect" id="node2" href="$classtudat_1_1ephemerides_1_1SimpleRotationalEphemeris.html" title="Class to model the rotation of bodies with constant rotation axis and rate. " alt="" coords="204,5,395,47"/>
+<area shape="rect" id="node3" href="$classtudat_1_1ephemerides_1_1SpiceRotationalEphemeris.html" title="Class to directly calculate rotational state of body from spice kernel(s) " alt="" coords="207,71,391,112"/>
+</map>

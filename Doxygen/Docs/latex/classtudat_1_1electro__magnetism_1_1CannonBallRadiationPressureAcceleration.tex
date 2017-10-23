@@ -1,0 +1,178 @@
+\hypertarget{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration}{}\section{tudat\+:\+:electro\+\_\+magnetism\+:\+:Cannon\+Ball\+Radiation\+Pressure\+Acceleration Class Reference}
+\label{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration}\index{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration}}
+
+
+Cannon-\/ball Radiation pressure acceleration model class.  
+
+
+
+
+{\ttfamily \#include $<$cannon\+Ball\+Radiation\+Pressure\+Acceleration.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:electro\+\_\+magnetism\+:\+:Cannon\+Ball\+Radiation\+Pressure\+Acceleration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:electro\+\_\+magnetism\+:\+:Cannon\+Ball\+Radiation\+Pressure\+Acceleration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW \hyperlink{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_aaa4f917aa4848b06f635c8dfc11d30ee}{Cannon\+Ball\+Radiation\+Pressure\+Acceleration} (Vector3d\+Returning\+Function source\+Position\+Function, Vector3d\+Returning\+Function accelerated\+Body\+Position\+Function, Double\+Returning\+Function radiation\+Pressure\+Function, Double\+Returning\+Function radiation\+Pressure\+Coefficient\+Function, Double\+Returning\+Function area\+Function, Double\+Returning\+Function mass\+Function)
+\begin{DoxyCompactList}\small\item\em Constructor taking function pointers for all variables. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_a69fb4b798d1a51cc5ff79a8d361257f8}{Cannon\+Ball\+Radiation\+Pressure\+Acceleration} (Vector3d\+Returning\+Function source\+Position\+Function, Vector3d\+Returning\+Function accelerated\+Body\+Position\+Function, Double\+Returning\+Function radiation\+Pressure\+Function, const double radiation\+Pressure\+Coefficient, const double area, const double mass)
+\begin{DoxyCompactList}\small\item\em Constructor taking functions pointers and constant values for parameters. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_a4fb5ecf9b9b5f3c1170df2a1f3a62043}{get\+Acceleration} ()
+\begin{DoxyCompactList}\small\item\em Get radiation pressure acceleration. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_a1e77eb0e4b9f9cfffc1d39e772845fff}{update\+Members} (const double current\+Time=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Update member variables used by the radiation pressure acceleration model. \end{DoxyCompactList}\item 
+boost\+::function$<$ double() $>$ \hyperlink{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_a69e8d936c01f8cffed1afa8e43227a5d}{get\+Mass\+Function} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the function pointer returning mass of accelerated body. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Cannon-\/ball Radiation pressure acceleration model class. 
+
+Class that can be used to compute the radiation pressure using a cannon-\/ball model, i.\+e., assuming force to be in opposite direction of the vector to the source. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration}!Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{Cannon\+Ball\+Radiation\+Pressure\+Acceleration}}
+\index{Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{Cannon\+Ball\+Radiation\+Pressure\+Acceleration}!tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration}}
+\subsubsection[{\texorpdfstring{Cannon\+Ball\+Radiation\+Pressure\+Acceleration(\+Vector3d\+Returning\+Function source\+Position\+Function, Vector3d\+Returning\+Function accelerated\+Body\+Position\+Function, Double\+Returning\+Function radiation\+Pressure\+Function, Double\+Returning\+Function radiation\+Pressure\+Coefficient\+Function, Double\+Returning\+Function area\+Function, Double\+Returning\+Function mass\+Function)}{CannonBallRadiationPressureAcceleration(Vector3dReturningFunction sourcePositionFunction, Vector3dReturningFunction acceleratedBodyPositionFunction, DoubleReturningFunction radiationPressureFunction, DoubleReturningFunction radiationPressureCoefficientFunction, DoubleReturningFunction areaFunction, DoubleReturningFunction massFunction)}}]{\setlength{\rightskip}{0pt plus 5cm}E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration (
+\begin{DoxyParamCaption}
+\item[{Vector3d\+Returning\+Function}]{source\+Position\+Function, }
+\item[{Vector3d\+Returning\+Function}]{accelerated\+Body\+Position\+Function, }
+\item[{Double\+Returning\+Function}]{radiation\+Pressure\+Function, }
+\item[{Double\+Returning\+Function}]{radiation\+Pressure\+Coefficient\+Function, }
+\item[{Double\+Returning\+Function}]{area\+Function, }
+\item[{Double\+Returning\+Function}]{mass\+Function}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_aaa4f917aa4848b06f635c8dfc11d30ee}{}\label{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_aaa4f917aa4848b06f635c8dfc11d30ee}
+
+
+Constructor taking function pointers for all variables. 
+
+Constructor taking function pointers for all variables. 
+\begin{DoxyParams}{Parameters}
+{\em source\+Position\+Function} & Function returning position of radiation source. \\
+\hline
+{\em accelerated\+Body\+Position\+Function} & Function returning position of body undergoing radiation pressure acceleration. \\
+\hline
+{\em radiation\+Pressure\+Function} & Function returning current radiation pressure. \\
+\hline
+{\em radiation\+Pressure\+Coefficient\+Function} & Function returning current radiation pressure coefficient. \\
+\hline
+{\em area\+Function} & Function returning current area assumed to undergo radiation pressure. \\
+\hline
+{\em mass\+Function} & Function returning current mass of body undergoing acceleration. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration}!Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{Cannon\+Ball\+Radiation\+Pressure\+Acceleration}}
+\index{Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{Cannon\+Ball\+Radiation\+Pressure\+Acceleration}!tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration}}
+\subsubsection[{\texorpdfstring{Cannon\+Ball\+Radiation\+Pressure\+Acceleration(\+Vector3d\+Returning\+Function source\+Position\+Function, Vector3d\+Returning\+Function accelerated\+Body\+Position\+Function, Double\+Returning\+Function radiation\+Pressure\+Function, const double radiation\+Pressure\+Coefficient, const double area, const double mass)}{CannonBallRadiationPressureAcceleration(Vector3dReturningFunction sourcePositionFunction, Vector3dReturningFunction acceleratedBodyPositionFunction, DoubleReturningFunction radiationPressureFunction, const double radiationPressureCoefficient, const double area, const double mass)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration (
+\begin{DoxyParamCaption}
+\item[{Vector3d\+Returning\+Function}]{source\+Position\+Function, }
+\item[{Vector3d\+Returning\+Function}]{accelerated\+Body\+Position\+Function, }
+\item[{Double\+Returning\+Function}]{radiation\+Pressure\+Function, }
+\item[{const double}]{radiation\+Pressure\+Coefficient, }
+\item[{const double}]{area, }
+\item[{const double}]{mass}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_a69fb4b798d1a51cc5ff79a8d361257f8}{}\label{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_a69fb4b798d1a51cc5ff79a8d361257f8}
+
+
+Constructor taking functions pointers and constant values for parameters. 
+
+Constructor taking function pointers for position vectors and radiation pressure and constant values for other parameters. 
+\begin{DoxyParams}{Parameters}
+{\em source\+Position\+Function} & Function returning position of radiation source. \\
+\hline
+{\em accelerated\+Body\+Position\+Function} & Function returning position of body undergoing radiation pressure acceleration. \\
+\hline
+{\em radiation\+Pressure\+Function} & Function returning current radiation pressure. \\
+\hline
+{\em radiation\+Pressure\+Coefficient} & Constant radiation pressure coefficient. \\
+\hline
+{\em area} & Constant area assumed to undergo radiation pressure. \\
+\hline
+{\em mass} & Constant mass of body undergoing acceleration. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration}!get\+Acceleration@{get\+Acceleration}}
+\index{get\+Acceleration@{get\+Acceleration}!tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration}}
+\subsubsection[{\texorpdfstring{get\+Acceleration()}{getAcceleration()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration\+::get\+Acceleration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_a4fb5ecf9b9b5f3c1170df2a1f3a62043}{}\label{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_a4fb5ecf9b9b5f3c1170df2a1f3a62043}
+
+
+Get radiation pressure acceleration. 
+
+Returns the radiation pressure acceleration. No arguments are passed to this function. Instead, all data required for computation is to be obtained from pointers to functions/ classes/structs, etc., which are to be set in a derived class and evaluated by the \hyperlink{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_a1e77eb0e4b9f9cfffc1d39e772845fff}{update\+Members()} function below. This function is essentially a wrapper for the free function that computes the radiation pressure acceleration. \begin{DoxyReturn}{Returns}
+Radiation pressure acceleration. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+compute\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration(). 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classtudat_1_1basic__astrodynamics_1_1AccelerationModel_a1f59960bc477fc02e7d52697ced99750}{tudat\+::basic\+\_\+astrodynamics\+::\+Acceleration\+Model$<$ Acceleration\+Data\+Type $>$}.
+
+\index{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration}!get\+Mass\+Function@{get\+Mass\+Function}}
+\index{get\+Mass\+Function@{get\+Mass\+Function}!tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration}}
+\subsubsection[{\texorpdfstring{get\+Mass\+Function()}{getMassFunction()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ double( ) $>$ tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration\+::get\+Mass\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_a69e8d936c01f8cffed1afa8e43227a5d}{}\label{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_a69e8d936c01f8cffed1afa8e43227a5d}
+
+
+Function to retrieve the function pointer returning mass of accelerated body. 
+
+Function to retrieve the function pointer returning mass of accelerated body. \begin{DoxyReturn}{Returns}
+Function pointer returning mass of accelerated body. 
+\end{DoxyReturn}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration}!update\+Members@{update\+Members}}
+\index{update\+Members@{update\+Members}!tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration@{tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration}}
+\subsubsection[{\texorpdfstring{update\+Members(const double current\+Time=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{updateMembers(const double currentTime=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::electro\+\_\+magnetism\+::\+Cannon\+Ball\+Radiation\+Pressure\+Acceleration\+::update\+Members (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Time = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_a1e77eb0e4b9f9cfffc1d39e772845fff}{}\label{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_a1e77eb0e4b9f9cfffc1d39e772845fff}
+
+
+Update member variables used by the radiation pressure acceleration model. 
+
+Updates member variables used by the acceleration model. This function evaluates all dependent variables to the \textquotesingle{}current\textquotesingle{} values of these parameters. Only these current values, not the function-\/pointers are then used by the \hyperlink{classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration_a4fb5ecf9b9b5f3c1170df2a1f3a62043}{get\+Acceleration( )} function. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Time} & \hyperlink{classtudat_1_1Time}{Time} at which acceleration model is to be updated. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1basic__astrodynamics_1_1AccelerationModel_a966e85b72300b8cbc99ba60e40108d71}{tudat\+::basic\+\_\+astrodynamics\+::\+Acceleration\+Model$<$ Acceleration\+Data\+Type $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Electro\+Magnetism/cannon\+Ball\+Radiation\+Pressure\+Acceleration.\+h\end{DoxyCompactItemize}

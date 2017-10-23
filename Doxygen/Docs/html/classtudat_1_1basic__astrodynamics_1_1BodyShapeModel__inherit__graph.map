@@ -1,0 +1,4 @@
+<map id="tudat::basic_astrodynamics::BodyShapeModel" name="tudat::basic_astrodynamics::BodyShapeModel">
+<area shape="rect" id="node2" href="$classtudat_1_1basic__astrodynamics_1_1OblateSpheroidBodyShapeModel.html" title="Body shape model for an oblate spheroid. " alt="" coords="236,5,457,47"/>
+<area shape="rect" id="node3" href="$classtudat_1_1basic__astrodynamics_1_1SphericalBodyShapeModel.html" title="Body shape model defined as a sphere. " alt="" coords="253,71,440,112"/>
+</map>

@@ -1,0 +1,89 @@
+\hypertarget{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSettings}{}\section{tudat\+:\+:estimatable\+\_\+parameters\+:\+:Estimatable\+Parameter\+Settings Class Reference}
+\label{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSettings}\index{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings}}
+
+
+Class for providing settings for parameters to estimate.  
+
+
+
+
+{\ttfamily \#include $<$estimatable\+Parameter\+Settings.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:estimatable\+\_\+parameters\+:\+:Estimatable\+Parameter\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSettings__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSettings_a9daf25d39f47b7253d0705460760c79c}{Estimatable\+Parameter\+Settings} (const std\+::string associated\+Body, const Estimateble\+Parameters\+Enum parameter\+Type, const std\+::string point\+On\+Body\+Id=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSettings_a337ccc9c7a09be382677b818d3042082}{$\sim$\+Estimatable\+Parameter\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Estimateble\+Parameter\+Identifier \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSettings_a5879aeacc6f924dd33459251044bdc6e}{parameter\+Type\+\_\+}
+\begin{DoxyCompactList}\small\item\em Identifier for parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for providing settings for parameters to estimate. 
+
+Class for providing settings for parameters to estimate. This class is a functional base class for parameters that require no information in addition to their type. This class can be used for the easy setup of parameter objects (see \hyperlink{createEstimatableParameters_8h_source}{create\+Estimatable\+Parameters.\+h}), but users may also chose to do so manually. (Derived) Class members are all public, for ease of access and modification. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings}!Estimatable\+Parameter\+Settings@{Estimatable\+Parameter\+Settings}}
+\index{Estimatable\+Parameter\+Settings@{Estimatable\+Parameter\+Settings}!tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings}}
+\subsubsection[{\texorpdfstring{Estimatable\+Parameter\+Settings(const std\+::string associated\+Body, const Estimateble\+Parameters\+Enum parameter\+Type, const std\+::string point\+On\+Body\+Id="""")}{EstimatableParameterSettings(const std::string associatedBody, const EstimatebleParametersEnum parameterType, const std::string pointOnBodyId="")}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings\+::\+Estimatable\+Parameter\+Settings (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{associated\+Body, }
+\item[{const Estimateble\+Parameters\+Enum}]{parameter\+Type, }
+\item[{const std\+::string}]{point\+On\+Body\+Id = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSettings_a9daf25d39f47b7253d0705460760c79c}{}\label{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSettings_a9daf25d39f47b7253d0705460760c79c}
+
+
+Constructor. 
+
+Constructor, takes parameter type and body of which it is a property. 
+\begin{DoxyParams}{Parameters}
+{\em associated\+Body} & Body of which parameter is a property. \\
+\hline
+{\em parameter\+Type} & Type of parameter. \\
+\hline
+{\em point\+On\+Body\+Id} & Reference point on body associated with parameter (empty by default). \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings}!````~Estimatable\+Parameter\+Settings@{$\sim$\+Estimatable\+Parameter\+Settings}}
+\index{````~Estimatable\+Parameter\+Settings@{$\sim$\+Estimatable\+Parameter\+Settings}!tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings}}
+\subsubsection[{\texorpdfstring{$\sim$\+Estimatable\+Parameter\+Settings()}{~EstimatableParameterSettings()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings\+::$\sim$\+Estimatable\+Parameter\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSettings_a337ccc9c7a09be382677b818d3042082}{}\label{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSettings_a337ccc9c7a09be382677b818d3042082}
+
+
+Virtual destructor. 
+
+Virtual destructor 
+
+\subsection{Member Data Documentation}
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings}!parameter\+Type\+\_\+@{parameter\+Type\+\_\+}}
+\index{parameter\+Type\+\_\+@{parameter\+Type\+\_\+}!tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings@{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings}}
+\subsubsection[{\texorpdfstring{parameter\+Type\+\_\+}{parameterType_}}]{\setlength{\rightskip}{0pt plus 5cm}Estimateble\+Parameter\+Identifier tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Settings\+::parameter\+Type\+\_\+}\hypertarget{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSettings_a5879aeacc6f924dd33459251044bdc6e}{}\label{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSettings_a5879aeacc6f924dd33459251044bdc6e}
+
+
+Identifier for parameter. 
+
+Identifier for parameter, contains type of parameter and body of which parameter is a property. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Estimation\+Setup/estimatable\+Parameter\+Settings.\+h\end{DoxyCompactItemize}

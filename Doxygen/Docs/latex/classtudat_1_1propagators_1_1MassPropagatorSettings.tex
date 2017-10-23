@@ -1,0 +1,126 @@
+\hypertarget{classtudat_1_1propagators_1_1MassPropagatorSettings}{}\section{tudat\+:\+:propagators\+:\+:Mass\+Propagator\+Settings$<$ State\+Scalar\+Type $>$ Class Template Reference}
+\label{classtudat_1_1propagators_1_1MassPropagatorSettings}\index{tudat\+::propagators\+::\+Mass\+Propagator\+Settings$<$ State\+Scalar\+Type $>$@{tudat\+::propagators\+::\+Mass\+Propagator\+Settings$<$ State\+Scalar\+Type $>$}}
+
+
+Class for defining settings for propagating the mass of a body.  
+
+
+
+
+{\ttfamily \#include $<$propagation\+Settings.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:propagators\+:\+:Mass\+Propagator\+Settings$<$ State\+Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classtudat_1_1propagators_1_1MassPropagatorSettings__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:propagators\+:\+:Mass\+Propagator\+Settings$<$ State\+Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classtudat_1_1propagators_1_1MassPropagatorSettings__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1propagators_1_1MassPropagatorSettings_a333acfa4187f05d3afd95643c5507381}{Mass\+Propagator\+Settings} (const std\+::vector$<$ std\+::string $>$ bodies\+With\+Mass\+To\+Propagate, const std\+::map$<$ std\+::string, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__astrodynamics_1_1MassRateModel}{basic\+\_\+astrodynamics\+::\+Mass\+Rate\+Model} $>$ $>$ mass\+Rate\+Models, const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&initial\+Body\+Masses, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1PropagationTerminationSettings}{Propagation\+Termination\+Settings} $>$ termination\+Settings, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$ dependent\+Variables\+To\+Save=boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$(), const double print\+Interval=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Constructor of mass state propagator settings, with single mass rate model per body. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1propagators_1_1MassPropagatorSettings_a3befd07b3c8b0534d3126156b243d6ac}{Mass\+Propagator\+Settings} (const std\+::vector$<$ std\+::string $>$ bodies\+With\+Mass\+To\+Propagate, const std\+::map$<$ std\+::string, std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__astrodynamics_1_1MassRateModel}{basic\+\_\+astrodynamics\+::\+Mass\+Rate\+Model} $>$ $>$ $>$ mass\+Rate\+Models, const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&initial\+Body\+Masses, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1PropagationTerminationSettings}{Propagation\+Termination\+Settings} $>$ termination\+Settings, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$ dependent\+Variables\+To\+Save=boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$(), const double print\+Interval=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Constructor of mass state propagator settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classtudat_1_1propagators_1_1MassPropagatorSettings_a0aa96b2683fb7c9486f351e4b0416018}{bodies\+With\+Mass\+To\+Propagate\+\_\+}\hypertarget{classtudat_1_1propagators_1_1MassPropagatorSettings_a0aa96b2683fb7c9486f351e4b0416018}{}\label{classtudat_1_1propagators_1_1MassPropagatorSettings_a0aa96b2683fb7c9486f351e4b0416018}
+
+\begin{DoxyCompactList}\small\item\em List of bodies for which the mass is to be propagated. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__astrodynamics_1_1MassRateModel}{basic\+\_\+astrodynamics\+::\+Mass\+Rate\+Model} $>$ $>$ $>$ \hyperlink{classtudat_1_1propagators_1_1MassPropagatorSettings_a349afec568bc06d827f2400c77e4b5ab}{mass\+Rate\+Models\+\_\+}\hypertarget{classtudat_1_1propagators_1_1MassPropagatorSettings_a349afec568bc06d827f2400c77e4b5ab}{}\label{classtudat_1_1propagators_1_1MassPropagatorSettings_a349afec568bc06d827f2400c77e4b5ab}
+
+\begin{DoxyCompactList}\small\item\em List of mass rate models per propagated body. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename State\+Scalar\+Type$>$\\*
+class tudat\+::propagators\+::\+Mass\+Propagator\+Settings$<$ State\+Scalar\+Type $>$}
+
+Class for defining settings for propagating the mass of a body. 
+
+Class for defining settings for propagating the mass of a body. The body masses are propagated in their natural form (i.\+e. no choice of equations of motion as is the case for translational dynamics)l 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::propagators\+::\+Mass\+Propagator\+Settings@{tudat\+::propagators\+::\+Mass\+Propagator\+Settings}!Mass\+Propagator\+Settings@{Mass\+Propagator\+Settings}}
+\index{Mass\+Propagator\+Settings@{Mass\+Propagator\+Settings}!tudat\+::propagators\+::\+Mass\+Propagator\+Settings@{tudat\+::propagators\+::\+Mass\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{Mass\+Propagator\+Settings(const std\+::vector$<$ std\+::string $>$ bodies\+With\+Mass\+To\+Propagate, const std\+::map$<$ std\+::string, boost\+::shared\+\_\+ptr$<$ basic\+\_\+astrodynamics\+::\+Mass\+Rate\+Model $>$ $>$ mass\+Rate\+Models, const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&initial\+Body\+Masses, const boost\+::shared\+\_\+ptr$<$ Propagation\+Termination\+Settings $>$ termination\+Settings, const boost\+::shared\+\_\+ptr$<$ Dependent\+Variable\+Save\+Settings $>$ dependent\+Variables\+To\+Save=boost\+::shared\+\_\+ptr$<$ Dependent\+Variable\+Save\+Settings $>$(), const double print\+Interval=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{MassPropagatorSettings(const std::vector< std::string > bodiesWithMassToPropagate, const std::map< std::string, boost::shared_ptr< basic_astrodynamics::MassRateModel > > massRateModels, const Eigen::Matrix< StateScalarType, Eigen::Dynamic, 1 > &initialBodyMasses, const boost::shared_ptr< PropagationTerminationSettings > terminationSettings, const boost::shared_ptr< DependentVariableSaveSettings > dependentVariablesToSave=boost::shared_ptr< DependentVariableSaveSettings >(), const double printInterval=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type $>$ {\bf tudat\+::propagators\+::\+Mass\+Propagator\+Settings}$<$ State\+Scalar\+Type $>$\+::{\bf Mass\+Propagator\+Settings} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$}]{bodies\+With\+Mass\+To\+Propagate, }
+\item[{const std\+::map$<$ std\+::string, boost\+::shared\+\_\+ptr$<$ {\bf basic\+\_\+astrodynamics\+::\+Mass\+Rate\+Model} $>$ $>$}]{mass\+Rate\+Models, }
+\item[{const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&}]{initial\+Body\+Masses, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Propagation\+Termination\+Settings} $>$}]{termination\+Settings, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Dependent\+Variable\+Save\+Settings} $>$}]{dependent\+Variables\+To\+Save = {\ttfamily boost\+:\+:shared\+\_\+ptr$<$~{\bf Dependent\+Variable\+Save\+Settings}~$>$(~)}, }
+\item[{const double}]{print\+Interval = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1MassPropagatorSettings_a333acfa4187f05d3afd95643c5507381}{}\label{classtudat_1_1propagators_1_1MassPropagatorSettings_a333acfa4187f05d3afd95643c5507381}
+
+
+Constructor of mass state propagator settings, with single mass rate model per body. 
+
+Constructor of mass state propagator settings, with single mass rate model per body. 
+\begin{DoxyParams}{Parameters}
+{\em bodies\+With\+Mass\+To\+Propagate} & List of bodies for which the mass is to be propagated. \\
+\hline
+{\em mass\+Rate\+Models} & List of mass rate models per propagated body. \\
+\hline
+{\em initial\+Body\+Masses} & Initial masses used as input for numerical integration. \\
+\hline
+{\em termination\+Settings} & Settings for creating the object that checks whether the propagation is finished. \\
+\hline
+{\em dependent\+Variables\+To\+Save} & Settings for the dependent variables that are to be saved during propagation (default none). \\
+\hline
+{\em print\+Interval} & Variable indicating how often (once per print\+Interval\+\_\+ seconds or propagation independenty variable) the current state and time are to be printed to console (default never). \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::propagators\+::\+Mass\+Propagator\+Settings@{tudat\+::propagators\+::\+Mass\+Propagator\+Settings}!Mass\+Propagator\+Settings@{Mass\+Propagator\+Settings}}
+\index{Mass\+Propagator\+Settings@{Mass\+Propagator\+Settings}!tudat\+::propagators\+::\+Mass\+Propagator\+Settings@{tudat\+::propagators\+::\+Mass\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{Mass\+Propagator\+Settings(const std\+::vector$<$ std\+::string $>$ bodies\+With\+Mass\+To\+Propagate, const std\+::map$<$ std\+::string, std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ basic\+\_\+astrodynamics\+::\+Mass\+Rate\+Model $>$ $>$ $>$ mass\+Rate\+Models, const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&initial\+Body\+Masses, const boost\+::shared\+\_\+ptr$<$ Propagation\+Termination\+Settings $>$ termination\+Settings, const boost\+::shared\+\_\+ptr$<$ Dependent\+Variable\+Save\+Settings $>$ dependent\+Variables\+To\+Save=boost\+::shared\+\_\+ptr$<$ Dependent\+Variable\+Save\+Settings $>$(), const double print\+Interval=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{MassPropagatorSettings(const std::vector< std::string > bodiesWithMassToPropagate, const std::map< std::string, std::vector< boost::shared_ptr< basic_astrodynamics::MassRateModel > > > massRateModels, const Eigen::Matrix< StateScalarType, Eigen::Dynamic, 1 > &initialBodyMasses, const boost::shared_ptr< PropagationTerminationSettings > terminationSettings, const boost::shared_ptr< DependentVariableSaveSettings > dependentVariablesToSave=boost::shared_ptr< DependentVariableSaveSettings >(), const double printInterval=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type $>$ {\bf tudat\+::propagators\+::\+Mass\+Propagator\+Settings}$<$ State\+Scalar\+Type $>$\+::{\bf Mass\+Propagator\+Settings} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$}]{bodies\+With\+Mass\+To\+Propagate, }
+\item[{const std\+::map$<$ std\+::string, std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ {\bf basic\+\_\+astrodynamics\+::\+Mass\+Rate\+Model} $>$ $>$ $>$}]{mass\+Rate\+Models, }
+\item[{const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&}]{initial\+Body\+Masses, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Propagation\+Termination\+Settings} $>$}]{termination\+Settings, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Dependent\+Variable\+Save\+Settings} $>$}]{dependent\+Variables\+To\+Save = {\ttfamily boost\+:\+:shared\+\_\+ptr$<$~{\bf Dependent\+Variable\+Save\+Settings}~$>$(~)}, }
+\item[{const double}]{print\+Interval = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1MassPropagatorSettings_a3befd07b3c8b0534d3126156b243d6ac}{}\label{classtudat_1_1propagators_1_1MassPropagatorSettings_a3befd07b3c8b0534d3126156b243d6ac}
+
+
+Constructor of mass state propagator settings. 
+
+Constructor of mass state propagator settings 
+\begin{DoxyParams}{Parameters}
+{\em bodies\+With\+Mass\+To\+Propagate} & List of bodies for which the mass is to be propagated. \\
+\hline
+{\em mass\+Rate\+Models} & List of mass rate models per propagated body. \\
+\hline
+{\em initial\+Body\+Masses} & Initial masses used as input for numerical integration. \\
+\hline
+{\em termination\+Settings} & Settings for creating the object that checks whether the propagation is finished. \\
+\hline
+{\em dependent\+Variables\+To\+Save} & Settings for the dependent variables that are to be saved during propagation (default none). \\
+\hline
+{\em print\+Interval} & Variable indicating how often (once per print\+Interval\+\_\+ seconds or propagation independenty variable) the current state and time are to be printed to console (default never). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/propagation\+Settings.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,89 @@
+\hypertarget{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation}{}\section{tudat\+:\+:observation\+\_\+partials\+:\+:Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation Class Reference}
+\label{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation}\index{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation@{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation}}
+
+
+{\ttfamily \#include $<$rotation\+Matrix\+Partial.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:observation\+\_\+partials\+:\+:Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:observation\+\_\+partials\+:\+:Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation_a8a918033661803cc1562f1473829afa7}{Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1ephemerides_1_1SimpleRotationalEphemeris}{ephemerides\+::\+Simple\+Rotational\+Ephemeris} $>$ body\+Rotation\+Model)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation_a7dd9bedf18040b689fc2deb444497701}{$\sim$\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation} ()\hypertarget{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation_a7dd9bedf18040b689fc2deb444497701}{}\label{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation_a7dd9bedf18040b689fc2deb444497701}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Matrix3d $>$ \hyperlink{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation_a71d9dc1d5b75f3ca59621a680d494d54}{calculate\+Partial\+Of\+Rotation\+Matrix\+To\+Base\+Frame\+Wr\+Parameter} (const double time)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to calculate a rotation matrix from a body-\/fixed to inertial frame w.\+r.\+t. a constant pole right ascension and declination
+
+Class to calculate a rotation matrix from a body-\/fixed to inertial frame, as computed by the Simple\+Rotational\+Ephemeris class, w.\+r.\+t. the constant pole right ascension and declination 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation@{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation}!Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation@{Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation}}
+\index{Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation@{Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation}!tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation@{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation}}
+\subsubsection[{\texorpdfstring{Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation(const boost\+::shared\+\_\+ptr$<$ ephemerides\+::\+Simple\+Rotational\+Ephemeris $>$ body\+Rotation\+Model)}{RotationMatrixPartialWrtPoleOrientation(const boost::shared_ptr< ephemerides::SimpleRotationalEphemeris > bodyRotationModel)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation\+::\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf ephemerides\+::\+Simple\+Rotational\+Ephemeris} $>$}]{body\+Rotation\+Model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation_a8a918033661803cc1562f1473829afa7}{}\label{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation_a8a918033661803cc1562f1473829afa7}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em body\+Rotation\+Model} & Rotation model for which the partial derivative w.\+r.\+t. the pole position is to be taken. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation@{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation}!calculate\+Partial\+Of\+Rotation\+Matrix\+To\+Base\+Frame\+Wr\+Parameter@{calculate\+Partial\+Of\+Rotation\+Matrix\+To\+Base\+Frame\+Wr\+Parameter}}
+\index{calculate\+Partial\+Of\+Rotation\+Matrix\+To\+Base\+Frame\+Wr\+Parameter@{calculate\+Partial\+Of\+Rotation\+Matrix\+To\+Base\+Frame\+Wr\+Parameter}!tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation@{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation}}
+\subsubsection[{\texorpdfstring{calculate\+Partial\+Of\+Rotation\+Matrix\+To\+Base\+Frame\+Wr\+Parameter(const double time)}{calculatePartialOfRotationMatrixToBaseFrameWrParameter(const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ Eigen\+::\+Matrix3d $>$ tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation\+::calculate\+Partial\+Of\+Rotation\+Matrix\+To\+Base\+Frame\+Wr\+Parameter (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation_a71d9dc1d5b75f3ca59621a680d494d54}{}\label{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation_a71d9dc1d5b75f3ca59621a680d494d54}
+Function to calculate partial of rotation matrix from the body-\/fixed to the inertial frame wrt pole right ascension and declination.
+
+Function to calculate partial of rotation matrix from the body-\/fixed to the inertial frame wrt pole right ascension and declination, using the properties of the body\+Rotation\+Model\+\_\+ member. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which the partial is to be evaluated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of size 2 containing partials of rotation matrix from body-\/fixed to inertial frame right ascension (entry 0) and declination (entry 1) of pole. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1observation__partials_1_1RotationMatrixPartial_a758db711ec18f3efbaa759488e45daf1}{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Orbit\+Determination/\+Observation\+Partials/rotation\+Matrix\+Partial.\+h\end{DoxyCompactItemize}

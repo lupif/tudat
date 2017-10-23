@@ -1,0 +1,74 @@
+\hypertarget{structtudat_1_1optimization_1_1OptimizationSettings}{}\section{tudat\+:\+:optimization\+:\+:Optimization\+Settings Struct Reference}
+\label{structtudat_1_1optimization_1_1OptimizationSettings}\index{tudat\+::optimization\+::\+Optimization\+Settings@{tudat\+::optimization\+::\+Optimization\+Settings}}
+
+
+Class to define the optimization type, the population size and others.  
+
+
+
+
+{\ttfamily \#include $<$mission\+Linker.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtudat_1_1optimization_1_1OptimizationSettings_a4e66da6c1c4ba28dd02d7e3e1d7802b1}{Optimization\+Settings} (Optimization\+Types optimization\+Type=global\+\_\+optimization, const int population\+Size=32, const bool stop\+At\+Max\+Number\+Of\+Evolutions=true, const int verbosity=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Optimization\+Types \hyperlink{structtudat_1_1optimization_1_1OptimizationSettings_a68d89e94f78741e391af984fc157ade9}{optimization\+Type\+\_\+}\hypertarget{structtudat_1_1optimization_1_1OptimizationSettings_a68d89e94f78741e391af984fc157ade9}{}\label{structtudat_1_1optimization_1_1OptimizationSettings_a68d89e94f78741e391af984fc157ade9}
+
+\begin{DoxyCompactList}\small\item\em Storage variable containing the optimization type. \end{DoxyCompactList}\item 
+int \hyperlink{structtudat_1_1optimization_1_1OptimizationSettings_a83e9993ce6e1a43f2ec887c1f57d081f}{population\+Size\+\_\+}\hypertarget{structtudat_1_1optimization_1_1OptimizationSettings_a83e9993ce6e1a43f2ec887c1f57d081f}{}\label{structtudat_1_1optimization_1_1OptimizationSettings_a83e9993ce6e1a43f2ec887c1f57d081f}
+
+\begin{DoxyCompactList}\small\item\em Storage variable containing the population size. \end{DoxyCompactList}\item 
+bool \hyperlink{structtudat_1_1optimization_1_1OptimizationSettings_a84e30eafb2caf9bfbb1a910ece971b5a}{stop\+At\+Max\+Number\+Of\+Evolutions\+\_\+}
+\item 
+int \hyperlink{structtudat_1_1optimization_1_1OptimizationSettings_aab965914d38b47a749d5fa6c7aaf9ee3}{verbosity\+\_\+}\hypertarget{structtudat_1_1optimization_1_1OptimizationSettings_aab965914d38b47a749d5fa6c7aaf9ee3}{}\label{structtudat_1_1optimization_1_1OptimizationSettings_aab965914d38b47a749d5fa6c7aaf9ee3}
+
+\begin{DoxyCompactList}\small\item\em Storage variable containing the verbosity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to define the optimization type, the population size and others. 
+
+class to define the optimization type, the population size, whether the optimization should end at the maximum number of evolutions defined in the objective function and the verbosity 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::optimization\+::\+Optimization\+Settings@{tudat\+::optimization\+::\+Optimization\+Settings}!Optimization\+Settings@{Optimization\+Settings}}
+\index{Optimization\+Settings@{Optimization\+Settings}!tudat\+::optimization\+::\+Optimization\+Settings@{tudat\+::optimization\+::\+Optimization\+Settings}}
+\subsubsection[{\texorpdfstring{Optimization\+Settings(\+Optimization\+Types optimization\+Type=global\+\_\+optimization, const int population\+Size=32, const bool stop\+At\+Max\+Number\+Of\+Evolutions=true, const int verbosity=0)}{OptimizationSettings(OptimizationTypes optimizationType=global_optimization, const int populationSize=32, const bool stopAtMaxNumberOfEvolutions=true, const int verbosity=0)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::optimization\+::\+Optimization\+Settings\+::\+Optimization\+Settings (
+\begin{DoxyParamCaption}
+\item[{Optimization\+Types}]{optimization\+Type = {\ttfamily global\+\_\+optimization}, }
+\item[{const int}]{population\+Size = {\ttfamily 32}, }
+\item[{const bool}]{stop\+At\+Max\+Number\+Of\+Evolutions = {\ttfamily true}, }
+\item[{const int}]{verbosity = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structtudat_1_1optimization_1_1OptimizationSettings_a4e66da6c1c4ba28dd02d7e3e1d7802b1}{}\label{structtudat_1_1optimization_1_1OptimizationSettings_a4e66da6c1c4ba28dd02d7e3e1d7802b1}
+
+
+Constructor. 
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em optimization\+Type} & If global\+\_\+optimization the optimization process will use the alghorithm de1220, if local\+\_\+optimization the compass\+\_\+search will be used instead \\
+\hline
+{\em population\+Size} & Number of individuals in the optimization population \\
+\hline
+{\em stop\+At\+Max\+Number\+Of\+Evolutions} & Decide whether the optimization should stop at the maximum number of evolutions defined in the objective function \\
+\hline
+{\em verbosity} & Set to 0 to not receive any message during optimization. n$>$0 to receive messages every n evolutions \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::optimization\+::\+Optimization\+Settings@{tudat\+::optimization\+::\+Optimization\+Settings}!stop\+At\+Max\+Number\+Of\+Evolutions\+\_\+@{stop\+At\+Max\+Number\+Of\+Evolutions\+\_\+}}
+\index{stop\+At\+Max\+Number\+Of\+Evolutions\+\_\+@{stop\+At\+Max\+Number\+Of\+Evolutions\+\_\+}!tudat\+::optimization\+::\+Optimization\+Settings@{tudat\+::optimization\+::\+Optimization\+Settings}}
+\subsubsection[{\texorpdfstring{stop\+At\+Max\+Number\+Of\+Evolutions\+\_\+}{stopAtMaxNumberOfEvolutions_}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::optimization\+::\+Optimization\+Settings\+::stop\+At\+Max\+Number\+Of\+Evolutions\+\_\+}\hypertarget{structtudat_1_1optimization_1_1OptimizationSettings_a84e30eafb2caf9bfbb1a910ece971b5a}{}\label{structtudat_1_1optimization_1_1OptimizationSettings_a84e30eafb2caf9bfbb1a910ece971b5a}
+Variable defining whether whether the optimization should stop at the maximum number of evolutions defined in the objective function 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Optimization/mission\+Linker.\+h\end{DoxyCompactItemize}

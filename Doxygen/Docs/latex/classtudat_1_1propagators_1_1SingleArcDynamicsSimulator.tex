@@ -1,0 +1,205 @@
+\hypertarget{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator}{}\section{tudat\+:\+:propagators\+:\+:Single\+Arc\+Dynamics\+Simulator$<$ State\+Scalar\+Type, Time\+Type $>$ Class Template Reference}
+\label{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator}\index{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator$<$ State\+Scalar\+Type, Time\+Type $>$@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator$<$ State\+Scalar\+Type, Time\+Type $>$}}
+
+
+Class for performing full numerical integration of a dynamical system in a single arc.  
+
+
+
+
+{\ttfamily \#include $<$dynamics\+Simulator.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:propagators\+:\+:Single\+Arc\+Dynamics\+Simulator$<$ State\+Scalar\+Type, Time\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:propagators\+:\+:Single\+Arc\+Dynamics\+Simulator$<$ State\+Scalar\+Type, Time\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_afca86d14b1e878a7294e7f8f64acdef6}{Single\+Arc\+Dynamics\+Simulator} (const simulation\+\_\+setup\+::\+Named\+Body\+Map \&body\+Map, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1numerical__integrators_1_1IntegratorSettings}{numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ Time\+Type $>$ $>$ integrator\+Settings, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings}{Propagator\+Settings}$<$ State\+Scalar\+Type $>$ $>$ propagator\+Settings, const bool are\+Equations\+Of\+Motion\+To\+Be\+Integrated=true, const bool clear\+Numerical\+Solutions=false, const bool set\+Integrated\+Result=false)
+\begin{DoxyCompactList}\small\item\em Constructor of simulator. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a74d74a7db5ab73da055c09246c55489b}{$\sim$\+Single\+Arc\+Dynamics\+Simulator} ()\hypertarget{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a74d74a7db5ab73da055c09246c55489b}{}\label{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a74d74a7db5ab73da055c09246c55489b}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_ab08dedc11f3ca6263b29befcde9e69dc}{integrate\+Equations\+Of\+Motion} (const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \&initial\+States)
+\begin{DoxyCompactList}\small\item\em This function numerically (re-\/)integrates the equations of motion. \end{DoxyCompactList}\item 
+std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \hyperlink{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a3bee0fe8d187e44d26d98d36d72bf25a}{get\+Equations\+Of\+Motion\+Numerical\+Solution} ()
+\begin{DoxyCompactList}\small\item\em Function to return the map of state history of numerically integrated bodies. \end{DoxyCompactList}\item 
+std\+::map$<$ Time\+Type, Eigen\+::\+Vector\+Xd $>$ \hyperlink{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a45c0f42aa728852cb57a916d792b2e44}{get\+Dependent\+Variable\+History} ()
+\begin{DoxyCompactList}\small\item\em Function to return the map of dependent variable history that was saved during numerical propagation. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_ac4ecdeebe82d8b3e80617c982c7872ad}{manually\+Set\+And\+Process\+Raw\+Numerical\+Equations\+Of\+Motion\+Solution} (const std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \&equations\+Of\+Motion\+Numerical\+Solution)
+\begin{DoxyCompactList}\small\item\em Function to reset the environment from an externally generated state history. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a351d3d697039d983a7b6b24b85122f32}{process\+Numerical\+Equations\+Of\+Motion\+Solution} ()
+\begin{DoxyCompactList}\small\item\em This function updates the environment with the numerical solution of the propagation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \hyperlink{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a8c3990a00766f47593394f56cc06eede}{equations\+Of\+Motion\+Numerical\+Solution\+\_\+}
+\begin{DoxyCompactList}\small\item\em Map of state history of numerically integrated bodies. \end{DoxyCompactList}\item 
+std\+::map$<$ Time\+Type, Eigen\+::\+Vector\+Xd $>$ \hyperlink{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_ad75ba09d254466d72e1d19c83558e148}{dependent\+Variable\+History\+\_\+}\hypertarget{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_ad75ba09d254466d72e1d19c83558e148}{}\label{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_ad75ba09d254466d72e1d19c83558e148}
+
+\begin{DoxyCompactList}\small\item\em Map of dependent variable history that was saved during numerical propagation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename State\+Scalar\+Type = double, typename Time\+Type = double$>$\\*
+class tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator$<$ State\+Scalar\+Type, Time\+Type $>$}
+
+Class for performing full numerical integration of a dynamical system in a single arc. 
+
+Class for performing full numerical integration of a dynamical system in a single arc, i.\+e. the equations of motion have a single initial time, and are propagated once for the full prescribed time interval. This is in contrast to multi-\/arc dynamics, where the time interval si cut into pieces. In this class, the governing equations are set once, but can be re-\/integrated for different initial conditions using the same instance of the class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}!Single\+Arc\+Dynamics\+Simulator@{Single\+Arc\+Dynamics\+Simulator}}
+\index{Single\+Arc\+Dynamics\+Simulator@{Single\+Arc\+Dynamics\+Simulator}!tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}}
+\subsubsection[{\texorpdfstring{Single\+Arc\+Dynamics\+Simulator(const simulation\+\_\+setup\+::\+Named\+Body\+Map \&body\+Map, const boost\+::shared\+\_\+ptr$<$ numerical\+\_\+integrators\+::\+Integrator\+Settings$<$ Time\+Type $>$ $>$ integrator\+Settings, const boost\+::shared\+\_\+ptr$<$ Propagator\+Settings$<$ State\+Scalar\+Type $>$ $>$ propagator\+Settings, const bool are\+Equations\+Of\+Motion\+To\+Be\+Integrated=true, const bool clear\+Numerical\+Solutions=false, const bool set\+Integrated\+Result=false)}{SingleArcDynamicsSimulator(const simulation_setup::NamedBodyMap &bodyMap, const boost::shared_ptr< numerical_integrators::IntegratorSettings< TimeType > > integratorSettings, const boost::shared_ptr< PropagatorSettings< StateScalarType > > propagatorSettings, const bool areEquationsOfMotionToBeIntegrated=true, const bool clearNumericalSolutions=false, const bool setIntegratedResult=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ {\bf tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}$<$ State\+Scalar\+Type, Time\+Type $>$\+::{\bf Single\+Arc\+Dynamics\+Simulator} (
+\begin{DoxyParamCaption}
+\item[{const simulation\+\_\+setup\+::\+Named\+Body\+Map \&}]{body\+Map, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ Time\+Type $>$ $>$}]{integrator\+Settings, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Propagator\+Settings}$<$ State\+Scalar\+Type $>$ $>$}]{propagator\+Settings, }
+\item[{const bool}]{are\+Equations\+Of\+Motion\+To\+Be\+Integrated = {\ttfamily true}, }
+\item[{const bool}]{clear\+Numerical\+Solutions = {\ttfamily false}, }
+\item[{const bool}]{set\+Integrated\+Result = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_afca86d14b1e878a7294e7f8f64acdef6}{}\label{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_afca86d14b1e878a7294e7f8f64acdef6}
+
+
+Constructor of simulator. 
+
+Constructor of simulator, constructs integrator and object for calculating each time step of integration. 
+\begin{DoxyParams}{Parameters}
+{\em body\+Map} & Map of bodies (with names) of all bodies in integration. \\
+\hline
+{\em integrator\+Settings} & Settings for numerical integrator. \\
+\hline
+{\em propagator\+Settings} & Settings for propagator. \\
+\hline
+{\em are\+Equations\+Of\+Motion\+To\+Be\+Integrated} & Boolean to denote whether equations of motion should be integrated immediately at the end of the contructor or not (default true). \\
+\hline
+{\em clear\+Numerical\+Solutions} & Boolean to determine whether to clear the raw numerical solution member variables after propagation and resetting ephemerides (default true). \\
+\hline
+{\em set\+Integrated\+Result} & Boolean to determine whether to automatically use the integrated results to set ephemerides (default true). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}!get\+Dependent\+Variable\+History@{get\+Dependent\+Variable\+History}}
+\index{get\+Dependent\+Variable\+History@{get\+Dependent\+Variable\+History}!tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}}
+\subsubsection[{\texorpdfstring{get\+Dependent\+Variable\+History()}{getDependentVariableHistory()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ std\+::map$<$ Time\+Type, Eigen\+::\+Vector\+Xd $>$ {\bf tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}$<$ State\+Scalar\+Type, Time\+Type $>$\+::get\+Dependent\+Variable\+History (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a45c0f42aa728852cb57a916d792b2e44}{}\label{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a45c0f42aa728852cb57a916d792b2e44}
+
+
+Function to return the map of dependent variable history that was saved during numerical propagation. 
+
+Function to return the map of dependent variable history that was saved during numerical propagation. \begin{DoxyReturn}{Returns}
+Map of dependent variable history that was saved during numerical propagation. 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}!get\+Equations\+Of\+Motion\+Numerical\+Solution@{get\+Equations\+Of\+Motion\+Numerical\+Solution}}
+\index{get\+Equations\+Of\+Motion\+Numerical\+Solution@{get\+Equations\+Of\+Motion\+Numerical\+Solution}!tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}}
+\subsubsection[{\texorpdfstring{get\+Equations\+Of\+Motion\+Numerical\+Solution()}{getEquationsOfMotionNumericalSolution()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ {\bf tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}$<$ State\+Scalar\+Type, Time\+Type $>$\+::get\+Equations\+Of\+Motion\+Numerical\+Solution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a3bee0fe8d187e44d26d98d36d72bf25a}{}\label{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a3bee0fe8d187e44d26d98d36d72bf25a}
+
+
+Function to return the map of state history of numerically integrated bodies. 
+
+Function to return the map of state history of numerically integrated bodies. \begin{DoxyReturn}{Returns}
+Map of state history of numerically integrated bodies. 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}!integrate\+Equations\+Of\+Motion@{integrate\+Equations\+Of\+Motion}}
+\index{integrate\+Equations\+Of\+Motion@{integrate\+Equations\+Of\+Motion}!tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}}
+\subsubsection[{\texorpdfstring{integrate\+Equations\+Of\+Motion(const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \&initial\+States)}{integrateEquationsOfMotion(const Eigen::Matrix< StateScalarType, Eigen::Dynamic, Eigen::Dynamic > &initialStates)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ void {\bf tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}$<$ State\+Scalar\+Type, Time\+Type $>$\+::integrate\+Equations\+Of\+Motion (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \&}]{initial\+States}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_ab08dedc11f3ca6263b29befcde9e69dc}{}\label{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_ab08dedc11f3ca6263b29befcde9e69dc}
+
+
+This function numerically (re-\/)integrates the equations of motion. 
+
+This function numerically (re-\/)integrates the equations of motion, using the settings set through the constructor and a new initial state vector provided here. The raw results are set in the equations\+Of\+Motion\+Numerical\+Solution\+\_\+ 
+\begin{DoxyParams}{Parameters}
+{\em initial\+States} & Initial state vector that is to be used for numerical integration. Note that this state should be in the correct frame (i.\+e. corresponding to central\+Bodies in propagator\+Settings\+\_\+), but not in the propagator-\/ specific form (i.\+e Encke, Gauss, etc. for translational dynamics) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1propagators_1_1SingleStateTypeDerivative_aeab2b2a9eae937200a5def64dcf18960}{Single\+State\+Type\+Derivative\+::convert\+To\+Output\+Solution} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classtudat_1_1propagators_1_1DynamicsSimulator_ae88b5eb4a3e70b135a99dd790997062b}{tudat\+::propagators\+::\+Dynamics\+Simulator$<$ State\+Scalar\+Type, Time\+Type $>$}.
+
+\index{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}!manually\+Set\+And\+Process\+Raw\+Numerical\+Equations\+Of\+Motion\+Solution@{manually\+Set\+And\+Process\+Raw\+Numerical\+Equations\+Of\+Motion\+Solution}}
+\index{manually\+Set\+And\+Process\+Raw\+Numerical\+Equations\+Of\+Motion\+Solution@{manually\+Set\+And\+Process\+Raw\+Numerical\+Equations\+Of\+Motion\+Solution}!tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}}
+\subsubsection[{\texorpdfstring{manually\+Set\+And\+Process\+Raw\+Numerical\+Equations\+Of\+Motion\+Solution(const std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \&equations\+Of\+Motion\+Numerical\+Solution)}{manuallySetAndProcessRawNumericalEquationsOfMotionSolution(const std::map< TimeType, Eigen::Matrix< StateScalarType, Eigen::Dynamic, 1 > > &equationsOfMotionNumericalSolution)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ void {\bf tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}$<$ State\+Scalar\+Type, Time\+Type $>$\+::manually\+Set\+And\+Process\+Raw\+Numerical\+Equations\+Of\+Motion\+Solution (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \&}]{equations\+Of\+Motion\+Numerical\+Solution}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_ac4ecdeebe82d8b3e80617c982c7872ad}{}\label{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_ac4ecdeebe82d8b3e80617c982c7872ad}
+
+
+Function to reset the environment from an externally generated state history. 
+
+Function to reset the environment from an externally generated state history, the order of the entries in the state vectors are proscribed by propagator\+Settings 
+\begin{DoxyParams}{Parameters}
+{\em equations\+Of\+Motion\+Numerical\+Solution} & Externally generated state history. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}!process\+Numerical\+Equations\+Of\+Motion\+Solution@{process\+Numerical\+Equations\+Of\+Motion\+Solution}}
+\index{process\+Numerical\+Equations\+Of\+Motion\+Solution@{process\+Numerical\+Equations\+Of\+Motion\+Solution}!tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}}
+\subsubsection[{\texorpdfstring{process\+Numerical\+Equations\+Of\+Motion\+Solution()}{processNumericalEquationsOfMotionSolution()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ void {\bf tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}$<$ State\+Scalar\+Type, Time\+Type $>$\+::process\+Numerical\+Equations\+Of\+Motion\+Solution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a351d3d697039d983a7b6b24b85122f32}{}\label{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a351d3d697039d983a7b6b24b85122f32}
+
+
+This function updates the environment with the numerical solution of the propagation. 
+
+This function updates the environment with the numerical solution of the propagation. It sets the propagated translational dynamics solution as the new input for the Ephemeris object of the body that was propagated. 
+
+Implements \hyperlink{classtudat_1_1propagators_1_1DynamicsSimulator_a95e587944d4cef24d68b4b72a3c0fee3}{tudat\+::propagators\+::\+Dynamics\+Simulator$<$ State\+Scalar\+Type, Time\+Type $>$}.
+
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}!equations\+Of\+Motion\+Numerical\+Solution\+\_\+@{equations\+Of\+Motion\+Numerical\+Solution\+\_\+}}
+\index{equations\+Of\+Motion\+Numerical\+Solution\+\_\+@{equations\+Of\+Motion\+Numerical\+Solution\+\_\+}!tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator@{tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}}
+\subsubsection[{\texorpdfstring{equations\+Of\+Motion\+Numerical\+Solution\+\_\+}{equationsOfMotionNumericalSolution_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ {\bf tudat\+::propagators\+::\+Single\+Arc\+Dynamics\+Simulator}$<$ State\+Scalar\+Type, Time\+Type $>$\+::equations\+Of\+Motion\+Numerical\+Solution\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a8c3990a00766f47593394f56cc06eede}{}\label{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator_a8c3990a00766f47593394f56cc06eede}
+
+
+Map of state history of numerically integrated bodies. 
+
+Map of state history of numerically integrated bodies, i.\+e. the result of the numerical integration, transformed into the \textquotesingle{}conventional form\textquotesingle{} (\begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1propagators_1_1SingleStateTypeDerivative_aeab2b2a9eae937200a5def64dcf18960}{Single\+State\+Type\+Derivative\+::convert\+To\+Output\+Solution}). Key of map denotes time, values are concatenated vectors of integrated body states (order defined by \hyperlink{classtudat_1_1propagators_1_1DynamicsSimulator_a99c9142e767acc697f85abc88a5e81c6}{propagator\+Settings\+\_\+}). N\+O\+TE\+: this map is empty if \hyperlink{classtudat_1_1propagators_1_1DynamicsSimulator_ad847a666b8dd2357df29a84f149665af}{clear\+Numerical\+Solutions\+\_\+} is set to true. 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/dynamics\+Simulator.\+h\end{DoxyCompactItemize}

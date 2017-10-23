@@ -1,0 +1,163 @@
+\hypertarget{structtudat_1_1optimization_1_1Boundaries}{}\section{tudat\+:\+:optimization\+:\+:Boundaries Struct Reference}
+\label{structtudat_1_1optimization_1_1Boundaries}\index{tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}}
+
+
+Class used to store the upper and lower (multivariate) boundaries of the decision variables.  
+
+
+
+
+{\ttfamily \#include $<$decision\+Variable\+Settings.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtudat_1_1optimization_1_1Boundaries_a3850c0d2eb04b13e20cd9b7b7fdb5cdf}{Boundaries} (const Eigen\+::\+Vector\+Xd lower\+Boundary, const Eigen\+::\+Vector\+Xd upper\+Boundary)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{structtudat_1_1optimization_1_1Boundaries_a6bb7ebeca76f179679010a1fdcac154b}{$\sim$\+Boundaries} ()\hypertarget{structtudat_1_1optimization_1_1Boundaries_a6bb7ebeca76f179679010a1fdcac154b}{}\label{structtudat_1_1optimization_1_1Boundaries_a6bb7ebeca76f179679010a1fdcac154b}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{structtudat_1_1optimization_1_1Boundaries_aed0ba0658b4383b2401b5cea4927a914}{get\+Lower\+Boundary} ()
+\begin{DoxyCompactList}\small\item\em Method to retrieve the lower boundary. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{structtudat_1_1optimization_1_1Boundaries_a2cf6c22afe7ed1f648b5cf1bb15202e1}{get\+Upper\+Boundary} ()
+\begin{DoxyCompactList}\small\item\em Method to retrieve the upper boundary. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1optimization_1_1Boundaries_aa860b659dfcf583c5d8abcf714304864}{get\+Lower\+Boundary} (const unsigned int index)
+\begin{DoxyCompactList}\small\item\em Method to access a position in the multivariate lower boundary. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1optimization_1_1Boundaries_a2616d1c8a4c8dafbf8265c2fd1f670ff}{get\+Upper\+Boundary} (const unsigned int index)
+\begin{DoxyCompactList}\small\item\em Method to access a position in the multivariate upper boundary. \end{DoxyCompactList}\item 
+void \hyperlink{structtudat_1_1optimization_1_1Boundaries_aea53e6e84b3b5e855d1ca8bc3a90f67f}{set\+Lower\+Boundary} (const Eigen\+::\+Vector\+Xd lower\+Boundary)
+\begin{DoxyCompactList}\small\item\em Method to set or modify the lower boundary. \end{DoxyCompactList}\item 
+void \hyperlink{structtudat_1_1optimization_1_1Boundaries_ad1c3faf390cc08fdb9d04028c489dc9b}{set\+Upper\+Boundary} (const Eigen\+::\+Vector\+Xd upper\+Boundary)
+\begin{DoxyCompactList}\small\item\em Method to set or modify the upper boundary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to store the upper and lower (multivariate) boundaries of the decision variables. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}!Boundaries@{Boundaries}}
+\index{Boundaries@{Boundaries}!tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}}
+\subsubsection[{\texorpdfstring{Boundaries(const Eigen\+::\+Vector\+Xd lower\+Boundary, const Eigen\+::\+Vector\+Xd upper\+Boundary)}{Boundaries(const Eigen::VectorXd lowerBoundary, const Eigen::VectorXd upperBoundary)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::optimization\+::\+Boundaries\+::\+Boundaries (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd}]{lower\+Boundary, }
+\item[{const Eigen\+::\+Vector\+Xd}]{upper\+Boundary}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1Boundaries_a3850c0d2eb04b13e20cd9b7b7fdb5cdf}{}\label{structtudat_1_1optimization_1_1Boundaries_a3850c0d2eb04b13e20cd9b7b7fdb5cdf}
+
+
+Constructor. 
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em lower\+Boundary} & multivariate lower boundary \\
+\hline
+{\em upper\+Boundary} & multivariate upper boundary \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}!get\+Lower\+Boundary@{get\+Lower\+Boundary}}
+\index{get\+Lower\+Boundary@{get\+Lower\+Boundary}!tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}}
+\subsubsection[{\texorpdfstring{get\+Lower\+Boundary()}{getLowerBoundary()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::optimization\+::\+Boundaries\+::get\+Lower\+Boundary (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1Boundaries_aed0ba0658b4383b2401b5cea4927a914}{}\label{structtudat_1_1optimization_1_1Boundaries_aed0ba0658b4383b2401b5cea4927a914}
+
+
+Method to retrieve the lower boundary. 
+
+Get the stored lower boundary \begin{DoxyReturn}{Returns}
+lower boundary 
+\end{DoxyReturn}
+\index{tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}!get\+Lower\+Boundary@{get\+Lower\+Boundary}}
+\index{get\+Lower\+Boundary@{get\+Lower\+Boundary}!tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}}
+\subsubsection[{\texorpdfstring{get\+Lower\+Boundary(const unsigned int index)}{getLowerBoundary(const unsigned int index)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::optimization\+::\+Boundaries\+::get\+Lower\+Boundary (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1Boundaries_aa860b659dfcf583c5d8abcf714304864}{}\label{structtudat_1_1optimization_1_1Boundaries_aa860b659dfcf583c5d8abcf714304864}
+
+
+Method to access a position in the multivariate lower boundary. 
+
+Method to access a position in the multivariate lower boundary and retrieve the value. It can be used to access directly 1 sized (scalar) lower boundaries 
+\begin{DoxyParams}{Parameters}
+{\em index} & position in the multivariate lower boundary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double value of the position index 
+\end{DoxyReturn}
+\index{tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}!get\+Upper\+Boundary@{get\+Upper\+Boundary}}
+\index{get\+Upper\+Boundary@{get\+Upper\+Boundary}!tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}}
+\subsubsection[{\texorpdfstring{get\+Upper\+Boundary()}{getUpperBoundary()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::optimization\+::\+Boundaries\+::get\+Upper\+Boundary (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1Boundaries_a2cf6c22afe7ed1f648b5cf1bb15202e1}{}\label{structtudat_1_1optimization_1_1Boundaries_a2cf6c22afe7ed1f648b5cf1bb15202e1}
+
+
+Method to retrieve the upper boundary. 
+
+Get the stored upper boundary \begin{DoxyReturn}{Returns}
+upper boundary 
+\end{DoxyReturn}
+\index{tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}!get\+Upper\+Boundary@{get\+Upper\+Boundary}}
+\index{get\+Upper\+Boundary@{get\+Upper\+Boundary}!tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}}
+\subsubsection[{\texorpdfstring{get\+Upper\+Boundary(const unsigned int index)}{getUpperBoundary(const unsigned int index)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::optimization\+::\+Boundaries\+::get\+Upper\+Boundary (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1Boundaries_a2616d1c8a4c8dafbf8265c2fd1f670ff}{}\label{structtudat_1_1optimization_1_1Boundaries_a2616d1c8a4c8dafbf8265c2fd1f670ff}
+
+
+Method to access a position in the multivariate upper boundary. 
+
+Method to access a position in the multivariate upper boundary and retrieve the value. It can be used to access directly 1 sized (scalar) upper boundaries 
+\begin{DoxyParams}{Parameters}
+{\em index} & position in the multivariate upper boundary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double value of the position index 
+\end{DoxyReturn}
+\index{tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}!set\+Lower\+Boundary@{set\+Lower\+Boundary}}
+\index{set\+Lower\+Boundary@{set\+Lower\+Boundary}!tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}}
+\subsubsection[{\texorpdfstring{set\+Lower\+Boundary(const Eigen\+::\+Vector\+Xd lower\+Boundary)}{setLowerBoundary(const Eigen::VectorXd lowerBoundary)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::optimization\+::\+Boundaries\+::set\+Lower\+Boundary (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd}]{lower\+Boundary}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1Boundaries_aea53e6e84b3b5e855d1ca8bc3a90f67f}{}\label{structtudat_1_1optimization_1_1Boundaries_aea53e6e84b3b5e855d1ca8bc3a90f67f}
+
+
+Method to set or modify the lower boundary. 
+
+Method to set or modify the lower boundary. 
+\begin{DoxyParams}{Parameters}
+{\em lower\+Boundary} & new (multivariate) lower boundary \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}!set\+Upper\+Boundary@{set\+Upper\+Boundary}}
+\index{set\+Upper\+Boundary@{set\+Upper\+Boundary}!tudat\+::optimization\+::\+Boundaries@{tudat\+::optimization\+::\+Boundaries}}
+\subsubsection[{\texorpdfstring{set\+Upper\+Boundary(const Eigen\+::\+Vector\+Xd upper\+Boundary)}{setUpperBoundary(const Eigen::VectorXd upperBoundary)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::optimization\+::\+Boundaries\+::set\+Upper\+Boundary (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd}]{upper\+Boundary}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1Boundaries_ad1c3faf390cc08fdb9d04028c489dc9b}{}\label{structtudat_1_1optimization_1_1Boundaries_ad1c3faf390cc08fdb9d04028c489dc9b}
+
+
+Method to set or modify the upper boundary. 
+
+Method to set or modify the upper boundary. 
+\begin{DoxyParams}{Parameters}
+{\em upper\+Boundary} & new (multivariate) upper boundary \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Optimization/decision\+Variable\+Settings.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Optimization/decision\+Variable\+Settings.\+cpp\end{DoxyCompactItemize}

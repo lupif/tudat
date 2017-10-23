@@ -1,0 +1,172 @@
+\hypertarget{classtudat_1_1root__finders_1_1HalleyRootFinderCore}{}\section{tudat\+:\+:root\+\_\+finders\+:\+:Halley\+Root\+Finder\+Core$<$ Data\+Type $>$ Class Template Reference}
+\label{classtudat_1_1root__finders_1_1HalleyRootFinderCore}\index{tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core$<$ Data\+Type $>$@{tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core$<$ Data\+Type $>$}}
+
+
+Halley\textquotesingle{}s root-\/finding method.  
+
+
+
+
+{\ttfamily \#include $<$halley\+Root\+Finder.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:root\+\_\+finders\+:\+:Halley\+Root\+Finder\+Core$<$ Data\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classtudat_1_1root__finders_1_1HalleyRootFinderCore__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:root\+\_\+finders\+:\+:Halley\+Root\+Finder\+Core$<$ Data\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classtudat_1_1root__finders_1_1HalleyRootFinderCore__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classtudat_1_1root__finders_1_1RootFinderCore}{Root\+Finder\+Core}$<$ Data\+Type $>$\+::\hyperlink{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a9e10efc0cf93a8e2639cef69cb93212a}{Function\+Pointer} \hyperlink{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a9e10efc0cf93a8e2639cef69cb93212a}{Function\+Pointer}\hypertarget{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a9e10efc0cf93a8e2639cef69cb93212a}{}\label{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a9e10efc0cf93a8e2639cef69cb93212a}
+
+\begin{DoxyCompactList}\small\item\em Usefull type definition for the function pointer (from base class). \end{DoxyCompactList}\item 
+typedef \hyperlink{classtudat_1_1root__finders_1_1RootFinderCore}{Root\+Finder\+Core}$<$ Data\+Type $>$\+::\hyperlink{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a7dfa4d30c36f3eef9584a4f108cfc8b9}{Termination\+Function} \hyperlink{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a7dfa4d30c36f3eef9584a4f108cfc8b9}{Termination\+Function}\hypertarget{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a7dfa4d30c36f3eef9584a4f108cfc8b9}{}\label{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a7dfa4d30c36f3eef9584a4f108cfc8b9}
+
+\begin{DoxyCompactList}\small\item\em Usefull type definition for the termination function (from base class). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a699852e1e5066afc555d5dc4e4e0f43e}{Halley\+Root\+Finder\+Core} (\hyperlink{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a7dfa4d30c36f3eef9584a4f108cfc8b9}{Termination\+Function} \hyperlink{classtudat_1_1root__finders_1_1RootFinderCore_a7a1efe7ce979318d398b4bb8574e70d6}{termination\+Function})
+\begin{DoxyCompactList}\small\item\em Constructor taking the general termination function. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a5abe46bfab9183bdafe48b9519e6f88f}{Halley\+Root\+Finder\+Core} (const Data\+Type relative\+X\+Tolerance, const unsigned int max\+Iterations)
+\begin{DoxyCompactList}\small\item\em Constructor taking typical convergence criteria. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a02307d44e9c531242e0f63b273b5bf62}{$\sim$\+Halley\+Root\+Finder\+Core} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+Data\+Type \hyperlink{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a666b95371eb59ad0b272f5456109dc13}{execute} (const \hyperlink{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a9e10efc0cf93a8e2639cef69cb93212a}{Function\+Pointer} \hyperlink{classtudat_1_1root__finders_1_1RootFinderCore_afbe57f7fa3baba13128d9dc2ca41dedd}{root\+Function}, const Data\+Type initial\+Guess)
+\begin{DoxyCompactList}\small\item\em Find a root of the function provided as input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Data\+Type = double$>$\\*
+class tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core$<$ Data\+Type $>$}
+
+Halley\textquotesingle{}s root-\/finding method. 
+
+Halley\textquotesingle{}s root-\/finding method, also known as the tangent hyperbolas method or Halley\textquotesingle{}s rational formula. It requires a function and its first two derivatives. To start the algorithm, also an initial guess of the root location is needed.
+
+It only makes sense to use Halley\textquotesingle{}s method when it is easy to compute the second derivative $f''(x_i)$, often from other pieces of functions that are already being used in the computation of $f(x_i)$ and $f'(x_i)$. Otherwise, Newton-\/\+Rapshon with an increased number of iterations is preferable. \mbox{[}Press et al., 2007, p.\+463\mbox{]}
+
+The iterative scheme is given by\+: \mbox{[}Weisstein, 2014\mbox{]}
+
+\[ x_{n+1} = x_n-\frac{2 F\left(x_n\right) F'\left(x_n\right)} {2 F'\left(x_n\right){}^2-F\left(x_n\right) F''\left(x_n\right)} \]
+
+Defined shorthand notations\+: Halley\+Root\+Finder\+Core$<$ double $>$ =$>$ Halley\+Root\+Finder
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Data\+Type} & Data type used to represent floating-\/point values. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core}!Halley\+Root\+Finder\+Core@{Halley\+Root\+Finder\+Core}}
+\index{Halley\+Root\+Finder\+Core@{Halley\+Root\+Finder\+Core}!tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core}}
+\subsubsection[{\texorpdfstring{Halley\+Root\+Finder\+Core(\+Termination\+Function termination\+Function)}{HalleyRootFinderCore(TerminationFunction terminationFunction)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\+Type  = double$>$ {\bf tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core}$<$ Data\+Type $>$\+::{\bf Halley\+Root\+Finder\+Core} (
+\begin{DoxyParamCaption}
+\item[{{\bf Termination\+Function}}]{termination\+Function}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a699852e1e5066afc555d5dc4e4e0f43e}{}\label{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a699852e1e5066afc555d5dc4e4e0f43e}
+
+
+Constructor taking the general termination function. 
+
+Constructor of Halley\textquotesingle{}s root-\/finding method, taking the termination function (function determining whether to terminate the root-\/finding process).
+
+
+\begin{DoxyParams}{Parameters}
+{\em termination\+Function} & The function specifying the termination conditions of the root-\/finding process. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1root__finders_1_1RootFinderCore_a7a1efe7ce979318d398b4bb8574e70d6}{Root\+Finder\+Core\+::termination\+Function} 
+\end{DoxySeeAlso}
+\index{tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core}!Halley\+Root\+Finder\+Core@{Halley\+Root\+Finder\+Core}}
+\index{Halley\+Root\+Finder\+Core@{Halley\+Root\+Finder\+Core}!tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core}}
+\subsubsection[{\texorpdfstring{Halley\+Root\+Finder\+Core(const Data\+Type relative\+X\+Tolerance, const unsigned int max\+Iterations)}{HalleyRootFinderCore(const DataType relativeXTolerance, const unsigned int maxIterations)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\+Type  = double$>$ {\bf tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core}$<$ Data\+Type $>$\+::{\bf Halley\+Root\+Finder\+Core} (
+\begin{DoxyParamCaption}
+\item[{const Data\+Type}]{relative\+X\+Tolerance, }
+\item[{const unsigned int}]{max\+Iterations}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a5abe46bfab9183bdafe48b9519e6f88f}{}\label{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a5abe46bfab9183bdafe48b9519e6f88f}
+
+
+Constructor taking typical convergence criteria. 
+
+Constructor of Halley\textquotesingle{}s root-\/finding method, taking the maximum number of iterations and the relative tolerance for the independent variable. If desired, a custom convergence function can provided to the alternative constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em relative\+X\+Tolerance} & Relative difference between the root solution of two subsequent solutions below which convergence is reached. \\
+\hline
+{\em max\+Iterations} & Maximum number of iterations after which the root finder is terminated, i.\+e. convergence is assumed. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core}!````~Halley\+Root\+Finder\+Core@{$\sim$\+Halley\+Root\+Finder\+Core}}
+\index{````~Halley\+Root\+Finder\+Core@{$\sim$\+Halley\+Root\+Finder\+Core}!tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core}}
+\subsubsection[{\texorpdfstring{$\sim$\+Halley\+Root\+Finder\+Core()}{~HalleyRootFinderCore()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\+Type  = double$>$ {\bf tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core}$<$ Data\+Type $>$\+::$\sim${\bf Halley\+Root\+Finder\+Core} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a02307d44e9c531242e0f63b273b5bf62}{}\label{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a02307d44e9c531242e0f63b273b5bf62}
+
+
+Default destructor. 
+
+Default destructor. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core}!execute@{execute}}
+\index{execute@{execute}!tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core}}
+\subsubsection[{\texorpdfstring{execute(const Function\+Pointer root\+Function, const Data\+Type initial\+Guess)}{execute(const FunctionPointer rootFunction, const DataType initialGuess)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\+Type  = double$>$ Data\+Type {\bf tudat\+::root\+\_\+finders\+::\+Halley\+Root\+Finder\+Core}$<$ Data\+Type $>$\+::execute (
+\begin{DoxyParamCaption}
+\item[{const {\bf Function\+Pointer}}]{root\+Function, }
+\item[{const Data\+Type}]{initial\+Guess}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a666b95371eb59ad0b272f5456109dc13}{}\label{classtudat_1_1root__finders_1_1HalleyRootFinderCore_a666b95371eb59ad0b272f5456109dc13}
+
+
+Find a root of the function provided as input. 
+
+Find a root of the function provided as input, using the termination function set by the constructor. Not only the function but also the first two derivatives are required.
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+Function} & Function to find the root of. \\
+\hline
+{\em initial\+Guess} & The initial guess of the root. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Root of the root\+Function that is found.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Convergence\+Exeption} & If the solution does not converge to a root value. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classtudat_1_1root__finders_1_1RootFinderCore_a1fcd710906f66ebea649c83f08c2ae97}{tudat\+::root\+\_\+finders\+::\+Root\+Finder\+Core$<$ Data\+Type $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Root\+Finders/halley\+Root\+Finder.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,259 @@
+\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase}{}\section{tudat\+:\+:ephemerides\+:\+:Approximate\+Planet\+Positions\+Base Class Reference}
+\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase}\index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+
+
+\hyperlink{classtudat_1_1ephemerides_1_1Ephemeris}{Ephemeris} base class using J\+PL \char`\"{}\+Approximate Positions of Major Planets\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$approximate\+Planet\+Positions\+Base.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:ephemerides\+:\+:Approximate\+Planet\+Positions\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:ephemerides\+:\+:Approximate\+Planet\+Positions\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_aa698885dcabac2815a6205d5502724d2}{Bodies\+With\+Ephemeris\+Data} \{ \\*
+{\bfseries mercury}, 
+{\bfseries venus}, 
+{\bfseries earth\+Moon\+Barycenter}, 
+{\bfseries mars}, 
+\\*
+{\bfseries jupiter}, 
+{\bfseries saturn}, 
+{\bfseries uranus}, 
+{\bfseries neptune}, 
+\\*
+{\bfseries pluto}
+ \}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_aa698885dcabac2815a6205d5502724d2}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_aa698885dcabac2815a6205d5502724d2}
+\begin{DoxyCompactList}\small\item\em Bodies with ephemeris data. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_af74c02e220004c26042d40d1a935e02e}{Approximate\+Planet\+Positions\+Base} (const double a\+Sun\+Gravitational\+Parameter)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a9e8f9ead05a2dc897153caed1fbbbf78}{$\sim$\+Approximate\+Planet\+Positions\+Base} ()\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a9e8f9ead05a2dc897153caed1fbbbf78}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a9e8f9ead05a2dc897153caed1fbbbf78}
+
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_aef19d67979b73f546c2fa448bcbfcbed}{parse\+Ephemeris\+Line\+Data\+\_\+} (const unsigned int \&first\+Line\+Number)
+\begin{DoxyCompactList}\small\item\em Parse ephemeris line data. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_af5aa54a364f7cc6429e4df57438236be}{parse\+Extra\+Terms\+Ephemeris\+Line\+Data\+\_\+} (const unsigned int \&line\+Number)
+\begin{DoxyCompactList}\small\item\em Parse line data for extra terms for ephemeris. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a568eb00d49ec2d6ddda6fe353b20975b}{reload\+Data} ()
+\begin{DoxyCompactList}\small\item\em Load in ephemeris data for planets. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_abc58628f9a8defcd5bc8b8d9df778f98}{get\+Sun\+Gravitational\+Parameter} ()
+\begin{DoxyCompactList}\small\item\em Returns the gravitational parameter of the Sun. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_aec3603d568cec958c2aef70100645c1b}{set\+Planet} (\hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_aa698885dcabac2815a6205d5502724d2}{Bodies\+With\+Ephemeris\+Data} body\+With\+Ephemeris\+Data)
+\begin{DoxyCompactList}\small\item\em Set planet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a58b16732dcf7b19bda3810b455aca6bf}{sun\+Gravitational\+Parameter}
+\begin{DoxyCompactList}\small\item\em Gravitational parameter of the Sun. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a6d6e4fdfb1666474b8e5647bfcf3746f}{julian\+Date\+\_\+}
+\begin{DoxyCompactList}\small\item\em Julian date. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_ad63ef8202dfe8a0a04feb350344ee7e7}{mean\+Longitude\+At\+Given\+Julian\+Date\+\_\+}
+\begin{DoxyCompactList}\small\item\em Mean longitude at given Julian date. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_aa967cb9533b467af0cf22d5bb5ed8501}{number\+Of\+Centuries\+Past\+J2000\+\_\+}
+\begin{DoxyCompactList}\small\item\em Number of centuries passed J2000. \end{DoxyCompactList}\item 
+std\+::map$<$ unsigned int, std\+::string $>$ \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_acfc0c1fc4289411b5d90d1fae6058629}{container\+Of\+Data\+From\+Ephemeris\+File\+\_\+}
+\begin{DoxyCompactList}\small\item\em Map container of data from ephemeris file. \end{DoxyCompactList}\item 
+\hyperlink{structtudat_1_1ephemerides_1_1ApproximatePlanetPositionsDataContainer}{Approximate\+Planet\+Positions\+Data\+Container} \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a04dafb484427c3a552fb4a7f6f456ea0}{approximate\+Planet\+Positions\+Data\+Container\+\_\+}
+\begin{DoxyCompactList}\small\item\em Approximate planet positions data container. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector6d \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a872f2535642808c26097146d513a1b3c}{planet\+Keplerian\+Elements\+At\+Given\+Julian\+Date\+\_\+}
+\begin{DoxyCompactList}\small\item\em Keplerian elements of planet at given Julian date. \end{DoxyCompactList}\item 
+std\+::stringstream \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a9c8716b05a0b4611ba7d25138cf6e9f5}{ephemeris\+Line\+Data\+\_\+}
+\begin{DoxyCompactList}\small\item\em String stream for ephemeris line data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classtudat_1_1ephemerides_1_1Ephemeris}{Ephemeris} base class using J\+PL \char`\"{}\+Approximate Positions of Major Planets\char`\"{}. 
+
+\hyperlink{classtudat_1_1ephemerides_1_1Ephemeris}{Ephemeris} base class using J\+PL \char`\"{}\+Approximate Positions of Major Planets\char`\"{}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}!Approximate\+Planet\+Positions\+Base@{Approximate\+Planet\+Positions\+Base}}
+\index{Approximate\+Planet\+Positions\+Base@{Approximate\+Planet\+Positions\+Base}!tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+\subsubsection[{\texorpdfstring{Approximate\+Planet\+Positions\+Base(const double a\+Sun\+Gravitational\+Parameter)}{ApproximatePlanetPositionsBase(const double aSunGravitationalParameter)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base\+::\+Approximate\+Planet\+Positions\+Base (
+\begin{DoxyParamCaption}
+\item[{const double}]{a\+Sun\+Gravitational\+Parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_af74c02e220004c26042d40d1a935e02e}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_af74c02e220004c26042d40d1a935e02e}
+
+
+Default constructor. 
+
+Default constructor of the base class, initializes the gravitational parameter of the Sun to the input value, and all other private base class members to default values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Sun\+Gravitational\+Parameter} & The gravitational parameter of the Sun \mbox{[}m$^\wedge$3/s$^\wedge$2\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositions}{Approximate\+Planet\+Positions}, \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsCircularCoplanar}{Approximate\+Planet\+Positions\+Circular\+Coplanar}. 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}!get\+Sun\+Gravitational\+Parameter@{get\+Sun\+Gravitational\+Parameter}}
+\index{get\+Sun\+Gravitational\+Parameter@{get\+Sun\+Gravitational\+Parameter}!tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+\subsubsection[{\texorpdfstring{get\+Sun\+Gravitational\+Parameter()}{getSunGravitationalParameter()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base\+::get\+Sun\+Gravitational\+Parameter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_abc58628f9a8defcd5bc8b8d9df778f98}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_abc58628f9a8defcd5bc8b8d9df778f98}
+
+
+Returns the gravitational parameter of the Sun. 
+
+Returns the gravitational parameter of the Sun that is used in the calculations. \begin{DoxyReturn}{Returns}
+Gravitational parameter of the Sun. 
+\end{DoxyReturn}
+\index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}!parse\+Ephemeris\+Line\+Data\+\_\+@{parse\+Ephemeris\+Line\+Data\+\_\+}}
+\index{parse\+Ephemeris\+Line\+Data\+\_\+@{parse\+Ephemeris\+Line\+Data\+\_\+}!tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+\subsubsection[{\texorpdfstring{parse\+Ephemeris\+Line\+Data\+\_\+(const unsigned int \&first\+Line\+Number)}{parseEphemerisLineData_(const unsigned int &firstLineNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base\+::parse\+Ephemeris\+Line\+Data\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{first\+Line\+Number}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_aef19d67979b73f546c2fa448bcbfcbed}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_aef19d67979b73f546c2fa448bcbfcbed}
+
+
+Parse ephemeris line data. 
+
+Parses ephemeris line data. 
+\begin{DoxyParams}{Parameters}
+{\em first\+Line\+Number} & First line number. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}!parse\+Extra\+Terms\+Ephemeris\+Line\+Data\+\_\+@{parse\+Extra\+Terms\+Ephemeris\+Line\+Data\+\_\+}}
+\index{parse\+Extra\+Terms\+Ephemeris\+Line\+Data\+\_\+@{parse\+Extra\+Terms\+Ephemeris\+Line\+Data\+\_\+}!tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+\subsubsection[{\texorpdfstring{parse\+Extra\+Terms\+Ephemeris\+Line\+Data\+\_\+(const unsigned int \&line\+Number)}{parseExtraTermsEphemerisLineData_(const unsigned int &lineNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base\+::parse\+Extra\+Terms\+Ephemeris\+Line\+Data\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{line\+Number}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_af5aa54a364f7cc6429e4df57438236be}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_af5aa54a364f7cc6429e4df57438236be}
+
+
+Parse line data for extra terms for ephemeris. 
+
+Parses ephemeris line data for necessary extra terms. 
+\begin{DoxyParams}{Parameters}
+{\em line\+Number} & Line number. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}!reload\+Data@{reload\+Data}}
+\index{reload\+Data@{reload\+Data}!tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+\subsubsection[{\texorpdfstring{reload\+Data()}{reloadData()}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base\+::reload\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a568eb00d49ec2d6ddda6fe353b20975b}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a568eb00d49ec2d6ddda6fe353b20975b}
+
+
+Load in ephemeris data for planets. 
+
+This method opens and parses the p\+\_\+elem\+\_\+t2.\+txt ephemeris files for the planet positions. The resulting data is stored in \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_acfc0c1fc4289411b5d90d1fae6058629}{Approximate\+Planet\+Positions\+Base\+::container\+Of\+Data\+From\+Ephemeris\+File\+\_\+} to be used in the generation of planet ephemeris. This method is automatically invoked if you call \hyperlink{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_aec3603d568cec958c2aef70100645c1b}{Approximate\+Planet\+Positions\+Base\+::set\+Planet( Bodies\+With\+Ephemeris\+Data )}. \index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}!set\+Planet@{set\+Planet}}
+\index{set\+Planet@{set\+Planet}!tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+\subsubsection[{\texorpdfstring{set\+Planet(\+Bodies\+With\+Ephemeris\+Data body\+With\+Ephemeris\+Data)}{setPlanet(BodiesWithEphemerisData bodyWithEphemerisData)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base\+::set\+Planet (
+\begin{DoxyParamCaption}
+\item[{{\bf Bodies\+With\+Ephemeris\+Data}}]{body\+With\+Ephemeris\+Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_aec3603d568cec958c2aef70100645c1b}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_aec3603d568cec958c2aef70100645c1b}
+
+
+Set planet. 
+
+Sets planet to retrieve ephemeris data for. 
+\begin{DoxyParams}{Parameters}
+{\em body\+With\+Ephemeris\+Data} & Planet. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}!approximate\+Planet\+Positions\+Data\+Container\+\_\+@{approximate\+Planet\+Positions\+Data\+Container\+\_\+}}
+\index{approximate\+Planet\+Positions\+Data\+Container\+\_\+@{approximate\+Planet\+Positions\+Data\+Container\+\_\+}!tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+\subsubsection[{\texorpdfstring{approximate\+Planet\+Positions\+Data\+Container\+\_\+}{approximatePlanetPositionsDataContainer_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Approximate\+Planet\+Positions\+Data\+Container} tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base\+::approximate\+Planet\+Positions\+Data\+Container\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a04dafb484427c3a552fb4a7f6f456ea0}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a04dafb484427c3a552fb4a7f6f456ea0}
+
+
+Approximate planet positions data container. 
+
+Approximate planet positions data container. \index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}!container\+Of\+Data\+From\+Ephemeris\+File\+\_\+@{container\+Of\+Data\+From\+Ephemeris\+File\+\_\+}}
+\index{container\+Of\+Data\+From\+Ephemeris\+File\+\_\+@{container\+Of\+Data\+From\+Ephemeris\+File\+\_\+}!tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+\subsubsection[{\texorpdfstring{container\+Of\+Data\+From\+Ephemeris\+File\+\_\+}{containerOfDataFromEphemerisFile_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ unsigned int, std\+::string $>$ tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base\+::container\+Of\+Data\+From\+Ephemeris\+File\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_acfc0c1fc4289411b5d90d1fae6058629}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_acfc0c1fc4289411b5d90d1fae6058629}
+
+
+Map container of data from ephemeris file. 
+
+Map container of string data from ephemeris data file. \index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}!ephemeris\+Line\+Data\+\_\+@{ephemeris\+Line\+Data\+\_\+}}
+\index{ephemeris\+Line\+Data\+\_\+@{ephemeris\+Line\+Data\+\_\+}!tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+\subsubsection[{\texorpdfstring{ephemeris\+Line\+Data\+\_\+}{ephemerisLineData_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::stringstream tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base\+::ephemeris\+Line\+Data\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a9c8716b05a0b4611ba7d25138cf6e9f5}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a9c8716b05a0b4611ba7d25138cf6e9f5}
+
+
+String stream for ephemeris line data. 
+
+String stream for ephemeris line data. \index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}!julian\+Date\+\_\+@{julian\+Date\+\_\+}}
+\index{julian\+Date\+\_\+@{julian\+Date\+\_\+}!tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+\subsubsection[{\texorpdfstring{julian\+Date\+\_\+}{julianDate_}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base\+::julian\+Date\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a6d6e4fdfb1666474b8e5647bfcf3746f}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a6d6e4fdfb1666474b8e5647bfcf3746f}
+
+
+Julian date. 
+
+Julian date at which to obtain planet\textquotesingle{}s orbital elements. \index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}!mean\+Longitude\+At\+Given\+Julian\+Date\+\_\+@{mean\+Longitude\+At\+Given\+Julian\+Date\+\_\+}}
+\index{mean\+Longitude\+At\+Given\+Julian\+Date\+\_\+@{mean\+Longitude\+At\+Given\+Julian\+Date\+\_\+}!tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+\subsubsection[{\texorpdfstring{mean\+Longitude\+At\+Given\+Julian\+Date\+\_\+}{meanLongitudeAtGivenJulianDate_}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base\+::mean\+Longitude\+At\+Given\+Julian\+Date\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_ad63ef8202dfe8a0a04feb350344ee7e7}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_ad63ef8202dfe8a0a04feb350344ee7e7}
+
+
+Mean longitude at given Julian date. 
+
+Mean longitude of planet at given Julian date. \index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}!number\+Of\+Centuries\+Past\+J2000\+\_\+@{number\+Of\+Centuries\+Past\+J2000\+\_\+}}
+\index{number\+Of\+Centuries\+Past\+J2000\+\_\+@{number\+Of\+Centuries\+Past\+J2000\+\_\+}!tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+\subsubsection[{\texorpdfstring{number\+Of\+Centuries\+Past\+J2000\+\_\+}{numberOfCenturiesPastJ2000_}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base\+::number\+Of\+Centuries\+Past\+J2000\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_aa967cb9533b467af0cf22d5bb5ed8501}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_aa967cb9533b467af0cf22d5bb5ed8501}
+
+
+Number of centuries passed J2000. 
+
+Number of centuries passed J2000, computed using Julian date defined by user when retrieving state. \index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}!planet\+Keplerian\+Elements\+At\+Given\+Julian\+Date\+\_\+@{planet\+Keplerian\+Elements\+At\+Given\+Julian\+Date\+\_\+}}
+\index{planet\+Keplerian\+Elements\+At\+Given\+Julian\+Date\+\_\+@{planet\+Keplerian\+Elements\+At\+Given\+Julian\+Date\+\_\+}!tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+\subsubsection[{\texorpdfstring{planet\+Keplerian\+Elements\+At\+Given\+Julian\+Date\+\_\+}{planetKeplerianElementsAtGivenJulianDate_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector6d tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base\+::planet\+Keplerian\+Elements\+At\+Given\+Julian\+Date\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a872f2535642808c26097146d513a1b3c}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a872f2535642808c26097146d513a1b3c}
+
+
+Keplerian elements of planet at given Julian date. 
+
+Keplerian elements of planet at given Julian date. \index{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}!sun\+Gravitational\+Parameter@{sun\+Gravitational\+Parameter}}
+\index{sun\+Gravitational\+Parameter@{sun\+Gravitational\+Parameter}!tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base@{tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base}}
+\subsubsection[{\texorpdfstring{sun\+Gravitational\+Parameter}{sunGravitationalParameter}}]{\setlength{\rightskip}{0pt plus 5cm}const double tudat\+::ephemerides\+::\+Approximate\+Planet\+Positions\+Base\+::sun\+Gravitational\+Parameter\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a58b16732dcf7b19bda3810b455aca6bf}{}\label{classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase_a58b16732dcf7b19bda3810b455aca6bf}
+
+
+Gravitational parameter of the Sun. 
+
+Gravitational parameter of the Sun. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Ephemerides/approximate\+Planet\+Positions\+Base.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Ephemerides/approximate\+Planet\+Positions\+Base.\+cpp\end{DoxyCompactItemize}

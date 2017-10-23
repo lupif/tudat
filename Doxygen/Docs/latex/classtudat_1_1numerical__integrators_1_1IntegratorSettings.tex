@@ -1,0 +1,122 @@
+\hypertarget{classtudat_1_1numerical__integrators_1_1IntegratorSettings}{}\section{tudat\+:\+:numerical\+\_\+integrators\+:\+:Integrator\+Settings$<$ Time\+Type $>$ Class Template Reference}
+\label{classtudat_1_1numerical__integrators_1_1IntegratorSettings}\index{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings$<$ Time\+Type $>$@{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings$<$ Time\+Type $>$}}
+
+
+Class to define settings of numerical integrator.  
+
+
+
+
+{\ttfamily \#include $<$create\+Numerical\+Integrator.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:numerical\+\_\+integrators\+:\+:Integrator\+Settings$<$ Time\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classtudat_1_1numerical__integrators_1_1IntegratorSettings__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1numerical__integrators_1_1IntegratorSettings_af56614ece02c8164a8d38be6492ac925}{Integrator\+Settings} (const Available\+Integrators integrator\+Type, const Time\+Type initial\+Time, const Time\+Type initial\+Time\+Step, const int save\+Frequency=1)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1numerical__integrators_1_1IntegratorSettings_a6a21fbb1e84dcf6d3c1c2cac225d2d34}{$\sim$\+Integrator\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Available\+Integrators \hyperlink{classtudat_1_1numerical__integrators_1_1IntegratorSettings_ab1fa0bf04bb06c5fee5a84bef7243ce4}{integrator\+Type\+\_\+}
+\begin{DoxyCompactList}\small\item\em Type of numerical integrator. \end{DoxyCompactList}\item 
+Time\+Type \hyperlink{classtudat_1_1numerical__integrators_1_1IntegratorSettings_ade260f7c4ac8183e011b7c46f17fdcb4}{initial\+Time\+\_\+}
+\begin{DoxyCompactList}\small\item\em Start time of numerical integration. \end{DoxyCompactList}\item 
+Time\+Type \hyperlink{classtudat_1_1numerical__integrators_1_1IntegratorSettings_ad97592b354b94c4e3d74f4e5579c8b14}{initial\+Time\+Step\+\_\+}
+\begin{DoxyCompactList}\small\item\em Initial time step used in numerical integration. \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1numerical__integrators_1_1IntegratorSettings_a6d823e9354ad993a0605cf28fa85dd8b}{save\+Frequency\+\_\+}
+\begin{DoxyCompactList}\small\item\em Frequency which with to save numerical integration result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Time\+Type = double$>$\\*
+class tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings$<$ Time\+Type $>$}
+
+Class to define settings of numerical integrator. 
+
+Class to define settings of numerical integrator, for instance for use in numerical integration of equations of motion/ variational equations. This class can be used for simple integrators such as fixed step RK and Euler. Integrators that require more settings to define have their own derived class (see below). 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}!Integrator\+Settings@{Integrator\+Settings}}
+\index{Integrator\+Settings@{Integrator\+Settings}!tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}}
+\subsubsection[{\texorpdfstring{Integrator\+Settings(const Available\+Integrators integrator\+Type, const Time\+Type initial\+Time, const Time\+Type initial\+Time\+Step, const int save\+Frequency=1)}{IntegratorSettings(const AvailableIntegrators integratorType, const TimeType initialTime, const TimeType initialTimeStep, const int saveFrequency=1)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double$>$ {\bf tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ Time\+Type $>$\+::{\bf Integrator\+Settings} (
+\begin{DoxyParamCaption}
+\item[{const Available\+Integrators}]{integrator\+Type, }
+\item[{const Time\+Type}]{initial\+Time, }
+\item[{const Time\+Type}]{initial\+Time\+Step, }
+\item[{const int}]{save\+Frequency = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1numerical__integrators_1_1IntegratorSettings_af56614ece02c8164a8d38be6492ac925}{}\label{classtudat_1_1numerical__integrators_1_1IntegratorSettings_af56614ece02c8164a8d38be6492ac925}
+
+
+Constructor. 
+
+Constructor for integrator settings. 
+\begin{DoxyParams}{Parameters}
+{\em integrator\+Type} & Type of numerical integrator \\
+\hline
+{\em initial\+Time} & Start time (independent variable) of numerical integration. \\
+\hline
+{\em initial\+Time\+Step} & Initial time (independent variable) step used in numerical integration. Adapted during integration for variable step size integrators. \\
+\hline
+{\em save\+Frequency} & Frequency at which to save the numerical integrated states (in units of i.\+e. per n integration time steps, with n = save\+Frequency). \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}!````~Integrator\+Settings@{$\sim$\+Integrator\+Settings}}
+\index{````~Integrator\+Settings@{$\sim$\+Integrator\+Settings}!tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}}
+\subsubsection[{\texorpdfstring{$\sim$\+Integrator\+Settings()}{~IntegratorSettings()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double$>$ virtual {\bf tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ Time\+Type $>$\+::$\sim${\bf Integrator\+Settings} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1numerical__integrators_1_1IntegratorSettings_a6a21fbb1e84dcf6d3c1c2cac225d2d34}{}\label{classtudat_1_1numerical__integrators_1_1IntegratorSettings_a6a21fbb1e84dcf6d3c1c2cac225d2d34}
+
+
+Virtual destructor. 
+
+Virtual destructor. 
+
+\subsection{Member Data Documentation}
+\index{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}!initial\+Time\+\_\+@{initial\+Time\+\_\+}}
+\index{initial\+Time\+\_\+@{initial\+Time\+\_\+}!tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}}
+\subsubsection[{\texorpdfstring{initial\+Time\+\_\+}{initialTime_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double$>$ Time\+Type {\bf tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ Time\+Type $>$\+::initial\+Time\+\_\+}\hypertarget{classtudat_1_1numerical__integrators_1_1IntegratorSettings_ade260f7c4ac8183e011b7c46f17fdcb4}{}\label{classtudat_1_1numerical__integrators_1_1IntegratorSettings_ade260f7c4ac8183e011b7c46f17fdcb4}
+
+
+Start time of numerical integration. 
+
+Start time (independent variable) of numerical integration. \index{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}!initial\+Time\+Step\+\_\+@{initial\+Time\+Step\+\_\+}}
+\index{initial\+Time\+Step\+\_\+@{initial\+Time\+Step\+\_\+}!tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}}
+\subsubsection[{\texorpdfstring{initial\+Time\+Step\+\_\+}{initialTimeStep_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double$>$ Time\+Type {\bf tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ Time\+Type $>$\+::initial\+Time\+Step\+\_\+}\hypertarget{classtudat_1_1numerical__integrators_1_1IntegratorSettings_ad97592b354b94c4e3d74f4e5579c8b14}{}\label{classtudat_1_1numerical__integrators_1_1IntegratorSettings_ad97592b354b94c4e3d74f4e5579c8b14}
+
+
+Initial time step used in numerical integration. 
+
+Initial time (independent variable) step used in numerical integration. Adapted during integration for variable step size integrators. \index{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}!integrator\+Type\+\_\+@{integrator\+Type\+\_\+}}
+\index{integrator\+Type\+\_\+@{integrator\+Type\+\_\+}!tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}}
+\subsubsection[{\texorpdfstring{integrator\+Type\+\_\+}{integratorType_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double$>$ Available\+Integrators {\bf tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ Time\+Type $>$\+::integrator\+Type\+\_\+}\hypertarget{classtudat_1_1numerical__integrators_1_1IntegratorSettings_ab1fa0bf04bb06c5fee5a84bef7243ce4}{}\label{classtudat_1_1numerical__integrators_1_1IntegratorSettings_ab1fa0bf04bb06c5fee5a84bef7243ce4}
+
+
+Type of numerical integrator. 
+
+Type of numerical integrator, from enum of available integrators. \index{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}!save\+Frequency\+\_\+@{save\+Frequency\+\_\+}}
+\index{save\+Frequency\+\_\+@{save\+Frequency\+\_\+}!tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}}
+\subsubsection[{\texorpdfstring{save\+Frequency\+\_\+}{saveFrequency_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double$>$ int {\bf tudat\+::numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ Time\+Type $>$\+::save\+Frequency\+\_\+}\hypertarget{classtudat_1_1numerical__integrators_1_1IntegratorSettings_a6d823e9354ad993a0605cf28fa85dd8b}{}\label{classtudat_1_1numerical__integrators_1_1IntegratorSettings_a6d823e9354ad993a0605cf28fa85dd8b}
+
+
+Frequency which with to save numerical integration result. 
+
+Frequency at which to save the numerical integrated states (in units of i.\+e. per n integration time steps, with n = save\+Frequency). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Numerical\+Integrators/create\+Numerical\+Integrator.\+h\end{DoxyCompactItemize}

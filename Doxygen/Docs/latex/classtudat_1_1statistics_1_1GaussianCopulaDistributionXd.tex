@@ -1,0 +1,119 @@
+\hypertarget{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd}{}\section{tudat\+:\+:statistics\+:\+:Gaussian\+Copula\+Distribution\+Xd Class Reference}
+\label{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd}\index{tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd@{tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd}}
+
+
+Implementation of Gaussian Copula Distribution.  
+
+
+
+
+{\ttfamily \#include $<$multi\+Variate\+Gaussian\+Probability\+Distributions.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:statistics\+:\+:Gaussian\+Copula\+Distribution\+Xd\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:statistics\+:\+:Gaussian\+Copula\+Distribution\+Xd\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd_a2673f53188b4648ce6a7cdf70b2e43e3}{Gaussian\+Copula\+Distribution\+Xd} (const Eigen\+::\+Matrix\+Xd \&correlation\+Matrix)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd_afa1a343fc638373f6df65402327f2135}{evaluate\+Pdf} (const Eigen\+::\+Vector\+Xd \&independent\+Variables)
+\begin{DoxyCompactList}\small\item\em Function to evaluate pdf of Gaussian cupola distribution. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd_a0c12013ebf12d3c5418431fef33fc2a8}{evaluate\+Cdf} (const Eigen\+::\+Vector\+Xd \&independent\+Variables)
+\begin{DoxyCompactList}\small\item\em Function to evaluate cdf of Gaussian cupola distribution (not yet implemented) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of Gaussian Copula Distribution. 
+
+Implementation of Gaussian Copula Distribution. A Gaussian copula can be used to link several marginal distributions to form a joint distribution. Only pdf is presently implemented, a runtime error is thrown if the cdf function is called. Source\+: Song, P. X.-\/K. Multivariate Dispersion Models Generated from Gaussian Copula Scandinavian Journal of Statistics, 2000, 27, 305-\/320 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd@{tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd}!Gaussian\+Copula\+Distribution\+Xd@{Gaussian\+Copula\+Distribution\+Xd}}
+\index{Gaussian\+Copula\+Distribution\+Xd@{Gaussian\+Copula\+Distribution\+Xd}!tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd@{tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd}}
+\subsubsection[{\texorpdfstring{Gaussian\+Copula\+Distribution\+Xd(const Eigen\+::\+Matrix\+Xd \&correlation\+Matrix)}{GaussianCopulaDistributionXd(const Eigen::MatrixXd &correlationMatrix)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd\+::\+Gaussian\+Copula\+Distribution\+Xd (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{correlation\+Matrix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd_a2673f53188b4648ce6a7cdf70b2e43e3}{}\label{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd_a2673f53188b4648ce6a7cdf70b2e43e3}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em correlation\+Matrix} & Correlation matrix of distribution \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd@{tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd}!evaluate\+Cdf@{evaluate\+Cdf}}
+\index{evaluate\+Cdf@{evaluate\+Cdf}!tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd@{tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd}}
+\subsubsection[{\texorpdfstring{evaluate\+Cdf(const Eigen\+::\+Vector\+Xd \&independent\+Variables)}{evaluateCdf(const Eigen::VectorXd &independentVariables)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd\+::evaluate\+Cdf (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{independent\+Variables}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd_a0c12013ebf12d3c5418431fef33fc2a8}{}\label{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd_a0c12013ebf12d3c5418431fef33fc2a8}
+
+
+Function to evaluate cdf of Gaussian cupola distribution (not yet implemented) 
+
+Function to evaluate cumulative distribution function of Gaussian cupola distribution at given list of independent variable values. N\+O\+TE\+: function not yet implemented 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & List of independent variable values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Evaluated Gaussian cupola cdf. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_ad60887b5623ded9e73456dedcbf32a8a}{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution$<$ Eigen\+::\+Vector\+Xd $>$}.
+
+\index{tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd@{tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd}!evaluate\+Pdf@{evaluate\+Pdf}}
+\index{evaluate\+Pdf@{evaluate\+Pdf}!tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd@{tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd}}
+\subsubsection[{\texorpdfstring{evaluate\+Pdf(const Eigen\+::\+Vector\+Xd \&independent\+Variables)}{evaluatePdf(const Eigen::VectorXd &independentVariables)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd\+::evaluate\+Pdf (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{independent\+Variables}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd_afa1a343fc638373f6df65402327f2135}{}\label{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd_afa1a343fc638373f6df65402327f2135}
+
+
+Function to evaluate pdf of Gaussian cupola distribution. 
+
+Function to evaluate probability distribution function of Gaussian cupola distribution at given list of independent variable values. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & List of independent variable values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Evaluated multivariate Gaussian pdf 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_a7edfe6753ce63fe4e12409d3fb88e499}{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution$<$ Eigen\+::\+Vector\+Xd $>$}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Statistics/multi\+Variate\+Gaussian\+Probability\+Distributions.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Statistics/multi\+Variate\+Gaussian\+Probability\+Distributions.\+cpp\end{DoxyCompactItemize}

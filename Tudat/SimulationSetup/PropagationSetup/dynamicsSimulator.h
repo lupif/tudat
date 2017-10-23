@@ -316,7 +316,7 @@ public:
     {
         propagationTerminationCondition_ = createPropagationTerminationConditions(
                     propagatorSettings_->getTerminationSettings(), bodyMap_,
-                            integratorSettings_->initialTime_ );
+                            integratorSettings_->initialTimeStep_ );
     }
 
 protected:

@@ -1,0 +1,187 @@
+\hypertarget{classtudat_1_1mission__segments_1_1LambertTargeterGooding}{}\section{tudat\+:\+:mission\+\_\+segments\+:\+:Lambert\+Targeter\+Gooding Class Reference}
+\label{classtudat_1_1mission__segments_1_1LambertTargeterGooding}\index{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}}
+
+
+Gooding Lambert targeting algorithm class.  
+
+
+
+
+{\ttfamily \#include $<$lambert\+Targeter\+Gooding.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:mission\+\_\+segments\+:\+:Lambert\+Targeter\+Gooding\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classtudat_1_1mission__segments_1_1LambertTargeterGooding__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:mission\+\_\+segments\+:\+:Lambert\+Targeter\+Gooding\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classtudat_1_1mission__segments_1_1LambertTargeterGooding__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1mission__segments_1_1LambertTargeterGooding_acb5db095620081363af56fdabc1d7ecd}{Lambert\+Targeter\+Gooding} (const Eigen\+::\+Vector3d \&a\+Cartesian\+Position\+At\+Departure, const Eigen\+::\+Vector3d \&a\+Cartesian\+Position\+At\+Arrival, const double a\+Time\+Of\+Flight, const double a\+Gravitational\+Parameter, root\+\_\+finders\+::\+Root\+Finder\+Pointer a\+Root\+Finder=root\+\_\+finders\+::\+Root\+Finder\+Pointer())
+\begin{DoxyCompactList}\small\item\em Constructor with immediate definition of parameters and execution of the algorithm. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1mission__segments_1_1LambertTargeterGooding_a5aaa67242a073186793fe51cf76c18d7}{get\+Radial\+Velocity\+At\+Departure} ()
+\begin{DoxyCompactList}\small\item\em Get radial velocity at departure. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1mission__segments_1_1LambertTargeterGooding_ac1cfec31d01487e5094c13dede87de00}{get\+Radial\+Velocity\+At\+Arrival} ()
+\begin{DoxyCompactList}\small\item\em Get radial velocity at arrival. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1mission__segments_1_1LambertTargeterGooding_adcff4746bb258f78195cee3eb03e3bf8}{get\+Transverse\+Velocity\+At\+Departure} ()
+\begin{DoxyCompactList}\small\item\em Get transverse velocity at departure. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1mission__segments_1_1LambertTargeterGooding_a03ead3601fead16cc6fcbc7c6ed0914d}{get\+Transverse\+Velocity\+At\+Arrival} ()
+\begin{DoxyCompactList}\small\item\em Get transverse velocity at arrival. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1mission__segments_1_1LambertTargeterGooding_a4093726973d7154f32538cbd6455d00e}{get\+Semi\+Major\+Axis} ()
+\begin{DoxyCompactList}\small\item\em Get semi-\/major axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtudat_1_1mission__segments_1_1LambertTargeterGooding_a6a8d24104f7fd12f753b0df2799b2eff}{execute} ()
+\begin{DoxyCompactList}\small\item\em Execute Lambert targeting algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Gooding Lambert targeting algorithm class. 
+
+Implementation of the Gooding Lambert targeting algorithm in Tudat. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}!Lambert\+Targeter\+Gooding@{Lambert\+Targeter\+Gooding}}
+\index{Lambert\+Targeter\+Gooding@{Lambert\+Targeter\+Gooding}!tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}}
+\subsubsection[{\texorpdfstring{Lambert\+Targeter\+Gooding(const Eigen\+::\+Vector3d \&a\+Cartesian\+Position\+At\+Departure, const Eigen\+::\+Vector3d \&a\+Cartesian\+Position\+At\+Arrival, const double a\+Time\+Of\+Flight, const double a\+Gravitational\+Parameter, root\+\_\+finders\+::\+Root\+Finder\+Pointer a\+Root\+Finder=root\+\_\+finders\+::\+Root\+Finder\+Pointer())}{LambertTargeterGooding(const Eigen::Vector3d &aCartesianPositionAtDeparture, const Eigen::Vector3d &aCartesianPositionAtArrival, const double aTimeOfFlight, const double aGravitationalParameter, root_finders::RootFinderPointer aRootFinder=root_finders::RootFinderPointer())}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding\+::\+Lambert\+Targeter\+Gooding (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector3d \&}]{a\+Cartesian\+Position\+At\+Departure, }
+\item[{const Eigen\+::\+Vector3d \&}]{a\+Cartesian\+Position\+At\+Arrival, }
+\item[{const double}]{a\+Time\+Of\+Flight, }
+\item[{const double}]{a\+Gravitational\+Parameter, }
+\item[{root\+\_\+finders\+::\+Root\+Finder\+Pointer}]{a\+Root\+Finder = {\ttfamily root\+\_\+finders\+:\+:RootFinderPointer(~)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1mission__segments_1_1LambertTargeterGooding_acb5db095620081363af56fdabc1d7ecd}{}\label{classtudat_1_1mission__segments_1_1LambertTargeterGooding_acb5db095620081363af56fdabc1d7ecd}
+
+
+Constructor with immediate definition of parameters and execution of the algorithm. 
+
+Constructor with immediate definition of parameters and execution of the algorithm. 
+\begin{DoxyParams}{Parameters}
+{\em a\+Cartesian\+Position\+At\+Departure} & The position at departure in Cartesian coordinates. \mbox{[}m\mbox{]} \\
+\hline
+{\em a\+Cartesian\+Position\+At\+Arrival} & The position at arrival in Cartesian coordinates. \mbox{[}m\mbox{]} \\
+\hline
+{\em a\+Time\+Of\+Flight} & The time-\/of-\/flight between departure and arrival. \mbox{[}s\mbox{]} \\
+\hline
+{\em a\+Gravitational\+Parameter} & The gravitational parameter of the main body. \mbox{[}m$^\wedge$3 s$^\wedge$-\/2\mbox{]} \\
+\hline
+{\em a\+Root\+Finder} & The shared-\/pointer to the rootfinder to be used to solve the problem. \mbox{[}-\/\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1mission__segments_1_1LambertTargeter}{Lambert\+Targeter}. 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}!execute@{execute}}
+\index{execute@{execute}!tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}}
+\subsubsection[{\texorpdfstring{execute()}{execute()}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding\+::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1mission__segments_1_1LambertTargeterGooding_a6a8d24104f7fd12f753b0df2799b2eff}{}\label{classtudat_1_1mission__segments_1_1LambertTargeterGooding_a6a8d24104f7fd12f753b0df2799b2eff}
+
+
+Execute Lambert targeting algorithm. 
+
+Execute Lambert targeting solver.
+
+Executes the Lambert targeting algorithm. 
+
+Implements \hyperlink{classtudat_1_1mission__segments_1_1LambertTargeter_ac022ab6c8aa0d941b1d049036a7d8054}{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter}.
+
+\index{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}!get\+Radial\+Velocity\+At\+Arrival@{get\+Radial\+Velocity\+At\+Arrival}}
+\index{get\+Radial\+Velocity\+At\+Arrival@{get\+Radial\+Velocity\+At\+Arrival}!tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}}
+\subsubsection[{\texorpdfstring{get\+Radial\+Velocity\+At\+Arrival()}{getRadialVelocityAtArrival()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding\+::get\+Radial\+Velocity\+At\+Arrival (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1mission__segments_1_1LambertTargeterGooding_ac1cfec31d01487e5094c13dede87de00}{}\label{classtudat_1_1mission__segments_1_1LambertTargeterGooding_ac1cfec31d01487e5094c13dede87de00}
+
+
+Get radial velocity at arrival. 
+
+Returns the radial velocity at arrival. \begin{DoxyReturn}{Returns}
+Radial velocity at arrival. 
+\end{DoxyReturn}
+\index{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}!get\+Radial\+Velocity\+At\+Departure@{get\+Radial\+Velocity\+At\+Departure}}
+\index{get\+Radial\+Velocity\+At\+Departure@{get\+Radial\+Velocity\+At\+Departure}!tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}}
+\subsubsection[{\texorpdfstring{get\+Radial\+Velocity\+At\+Departure()}{getRadialVelocityAtDeparture()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding\+::get\+Radial\+Velocity\+At\+Departure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1mission__segments_1_1LambertTargeterGooding_a5aaa67242a073186793fe51cf76c18d7}{}\label{classtudat_1_1mission__segments_1_1LambertTargeterGooding_a5aaa67242a073186793fe51cf76c18d7}
+
+
+Get radial velocity at departure. 
+
+Returns the radial velocity at departure. \begin{DoxyReturn}{Returns}
+Radial velocity at departure. 
+\end{DoxyReturn}
+\index{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}!get\+Semi\+Major\+Axis@{get\+Semi\+Major\+Axis}}
+\index{get\+Semi\+Major\+Axis@{get\+Semi\+Major\+Axis}!tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}}
+\subsubsection[{\texorpdfstring{get\+Semi\+Major\+Axis()}{getSemiMajorAxis()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding\+::get\+Semi\+Major\+Axis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1mission__segments_1_1LambertTargeterGooding_a4093726973d7154f32538cbd6455d00e}{}\label{classtudat_1_1mission__segments_1_1LambertTargeterGooding_a4093726973d7154f32538cbd6455d00e}
+
+
+Get semi-\/major axis. 
+
+Returns the semi-\/major axis of the computed conic. \begin{DoxyReturn}{Returns}
+Semi-\/major axis. 
+\end{DoxyReturn}
+\index{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}!get\+Transverse\+Velocity\+At\+Arrival@{get\+Transverse\+Velocity\+At\+Arrival}}
+\index{get\+Transverse\+Velocity\+At\+Arrival@{get\+Transverse\+Velocity\+At\+Arrival}!tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}}
+\subsubsection[{\texorpdfstring{get\+Transverse\+Velocity\+At\+Arrival()}{getTransverseVelocityAtArrival()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding\+::get\+Transverse\+Velocity\+At\+Arrival (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1mission__segments_1_1LambertTargeterGooding_a03ead3601fead16cc6fcbc7c6ed0914d}{}\label{classtudat_1_1mission__segments_1_1LambertTargeterGooding_a03ead3601fead16cc6fcbc7c6ed0914d}
+
+
+Get transverse velocity at arrival. 
+
+Returns the transverse velocity at arrival. \begin{DoxyReturn}{Returns}
+Transverse velocity at arrival. 
+\end{DoxyReturn}
+\index{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}!get\+Transverse\+Velocity\+At\+Departure@{get\+Transverse\+Velocity\+At\+Departure}}
+\index{get\+Transverse\+Velocity\+At\+Departure@{get\+Transverse\+Velocity\+At\+Departure}!tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding}}
+\subsubsection[{\texorpdfstring{get\+Transverse\+Velocity\+At\+Departure()}{getTransverseVelocityAtDeparture()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Gooding\+::get\+Transverse\+Velocity\+At\+Departure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1mission__segments_1_1LambertTargeterGooding_adcff4746bb258f78195cee3eb03e3bf8}{}\label{classtudat_1_1mission__segments_1_1LambertTargeterGooding_adcff4746bb258f78195cee3eb03e3bf8}
+
+
+Get transverse velocity at departure. 
+
+Returns the transverse velocity at departure. \begin{DoxyReturn}{Returns}
+Transverse velocity at departure. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Mission\+Segments/lambert\+Targeter\+Gooding.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Mission\+Segments/lambert\+Targeter\+Gooding.\+cpp\end{DoxyCompactItemize}

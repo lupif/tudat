@@ -1,0 +1,588 @@
+\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations}{}\section{tudat\+:\+:gravitation\+:\+:Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations Class Reference}
+\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations}\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+
+
+{\ttfamily \#include $<$basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:gravitation\+:\+:Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:gravitation\+:\+:Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a698be5ee244e5444650db403b653102c}{Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations} (const boost\+::function$<$ Eigen\+::\+Vector6d(const double) $>$ deformed\+Body\+State\+Function, const boost\+::function$<$ Eigen\+::\+Quaterniond(const double) $>$ deformed\+Body\+Orientation\+Function, const std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector6d(const double) $>$ $>$ deforming\+Body\+State\+Functions, const double deformed\+Body\+Reference\+Radius, const boost\+::function$<$ double() $>$ deformed\+Body\+Mass, const std\+::vector$<$ boost\+::function$<$ double() $>$ $>$ deforming\+Body\+Masses, const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ double $>$ $>$ $>$ love\+Numbers, const std\+::vector$<$ std\+::string $>$ deforming\+Bodies)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a724a92f0468e38cee6359323d7fafa8b}{$\sim$\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+std\+::pair$<$ Eigen\+::\+Matrix\+Xd, Eigen\+::\+Matrix\+Xd $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a531dcae6f842ada23679d1151df4d5c4}{calculate\+Basic\+Spherical\+Harmonics\+Corrections} (const double time)
+\begin{DoxyCompactList}\small\item\em Function for calculating basic spherical harmonic coefficient corrections. \end{DoxyCompactList}\item 
+virtual std\+::pair$<$ Eigen\+::\+Matrix\+Xd, Eigen\+::\+Matrix\+Xd $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ad944298a2aaa69b32adcbb1243e99905}{calculate\+Spherical\+Harmonics\+Corrections} (const double time)
+\begin{DoxyCompactList}\small\item\em Derived function for calculating spherical harmonic coefficient corrections. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::complex$<$ double $>$ $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a1a189f3f9b2f735519842f5a939065fb}{get\+Love\+Numbers\+Of\+Degree} (const int degree)
+\begin{DoxyCompactList}\small\item\em Function to retrieve the love numbers at given degree. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ double $>$ $>$ $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a9e0d798403383edfea5f3a8e546e405f}{get\+Love\+Numbers} ()
+\begin{DoxyCompactList}\small\item\em Function to return all love numbers. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a7e52b6a1d0a419927f27e3fe5468a8d3}{reset\+Love\+Numbers\+Of\+Degree} (const std\+::vector$<$ std\+::complex$<$ double $>$ $>$ love\+Numbers, const int degree)
+\begin{DoxyCompactList}\small\item\em Function to reset the love numbers at given degree. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a7d18c02f68c969a278704db689631e2a}{get\+Deformed\+Body\+Reference\+Radius} ()
+\begin{DoxyCompactList}\small\item\em Function to return reference radius the spherical harmonic gravity field of deformed body. \end{DoxyCompactList}\item 
+boost\+::function$<$ double() $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_af3a99ebffc6c259fd662fd24d521aa2a}{get\+Deformed\+Body\+Mass\+Function} ()
+\begin{DoxyCompactList}\small\item\em Function to return the mass function of the deformed body. \end{DoxyCompactList}\item 
+std\+::vector$<$ boost\+::function$<$ double() $>$ $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a8bcc5c47e45ad462c29946502ae53eea}{get\+Deforming\+Body\+Masses} ()
+\begin{DoxyCompactList}\small\item\em Function to return list of the mass functions of the bodies causing the deformation. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a53c768e15c3aeff85f74986dc8a9567c}{get\+Deforming\+Bodies} ()
+\begin{DoxyCompactList}\small\item\em Function to return list of the names of the bodies causing the deformation. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Vector6d(const double) $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ad4126a4f0fc3ebe5c0387a0825701ce9}{get\+Deformed\+Body\+State\+Function} ()
+\begin{DoxyCompactList}\small\item\em Function to return the state function of the deformed body. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Quaterniond(const double) $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_acf37c94f155bef85a68f6bb2f5dd870b}{get\+Deformed\+Body\+Orientation\+Function} ()
+\item 
+std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector6d(const double) $>$ $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a27b0a1a1a38f110929aaca4e88216b70}{get\+Deforming\+Body\+State\+Functions} ()
+\begin{DoxyCompactList}\small\item\em Function to return list of the state functions of the bodies causing the deformation. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a7639715b2180ffa04ca76032c0b99860}{get\+Concatenated\+Deforming\+Bodies} ()
+\begin{DoxyCompactList}\small\item\em Get a string with the concatenation of all the bodies causing the deformation. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aeb4ea086378d1254b6ece9355401a894}{get\+Current\+Cosine\+Corrections} ()
+\begin{DoxyCompactList}\small\item\em Function to return the current corrections to the cosine coefficients. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a849347887a7736bf139052146f708727}{get\+Current\+Sine\+Corrections} ()
+\begin{DoxyCompactList}\small\item\em Function to return the current corrections to the sine coefficients. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aa4a8b7924134fed07f596b6b43df9472}{add\+Basic\+Solid\+Body\+Tide\+Corrections} (Eigen\+::\+Matrix\+Xd \&c\+Term\+Corrections, Eigen\+::\+Matrix\+Xd \&s\+Term\+Corrections)
+\begin{DoxyCompactList}\small\item\em Calculates basic solid body gravity field corrections due to single body. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a5026f7ed54fa6d1a60367a0b981913af}{set\+Body\+Geometry\+Parameters} (const int body\+Index, const double evaluation\+Time)
+\begin{DoxyCompactList}\small\item\em Sets current properties (mass state) of body causing tidal deformation. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a62c60cf127ad2a396a51b4c0733c7b72}{update\+Tidal\+Amplitude\+And\+Argument} (const int degree, const int order)
+\begin{DoxyCompactList}\small\item\em Calculate tidal amplitude and argument at current degree and order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ boost\+::function$<$ void(Eigen\+::\+Matrix\+Xd \&, Eigen\+::\+Matrix\+Xd \&) $>$ $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aa875438d3e5e31a16b45c0009975954a}{correction\+Functions}
+\begin{DoxyCompactList}\small\item\em List of functions to call for calculating spherical harmonic corrections. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Vector6d(const double) $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a5d3b0e842e58504144a2e2e2ef96c90a}{deformed\+Body\+State\+Function\+\_\+}
+\begin{DoxyCompactList}\small\item\em Function returning state of body being deformed. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Quaterniond(const double) $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a2ee3f417b4324455f45a353282759149}{deformed\+Body\+Orientation\+Function\+\_\+}
+\begin{DoxyCompactList}\small\item\em Function providing rotation from inertial to body being deformed-\/fixed frame. \end{DoxyCompactList}\item 
+std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector6d(const double) $>$ $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aa007e8a4b2423b484bf49eb46dac39c9}{deforming\+Body\+State\+Functions\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of state functions of body causing deformations. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_abe0acaf654a36869a9abd709a09607b0}{deformed\+Body\+Reference\+Radius\+\_\+}
+\item 
+boost\+::function$<$ double() $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ab12ae5c98ab6a31a2bbff565f1dc157c}{deformed\+Body\+Mass\+\_\+}
+\begin{DoxyCompactList}\small\item\em Function returning mass of body being deformed. \end{DoxyCompactList}\item 
+std\+::vector$<$ boost\+::function$<$ double() $>$ $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a001d0bd58615e93f73ec72849d03298d}{deforming\+Body\+Masses\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of functions returning masses of bodies causing deformation. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ double $>$ $>$ $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a87a672e14855c8795103eaa4830cf501}{love\+Numbers\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of love numbers for each degree and order. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a6da84354b18ad22f89fa49e720dd34a9}{deforming\+Bodies\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of names of bodies causing deformation. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a40b77e066ce4933eb7a4d9ca5fd27b76}{mass\+Ratio}
+\begin{DoxyCompactList}\small\item\em Ratio of masses in current calculation step. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a6ba4ba751b56f7f653a7370371f5ab21}{radius\+Ratio}
+\begin{DoxyCompactList}\small\item\em Ratio of radii in current calculation step. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a6646e9fc25280255248df924c8fcc6ea}{radius\+Ratio\+Power}
+\begin{DoxyCompactList}\small\item\em Ratio of radii in current calculation step to the power (degree+1). \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_adf49e1f8b787b2d8f3df4a8f9ba07d19}{sine\+Of\+Latitude}
+\begin{DoxyCompactList}\small\item\em Sine of latitude of currently considered body in current calculation step. \end{DoxyCompactList}\item 
+std\+::complex$<$ double $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aaf20605f78a1e71fff58a82e047b721d}{i\+Longitude}
+\begin{DoxyCompactList}\small\item\em Longitude of currently considered body times i in current calculation step. \end{DoxyCompactList}\item 
+std\+::complex$<$ double $>$ \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aace888d4e6e5dde87704145b40913294}{tide\+Argument}
+\begin{DoxyCompactList}\small\item\em Current argument of the tide. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a6b196974e5ec21765cbf3d0c6054be11}{tide\+Amplitude}
+\begin{DoxyCompactList}\small\item\em Current amplitude of the tide. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ae4df43a455c3c408c467e55de0c2684b}{deformed\+Body\+Position}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ae4df43a455c3c408c467e55de0c2684b}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ae4df43a455c3c408c467e55de0c2684b}
+
+\begin{DoxyCompactList}\small\item\em Current position of body being deformed. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aa3d565d7ddcb5e355b934d6e25b8ed55}{to\+Deformed\+Body\+Frame\+Rotation}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aa3d565d7ddcb5e355b934d6e25b8ed55}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aa3d565d7ddcb5e355b934d6e25b8ed55}
+
+\begin{DoxyCompactList}\small\item\em Current rotation to frame fixed to deformed body. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a598b40a06e03913ae2694d0108af03fc}{current\+Cosine\+Corrections\+\_\+}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a598b40a06e03913ae2694d0108af03fc}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a598b40a06e03913ae2694d0108af03fc}
+
+\begin{DoxyCompactList}\small\item\em Tidal corrections to cosine coefficients at current calculation step. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ae3ef8888c89778135bd861f6b2b08bcc}{current\+Sine\+Corrections\+\_\+}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ae3ef8888c89778135bd861f6b2b08bcc}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ae3ef8888c89778135bd861f6b2b08bcc}
+
+\begin{DoxyCompactList}\small\item\em Tidal corrections to sine coefficients at current calculation step. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to calculate first-\/order solid body tide gravity field variations on a single body raised by any number of bodies up to any degree and order. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\index{Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations(const boost\+::function$<$ Eigen\+::\+Vector6d(const double) $>$ deformed\+Body\+State\+Function, const boost\+::function$<$ Eigen\+::\+Quaterniond(const double) $>$ deformed\+Body\+Orientation\+Function, const std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector6d(const double) $>$ $>$ deforming\+Body\+State\+Functions, const double deformed\+Body\+Reference\+Radius, const boost\+::function$<$ double() $>$ deformed\+Body\+Mass, const std\+::vector$<$ boost\+::function$<$ double() $>$ $>$ deforming\+Body\+Masses, const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ double $>$ $>$ $>$ love\+Numbers, const std\+::vector$<$ std\+::string $>$ deforming\+Bodies)}{BasicSolidBodyTideGravityFieldVariations(const boost::function< Eigen::Vector6d(const double) > deformedBodyStateFunction, const boost::function< Eigen::Quaterniond(const double) > deformedBodyOrientationFunction, const std::vector< boost::function< Eigen::Vector6d(const double) > > deformingBodyStateFunctions, const double deformedBodyReferenceRadius, const boost::function< double() > deformedBodyMass, const std::vector< boost::function< double() > > deformingBodyMasses, const std::vector< std::vector< std::complex< double > > > loveNumbers, const std::vector< std::string > deformingBodies)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ Eigen\+::\+Vector6d(const double) $>$}]{deformed\+Body\+State\+Function, }
+\item[{const boost\+::function$<$ Eigen\+::\+Quaterniond(const double) $>$}]{deformed\+Body\+Orientation\+Function, }
+\item[{const std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector6d(const double) $>$ $>$}]{deforming\+Body\+State\+Functions, }
+\item[{const double}]{deformed\+Body\+Reference\+Radius, }
+\item[{const boost\+::function$<$ double() $>$}]{deformed\+Body\+Mass, }
+\item[{const std\+::vector$<$ boost\+::function$<$ double() $>$ $>$}]{deforming\+Body\+Masses, }
+\item[{const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ double $>$ $>$ $>$}]{love\+Numbers, }
+\item[{const std\+::vector$<$ std\+::string $>$}]{deforming\+Bodies}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a698be5ee244e5444650db403b653102c}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a698be5ee244e5444650db403b653102c}
+
+
+Constructor. 
+
+Contructor, sets Love numbers and properties of deformed and tide-\/raising bodies. 
+\begin{DoxyParams}{Parameters}
+{\em deformed\+Body\+State\+Function} & Function returning state of body being deformed. \\
+\hline
+{\em deformed\+Body\+Orientation\+Function} & Function providing rotation from inertial to body being deformed-\/fixed frame \\
+\hline
+{\em deforming\+Body\+State\+Functions} & List of state functions of body causing deformations. \\
+\hline
+{\em deformed\+Body\+Reference\+Radius} & Reference radius (typically equatorial) of body being deformed\textquotesingle{}s spherical harmonic gravity field. \\
+\hline
+{\em deformed\+Body\+Mass} & Function returning mass (or gravitational parameter) of body being deformed. \\
+\hline
+{\em deforming\+Body\+Masses} & List of functions returning masses (or gravitational parameters) of bodies causing deformation. \\
+\hline
+{\em love\+Numbers} & List of love numbers for each degree and order. First vector level denotes degree (index 0 = degree 2), second vector level denotes order and must be of maximum size (love\+Numbers.\+size( ) + 2, i.\+e. maximum degree $>$= maximum order) \\
+\hline
+{\em deforming\+Bodies} & List of names of bodies causing deformation \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!````~Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{$\sim$\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\index{````~Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{$\sim$\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{$\sim$\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations()}{~BasicSolidBodyTideGravityFieldVariations()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::$\sim$\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a724a92f0468e38cee6359323d7fafa8b}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a724a92f0468e38cee6359323d7fafa8b}
+
+
+Destructor. 
+
+Destructor 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!add\+Basic\+Solid\+Body\+Tide\+Corrections@{add\+Basic\+Solid\+Body\+Tide\+Corrections}}
+\index{add\+Basic\+Solid\+Body\+Tide\+Corrections@{add\+Basic\+Solid\+Body\+Tide\+Corrections}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{add\+Basic\+Solid\+Body\+Tide\+Corrections(\+Eigen\+::\+Matrix\+Xd \&c\+Term\+Corrections, Eigen\+::\+Matrix\+Xd \&s\+Term\+Corrections)}{addBasicSolidBodyTideCorrections(Eigen::MatrixXd &cTermCorrections, Eigen::MatrixXd &sTermCorrections)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::add\+Basic\+Solid\+Body\+Tide\+Corrections (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Matrix\+Xd \&}]{c\+Term\+Corrections, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{s\+Term\+Corrections}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aa4a8b7924134fed07f596b6b43df9472}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aa4a8b7924134fed07f596b6b43df9472}
+
+
+Calculates basic solid body gravity field corrections due to single body. 
+
+Calculates basic solid body gravity field corrections for all degrees and orders set. The arguments are modified as they are passed by reference, through which the corrections are returned. Class variables denoting properties of currently considered body must have been set before this function is called. 
+\begin{DoxyParams}{Parameters}
+{\em c\+Term\+Corrections} & Corrections to cosine terms (passed by reference; correction added to input value). \\
+\hline
+{\em s\+Term\+Corrections} & Corrections to sine terms.\\
+\hline
+\end{DoxyParams}
+(passed by reference; correction added to input value). \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!calculate\+Basic\+Spherical\+Harmonics\+Corrections@{calculate\+Basic\+Spherical\+Harmonics\+Corrections}}
+\index{calculate\+Basic\+Spherical\+Harmonics\+Corrections@{calculate\+Basic\+Spherical\+Harmonics\+Corrections}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{calculate\+Basic\+Spherical\+Harmonics\+Corrections(const double time)}{calculateBasicSphericalHarmonicsCorrections(const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ Eigen\+::\+Matrix\+Xd, Eigen\+::\+Matrix\+Xd $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::calculate\+Basic\+Spherical\+Harmonics\+Corrections (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a531dcae6f842ada23679d1151df4d5c4}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a531dcae6f842ada23679d1151df4d5c4}
+
+
+Function for calculating basic spherical harmonic coefficient corrections. 
+
+Function for calculating spherical harmonic coefficient corrections.
+
+Function for calculating basic spherical harmonic coefficient corrections. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which variations are to be calculated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair of matrices containing variations in (cosine,sine) coefficients. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!calculate\+Spherical\+Harmonics\+Corrections@{calculate\+Spherical\+Harmonics\+Corrections}}
+\index{calculate\+Spherical\+Harmonics\+Corrections@{calculate\+Spherical\+Harmonics\+Corrections}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{calculate\+Spherical\+Harmonics\+Corrections(const double time)}{calculateSphericalHarmonicsCorrections(const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::pair$<$ Eigen\+::\+Matrix\+Xd, Eigen\+::\+Matrix\+Xd $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::calculate\+Spherical\+Harmonics\+Corrections (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ad944298a2aaa69b32adcbb1243e99905}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ad944298a2aaa69b32adcbb1243e99905}
+
+
+Derived function for calculating spherical harmonic coefficient corrections. 
+
+Derived function for calculating spherical harmonic coefficient corrections. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which variations are to be calculated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair of matrices containing variations in (cosine,sine) coefficients. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariations_ab42ff0b801e14ac4becc0619cc2a28d7}{tudat\+::gravitation\+::\+Gravity\+Field\+Variations}.
+
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!get\+Concatenated\+Deforming\+Bodies@{get\+Concatenated\+Deforming\+Bodies}}
+\index{get\+Concatenated\+Deforming\+Bodies@{get\+Concatenated\+Deforming\+Bodies}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{get\+Concatenated\+Deforming\+Bodies()}{getConcatenatedDeformingBodies()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::get\+Concatenated\+Deforming\+Bodies (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a7639715b2180ffa04ca76032c0b99860}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a7639715b2180ffa04ca76032c0b99860}
+
+
+Get a string with the concatenation of all the bodies causing the deformation. 
+
+Get a string with the concatenation of all the bodies causing the deformation. \begin{DoxyReturn}{Returns}
+A string with the concatenation of all the bodies causing the deformation. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!get\+Current\+Cosine\+Corrections@{get\+Current\+Cosine\+Corrections}}
+\index{get\+Current\+Cosine\+Corrections@{get\+Current\+Cosine\+Corrections}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{get\+Current\+Cosine\+Corrections()}{getCurrentCosineCorrections()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix\+Xd tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::get\+Current\+Cosine\+Corrections (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aeb4ea086378d1254b6ece9355401a894}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aeb4ea086378d1254b6ece9355401a894}
+
+
+Function to return the current corrections to the cosine coefficients. 
+
+Function to return the current corrections to the cosine coefficients (as calculated by current instance of this class). \begin{DoxyReturn}{Returns}
+Current corrections to the cosine coefficients. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!get\+Current\+Sine\+Corrections@{get\+Current\+Sine\+Corrections}}
+\index{get\+Current\+Sine\+Corrections@{get\+Current\+Sine\+Corrections}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{get\+Current\+Sine\+Corrections()}{getCurrentSineCorrections()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix\+Xd tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::get\+Current\+Sine\+Corrections (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a849347887a7736bf139052146f708727}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a849347887a7736bf139052146f708727}
+
+
+Function to return the current corrections to the sine coefficients. 
+
+Function to return the current corrections to the sine coefficients (as calculated by current instance of this class). \begin{DoxyReturn}{Returns}
+Current corrections to the sine coefficients. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!get\+Deformed\+Body\+Mass\+Function@{get\+Deformed\+Body\+Mass\+Function}}
+\index{get\+Deformed\+Body\+Mass\+Function@{get\+Deformed\+Body\+Mass\+Function}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{get\+Deformed\+Body\+Mass\+Function()}{getDeformedBodyMassFunction()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ double( ) $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::get\+Deformed\+Body\+Mass\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_af3a99ebffc6c259fd662fd24d521aa2a}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_af3a99ebffc6c259fd662fd24d521aa2a}
+
+
+Function to return the mass function of the deformed body. 
+
+Function to return the mass function of the deformed body. \begin{DoxyReturn}{Returns}
+Mass function of the deformed body. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!get\+Deformed\+Body\+Orientation\+Function@{get\+Deformed\+Body\+Orientation\+Function}}
+\index{get\+Deformed\+Body\+Orientation\+Function@{get\+Deformed\+Body\+Orientation\+Function}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{get\+Deformed\+Body\+Orientation\+Function()}{getDeformedBodyOrientationFunction()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ Eigen\+::\+Quaterniond( const double ) $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::get\+Deformed\+Body\+Orientation\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_acf37c94f155bef85a68f6bb2f5dd870b}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_acf37c94f155bef85a68f6bb2f5dd870b}
+Function to return the orientation function (rotation to body-\/fixed frame) of the deformed body.
+
+Function to return the orientation function (rotation to body-\/fixed frame) of the deformed body. \begin{DoxyReturn}{Returns}
+Orientation function (rotation to body-\/fixed frame) of the deformed body. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!get\+Deformed\+Body\+Reference\+Radius@{get\+Deformed\+Body\+Reference\+Radius}}
+\index{get\+Deformed\+Body\+Reference\+Radius@{get\+Deformed\+Body\+Reference\+Radius}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{get\+Deformed\+Body\+Reference\+Radius()}{getDeformedBodyReferenceRadius()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::get\+Deformed\+Body\+Reference\+Radius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a7d18c02f68c969a278704db689631e2a}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a7d18c02f68c969a278704db689631e2a}
+
+
+Function to return reference radius the spherical harmonic gravity field of deformed body. 
+
+Function to return reference radius (typically equatorial) the spherical harmonic gravity field of deformed body. \begin{DoxyReturn}{Returns}
+Reference radius body being deformed\textquotesingle{}s spherical harmonic gravity field. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!get\+Deformed\+Body\+State\+Function@{get\+Deformed\+Body\+State\+Function}}
+\index{get\+Deformed\+Body\+State\+Function@{get\+Deformed\+Body\+State\+Function}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{get\+Deformed\+Body\+State\+Function()}{getDeformedBodyStateFunction()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ Eigen\+::\+Vector6d( const double ) $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::get\+Deformed\+Body\+State\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ad4126a4f0fc3ebe5c0387a0825701ce9}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ad4126a4f0fc3ebe5c0387a0825701ce9}
+
+
+Function to return the state function of the deformed body. 
+
+Function to return the state function of the deformed body. \begin{DoxyReturn}{Returns}
+State function of the deformed body. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!get\+Deforming\+Bodies@{get\+Deforming\+Bodies}}
+\index{get\+Deforming\+Bodies@{get\+Deforming\+Bodies}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{get\+Deforming\+Bodies()}{getDeformingBodies()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::get\+Deforming\+Bodies (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a53c768e15c3aeff85f74986dc8a9567c}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a53c768e15c3aeff85f74986dc8a9567c}
+
+
+Function to return list of the names of the bodies causing the deformation. 
+
+Function to return list of the names of the bodies causing the deformation \begin{DoxyReturn}{Returns}
+List of the names of the bodies causing the deformation 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!get\+Deforming\+Body\+Masses@{get\+Deforming\+Body\+Masses}}
+\index{get\+Deforming\+Body\+Masses@{get\+Deforming\+Body\+Masses}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{get\+Deforming\+Body\+Masses()}{getDeformingBodyMasses()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ boost\+::function$<$ double( ) $>$ $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::get\+Deforming\+Body\+Masses (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a8bcc5c47e45ad462c29946502ae53eea}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a8bcc5c47e45ad462c29946502ae53eea}
+
+
+Function to return list of the mass functions of the bodies causing the deformation. 
+
+Function to return list of the mass functions of the bodies causing the deformation. \begin{DoxyReturn}{Returns}
+List of the mass functions of the bodies causing the deformation. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!get\+Deforming\+Body\+State\+Functions@{get\+Deforming\+Body\+State\+Functions}}
+\index{get\+Deforming\+Body\+State\+Functions@{get\+Deforming\+Body\+State\+Functions}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{get\+Deforming\+Body\+State\+Functions()}{getDeformingBodyStateFunctions()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector6d( const double ) $>$ $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::get\+Deforming\+Body\+State\+Functions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a27b0a1a1a38f110929aaca4e88216b70}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a27b0a1a1a38f110929aaca4e88216b70}
+
+
+Function to return list of the state functions of the bodies causing the deformation. 
+
+Function to return list of the state functions of the bodies causing the deformation. \begin{DoxyReturn}{Returns}
+List of the state functions of the bodies causing the deformation. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!get\+Love\+Numbers@{get\+Love\+Numbers}}
+\index{get\+Love\+Numbers@{get\+Love\+Numbers}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{get\+Love\+Numbers()}{getLoveNumbers()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ double $>$ $>$ $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::get\+Love\+Numbers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a9e0d798403383edfea5f3a8e546e405f}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a9e0d798403383edfea5f3a8e546e405f}
+
+
+Function to return all love numbers. 
+
+Function to return all love numbers, i.\+e. at all degrees and orders. \begin{DoxyReturn}{Returns}
+Complete set of available love numbers. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!get\+Love\+Numbers\+Of\+Degree@{get\+Love\+Numbers\+Of\+Degree}}
+\index{get\+Love\+Numbers\+Of\+Degree@{get\+Love\+Numbers\+Of\+Degree}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{get\+Love\+Numbers\+Of\+Degree(const int degree)}{getLoveNumbersOfDegree(const int degree)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::complex$<$ double $>$ $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::get\+Love\+Numbers\+Of\+Degree (
+\begin{DoxyParamCaption}
+\item[{const int}]{degree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a1a189f3f9b2f735519842f5a939065fb}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a1a189f3f9b2f735519842f5a939065fb}
+
+
+Function to retrieve the love numbers at given degree. 
+
+Function to retrieve the love numbers at given degree. Returns a vector containing (complex) love numbers at all orders in current degree. 
+\begin{DoxyParams}{Parameters}
+{\em degree} & Degree from which love numbers are to be retrieved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of love numbers (i$^\wedge$\{th\} entry representing i$^\wedge$\{th\} order in requested degree) containing love numbers at current degree. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!reset\+Love\+Numbers\+Of\+Degree@{reset\+Love\+Numbers\+Of\+Degree}}
+\index{reset\+Love\+Numbers\+Of\+Degree@{reset\+Love\+Numbers\+Of\+Degree}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{reset\+Love\+Numbers\+Of\+Degree(const std\+::vector$<$ std\+::complex$<$ double $>$ $>$ love\+Numbers, const int degree)}{resetLoveNumbersOfDegree(const std::vector< std::complex< double > > loveNumbers, const int degree)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::reset\+Love\+Numbers\+Of\+Degree (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::complex$<$ double $>$ $>$}]{love\+Numbers, }
+\item[{const int}]{degree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a7e52b6a1d0a419927f27e3fe5468a8d3}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a7e52b6a1d0a419927f27e3fe5468a8d3}
+
+
+Function to reset the love numbers at given degree. 
+
+Function to reset the love numbers at given degree. Input requires a vector containing (complex) love numbers at all orders in current degree. 
+\begin{DoxyParams}{Parameters}
+{\em degree} & Degree from which love numbers are to be retrieved. \\
+\hline
+{\em love\+Numbers} & Vector of love numbers (i$^\wedge$\{th\} entry representing i$^\wedge$\{th\} order in requested degree) containing new love numbers at current degree. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!set\+Body\+Geometry\+Parameters@{set\+Body\+Geometry\+Parameters}}
+\index{set\+Body\+Geometry\+Parameters@{set\+Body\+Geometry\+Parameters}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{set\+Body\+Geometry\+Parameters(const int body\+Index, const double evaluation\+Time)}{setBodyGeometryParameters(const int bodyIndex, const double evaluationTime)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::set\+Body\+Geometry\+Parameters (
+\begin{DoxyParamCaption}
+\item[{const int}]{body\+Index, }
+\item[{const double}]{evaluation\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a5026f7ed54fa6d1a60367a0b981913af}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a5026f7ed54fa6d1a60367a0b981913af}
+
+
+Sets current properties (mass state) of body causing tidal deformation. 
+
+Sets current properties (mass state) of body involved in tidal deformation.
+
+Sets current properties (mass state) of body causing tidal deformation. 
+\begin{DoxyParams}{Parameters}
+{\em body\+Index} & Index of body causing deformation for which data is to be retrieved. Deformed body is also updated to body\+Index = 0. \\
+\hline
+{\em evaluation\+Time} & \hyperlink{classtudat_1_1Time}{Time} at which properties are to be evaluated. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!update\+Tidal\+Amplitude\+And\+Argument@{update\+Tidal\+Amplitude\+And\+Argument}}
+\index{update\+Tidal\+Amplitude\+And\+Argument@{update\+Tidal\+Amplitude\+And\+Argument}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{update\+Tidal\+Amplitude\+And\+Argument(const int degree, const int order)}{updateTidalAmplitudeAndArgument(const int degree, const int order)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::update\+Tidal\+Amplitude\+And\+Argument (
+\begin{DoxyParamCaption}
+\item[{const int}]{degree, }
+\item[{const int}]{order}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a62c60cf127ad2a396a51b4c0733c7b72}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a62c60cf127ad2a396a51b4c0733c7b72}
+
+
+Calculate tidal amplitude and argument at current degree and order. 
+
+Calculate tidal amplitude and argument at current degree and order. 
+\begin{DoxyParams}{Parameters}
+{\em degree} & Degree of tide. \\
+\hline
+{\em order} & Order of tide. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!correction\+Functions@{correction\+Functions}}
+\index{correction\+Functions@{correction\+Functions}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{correction\+Functions}{correctionFunctions}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ boost\+::function$<$ void( Eigen\+::\+Matrix\+Xd\&, Eigen\+::\+Matrix\+Xd\& ) $>$ $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::correction\+Functions\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aa875438d3e5e31a16b45c0009975954a}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aa875438d3e5e31a16b45c0009975954a}
+
+
+List of functions to call for calculating spherical harmonic corrections. 
+
+List of functions to call for calculating spherical harmonic corrections. Each function modifies Matrix\+Xd arguments (cosine, sine) as they are passed by reference, and adds the required (tidal) correction. \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!deformed\+Body\+Mass\+\_\+@{deformed\+Body\+Mass\+\_\+}}
+\index{deformed\+Body\+Mass\+\_\+@{deformed\+Body\+Mass\+\_\+}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{deformed\+Body\+Mass\+\_\+}{deformedBodyMass_}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ double( ) $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::deformed\+Body\+Mass\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ab12ae5c98ab6a31a2bbff565f1dc157c}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_ab12ae5c98ab6a31a2bbff565f1dc157c}
+
+
+Function returning mass of body being deformed. 
+
+Function returning mass of body being deformed. \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!deformed\+Body\+Orientation\+Function\+\_\+@{deformed\+Body\+Orientation\+Function\+\_\+}}
+\index{deformed\+Body\+Orientation\+Function\+\_\+@{deformed\+Body\+Orientation\+Function\+\_\+}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{deformed\+Body\+Orientation\+Function\+\_\+}{deformedBodyOrientationFunction_}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ Eigen\+::\+Quaterniond( const double ) $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::deformed\+Body\+Orientation\+Function\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a2ee3f417b4324455f45a353282759149}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a2ee3f417b4324455f45a353282759149}
+
+
+Function providing rotation from inertial to body being deformed-\/fixed frame. 
+
+Function providing rotation from inertial to body being deformed-\/fixed frame. \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!deformed\+Body\+Reference\+Radius\+\_\+@{deformed\+Body\+Reference\+Radius\+\_\+}}
+\index{deformed\+Body\+Reference\+Radius\+\_\+@{deformed\+Body\+Reference\+Radius\+\_\+}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{deformed\+Body\+Reference\+Radius\+\_\+}{deformedBodyReferenceRadius_}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::deformed\+Body\+Reference\+Radius\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_abe0acaf654a36869a9abd709a09607b0}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_abe0acaf654a36869a9abd709a09607b0}
+Reference radius (typically equatorial) of body being deformed\textquotesingle{}s spherical harmonic gravity field.
+
+Reference radius (typically equatorial) of body being deformed\textquotesingle{}s spherical harmonic gravity field. \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!deformed\+Body\+State\+Function\+\_\+@{deformed\+Body\+State\+Function\+\_\+}}
+\index{deformed\+Body\+State\+Function\+\_\+@{deformed\+Body\+State\+Function\+\_\+}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{deformed\+Body\+State\+Function\+\_\+}{deformedBodyStateFunction_}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ Eigen\+::\+Vector6d( const double ) $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::deformed\+Body\+State\+Function\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a5d3b0e842e58504144a2e2e2ef96c90a}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a5d3b0e842e58504144a2e2e2ef96c90a}
+
+
+Function returning state of body being deformed. 
+
+Function returning state of body being deformed. \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!deforming\+Bodies\+\_\+@{deforming\+Bodies\+\_\+}}
+\index{deforming\+Bodies\+\_\+@{deforming\+Bodies\+\_\+}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{deforming\+Bodies\+\_\+}{deformingBodies_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::deforming\+Bodies\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a6da84354b18ad22f89fa49e720dd34a9}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a6da84354b18ad22f89fa49e720dd34a9}
+
+
+List of names of bodies causing deformation. 
+
+List of names of bodies causing deformation. \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!deforming\+Body\+Masses\+\_\+@{deforming\+Body\+Masses\+\_\+}}
+\index{deforming\+Body\+Masses\+\_\+@{deforming\+Body\+Masses\+\_\+}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{deforming\+Body\+Masses\+\_\+}{deformingBodyMasses_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ boost\+::function$<$ double( ) $>$ $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::deforming\+Body\+Masses\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a001d0bd58615e93f73ec72849d03298d}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a001d0bd58615e93f73ec72849d03298d}
+
+
+List of functions returning masses of bodies causing deformation. 
+
+List of functions returning masses of bodies causing deformation. \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!deforming\+Body\+State\+Functions\+\_\+@{deforming\+Body\+State\+Functions\+\_\+}}
+\index{deforming\+Body\+State\+Functions\+\_\+@{deforming\+Body\+State\+Functions\+\_\+}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{deforming\+Body\+State\+Functions\+\_\+}{deformingBodyStateFunctions_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector6d( const double ) $>$ $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::deforming\+Body\+State\+Functions\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aa007e8a4b2423b484bf49eb46dac39c9}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aa007e8a4b2423b484bf49eb46dac39c9}
+
+
+List of state functions of body causing deformations. 
+
+List of state functions of body causing deformations. \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!i\+Longitude@{i\+Longitude}}
+\index{i\+Longitude@{i\+Longitude}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{i\+Longitude}{iLongitude}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::complex$<$ double $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::i\+Longitude\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aaf20605f78a1e71fff58a82e047b721d}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aaf20605f78a1e71fff58a82e047b721d}
+
+
+Longitude of currently considered body times i in current calculation step. 
+
+i (sqrt(-\/1)) times longitude of body causing deformation in frame fixed to body being deformed in current calculation step. \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!love\+Numbers\+\_\+@{love\+Numbers\+\_\+}}
+\index{love\+Numbers\+\_\+@{love\+Numbers\+\_\+}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{love\+Numbers\+\_\+}{loveNumbers_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ double $>$ $>$ $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::love\+Numbers\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a87a672e14855c8795103eaa4830cf501}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a87a672e14855c8795103eaa4830cf501}
+
+
+List of love numbers for each degree and order. 
+
+List of love numbers for each degree and order. First vector level denotes degree (index 0 = degree 2), second vector level must be of size (love\+Numbers.\+size( ) + 2, i.\+e. maximum degree == maximum order. \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!mass\+Ratio@{mass\+Ratio}}
+\index{mass\+Ratio@{mass\+Ratio}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{mass\+Ratio}{massRatio}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::mass\+Ratio\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a40b77e066ce4933eb7a4d9ca5fd27b76}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a40b77e066ce4933eb7a4d9ca5fd27b76}
+
+
+Ratio of masses in current calculation step. 
+
+Ratio of masses of body causing deformation to body being deformed in current calculation step. \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!radius\+Ratio@{radius\+Ratio}}
+\index{radius\+Ratio@{radius\+Ratio}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{radius\+Ratio}{radiusRatio}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::radius\+Ratio\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a6ba4ba751b56f7f653a7370371f5ab21}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a6ba4ba751b56f7f653a7370371f5ab21}
+
+
+Ratio of radii in current calculation step. 
+
+Ratio of equatorial radius of body being deformed over distance between center of body being deformed to center of body causing deformation in current calculation step \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!radius\+Ratio\+Power@{radius\+Ratio\+Power}}
+\index{radius\+Ratio\+Power@{radius\+Ratio\+Power}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{radius\+Ratio\+Power}{radiusRatioPower}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::radius\+Ratio\+Power\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a6646e9fc25280255248df924c8fcc6ea}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a6646e9fc25280255248df924c8fcc6ea}
+
+
+Ratio of radii in current calculation step to the power (degree+1). 
+
+Ratio of equatorial radius of body being deformed over distance between center of body being deformed to center of body causing deformation, to the power (degree+1), in current calculation step \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!sine\+Of\+Latitude@{sine\+Of\+Latitude}}
+\index{sine\+Of\+Latitude@{sine\+Of\+Latitude}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{sine\+Of\+Latitude}{sineOfLatitude}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::sine\+Of\+Latitude\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_adf49e1f8b787b2d8f3df4a8f9ba07d19}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_adf49e1f8b787b2d8f3df4a8f9ba07d19}
+
+
+Sine of latitude of currently considered body in current calculation step. 
+
+Sine of latitude of body causing deformation in frame fixed to body being deformed in current calculation step. \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!tide\+Amplitude@{tide\+Amplitude}}
+\index{tide\+Amplitude@{tide\+Amplitude}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{tide\+Amplitude}{tideAmplitude}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::tide\+Amplitude\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a6b196974e5ec21765cbf3d0c6054be11}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_a6b196974e5ec21765cbf3d0c6054be11}
+
+
+Current amplitude of the tide. 
+
+Current amplitude of the tide, to be used as input to calculate\+Solid\+Body\+Tide\+Single\+Coefficient\+Set\+Correction\+From\+Amplitude. \index{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}!tide\+Argument@{tide\+Argument}}
+\index{tide\+Argument@{tide\+Argument}!tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations@{tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations}}
+\subsubsection[{\texorpdfstring{tide\+Argument}{tideArgument}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::complex$<$ double $>$ tudat\+::gravitation\+::\+Basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations\+::tide\+Argument\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aace888d4e6e5dde87704145b40913294}{}\label{classtudat_1_1gravitation_1_1BasicSolidBodyTideGravityFieldVariations_aace888d4e6e5dde87704145b40913294}
+
+
+Current argument of the tide. 
+
+Current argument of the tide, to be used as input to calculate\+Solid\+Body\+Tide\+Single\+Coefficient\+Set\+Correction\+From\+Amplitude, modulates the tide as exp( -\/tide\+Argument). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Gravitation/basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Gravitation/basic\+Solid\+Body\+Tide\+Gravity\+Field\+Variations.\+cpp\end{DoxyCompactItemize}

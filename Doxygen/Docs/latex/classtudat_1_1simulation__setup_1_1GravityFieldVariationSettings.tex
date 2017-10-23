@@ -1,0 +1,116 @@
+\hypertarget{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings}{}\section{tudat\+:\+:simulation\+\_\+setup\+:\+:Gravity\+Field\+Variation\+Settings Class Reference}
+\label{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings}\index{tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings}}
+
+
+Base class for defining settings for gravity field variations.  
+
+
+
+
+{\ttfamily \#include $<$create\+Gravity\+Field\+Variations.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:simulation\+\_\+setup\+:\+:Gravity\+Field\+Variation\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_a7bbe8bedf9065f592dad15b251071992}{Gravity\+Field\+Variation\+Settings} (const gravitation\+::\+Body\+Deformation\+Types body\+Deformation\+Type, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings}{Model\+Interpolation\+Settings} $>$ interpolator\+Settings=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_a17e41bc6135c61efa9c744f4113dbee3}{$\sim$\+Gravity\+Field\+Variation\+Settings} ()\hypertarget{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_a17e41bc6135c61efa9c744f4113dbee3}{}\label{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_a17e41bc6135c61efa9c744f4113dbee3}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+gravitation\+::\+Body\+Deformation\+Types \hyperlink{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_acee7cd815d479636cd2f5818da7169ea}{get\+Body\+Deformation\+Type} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve type of gravity field variation to be used. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings}{Model\+Interpolation\+Settings} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_ab00af425ca496794a2f3b0f3449f7719}{get\+Interpolator\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve settings that are to be used to create an interpolator for the gravity field variations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+gravitation\+::\+Body\+Deformation\+Types \hyperlink{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_a0ca6fcefc85945e00280718409b4e05c}{body\+Deformation\+Type\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_a0ca6fcefc85945e00280718409b4e05c}{}\label{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_a0ca6fcefc85945e00280718409b4e05c}
+
+\begin{DoxyCompactList}\small\item\em Type of gravity field variation to be used. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1simulation__setup_1_1ModelInterpolationSettings}{Model\+Interpolation\+Settings} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_adbe509504009ea40cc9d664894ec29ec}{interpolator\+Settings\+\_\+}
+\begin{DoxyCompactList}\small\item\em Settings that are to be used to create an interpolator for the gravity field variations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for defining settings for gravity field variations. 
+
+Base class (non-\/functiona;) for defining settings for gravity field variations. Each type fo gravity field variations requires its own dedicated derived class, in which the properties to be used for the specific model are to be defined. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings}!Gravity\+Field\+Variation\+Settings@{Gravity\+Field\+Variation\+Settings}}
+\index{Gravity\+Field\+Variation\+Settings@{Gravity\+Field\+Variation\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings}}
+\subsubsection[{\texorpdfstring{Gravity\+Field\+Variation\+Settings(const gravitation\+::\+Body\+Deformation\+Types body\+Deformation\+Type, const boost\+::shared\+\_\+ptr$<$ Model\+Interpolation\+Settings $>$ interpolator\+Settings=\+N\+U\+L\+L)}{GravityFieldVariationSettings(const gravitation::BodyDeformationTypes bodyDeformationType, const boost::shared_ptr< ModelInterpolationSettings > interpolatorSettings=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings\+::\+Gravity\+Field\+Variation\+Settings (
+\begin{DoxyParamCaption}
+\item[{const gravitation\+::\+Body\+Deformation\+Types}]{body\+Deformation\+Type, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Model\+Interpolation\+Settings} $>$}]{interpolator\+Settings = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_a7bbe8bedf9065f592dad15b251071992}{}\label{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_a7bbe8bedf9065f592dad15b251071992}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em body\+Deformation\+Type} & Type of gravity field variation to be used. \\
+\hline
+{\em interpolator\+Settings} & Settings that are to be used to create an interpolator for the gravity field variations immediately upon creation (to be used during propagation). Default is N\+U\+LL, in which no interpolation is used, and the model is evaluated during propagation. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings}!get\+Body\+Deformation\+Type@{get\+Body\+Deformation\+Type}}
+\index{get\+Body\+Deformation\+Type@{get\+Body\+Deformation\+Type}!tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Body\+Deformation\+Type()}{getBodyDeformationType()}}]{\setlength{\rightskip}{0pt plus 5cm}gravitation\+::\+Body\+Deformation\+Types tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings\+::get\+Body\+Deformation\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_acee7cd815d479636cd2f5818da7169ea}{}\label{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_acee7cd815d479636cd2f5818da7169ea}
+
+
+Function to retrieve type of gravity field variation to be used. 
+
+Function to retrieve type of gravity field variation to be used. \begin{DoxyReturn}{Returns}
+Type of gravity field variation to be used. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings}!get\+Interpolator\+Settings@{get\+Interpolator\+Settings}}
+\index{get\+Interpolator\+Settings@{get\+Interpolator\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Interpolator\+Settings()}{getInterpolatorSettings()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf Model\+Interpolation\+Settings} $>$ tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings\+::get\+Interpolator\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_ab00af425ca496794a2f3b0f3449f7719}{}\label{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_ab00af425ca496794a2f3b0f3449f7719}
+
+
+Function to retrieve settings that are to be used to create an interpolator for the gravity field variations. 
+
+Function to retrieve settings that are to be used to create an interpolator for the gravity field variations
+
+\begin{DoxyReturn}{Returns}
+Settings that are to be used to create an interpolator for the gravity field variations (if not N\+U\+LL) 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings}!interpolator\+Settings\+\_\+@{interpolator\+Settings\+\_\+}}
+\index{interpolator\+Settings\+\_\+@{interpolator\+Settings\+\_\+}!tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings}}
+\subsubsection[{\texorpdfstring{interpolator\+Settings\+\_\+}{interpolatorSettings_}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf Model\+Interpolation\+Settings} $>$ tudat\+::simulation\+\_\+setup\+::\+Gravity\+Field\+Variation\+Settings\+::interpolator\+Settings\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_adbe509504009ea40cc9d664894ec29ec}{}\label{classtudat_1_1simulation__setup_1_1GravityFieldVariationSettings_adbe509504009ea40cc9d664894ec29ec}
+
+
+Settings that are to be used to create an interpolator for the gravity field variations. 
+
+Settings that are to be used to create an interpolator for the gravity field variations immediately upon creation. If N\+U\+LL, no interpolation is used, and the model is evaluated during propagation. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Environment\+Setup/create\+Gravity\+Field\+Variations.\+h\end{DoxyCompactItemize}

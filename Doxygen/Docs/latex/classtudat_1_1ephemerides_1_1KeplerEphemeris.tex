@@ -1,0 +1,108 @@
+\hypertarget{classtudat_1_1ephemerides_1_1KeplerEphemeris}{}\section{tudat\+:\+:ephemerides\+:\+:Kepler\+Ephemeris Class Reference}
+\label{classtudat_1_1ephemerides_1_1KeplerEphemeris}\index{tudat\+::ephemerides\+::\+Kepler\+Ephemeris@{tudat\+::ephemerides\+::\+Kepler\+Ephemeris}}
+
+
+{\ttfamily \#include $<$kepler\+Ephemeris.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:ephemerides\+:\+:Kepler\+Ephemeris\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classtudat_1_1ephemerides_1_1KeplerEphemeris__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:ephemerides\+:\+:Kepler\+Ephemeris\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classtudat_1_1ephemerides_1_1KeplerEphemeris__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1ephemerides_1_1KeplerEphemeris_ab2333125f79d592d29243b62200a2132}{Kepler\+Ephemeris} (const Eigen\+::\+Vector6d \&initial\+State\+In\+Keplerian\+Elements, const double epoch\+Of\+Initial\+State, const double central\+Body\+Gravitational\+Parameter, const std\+::string \&reference\+Frame\+Origin=\char`\"{}S\+SB\char`\"{}, const std\+::string \&reference\+Frame\+Orientation=\char`\"{}E\+C\+L\+I\+P\+J2000\char`\"{}, const double root\+Finder\+Absolute\+Tolerance=200.\+0 $\ast$std\+::numeric\+\_\+limits$<$ double $>$\+::epsilon(), const double root\+Finder\+Maximum\+Number\+Of\+Iterations=1000.\+0)
+\begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector6d \hyperlink{classtudat_1_1ephemerides_1_1KeplerEphemeris_a75c1764cd02061e2de18b09202e479e5}{get\+Cartesian\+State} (const double seconds\+Since\+Epoch)
+\begin{DoxyCompactList}\small\item\em Function to get state from ephemeris. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classtudat_1_1ephemerides_1_1Ephemeris}{Ephemeris} derived class that calculates the Cartesian position as a function of time assuming a Kepler orbit.
+
+\hyperlink{classtudat_1_1ephemerides_1_1Ephemeris}{Ephemeris} derived class that calculates the Cartesian position as a function of time assuming a Kepler orbit. In this class, both the Kepler propagation and conversion to Cartesian coordinates is done internally using precomputed values of the initial Kepler elements, thereby reducing computation time compared to succesively using the propagate\+Kepler\+Orbit or convert\+Keplerian\+To\+Cartesian\+Elements functions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::ephemerides\+::\+Kepler\+Ephemeris@{tudat\+::ephemerides\+::\+Kepler\+Ephemeris}!Kepler\+Ephemeris@{Kepler\+Ephemeris}}
+\index{Kepler\+Ephemeris@{Kepler\+Ephemeris}!tudat\+::ephemerides\+::\+Kepler\+Ephemeris@{tudat\+::ephemerides\+::\+Kepler\+Ephemeris}}
+\subsubsection[{\texorpdfstring{Kepler\+Ephemeris(const Eigen\+::\+Vector6d \&initial\+State\+In\+Keplerian\+Elements, const double epoch\+Of\+Initial\+State, const double central\+Body\+Gravitational\+Parameter, const std\+::string \&reference\+Frame\+Origin=""S\+SB"", const std\+::string \&reference\+Frame\+Orientation=""E\+C\+L\+I\+P\+J2000"", const double root\+Finder\+Absolute\+Tolerance=200.\+0 $\ast$std\+::numeric\+\_\+limits$<$ double $>$\+::epsilon(), const double root\+Finder\+Maximum\+Number\+Of\+Iterations=1000.\+0)}{KeplerEphemeris(const Eigen::Vector6d &initialStateInKeplerianElements, const double epochOfInitialState, const double centralBodyGravitationalParameter, const std::string &referenceFrameOrigin="SSB", const std::string &referenceFrameOrientation="ECLIPJ2000", const double rootFinderAbsoluteTolerance=200.0 *std::numeric_limits< double >::epsilon(), const double rootFinderMaximumNumberOfIterations=1000.0)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::ephemerides\+::\+Kepler\+Ephemeris\+::\+Kepler\+Ephemeris (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector6d \&}]{initial\+State\+In\+Keplerian\+Elements, }
+\item[{const double}]{epoch\+Of\+Initial\+State, }
+\item[{const double}]{central\+Body\+Gravitational\+Parameter, }
+\item[{const std\+::string \&}]{reference\+Frame\+Origin = {\ttfamily \char`\"{}SSB\char`\"{}}, }
+\item[{const std\+::string \&}]{reference\+Frame\+Orientation = {\ttfamily \char`\"{}ECLIPJ2000\char`\"{}}, }
+\item[{const double}]{root\+Finder\+Absolute\+Tolerance = {\ttfamily 200.0~$\ast$~std\+:\+:numeric\+\_\+limits$<$~double~$>$\+:\+:epsilon(~)}, }
+\item[{const double}]{root\+Finder\+Maximum\+Number\+Of\+Iterations = {\ttfamily 1000.0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1ephemerides_1_1KeplerEphemeris_ab2333125f79d592d29243b62200a2132}{}\label{classtudat_1_1ephemerides_1_1KeplerEphemeris_ab2333125f79d592d29243b62200a2132}
+
+
+Class constructor. 
+
+Class constructor, sets the characteristics of the Kepler orbit and the root finder used for converting mean to eccentric anomalies. 
+\begin{DoxyParams}{Parameters}
+{\em initial\+State\+In\+Keplerian\+Elements} & Kepler elements at time epoch\+Of\+Initial\+State. \\
+\hline
+{\em epoch\+Of\+Initial\+State} & \hyperlink{classtudat_1_1Time}{Time} at which initial\+State\+In\+Keplerian\+Elements represents the Keplerian state. \\
+\hline
+{\em central\+Body\+Gravitational\+Parameter} & Gravitational parameter of the central body that is used in the computations. \\
+\hline
+{\em reference\+Frame\+Origin} & Origin of reference frame (string identifier) (default S\+SB). \\
+\hline
+{\em reference\+Frame\+Orientation} & Orientation of reference frame (string identifier) (default E\+C\+L\+I\+P\+J000 \\
+\hline
+{\em root\+Finder\+Absolute\+Tolerance} & Convergence tolerance for root finder used to convert mean to eccentric anomaly on each call to get\+Cartesian\+State (default 200$\ast$epsilon). \\
+\hline
+{\em root\+Finder\+Maximum\+Number\+Of\+Iterations} & Maximum iteration for root finder used to convert mean to eccentric anomaly on each call to get\+Cartesian\+State (default 1000). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::ephemerides\+::\+Kepler\+Ephemeris@{tudat\+::ephemerides\+::\+Kepler\+Ephemeris}!get\+Cartesian\+State@{get\+Cartesian\+State}}
+\index{get\+Cartesian\+State@{get\+Cartesian\+State}!tudat\+::ephemerides\+::\+Kepler\+Ephemeris@{tudat\+::ephemerides\+::\+Kepler\+Ephemeris}}
+\subsubsection[{\texorpdfstring{get\+Cartesian\+State(const double seconds\+Since\+Epoch)}{getCartesianState(const double secondsSinceEpoch)}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector6d tudat\+::ephemerides\+::\+Kepler\+Ephemeris\+::get\+Cartesian\+State (
+\begin{DoxyParamCaption}
+\item[{const double}]{seconds\+Since\+Epoch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1ephemerides_1_1KeplerEphemeris_a75c1764cd02061e2de18b09202e479e5}{}\label{classtudat_1_1ephemerides_1_1KeplerEphemeris_a75c1764cd02061e2de18b09202e479e5}
+
+
+Function to get state from ephemeris. 
+
+Returns state from ephemeris at given time, assuming a purely Keplerian orbit 
+\begin{DoxyParams}{Parameters}
+{\em seconds\+Since\+Epoch} & Seconds since epoch at which ephemeris is to be evaluated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Keplerian orbit Cartesian state at given time. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1ephemerides_1_1Ephemeris_a9ffa2e6b00aa190385d87266bc6ca091}{tudat\+::ephemerides\+::\+Ephemeris}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Ephemerides/kepler\+Ephemeris.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Ephemerides/kepler\+Ephemeris.\+cpp\end{DoxyCompactItemize}

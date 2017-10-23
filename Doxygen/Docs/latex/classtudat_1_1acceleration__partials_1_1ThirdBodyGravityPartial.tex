@@ -1,0 +1,504 @@
+\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial}{}\section{tudat\+:\+:acceleration\+\_\+partials\+:\+:Third\+Body\+Gravity\+Partial$<$ Direct\+Gravity\+Partial $>$ Class Template Reference}
+\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial}\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial$<$ Direct\+Gravity\+Partial $>$@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial$<$ Direct\+Gravity\+Partial $>$}}
+
+
+Class to calculate the partials of a third-\/body gravitational acceleration w.\+r.\+t. parameters and states.  
+
+
+
+
+{\ttfamily \#include $<$third\+Body\+Gravity\+Partial.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:acceleration\+\_\+partials\+:\+:Third\+Body\+Gravity\+Partial$<$ Direct\+Gravity\+Partial $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:acceleration\+\_\+partials\+:\+:Third\+Body\+Gravity\+Partial$<$ Direct\+Gravity\+Partial $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a2a037fc3041209eb1e90c6c81eadf74a}{Third\+Body\+Gravity\+Partial} (const boost\+::shared\+\_\+ptr$<$ Direct\+Gravity\+Partial $>$ partial\+Of\+Direct\+Gravity\+On\+Body\+Undergoing\+Acceleration, const boost\+::shared\+\_\+ptr$<$ Direct\+Gravity\+Partial $>$ partial\+Of\+Direct\+Gravity\+On\+Central\+Body, const std\+::string \&accelerated\+Body, const std\+::string \&accelerating\+Body, const std\+::string \&central\+Body\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a780444d24c04f163289bc07270fb8cd5}{wrt\+Position\+Of\+Accelerated\+Body} (Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=0)
+\begin{DoxyCompactList}\small\item\em Function for calculating the partial of the acceleration w.\+r.\+t. the position of body undergoing acceleration.. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a860887635000af38bde2c6730314a312}{wrt\+Velocity\+Of\+Accelerated\+Body} (Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=3)
+\begin{DoxyCompactList}\small\item\em Function for calculating the partial of the acceleration w.\+r.\+t. the velocity of body undergoing acceleration.. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_aca6b0aa5f7ae9e0164de033242d10c53}{wrt\+Position\+Of\+Accelerating\+Body} (Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=0)
+\begin{DoxyCompactList}\small\item\em Function for calculating the partial of the acceleration w.\+r.\+t. the position of body exerting acceleration.. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_ad933d6220bef70a8ec12d7196903ed27}{wrt\+Velocity\+Of\+Accelerating\+Body} (Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=3)
+\begin{DoxyCompactList}\small\item\em Function for calculating the partial of the acceleration w.\+r.\+t. the velocity of body exerting acceleration.. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_aa5f364604521f6aba10598bf6f46d9de}{wrt\+Position\+Of\+Additional\+Body} (const std\+::string \&body\+Name, Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=0)
+\begin{DoxyCompactList}\small\item\em Function for calculating the partial of the acceleration w.\+r.\+t. the position of an additiona body. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a2a9b80a85c9a78946b4a021189956fd2}{wrt\+Velocity\+Of\+Additional\+Body} (const std\+::string \&body\+Name, Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=3)
+\begin{DoxyCompactList}\small\item\em Function for calculating the partial of the acceleration w.\+r.\+t. the velocity of an additiona body. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_ac3f7c8583585747b6ef086d860772c49}{is\+Acceleration\+Partial\+Wrt\+Additional\+Body\+Non\+Null} (const std\+::string \&body\+Name)
+\begin{DoxyCompactList}\small\item\em Function for checking whether the partial of the acceleration w.\+r.\+t. the state of an additional body is non-\/zero. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a904819ad358a8c3d663ad8ea0bfbdb43}{wrt\+Non\+Translational\+State\+Of\+Additional\+Body} (Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const std\+::pair$<$ std\+::string, std\+::string $>$ \&state\+Reference\+Point, const propagators\+::\+Integrated\+State\+Type integrated\+State\+Type)
+\begin{DoxyCompactList}\small\item\em Function for calculating the partial of the acceleration w.\+r.\+t. a non-\/translational integrated state. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a67018048ca499005a043b56db02e151e}{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State} (const std\+::pair$<$ std\+::string, std\+::string $>$ \&state\+Reference\+Point, const propagators\+::\+Integrated\+State\+Type integrated\+State\+Type)
+\begin{DoxyCompactList}\small\item\em Function for determining if the acceleration is dependent on a non-\/translational integrated state. \end{DoxyCompactList}\item 
+std\+::pair$<$ boost\+::function$<$ void(Eigen\+::\+Matrix\+Xd \&) $>$, int $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_aeef24c0471c57b34f1ae7f235f1920d8}{get\+Parameter\+Partial\+Function} (boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter}{estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ double $>$ $>$ parameter)
+\begin{DoxyCompactList}\small\item\em Function for setting up and retrieving a function returning a partial w.\+r.\+t. a double parameter. \end{DoxyCompactList}\item 
+std\+::pair$<$ boost\+::function$<$ void(Eigen\+::\+Matrix\+Xd \&) $>$, int $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_ac3487afc5a8fd57e4af4c55da1417bca}{get\+Parameter\+Partial\+Function} (boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter}{estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ Eigen\+::\+Vector\+Xd $>$ $>$ parameter)
+\begin{DoxyCompactList}\small\item\em Function for setting up and retrieving a function returning a partial w.\+r.\+t. a vector parameter. \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a06fe1d487449447bdb04053481e0fbcc}{set\+Parameter\+Partial\+Update\+Function} (boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter}{estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ double $>$ $>$ parameter)
+\begin{DoxyCompactList}\small\item\em Function to set a dependency of this partial object w.\+r.\+t. a given double parameter. \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_ae98c7bbf80bea9ecb8a72dc74604d5b9}{set\+Parameter\+Partial\+Update\+Function} (boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter}{estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ Eigen\+::\+Vector\+Xd $>$ $>$ parameter)
+\begin{DoxyCompactList}\small\item\em Function to set a dependency of this partial object w.\+r.\+t. a given vector parameter. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a466e34a3c5016283ca0d58b9b9408f36}{update} (const double current\+Time)
+\begin{DoxyCompactList}\small\item\em Function for updating partials w.\+r.\+t. the bodies\textquotesingle{} positions. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ Direct\+Gravity\+Partial $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a1a09e82fe8cbe0ec2469d9442a080628}{get\+Partial\+Of\+Direct\+Gravity\+On\+Body\+Undergoing\+Acceleration} ()
+\begin{DoxyCompactList}\small\item\em Function to get partial derivative object of direct acceleration from central\+Body\+Name on accelerated\+Body. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ Direct\+Gravity\+Partial $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_aa3461bb3cd137a718e93a15746e2a5b7}{get\+Partial\+Of\+Direct\+Gravity\+On\+Central\+Body} ()
+\begin{DoxyCompactList}\small\item\em Function to get partial derivative object of direct acceleration from accelerating\+Body on accelerated\+Body. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_abbc544d44045d36a2269690802716d8c}{get\+Central\+Body\+Name} ()
+\begin{DoxyCompactList}\small\item\em Function to get the name of central body w.\+r.\+t. which the acceleration is computed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a8ab2da8408951be11d80b9d75bb4562a}{reset\+Time\+Of\+Member\+Objects} ()\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a8ab2da8408951be11d80b9d75bb4562a}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a8ab2da8408951be11d80b9d75bb4562a}
+
+\begin{DoxyCompactList}\small\item\em Function to reset the constituent Direct\+Gravity\+Partial objects to the current time. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a17d59cc4c1186515740736ecd5c74e31}{update\+Parameter\+Partials\+Of\+Member\+Objects} ()\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a17d59cc4c1186515740736ecd5c74e31}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a17d59cc4c1186515740736ecd5c74e31}
+
+\begin{DoxyCompactList}\small\item\em Function to update the parameter partials of the constituent Direct\+Gravity\+Partial objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Direct\+Gravity\+Partial$>$\\*
+class tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial$<$ Direct\+Gravity\+Partial $>$}
+
+Class to calculate the partials of a third-\/body gravitational acceleration w.\+r.\+t. parameters and states. 
+
+Class to calculate the partials of a third-\/body gravitational acceleration w.\+r.\+t. parameters and states. This class may be used for any direct gravitational acceleration (central, spherical harmonic, mutual spherical harmonic, etc.), providin a generic third-\/body partial interface. The template parameter is the derived class of \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial}{Acceleration\+Partial} for the associated direct acceleration partial. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!Third\+Body\+Gravity\+Partial@{Third\+Body\+Gravity\+Partial}}
+\index{Third\+Body\+Gravity\+Partial@{Third\+Body\+Gravity\+Partial}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{Third\+Body\+Gravity\+Partial(const boost\+::shared\+\_\+ptr$<$ Direct\+Gravity\+Partial $>$ partial\+Of\+Direct\+Gravity\+On\+Body\+Undergoing\+Acceleration, const boost\+::shared\+\_\+ptr$<$ Direct\+Gravity\+Partial $>$ partial\+Of\+Direct\+Gravity\+On\+Central\+Body, const std\+::string \&accelerated\+Body, const std\+::string \&accelerating\+Body, const std\+::string \&central\+Body\+Name)}{ThirdBodyGravityPartial(const boost::shared_ptr< DirectGravityPartial > partialOfDirectGravityOnBodyUndergoingAcceleration, const boost::shared_ptr< DirectGravityPartial > partialOfDirectGravityOnCentralBody, const std::string &acceleratedBody, const std::string &acceleratingBody, const std::string &centralBodyName)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::{\bf Third\+Body\+Gravity\+Partial} (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ Direct\+Gravity\+Partial $>$}]{partial\+Of\+Direct\+Gravity\+On\+Body\+Undergoing\+Acceleration, }
+\item[{const boost\+::shared\+\_\+ptr$<$ Direct\+Gravity\+Partial $>$}]{partial\+Of\+Direct\+Gravity\+On\+Central\+Body, }
+\item[{const std\+::string \&}]{accelerated\+Body, }
+\item[{const std\+::string \&}]{accelerating\+Body, }
+\item[{const std\+::string \&}]{central\+Body\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a2a037fc3041209eb1e90c6c81eadf74a}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a2a037fc3041209eb1e90c6c81eadf74a}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em partial\+Of\+Direct\+Gravity\+On\+Body\+Undergoing\+Acceleration} & Partial derivative of direct acceleration from accelerating\+Body on accelerated\+Body. \\
+\hline
+{\em partial\+Of\+Direct\+Gravity\+On\+Central\+Body} & Partial derivative of direct acceleration from central\+Body\+Name on accelerated\+Body. \\
+\hline
+{\em accelerated\+Body} & Name of body undergoing acceleration \\
+\hline
+{\em accelerating\+Body} & Name of body exerting acceleration (third-\/body) \\
+\hline
+{\em central\+Body\+Name} & Name of central body w.\+r.\+t. which the acceleration is computed. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!get\+Central\+Body\+Name@{get\+Central\+Body\+Name}}
+\index{get\+Central\+Body\+Name@{get\+Central\+Body\+Name}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{get\+Central\+Body\+Name()}{getCentralBodyName()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ std\+::string {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::get\+Central\+Body\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_abbc544d44045d36a2269690802716d8c}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_abbc544d44045d36a2269690802716d8c}
+
+
+Function to get the name of central body w.\+r.\+t. which the acceleration is computed. 
+
+Function to get the name of central body w.\+r.\+t. which the acceleration is computed. \begin{DoxyReturn}{Returns}
+Name of central body w.\+r.\+t. which the acceleration is computed. 
+\end{DoxyReturn}
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!get\+Parameter\+Partial\+Function@{get\+Parameter\+Partial\+Function}}
+\index{get\+Parameter\+Partial\+Function@{get\+Parameter\+Partial\+Function}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{get\+Parameter\+Partial\+Function(boost\+::shared\+\_\+ptr$<$ estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ double $>$ $>$ parameter)}{getParameterPartialFunction(boost::shared_ptr< estimatable_parameters::EstimatableParameter< double > > parameter)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ std\+::pair$<$ boost\+::function$<$ void( Eigen\+::\+Matrix\+Xd\& ) $>$, int $>$ {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::get\+Parameter\+Partial\+Function (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ double $>$ $>$}]{parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_aeef24c0471c57b34f1ae7f235f1920d8}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_aeef24c0471c57b34f1ae7f235f1920d8}
+
+
+Function for setting up and retrieving a function returning a partial w.\+r.\+t. a double parameter. 
+
+Function for setting up and retrieving a function returning a partial w.\+r.\+t. a double parameter. Function returns empty function and zero size indicator for parameters with no dependency for current acceleration. 
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Parameter w.\+r.\+t. which partial is to be taken. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair of parameter partial function and number of columns in partial (0 for no dependency, 1 otherwise). 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1orbit__determination_1_1StateDerivativePartial_a7cb295f87ba66fc5fd06f824d57a986b}{tudat\+::orbit\+\_\+determination\+::\+State\+Derivative\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!get\+Parameter\+Partial\+Function@{get\+Parameter\+Partial\+Function}}
+\index{get\+Parameter\+Partial\+Function@{get\+Parameter\+Partial\+Function}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{get\+Parameter\+Partial\+Function(boost\+::shared\+\_\+ptr$<$ estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ Eigen\+::\+Vector\+Xd $>$ $>$ parameter)}{getParameterPartialFunction(boost::shared_ptr< estimatable_parameters::EstimatableParameter< Eigen::VectorXd > > parameter)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ std\+::pair$<$ boost\+::function$<$ void( Eigen\+::\+Matrix\+Xd\& ) $>$, int $>$ {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::get\+Parameter\+Partial\+Function (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ Eigen\+::\+Vector\+Xd $>$ $>$}]{parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_ac3487afc5a8fd57e4af4c55da1417bca}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_ac3487afc5a8fd57e4af4c55da1417bca}
+
+
+Function for setting up and retrieving a function returning a partial w.\+r.\+t. a vector parameter. 
+
+Function for setting up and retrieving a function returning a partial w.\+r.\+t. a vector parameter. Function returns empty function and zero size indicator for parameters with no dependency for current acceleration. 
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Parameter w.\+r.\+t. which partial is to be taken. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair of parameter partial function and number of columns in partial (0 for no dependency). 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1orbit__determination_1_1StateDerivativePartial_a89ee84b266831bc4aa563f22c4afacb5}{tudat\+::orbit\+\_\+determination\+::\+State\+Derivative\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!get\+Partial\+Of\+Direct\+Gravity\+On\+Body\+Undergoing\+Acceleration@{get\+Partial\+Of\+Direct\+Gravity\+On\+Body\+Undergoing\+Acceleration}}
+\index{get\+Partial\+Of\+Direct\+Gravity\+On\+Body\+Undergoing\+Acceleration@{get\+Partial\+Of\+Direct\+Gravity\+On\+Body\+Undergoing\+Acceleration}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{get\+Partial\+Of\+Direct\+Gravity\+On\+Body\+Undergoing\+Acceleration()}{getPartialOfDirectGravityOnBodyUndergoingAcceleration()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ boost\+::shared\+\_\+ptr$<$ Direct\+Gravity\+Partial $>$ {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::get\+Partial\+Of\+Direct\+Gravity\+On\+Body\+Undergoing\+Acceleration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a1a09e82fe8cbe0ec2469d9442a080628}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a1a09e82fe8cbe0ec2469d9442a080628}
+
+
+Function to get partial derivative object of direct acceleration from central\+Body\+Name on accelerated\+Body. 
+
+Function to get the partial derivative object of direct acceleration from central\+Body\+Name on accelerated\+Body. \begin{DoxyReturn}{Returns}
+Partial derivative object of direct acceleration from central\+Body\+Name on accelerated\+Body. 
+\end{DoxyReturn}
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!get\+Partial\+Of\+Direct\+Gravity\+On\+Central\+Body@{get\+Partial\+Of\+Direct\+Gravity\+On\+Central\+Body}}
+\index{get\+Partial\+Of\+Direct\+Gravity\+On\+Central\+Body@{get\+Partial\+Of\+Direct\+Gravity\+On\+Central\+Body}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{get\+Partial\+Of\+Direct\+Gravity\+On\+Central\+Body()}{getPartialOfDirectGravityOnCentralBody()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ boost\+::shared\+\_\+ptr$<$ Direct\+Gravity\+Partial $>$ {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::get\+Partial\+Of\+Direct\+Gravity\+On\+Central\+Body (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_aa3461bb3cd137a718e93a15746e2a5b7}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_aa3461bb3cd137a718e93a15746e2a5b7}
+
+
+Function to get partial derivative object of direct acceleration from accelerating\+Body on accelerated\+Body. 
+
+Function to get the partial derivative object of direct acceleration from accelerating\+Body on accelerated\+Body. \begin{DoxyReturn}{Returns}
+Partial derivative object of direct acceleration from accelerating\+Body on accelerated\+Body. 
+\end{DoxyReturn}
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!is\+Acceleration\+Partial\+Wrt\+Additional\+Body\+Non\+Null@{is\+Acceleration\+Partial\+Wrt\+Additional\+Body\+Non\+Null}}
+\index{is\+Acceleration\+Partial\+Wrt\+Additional\+Body\+Non\+Null@{is\+Acceleration\+Partial\+Wrt\+Additional\+Body\+Non\+Null}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{is\+Acceleration\+Partial\+Wrt\+Additional\+Body\+Non\+Null(const std\+::string \&body\+Name)}{isAccelerationPartialWrtAdditionalBodyNonNull(const std::string &bodyName)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ bool {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::is\+Acceleration\+Partial\+Wrt\+Additional\+Body\+Non\+Null (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{body\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_ac3f7c8583585747b6ef086d860772c49}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_ac3f7c8583585747b6ef086d860772c49}
+
+
+Function for checking whether the partial of the acceleration w.\+r.\+t. the state of an additional body is non-\/zero. 
+
+Function for checking whether the partial of the acceleration w.\+r.\+t. the state of an additional body is non-\/zero 
+\begin{DoxyParams}{Parameters}
+{\em body\+Name} & Name of additional body. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if dependency exists 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_ae6278c8e04765a3f0485c57ea9d8c6f3}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State@{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State}}
+\index{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State@{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State(const std\+::pair$<$ std\+::string, std\+::string $>$ \&state\+Reference\+Point, const propagators\+::\+Integrated\+State\+Type integrated\+State\+Type)}{isStateDerivativeDependentOnIntegratedNonTranslationalState(const std::pair< std::string, std::string > &stateReferencePoint, const propagators::IntegratedStateType integratedStateType)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ bool {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State (
+\begin{DoxyParamCaption}
+\item[{const std\+::pair$<$ std\+::string, std\+::string $>$ \&}]{state\+Reference\+Point, }
+\item[{const propagators\+::\+Integrated\+State\+Type}]{integrated\+State\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a67018048ca499005a043b56db02e151e}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a67018048ca499005a043b56db02e151e}
+
+
+Function for determining if the acceleration is dependent on a non-\/translational integrated state. 
+
+Function for determining if the acceleration is dependent on a non-\/translational integrated state. 
+\begin{DoxyParams}{Parameters}
+{\em state\+Reference\+Point} & Reference point id of propagated state \\
+\hline
+{\em integrated\+State\+Type} & Type of propagated state for which dependency is to be determined. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if dependency exists (non-\/zero partial), false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_aac005cc281d426013544fcc77ec1b00d}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!set\+Parameter\+Partial\+Update\+Function@{set\+Parameter\+Partial\+Update\+Function}}
+\index{set\+Parameter\+Partial\+Update\+Function@{set\+Parameter\+Partial\+Update\+Function}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{set\+Parameter\+Partial\+Update\+Function(boost\+::shared\+\_\+ptr$<$ estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ double $>$ $>$ parameter)}{setParameterPartialUpdateFunction(boost::shared_ptr< estimatable_parameters::EstimatableParameter< double > > parameter)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ int {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::set\+Parameter\+Partial\+Update\+Function (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ double $>$ $>$}]{parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a06fe1d487449447bdb04053481e0fbcc}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a06fe1d487449447bdb04053481e0fbcc}
+
+
+Function to set a dependency of this partial object w.\+r.\+t. a given double parameter. 
+
+Function to set a dependency of this partial object w.\+r.\+t. a given double parameter. If a dependency exists, the given partial is recomputed on every call of update\+Parameter\+Partials. 
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Partial w.\+r.\+t. which dependency is to be checked and set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Size (number of columns) of parameter partial. Zero if no dependency, 1 otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1orbit__determination_1_1StateDerivativePartial_acc9f22ae122c0e3e0869ba236668d592}{tudat\+::orbit\+\_\+determination\+::\+State\+Derivative\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!set\+Parameter\+Partial\+Update\+Function@{set\+Parameter\+Partial\+Update\+Function}}
+\index{set\+Parameter\+Partial\+Update\+Function@{set\+Parameter\+Partial\+Update\+Function}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{set\+Parameter\+Partial\+Update\+Function(boost\+::shared\+\_\+ptr$<$ estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ Eigen\+::\+Vector\+Xd $>$ $>$ parameter)}{setParameterPartialUpdateFunction(boost::shared_ptr< estimatable_parameters::EstimatableParameter< Eigen::VectorXd > > parameter)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ int {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::set\+Parameter\+Partial\+Update\+Function (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ Eigen\+::\+Vector\+Xd $>$ $>$}]{parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_ae98c7bbf80bea9ecb8a72dc74604d5b9}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_ae98c7bbf80bea9ecb8a72dc74604d5b9}
+
+
+Function to set a dependency of this partial object w.\+r.\+t. a given vector parameter. 
+
+Function to set a dependency of this partial object w.\+r.\+t. a given vector parameter. If a dependency exists, the given partial is recomputed on every call of update\+Parameter\+Partials. 
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Partial w.\+r.\+t. which dependency is to be checked and set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Size (number of columns) of parameter partial. Zero if no dependency, size of parameter otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1orbit__determination_1_1StateDerivativePartial_a6413aebcc976f94f9b4eeb3acd539cf4}{tudat\+::orbit\+\_\+determination\+::\+State\+Derivative\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!update@{update}}
+\index{update@{update}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{update(const double current\+Time)}{update(const double currentTime)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ void {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::update (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a466e34a3c5016283ca0d58b9b9408f36}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a466e34a3c5016283ca0d58b9b9408f36}
+
+
+Function for updating partials w.\+r.\+t. the bodies\textquotesingle{} positions. 
+
+Function for updating common blocks of partial to current state. For the third body gravitational acceleration, the update functions of both constituent accelerations are updated. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Time} & \hyperlink{classtudat_1_1Time}{Time} at which partials are to be calculated \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1orbit__determination_1_1StateDerivativePartial_a6801a8f31cc0fcdb9679c2db6be3b157}{tudat\+::orbit\+\_\+determination\+::\+State\+Derivative\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!wrt\+Non\+Translational\+State\+Of\+Additional\+Body@{wrt\+Non\+Translational\+State\+Of\+Additional\+Body}}
+\index{wrt\+Non\+Translational\+State\+Of\+Additional\+Body@{wrt\+Non\+Translational\+State\+Of\+Additional\+Body}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Non\+Translational\+State\+Of\+Additional\+Body(\+Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const std\+::pair$<$ std\+::string, std\+::string $>$ \&state\+Reference\+Point, const propagators\+::\+Integrated\+State\+Type integrated\+State\+Type)}{wrtNonTranslationalStateOfAdditionalBody(Eigen::Block< Eigen::MatrixXd > partialMatrix, const std::pair< std::string, std::string > &stateReferencePoint, const propagators::IntegratedStateType integratedStateType)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ void {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::wrt\+Non\+Translational\+State\+Of\+Additional\+Body (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$}]{partial\+Matrix, }
+\item[{const std\+::pair$<$ std\+::string, std\+::string $>$ \&}]{state\+Reference\+Point, }
+\item[{const propagators\+::\+Integrated\+State\+Type}]{integrated\+State\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a904819ad358a8c3d663ad8ea0bfbdb43}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a904819ad358a8c3d663ad8ea0bfbdb43}
+
+
+Function for calculating the partial of the acceleration w.\+r.\+t. a non-\/translational integrated state. 
+
+Function for calculating the partial of the acceleration w.\+r.\+t. a non-\/translational integrated state and adding it to the existing partial block. 
+\begin{DoxyParams}{Parameters}
+{\em partial\+Matrix} & Block of partial derivatives of where current partial is to be added. \\
+\hline
+{\em state\+Reference\+Point} & Reference point id of propagated state \\
+\hline
+{\em integrated\+State\+Type} & Type of propagated state for which partial is to be computed. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_aaba8dd75dd1d18289a8fc2769d333c36}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!wrt\+Position\+Of\+Accelerated\+Body@{wrt\+Position\+Of\+Accelerated\+Body}}
+\index{wrt\+Position\+Of\+Accelerated\+Body@{wrt\+Position\+Of\+Accelerated\+Body}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Position\+Of\+Accelerated\+Body(\+Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=0)}{wrtPositionOfAcceleratedBody(Eigen::Block< Eigen::MatrixXd > partialMatrix, const bool addContribution=1, const int startRow=0, const int startColumn=0)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ void {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::wrt\+Position\+Of\+Accelerated\+Body (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$}]{partial\+Matrix, }
+\item[{const bool}]{add\+Contribution = {\ttfamily 1}, }
+\item[{const int}]{start\+Row = {\ttfamily 0}, }
+\item[{const int}]{start\+Column = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a780444d24c04f163289bc07270fb8cd5}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a780444d24c04f163289bc07270fb8cd5}
+
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the position of body undergoing acceleration.. 
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the position of body undergoing acceleration. Update( ) function must have been called during current time step before calling this function. \begin{DoxyReturn}{Returns}
+Partial derivative of acceleration w.\+r.\+t. position of body undergoing acceleration. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_a629ee1ab826d64e6493d1dbf0fe7586b}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!wrt\+Position\+Of\+Accelerating\+Body@{wrt\+Position\+Of\+Accelerating\+Body}}
+\index{wrt\+Position\+Of\+Accelerating\+Body@{wrt\+Position\+Of\+Accelerating\+Body}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Position\+Of\+Accelerating\+Body(\+Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=0)}{wrtPositionOfAcceleratingBody(Eigen::Block< Eigen::MatrixXd > partialMatrix, const bool addContribution=1, const int startRow=0, const int startColumn=0)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ void {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::wrt\+Position\+Of\+Accelerating\+Body (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$}]{partial\+Matrix, }
+\item[{const bool}]{add\+Contribution = {\ttfamily 1}, }
+\item[{const int}]{start\+Row = {\ttfamily 0}, }
+\item[{const int}]{start\+Column = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_aca6b0aa5f7ae9e0164de033242d10c53}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_aca6b0aa5f7ae9e0164de033242d10c53}
+
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the position of body exerting acceleration.. 
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the position of body exerting acceleration. Update( ) function must have been called during current time step before calling this function. \begin{DoxyReturn}{Returns}
+Partial derivative of acceleration w.\+r.\+t. position of body exerting acceleration. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_a779c9c208d2054d8425178f4ea8f6021}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!wrt\+Position\+Of\+Additional\+Body@{wrt\+Position\+Of\+Additional\+Body}}
+\index{wrt\+Position\+Of\+Additional\+Body@{wrt\+Position\+Of\+Additional\+Body}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Position\+Of\+Additional\+Body(const std\+::string \&body\+Name, Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=0)}{wrtPositionOfAdditionalBody(const std::string &bodyName, Eigen::Block< Eigen::MatrixXd > partialMatrix, const bool addContribution=1, const int startRow=0, const int startColumn=0)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ void {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::wrt\+Position\+Of\+Additional\+Body (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{body\+Name, }
+\item[{Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$}]{partial\+Matrix, }
+\item[{const bool}]{add\+Contribution = {\ttfamily 1}, }
+\item[{const int}]{start\+Row = {\ttfamily 0}, }
+\item[{const int}]{start\+Column = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_aa5f364604521f6aba10598bf6f46d9de}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_aa5f364604521f6aba10598bf6f46d9de}
+
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the position of an additiona body. 
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the position of an additional body (in addition to the body undergoing and exerting the acceleration) and adding it to the existing partial block. This function check if the requested additional body equals the central body name. Also, it checks whether either the direct or indirect acceleration depend on this additional body. The partial computation is then updated accordingly 
+\begin{DoxyParams}{Parameters}
+{\em body\+Name} & Name of additional body. \\
+\hline
+{\em partial\+Matrix} & Block of partial derivatives of acceleration w.\+r.\+t. Cartesian position of third body where current partial is to be added. \\
+\hline
+{\em add\+Contribution} & Variable denoting whether to return the partial itself (true) or the negative partial (false). \\
+\hline
+{\em start\+Row} & First row in partial\+Matrix block where the computed partial is to be added. \\
+\hline
+{\em start\+Column} & First column in partial\+Matrix block where the computed partial is to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_ab222ba1108201aa02e916c64ce82d599}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!wrt\+Velocity\+Of\+Accelerated\+Body@{wrt\+Velocity\+Of\+Accelerated\+Body}}
+\index{wrt\+Velocity\+Of\+Accelerated\+Body@{wrt\+Velocity\+Of\+Accelerated\+Body}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Velocity\+Of\+Accelerated\+Body(\+Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=3)}{wrtVelocityOfAcceleratedBody(Eigen::Block< Eigen::MatrixXd > partialMatrix, const bool addContribution=1, const int startRow=0, const int startColumn=3)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ void {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::wrt\+Velocity\+Of\+Accelerated\+Body (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$}]{partial\+Matrix, }
+\item[{const bool}]{add\+Contribution = {\ttfamily 1}, }
+\item[{const int}]{start\+Row = {\ttfamily 0}, }
+\item[{const int}]{start\+Column = {\ttfamily 3}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a860887635000af38bde2c6730314a312}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a860887635000af38bde2c6730314a312}
+
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the velocity of body undergoing acceleration.. 
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the velocity of body undergoing acceleration. Update( ) function must have been called during current time step before calling this function. \begin{DoxyReturn}{Returns}
+Partial derivative of acceleration w.\+r.\+t. velocity of body undergoing acceleration. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_ad3bb8ec281acf660baed8eb5127fcf5d}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!wrt\+Velocity\+Of\+Accelerating\+Body@{wrt\+Velocity\+Of\+Accelerating\+Body}}
+\index{wrt\+Velocity\+Of\+Accelerating\+Body@{wrt\+Velocity\+Of\+Accelerating\+Body}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Velocity\+Of\+Accelerating\+Body(\+Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=3)}{wrtVelocityOfAcceleratingBody(Eigen::Block< Eigen::MatrixXd > partialMatrix, const bool addContribution=1, const int startRow=0, const int startColumn=3)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ void {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::wrt\+Velocity\+Of\+Accelerating\+Body (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$}]{partial\+Matrix, }
+\item[{const bool}]{add\+Contribution = {\ttfamily 1}, }
+\item[{const int}]{start\+Row = {\ttfamily 0}, }
+\item[{const int}]{start\+Column = {\ttfamily 3}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_ad933d6220bef70a8ec12d7196903ed27}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_ad933d6220bef70a8ec12d7196903ed27}
+
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the velocity of body exerting acceleration.. 
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the velocity of body exerting acceleration. Update( ) function must have been called during current time step before calling this function. \begin{DoxyReturn}{Returns}
+Partial derivative of acceleration w.\+r.\+t. velocity of body exerting acceleration. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_ab411157f1ab0d7b8bdcb771024b4f5a9}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}!wrt\+Velocity\+Of\+Additional\+Body@{wrt\+Velocity\+Of\+Additional\+Body}}
+\index{wrt\+Velocity\+Of\+Additional\+Body@{wrt\+Velocity\+Of\+Additional\+Body}!tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Velocity\+Of\+Additional\+Body(const std\+::string \&body\+Name, Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=3)}{wrtVelocityOfAdditionalBody(const std::string &bodyName, Eigen::Block< Eigen::MatrixXd > partialMatrix, const bool addContribution=1, const int startRow=0, const int startColumn=3)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Direct\+Gravity\+Partial $>$ void {\bf tudat\+::acceleration\+\_\+partials\+::\+Third\+Body\+Gravity\+Partial}$<$ Direct\+Gravity\+Partial $>$\+::wrt\+Velocity\+Of\+Additional\+Body (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{body\+Name, }
+\item[{Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$}]{partial\+Matrix, }
+\item[{const bool}]{add\+Contribution = {\ttfamily 1}, }
+\item[{const int}]{start\+Row = {\ttfamily 0}, }
+\item[{const int}]{start\+Column = {\ttfamily 3}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a2a9b80a85c9a78946b4a021189956fd2}{}\label{classtudat_1_1acceleration__partials_1_1ThirdBodyGravityPartial_a2a9b80a85c9a78946b4a021189956fd2}
+
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the velocity of an additiona body. 
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the velocity of an additional body (in addition to the body undergoing and exerting the acceleration) and adding it to the existing partial block. This function check if the requested additional body equals the central body name. Also, it checks whether either the direct or indirect acceleration depend on this additional body. The partial computation is then updated accordingly 
+\begin{DoxyParams}{Parameters}
+{\em body\+Name} & Name of additional body. \\
+\hline
+{\em partial\+Matrix} & Block of partial derivatives of acceleration w.\+r.\+t. Cartesian position of third body where current partial is to be added. \\
+\hline
+{\em add\+Contribution} & Variable denoting whether to return the partial itself (true) or the negative partial (false). \\
+\hline
+{\em start\+Row} & First row in partial\+Matrix block where the computed partial is to be added. \\
+\hline
+{\em start\+Column} & First column in partial\+Matrix block where the computed partial is to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_a1566f99b2cfd42d523c06ee6c1559435}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Orbit\+Determination/\+Acceleration\+Partials/third\+Body\+Gravity\+Partial.\+h\end{DoxyCompactItemize}

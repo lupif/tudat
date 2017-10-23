@@ -1,0 +1,5 @@
+<map id="tudat::root_finders::termination_conditions::TerminationConditionBase&lt; ScalarType &gt;" name="tudat::root_finders::termination_conditions::TerminationConditionBase&lt; ScalarType &gt;">
+<area shape="rect" id="node2" href="$classtudat_1_1root__finders_1_1termination__conditions_1_1RootAbsoluteOrRelativeToleranceTerminationCondition.html" title="Absolute or relative tolerance for root termination condition. " alt="" coords="236,5,471,76"/>
+<area shape="rect" id="node3" href="$classtudat_1_1root__finders_1_1termination__conditions_1_1RootAbsoluteToleranceTerminationCondition.html" title="Absolute tolerance for root termination condition. " alt="" coords="236,100,471,171"/>
+<area shape="rect" id="node4" href="$classtudat_1_1root__finders_1_1termination__conditions_1_1RootRelativeToleranceTerminationCondition.html" title="Relative tolerance for root termination condition. " alt="" coords="238,195,469,265"/>
+</map>

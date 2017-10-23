@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1propagators_1_1IntegratedStateProcessor.html" title="Base class for settings how numerically integrated states are processed. " alt="" coords="5,49,215,105"/>
+<area shape="rect" id="node2" href="$classtudat_1_1propagators_1_1BodyMassIntegratedStateProcessor.html" title="Class used for processing numerically integrated masses of bodies. " alt="" coords="263,5,503,61"/>
+<area shape="rect" id="node3" href="$classtudat_1_1propagators_1_1TranslationalStateIntegratedStateProcessor.html" title="Class used for processing numerically integrated translational states. " alt="" coords="286,86,479,157"/>
+</map>

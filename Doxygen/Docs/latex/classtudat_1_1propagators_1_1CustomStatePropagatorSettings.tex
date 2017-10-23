@@ -1,0 +1,129 @@
+\hypertarget{classtudat_1_1propagators_1_1CustomStatePropagatorSettings}{}\section{tudat\+:\+:propagators\+:\+:Custom\+State\+Propagator\+Settings$<$ State\+Scalar\+Type, Time\+Type $>$ Class Template Reference}
+\label{classtudat_1_1propagators_1_1CustomStatePropagatorSettings}\index{tudat\+::propagators\+::\+Custom\+State\+Propagator\+Settings$<$ State\+Scalar\+Type, Time\+Type $>$@{tudat\+::propagators\+::\+Custom\+State\+Propagator\+Settings$<$ State\+Scalar\+Type, Time\+Type $>$}}
+
+
+Class used to provide settings for a custom state derivative model.  
+
+
+
+
+{\ttfamily \#include $<$propagation\+Settings.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:propagators\+:\+:Custom\+State\+Propagator\+Settings$<$ State\+Scalar\+Type, Time\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classtudat_1_1propagators_1_1CustomStatePropagatorSettings__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:propagators\+:\+:Custom\+State\+Propagator\+Settings$<$ State\+Scalar\+Type, Time\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classtudat_1_1propagators_1_1CustomStatePropagatorSettings__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ {\bfseries State\+Vector\+Type}\hypertarget{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_ab46c27a359ce424dd090619f5c3efa2d}{}\label{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_ab46c27a359ce424dd090619f5c3efa2d}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_a2fc6442292352bc3691476c6f043ceba}{Custom\+State\+Propagator\+Settings} (const boost\+::function$<$ State\+Scalar\+Type(const Time\+Type, const State\+Scalar\+Type) $>$ state\+Derivative\+Function, const State\+Scalar\+Type initial\+State, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1PropagationTerminationSettings}{Propagation\+Termination\+Settings} $>$ termination\+Settings, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$ dependent\+Variables\+To\+Save=boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$(), const double print\+Interval=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Constructor for scalar custom state. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_af950dd4a22f803acc16ee8cfc8897242}{Custom\+State\+Propagator\+Settings} (const boost\+::function$<$ State\+Vector\+Type(const Time\+Type, const State\+Vector\+Type \&) $>$ state\+Derivative\+Function, const Eigen\+::\+Vector\+Xd initial\+State, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1PropagationTerminationSettings}{Propagation\+Termination\+Settings} $>$ termination\+Settings, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$ dependent\+Variables\+To\+Save=boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$(), const double print\+Interval=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Constructor for vector custom state. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_a7031a1e5695f3be5b81615dd98fbe2d9}{$\sim$\+Custom\+State\+Propagator\+Settings} ()\hypertarget{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_a7031a1e5695f3be5b81615dd98fbe2d9}{}\label{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_a7031a1e5695f3be5b81615dd98fbe2d9}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::function$<$ State\+Vector\+Type(const Time\+Type, const State\+Vector\+Type \&) $>$ \hyperlink{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_a863667b49ff6c085bc7cb4e298c3a543}{state\+Derivative\+Function\+\_\+}\hypertarget{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_a863667b49ff6c085bc7cb4e298c3a543}{}\label{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_a863667b49ff6c085bc7cb4e298c3a543}
+
+\begin{DoxyCompactList}\small\item\em Function to compute the state derivative, as a function of current time and state. \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_a4f24f1b2ba2e9c1293225a13bc2fd317}{state\+Size\+\_\+}\hypertarget{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_a4f24f1b2ba2e9c1293225a13bc2fd317}{}\label{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_a4f24f1b2ba2e9c1293225a13bc2fd317}
+
+\begin{DoxyCompactList}\small\item\em Size of the state that is propagated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename State\+Scalar\+Type = double, typename Time\+Type = double$>$\\*
+class tudat\+::propagators\+::\+Custom\+State\+Propagator\+Settings$<$ State\+Scalar\+Type, Time\+Type $>$}
+
+Class used to provide settings for a custom state derivative model. 
+
+Class used to provide settings for a custom state derivative model. The custom state derivative function has to be defined by the user and provided as input here. It may depend on the current state, and any dependent variables may be computed for other state derivative models. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::propagators\+::\+Custom\+State\+Propagator\+Settings@{tudat\+::propagators\+::\+Custom\+State\+Propagator\+Settings}!Custom\+State\+Propagator\+Settings@{Custom\+State\+Propagator\+Settings}}
+\index{Custom\+State\+Propagator\+Settings@{Custom\+State\+Propagator\+Settings}!tudat\+::propagators\+::\+Custom\+State\+Propagator\+Settings@{tudat\+::propagators\+::\+Custom\+State\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{Custom\+State\+Propagator\+Settings(const boost\+::function$<$ State\+Scalar\+Type(const Time\+Type, const State\+Scalar\+Type) $>$ state\+Derivative\+Function, const State\+Scalar\+Type initial\+State, const boost\+::shared\+\_\+ptr$<$ Propagation\+Termination\+Settings $>$ termination\+Settings, const boost\+::shared\+\_\+ptr$<$ Dependent\+Variable\+Save\+Settings $>$ dependent\+Variables\+To\+Save=boost\+::shared\+\_\+ptr$<$ Dependent\+Variable\+Save\+Settings $>$(), const double print\+Interval=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{CustomStatePropagatorSettings(const boost::function< StateScalarType(const TimeType, const StateScalarType) > stateDerivativeFunction, const StateScalarType initialState, const boost::shared_ptr< PropagationTerminationSettings > terminationSettings, const boost::shared_ptr< DependentVariableSaveSettings > dependentVariablesToSave=boost::shared_ptr< DependentVariableSaveSettings >(), const double printInterval=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ {\bf tudat\+::propagators\+::\+Custom\+State\+Propagator\+Settings}$<$ State\+Scalar\+Type, Time\+Type $>$\+::{\bf Custom\+State\+Propagator\+Settings} (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ State\+Scalar\+Type(const Time\+Type, const State\+Scalar\+Type) $>$}]{state\+Derivative\+Function, }
+\item[{const State\+Scalar\+Type}]{initial\+State, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Propagation\+Termination\+Settings} $>$}]{termination\+Settings, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Dependent\+Variable\+Save\+Settings} $>$}]{dependent\+Variables\+To\+Save = {\ttfamily boost\+:\+:shared\+\_\+ptr$<$~{\bf Dependent\+Variable\+Save\+Settings}~$>$(~)}, }
+\item[{const double}]{print\+Interval = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_a2fc6442292352bc3691476c6f043ceba}{}\label{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_a2fc6442292352bc3691476c6f043ceba}
+
+
+Constructor for scalar custom state. 
+
+Constructor for scalar custom state 
+\begin{DoxyParams}{Parameters}
+{\em state\+Derivative\+Function} & Function to compute the state derivative, as a function of current time and state. \\
+\hline
+{\em initial\+State} & Initial state value of custom state \\
+\hline
+{\em termination\+Settings} & Settings for creating the object that checks whether the propagation is finished. \\
+\hline
+{\em dependent\+Variables\+To\+Save} & Settings for the dependent variables that are to be saved during propagation (default none). \\
+\hline
+{\em print\+Interval} & Variable indicating how often (once per print\+Interval\+\_\+ seconds or propagation independenty variable) the current state and time are to be printed to console (default never). \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::propagators\+::\+Custom\+State\+Propagator\+Settings@{tudat\+::propagators\+::\+Custom\+State\+Propagator\+Settings}!Custom\+State\+Propagator\+Settings@{Custom\+State\+Propagator\+Settings}}
+\index{Custom\+State\+Propagator\+Settings@{Custom\+State\+Propagator\+Settings}!tudat\+::propagators\+::\+Custom\+State\+Propagator\+Settings@{tudat\+::propagators\+::\+Custom\+State\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{Custom\+State\+Propagator\+Settings(const boost\+::function$<$ State\+Vector\+Type(const Time\+Type, const State\+Vector\+Type \&) $>$ state\+Derivative\+Function, const Eigen\+::\+Vector\+Xd initial\+State, const boost\+::shared\+\_\+ptr$<$ Propagation\+Termination\+Settings $>$ termination\+Settings, const boost\+::shared\+\_\+ptr$<$ Dependent\+Variable\+Save\+Settings $>$ dependent\+Variables\+To\+Save=boost\+::shared\+\_\+ptr$<$ Dependent\+Variable\+Save\+Settings $>$(), const double print\+Interval=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{CustomStatePropagatorSettings(const boost::function< StateVectorType(const TimeType, const StateVectorType &) > stateDerivativeFunction, const Eigen::VectorXd initialState, const boost::shared_ptr< PropagationTerminationSettings > terminationSettings, const boost::shared_ptr< DependentVariableSaveSettings > dependentVariablesToSave=boost::shared_ptr< DependentVariableSaveSettings >(), const double printInterval=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ {\bf tudat\+::propagators\+::\+Custom\+State\+Propagator\+Settings}$<$ State\+Scalar\+Type, Time\+Type $>$\+::{\bf Custom\+State\+Propagator\+Settings} (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ State\+Vector\+Type(const Time\+Type, const State\+Vector\+Type \&) $>$}]{state\+Derivative\+Function, }
+\item[{const Eigen\+::\+Vector\+Xd}]{initial\+State, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Propagation\+Termination\+Settings} $>$}]{termination\+Settings, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Dependent\+Variable\+Save\+Settings} $>$}]{dependent\+Variables\+To\+Save = {\ttfamily boost\+:\+:shared\+\_\+ptr$<$~{\bf Dependent\+Variable\+Save\+Settings}~$>$(~)}, }
+\item[{const double}]{print\+Interval = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_af950dd4a22f803acc16ee8cfc8897242}{}\label{classtudat_1_1propagators_1_1CustomStatePropagatorSettings_af950dd4a22f803acc16ee8cfc8897242}
+
+
+Constructor for vector custom state. 
+
+Constructor for vector custom state 
+\begin{DoxyParams}{Parameters}
+{\em state\+Derivative\+Function} & Function to compute the state derivative, as a function of current time and state. \\
+\hline
+{\em initial\+State} & Initial state value of custom state \\
+\hline
+{\em termination\+Settings} & Settings for creating the object that checks whether the propagation is finished. \\
+\hline
+{\em dependent\+Variables\+To\+Save} & Settings for the dependent variables that are to be saved during propagation (default none). \\
+\hline
+{\em print\+Interval} & Variable indicating how often (once per print\+Interval\+\_\+ seconds or propagation independenty variable) the current state and time are to be printed to console (default never). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/propagation\+Settings.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,113 @@
+\hypertarget{classtudat_1_1ephemerides_1_1SpiceEphemeris}{}\section{tudat\+:\+:ephemerides\+:\+:Spice\+Ephemeris Class Reference}
+\label{classtudat_1_1ephemerides_1_1SpiceEphemeris}\index{tudat\+::ephemerides\+::\+Spice\+Ephemeris@{tudat\+::ephemerides\+::\+Spice\+Ephemeris}}
+
+
+\hyperlink{classtudat_1_1ephemerides_1_1Ephemeris}{Ephemeris} derived class which retrieves the state of a body directly from the S\+P\+I\+CE library.  
+
+
+
+
+{\ttfamily \#include $<$spice\+Ephemeris.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:ephemerides\+:\+:Spice\+Ephemeris\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classtudat_1_1ephemerides_1_1SpiceEphemeris__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:ephemerides\+:\+:Spice\+Ephemeris\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classtudat_1_1ephemerides_1_1SpiceEphemeris__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1ephemerides_1_1SpiceEphemeris_aeaecc8bbda1e7c713872a34f980bdea8}{Spice\+Ephemeris} (const std\+::string \&target\+Body\+Name, const std\+::string \&observer\+Body\+Name, const bool correct\+For\+Stellar\+Abberation=true, const bool correct\+For\+Light\+Time\+Abberation=true, const bool converge\+Ligh\+Time\+Abberation=false, const std\+::string \&reference\+Frame\+Name=\char`\"{}E\+C\+L\+I\+P\+J2000\char`\"{}, const double reference\+Julian\+Day=basic\+\_\+astrodynamics\+::\+J\+U\+L\+I\+A\+N\+\_\+\+D\+A\+Y\+\_\+\+O\+N\+\_\+\+J2000)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector6d \hyperlink{classtudat_1_1ephemerides_1_1SpiceEphemeris_aef29e7e00cb70ad756d6c329f1edc712}{get\+Cartesian\+State} (const double seconds\+Since\+Epoch)
+\begin{DoxyCompactList}\small\item\em Get Cartesian state from ephemeris. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classtudat_1_1ephemerides_1_1Ephemeris}{Ephemeris} derived class which retrieves the state of a body directly from the S\+P\+I\+CE library. 
+
+\hyperlink{classtudat_1_1ephemerides_1_1Ephemeris}{Ephemeris} derived class which retrieves the state of a body directly from the S\+P\+I\+CE library. The body of which the ephemeris is to be retrieved, as well as the origin and orientation of the reference frame in which the states are returned, and any corrections that are applied, are defined once during object construction. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::ephemerides\+::\+Spice\+Ephemeris@{tudat\+::ephemerides\+::\+Spice\+Ephemeris}!Spice\+Ephemeris@{Spice\+Ephemeris}}
+\index{Spice\+Ephemeris@{Spice\+Ephemeris}!tudat\+::ephemerides\+::\+Spice\+Ephemeris@{tudat\+::ephemerides\+::\+Spice\+Ephemeris}}
+\subsubsection[{\texorpdfstring{Spice\+Ephemeris(const std\+::string \&target\+Body\+Name, const std\+::string \&observer\+Body\+Name, const bool correct\+For\+Stellar\+Abberation=true, const bool correct\+For\+Light\+Time\+Abberation=true, const bool converge\+Ligh\+Time\+Abberation=false, const std\+::string \&reference\+Frame\+Name=""E\+C\+L\+I\+P\+J2000"", const double reference\+Julian\+Day=basic\+\_\+astrodynamics\+::\+J\+U\+L\+I\+A\+N\+\_\+\+D\+A\+Y\+\_\+\+O\+N\+\_\+\+J2000)}{SpiceEphemeris(const std::string &targetBodyName, const std::string &observerBodyName, const bool correctForStellarAbberation=true, const bool correctForLightTimeAbberation=true, const bool convergeLighTimeAbberation=false, const std::string &referenceFrameName="ECLIPJ2000", const double referenceJulianDay=basic_astrodynamics::JULIAN_DAY_ON_J2000)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::ephemerides\+::\+Spice\+Ephemeris\+::\+Spice\+Ephemeris (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{target\+Body\+Name, }
+\item[{const std\+::string \&}]{observer\+Body\+Name, }
+\item[{const bool}]{correct\+For\+Stellar\+Abberation = {\ttfamily true}, }
+\item[{const bool}]{correct\+For\+Light\+Time\+Abberation = {\ttfamily true}, }
+\item[{const bool}]{converge\+Ligh\+Time\+Abberation = {\ttfamily false}, }
+\item[{const std\+::string \&}]{reference\+Frame\+Name = {\ttfamily \char`\"{}ECLIPJ2000\char`\"{}}, }
+\item[{const double}]{reference\+Julian\+Day = {\ttfamily basic\+\_\+astrodynamics\+:\+:JULIAN\+\_\+DAY\+\_\+ON\+\_\+J2000}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1ephemerides_1_1SpiceEphemeris_aeaecc8bbda1e7c713872a34f980bdea8}{}\label{classtudat_1_1ephemerides_1_1SpiceEphemeris_aeaecc8bbda1e7c713872a34f980bdea8}
+
+
+Constructor. 
+
+Constructor, sets the input variables for the calls to the spice function to retrieve state. 
+\begin{DoxyParams}{Parameters}
+{\em target\+Body\+Name} & Name of body of which the ephemeris is to be calculated. \\
+\hline
+{\em observer\+Body\+Name} & Name of body relative to which the ephemeris is to be calculated. \\
+\hline
+{\em correct\+For\+Stellar\+Abberation} & Boolean whether to correct for stellar Abberation in retrieved values of (observed state). \\
+\hline
+{\em correct\+For\+Light\+Time\+Abberation} & Boolean whether to correct for light time in retrieved values of (observed state). \\
+\hline
+{\em converge\+Ligh\+Time\+Abberation} & Boolean whether to use single iteration or max. 3 iterations for calculating light time. \\
+\hline
+{\em reference\+Frame\+Name} & Name of the reference frame in which the epehemeris is to be calculated. \\
+\hline
+{\em reference\+Julian\+Day} & Reference julian day w.\+r.\+t. which ephemeris is evaluated. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::ephemerides\+::\+Spice\+Ephemeris@{tudat\+::ephemerides\+::\+Spice\+Ephemeris}!get\+Cartesian\+State@{get\+Cartesian\+State}}
+\index{get\+Cartesian\+State@{get\+Cartesian\+State}!tudat\+::ephemerides\+::\+Spice\+Ephemeris@{tudat\+::ephemerides\+::\+Spice\+Ephemeris}}
+\subsubsection[{\texorpdfstring{get\+Cartesian\+State(const double seconds\+Since\+Epoch)}{getCartesianState(const double secondsSinceEpoch)}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector6d tudat\+::ephemerides\+::\+Spice\+Ephemeris\+::get\+Cartesian\+State (
+\begin{DoxyParamCaption}
+\item[{const double}]{seconds\+Since\+Epoch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1ephemerides_1_1SpiceEphemeris_aef29e7e00cb70ad756d6c329f1edc712}{}\label{classtudat_1_1ephemerides_1_1SpiceEphemeris_aef29e7e00cb70ad756d6c329f1edc712}
+
+
+Get Cartesian state from ephemeris. 
+
+Returns Cartesian state from ephemeris at given Julian day. 
+\begin{DoxyParams}{Parameters}
+{\em seconds\+Since\+Epoch} & Seconds since epoch at which ephemeris is to be evaluated.. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State from ephemeris. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1ephemerides_1_1Ephemeris_a9ffa2e6b00aa190385d87266bc6ca091}{tudat\+::ephemerides\+::\+Ephemeris}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+External/\+Spice\+Interface/spice\+Ephemeris.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+External/\+Spice\+Interface/spice\+Ephemeris.\+cpp\end{DoxyCompactItemize}

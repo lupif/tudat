@@ -1,0 +1,81 @@
+\hypertarget{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings}{}\section{tudat\+:\+:propagators\+:\+:Single\+Dependent\+Variable\+Save\+Settings Class Reference}
+\label{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings}\index{tudat\+::propagators\+::\+Single\+Dependent\+Variable\+Save\+Settings@{tudat\+::propagators\+::\+Single\+Dependent\+Variable\+Save\+Settings}}
+
+
+Functional base class for defining settings for dependent variables that are to be saved during propagation.  
+
+
+
+
+{\ttfamily \#include $<$propagation\+Output\+Settings.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:propagators\+:\+:Single\+Dependent\+Variable\+Save\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_aa6650f91fe97783597a849d06f84b47b}{Single\+Dependent\+Variable\+Save\+Settings} (const Propagation\+Dependent\+Variables variable\+Type, const std\+::string \&associated\+Body, const std\+::string \&secondary\+Body=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_a95c16db6f51b1c0c8c599bf33e0300f6}{$\sim$\+Single\+Dependent\+Variable\+Save\+Settings} ()\hypertarget{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_a95c16db6f51b1c0c8c599bf33e0300f6}{}\label{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_a95c16db6f51b1c0c8c599bf33e0300f6}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Propagation\+Dependent\+Variables \hyperlink{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_a5741e1816850ecd66dde134d26ecfeae}{variable\+Type\+\_\+}\hypertarget{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_a5741e1816850ecd66dde134d26ecfeae}{}\label{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_a5741e1816850ecd66dde134d26ecfeae}
+
+\begin{DoxyCompactList}\small\item\em Type of dependent variable that is to be saved. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_a75122aa26880a97151b0caa4cc54f786}{associated\+Body\+\_\+}\hypertarget{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_a75122aa26880a97151b0caa4cc54f786}{}\label{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_a75122aa26880a97151b0caa4cc54f786}
+
+\begin{DoxyCompactList}\small\item\em Body associated with dependent variable. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_ae753de13467b2d1b065651f3ba7c0633}{secondary\+Body\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functional base class for defining settings for dependent variables that are to be saved during propagation. 
+
+Functional base class for defining settings for dependent variables that are to be saved during propagation. Any dependent variable that requires additional information in addition to what can be provided here, should be defined by a dedicated derived class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::propagators\+::\+Single\+Dependent\+Variable\+Save\+Settings@{tudat\+::propagators\+::\+Single\+Dependent\+Variable\+Save\+Settings}!Single\+Dependent\+Variable\+Save\+Settings@{Single\+Dependent\+Variable\+Save\+Settings}}
+\index{Single\+Dependent\+Variable\+Save\+Settings@{Single\+Dependent\+Variable\+Save\+Settings}!tudat\+::propagators\+::\+Single\+Dependent\+Variable\+Save\+Settings@{tudat\+::propagators\+::\+Single\+Dependent\+Variable\+Save\+Settings}}
+\subsubsection[{\texorpdfstring{Single\+Dependent\+Variable\+Save\+Settings(const Propagation\+Dependent\+Variables variable\+Type, const std\+::string \&associated\+Body, const std\+::string \&secondary\+Body="""")}{SingleDependentVariableSaveSettings(const PropagationDependentVariables variableType, const std::string &associatedBody, const std::string &secondaryBody="")}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::propagators\+::\+Single\+Dependent\+Variable\+Save\+Settings\+::\+Single\+Dependent\+Variable\+Save\+Settings (
+\begin{DoxyParamCaption}
+\item[{const Propagation\+Dependent\+Variables}]{variable\+Type, }
+\item[{const std\+::string \&}]{associated\+Body, }
+\item[{const std\+::string \&}]{secondary\+Body = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_aa6650f91fe97783597a849d06f84b47b}{}\label{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_aa6650f91fe97783597a849d06f84b47b}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em variable\+Type} & Type of dependent variable that is to be saved. \\
+\hline
+{\em associated\+Body} & Body associated with dependent variable \\
+\hline
+{\em secondary\+Body} & Secondary body (not necessarilly required) w.\+r.\+t. which parameter is defined (e.\+g. relative position, velocity etc. is defined of associated\+Body w.\+r.\+t. secondary\+Body). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::propagators\+::\+Single\+Dependent\+Variable\+Save\+Settings@{tudat\+::propagators\+::\+Single\+Dependent\+Variable\+Save\+Settings}!secondary\+Body\+\_\+@{secondary\+Body\+\_\+}}
+\index{secondary\+Body\+\_\+@{secondary\+Body\+\_\+}!tudat\+::propagators\+::\+Single\+Dependent\+Variable\+Save\+Settings@{tudat\+::propagators\+::\+Single\+Dependent\+Variable\+Save\+Settings}}
+\subsubsection[{\texorpdfstring{secondary\+Body\+\_\+}{secondaryBody_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::propagators\+::\+Single\+Dependent\+Variable\+Save\+Settings\+::secondary\+Body\+\_\+}\hypertarget{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_ae753de13467b2d1b065651f3ba7c0633}{}\label{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings_ae753de13467b2d1b065651f3ba7c0633}
+Secondary body (not necessarilly required) w.\+r.\+t. which parameter is defined (e.\+g. relative position, velocity etc. is defined of associated\+Body w.\+r.\+t. secondary\+Body). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/propagation\+Output\+Settings.\+h\end{DoxyCompactItemize}

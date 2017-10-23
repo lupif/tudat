@@ -1,0 +1,5 @@
+<map id="tudat::basic_astrodynamics::AccelerationModel&lt; AccelerationDataType &gt;" name="tudat::basic_astrodynamics::AccelerationModel&lt; AccelerationDataType &gt;">
+<area shape="rect" id="node2" href="$classtudat_1_1electro__magnetism_1_1CannonBallRadiationPressureAcceleration.html" title="Cannon&#45;ball Radiation pressure acceleration model class. " alt="" coords="275,5,571,47"/>
+<area shape="rect" id="node3" href="$classtudat_1_1unit__tests_1_1AnotherDerivedAccelerationModel.html" title="Another acceleration model derived class. " alt="" coords="317,70,528,126"/>
+<area shape="rect" id="node4" href="$classtudat_1_1unit__tests_1_1DerivedAccelerationModel.html" title="Acceleration model derived class. " alt="" coords="335,150,510,206"/>
+</map>

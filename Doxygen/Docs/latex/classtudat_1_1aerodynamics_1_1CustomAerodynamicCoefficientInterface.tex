@@ -1,0 +1,149 @@
+\hypertarget{classtudat_1_1aerodynamics_1_1CustomAerodynamicCoefficientInterface}{}\section{tudat\+:\+:aerodynamics\+:\+:Custom\+Aerodynamic\+Coefficient\+Interface Class Reference}
+\label{classtudat_1_1aerodynamics_1_1CustomAerodynamicCoefficientInterface}\index{tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface}}
+
+
+{\ttfamily \#include $<$custom\+Aerodynamic\+Coefficient\+Interface.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:aerodynamics\+:\+:Custom\+Aerodynamic\+Coefficient\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classtudat_1_1aerodynamics_1_1CustomAerodynamicCoefficientInterface__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:aerodynamics\+:\+:Custom\+Aerodynamic\+Coefficient\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{classtudat_1_1aerodynamics_1_1CustomAerodynamicCoefficientInterface__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1aerodynamics_1_1CustomAerodynamicCoefficientInterface_ae2ba3219487bd5e0dfa9df55ec960953}{Custom\+Aerodynamic\+Coefficient\+Interface} (const boost\+::function$<$ Eigen\+::\+Vector3d(const std\+::vector$<$ double $>$ \&) $>$ force\+Coefficient\+Function, const boost\+::function$<$ Eigen\+::\+Vector3d(const std\+::vector$<$ double $>$ \&) $>$ moment\+Coefficient\+Function, const double reference\+Length, const double reference\+Area, const double lateral\+Reference\+Length, const Eigen\+::\+Vector3d \&moment\+Reference\+Point, const std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$ independent\+Variable\+Names, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=true, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=true)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1aerodynamics_1_1CustomAerodynamicCoefficientInterface_a7db4e8365b5b080439d046d074e7f46a}{Custom\+Aerodynamic\+Coefficient\+Interface} (const boost\+::function$<$ Eigen\+::\+Vector6d(const std\+::vector$<$ double $>$ \&) $>$ coefficient\+Function, const double reference\+Length, const double reference\+Area, const double lateral\+Reference\+Length, const Eigen\+::\+Vector3d \&moment\+Reference\+Point, const std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$ independent\+Variable\+Names, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=true, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=true)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classtudat_1_1aerodynamics_1_1CustomAerodynamicCoefficientInterface_acaea0cdace6817da63eccc5c33a3d5ee}{update\+Current\+Coefficients} (const std\+::vector$<$ double $>$ \&independent\+Variables)
+\begin{DoxyCompactList}\small\item\em Compute the aerodynamic coefficients at current flight condition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Aerodynamic coefficient interface taking function pointers providing aerodynamics coefficients as a function of independent variables (doubles).
+
+Aerodynamic coefficient interface taking function pointers providing aerodynamics coefficients as a function of independent variables (doubles). The origin of the coefficients or the nature of the independent variables is irrelevant for this class. A factory functios (create\+Constant\+Coefficient\+Aerodynamic\+Coefficient\+Interface) is provided in the create\+Flight\+Conditions file, which can be used to define constant coefficients. N\+O\+TE\+: Functionality of this class is tested in test\+\_\+aerodynamic\+\_\+coefficient\+\_\+generator test suite. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface}!Custom\+Aerodynamic\+Coefficient\+Interface@{Custom\+Aerodynamic\+Coefficient\+Interface}}
+\index{Custom\+Aerodynamic\+Coefficient\+Interface@{Custom\+Aerodynamic\+Coefficient\+Interface}!tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{Custom\+Aerodynamic\+Coefficient\+Interface(const boost\+::function$<$ Eigen\+::\+Vector3d(const std\+::vector$<$ double $>$ \&) $>$ force\+Coefficient\+Function, const boost\+::function$<$ Eigen\+::\+Vector3d(const std\+::vector$<$ double $>$ \&) $>$ moment\+Coefficient\+Function, const double reference\+Length, const double reference\+Area, const double lateral\+Reference\+Length, const Eigen\+::\+Vector3d \&moment\+Reference\+Point, const std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$ independent\+Variable\+Names, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=true, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=true)}{CustomAerodynamicCoefficientInterface(const boost::function< Eigen::Vector3d(const std::vector< double > &) > forceCoefficientFunction, const boost::function< Eigen::Vector3d(const std::vector< double > &) > momentCoefficientFunction, const double referenceLength, const double referenceArea, const double lateralReferenceLength, const Eigen::Vector3d &momentReferencePoint, const std::vector< AerodynamicCoefficientsIndependentVariables > independentVariableNames, const bool areCoefficientsInAerodynamicFrame=true, const bool areCoefficientsInNegativeAxisDirection=true)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface\+::\+Custom\+Aerodynamic\+Coefficient\+Interface (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ Eigen\+::\+Vector3d(const std\+::vector$<$ double $>$ \&) $>$}]{force\+Coefficient\+Function, }
+\item[{const boost\+::function$<$ Eigen\+::\+Vector3d(const std\+::vector$<$ double $>$ \&) $>$}]{moment\+Coefficient\+Function, }
+\item[{const double}]{reference\+Length, }
+\item[{const double}]{reference\+Area, }
+\item[{const double}]{lateral\+Reference\+Length, }
+\item[{const Eigen\+::\+Vector3d \&}]{moment\+Reference\+Point, }
+\item[{const std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$}]{independent\+Variable\+Names, }
+\item[{const bool}]{are\+Coefficients\+In\+Aerodynamic\+Frame = {\ttfamily true}, }
+\item[{const bool}]{are\+Coefficients\+In\+Negative\+Axis\+Direction = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1CustomAerodynamicCoefficientInterface_ae2ba3219487bd5e0dfa9df55ec960953}{}\label{classtudat_1_1aerodynamics_1_1CustomAerodynamicCoefficientInterface_ae2ba3219487bd5e0dfa9df55ec960953}
+
+
+Constructor. 
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em force\+Coefficient\+Function} & Function returning the aerodynamic force coefficients as function of the set of independent variables. \\
+\hline
+{\em moment\+Coefficient\+Function} & Function returning the aerodynamic force coefficients as function of the set of independent variables. \\
+\hline
+{\em reference\+Length} & Reference length with which aerodynamic moments (about x-\/ and z-\/ axes) are non-\/dimensionalized. \\
+\hline
+{\em reference\+Area} & Reference area with which aerodynamic forces and moments are non-\/dimensionalized. \\
+\hline
+{\em lateral\+Reference\+Length} & Reference length with which aerodynamic moments (about y-\/axis) is non-\/dimensionalized. \\
+\hline
+{\em moment\+Reference\+Point} & Point w.\+r.\+t. which aerodynamic moment is calculated. \\
+\hline
+{\em independent\+Variable\+Names} & Vector with identifiers for the physical meaning of each independent variable of the aerodynamic coefficients. \\
+\hline
+{\em are\+Coefficients\+In\+Aerodynamic\+Frame} & Boolean to define whether the aerodynamic coefficients are defined in the aerodynamic frame (lift, drag, side force) or in the body frame (typically denoted as Cx, Cy, Cz) (default true). \\
+\hline
+{\em are\+Coefficients\+In\+Negative\+Axis\+Direction} & Boolean to define whether the aerodynamic coefficients are positiver along tyhe positive axes of the body or aerodynamic frame (see are\+Coefficients\+In\+Aerodynamic\+Frame). Note that for (lift, drag, side force), the coefficients are typically defined in negative direction (default true). \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface}!Custom\+Aerodynamic\+Coefficient\+Interface@{Custom\+Aerodynamic\+Coefficient\+Interface}}
+\index{Custom\+Aerodynamic\+Coefficient\+Interface@{Custom\+Aerodynamic\+Coefficient\+Interface}!tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{Custom\+Aerodynamic\+Coefficient\+Interface(const boost\+::function$<$ Eigen\+::\+Vector6d(const std\+::vector$<$ double $>$ \&) $>$ coefficient\+Function, const double reference\+Length, const double reference\+Area, const double lateral\+Reference\+Length, const Eigen\+::\+Vector3d \&moment\+Reference\+Point, const std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$ independent\+Variable\+Names, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=true, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=true)}{CustomAerodynamicCoefficientInterface(const boost::function< Eigen::Vector6d(const std::vector< double > &) > coefficientFunction, const double referenceLength, const double referenceArea, const double lateralReferenceLength, const Eigen::Vector3d &momentReferencePoint, const std::vector< AerodynamicCoefficientsIndependentVariables > independentVariableNames, const bool areCoefficientsInAerodynamicFrame=true, const bool areCoefficientsInNegativeAxisDirection=true)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface\+::\+Custom\+Aerodynamic\+Coefficient\+Interface (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ Eigen\+::\+Vector6d(const std\+::vector$<$ double $>$ \&) $>$}]{coefficient\+Function, }
+\item[{const double}]{reference\+Length, }
+\item[{const double}]{reference\+Area, }
+\item[{const double}]{lateral\+Reference\+Length, }
+\item[{const Eigen\+::\+Vector3d \&}]{moment\+Reference\+Point, }
+\item[{const std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$}]{independent\+Variable\+Names, }
+\item[{const bool}]{are\+Coefficients\+In\+Aerodynamic\+Frame = {\ttfamily true}, }
+\item[{const bool}]{are\+Coefficients\+In\+Negative\+Axis\+Direction = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1CustomAerodynamicCoefficientInterface_a7db4e8365b5b080439d046d074e7f46a}{}\label{classtudat_1_1aerodynamics_1_1CustomAerodynamicCoefficientInterface_a7db4e8365b5b080439d046d074e7f46a}
+
+
+Constructor. 
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em coefficient\+Function} & Function returning the concatenated aerodynamic force and moment coefficients as function of the set of independent variables. \\
+\hline
+{\em reference\+Length} & Reference length with which aerodynamic moments (about x-\/ and z-\/ axes) are non-\/dimensionalized. \\
+\hline
+{\em reference\+Area} & Reference area with which aerodynamic forces and moments are non-\/dimensionalized. \\
+\hline
+{\em lateral\+Reference\+Length} & Reference length with which aerodynamic moments (about y-\/axis) is non-\/dimensionalized. \\
+\hline
+{\em moment\+Reference\+Point} & Point w.\+r.\+t. which aerodynamic moment is calculated \\
+\hline
+{\em independent\+Variable\+Names} & Vector with identifiers for the physical meaning of each independent variable of the aerodynamic coefficients. \\
+\hline
+{\em are\+Coefficients\+In\+Aerodynamic\+Frame} & Boolean to define whether the aerodynamic coefficients are defined in the aerodynamic frame (lift, drag, side force) or in the body frame (typically denoted as Cx, Cy, Cz) (default true). \\
+\hline
+{\em are\+Coefficients\+In\+Negative\+Axis\+Direction} & Boolean to define whether the aerodynamic coefficients are positiver along tyhe positive axes of the body or aerodynamic frame (see are\+Coefficients\+In\+Aerodynamic\+Frame). Note that for (lift, drag, side force), the coefficients are typically defined in negative direction (default true). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface}!update\+Current\+Coefficients@{update\+Current\+Coefficients}}
+\index{update\+Current\+Coefficients@{update\+Current\+Coefficients}!tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{update\+Current\+Coefficients(const std\+::vector$<$ double $>$ \&independent\+Variables)}{updateCurrentCoefficients(const std::vector< double > &independentVariables)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface\+::update\+Current\+Coefficients (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{independent\+Variables}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1CustomAerodynamicCoefficientInterface_acaea0cdace6817da63eccc5c33a3d5ee}{}\label{classtudat_1_1aerodynamics_1_1CustomAerodynamicCoefficientInterface_acaea0cdace6817da63eccc5c33a3d5ee}
+
+
+Compute the aerodynamic coefficients at current flight condition. 
+
+Compute the aerodynamic coefficients at current flight conditions (independent variables). Input is a set of independent variables (doubles) which represent the variables from which the coefficients are calculated. The physical nature of these variables depends on the coefficient\+Function\+\_\+ variables. The size of the independent variable vector must be number\+Of\+Independent\+Variables\+\_\+ 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & Independent variables of force and moment coefficient determination implemented by derived class \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_af68d685a47306b6525ea06bec6e91880}{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Aerodynamics/custom\+Aerodynamic\+Coefficient\+Interface.\+h\end{DoxyCompactItemize}

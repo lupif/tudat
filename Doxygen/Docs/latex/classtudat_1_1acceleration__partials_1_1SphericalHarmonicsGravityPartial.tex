@@ -1,0 +1,494 @@
+\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial}{}\section{tudat\+:\+:acceleration\+\_\+partials\+:\+:Spherical\+Harmonics\+Gravity\+Partial Class Reference}
+\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial}\index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+
+
+Class for calculating partial derivatives of a spherical harmonic gravitational acceleration.  
+
+
+
+
+{\ttfamily \#include $<$spherical\+Harmonic\+Acceleration\+Partial.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:acceleration\+\_\+partials\+:\+:Spherical\+Harmonics\+Gravity\+Partial\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:acceleration\+\_\+partials\+:\+:Spherical\+Harmonics\+Gravity\+Partial\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a938149428ee9fcce9b6614c98c42492c}{Spherical\+Harmonics\+Gravity\+Partial} (const std\+::string \&accelerated\+Body, const std\+::string \&accelerating\+Body, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel}{gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model} $>$ acceleration\+Model, const observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Named\+List \&rotation\+Matrix\+Partials=observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Named\+List())
+\begin{DoxyCompactList}\small\item\em Contructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a2d502a2bd15dfc8a825d115ba5ea5b5e}{$\sim$\+Spherical\+Harmonics\+Gravity\+Partial} ()\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a2d502a2bd15dfc8a825d115ba5ea5b5e}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a2d502a2bd15dfc8a825d115ba5ea5b5e}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a572e602e9a2469577bb7a6e51f04136b}{wrt\+Position\+Of\+Accelerated\+Body} (Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=0)
+\begin{DoxyCompactList}\small\item\em Function for calculating the partial of the acceleration w.\+r.\+t. the position of body undergoing acceleration.. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a21f310f69efdfbdc36c1fc72ca8168fa}{wrt\+Position\+Of\+Accelerating\+Body} (Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=0)
+\begin{DoxyCompactList}\small\item\em Function for calculating the partial of the acceleration w.\+r.\+t. the position of body exerting acceleration. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aa5ca185ede62cdde73d250b44a3da219}{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State} (const std\+::pair$<$ std\+::string, std\+::string $>$ \&state\+Reference\+Point, const propagators\+::\+Integrated\+State\+Type integrated\+State\+Type)
+\begin{DoxyCompactList}\small\item\em Function for determining if the acceleration is dependent on a non-\/translational integrated state. \end{DoxyCompactList}\item 
+std\+::pair$<$ boost\+::function$<$ void(Eigen\+::\+Matrix\+Xd \&) $>$, int $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a6733d26c23c19cc3d6a15011c11a3a37}{get\+Parameter\+Partial\+Function} (boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter}{estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ double $>$ $>$ parameter)
+\begin{DoxyCompactList}\small\item\em Function for setting up and retrieving a function returning a partial w.\+r.\+t. a double parameter. \end{DoxyCompactList}\item 
+std\+::pair$<$ boost\+::function$<$ void(Eigen\+::\+Matrix\+Xd \&) $>$, int $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a4d0928a600be68a36aaa3bc717ca77dd}{get\+Parameter\+Partial\+Function} (boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter}{estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ Eigen\+::\+Vector\+Xd $>$ $>$ parameter)
+\begin{DoxyCompactList}\small\item\em Function for setting up and retrieving a function returning a partial w.\+r.\+t. a vector parameter. \end{DoxyCompactList}\item 
+std\+::pair$<$ boost\+::function$<$ void(Eigen\+::\+Matrix\+Xd \&) $>$, int $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a5b8b703c91451cb4a47023f57ac8d49e}{get\+Gravitational\+Parameter\+Partial\+Function} (const estimatable\+\_\+parameters\+::\+Estimateble\+Parameter\+Identifier \&parameter\+Id)
+\begin{DoxyCompactList}\small\item\em Function to create a function returning the current partial w.\+r.\+t. a gravitational parameter. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a581667836418faf4f1a6e9c79f898e6a}{update} (const double current\+Time=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Function for updating the partial object to current state and time. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a3e6fdd2d0f18c427449292d9c9ad197c}{wrt\+Gravitational\+Parameter\+Of\+Central\+Body} (Eigen\+::\+Matrix\+Xd \&partial\+Matrix)
+\begin{DoxyCompactList}\small\item\em Function to calculate the partial wrt the gravitational parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a2b5eb89afa2612b063dfc0fbcb8784ef}{wrt\+Cosine\+Coefficient\+Block} (const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices, Eigen\+::\+Matrix\+Xd \&partial\+Derivatives)
+\begin{DoxyCompactList}\small\item\em Function to calculate the partial of the acceleration wrt a set of cosine coefficients. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aa3edb5f17386c2e3274c8da5d1b52a4a}{wrt\+Sine\+Coefficient\+Block} (const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices, Eigen\+::\+Matrix\+Xd \&partial\+Derivatives)
+\begin{DoxyCompactList}\small\item\em Function to calculate the partial of the acceleration wrt a set of sine coefficients. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aef8a46d7ddbe55f690556eee4483b858}{wrt\+Rotation\+Model\+Parameter} (Eigen\+::\+Matrix\+Xd \&acceleration\+Partial, const estimatable\+\_\+parameters\+::\+Estimateble\+Parameters\+Enum parameter\+Type, const std\+::string \&secondary\+Identifier)
+\begin{DoxyCompactList}\small\item\em Function to calculate an acceleration partial wrt a rotational parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::function$<$ double() $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_af5bbc5041a1e2e97dee7f6b47e0275c6}{gravitational\+Parameter\+Function\+\_\+}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_af5bbc5041a1e2e97dee7f6b47e0275c6}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_af5bbc5041a1e2e97dee7f6b47e0275c6}
+
+\begin{DoxyCompactList}\small\item\em Function to return the gravitational parameter used for calculating the acceleration. \end{DoxyCompactList}\item 
+boost\+::function$<$ double() $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_af13065b25666380bf551ed5d74cb3441}{body\+Reference\+Radius\+\_\+}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_af13065b25666380bf551ed5d74cb3441}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_af13065b25666380bf551ed5d74cb3441}
+
+\begin{DoxyCompactList}\small\item\em Function to return the reference radius used for calculating the acceleration. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Matrix\+Xd() $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aef82f15fb42be5c72b82010ac76747bd}{cosine\+Coefficients\+\_\+}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aef82f15fb42be5c72b82010ac76747bd}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aef82f15fb42be5c72b82010ac76747bd}
+
+\begin{DoxyCompactList}\small\item\em Function to return the current cosine coefficients of the spherical harmonic gravity field. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Matrix\+Xd() $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a06df326054cba1a4500e5eeccf6a1df8}{sine\+Coefficients\+\_\+}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a06df326054cba1a4500e5eeccf6a1df8}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a06df326054cba1a4500e5eeccf6a1df8}
+
+\begin{DoxyCompactList}\small\item\em Function to return the current sine coefficients of the spherical harmonic gravity field. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__mathematics_1_1SphericalHarmonicsCache}{basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache} $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a0ec88f0ff9a7ae8115160915ce2f5598}{spherical\+Harmonic\+Cache\+\_\+}
+\item 
+boost\+::function$<$ Eigen\+::\+Vector3d() $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a2c3fce4210bcd50d4e8fddcb9123581d}{position\+Function\+Of\+Accelerated\+Body\+\_\+}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a2c3fce4210bcd50d4e8fddcb9123581d}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a2c3fce4210bcd50d4e8fddcb9123581d}
+
+\begin{DoxyCompactList}\small\item\em Function returning position of body undergoing acceleration. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Vector3d() $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_ae812c437f2c87d571e42d86fbb96e6df}{position\+Function\+Of\+Accelerating\+Body\+\_\+}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_ae812c437f2c87d571e42d86fbb96e6df}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_ae812c437f2c87d571e42d86fbb96e6df}
+
+\begin{DoxyCompactList}\small\item\em Function returning position of body exerting acceleration. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Matrix3d() $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_ae8ea87254f8c20a7343626c05a6823bf}{from\+Body\+Fixed\+To\+Integration\+Frame\+Rotation\+\_\+}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_ae8ea87254f8c20a7343626c05a6823bf}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_ae8ea87254f8c20a7343626c05a6823bf}
+
+\begin{DoxyCompactList}\small\item\em Function return current rotation from inertial frame to frame fixed to body exerting acceleration. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Matrix$<$ double, 3, 1 $>$) $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_ab7183d1c6d8306a7ea1b8890aed38be2}{acceleration\+Function\+\_\+}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_ab7183d1c6d8306a7ea1b8890aed38be2}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_ab7183d1c6d8306a7ea1b8890aed38be2}
+
+\begin{DoxyCompactList}\small\item\em Function to retrieve the current spherical harmonic acceleration. \end{DoxyCompactList}\item 
+boost\+::function$<$ void(const double) $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a3e659d0870f55c89d6c9254b43c4f21a}{update\+Function\+\_\+}
+\begin{DoxyCompactList}\small\item\em Function to update the acceleration to the current state and time. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a5cf1f88dd030daa8efe9caeb7fae3cd9}{current\+Cosine\+Coefficients\+\_\+}
+\begin{DoxyCompactList}\small\item\em Current cosine coefficients of the spherical harmonic gravity field. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a61efd1799c484094e1f2a3309817cee2}{current\+Sine\+Coefficients\+\_\+}
+\begin{DoxyCompactList}\small\item\em Current sine coefficients of the spherical harmonic gravity field. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a96f617d424d3108f5fe63163309f987b}{body\+Fixed\+Position\+\_\+}
+\begin{DoxyCompactList}\small\item\em Current body-\/fixed (w.\+r.\+t body exerting acceleration) position of body undergoing acceleration. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a82865216494957a337867dd7c05d8ce1}{body\+Fixed\+Spherical\+Position\+\_\+}
+\begin{DoxyCompactList}\small\item\em Current spherical coordinate of body undergoing acceleration. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix3d \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a41f5854f618449f734d9e385bb929778}{current\+Partial\+Wrt\+Position\+\_\+}
+\begin{DoxyCompactList}\small\item\em The current partial of the acceleration wrt the position of the body undergoing the acceleration. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix3d \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a7a9f8f2be401442d321d9d16ea677beb}{current\+Body\+Fixed\+Partial\+Wrt\+Position\+\_\+}
+\item 
+Eigen\+::\+Matrix3d \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a350f32e79d02ae83d780222a504c2192}{current\+Partial\+Wrt\+Velocity\+\_\+}
+\begin{DoxyCompactList}\small\item\em The current partial of the acceleration wrt the velocity of the body undergoing the acceleration. \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_ac8a5875d6c430cf8c197b4dbd13e4c58}{maximum\+Degree\+\_\+}
+\begin{DoxyCompactList}\small\item\em Maximum degree of spherical harmonic expansion. \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a6d7ad24c3d1f2c8faaa861206872c822}{maximum\+Order\+\_\+}
+\begin{DoxyCompactList}\small\item\em Maximum order of spherical harmonic expansion. \end{DoxyCompactList}\item 
+observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Named\+List \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a66bd0af703babbf495b82ff1dfa88757}{rotation\+Matrix\+Partials\+\_\+}
+\begin{DoxyCompactList}\small\item\em Map of Rotation\+Matrix\+Partial, one for each relevant rotation parameter. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aadf9b1035115c37289fb59d44eba2778}{acceleration\+Uses\+Mutual\+Attraction\+\_\+}
+\begin{DoxyCompactList}\small\item\em Boolean denoting whether the mutual attraction between the bodies is taken into account. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for calculating partial derivatives of a spherical harmonic gravitational acceleration. 
+
+Class for calculating partial derivatives of a spherical harmonic gravitational acceleration, as calculated by the Spherical\+Harmonics\+Gravitational\+Acceleration\+Model class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!Spherical\+Harmonics\+Gravity\+Partial@{Spherical\+Harmonics\+Gravity\+Partial}}
+\index{Spherical\+Harmonics\+Gravity\+Partial@{Spherical\+Harmonics\+Gravity\+Partial}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{Spherical\+Harmonics\+Gravity\+Partial(const std\+::string \&accelerated\+Body, const std\+::string \&accelerating\+Body, const boost\+::shared\+\_\+ptr$<$ gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model $>$ acceleration\+Model, const observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Named\+List \&rotation\+Matrix\+Partials=observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Named\+List())}{SphericalHarmonicsGravityPartial(const std::string &acceleratedBody, const std::string &acceleratingBody, const boost::shared_ptr< gravitation::SphericalHarmonicsGravitationalAccelerationModel > accelerationModel, const observation_partials::RotationMatrixPartialNamedList &rotationMatrixPartials=observation_partials::RotationMatrixPartialNamedList())}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::\+Spherical\+Harmonics\+Gravity\+Partial (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{accelerated\+Body, }
+\item[{const std\+::string \&}]{accelerating\+Body, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model} $>$}]{acceleration\+Model, }
+\item[{const observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Named\+List \&}]{rotation\+Matrix\+Partials = {\ttfamily observation\+\_\+partials\+:\+:RotationMatrixPartialNamedList(~)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a938149428ee9fcce9b6614c98c42492c}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a938149428ee9fcce9b6614c98c42492c}
+
+
+Contructor. 
+
+Constructor, requires input on the acceleration model as of which partials are to be computed. If any partials of parameters of the rotation model of the body exerting acceleration are to be calculated, Rotation\+Matrix\+Partial objects must be pre-\/constructed and passed here as a map, with one object for each parameter wrt which a partial is to be taken. 
+\begin{DoxyParams}{Parameters}
+{\em accelerated\+Body} & Name of body undergoing acceleration. \\
+\hline
+{\em accelerating\+Body} & Name of body exerting acceleration. \\
+\hline
+{\em acceleration\+Model} & Spherical harmonic gravity acceleration model from which acceleration is calculated wrt which the object being constructed is to calculate partials. \\
+\hline
+{\em rotation\+Matrix\+Partials} & Map of Rotation\+Matrix\+Partial, one for each paramater representing a property of the rotation of the body exerting the acceleration wrt which an acceleration partial will be calculated. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!get\+Gravitational\+Parameter\+Partial\+Function@{get\+Gravitational\+Parameter\+Partial\+Function}}
+\index{get\+Gravitational\+Parameter\+Partial\+Function@{get\+Gravitational\+Parameter\+Partial\+Function}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{get\+Gravitational\+Parameter\+Partial\+Function(const estimatable\+\_\+parameters\+::\+Estimateble\+Parameter\+Identifier \&parameter\+Id)}{getGravitationalParameterPartialFunction(const estimatable_parameters::EstimatebleParameterIdentifier &parameterId)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ boost\+::function$<$ void(Eigen\+::\+Matrix\+Xd \&) $>$, int $>$ tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::get\+Gravitational\+Parameter\+Partial\+Function (
+\begin{DoxyParamCaption}
+\item[{const estimatable\+\_\+parameters\+::\+Estimateble\+Parameter\+Identifier \&}]{parameter\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a5b8b703c91451cb4a47023f57ac8d49e}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a5b8b703c91451cb4a47023f57ac8d49e}
+
+
+Function to create a function returning the current partial w.\+r.\+t. a gravitational parameter. 
+
+Function to create a function returning the current partial w.\+r.\+t. a gravitational parameter. 
+\begin{DoxyParams}{Parameters}
+{\em parameter\+Id} & Identifier of parameter for which the partial is to be created. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair with partial function and paramater partial size. The partial function is non-\/empty only if the parameter\+Id input represents the gravitational parameter of accelerating\+Body\+\_\+ (or accelerated\+Body\+\_\+ if acceleration\+Uses\+Mutual\+Attraction\+\_\+ is true). 
+\end{DoxyReturn}
+\index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!get\+Parameter\+Partial\+Function@{get\+Parameter\+Partial\+Function}}
+\index{get\+Parameter\+Partial\+Function@{get\+Parameter\+Partial\+Function}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{get\+Parameter\+Partial\+Function(boost\+::shared\+\_\+ptr$<$ estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ double $>$ $>$ parameter)}{getParameterPartialFunction(boost::shared_ptr< estimatable_parameters::EstimatableParameter< double > > parameter)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ boost\+::function$<$ void(Eigen\+::\+Matrix\+Xd \&) $>$, int $>$ tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::get\+Parameter\+Partial\+Function (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ double $>$ $>$}]{parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a6733d26c23c19cc3d6a15011c11a3a37}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a6733d26c23c19cc3d6a15011c11a3a37}
+
+
+Function for setting up and retrieving a function returning a partial w.\+r.\+t. a double parameter. 
+
+Function to create a function returning a partial w.\+r.\+t. a double parameter.
+
+Function for setting up and retrieving a function returning a partial w.\+r.\+t. a double parameter. Function returns empty function and zero size indicator for parameters with no dependency for current acceleration. 
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Parameter w.\+r.\+t. which partial is to be taken. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair of parameter partial function and number of columns in partial (0 for no dependency, 1 otherwise). 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1orbit__determination_1_1StateDerivativePartial_a7cb295f87ba66fc5fd06f824d57a986b}{tudat\+::orbit\+\_\+determination\+::\+State\+Derivative\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!get\+Parameter\+Partial\+Function@{get\+Parameter\+Partial\+Function}}
+\index{get\+Parameter\+Partial\+Function@{get\+Parameter\+Partial\+Function}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{get\+Parameter\+Partial\+Function(boost\+::shared\+\_\+ptr$<$ estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ Eigen\+::\+Vector\+Xd $>$ $>$ parameter)}{getParameterPartialFunction(boost::shared_ptr< estimatable_parameters::EstimatableParameter< Eigen::VectorXd > > parameter)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ boost\+::function$<$ void(Eigen\+::\+Matrix\+Xd \&) $>$, int $>$ tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::get\+Parameter\+Partial\+Function (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ Eigen\+::\+Vector\+Xd $>$ $>$}]{parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a4d0928a600be68a36aaa3bc717ca77dd}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a4d0928a600be68a36aaa3bc717ca77dd}
+
+
+Function for setting up and retrieving a function returning a partial w.\+r.\+t. a vector parameter. 
+
+Function to create a function returning a partial w.\+r.\+t. a vector parameter.
+
+Function for setting up and retrieving a function returning a partial w.\+r.\+t. a vector parameter. Function returns empty function and zero size indicator for parameters with no dependency for current acceleration. 
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Parameter w.\+r.\+t. which partial is to be taken. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair of parameter partial function and number of columns in partial (0 for no dependency). 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1orbit__determination_1_1StateDerivativePartial_a89ee84b266831bc4aa563f22c4afacb5}{tudat\+::orbit\+\_\+determination\+::\+State\+Derivative\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State@{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State}}
+\index{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State@{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State(const std\+::pair$<$ std\+::string, std\+::string $>$ \&state\+Reference\+Point, const propagators\+::\+Integrated\+State\+Type integrated\+State\+Type)}{isStateDerivativeDependentOnIntegratedNonTranslationalState(const std::pair< std::string, std::string > &stateReferencePoint, const propagators::IntegratedStateType integratedStateType)}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State (
+\begin{DoxyParamCaption}
+\item[{const std\+::pair$<$ std\+::string, std\+::string $>$ \&}]{state\+Reference\+Point, }
+\item[{const propagators\+::\+Integrated\+State\+Type}]{integrated\+State\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aa5ca185ede62cdde73d250b44a3da219}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aa5ca185ede62cdde73d250b44a3da219}
+
+
+Function for determining if the acceleration is dependent on a non-\/translational integrated state. 
+
+Function for determining if the acceleration is dependent on a non-\/translational integrated state. No dependency is implemented, but a warning is provided if partial w.\+r.\+t. mass of body exerting acceleration (and undergoing acceleration if mutual attraction is used) is requested. 
+\begin{DoxyParams}{Parameters}
+{\em state\+Reference\+Point} & Reference point id of propagated state \\
+\hline
+{\em integrated\+State\+Type} & Type of propagated state for which dependency is to be determined. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if dependency exists (non-\/zero partial), false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_aac005cc281d426013544fcc77ec1b00d}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!update@{update}}
+\index{update@{update}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{update(const double current\+Time=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{update(const double currentTime=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::update (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Time = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a581667836418faf4f1a6e9c79f898e6a}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a581667836418faf4f1a6e9c79f898e6a}
+
+
+Function for updating the partial object to current state and time. 
+
+Function for updating the partial object to current state and time. Calculates the variables that are used for the calculation of multple partials, to prevent multiple calculations of same function. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Time} & \hyperlink{classtudat_1_1Time}{Time} to which object is to be updated (note that most update functions are time-\/independent, since the \textquotesingle{}current\textquotesingle{} state of the bodies is typically updated globally by the N\+Body\+State\+Derivative class). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1orbit__determination_1_1StateDerivativePartial_a6801a8f31cc0fcdb9679c2db6be3b157}{tudat\+::orbit\+\_\+determination\+::\+State\+Derivative\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!wrt\+Cosine\+Coefficient\+Block@{wrt\+Cosine\+Coefficient\+Block}}
+\index{wrt\+Cosine\+Coefficient\+Block@{wrt\+Cosine\+Coefficient\+Block}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Cosine\+Coefficient\+Block(const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices, Eigen\+::\+Matrix\+Xd \&partial\+Derivatives)}{wrtCosineCoefficientBlock(const std::vector< std::pair< int, int > > &blockIndices, Eigen::MatrixXd &partialDerivatives)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::wrt\+Cosine\+Coefficient\+Block (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&}]{block\+Indices, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{partial\+Derivatives}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a2b5eb89afa2612b063dfc0fbcb8784ef}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a2b5eb89afa2612b063dfc0fbcb8784ef}
+
+
+Function to calculate the partial of the acceleration wrt a set of cosine coefficients. 
+
+Function to calculate the partial of the acceleration wrt a set of cosine coefficients. The set of coefficients wrt which a partial is to be taken is provided as input. 
+\begin{DoxyParams}{Parameters}
+{\em block\+Indices} & List of cosine coefficient indices wrt which the partials are to be taken (first and second are degree and order for each vector entry). \\
+\hline
+{\em partial\+Derivatives} & Matrix of acceleration partials that is set by this function (returned by reference), with each column containg the partial wrt a single coefficient (in same order as block\+Indices). \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!wrt\+Gravitational\+Parameter\+Of\+Central\+Body@{wrt\+Gravitational\+Parameter\+Of\+Central\+Body}}
+\index{wrt\+Gravitational\+Parameter\+Of\+Central\+Body@{wrt\+Gravitational\+Parameter\+Of\+Central\+Body}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Gravitational\+Parameter\+Of\+Central\+Body(\+Eigen\+::\+Matrix\+Xd \&partial\+Matrix)}{wrtGravitationalParameterOfCentralBody(Eigen::MatrixXd &partialMatrix)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::wrt\+Gravitational\+Parameter\+Of\+Central\+Body (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Matrix\+Xd \&}]{partial\+Matrix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a3e6fdd2d0f18c427449292d9c9ad197c}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a3e6fdd2d0f18c427449292d9c9ad197c}
+
+
+Function to calculate the partial wrt the gravitational parameter. 
+
+Function to calculate the partial wrt the gravitational parameter of the central body. Note that in the case of mutual attraction (see Spherical\+Harmonics\+Gravitational\+Acceleration\+Model), the partial wrt the gravitational parameter of the body exerting acceleration is equal to the partial wrt to the body undergoing the acceleration, which is zero otherwise. \begin{DoxyReturn}{Returns}
+Partial wrt the gravitational parameter of the central body. 
+\end{DoxyReturn}
+\index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!wrt\+Position\+Of\+Accelerated\+Body@{wrt\+Position\+Of\+Accelerated\+Body}}
+\index{wrt\+Position\+Of\+Accelerated\+Body@{wrt\+Position\+Of\+Accelerated\+Body}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Position\+Of\+Accelerated\+Body(\+Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=0)}{wrtPositionOfAcceleratedBody(Eigen::Block< Eigen::MatrixXd > partialMatrix, const bool addContribution=1, const int startRow=0, const int startColumn=0)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::wrt\+Position\+Of\+Accelerated\+Body (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$}]{partial\+Matrix, }
+\item[{const bool}]{add\+Contribution = {\ttfamily 1}, }
+\item[{const int}]{start\+Row = {\ttfamily 0}, }
+\item[{const int}]{start\+Column = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a572e602e9a2469577bb7a6e51f04136b}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a572e602e9a2469577bb7a6e51f04136b}
+
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the position of body undergoing acceleration.. 
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the position of body undergoing acceleration and adding it to the existing partial block Update( ) function must have been called during current time step before calling this function. 
+\begin{DoxyParams}{Parameters}
+{\em partial\+Matrix} & Block of partial derivatives of acceleration w.\+r.\+t. Cartesian position of body undergoing acceleration where current partial is to be added. \\
+\hline
+{\em add\+Contribution} & Variable denoting whether to return the partial itself (true) or the negative partial (false). \\
+\hline
+{\em start\+Row} & First row in partial\+Matrix block where the computed partial is to be added. \\
+\hline
+{\em start\+Column} & First column in partial\+Matrix block where the computed partial is to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_a629ee1ab826d64e6493d1dbf0fe7586b}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!wrt\+Position\+Of\+Accelerating\+Body@{wrt\+Position\+Of\+Accelerating\+Body}}
+\index{wrt\+Position\+Of\+Accelerating\+Body@{wrt\+Position\+Of\+Accelerating\+Body}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Position\+Of\+Accelerating\+Body(\+Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=0)}{wrtPositionOfAcceleratingBody(Eigen::Block< Eigen::MatrixXd > partialMatrix, const bool addContribution=1, const int startRow=0, const int startColumn=0)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::wrt\+Position\+Of\+Accelerating\+Body (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$}]{partial\+Matrix, }
+\item[{const bool}]{add\+Contribution = {\ttfamily 1}, }
+\item[{const int}]{start\+Row = {\ttfamily 0}, }
+\item[{const int}]{start\+Column = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a21f310f69efdfbdc36c1fc72ca8168fa}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a21f310f69efdfbdc36c1fc72ca8168fa}
+
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the position of body exerting acceleration. 
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the position of body exerting acceleration and adding it to the existing partial block. The \hyperlink{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a581667836418faf4f1a6e9c79f898e6a}{update( )} function must have been called during current time step before calling this function. 
+\begin{DoxyParams}{Parameters}
+{\em partial\+Matrix} & Block of partial derivatives of acceleration w.\+r.\+t. Cartesian position of body exerting acceleration where current partial is to be added. \\
+\hline
+{\em add\+Contribution} & Variable denoting whether to return the partial itself (true) or the negative partial (false). \\
+\hline
+{\em start\+Row} & First row in partial\+Matrix block where the computed partial is to be added. \\
+\hline
+{\em start\+Column} & First column in partial\+Matrix block where the computed partial is to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_a779c9c208d2054d8425178f4ea8f6021}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!wrt\+Rotation\+Model\+Parameter@{wrt\+Rotation\+Model\+Parameter}}
+\index{wrt\+Rotation\+Model\+Parameter@{wrt\+Rotation\+Model\+Parameter}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Rotation\+Model\+Parameter(\+Eigen\+::\+Matrix\+Xd \&acceleration\+Partial, const estimatable\+\_\+parameters\+::\+Estimateble\+Parameters\+Enum parameter\+Type, const std\+::string \&secondary\+Identifier)}{wrtRotationModelParameter(Eigen::MatrixXd &accelerationPartial, const estimatable_parameters::EstimatebleParametersEnum parameterType, const std::string &secondaryIdentifier)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::wrt\+Rotation\+Model\+Parameter (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Matrix\+Xd \&}]{acceleration\+Partial, }
+\item[{const estimatable\+\_\+parameters\+::\+Estimateble\+Parameters\+Enum}]{parameter\+Type, }
+\item[{const std\+::string \&}]{secondary\+Identifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aef8a46d7ddbe55f690556eee4483b858}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aef8a46d7ddbe55f690556eee4483b858}
+
+
+Function to calculate an acceleration partial wrt a rotational parameter. 
+
+Function to calculate an acceleration partial wrt a rotational parameter of the rotation model of the body exerting the acceleration. 
+\begin{DoxyParams}{Parameters}
+{\em acceleration\+Partial} & Matrix of partials of spherical harmonic acceleration wrt a rotational parameter that is set by this function (returned by reference) \\
+\hline
+{\em parameter\+Type} & Type of parameter wrt which a partial is to be calculated. An entry of the requested type must be present in the rotation\+Matrix\+Partials\+\_\+ map. \\
+\hline
+{\em secondary\+Identifier} & Identifier required to unambiguously define the parameter (in addition to information in parameter\+Type. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!wrt\+Sine\+Coefficient\+Block@{wrt\+Sine\+Coefficient\+Block}}
+\index{wrt\+Sine\+Coefficient\+Block@{wrt\+Sine\+Coefficient\+Block}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Sine\+Coefficient\+Block(const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices, Eigen\+::\+Matrix\+Xd \&partial\+Derivatives)}{wrtSineCoefficientBlock(const std::vector< std::pair< int, int > > &blockIndices, Eigen::MatrixXd &partialDerivatives)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::wrt\+Sine\+Coefficient\+Block (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&}]{block\+Indices, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{partial\+Derivatives}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aa3edb5f17386c2e3274c8da5d1b52a4a}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aa3edb5f17386c2e3274c8da5d1b52a4a}
+
+
+Function to calculate the partial of the acceleration wrt a set of sine coefficients. 
+
+Function to calculate the partial of the acceleration wrt a set of sine coefficients. The set of coefficients wrt which a partial is to be taken is provided as input. 
+\begin{DoxyParams}{Parameters}
+{\em block\+Indices} & List of sine coefficient indices wrt which the partials are to be taken (first and second are degree and order for each vector entry). \\
+\hline
+{\em partial\+Derivatives} & Matrix of acceleration partials that is set by this function (returned by reference), with each column containg the partial wrt a single coefficient (in same order as block\+Indices). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!acceleration\+Uses\+Mutual\+Attraction\+\_\+@{acceleration\+Uses\+Mutual\+Attraction\+\_\+}}
+\index{acceleration\+Uses\+Mutual\+Attraction\+\_\+@{acceleration\+Uses\+Mutual\+Attraction\+\_\+}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{acceleration\+Uses\+Mutual\+Attraction\+\_\+}{accelerationUsesMutualAttraction_}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::acceleration\+Uses\+Mutual\+Attraction\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aadf9b1035115c37289fb59d44eba2778}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_aadf9b1035115c37289fb59d44eba2778}
+
+
+Boolean denoting whether the mutual attraction between the bodies is taken into account. 
+
+Boolean denoting whether the mutual attraction between the bodies is taken into account, as is the case when integrting in a (non-\/rotating) frame centered on the body exerting the acceleration, in which case the gravitational acceleration of the body undergoing the acceleration on that exerting the acceleration must be taken into account as an inertial effect. \index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!body\+Fixed\+Position\+\_\+@{body\+Fixed\+Position\+\_\+}}
+\index{body\+Fixed\+Position\+\_\+@{body\+Fixed\+Position\+\_\+}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{body\+Fixed\+Position\+\_\+}{bodyFixedPosition_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::body\+Fixed\+Position\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a96f617d424d3108f5fe63163309f987b}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a96f617d424d3108f5fe63163309f987b}
+
+
+Current body-\/fixed (w.\+r.\+t body exerting acceleration) position of body undergoing acceleration. 
+
+Current body-\/fixed (w.\+r.\+t body exerting acceleration) position of body undergoing acceleration, set by update( time ) function. \index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!body\+Fixed\+Spherical\+Position\+\_\+@{body\+Fixed\+Spherical\+Position\+\_\+}}
+\index{body\+Fixed\+Spherical\+Position\+\_\+@{body\+Fixed\+Spherical\+Position\+\_\+}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{body\+Fixed\+Spherical\+Position\+\_\+}{bodyFixedSphericalPosition_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::body\+Fixed\+Spherical\+Position\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a82865216494957a337867dd7c05d8ce1}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a82865216494957a337867dd7c05d8ce1}
+
+
+Current spherical coordinate of body undergoing acceleration. 
+
+Current spherical coordinate of body undergoing acceleration, in reference frame fixed to body exerting acceleration. Order of components is radial distance (from center of body), latitude, longitude. Note that the the second entry differs from the direct output of the cartesian -\/$>$ spherical coordinates, which produces a colatitude. \index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!current\+Body\+Fixed\+Partial\+Wrt\+Position\+\_\+@{current\+Body\+Fixed\+Partial\+Wrt\+Position\+\_\+}}
+\index{current\+Body\+Fixed\+Partial\+Wrt\+Position\+\_\+@{current\+Body\+Fixed\+Partial\+Wrt\+Position\+\_\+}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{current\+Body\+Fixed\+Partial\+Wrt\+Position\+\_\+}{currentBodyFixedPartialWrtPosition_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix3d tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::current\+Body\+Fixed\+Partial\+Wrt\+Position\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a7a9f8f2be401442d321d9d16ea677beb}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a7a9f8f2be401442d321d9d16ea677beb}
+The current partial of the acceleration wrt the position of the body undergoing the acceleration, with both acceleration and position in body-\/fixed frame.
+
+The current partial of the acceleration wrt the position of the body undergoing the acceleration. with both acceleration and position in body-\/fixed frame. Value is set by the update( time ) function. \index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!current\+Cosine\+Coefficients\+\_\+@{current\+Cosine\+Coefficients\+\_\+}}
+\index{current\+Cosine\+Coefficients\+\_\+@{current\+Cosine\+Coefficients\+\_\+}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{current\+Cosine\+Coefficients\+\_\+}{currentCosineCoefficients_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix\+Xd tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::current\+Cosine\+Coefficients\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a5cf1f88dd030daa8efe9caeb7fae3cd9}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a5cf1f88dd030daa8efe9caeb7fae3cd9}
+
+
+Current cosine coefficients of the spherical harmonic gravity field. 
+
+Current cosine coefficients of the spherical harmonic gravity field, set by update( time ) function. \index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!current\+Partial\+Wrt\+Position\+\_\+@{current\+Partial\+Wrt\+Position\+\_\+}}
+\index{current\+Partial\+Wrt\+Position\+\_\+@{current\+Partial\+Wrt\+Position\+\_\+}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{current\+Partial\+Wrt\+Position\+\_\+}{currentPartialWrtPosition_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix3d tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::current\+Partial\+Wrt\+Position\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a41f5854f618449f734d9e385bb929778}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a41f5854f618449f734d9e385bb929778}
+
+
+The current partial of the acceleration wrt the position of the body undergoing the acceleration. 
+
+The current partial of the acceleration wrt the position of the body undergoing the acceleration. The partial wrt the position of the body exerting the acceleration is minus this value. Value is set by the update( time ) function. \index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!current\+Partial\+Wrt\+Velocity\+\_\+@{current\+Partial\+Wrt\+Velocity\+\_\+}}
+\index{current\+Partial\+Wrt\+Velocity\+\_\+@{current\+Partial\+Wrt\+Velocity\+\_\+}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{current\+Partial\+Wrt\+Velocity\+\_\+}{currentPartialWrtVelocity_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix3d tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::current\+Partial\+Wrt\+Velocity\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a350f32e79d02ae83d780222a504c2192}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a350f32e79d02ae83d780222a504c2192}
+
+
+The current partial of the acceleration wrt the velocity of the body undergoing the acceleration. 
+
+The current partial of the acceleration wrt the velocity of the body undergoing the acceleration. The partial wrt the velocity of the body exerting the acceleration is minus this value. Value is set by the update( time ) function. \index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!current\+Sine\+Coefficients\+\_\+@{current\+Sine\+Coefficients\+\_\+}}
+\index{current\+Sine\+Coefficients\+\_\+@{current\+Sine\+Coefficients\+\_\+}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{current\+Sine\+Coefficients\+\_\+}{currentSineCoefficients_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix\+Xd tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::current\+Sine\+Coefficients\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a61efd1799c484094e1f2a3309817cee2}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a61efd1799c484094e1f2a3309817cee2}
+
+
+Current sine coefficients of the spherical harmonic gravity field. 
+
+Current sine coefficients of the spherical harmonic gravity field, set by update( time ) function. \index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!maximum\+Degree\+\_\+@{maximum\+Degree\+\_\+}}
+\index{maximum\+Degree\+\_\+@{maximum\+Degree\+\_\+}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{maximum\+Degree\+\_\+}{maximumDegree_}}]{\setlength{\rightskip}{0pt plus 5cm}int tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::maximum\+Degree\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_ac8a5875d6c430cf8c197b4dbd13e4c58}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_ac8a5875d6c430cf8c197b4dbd13e4c58}
+
+
+Maximum degree of spherical harmonic expansion. 
+
+Maximum degree of spherical harmonic expansion of body exerting acceleration used in the calculation of the acceleration. \index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!maximum\+Order\+\_\+@{maximum\+Order\+\_\+}}
+\index{maximum\+Order\+\_\+@{maximum\+Order\+\_\+}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{maximum\+Order\+\_\+}{maximumOrder_}}]{\setlength{\rightskip}{0pt plus 5cm}int tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::maximum\+Order\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a6d7ad24c3d1f2c8faaa861206872c822}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a6d7ad24c3d1f2c8faaa861206872c822}
+
+
+Maximum order of spherical harmonic expansion. 
+
+Maximum order of spherical harmonic expansion of body exerting acceleration used in the calculation of the acceleration. \index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!rotation\+Matrix\+Partials\+\_\+@{rotation\+Matrix\+Partials\+\_\+}}
+\index{rotation\+Matrix\+Partials\+\_\+@{rotation\+Matrix\+Partials\+\_\+}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{rotation\+Matrix\+Partials\+\_\+}{rotationMatrixPartials_}}]{\setlength{\rightskip}{0pt plus 5cm}observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Named\+List tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::rotation\+Matrix\+Partials\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a66bd0af703babbf495b82ff1dfa88757}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a66bd0af703babbf495b82ff1dfa88757}
+
+
+Map of Rotation\+Matrix\+Partial, one for each relevant rotation parameter. 
+
+Map of Rotation\+Matrix\+Partial, one for each parameter representing a property of the rotation of the body exerting the acceleration wrt which an acceleration partial will be calculated. Map is pre-\/created and set through the constructor. \index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!spherical\+Harmonic\+Cache\+\_\+@{spherical\+Harmonic\+Cache\+\_\+}}
+\index{spherical\+Harmonic\+Cache\+\_\+@{spherical\+Harmonic\+Cache\+\_\+}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{spherical\+Harmonic\+Cache\+\_\+}{sphericalHarmonicCache_}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf basic\+\_\+mathematics\+::\+Spherical\+Harmonics\+Cache} $>$ tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::spherical\+Harmonic\+Cache\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a0ec88f0ff9a7ae8115160915ce2f5598}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a0ec88f0ff9a7ae8115160915ce2f5598}
+Cache object used for storing calculated values at current time and state for spherical harmonic gravity calculations. \index{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}!update\+Function\+\_\+@{update\+Function\+\_\+}}
+\index{update\+Function\+\_\+@{update\+Function\+\_\+}!tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial}}
+\subsubsection[{\texorpdfstring{update\+Function\+\_\+}{updateFunction_}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ void( const double ) $>$ tudat\+::acceleration\+\_\+partials\+::\+Spherical\+Harmonics\+Gravity\+Partial\+::update\+Function\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a3e659d0870f55c89d6c9254b43c4f21a}{}\label{classtudat_1_1acceleration__partials_1_1SphericalHarmonicsGravityPartial_a3e659d0870f55c89d6c9254b43c4f21a}
+
+
+Function to update the acceleration to the current state and time. 
+
+Function to update the acceleration to the current state and time. Called when updating an object of this class with the update( time ) function, in case the partial is called before the acceleration model in the current iteration of the numerical integration. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Orbit\+Determination/\+Acceleration\+Partials/spherical\+Harmonic\+Acceleration\+Partial.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Orbit\+Determination/\+Acceleration\+Partials/spherical\+Harmonic\+Acceleration\+Partial.\+cpp\end{DoxyCompactItemize}

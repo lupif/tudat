@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1statistics_1_1ContinuousProbabilityDistribution.html" title="tudat::statistics::\lContinuousProbabilityDistribution\l\&lt; double \&gt;" alt="" coords="5,49,220,105"/>
+<area shape="rect" id="node2" href="$classtudat_1_1statistics_1_1InvertibleContinuousProbabilityDistribution.html" title="tudat::statistics::\lInvertibleContinuousProbability\lDistribution\&lt; double \&gt;" alt="" coords="270,13,473,69"/>
+<area shape="rect" id="node4" href="$classtudat_1_1statistics_1_1EpanechnikovKernelDistribution.html" title="Class for Probability distribution using a single Epanechnikov kernel. " alt="" coords="268,92,475,133"/>
+<area shape="rect" id="node3" href="$classtudat_1_1statistics_1_1BoostContinuousProbabilityDistribution.html" title="Interface for continuous random variable calculations using distributions implemented in boost..." alt="" coords="523,5,723,76"/>
+</map>

@@ -1,0 +1,127 @@
+\hypertarget{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry}{}\section{tudat\+:\+:input\+\_\+output\+:\+:dictionary\+:\+:Dictionary\+Entry Struct Reference}
+\label{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry}\index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}}
+
+
+Dictionary entry.  
+
+
+
+
+{\ttfamily \#include $<$dictionary\+Entry.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::set$<$ std\+::string $>$ \hyperlink{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_abfd99206f775c73ff0e772894839f97f}{String\+Set}\hypertarget{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_abfd99206f775c73ff0e772894839f97f}{}\label{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_abfd99206f775c73ff0e772894839f97f}
+
+\begin{DoxyCompactList}\small\item\em Typedef for set of strings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a1bf55c4fc6fa76d1f3445266b538e712}{Dictionary\+Entry} ()
+\begin{DoxyCompactList}\small\item\em Zombie constructor. \end{DoxyCompactList}\item 
+\hyperlink{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a37ace77cdced5c0e492185292eb58fa6}{Dictionary\+Entry} (std\+::string a\+Parameter\+Name, bool required=true, bool case\+Sensitive=false, \hyperlink{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_abfd99206f775c73ff0e772894839f97f}{String\+Set} some\+Synonyms=\hyperlink{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_abfd99206f775c73ff0e772894839f97f}{String\+Set}())
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a81719f201bc0dc391e5ef36ce4e950ea}{parameter\+Name}
+\begin{DoxyCompactList}\small\item\em Parameter name. \end{DoxyCompactList}\item 
+bool \hyperlink{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a3c4df6676ee88eac7eb79cf61f75d9f7}{is\+Required}
+\begin{DoxyCompactList}\small\item\em Flag that sets if parameter is required or not. \end{DoxyCompactList}\item 
+bool \hyperlink{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a3c8b68c9840e1ea643325fb8f06c5c04}{is\+Case\+Sensitive}
+\begin{DoxyCompactList}\small\item\em Flag that sets if parameter is case-\/sensitive. \end{DoxyCompactList}\item 
+bool \hyperlink{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a347ec4c8fe97ae87358fd671688a4944}{is\+Extracted}
+\begin{DoxyCompactList}\small\item\em Flag that sets if parameter has been extracted already. \end{DoxyCompactList}\item 
+\hyperlink{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_abfd99206f775c73ff0e772894839f97f}{String\+Set} \hyperlink{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_aabc54d115c5728ad6c88fbf95e973430}{synonyms}
+\begin{DoxyCompactList}\small\item\em List of synonyms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dictionary entry. 
+
+This struct contains all of the information pertaining to a single dictionary entry\+: a parameter name, a flag to indicate if the parameter is required or optional, a flag to indicate if the parameter name is case-\/sensitive or not, a flag to indicate if the parameter has been extracted, and a list of synonyms for the given parameter. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}!Dictionary\+Entry@{Dictionary\+Entry}}
+\index{Dictionary\+Entry@{Dictionary\+Entry}!tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}}
+\subsubsection[{\texorpdfstring{Dictionary\+Entry()}{DictionaryEntry()}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry\+::\+Dictionary\+Entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a1bf55c4fc6fa76d1f3445266b538e712}{}\label{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a1bf55c4fc6fa76d1f3445266b538e712}
+
+
+Zombie constructor. 
+
+Zombie constructor, initializing all of the class members to zombie state. This is needed to create a dictionary, which is an S\+TL set of shared-\/pointers to \hyperlink{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry}{Dictionary\+Entry} objects. \begin{DoxySeeAlso}{See also}
+Dictionary. 
+\end{DoxySeeAlso}
+\index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}!Dictionary\+Entry@{Dictionary\+Entry}}
+\index{Dictionary\+Entry@{Dictionary\+Entry}!tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}}
+\subsubsection[{\texorpdfstring{Dictionary\+Entry(std\+::string a\+Parameter\+Name, bool required=true, bool case\+Sensitive=false, String\+Set some\+Synonyms=\+String\+Set())}{DictionaryEntry(std::string aParameterName, bool required=true, bool caseSensitive=false, StringSet someSynonyms=StringSet())}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry\+::\+Dictionary\+Entry (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{a\+Parameter\+Name, }
+\item[{bool}]{required = {\ttfamily true}, }
+\item[{bool}]{case\+Sensitive = {\ttfamily false}, }
+\item[{{\bf String\+Set}}]{some\+Synonyms = {\ttfamily {\bf String\+Set}(~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a37ace77cdced5c0e492185292eb58fa6}{}\label{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a37ace77cdced5c0e492185292eb58fa6}
+
+
+Default constructor. 
+
+Default constructor, initializing all of the class members. 
+\begin{DoxyParams}{Parameters}
+{\em a\+Parameter\+Name} & Name of parameter for dictionary entry. \\
+\hline
+{\em required} & Boolean indicating if parameter is required. Default set to true. \\
+\hline
+{\em case\+Sensitive} & Boolean indicating if parameter is case\+Sensitive. Default set to false. \\
+\hline
+{\em some\+Synonyms} & Set of synonyms. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}!is\+Case\+Sensitive@{is\+Case\+Sensitive}}
+\index{is\+Case\+Sensitive@{is\+Case\+Sensitive}!tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}}
+\subsubsection[{\texorpdfstring{is\+Case\+Sensitive}{isCaseSensitive}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry\+::is\+Case\+Sensitive}\hypertarget{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a3c8b68c9840e1ea643325fb8f06c5c04}{}\label{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a3c8b68c9840e1ea643325fb8f06c5c04}
+
+
+Flag that sets if parameter is case-\/sensitive. 
+
+This flag indicates if the given dictionary entry is case-\/sensitive. If it is not case-\/senstive, both the input parameter and the dictionary entry are compared after transforming them to upper-\/case. Default is set to false, i.\+e., parameter IS N\+OT case-\/sensitive. \index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}!is\+Extracted@{is\+Extracted}}
+\index{is\+Extracted@{is\+Extracted}!tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}}
+\subsubsection[{\texorpdfstring{is\+Extracted}{isExtracted}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry\+::is\+Extracted}\hypertarget{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a347ec4c8fe97ae87358fd671688a4944}{}\label{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a347ec4c8fe97ae87358fd671688a4944}
+
+
+Flag that sets if parameter has been extracted already. 
+
+This flag indicates if the given dictionary entry has already been extracted. The default is set to false. \index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}!is\+Required@{is\+Required}}
+\index{is\+Required@{is\+Required}!tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}}
+\subsubsection[{\texorpdfstring{is\+Required}{isRequired}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry\+::is\+Required}\hypertarget{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a3c4df6676ee88eac7eb79cf61f75d9f7}{}\label{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a3c4df6676ee88eac7eb79cf61f75d9f7}
+
+
+Flag that sets if parameter is required or not. 
+
+This flag indicates if the given dictionary entry must be provided as input. If the required parameter name is not provided, an error is thrown. Default is set to true, i.\+e., parameter IS required. \index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}!parameter\+Name@{parameter\+Name}}
+\index{parameter\+Name@{parameter\+Name}!tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}}
+\subsubsection[{\texorpdfstring{parameter\+Name}{parameterName}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry\+::parameter\+Name}\hypertarget{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a81719f201bc0dc391e5ef36ce4e950ea}{}\label{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_a81719f201bc0dc391e5ef36ce4e950ea}
+
+
+Parameter name. 
+
+String name of parameter. \index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}!synonyms@{synonyms}}
+\index{synonyms@{synonyms}!tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry}}
+\subsubsection[{\texorpdfstring{synonyms}{synonyms}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf String\+Set} tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry\+::synonyms}\hypertarget{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_aabc54d115c5728ad6c88fbf95e973430}{}\label{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry_aabc54d115c5728ad6c88fbf95e973430}
+
+
+List of synonyms. 
+
+List of synonyms stored as a set of strings. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Input\+Output/dictionary\+Entry.\+h\end{DoxyCompactItemize}

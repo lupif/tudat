@@ -1,0 +1,10 @@
+<map id="tudat::SurfaceGeometry" name="tudat::SurfaceGeometry">
+<area shape="rect" id="node2" href="$classtudat_1_1geometric__shapes_1_1CompositeSurfaceGeometry.html" title="Composite surface geometry class. " alt="" coords="215,41,409,83"/>
+<area shape="rect" id="node4" href="$classtudat_1_1geometric__shapes_1_1SingleSurfaceGeometry.html" title="Surface geometry base class. " alt="" coords="228,143,396,184"/>
+<area shape="rect" id="node3" href="$classtudat_1_1geometric__shapes_1_1Capsule.html" title="Capsule class. " alt="" coords="472,5,637,47"/>
+<area shape="rect" id="node5" href="$classtudat_1_1geometric__shapes_1_1ConicalFrustum.html" title="ConicalFrustum class. " alt="" coords="472,71,637,112"/>
+<area shape="rect" id="node6" href="$classtudat_1_1geometric__shapes_1_1QuadrilateralMeshedSurfaceGeometry.html" title="Class for quadrilateral meshed surface geometry. " alt="" coords="457,135,652,191"/>
+<area shape="rect" id="node8" href="$classtudat_1_1geometric__shapes_1_1SphereSegment.html" title="Sphere segment class. " alt="" coords="472,215,637,256"/>
+<area shape="rect" id="node9" href="$classtudat_1_1geometric__shapes_1_1Torus.html" title="Torus class. " alt="" coords="472,280,637,321"/>
+<area shape="rect" id="node7" href="$classtudat_1_1geometric__shapes_1_1LawgsPartGeometry.html" title="Class to define a mesh accoring to Lawgs standards. " alt="" coords="700,143,865,184"/>
+</map>

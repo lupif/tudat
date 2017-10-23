@@ -1,0 +1,90 @@
+\hypertarget{classtudat_1_1observation__models_1_1ObservationBias}{}\section{tudat\+:\+:observation\+\_\+models\+:\+:Observation\+Bias$<$ Observation\+Size $>$ Class Template Reference}
+\label{classtudat_1_1observation__models_1_1ObservationBias}\index{tudat\+::observation\+\_\+models\+::\+Observation\+Bias$<$ Observation\+Size $>$@{tudat\+::observation\+\_\+models\+::\+Observation\+Bias$<$ Observation\+Size $>$}}
+
+
+Base class (non-\/functional) for describing observation biases.  
+
+
+
+
+{\ttfamily \#include $<$observation\+Bias.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:observation\+\_\+models\+:\+:Observation\+Bias$<$ Observation\+Size $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classtudat_1_1observation__models_1_1ObservationBias__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1observation__models_1_1ObservationBias_a31ad7d28d9b81c4c0df65fd47e39f3ea}{Observation\+Bias} ()\hypertarget{classtudat_1_1observation__models_1_1ObservationBias_a31ad7d28d9b81c4c0df65fd47e39f3ea}{}\label{classtudat_1_1observation__models_1_1ObservationBias_a31ad7d28d9b81c4c0df65fd47e39f3ea}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1observation__models_1_1ObservationBias_a5e9f892808937f518b7398f6cfcd19de}{$\sim$\+Observation\+Bias} ()\hypertarget{classtudat_1_1observation__models_1_1ObservationBias_a5e9f892808937f518b7398f6cfcd19de}{}\label{classtudat_1_1observation__models_1_1ObservationBias_a5e9f892808937f518b7398f6cfcd19de}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual Eigen\+::\+Matrix$<$ double, Observation\+Size, 1 $>$ \hyperlink{classtudat_1_1observation__models_1_1ObservationBias_a58e9f9e041804d67b69a478e4ed855c1}{get\+Observation\+Bias} (const std\+::vector$<$ double $>$ \&link\+End\+Times, const std\+::vector$<$ Eigen\+::\+Matrix$<$ double, 6, 1 $>$ $>$ \&link\+End\+States)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to retrieve the observation bias. \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1observation__models_1_1ObservationBias_adaa0258566dfe1e9438afbcfb57ccddb}{get\+Observation\+Size} ()
+\begin{DoxyCompactList}\small\item\em Function to return the size of the associated observation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int Observation\+Size = 1$>$\\*
+class tudat\+::observation\+\_\+models\+::\+Observation\+Bias$<$ Observation\+Size $>$}
+
+Base class (non-\/functional) for describing observation biases. 
+
+Base class (non-\/functional) for describing observation biases. In this context, an observation bias denotes any deviation from the ideal observable between two reference points. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::observation\+\_\+models\+::\+Observation\+Bias@{tudat\+::observation\+\_\+models\+::\+Observation\+Bias}!get\+Observation\+Bias@{get\+Observation\+Bias}}
+\index{get\+Observation\+Bias@{get\+Observation\+Bias}!tudat\+::observation\+\_\+models\+::\+Observation\+Bias@{tudat\+::observation\+\_\+models\+::\+Observation\+Bias}}
+\subsubsection[{\texorpdfstring{get\+Observation\+Bias(const std\+::vector$<$ double $>$ \&link\+End\+Times, const std\+::vector$<$ Eigen\+::\+Matrix$<$ double, 6, 1 $>$ $>$ \&link\+End\+States)=0}{getObservationBias(const std::vector< double > &linkEndTimes, const std::vector< Eigen::Matrix< double, 6, 1 > > &linkEndStates)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int Observation\+Size = 1$>$ virtual Eigen\+::\+Matrix$<$ double, Observation\+Size, 1 $>$ {\bf tudat\+::observation\+\_\+models\+::\+Observation\+Bias}$<$ Observation\+Size $>$\+::get\+Observation\+Bias (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{link\+End\+Times, }
+\item[{const std\+::vector$<$ Eigen\+::\+Matrix$<$ double, 6, 1 $>$ $>$ \&}]{link\+End\+States}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1observation__models_1_1ObservationBias_a58e9f9e041804d67b69a478e4ed855c1}{}\label{classtudat_1_1observation__models_1_1ObservationBias_a58e9f9e041804d67b69a478e4ed855c1}
+
+
+Pure virtual function to retrieve the observation bias. 
+
+Pure virtual function to retrieve the observation bias as a function of the observation times and states (which are typically computed by the \hyperlink{classtudat_1_1observation__models_1_1ObservationModel}{Observation\+Model}) 
+\begin{DoxyParams}{Parameters}
+{\em link\+End\+Times} & List of times at each link end during observation. \\
+\hline
+{\em link\+End\+States} & List of states at each link end during observation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Observation bias at given times and states. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1observation__models_1_1ConstantObservationBias_aaf3dcb13a6094ddb048226b7579f6de1}{tudat\+::observation\+\_\+models\+::\+Constant\+Observation\+Bias$<$ Observation\+Size $>$}.
+
+\index{tudat\+::observation\+\_\+models\+::\+Observation\+Bias@{tudat\+::observation\+\_\+models\+::\+Observation\+Bias}!get\+Observation\+Size@{get\+Observation\+Size}}
+\index{get\+Observation\+Size@{get\+Observation\+Size}!tudat\+::observation\+\_\+models\+::\+Observation\+Bias@{tudat\+::observation\+\_\+models\+::\+Observation\+Bias}}
+\subsubsection[{\texorpdfstring{get\+Observation\+Size()}{getObservationSize()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int Observation\+Size = 1$>$ int {\bf tudat\+::observation\+\_\+models\+::\+Observation\+Bias}$<$ Observation\+Size $>$\+::get\+Observation\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1observation__models_1_1ObservationBias_adaa0258566dfe1e9438afbcfb57ccddb}{}\label{classtudat_1_1observation__models_1_1ObservationBias_adaa0258566dfe1e9438afbcfb57ccddb}
+
+
+Function to return the size of the associated observation. 
+
+Function to return the size of the associated observation \begin{DoxyReturn}{Returns}
+Size of the associated observation 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Observation\+Models/observation\+Bias.\+h\end{DoxyCompactItemize}

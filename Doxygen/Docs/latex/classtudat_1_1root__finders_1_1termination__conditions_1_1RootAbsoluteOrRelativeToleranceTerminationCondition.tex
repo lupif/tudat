@@ -1,0 +1,118 @@
+\hypertarget{classtudat_1_1root__finders_1_1termination__conditions_1_1RootAbsoluteOrRelativeToleranceTerminationCondition}{}\section{tudat\+:\+:root\+\_\+finders\+:\+:termination\+\_\+conditions\+:\+:Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition$<$ Scalar\+Type $>$ Class Template Reference}
+\label{classtudat_1_1root__finders_1_1termination__conditions_1_1RootAbsoluteOrRelativeToleranceTerminationCondition}\index{tudat\+::root\+\_\+finders\+::termination\+\_\+conditions\+::\+Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition$<$ Scalar\+Type $>$@{tudat\+::root\+\_\+finders\+::termination\+\_\+conditions\+::\+Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition$<$ Scalar\+Type $>$}}
+
+
+Absolute or relative tolerance for root termination condition.  
+
+
+
+
+{\ttfamily \#include $<$termination\+Conditions.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:root\+\_\+finders\+:\+:termination\+\_\+conditions\+:\+:Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition$<$ Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1root__finders_1_1termination__conditions_1_1RootAbsoluteOrRelativeToleranceTerminationCondition__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:root\+\_\+finders\+:\+:termination\+\_\+conditions\+:\+:Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition$<$ Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1root__finders_1_1termination__conditions_1_1RootAbsoluteOrRelativeToleranceTerminationCondition__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1root__finders_1_1termination__conditions_1_1RootAbsoluteOrRelativeToleranceTerminationCondition_a15f19696bbc8d338ae48afe4f9e50294}{Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition} (const Scalar\+Type an\+Absolute\+Tolerance=1.\+0e-\/15, const Scalar\+Type a\+Relative\+Tolerance=1.\+0e-\/12, const unsigned int a\+Maximum\+Number\+Of\+Iterations=1000, const bool a\+Throw\+Run\+Time\+Exception\+Flag=true)
+\item 
+bool \hyperlink{classtudat_1_1root__finders_1_1termination__conditions_1_1RootAbsoluteOrRelativeToleranceTerminationCondition_ab2ee1708730c00d2991fd8b9264313de}{check\+Termination\+Condition} (const Scalar\+Type current\+Root\+Guess, const Scalar\+Type previous\+Root\+Guess, const Scalar\+Type current\+Root\+Function\+Value, const Scalar\+Type previous\+Root\+Function\+Value, const unsigned int number\+Of\+Iterations)
+\begin{DoxyCompactList}\small\item\em Check termination condition (combined ans. and rel. tolerance and max. itetations) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Scalar\+Type = double$>$\\*
+class tudat\+::root\+\_\+finders\+::termination\+\_\+conditions\+::\+Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition$<$ Scalar\+Type $>$}
+
+Absolute or relative tolerance for root termination condition. 
+
+This class implements the Termination\+Condition base class to check if the absolute or relative tolerance for the root value computed by the root-\/finder that this class is used in conjunction with has been reached. Additionally, this termination condition also checks if the maximum number of iterations has been exceeded. This class effectively serves as a wrapper for the check\+Root\+Absolute\+Tolerance()-\/, check\+Root\+Relative\+Tolerance()-\/ and check\+Maximum\+Iterations\+Exceeded()-\/functions. \begin{DoxySeeAlso}{See also}
+check\+Root\+Absolute\+Tolerance(), check\+Root\+Relative\+Tolerance(), check\+Maximum\+Iterations\+Exceeded(). 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::root\+\_\+finders\+::termination\+\_\+conditions\+::\+Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition@{tudat\+::root\+\_\+finders\+::termination\+\_\+conditions\+::\+Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition}!Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition@{Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition}}
+\index{Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition@{Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition}!tudat\+::root\+\_\+finders\+::termination\+\_\+conditions\+::\+Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition@{tudat\+::root\+\_\+finders\+::termination\+\_\+conditions\+::\+Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition}}
+\subsubsection[{\texorpdfstring{Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition(const Scalar\+Type an\+Absolute\+Tolerance=1.\+0e-\/15, const Scalar\+Type a\+Relative\+Tolerance=1.\+0e-\/12, const unsigned int a\+Maximum\+Number\+Of\+Iterations=1000, const bool a\+Throw\+Run\+Time\+Exception\+Flag=true)}{RootAbsoluteOrRelativeToleranceTerminationCondition(const ScalarType anAbsoluteTolerance=1.0e-15, const ScalarType aRelativeTolerance=1.0e-12, const unsigned int aMaximumNumberOfIterations=1000, const bool aThrowRunTimeExceptionFlag=true)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Scalar\+Type  = double$>$ {\bf tudat\+::root\+\_\+finders\+::termination\+\_\+conditions\+::\+Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition}$<$ Scalar\+Type $>$\+::{\bf Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition} (
+\begin{DoxyParamCaption}
+\item[{const Scalar\+Type}]{an\+Absolute\+Tolerance = {\ttfamily 1.0e-\/15}, }
+\item[{const Scalar\+Type}]{a\+Relative\+Tolerance = {\ttfamily 1.0e-\/12}, }
+\item[{const unsigned int}]{a\+Maximum\+Number\+Of\+Iterations = {\ttfamily 1000}, }
+\item[{const bool}]{a\+Throw\+Run\+Time\+Exception\+Flag = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1root__finders_1_1termination__conditions_1_1RootAbsoluteOrRelativeToleranceTerminationCondition_a15f19696bbc8d338ae48afe4f9e50294}{}\label{classtudat_1_1root__finders_1_1termination__conditions_1_1RootAbsoluteOrRelativeToleranceTerminationCondition_a15f19696bbc8d338ae48afe4f9e50294}
+Default constructor, taking root absolute and relative tolerances, maximum number of iterations and run-\/time exception flag.
+
+Default constructor, taking a root absolute tolerance (default=1.\+0e-\/15), root relative tolerance (default=1.\+0e-\/12), a specified maximum number of iterations (default=1000) and a flag indicating if a run-\/time exception should be thrown if this number is exceeded (default=true). 
+\begin{DoxyParams}{Parameters}
+{\em an\+Absolute\+Tolerance} & A absolute tolerance (default=1.\+0e-\/12). \\
+\hline
+{\em a\+Relative\+Tolerance} & A relative tolerance (default=1.\+0e-\/12). \\
+\hline
+{\em a\+Maximum\+Number\+Of\+Iterations} & Maximum number of iterations (default=1000). \\
+\hline
+{\em a\+Throw\+Run\+Time\+Exception\+Flag} & Flag that indicates if run-\/time error should be triggered if maximum number of iterations is exceeded (default=true). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::root\+\_\+finders\+::termination\+\_\+conditions\+::\+Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition@{tudat\+::root\+\_\+finders\+::termination\+\_\+conditions\+::\+Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition}!check\+Termination\+Condition@{check\+Termination\+Condition}}
+\index{check\+Termination\+Condition@{check\+Termination\+Condition}!tudat\+::root\+\_\+finders\+::termination\+\_\+conditions\+::\+Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition@{tudat\+::root\+\_\+finders\+::termination\+\_\+conditions\+::\+Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition}}
+\subsubsection[{\texorpdfstring{check\+Termination\+Condition(const Scalar\+Type current\+Root\+Guess, const Scalar\+Type previous\+Root\+Guess, const Scalar\+Type current\+Root\+Function\+Value, const Scalar\+Type previous\+Root\+Function\+Value, const unsigned int number\+Of\+Iterations)}{checkTerminationCondition(const ScalarType currentRootGuess, const ScalarType previousRootGuess, const ScalarType currentRootFunctionValue, const ScalarType previousRootFunctionValue, const unsigned int numberOfIterations)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Scalar\+Type  = double$>$ bool {\bf tudat\+::root\+\_\+finders\+::termination\+\_\+conditions\+::\+Root\+Absolute\+Or\+Relative\+Tolerance\+Termination\+Condition}$<$ Scalar\+Type $>$\+::check\+Termination\+Condition (
+\begin{DoxyParamCaption}
+\item[{const Scalar\+Type}]{current\+Root\+Guess, }
+\item[{const Scalar\+Type}]{previous\+Root\+Guess, }
+\item[{const Scalar\+Type}]{current\+Root\+Function\+Value, }
+\item[{const Scalar\+Type}]{previous\+Root\+Function\+Value, }
+\item[{const unsigned int}]{number\+Of\+Iterations}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1root__finders_1_1termination__conditions_1_1RootAbsoluteOrRelativeToleranceTerminationCondition_ab2ee1708730c00d2991fd8b9264313de}{}\label{classtudat_1_1root__finders_1_1termination__conditions_1_1RootAbsoluteOrRelativeToleranceTerminationCondition_ab2ee1708730c00d2991fd8b9264313de}
+
+
+Check termination condition (combined ans. and rel. tolerance and max. itetations) 
+
+Check termination condition (wrapper for check\+Root\+Relative\+Tolerance()-\/ check\+Root\+Absolute\+Tolerance()-\/ and check\+Maximum\+Iterations\+Exceeded()-\/functions). 
+\begin{DoxyParams}{Parameters}
+{\em current\+Root\+Guess} & Current root value. \\
+\hline
+{\em previous\+Root\+Guess} & Previous root value. \\
+\hline
+{\em current\+Root\+Function\+Value} & Current root function value (not used, included for base class compatibility). \\
+\hline
+{\em previous\+Root\+Function\+Value} & Previous root function value (not used, included for base class compatibility). \\
+\hline
+{\em number\+Of\+Iterations} & Number of iterations that have been completed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Flag indicating if termination condition has been reached. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1root__finders_1_1termination__conditions_1_1TerminationConditionBase_a54a1719f2a979d8ca0bafdc835ad180d}{tudat\+::root\+\_\+finders\+::termination\+\_\+conditions\+::\+Termination\+Condition\+Base$<$ Scalar\+Type $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Root\+Finders/termination\+Conditions.\+h\end{DoxyCompactItemize}

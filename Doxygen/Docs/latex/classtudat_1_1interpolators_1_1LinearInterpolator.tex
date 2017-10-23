@@ -1,0 +1,137 @@
+\hypertarget{classtudat_1_1interpolators_1_1LinearInterpolator}{}\section{tudat\+:\+:interpolators\+:\+:Linear\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$ Class Template Reference}
+\label{classtudat_1_1interpolators_1_1LinearInterpolator}\index{tudat\+::interpolators\+::\+Linear\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$@{tudat\+::interpolators\+::\+Linear\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}}
+
+
+Linear interpolator class.  
+
+
+
+
+{\ttfamily \#include $<$linear\+Interpolator.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:interpolators\+:\+:Linear\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1interpolators_1_1LinearInterpolator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:interpolators\+:\+:Linear\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1interpolators_1_1LinearInterpolator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1interpolators_1_1LinearInterpolator_a052c1a959155c9f965a6d4b80f9e368b}{Linear\+Interpolator} (const std\+::map$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$ \&data\+Map, const Available\+Lookup\+Scheme selected\+Lookup\+Scheme=hunting\+Algorithm)
+\begin{DoxyCompactList}\small\item\em Constructor from map of independent/dependent data. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1interpolators_1_1LinearInterpolator_aeec6d571de4036786bec6223af54d949}{Linear\+Interpolator} (const std\+::vector$<$ Independent\+Variable\+Type $>$ \&independent\+Values, const std\+::vector$<$ Dependent\+Variable\+Type $>$ \&dependent\+Values, const Available\+Lookup\+Scheme selected\+Lookup\+Scheme=hunting\+Algorithm)
+\begin{DoxyCompactList}\small\item\em Constructor from vectors of independent/dependent data. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1interpolators_1_1LinearInterpolator_a1e3717d8a457644d561e0df9640e2862}{$\sim$\+Linear\+Interpolator} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+Dependent\+Variable\+Type \hyperlink{classtudat_1_1interpolators_1_1LinearInterpolator_af693119bb532933f08f1c4a813072040}{interpolate} (const Independent\+Variable\+Type independent\+Variable\+Value)
+\begin{DoxyCompactList}\small\item\em Function interpolates dependent variable value at given independent variable value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type$>$\\*
+class tudat\+::interpolators\+::\+Linear\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}
+
+Linear interpolator class. 
+
+This class is used to perform linear interpolation in a single dimension from a set of data in independent and dependent variables. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::interpolators\+::\+Linear\+Interpolator@{tudat\+::interpolators\+::\+Linear\+Interpolator}!Linear\+Interpolator@{Linear\+Interpolator}}
+\index{Linear\+Interpolator@{Linear\+Interpolator}!tudat\+::interpolators\+::\+Linear\+Interpolator@{tudat\+::interpolators\+::\+Linear\+Interpolator}}
+\subsubsection[{\texorpdfstring{Linear\+Interpolator(const std\+::map$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$ \&data\+Map, const Available\+Lookup\+Scheme selected\+Lookup\+Scheme=hunting\+Algorithm)}{LinearInterpolator(const std::map< IndependentVariableType, DependentVariableType > &dataMap, const AvailableLookupScheme selectedLookupScheme=huntingAlgorithm)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type , typename Dependent\+Variable\+Type $>$ {\bf tudat\+::interpolators\+::\+Linear\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::{\bf Linear\+Interpolator} (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$ \&}]{data\+Map, }
+\item[{const Available\+Lookup\+Scheme}]{selected\+Lookup\+Scheme = {\ttfamily huntingAlgorithm}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1LinearInterpolator_a052c1a959155c9f965a6d4b80f9e368b}{}\label{classtudat_1_1interpolators_1_1LinearInterpolator_a052c1a959155c9f965a6d4b80f9e368b}
+
+
+Constructor from map of independent/dependent data. 
+
+This constructor initializes the interpolator from a map containing independent variables as key and dependent variables as value. A look-\/up scheme can be provided to override the given default. 
+\begin{DoxyParams}{Parameters}
+{\em data\+Map} & Map containing independent variables as key and dependent variables as value. \\
+\hline
+{\em selected\+Lookup\+Scheme} & Identifier of lookupscheme from enum. This algorithm is used to find the nearest lower data point in the independent variables when requesting interpolation. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::interpolators\+::\+Linear\+Interpolator@{tudat\+::interpolators\+::\+Linear\+Interpolator}!Linear\+Interpolator@{Linear\+Interpolator}}
+\index{Linear\+Interpolator@{Linear\+Interpolator}!tudat\+::interpolators\+::\+Linear\+Interpolator@{tudat\+::interpolators\+::\+Linear\+Interpolator}}
+\subsubsection[{\texorpdfstring{Linear\+Interpolator(const std\+::vector$<$ Independent\+Variable\+Type $>$ \&independent\+Values, const std\+::vector$<$ Dependent\+Variable\+Type $>$ \&dependent\+Values, const Available\+Lookup\+Scheme selected\+Lookup\+Scheme=hunting\+Algorithm)}{LinearInterpolator(const std::vector< IndependentVariableType > &independentValues, const std::vector< DependentVariableType > &dependentValues, const AvailableLookupScheme selectedLookupScheme=huntingAlgorithm)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type , typename Dependent\+Variable\+Type $>$ {\bf tudat\+::interpolators\+::\+Linear\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::{\bf Linear\+Interpolator} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Independent\+Variable\+Type $>$ \&}]{independent\+Values, }
+\item[{const std\+::vector$<$ Dependent\+Variable\+Type $>$ \&}]{dependent\+Values, }
+\item[{const Available\+Lookup\+Scheme}]{selected\+Lookup\+Scheme = {\ttfamily huntingAlgorithm}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1LinearInterpolator_aeec6d571de4036786bec6223af54d949}{}\label{classtudat_1_1interpolators_1_1LinearInterpolator_aeec6d571de4036786bec6223af54d949}
+
+
+Constructor from vectors of independent/dependent data. 
+
+This constructor initializes the interpolator from two vectors containing the independent variables and dependent variables. A look-\/up scheme can be provided to override the given default. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Values} & Vector of values of independent variables that are used, must be sorted in ascending order. \\
+\hline
+{\em dependent\+Values} & Vector of values of dependent variables that are used. \\
+\hline
+{\em selected\+Lookup\+Scheme} & Identifier of lookupscheme from enum. This algorithm is used to find the nearest lower data point in the independent variables when requesting interpolation. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::interpolators\+::\+Linear\+Interpolator@{tudat\+::interpolators\+::\+Linear\+Interpolator}!````~Linear\+Interpolator@{$\sim$\+Linear\+Interpolator}}
+\index{````~Linear\+Interpolator@{$\sim$\+Linear\+Interpolator}!tudat\+::interpolators\+::\+Linear\+Interpolator@{tudat\+::interpolators\+::\+Linear\+Interpolator}}
+\subsubsection[{\texorpdfstring{$\sim$\+Linear\+Interpolator()}{~LinearInterpolator()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type , typename Dependent\+Variable\+Type $>$ {\bf tudat\+::interpolators\+::\+Linear\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::$\sim${\bf Linear\+Interpolator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1LinearInterpolator_a1e3717d8a457644d561e0df9640e2862}{}\label{classtudat_1_1interpolators_1_1LinearInterpolator_a1e3717d8a457644d561e0df9640e2862}
+
+
+Default destructor. 
+
+Default destructor 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::interpolators\+::\+Linear\+Interpolator@{tudat\+::interpolators\+::\+Linear\+Interpolator}!interpolate@{interpolate}}
+\index{interpolate@{interpolate}!tudat\+::interpolators\+::\+Linear\+Interpolator@{tudat\+::interpolators\+::\+Linear\+Interpolator}}
+\subsubsection[{\texorpdfstring{interpolate(const Independent\+Variable\+Type independent\+Variable\+Value)}{interpolate(const IndependentVariableType independentVariableValue)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type , typename Dependent\+Variable\+Type $>$ Dependent\+Variable\+Type {\bf tudat\+::interpolators\+::\+Linear\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::interpolate (
+\begin{DoxyParamCaption}
+\item[{const Independent\+Variable\+Type}]{independent\+Variable\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1interpolators_1_1LinearInterpolator_af693119bb532933f08f1c4a813072040}{}\label{classtudat_1_1interpolators_1_1LinearInterpolator_af693119bb532933f08f1c4a813072040}
+
+
+Function interpolates dependent variable value at given independent variable value. 
+
+Function interpolates dependent variable value at given independent variable value. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variable\+Value} & Value of independent variable at which interpolation is to take place. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Interpolated value of dependent variable. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a1756cce160465357493e18221aa49dee}{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Interpolators/linear\+Interpolator.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,124 @@
+\hypertarget{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution}{}\section{tudat\+:\+:statistics\+:\+:Epanechnikov\+Kernel\+Distribution Class Reference}
+\label{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution}\index{tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution@{tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution}}
+
+
+Class for Probability distribution using a single Epanechnikov kernel.  
+
+
+
+
+{\ttfamily \#include $<$kernel\+Density\+Distribution.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:statistics\+:\+:Epanechnikov\+Kernel\+Distribution\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:statistics\+:\+:Epanechnikov\+Kernel\+Distribution\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution_a4ff2b8492862b80c9cf51dc9ca30c881}{Epanechnikov\+Kernel\+Distribution} (const double mean, const double band\+Width)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution_ad4ef6494dd02a5efae26ffe69e1f8008}{evaluate\+Pdf} (const double \&independent\+Variable)
+\begin{DoxyCompactList}\small\item\em Function to evaluate pdf of distribution. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution_a168c6dc6cec1b90c5eb98fc04509a980}{evaluate\+Cdf} (const double \&independent\+Variable)
+\begin{DoxyCompactList}\small\item\em Function to evaluate cdf of distribution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for Probability distribution using a single Epanechnikov kernel. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution@{tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution}!Epanechnikov\+Kernel\+Distribution@{Epanechnikov\+Kernel\+Distribution}}
+\index{Epanechnikov\+Kernel\+Distribution@{Epanechnikov\+Kernel\+Distribution}!tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution@{tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution}}
+\subsubsection[{\texorpdfstring{Epanechnikov\+Kernel\+Distribution(const double mean, const double band\+Width)}{EpanechnikovKernelDistribution(const double mean, const double bandWidth)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution\+::\+Epanechnikov\+Kernel\+Distribution (
+\begin{DoxyParamCaption}
+\item[{const double}]{mean, }
+\item[{const double}]{band\+Width}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution_a4ff2b8492862b80c9cf51dc9ca30c881}{}\label{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution_a4ff2b8492862b80c9cf51dc9ca30c881}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em mean} & Kernel mean \\
+\hline
+{\em band\+Width} & Kernel bandwidth \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution@{tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution}!evaluate\+Cdf@{evaluate\+Cdf}}
+\index{evaluate\+Cdf@{evaluate\+Cdf}!tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution@{tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution}}
+\subsubsection[{\texorpdfstring{evaluate\+Cdf(const double \&independent\+Variable)}{evaluateCdf(const double &independentVariable)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution\+::evaluate\+Cdf (
+\begin{DoxyParamCaption}
+\item[{const double \&}]{independent\+Variable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution_a168c6dc6cec1b90c5eb98fc04509a980}{}\label{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution_a168c6dc6cec1b90c5eb98fc04509a980}
+
+
+Function to evaluate cdf of distribution. 
+
+Get probability mass.
+
+Function to evaluate cumulative distribution function at given independent\+Variable value. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variable} & Value of independent variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Evaluated cdf 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_ad60887b5623ded9e73456dedcbf32a8a}{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution$<$ double $>$}.
+
+\index{tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution@{tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution}!evaluate\+Pdf@{evaluate\+Pdf}}
+\index{evaluate\+Pdf@{evaluate\+Pdf}!tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution@{tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution}}
+\subsubsection[{\texorpdfstring{evaluate\+Pdf(const double \&independent\+Variable)}{evaluatePdf(const double &independentVariable)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution\+::evaluate\+Pdf (
+\begin{DoxyParamCaption}
+\item[{const double \&}]{independent\+Variable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution_ad4ef6494dd02a5efae26ffe69e1f8008}{}\label{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution_ad4ef6494dd02a5efae26ffe69e1f8008}
+
+
+Function to evaluate pdf of distribution. 
+
+Get probability density.
+
+Function to evaluate probability distribution function at given independent\+Variable value. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variable} & Value of independent variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Evaluated pdf 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_a7edfe6753ce63fe4e12409d3fb88e499}{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution$<$ double $>$}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Statistics/kernel\+Density\+Distribution.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Statistics/kernel\+Density\+Distribution.\+cpp\end{DoxyCompactItemize}

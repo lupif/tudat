@@ -1,0 +1,998 @@
+\hypertarget{classtudat_1_1simulation__setup_1_1Body}{}\section{tudat\+:\+:simulation\+\_\+setup\+:\+:Body Class Reference}
+\label{classtudat_1_1simulation__setup_1_1Body}\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+
+
+\hyperlink{classtudat_1_1simulation__setup_1_1Body}{Body} class representing the properties of a celestial body (natural or artificial).  
+
+
+
+
+{\ttfamily \#include $<$body.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1Body_a802232493506b5fc4956779e74468f06}{Body} (const Eigen\+::\+Vector6d \&state=Eigen\+::\+Vector6d\+::\+Zero())
+\begin{DoxyCompactList}\small\item\em Constructor for a body. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1simulation__setup_1_1BaseStateInterface}{Base\+State\+Interface} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_a4dbe4ca3a89d67dfa7da256ad5343b68}{get\+Ephemeris\+Frame\+To\+Base\+Frame} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the class returning the state of this body\textquotesingle{}s ephemeris origin w.\+r.\+t. the global origin. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_a6f30112a19952498a20d482ac5632012}{set\+Ephemeris\+Frame\+To\+Base\+Frame} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1simulation__setup_1_1BaseStateInterface}{Base\+State\+Interface} $>$ ephemeris\+Frame\+To\+Base\+Frame)
+\begin{DoxyCompactList}\small\item\em Function to set the class returning the state of this body\textquotesingle{}s ephemeris origin w.\+r.\+t. the global origin. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_a157e498e30d7c90dd7a4b73c719fd5d5}{set\+State} (const Eigen\+::\+Vector6d \&state)
+\begin{DoxyCompactList}\small\item\em Set current state of body manually. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_ae5f634a6c751ad8922dc6e6662f6a502}{set\+Long\+State} (const Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ \&long\+State)
+\begin{DoxyCompactList}\small\item\em Set current state of body manually in long double precision. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename State\+Scalar\+Type $>$ }\\void \hyperlink{classtudat_1_1simulation__setup_1_1Body_ab56fa0e8697fbb2dab1943d36fb7d493}{set\+Templated\+State} (const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ \&state)
+\begin{DoxyCompactList}\small\item\em Templated function to set the state manually. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ }\\void \hyperlink{classtudat_1_1simulation__setup_1_1Body_a2f2cfc32c8e5b257b352809d623b2985}{set\+State\+From\+Ephemeris} (const Time\+Type \&time)
+\item 
+{\footnotesize template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ }\\Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_a4ad52e0fbd714ebd2494d65005a8da5e}{get\+State\+In\+Base\+Frame\+From\+Ephemeris} (const Time\+Type time)
+\item 
+Eigen\+::\+Vector6d \hyperlink{classtudat_1_1simulation__setup_1_1Body_ae4541711e56e09272916448030882fc9}{get\+State} ()
+\begin{DoxyCompactList}\small\item\em Get current state. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1simulation__setup_1_1Body_a595498359521268dbeedc902953a0633}{get\+Position} ()
+\begin{DoxyCompactList}\small\item\em Get current position. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1simulation__setup_1_1Body_ad043093286bc331c63cefbeba4fa17d8}{get\+Velocity} ()
+\begin{DoxyCompactList}\small\item\em Get current velocity. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_ab7c0bcfab31d20e5c203da1f92b90792}{get\+Long\+State} ()
+\begin{DoxyCompactList}\small\item\em Get current state, in long double precision. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ long double, 3, 1 $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_ad60f6964ee99fca9f6a7ea5047a108ff}{get\+Long\+Position} ()
+\begin{DoxyCompactList}\small\item\em Get current position, in long double precision. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ long double, 3, 1 $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_aeed3f086d3ca8d4c037bee67ad123016}{get\+Long\+Velocity} ()
+\begin{DoxyCompactList}\small\item\em Get current velocity, in long double precision. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Scalar\+State\+Type $>$ }\\Eigen\+::\+Matrix$<$ Scalar\+State\+Type, 6, 1 $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_a11ce61a7598916958edbbaf1e52415ca}{get\+Templated\+State} ()
+\begin{DoxyCompactList}\small\item\em Templated function to retrieve the state. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_a06605a2e4d471743ab9ff19feb6f3431}{set\+Current\+Rotation\+To\+Local\+Frame\+From\+Ephemeris} (const double time)
+\begin{DoxyCompactList}\small\item\em Function to set the rotation from global to body-\/fixed frame at given time. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_a352f45d815d365b742e55e94e0ec8f4c}{set\+Current\+Rotation\+To\+Local\+Frame\+Derivative\+From\+Ephemeris} (const double time)
+\begin{DoxyCompactList}\small\item\em Function to set the rotation matrix derivative from global to body-\/fixed frame at given time. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_a61a6e3eccaed8d438c22003516d8009f}{set\+Current\+Angular\+Velocity\+Vector\+In\+Global\+Frame} (const double time)
+\begin{DoxyCompactList}\small\item\em Function to set the angular velocity vector in the global frame at given time. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_afb338d46d3f9de1df04b929ed3766292}{set\+Current\+Rotational\+State\+To\+Local\+Frame\+From\+Ephemeris} (const double time)
+\begin{DoxyCompactList}\small\item\em Function to set the full rotational state at given time. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \hyperlink{classtudat_1_1simulation__setup_1_1Body_a4c6c29c88751b36dbb09348115c436e2}{get\+Current\+Rotation\+To\+Global\+Frame} ()
+\begin{DoxyCompactList}\small\item\em Get current rotation from body-\/fixed to inertial frame. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \hyperlink{classtudat_1_1simulation__setup_1_1Body_a7eaf728cdc11cf98ac7e7b75e38b62ca}{get\+Current\+Rotation\+To\+Local\+Frame} ()
+\begin{DoxyCompactList}\small\item\em Get current rotation from inertial to body-\/fixed frame. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix3d \hyperlink{classtudat_1_1simulation__setup_1_1Body_a0946c1b5fa661abd9935041ca7bc37ac}{get\+Current\+Rotation\+Matrix\+Derivative\+To\+Global\+Frame} ()
+\begin{DoxyCompactList}\small\item\em Get current rotation matrix derivative from body-\/fixed to global frame. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix3d \hyperlink{classtudat_1_1simulation__setup_1_1Body_a0cd33824b4bbd33c4ca120098a5bebd4}{get\+Current\+Rotation\+Matrix\+Derivative\+To\+Local\+Frame} ()
+\begin{DoxyCompactList}\small\item\em Get current rotation matrix derivative from global to body-\/fixed frame. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_ab9ee176fb6d8f2a8f9df7d1acce3ef24}{set\+Ephemeris} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1ephemerides_1_1Ephemeris}{ephemerides\+::\+Ephemeris} $>$ body\+Ephemeris)
+\begin{DoxyCompactList}\small\item\em Function to set the ephemeris of the body. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_a66b39c1fb3827c1a59ba4f036e2b68d8}{set\+Gravity\+Field\+Model} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1gravitation_1_1GravityFieldModel}{gravitation\+::\+Gravity\+Field\+Model} $>$ gravity\+Field\+Model)
+\begin{DoxyCompactList}\small\item\em Function to set the gravity field of the body. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_a2c14b27ed335c1dee68f943651f3be9a}{set\+Atmosphere\+Model} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1aerodynamics_1_1AtmosphereModel}{aerodynamics\+::\+Atmosphere\+Model} $>$ atmosphere\+Model)
+\begin{DoxyCompactList}\small\item\em Function to set the atmosphere model of the body. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_ad72a4d4f70bf04344b4438480074178e}{set\+Rotational\+Ephemeris} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1ephemerides_1_1RotationalEphemeris}{ephemerides\+::\+Rotational\+Ephemeris} $>$ rotational\+Ephemeris)
+\begin{DoxyCompactList}\small\item\em Function to set the rotation model of the body. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_aaeae7e6f9394ee839d1a578c80f33ed5}{set\+Dependent\+Orientation\+Calculator} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1reference__frames_1_1DependentOrientationCalculator}{reference\+\_\+frames\+::\+Dependent\+Orientation\+Calculator} $>$ dependent\+Orientation\+Calculator)
+\begin{DoxyCompactList}\small\item\em Function to set a rotation model that is only valid during numerical propagation. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_ab64e549564945923504749067e0f0879}{set\+Shape\+Model} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__astrodynamics_1_1BodyShapeModel}{basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model} $>$ shape\+Model)
+\begin{DoxyCompactList}\small\item\em Function to set the shape model of the body. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_aced3d9fdcfc443e55c48e8869537fa5e}{set\+Aerodynamic\+Coefficient\+Interface} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface}{aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface} $>$ aerodynamic\+Coefficient\+Interface)
+\begin{DoxyCompactList}\small\item\em Function to set the aerodynamic coefficient interface of the body. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_a1d1ae13ce0f4ad3d74c69a3bfbddd654}{set\+Flight\+Conditions} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions}{aerodynamics\+::\+Flight\+Conditions} $>$ aerodynamic\+Flight\+Conditions)
+\begin{DoxyCompactList}\small\item\em Function to set the body flight conditions. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_ad52f9dc125c95021748c42ee5dd03621}{set\+Radiation\+Pressure\+Interface} (const std\+::string \&radiating\+Body, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface}{electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface} $>$ radiation\+Pressure\+Interface)
+\begin{DoxyCompactList}\small\item\em Function to set the radiation pressure interface of the body, for a single radiation source. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_a72d039d757b7e8b70654b79c776a32d4}{set\+Gravity\+Field\+Variation\+Set} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariationsSet}{gravitation\+::\+Gravity\+Field\+Variations\+Set} $>$ gravity\+Field\+Variation\+Set)
+\begin{DoxyCompactList}\small\item\em Function to set object containing all variations in the gravity field of this body. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1gravitation_1_1GravityFieldModel}{gravitation\+::\+Gravity\+Field\+Model} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_adddf3831784320b9bc7a4c2f18ddc57d}{get\+Gravity\+Field\+Model} ()
+\begin{DoxyCompactList}\small\item\em Function to get the gravity field model of the body. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1ephemerides_1_1Ephemeris}{ephemerides\+::\+Ephemeris} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_a6df4ae46413f18304ec775ff430ffbea}{get\+Ephemeris} ()
+\begin{DoxyCompactList}\small\item\em Function to get the ephemeris of the body. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1aerodynamics_1_1AtmosphereModel}{aerodynamics\+::\+Atmosphere\+Model} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_ad655df1fe0eb22fcce46dcc0cd579c70}{get\+Atmosphere\+Model} ()
+\begin{DoxyCompactList}\small\item\em Function to get the atmosphere model of the body. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1ephemerides_1_1RotationalEphemeris}{ephemerides\+::\+Rotational\+Ephemeris} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_ad7f9739ae689c56a6e1c4903bcdcc7f0}{get\+Rotational\+Ephemeris} ()
+\begin{DoxyCompactList}\small\item\em Function to get the rotation model of the body. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1reference__frames_1_1DependentOrientationCalculator}{reference\+\_\+frames\+::\+Dependent\+Orientation\+Calculator} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_a449bb506aa309e75f20429d0d285697e}{get\+Dependent\+Orientation\+Calculator} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the model to compute the rotation of the body based on the current state of the environment. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1basic__astrodynamics_1_1BodyShapeModel}{basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_afbb63724c2b0d7453475bf1c186793dc}{get\+Shape\+Model} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the shape model of body. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface}{aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_a08e15216b11433e344afc9db6a17dff8}{get\+Aerodynamic\+Coefficient\+Interface} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the aerodynamic coefficient model of body. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1aerodynamics_1_1FlightConditions}{aerodynamics\+::\+Flight\+Conditions} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_abf095882cd458103d85419fc3d306cb4}{get\+Flight\+Conditions} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the body flight conditions. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface}{electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface} $>$ $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_a6f17a6e2e52d0a3b88414e6c2efb2c8c}{get\+Radiation\+Pressure\+Interfaces} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the shape model of the body. \end{DoxyCompactList}\item 
+std\+::pair$<$ bool, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariations}{gravitation\+::\+Gravity\+Field\+Variations} $>$ $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_abc45128eb00463e71cfa70f8cfec0b25}{get\+Gravity\+Field\+Variation} (const gravitation\+::\+Body\+Deformation\+Types \&deformation\+Type, const std\+::string identifier=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Function to retrieve a single object describing variation in the gravity field of this body. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariationsSet}{gravitation\+::\+Gravity\+Field\+Variations\+Set} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_a35840a85441f26cc855faa982913f399}{get\+Gravity\+Field\+Variation\+Set} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve object containing all variations in the gravity field of this body. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1system__models_1_1VehicleSystems}{system\+\_\+models\+::\+Vehicle\+Systems} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_a810805c90e44eb5907ecf9e594db8ba6}{get\+Vehicle\+Systems} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve container object with hardware systems present on/in body. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_ae87cb3e9f23f172743d0181b382c4833}{set\+Vehicle\+Systems} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1system__models_1_1VehicleSystems}{system\+\_\+models\+::\+Vehicle\+Systems} $>$ vehicle\+Systems)
+\begin{DoxyCompactList}\small\item\em Function to set container object with hardware systems present on/in body. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_ad2b427d0e55f67dac85de56f54dc3b9a}{set\+Body\+Mass\+Function} (const boost\+::function$<$ double(const double) $>$ body\+Mass\+Function)
+\begin{DoxyCompactList}\small\item\em Function to set the function returning body mass as a function of time. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_a0e311bb19378807ecf05302073337a07}{set\+Constant\+Body\+Mass} (const double body\+Mass)
+\begin{DoxyCompactList}\small\item\em Function to set the body mass as being constant (i.\+e. time-\/independent) \end{DoxyCompactList}\item 
+boost\+::function$<$ double(const double) $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_a74dd82ccc5ffb2bb1dcaad58615bf620}{get\+Body\+Mass\+Function} ()
+\begin{DoxyCompactList}\small\item\em Function to get the function returning body mass as a function of time. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_aee9b25e036b5196abf916ef67f219fab}{update\+Mass} (const double time)
+\begin{DoxyCompactList}\small\item\em Function to update the body mass to the current time. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1simulation__setup_1_1Body_a94f591d02b553b3450ad78172e50350d}{get\+Body\+Mass} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the current body mass. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_ab23764a38675d6f9f9fc5c22212ac13f}{add\+Ground\+Station} (const std\+::string \&station\+Name, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1ground__stations_1_1GroundStation}{ground\+\_\+stations\+::\+Ground\+Station} $>$ \&station)
+\begin{DoxyCompactList}\small\item\em Function to add a ground station to the body. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1ground__stations_1_1GroundStation}{ground\+\_\+stations\+::\+Ground\+Station} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_a9d81354ec4acca0a2905688ee6e57030}{get\+Ground\+Station} (const std\+::string \&station\+Name) const 
+\begin{DoxyCompactList}\small\item\em Function to retrieve a ground station. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1ground__stations_1_1GroundStation}{ground\+\_\+stations\+::\+Ground\+Station} $>$ $>$ \hyperlink{classtudat_1_1simulation__setup_1_1Body_ad0116ec0c6ef74c0ad8bcdf9b22b548e}{get\+Ground\+Station\+Map} () const 
+\begin{DoxyCompactList}\small\item\em Function to retrieve full list of ground stations. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_a0c2cbfb00a1d2291e8277ac7538536eb}{update\+Constant\+Ephemeris\+Dependent\+Member\+Quantities} ()
+\begin{DoxyCompactList}\small\item\em Function to recompute the internal variables of member variables that depend on the ephemerides bodies. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1Body_a397a8d10e8da91cac860d4978784b963}{recompute\+State\+On\+Next\+Call} ()
+\begin{DoxyCompactList}\small\item\em Function to indicate that the state needs to be recomputed on next call to set\+State\+From\+Ephemeris. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\Eigen\+::\+Matrix$<$ double, 6, 1 $>$ {\bfseries get\+Templated\+State} ()\hypertarget{classtudat_1_1simulation__setup_1_1Body_a5b104a64818a2097f29cd2d54b185e76}{}\label{classtudat_1_1simulation__setup_1_1Body_a5b104a64818a2097f29cd2d54b185e76}
+
+\item 
+{\footnotesize template$<$$>$ }\\Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ {\bfseries get\+Templated\+State} ()\hypertarget{classtudat_1_1simulation__setup_1_1Body_aa0d27be87a92ac3004608d1ecf7b9fd3}{}\label{classtudat_1_1simulation__setup_1_1Body_aa0d27be87a92ac3004608d1ecf7b9fd3}
+
+\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{classtudat_1_1simulation__setup_1_1Body_aa857b1713489c0e596297e579051a1d2}{set\+Templated\+State} (const Eigen\+::\+Matrix$<$ double, 6, 1 $>$ \&state)\hypertarget{classtudat_1_1simulation__setup_1_1Body_aa857b1713489c0e596297e579051a1d2}{}\label{classtudat_1_1simulation__setup_1_1Body_aa857b1713489c0e596297e579051a1d2}
+
+\begin{DoxyCompactList}\small\item\em Templated function to set the state manually. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{classtudat_1_1simulation__setup_1_1Body_a78d1bb0d438e8e6aff3a1462e0c41222}{set\+Templated\+State} (const Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ \&state)\hypertarget{classtudat_1_1simulation__setup_1_1Body_a78d1bb0d438e8e6aff3a1462e0c41222}{}\label{classtudat_1_1simulation__setup_1_1Body_a78d1bb0d438e8e6aff3a1462e0c41222}
+
+\begin{DoxyCompactList}\small\item\em Templated function to set the state manually. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classtudat_1_1simulation__setup_1_1Body}{Body} class representing the properties of a celestial body (natural or artificial). 
+
+\hyperlink{classtudat_1_1simulation__setup_1_1Body}{Body} class representing the properties of a celestial body (natural or artificial). By storing all properties of bodies (ephemeris, rotation, gravity, etc.) in a set of body objects, the simulation environment can be defined in a clear and modular way. To create body objects, the \hyperlink{createBodies_8h_source}{create\+Bodies.\+h} function provides a range of functionality. The \hyperlink{createAccelerationModels_8h_source}{create\+Acceleration\+Models.\+h} file provides functions to use body objects to create acceleration objects. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!Body@{Body}}
+\index{Body@{Body}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{Body(const Eigen\+::\+Vector6d \&state=\+Eigen\+::\+Vector6d\+::\+Zero())}{Body(const Eigen::Vector6d &state=Eigen::Vector6d::Zero())}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::simulation\+\_\+setup\+::\+Body\+::\+Body (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector6d \&}]{state = {\ttfamily Eigen\+:\+:Vector6d\+:\+:Zero(~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a802232493506b5fc4956779e74468f06}{}\label{classtudat_1_1simulation__setup_1_1Body_a802232493506b5fc4956779e74468f06}
+
+
+Constructor for a body. 
+
+Constructor for a body, sets current state (with zero default value). 
+\begin{DoxyParams}{Parameters}
+{\em state} & Current state of body at initialization (default = zeroes). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!add\+Ground\+Station@{add\+Ground\+Station}}
+\index{add\+Ground\+Station@{add\+Ground\+Station}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{add\+Ground\+Station(const std\+::string \&station\+Name, const boost\+::shared\+\_\+ptr$<$ ground\+\_\+stations\+::\+Ground\+Station $>$ \&station)}{addGroundStation(const std::string &stationName, const boost::shared_ptr< ground_stations::GroundStation > &station)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::add\+Ground\+Station (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{station\+Name, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf ground\+\_\+stations\+::\+Ground\+Station} $>$ \&}]{station}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ab23764a38675d6f9f9fc5c22212ac13f}{}\label{classtudat_1_1simulation__setup_1_1Body_ab23764a38675d6f9f9fc5c22212ac13f}
+
+
+Function to add a ground station to the body. 
+
+Function to add a ground station to the body 
+\begin{DoxyParams}{Parameters}
+{\em station\+Name} & Name of ground station \\
+\hline
+{\em station} & Ground station object that is to be set \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Aerodynamic\+Coefficient\+Interface@{get\+Aerodynamic\+Coefficient\+Interface}}
+\index{get\+Aerodynamic\+Coefficient\+Interface@{get\+Aerodynamic\+Coefficient\+Interface}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Aerodynamic\+Coefficient\+Interface()}{getAerodynamicCoefficientInterface()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface} $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Aerodynamic\+Coefficient\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a08e15216b11433e344afc9db6a17dff8}{}\label{classtudat_1_1simulation__setup_1_1Body_a08e15216b11433e344afc9db6a17dff8}
+
+
+Function to retrieve the aerodynamic coefficient model of body. 
+
+Function to retrieve the body aerodynamic coefficient model of body. \begin{DoxyReturn}{Returns}
+Aerodynamic coefficient model of body. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Atmosphere\+Model@{get\+Atmosphere\+Model}}
+\index{get\+Atmosphere\+Model@{get\+Atmosphere\+Model}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Atmosphere\+Model()}{getAtmosphereModel()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf aerodynamics\+::\+Atmosphere\+Model} $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Atmosphere\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ad655df1fe0eb22fcce46dcc0cd579c70}{}\label{classtudat_1_1simulation__setup_1_1Body_ad655df1fe0eb22fcce46dcc0cd579c70}
+
+
+Function to get the atmosphere model of the body. 
+
+Function to get the atmosphere model of the body. \begin{DoxyReturn}{Returns}
+Atmosphere model of the body. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Body\+Mass@{get\+Body\+Mass}}
+\index{get\+Body\+Mass@{get\+Body\+Mass}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Body\+Mass()}{getBodyMass()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Body\+Mass (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a94f591d02b553b3450ad78172e50350d}{}\label{classtudat_1_1simulation__setup_1_1Body_a94f591d02b553b3450ad78172e50350d}
+
+
+Function to retrieve the current body mass. 
+
+Function to retrieve the current body mass \begin{DoxyReturn}{Returns}
+Current body mass. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Body\+Mass\+Function@{get\+Body\+Mass\+Function}}
+\index{get\+Body\+Mass\+Function@{get\+Body\+Mass\+Function}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Body\+Mass\+Function()}{getBodyMassFunction()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ double( const double ) $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Body\+Mass\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a74dd82ccc5ffb2bb1dcaad58615bf620}{}\label{classtudat_1_1simulation__setup_1_1Body_a74dd82ccc5ffb2bb1dcaad58615bf620}
+
+
+Function to get the function returning body mass as a function of time. 
+
+Function to get the function returning body mass as a function of time \begin{DoxyReturn}{Returns}
+Function returning body mass as a function of time 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Current\+Rotation\+Matrix\+Derivative\+To\+Global\+Frame@{get\+Current\+Rotation\+Matrix\+Derivative\+To\+Global\+Frame}}
+\index{get\+Current\+Rotation\+Matrix\+Derivative\+To\+Global\+Frame@{get\+Current\+Rotation\+Matrix\+Derivative\+To\+Global\+Frame}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Current\+Rotation\+Matrix\+Derivative\+To\+Global\+Frame()}{getCurrentRotationMatrixDerivativeToGlobalFrame()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix3d tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Current\+Rotation\+Matrix\+Derivative\+To\+Global\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a0946c1b5fa661abd9935041ca7bc37ac}{}\label{classtudat_1_1simulation__setup_1_1Body_a0946c1b5fa661abd9935041ca7bc37ac}
+
+
+Get current rotation matrix derivative from body-\/fixed to global frame. 
+
+Get current rotation matrix derivative from body-\/fixed frame to global, as set from the rotational\+Ephemeris\+\_\+ by the set\+Current\+Rotational\+State\+To\+Local\+Frame\+From\+Ephemeris or set\+Current\+Rotation\+To\+Local\+Frame\+Derivative\+From\+Ephemeris function. If body has no rotational ephemeris, an zero matrix (no rotation) is returned. \begin{DoxyReturn}{Returns}
+Current otation matrix derivative from global to body-\/fixed frame. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Current\+Rotation\+Matrix\+Derivative\+To\+Local\+Frame@{get\+Current\+Rotation\+Matrix\+Derivative\+To\+Local\+Frame}}
+\index{get\+Current\+Rotation\+Matrix\+Derivative\+To\+Local\+Frame@{get\+Current\+Rotation\+Matrix\+Derivative\+To\+Local\+Frame}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Current\+Rotation\+Matrix\+Derivative\+To\+Local\+Frame()}{getCurrentRotationMatrixDerivativeToLocalFrame()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix3d tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Current\+Rotation\+Matrix\+Derivative\+To\+Local\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a0cd33824b4bbd33c4ca120098a5bebd4}{}\label{classtudat_1_1simulation__setup_1_1Body_a0cd33824b4bbd33c4ca120098a5bebd4}
+
+
+Get current rotation matrix derivative from global to body-\/fixed frame. 
+
+Get current rotation matrix derivative from global to body-\/fixed frame, as set from the rotational\+Ephemeris\+\_\+ by the set\+Current\+Rotational\+State\+To\+Local\+Frame\+From\+Ephemeris or set\+Current\+Rotation\+To\+Local\+Frame\+Derivative\+From\+Ephemeris function. If body has no rotational ephemeris, an zero matrix (no rotation) is returned. \begin{DoxyReturn}{Returns}
+Current otation matrix derivative from global to body-\/fixed frame. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Current\+Rotation\+To\+Global\+Frame@{get\+Current\+Rotation\+To\+Global\+Frame}}
+\index{get\+Current\+Rotation\+To\+Global\+Frame@{get\+Current\+Rotation\+To\+Global\+Frame}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Current\+Rotation\+To\+Global\+Frame()}{getCurrentRotationToGlobalFrame()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Quaterniond tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Current\+Rotation\+To\+Global\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a4c6c29c88751b36dbb09348115c436e2}{}\label{classtudat_1_1simulation__setup_1_1Body_a4c6c29c88751b36dbb09348115c436e2}
+
+
+Get current rotation from body-\/fixed to inertial frame. 
+
+Get current rotation from body-\/fixed to inertial frame, as set from the rotational\+Ephemeris\+\_\+ by the set\+Current\+Rotational\+State\+To\+Local\+Frame\+From\+Ephemeris or set\+Current\+Rotation\+To\+Local\+Frame\+From\+Ephemeris function. If body has no rotational ephemeris, an identity quaternion (no rotation) is returned. \begin{DoxyReturn}{Returns}
+Current rotation from body-\/fixed to inertial frame 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Current\+Rotation\+To\+Local\+Frame@{get\+Current\+Rotation\+To\+Local\+Frame}}
+\index{get\+Current\+Rotation\+To\+Local\+Frame@{get\+Current\+Rotation\+To\+Local\+Frame}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Current\+Rotation\+To\+Local\+Frame()}{getCurrentRotationToLocalFrame()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Quaterniond tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Current\+Rotation\+To\+Local\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a7eaf728cdc11cf98ac7e7b75e38b62ca}{}\label{classtudat_1_1simulation__setup_1_1Body_a7eaf728cdc11cf98ac7e7b75e38b62ca}
+
+
+Get current rotation from inertial to body-\/fixed frame. 
+
+Get current rotation from inertial to body-\/fixed frame, as set from the rotational\+Ephemeris\+\_\+ by the set\+Current\+Rotational\+State\+To\+Local\+Frame\+From\+Ephemeris or set\+Current\+Rotation\+To\+Local\+Frame\+From\+Ephemeris function. If body has no rotational ephemeris, an identity quaternion (no rotation) is returned. \begin{DoxyReturn}{Returns}
+Current rotation from inertial to body-\/fixed frame 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Dependent\+Orientation\+Calculator@{get\+Dependent\+Orientation\+Calculator}}
+\index{get\+Dependent\+Orientation\+Calculator@{get\+Dependent\+Orientation\+Calculator}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Dependent\+Orientation\+Calculator()}{getDependentOrientationCalculator()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf reference\+\_\+frames\+::\+Dependent\+Orientation\+Calculator} $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Dependent\+Orientation\+Calculator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a449bb506aa309e75f20429d0d285697e}{}\label{classtudat_1_1simulation__setup_1_1Body_a449bb506aa309e75f20429d0d285697e}
+
+
+Function to retrieve the model to compute the rotation of the body based on the current state of the environment. 
+
+Function to retrieve the model to compute the rotation of the body based on the current state of the environment (model is only valid during propagation). \begin{DoxyReturn}{Returns}
+Model to compute the rotation of the body based on the current state of the environment 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Ephemeris@{get\+Ephemeris}}
+\index{get\+Ephemeris@{get\+Ephemeris}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Ephemeris()}{getEphemeris()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf ephemerides\+::\+Ephemeris} $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Ephemeris (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a6df4ae46413f18304ec775ff430ffbea}{}\label{classtudat_1_1simulation__setup_1_1Body_a6df4ae46413f18304ec775ff430ffbea}
+
+
+Function to get the ephemeris of the body. 
+
+Function to get the ephemeris of the body. \begin{DoxyReturn}{Returns}
+Ephemeris of the body. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Ephemeris\+Frame\+To\+Base\+Frame@{get\+Ephemeris\+Frame\+To\+Base\+Frame}}
+\index{get\+Ephemeris\+Frame\+To\+Base\+Frame@{get\+Ephemeris\+Frame\+To\+Base\+Frame}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Ephemeris\+Frame\+To\+Base\+Frame()}{getEphemerisFrameToBaseFrame()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf Base\+State\+Interface} $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Ephemeris\+Frame\+To\+Base\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a4dbe4ca3a89d67dfa7da256ad5343b68}{}\label{classtudat_1_1simulation__setup_1_1Body_a4dbe4ca3a89d67dfa7da256ad5343b68}
+
+
+Function to retrieve the class returning the state of this body\textquotesingle{}s ephemeris origin w.\+r.\+t. the global origin. 
+
+Function to retrieve the class returning the state of this body\textquotesingle{}s ephemeris origin w.\+r.\+t. the global origin \begin{DoxyReturn}{Returns}
+Class returning the state of this body\textquotesingle{}s ephemeris origin w.\+r.\+t. the global origin 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Flight\+Conditions@{get\+Flight\+Conditions}}
+\index{get\+Flight\+Conditions@{get\+Flight\+Conditions}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Flight\+Conditions()}{getFlightConditions()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf aerodynamics\+::\+Flight\+Conditions} $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Flight\+Conditions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_abf095882cd458103d85419fc3d306cb4}{}\label{classtudat_1_1simulation__setup_1_1Body_abf095882cd458103d85419fc3d306cb4}
+
+
+Function to retrieve the body flight conditions. 
+
+Function to retrieve the body flight conditions, which calculates current aerodynamic angles, altitude, etc. \begin{DoxyReturn}{Returns}
+\hyperlink{classtudat_1_1simulation__setup_1_1Body}{Body} flight conditions 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Gravity\+Field\+Model@{get\+Gravity\+Field\+Model}}
+\index{get\+Gravity\+Field\+Model@{get\+Gravity\+Field\+Model}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Gravity\+Field\+Model()}{getGravityFieldModel()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf gravitation\+::\+Gravity\+Field\+Model} $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Gravity\+Field\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_adddf3831784320b9bc7a4c2f18ddc57d}{}\label{classtudat_1_1simulation__setup_1_1Body_adddf3831784320b9bc7a4c2f18ddc57d}
+
+
+Function to get the gravity field model of the body. 
+
+Function to get the gravity field model of the body. \begin{DoxyReturn}{Returns}
+Gravity field model of the body. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Gravity\+Field\+Variation@{get\+Gravity\+Field\+Variation}}
+\index{get\+Gravity\+Field\+Variation@{get\+Gravity\+Field\+Variation}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Gravity\+Field\+Variation(const gravitation\+::\+Body\+Deformation\+Types \&deformation\+Type, const std\+::string identifier="""")}{getGravityFieldVariation(const gravitation::BodyDeformationTypes &deformationType, const std::string identifier="")}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ bool, boost\+::shared\+\_\+ptr$<$ {\bf gravitation\+::\+Gravity\+Field\+Variations} $>$ $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Gravity\+Field\+Variation (
+\begin{DoxyParamCaption}
+\item[{const gravitation\+::\+Body\+Deformation\+Types \&}]{deformation\+Type, }
+\item[{const std\+::string}]{identifier = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_abc45128eb00463e71cfa70f8cfec0b25}{}\label{classtudat_1_1simulation__setup_1_1Body_abc45128eb00463e71cfa70f8cfec0b25}
+
+
+Function to retrieve a single object describing variation in the gravity field of this body. 
+
+Function to retrieve a single object describing variation in the gravity field of this body. 
+\begin{DoxyParams}{Parameters}
+{\em deformation\+Type} & Type of gravity field variation. \\
+\hline
+{\em identifier} & Identifier of gravity field variation that is to be retrieved (empty by default; only required if multiple variations of same type are present) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Object describing requested variation in the gravity field of this body. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Gravity\+Field\+Variation\+Set@{get\+Gravity\+Field\+Variation\+Set}}
+\index{get\+Gravity\+Field\+Variation\+Set@{get\+Gravity\+Field\+Variation\+Set}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Gravity\+Field\+Variation\+Set()}{getGravityFieldVariationSet()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf gravitation\+::\+Gravity\+Field\+Variations\+Set} $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Gravity\+Field\+Variation\+Set (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a35840a85441f26cc855faa982913f399}{}\label{classtudat_1_1simulation__setup_1_1Body_a35840a85441f26cc855faa982913f399}
+
+
+Function to retrieve object containing all variations in the gravity field of this body. 
+
+Function to retrieve object containing all variations in the gravity field of this body. \begin{DoxyReturn}{Returns}
+Object containing all variations in the gravity field of this body. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Ground\+Station@{get\+Ground\+Station}}
+\index{get\+Ground\+Station@{get\+Ground\+Station}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Ground\+Station(const std\+::string \&station\+Name) const }{getGroundStation(const std::string &stationName) const }}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf ground\+\_\+stations\+::\+Ground\+Station} $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Ground\+Station (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{station\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a9d81354ec4acca0a2905688ee6e57030}{}\label{classtudat_1_1simulation__setup_1_1Body_a9d81354ec4acca0a2905688ee6e57030}
+
+
+Function to retrieve a ground station. 
+
+Function to retrieve a ground station 
+\begin{DoxyParams}{Parameters}
+{\em station\+Name} & Name of ground station \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ground station object that is retrieved 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Ground\+Station\+Map@{get\+Ground\+Station\+Map}}
+\index{get\+Ground\+Station\+Map@{get\+Ground\+Station\+Map}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Ground\+Station\+Map() const }{getGroundStationMap() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ std\+::string, boost\+::shared\+\_\+ptr$<$ {\bf ground\+\_\+stations\+::\+Ground\+Station} $>$ $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Ground\+Station\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ad0116ec0c6ef74c0ad8bcdf9b22b548e}{}\label{classtudat_1_1simulation__setup_1_1Body_ad0116ec0c6ef74c0ad8bcdf9b22b548e}
+
+
+Function to retrieve full list of ground stations. 
+
+Function to retrieve full list of ground stations \begin{DoxyReturn}{Returns}
+Full list of ground stations 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Long\+Position@{get\+Long\+Position}}
+\index{get\+Long\+Position@{get\+Long\+Position}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Long\+Position()}{getLongPosition()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix$<$ long double, 3, 1 $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Long\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ad60f6964ee99fca9f6a7ea5047a108ff}{}\label{classtudat_1_1simulation__setup_1_1Body_ad60f6964ee99fca9f6a7ea5047a108ff}
+
+
+Get current position, in long double precision. 
+
+Returns the internally stored current position vector, in long double precision \begin{DoxyReturn}{Returns}
+Current position, in long double precision 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Long\+State@{get\+Long\+State}}
+\index{get\+Long\+State@{get\+Long\+State}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Long\+State()}{getLongState()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Long\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ab7c0bcfab31d20e5c203da1f92b90792}{}\label{classtudat_1_1simulation__setup_1_1Body_ab7c0bcfab31d20e5c203da1f92b90792}
+
+
+Get current state, in long double precision. 
+
+Returns the internally stored current state vector, in long double precision \begin{DoxyReturn}{Returns}
+Current state, in long double precisio 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Long\+Velocity@{get\+Long\+Velocity}}
+\index{get\+Long\+Velocity@{get\+Long\+Velocity}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Long\+Velocity()}{getLongVelocity()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix$<$ long double, 3, 1 $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Long\+Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_aeed3f086d3ca8d4c037bee67ad123016}{}\label{classtudat_1_1simulation__setup_1_1Body_aeed3f086d3ca8d4c037bee67ad123016}
+
+
+Get current velocity, in long double precision. 
+
+Returns the internally stored current velocity vector. \begin{DoxyReturn}{Returns}
+Current velocity, in long double precision 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Position()}{getPosition()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a595498359521268dbeedc902953a0633}{}\label{classtudat_1_1simulation__setup_1_1Body_a595498359521268dbeedc902953a0633}
+
+
+Get current position. 
+
+Returns the internally stored current position vector. \begin{DoxyReturn}{Returns}
+Current position. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Radiation\+Pressure\+Interfaces@{get\+Radiation\+Pressure\+Interfaces}}
+\index{get\+Radiation\+Pressure\+Interfaces@{get\+Radiation\+Pressure\+Interfaces}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Radiation\+Pressure\+Interfaces()}{getRadiationPressureInterfaces()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ std\+::string, boost\+::shared\+\_\+ptr$<$ {\bf electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface} $>$ $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Radiation\+Pressure\+Interfaces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a6f17a6e2e52d0a3b88414e6c2efb2c8c}{}\label{classtudat_1_1simulation__setup_1_1Body_a6f17a6e2e52d0a3b88414e6c2efb2c8c}
+
+
+Function to retrieve the shape model of the body. 
+
+Function to retrieve the shape model of the body. \begin{DoxyReturn}{Returns}
+Shape model of the body. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Rotational\+Ephemeris@{get\+Rotational\+Ephemeris}}
+\index{get\+Rotational\+Ephemeris@{get\+Rotational\+Ephemeris}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Rotational\+Ephemeris()}{getRotationalEphemeris()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf ephemerides\+::\+Rotational\+Ephemeris} $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Rotational\+Ephemeris (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ad7f9739ae689c56a6e1c4903bcdcc7f0}{}\label{classtudat_1_1simulation__setup_1_1Body_ad7f9739ae689c56a6e1c4903bcdcc7f0}
+
+
+Function to get the rotation model of the body. 
+
+Function to get the rotation model of the body. \begin{DoxyReturn}{Returns}
+Rotation model of the body. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Shape\+Model@{get\+Shape\+Model}}
+\index{get\+Shape\+Model@{get\+Shape\+Model}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Shape\+Model()}{getShapeModel()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model} $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Shape\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_afbb63724c2b0d7453475bf1c186793dc}{}\label{classtudat_1_1simulation__setup_1_1Body_afbb63724c2b0d7453475bf1c186793dc}
+
+
+Function to retrieve the shape model of body. 
+
+Function to retrieve the shape model of body. \begin{DoxyReturn}{Returns}
+Shape model of body. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+State@{get\+State}}
+\index{get\+State@{get\+State}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+State()}{getState()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector6d tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ae4541711e56e09272916448030882fc9}{}\label{classtudat_1_1simulation__setup_1_1Body_ae4541711e56e09272916448030882fc9}
+
+
+Get current state. 
+
+Returns the internally stored current state vector. \begin{DoxyReturn}{Returns}
+Current state. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+State\+In\+Base\+Frame\+From\+Ephemeris@{get\+State\+In\+Base\+Frame\+From\+Ephemeris}}
+\index{get\+State\+In\+Base\+Frame\+From\+Ephemeris@{get\+State\+In\+Base\+Frame\+From\+Ephemeris}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+State\+In\+Base\+Frame\+From\+Ephemeris(const Time\+Type time)}{getStateInBaseFrameFromEphemeris(const TimeType time)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+State\+In\+Base\+Frame\+From\+Ephemeris (
+\begin{DoxyParamCaption}
+\item[{const Time\+Type}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a4ad52e0fbd714ebd2494d65005a8da5e}{}\label{classtudat_1_1simulation__setup_1_1Body_a4ad52e0fbd714ebd2494d65005a8da5e}
+Templated function to get the current state of the body from its ephemeris and global-\/to-\/ephemeris-\/frame function.
+
+Templated function to get the current state of the body from its ephemeris and global-\/to-\/ephemeris-\/frame function. It calls the set\+State\+From\+Ephemeris state, resetting the current\+State\+\_\+ / current\+Long\+State\+\_\+ variables, and returning the state with the requested precision \begin{DoxyReturn}{Returns}
+State at requested time 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Templated\+State@{get\+Templated\+State}}
+\index{get\+Templated\+State@{get\+Templated\+State}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Templated\+State()}{getTemplatedState()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Scalar\+State\+Type $>$ Eigen\+::\+Matrix$<$ Scalar\+State\+Type, 6, 1 $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Templated\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a11ce61a7598916958edbbaf1e52415ca}{}\label{classtudat_1_1simulation__setup_1_1Body_a11ce61a7598916958edbbaf1e52415ca}
+
+
+Templated function to retrieve the state. 
+
+Templated function to retrieve the state, calls either get\+State or get\+Long\+State function. \begin{DoxyReturn}{Returns}
+Current state of the body, with State\+Scalar\+Type precision. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Vehicle\+Systems@{get\+Vehicle\+Systems}}
+\index{get\+Vehicle\+Systems@{get\+Vehicle\+Systems}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Vehicle\+Systems()}{getVehicleSystems()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf system\+\_\+models\+::\+Vehicle\+Systems} $>$ tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Vehicle\+Systems (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a810805c90e44eb5907ecf9e594db8ba6}{}\label{classtudat_1_1simulation__setup_1_1Body_a810805c90e44eb5907ecf9e594db8ba6}
+
+
+Function to retrieve container object with hardware systems present on/in body. 
+
+Function to retrieve container object with hardware systems present on/in body. \begin{DoxyReturn}{Returns}
+Container object with hardware systems present on/in body 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!get\+Velocity@{get\+Velocity}}
+\index{get\+Velocity@{get\+Velocity}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{get\+Velocity()}{getVelocity()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::simulation\+\_\+setup\+::\+Body\+::get\+Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ad043093286bc331c63cefbeba4fa17d8}{}\label{classtudat_1_1simulation__setup_1_1Body_ad043093286bc331c63cefbeba4fa17d8}
+
+
+Get current velocity. 
+
+Returns the internally stored current velocity vector. \begin{DoxyReturn}{Returns}
+Current velocity. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!recompute\+State\+On\+Next\+Call@{recompute\+State\+On\+Next\+Call}}
+\index{recompute\+State\+On\+Next\+Call@{recompute\+State\+On\+Next\+Call}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{recompute\+State\+On\+Next\+Call()}{recomputeStateOnNextCall()}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::recompute\+State\+On\+Next\+Call (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a397a8d10e8da91cac860d4978784b963}{}\label{classtudat_1_1simulation__setup_1_1Body_a397a8d10e8da91cac860d4978784b963}
+
+
+Function to indicate that the state needs to be recomputed on next call to set\+State\+From\+Ephemeris. 
+
+Function to reset the time to which the state was last updated using set\+State\+From\+Ephemeris function to nan, thereby singalling that it needs to be recomputed upon next call. \index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Aerodynamic\+Coefficient\+Interface@{set\+Aerodynamic\+Coefficient\+Interface}}
+\index{set\+Aerodynamic\+Coefficient\+Interface@{set\+Aerodynamic\+Coefficient\+Interface}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Aerodynamic\+Coefficient\+Interface(const boost\+::shared\+\_\+ptr$<$ aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface $>$ aerodynamic\+Coefficient\+Interface)}{setAerodynamicCoefficientInterface(const boost::shared_ptr< aerodynamics::AerodynamicCoefficientInterface > aerodynamicCoefficientInterface)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Aerodynamic\+Coefficient\+Interface (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface} $>$}]{aerodynamic\+Coefficient\+Interface}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_aced3d9fdcfc443e55c48e8869537fa5e}{}\label{classtudat_1_1simulation__setup_1_1Body_aced3d9fdcfc443e55c48e8869537fa5e}
+
+
+Function to set the aerodynamic coefficient interface of the body. 
+
+Function to set the aerodynamic coefficient interface of the body. 
+\begin{DoxyParams}{Parameters}
+{\em aerodynamic\+Coefficient\+Interface} & Aerodynamic coefficient interface of the body. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Atmosphere\+Model@{set\+Atmosphere\+Model}}
+\index{set\+Atmosphere\+Model@{set\+Atmosphere\+Model}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Atmosphere\+Model(const boost\+::shared\+\_\+ptr$<$ aerodynamics\+::\+Atmosphere\+Model $>$ atmosphere\+Model)}{setAtmosphereModel(const boost::shared_ptr< aerodynamics::AtmosphereModel > atmosphereModel)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Atmosphere\+Model (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf aerodynamics\+::\+Atmosphere\+Model} $>$}]{atmosphere\+Model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a2c14b27ed335c1dee68f943651f3be9a}{}\label{classtudat_1_1simulation__setup_1_1Body_a2c14b27ed335c1dee68f943651f3be9a}
+
+
+Function to set the atmosphere model of the body. 
+
+Function to set the atmosphere model of the body. 
+\begin{DoxyParams}{Parameters}
+{\em atmosphere\+Model} & Atmosphere model of the body. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Body\+Mass\+Function@{set\+Body\+Mass\+Function}}
+\index{set\+Body\+Mass\+Function@{set\+Body\+Mass\+Function}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Body\+Mass\+Function(const boost\+::function$<$ double(const double) $>$ body\+Mass\+Function)}{setBodyMassFunction(const boost::function< double(const double) > bodyMassFunction)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Body\+Mass\+Function (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ double(const double) $>$}]{body\+Mass\+Function}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ad2b427d0e55f67dac85de56f54dc3b9a}{}\label{classtudat_1_1simulation__setup_1_1Body_ad2b427d0e55f67dac85de56f54dc3b9a}
+
+
+Function to set the function returning body mass as a function of time. 
+
+Function to set the function returning body mass as a function of time 
+\begin{DoxyParams}{Parameters}
+{\em body\+Mass\+Function} & Function returning body mass as a function of time \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Constant\+Body\+Mass@{set\+Constant\+Body\+Mass}}
+\index{set\+Constant\+Body\+Mass@{set\+Constant\+Body\+Mass}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Constant\+Body\+Mass(const double body\+Mass)}{setConstantBodyMass(const double bodyMass)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Constant\+Body\+Mass (
+\begin{DoxyParamCaption}
+\item[{const double}]{body\+Mass}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a0e311bb19378807ecf05302073337a07}{}\label{classtudat_1_1simulation__setup_1_1Body_a0e311bb19378807ecf05302073337a07}
+
+
+Function to set the body mass as being constant (i.\+e. time-\/independent) 
+
+Function to set the body mass as being constant (i.\+e. time-\/independent) 
+\begin{DoxyParams}{Parameters}
+{\em body\+Mass} & New constant body mass \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Current\+Angular\+Velocity\+Vector\+In\+Global\+Frame@{set\+Current\+Angular\+Velocity\+Vector\+In\+Global\+Frame}}
+\index{set\+Current\+Angular\+Velocity\+Vector\+In\+Global\+Frame@{set\+Current\+Angular\+Velocity\+Vector\+In\+Global\+Frame}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Current\+Angular\+Velocity\+Vector\+In\+Global\+Frame(const double time)}{setCurrentAngularVelocityVectorInGlobalFrame(const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Current\+Angular\+Velocity\+Vector\+In\+Global\+Frame (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a61a6e3eccaed8d438c22003516d8009f}{}\label{classtudat_1_1simulation__setup_1_1Body_a61a6e3eccaed8d438c22003516d8009f}
+
+
+Function to set the angular velocity vector in the global frame at given time. 
+
+Function to set the angular velocity vector in the global frame at given time, using the rotational\+Ephemeris\+\_\+ member object 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which the angular velocity vector in the global frame is to be retrieved. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Current\+Rotational\+State\+To\+Local\+Frame\+From\+Ephemeris@{set\+Current\+Rotational\+State\+To\+Local\+Frame\+From\+Ephemeris}}
+\index{set\+Current\+Rotational\+State\+To\+Local\+Frame\+From\+Ephemeris@{set\+Current\+Rotational\+State\+To\+Local\+Frame\+From\+Ephemeris}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Current\+Rotational\+State\+To\+Local\+Frame\+From\+Ephemeris(const double time)}{setCurrentRotationalStateToLocalFrameFromEphemeris(const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Current\+Rotational\+State\+To\+Local\+Frame\+From\+Ephemeris (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_afb338d46d3f9de1df04b929ed3766292}{}\label{classtudat_1_1simulation__setup_1_1Body_afb338d46d3f9de1df04b929ed3766292}
+
+
+Function to set the full rotational state at given time. 
+
+Function to set the full rotational state at (rotation from global to body-\/fixed frame rotation matrix derivative from global to body-\/fixed frame and angular velocity vector in the global frame) at given time, using the rotational\+Ephemeris\+\_\+ member object. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which the angular velocity vector in the global frame is to be retrieved. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Current\+Rotation\+To\+Local\+Frame\+Derivative\+From\+Ephemeris@{set\+Current\+Rotation\+To\+Local\+Frame\+Derivative\+From\+Ephemeris}}
+\index{set\+Current\+Rotation\+To\+Local\+Frame\+Derivative\+From\+Ephemeris@{set\+Current\+Rotation\+To\+Local\+Frame\+Derivative\+From\+Ephemeris}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Current\+Rotation\+To\+Local\+Frame\+Derivative\+From\+Ephemeris(const double time)}{setCurrentRotationToLocalFrameDerivativeFromEphemeris(const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Current\+Rotation\+To\+Local\+Frame\+Derivative\+From\+Ephemeris (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a352f45d815d365b742e55e94e0ec8f4c}{}\label{classtudat_1_1simulation__setup_1_1Body_a352f45d815d365b742e55e94e0ec8f4c}
+
+
+Function to set the rotation matrix derivative from global to body-\/fixed frame at given time. 
+
+Function to set the rotation matrix derivative from global to body-\/fixed frame at given time, using the rotational\+Ephemeris\+\_\+ member object 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which the rotation matrix derivative is to be retrieved. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Current\+Rotation\+To\+Local\+Frame\+From\+Ephemeris@{set\+Current\+Rotation\+To\+Local\+Frame\+From\+Ephemeris}}
+\index{set\+Current\+Rotation\+To\+Local\+Frame\+From\+Ephemeris@{set\+Current\+Rotation\+To\+Local\+Frame\+From\+Ephemeris}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Current\+Rotation\+To\+Local\+Frame\+From\+Ephemeris(const double time)}{setCurrentRotationToLocalFrameFromEphemeris(const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Current\+Rotation\+To\+Local\+Frame\+From\+Ephemeris (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a06605a2e4d471743ab9ff19feb6f3431}{}\label{classtudat_1_1simulation__setup_1_1Body_a06605a2e4d471743ab9ff19feb6f3431}
+
+
+Function to set the rotation from global to body-\/fixed frame at given time. 
+
+Function to set the rotation from global to body-\/fixed frame at given time, using the rotational\+Ephemeris\+\_\+ member object 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which the rotation is to be retrieved. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Dependent\+Orientation\+Calculator@{set\+Dependent\+Orientation\+Calculator}}
+\index{set\+Dependent\+Orientation\+Calculator@{set\+Dependent\+Orientation\+Calculator}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Dependent\+Orientation\+Calculator(const boost\+::shared\+\_\+ptr$<$ reference\+\_\+frames\+::\+Dependent\+Orientation\+Calculator $>$ dependent\+Orientation\+Calculator)}{setDependentOrientationCalculator(const boost::shared_ptr< reference_frames::DependentOrientationCalculator > dependentOrientationCalculator)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Dependent\+Orientation\+Calculator (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf reference\+\_\+frames\+::\+Dependent\+Orientation\+Calculator} $>$}]{dependent\+Orientation\+Calculator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_aaeae7e6f9394ee839d1a578c80f33ed5}{}\label{classtudat_1_1simulation__setup_1_1Body_aaeae7e6f9394ee839d1a578c80f33ed5}
+
+
+Function to set a rotation model that is only valid during numerical propagation. 
+
+Function to set a rotation model that is only valid during numerical propagation, as it depends on the full state of the environment 
+\begin{DoxyParams}{Parameters}
+{\em dependent\+Orientation\+Calculator} & Object from which the orientation is computed. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Ephemeris@{set\+Ephemeris}}
+\index{set\+Ephemeris@{set\+Ephemeris}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Ephemeris(const boost\+::shared\+\_\+ptr$<$ ephemerides\+::\+Ephemeris $>$ body\+Ephemeris)}{setEphemeris(const boost::shared_ptr< ephemerides::Ephemeris > bodyEphemeris)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Ephemeris (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf ephemerides\+::\+Ephemeris} $>$}]{body\+Ephemeris}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ab9ee176fb6d8f2a8f9df7d1acce3ef24}{}\label{classtudat_1_1simulation__setup_1_1Body_ab9ee176fb6d8f2a8f9df7d1acce3ef24}
+
+
+Function to set the ephemeris of the body. 
+
+Function to set the ephemeris of the body, which is used to represent the (a priori) state history of the body. 
+\begin{DoxyParams}{Parameters}
+{\em body\+Ephemeris} & New ephemeris of the body. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Ephemeris\+Frame\+To\+Base\+Frame@{set\+Ephemeris\+Frame\+To\+Base\+Frame}}
+\index{set\+Ephemeris\+Frame\+To\+Base\+Frame@{set\+Ephemeris\+Frame\+To\+Base\+Frame}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Ephemeris\+Frame\+To\+Base\+Frame(const boost\+::shared\+\_\+ptr$<$ Base\+State\+Interface $>$ ephemeris\+Frame\+To\+Base\+Frame)}{setEphemerisFrameToBaseFrame(const boost::shared_ptr< BaseStateInterface > ephemerisFrameToBaseFrame)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Ephemeris\+Frame\+To\+Base\+Frame (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Base\+State\+Interface} $>$}]{ephemeris\+Frame\+To\+Base\+Frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a6f30112a19952498a20d482ac5632012}{}\label{classtudat_1_1simulation__setup_1_1Body_a6f30112a19952498a20d482ac5632012}
+
+
+Function to set the class returning the state of this body\textquotesingle{}s ephemeris origin w.\+r.\+t. the global origin. 
+
+Function to set the class returning the state of this body\textquotesingle{}s ephemeris origin w.\+r.\+t. the global origin 
+\begin{DoxyParams}{Parameters}
+{\em ephemeris\+Frame\+To\+Base\+Frame} & Class returning the state of this body\textquotesingle{}s ephemeris origin w.\+r.\+t. the global origin \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Flight\+Conditions@{set\+Flight\+Conditions}}
+\index{set\+Flight\+Conditions@{set\+Flight\+Conditions}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Flight\+Conditions(const boost\+::shared\+\_\+ptr$<$ aerodynamics\+::\+Flight\+Conditions $>$ aerodynamic\+Flight\+Conditions)}{setFlightConditions(const boost::shared_ptr< aerodynamics::FlightConditions > aerodynamicFlightConditions)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Flight\+Conditions (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf aerodynamics\+::\+Flight\+Conditions} $>$}]{aerodynamic\+Flight\+Conditions}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a1d1ae13ce0f4ad3d74c69a3bfbddd654}{}\label{classtudat_1_1simulation__setup_1_1Body_a1d1ae13ce0f4ad3d74c69a3bfbddd654}
+
+
+Function to set the body flight conditions. 
+
+Function to set the body flight conditions, which calculates current aerodynamic angles, altitude, etc. 
+\begin{DoxyParams}{Parameters}
+{\em aerodynamic\+Flight\+Conditions} & \hyperlink{classtudat_1_1simulation__setup_1_1Body}{Body} flight conditions \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Gravity\+Field\+Model@{set\+Gravity\+Field\+Model}}
+\index{set\+Gravity\+Field\+Model@{set\+Gravity\+Field\+Model}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Gravity\+Field\+Model(const boost\+::shared\+\_\+ptr$<$ gravitation\+::\+Gravity\+Field\+Model $>$ gravity\+Field\+Model)}{setGravityFieldModel(const boost::shared_ptr< gravitation::GravityFieldModel > gravityFieldModel)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Gravity\+Field\+Model (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf gravitation\+::\+Gravity\+Field\+Model} $>$}]{gravity\+Field\+Model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a66b39c1fb3827c1a59ba4f036e2b68d8}{}\label{classtudat_1_1simulation__setup_1_1Body_a66b39c1fb3827c1a59ba4f036e2b68d8}
+
+
+Function to set the gravity field of the body. 
+
+Function to set the gravity field of the body; input is also used to (re)set the mass of the body. 
+\begin{DoxyParams}{Parameters}
+{\em gravity\+Field\+Model} & New gravity field of the body. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Gravity\+Field\+Variation\+Set@{set\+Gravity\+Field\+Variation\+Set}}
+\index{set\+Gravity\+Field\+Variation\+Set@{set\+Gravity\+Field\+Variation\+Set}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Gravity\+Field\+Variation\+Set(const boost\+::shared\+\_\+ptr$<$ gravitation\+::\+Gravity\+Field\+Variations\+Set $>$ gravity\+Field\+Variation\+Set)}{setGravityFieldVariationSet(const boost::shared_ptr< gravitation::GravityFieldVariationsSet > gravityFieldVariationSet)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Gravity\+Field\+Variation\+Set (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf gravitation\+::\+Gravity\+Field\+Variations\+Set} $>$}]{gravity\+Field\+Variation\+Set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a72d039d757b7e8b70654b79c776a32d4}{}\label{classtudat_1_1simulation__setup_1_1Body_a72d039d757b7e8b70654b79c776a32d4}
+
+
+Function to set object containing all variations in the gravity field of this body. 
+
+Function to set object containing all variations in the gravity field of this body. 
+\begin{DoxyParams}{Parameters}
+{\em gravity\+Field\+Variation\+Set} & Object containing all variations in the gravity field of this body. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Long\+State@{set\+Long\+State}}
+\index{set\+Long\+State@{set\+Long\+State}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Long\+State(const Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ \&long\+State)}{setLongState(const Eigen::Matrix< long double, 6, 1 > &longState)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Long\+State (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ \&}]{long\+State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ae5f634a6c751ad8922dc6e6662f6a502}{}\label{classtudat_1_1simulation__setup_1_1Body_ae5f634a6c751ad8922dc6e6662f6a502}
+
+
+Set current state of body manually in long double precision. 
+
+Set current state of body manually in long double precision. State must be in the global frame. Note that this function sets both the current\+State\+\_\+ and current\+Long\+State\+\_\+ variables (current\+Long\+State\+\_\+ directly and current\+State\+\_\+ by casting the input to double entries). 
+\begin{DoxyParams}{Parameters}
+{\em long\+State} & Current state of the body that is set, in long double precision. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Radiation\+Pressure\+Interface@{set\+Radiation\+Pressure\+Interface}}
+\index{set\+Radiation\+Pressure\+Interface@{set\+Radiation\+Pressure\+Interface}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Radiation\+Pressure\+Interface(const std\+::string \&radiating\+Body, const boost\+::shared\+\_\+ptr$<$ electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface $>$ radiation\+Pressure\+Interface)}{setRadiationPressureInterface(const std::string &radiatingBody, const boost::shared_ptr< electro_magnetism::RadiationPressureInterface > radiationPressureInterface)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Radiation\+Pressure\+Interface (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{radiating\+Body, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface} $>$}]{radiation\+Pressure\+Interface}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ad52f9dc125c95021748c42ee5dd03621}{}\label{classtudat_1_1simulation__setup_1_1Body_ad52f9dc125c95021748c42ee5dd03621}
+
+
+Function to set the radiation pressure interface of the body, for a single radiation source. 
+
+Function to set the radiation pressure interface of the body, for a single radiation source 
+\begin{DoxyParams}{Parameters}
+{\em radiating\+Body} & Name of body that is the source of the radiation. \\
+\hline
+{\em radiation\+Pressure\+Interface} & Radiation pressure interface of the body. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Rotational\+Ephemeris@{set\+Rotational\+Ephemeris}}
+\index{set\+Rotational\+Ephemeris@{set\+Rotational\+Ephemeris}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Rotational\+Ephemeris(const boost\+::shared\+\_\+ptr$<$ ephemerides\+::\+Rotational\+Ephemeris $>$ rotational\+Ephemeris)}{setRotationalEphemeris(const boost::shared_ptr< ephemerides::RotationalEphemeris > rotationalEphemeris)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Rotational\+Ephemeris (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf ephemerides\+::\+Rotational\+Ephemeris} $>$}]{rotational\+Ephemeris}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ad72a4d4f70bf04344b4438480074178e}{}\label{classtudat_1_1simulation__setup_1_1Body_ad72a4d4f70bf04344b4438480074178e}
+
+
+Function to set the rotation model of the body. 
+
+Function to set the rotation model of the body. 
+\begin{DoxyParams}{Parameters}
+{\em rotational\+Ephemeris} & Rotation model of the body. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Shape\+Model@{set\+Shape\+Model}}
+\index{set\+Shape\+Model@{set\+Shape\+Model}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Shape\+Model(const boost\+::shared\+\_\+ptr$<$ basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model $>$ shape\+Model)}{setShapeModel(const boost::shared_ptr< basic_astrodynamics::BodyShapeModel > shapeModel)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Shape\+Model (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf basic\+\_\+astrodynamics\+::\+Body\+Shape\+Model} $>$}]{shape\+Model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ab64e549564945923504749067e0f0879}{}\label{classtudat_1_1simulation__setup_1_1Body_ab64e549564945923504749067e0f0879}
+
+
+Function to set the shape model of the body. 
+
+Function to set the shape model of the body. 
+\begin{DoxyParams}{Parameters}
+{\em shape\+Model} & Shape model of the body. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+State@{set\+State}}
+\index{set\+State@{set\+State}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+State(const Eigen\+::\+Vector6d \&state)}{setState(const Eigen::Vector6d &state)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+State (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector6d \&}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a157e498e30d7c90dd7a4b73c719fd5d5}{}\label{classtudat_1_1simulation__setup_1_1Body_a157e498e30d7c90dd7a4b73c719fd5d5}
+
+
+Set current state of body manually. 
+
+Set current state of body manually, which must be in the global frame. Note that this function does not set the current\+Long\+State\+\_\+, use the set\+Long\+State when needing the use of the long precision current state. 
+\begin{DoxyParams}{Parameters}
+{\em state} & Current state of the body that is set. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+State\+From\+Ephemeris@{set\+State\+From\+Ephemeris}}
+\index{set\+State\+From\+Ephemeris@{set\+State\+From\+Ephemeris}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+State\+From\+Ephemeris(const Time\+Type \&time)}{setStateFromEphemeris(const TimeType &time)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+State\+From\+Ephemeris (
+\begin{DoxyParamCaption}
+\item[{const Time\+Type \&}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a2f2cfc32c8e5b257b352809d623b2985}{}\label{classtudat_1_1simulation__setup_1_1Body_a2f2cfc32c8e5b257b352809d623b2985}
+Templated function to set the current state of the body from its ephemeris and global-\/to-\/ephemeris-\/frame function.
+
+Templated function to set the current state of the body from its ephemeris and global-\/to-\/ephemeris-\/frame function. It sets both the current\+State\+\_\+ and current\+Long\+State\+\_\+ variables. F F\+Undamental coputation is done on state with State\+Scalar\+Type precision as a function of Time\+Type time 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which the global state is to be set. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Templated\+State@{set\+Templated\+State}}
+\index{set\+Templated\+State@{set\+Templated\+State}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Templated\+State(const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ \&state)}{setTemplatedState(const Eigen::Matrix< StateScalarType, 6, 1 > &state)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type $>$ void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Templated\+State (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ \&}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ab56fa0e8697fbb2dab1943d36fb7d493}{}\label{classtudat_1_1simulation__setup_1_1Body_ab56fa0e8697fbb2dab1943d36fb7d493}
+
+
+Templated function to set the state manually. 
+
+Templated function to set the state manually, calls either set\+State or set\+Long\+State function. 
+\begin{DoxyParams}{Parameters}
+{\em state} & Current state of the body that is set, with State\+Scalar\+Type precision. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!set\+Vehicle\+Systems@{set\+Vehicle\+Systems}}
+\index{set\+Vehicle\+Systems@{set\+Vehicle\+Systems}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{set\+Vehicle\+Systems(const boost\+::shared\+\_\+ptr$<$ system\+\_\+models\+::\+Vehicle\+Systems $>$ vehicle\+Systems)}{setVehicleSystems(const boost::shared_ptr< system_models::VehicleSystems > vehicleSystems)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::set\+Vehicle\+Systems (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf system\+\_\+models\+::\+Vehicle\+Systems} $>$}]{vehicle\+Systems}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_ae87cb3e9f23f172743d0181b382c4833}{}\label{classtudat_1_1simulation__setup_1_1Body_ae87cb3e9f23f172743d0181b382c4833}
+
+
+Function to set container object with hardware systems present on/in body. 
+
+Function to set container object with hardware systems present on/in body (typically only non-\/\+N\+U\+LL for a vehicle). 
+\begin{DoxyParams}{Parameters}
+{\em vehicle\+Systems} & Container object with hardware systems present on/in body \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!update\+Constant\+Ephemeris\+Dependent\+Member\+Quantities@{update\+Constant\+Ephemeris\+Dependent\+Member\+Quantities}}
+\index{update\+Constant\+Ephemeris\+Dependent\+Member\+Quantities@{update\+Constant\+Ephemeris\+Dependent\+Member\+Quantities}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{update\+Constant\+Ephemeris\+Dependent\+Member\+Quantities()}{updateConstantEphemerisDependentMemberQuantities()}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::update\+Constant\+Ephemeris\+Dependent\+Member\+Quantities (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_a0c2cbfb00a1d2291e8277ac7538536eb}{}\label{classtudat_1_1simulation__setup_1_1Body_a0c2cbfb00a1d2291e8277ac7538536eb}
+
+
+Function to recompute the internal variables of member variables that depend on the ephemerides bodies. 
+
+Function to recompute the internal variables of member variables that depend on the ephemerides of this and other bodies. This function is typically called after equations of motion have been computed and set in environment to ensure full model consistency. \index{tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}!update\+Mass@{update\+Mass}}
+\index{update\+Mass@{update\+Mass}!tudat\+::simulation\+\_\+setup\+::\+Body@{tudat\+::simulation\+\_\+setup\+::\+Body}}
+\subsubsection[{\texorpdfstring{update\+Mass(const double time)}{updateMass(const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Body\+::update\+Mass (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1Body_aee9b25e036b5196abf916ef67f219fab}{}\label{classtudat_1_1simulation__setup_1_1Body_aee9b25e036b5196abf916ef67f219fab}
+
+
+Function to update the body mass to the current time. 
+
+Function to update the body mass to the current time, using the body\+Mass\+Function\+\_\+ function 
+\begin{DoxyParams}{Parameters}
+{\em time} & Current time \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Environment\+Setup/body.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Environment\+Setup/body.\+cpp\end{DoxyCompactItemize}

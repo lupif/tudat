@@ -1,0 +1,110 @@
+\hypertarget{classtudat_1_1input__output_1_1FixedWidthParser}{}\section{tudat\+:\+:input\+\_\+output\+:\+:Fixed\+Width\+Parser Class Reference}
+\label{classtudat_1_1input__output_1_1FixedWidthParser}\index{tudat\+::input\+\_\+output\+::\+Fixed\+Width\+Parser@{tudat\+::input\+\_\+output\+::\+Fixed\+Width\+Parser}}
+
+
+Fixed-\/width parser.  
+
+
+
+
+{\ttfamily \#include $<$fixed\+Width\+Parser.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:input\+\_\+output\+:\+:Fixed\+Width\+Parser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classtudat_1_1input__output_1_1FixedWidthParser__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:input\+\_\+output\+:\+:Fixed\+Width\+Parser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classtudat_1_1input__output_1_1FixedWidthParser__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1input__output_1_1FixedWidthParser_a8fda5e8900c048b03262fcca6f7511b5}{Fixed\+Width\+Parser} (int number\+Of\+Fields,...)
+\begin{DoxyCompactList}\small\item\em Create a parser that parses based on specified field widths and field type list. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1input__output_1_1FixedWidthParser_a5b524ddc5ccdd4c8c1e48910703e90dc}{set\+Trim} (bool trim)\hypertarget{classtudat_1_1input__output_1_1FixedWidthParser_a5b524ddc5ccdd4c8c1e48910703e90dc}{}\label{classtudat_1_1input__output_1_1FixedWidthParser_a5b524ddc5ccdd4c8c1e48910703e90dc}
+
+\begin{DoxyCompactList}\small\item\em Set trim\+: Trim whitespace off fields (default=true). \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1input__output_1_1FixedWidthParser_a7c88bbf8652d6f183d5c33d70cd9ad3b}{get\+Trim} ()\hypertarget{classtudat_1_1input__output_1_1FixedWidthParser_a7c88bbf8652d6f183d5c33d70cd9ad3b}{}\label{classtudat_1_1input__output_1_1FixedWidthParser_a7c88bbf8652d6f183d5c33d70cd9ad3b}
+
+\begin{DoxyCompactList}\small\item\em Get trim setting\+: Trim whitespace off fields (default=true). \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1input__output_1_1FixedWidthParser_a999b4b9b23ace0c28c3402124318dfb0}{set\+Unit\+Transformation\+Map} (std\+::map$<$ Field\+Type, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1input__output_1_1FieldTransform}{Field\+Transform} $>$ $>$ unit\+Transformation\+Map)\hypertarget{classtudat_1_1input__output_1_1FixedWidthParser_a999b4b9b23ace0c28c3402124318dfb0}{}\label{classtudat_1_1input__output_1_1FixedWidthParser_a999b4b9b23ace0c28c3402124318dfb0}
+
+\begin{DoxyCompactList}\small\item\em Set unit transformation map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtudat_1_1input__output_1_1FixedWidthParser_ab09cb31c9956aaacff64cb5e2228f91c}{parse\+Line} (std\+::string \&line)
+\begin{DoxyCompactList}\small\item\em Parses one line of text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Fixed-\/width parser. 
+
+This class can be used to parse a raw line of data into a series of fields, based on a fixed field width. This class inherits from the \hyperlink{classtudat_1_1input__output_1_1TextParser}{Text\+Parser} abstract base class. \begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1input__output_1_1TextParser}{Text\+Parser} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::input\+\_\+output\+::\+Fixed\+Width\+Parser@{tudat\+::input\+\_\+output\+::\+Fixed\+Width\+Parser}!Fixed\+Width\+Parser@{Fixed\+Width\+Parser}}
+\index{Fixed\+Width\+Parser@{Fixed\+Width\+Parser}!tudat\+::input\+\_\+output\+::\+Fixed\+Width\+Parser@{tudat\+::input\+\_\+output\+::\+Fixed\+Width\+Parser}}
+\subsubsection[{\texorpdfstring{Fixed\+Width\+Parser(int number\+Of\+Fields,...)}{FixedWidthParser(int numberOfFields,...)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::input\+\_\+output\+::\+Fixed\+Width\+Parser\+::\+Fixed\+Width\+Parser (
+\begin{DoxyParamCaption}
+\item[{int}]{number\+Of\+Fields, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1input__output_1_1FixedWidthParser_a8fda5e8900c048b03262fcca6f7511b5}{}\label{classtudat_1_1input__output_1_1FixedWidthParser_a8fda5e8900c048b03262fcca6f7511b5}
+
+
+Create a parser that parses based on specified field widths and field type list. 
+
+Default constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\+Of\+Fields} & Number of fields to parse. Arguments are the field types\+: e.\+g. Fixed\+Width\+Parser(4, fieldtypes\+::\+I\+D, fieldtypes\+::\+X, fieldtypes\+::\+Y, fieldtypes\+::\+Z); \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::input\+\_\+output\+::\+Fixed\+Width\+Parser@{tudat\+::input\+\_\+output\+::\+Fixed\+Width\+Parser}!parse\+Line@{parse\+Line}}
+\index{parse\+Line@{parse\+Line}!tudat\+::input\+\_\+output\+::\+Fixed\+Width\+Parser@{tudat\+::input\+\_\+output\+::\+Fixed\+Width\+Parser}}
+\subsubsection[{\texorpdfstring{parse\+Line(std\+::string \&line)}{parseLine(std::string &line)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::input\+\_\+output\+::\+Fixed\+Width\+Parser\+::parse\+Line (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{line}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1input__output_1_1FixedWidthParser_ab09cb31c9956aaacff64cb5e2228f91c}{}\label{classtudat_1_1input__output_1_1FixedWidthParser_ab09cb31c9956aaacff64cb5e2228f91c}
+
+
+Parses one line of text. 
+
+Parses one line of text by dividing the line in fields using specified field widths. Any white space at the start or end of a field are trimmed. 
+\begin{DoxyParams}{Parameters}
+{\em line} & Raw line of data. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtudat_1_1input__output_1_1TextParser_ac0e038fccafbb79ff2d8386f7521999c}{tudat\+::input\+\_\+output\+::\+Text\+Parser}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Input\+Output/fixed\+Width\+Parser.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Input\+Output/fixed\+Width\+Parser.\+cpp\end{DoxyCompactItemize}

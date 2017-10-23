@@ -1,0 +1,71 @@
+\hypertarget{classtudat_1_1observation__models_1_1LightTimeCorrectionFunctionWrapper}{}\section{tudat\+:\+:observation\+\_\+models\+:\+:Light\+Time\+Correction\+Function\+Wrapper Class Reference}
+\label{classtudat_1_1observation__models_1_1LightTimeCorrectionFunctionWrapper}\index{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Correction\+Function\+Wrapper@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Correction\+Function\+Wrapper}}
+
+
+Inheritance diagram for tudat\+:\+:observation\+\_\+models\+:\+:Light\+Time\+Correction\+Function\+Wrapper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classtudat_1_1observation__models_1_1LightTimeCorrectionFunctionWrapper__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:observation\+\_\+models\+:\+:Light\+Time\+Correction\+Function\+Wrapper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classtudat_1_1observation__models_1_1LightTimeCorrectionFunctionWrapper__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Light\+Time\+Correction\+Function\+Wrapper} (const Light\+Time\+Correction\+Function light\+Time\+Correction\+Function)\hypertarget{classtudat_1_1observation__models_1_1LightTimeCorrectionFunctionWrapper_a60ad1501648b6623ca9c65f9ec364d70}{}\label{classtudat_1_1observation__models_1_1LightTimeCorrectionFunctionWrapper_a60ad1501648b6623ca9c65f9ec364d70}
+
+\item 
+double \hyperlink{classtudat_1_1observation__models_1_1LightTimeCorrectionFunctionWrapper_ad789bf281633cc47e9bae2ef5615101b}{calculate\+Light\+Time\+Correction} (const Eigen\+::\+Vector6d \&transmitter\+State, const Eigen\+::\+Vector6d \&receiver\+State, const double transmission\+Time, const double reception\+Time)
+\begin{DoxyCompactList}\small\item\em Pure virtual function to compute the light-\/time correction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Correction\+Function\+Wrapper@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Correction\+Function\+Wrapper}!calculate\+Light\+Time\+Correction@{calculate\+Light\+Time\+Correction}}
+\index{calculate\+Light\+Time\+Correction@{calculate\+Light\+Time\+Correction}!tudat\+::observation\+\_\+models\+::\+Light\+Time\+Correction\+Function\+Wrapper@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Correction\+Function\+Wrapper}}
+\subsubsection[{\texorpdfstring{calculate\+Light\+Time\+Correction(const Eigen\+::\+Vector6d \&transmitter\+State, const Eigen\+::\+Vector6d \&receiver\+State, const double transmission\+Time, const double reception\+Time)}{calculateLightTimeCorrection(const Eigen::Vector6d &transmitterState, const Eigen::Vector6d &receiverState, const double transmissionTime, const double receptionTime)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::observation\+\_\+models\+::\+Light\+Time\+Correction\+Function\+Wrapper\+::calculate\+Light\+Time\+Correction (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector6d \&}]{transmitter\+State, }
+\item[{const Eigen\+::\+Vector6d \&}]{receiver\+State, }
+\item[{const double}]{transmission\+Time, }
+\item[{const double}]{reception\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1observation__models_1_1LightTimeCorrectionFunctionWrapper_ad789bf281633cc47e9bae2ef5615101b}{}\label{classtudat_1_1observation__models_1_1LightTimeCorrectionFunctionWrapper_ad789bf281633cc47e9bae2ef5615101b}
+
+
+Pure virtual function to compute the light-\/time correction. 
+
+Pure virtual function to compute the light-\/time correction, function is to be implemented in derived class for specific correction model. The input is the states and times of the two link ends (at the current iteration of the solution of the implicit light-\/time equation), which is the information of the link already computed by the light time calculator, ensuring that no double computations are performed. 
+\begin{DoxyParams}{Parameters}
+{\em transmitter\+State} & State of transmitted at transmission time \\
+\hline
+{\em receiver\+State} & State of receiver at reception time \\
+\hline
+{\em transmission\+Time} & \hyperlink{classtudat_1_1Time}{Time} of signal transmission \\
+\hline
+{\em reception\+Time} & \hyperlink{classtudat_1_1Time}{Time} of singal reception \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1observation__models_1_1LightTimeCorrection_a75c56b78e1603b14387991fdfffac1ce}{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Correction}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Observation\+Models/light\+Time\+Solution.\+h\end{DoxyCompactItemize}

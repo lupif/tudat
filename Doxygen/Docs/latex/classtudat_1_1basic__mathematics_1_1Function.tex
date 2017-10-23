@@ -1,0 +1,137 @@
+\hypertarget{classtudat_1_1basic__mathematics_1_1Function}{}\section{tudat\+:\+:basic\+\_\+mathematics\+:\+:Function$<$ Independent\+Variable, Dependent\+Variable $>$ Class Template Reference}
+\label{classtudat_1_1basic__mathematics_1_1Function}\index{tudat\+::basic\+\_\+mathematics\+::\+Function$<$ Independent\+Variable, Dependent\+Variable $>$@{tudat\+::basic\+\_\+mathematics\+::\+Function$<$ Independent\+Variable, Dependent\+Variable $>$}}
+
+
+\hyperlink{classtudat_1_1basic__mathematics_1_1Function}{Function} interface to allow evaluation of a mathematical function.  
+
+
+
+
+{\ttfamily \#include $<$function.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:basic\+\_\+mathematics\+:\+:Function$<$ Independent\+Variable, Dependent\+Variable $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1basic__mathematics_1_1Function__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classtudat_1_1basic__mathematics_1_1Function_ae438d4c770503bfdf34c812e4f47cf09}{$\sim$\+Function} ()\hypertarget{classtudat_1_1basic__mathematics_1_1Function_ae438d4c770503bfdf34c812e4f47cf09}{}\label{classtudat_1_1basic__mathematics_1_1Function_ae438d4c770503bfdf34c812e4f47cf09}
+
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+virtual Dependent\+Variable \hyperlink{classtudat_1_1basic__mathematics_1_1Function_a69b59769da9784abaaa8a0a309d16de8}{evaluate} (const Independent\+Variable input\+Value)=0
+\begin{DoxyCompactList}\small\item\em Compute mathematical function value. This implementation is a pure virtual function. \end{DoxyCompactList}\item 
+Dependent\+Variable \hyperlink{classtudat_1_1basic__mathematics_1_1Function_a4b135236b9531d0329c151afeef8a2d8}{operator()} (const double input\+Value)\hypertarget{classtudat_1_1basic__mathematics_1_1Function_a4b135236b9531d0329c151afeef8a2d8}{}\label{classtudat_1_1basic__mathematics_1_1Function_a4b135236b9531d0329c151afeef8a2d8}
+
+\begin{DoxyCompactList}\small\item\em Alias for evaluate( double ). \end{DoxyCompactList}\item 
+virtual Dependent\+Variable \hyperlink{classtudat_1_1basic__mathematics_1_1Function_a0929cfbeb90a6cbc85d50455fd01d75f}{compute\+Derivative} (const unsigned int order, const Independent\+Variable independent\+Variable)=0
+\begin{DoxyCompactList}\small\item\em Evaluate the derivative of the function. This implementation is a pure virtual function. \end{DoxyCompactList}\item 
+virtual Dependent\+Variable \hyperlink{classtudat_1_1basic__mathematics_1_1Function_a74c5639b8c6288471368e65312569e52}{compute\+Definite\+Integral} (const unsigned int order, const Independent\+Variable lower\+Bound, const Independent\+Variable upperbound)=0
+\begin{DoxyCompactList}\small\item\em Evaluate the definite integral of the function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Independent\+Variable = double, typename Dependent\+Variable = double$>$\\*
+class tudat\+::basic\+\_\+mathematics\+::\+Function$<$ Independent\+Variable, Dependent\+Variable $>$}
+
+\hyperlink{classtudat_1_1basic__mathematics_1_1Function}{Function} interface to allow evaluation of a mathematical function. 
+
+This class adds the ability to a class to be evaluated as a mathematical function. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Independent\+Variable} & Mathematical variable for independent input (e.\+g., x). \\
+\hline
+{\em Dependent\+Variable} & Mathematical variable for dependent output (e.\+g., y=f(x)). \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::basic\+\_\+mathematics\+::\+Function@{tudat\+::basic\+\_\+mathematics\+::\+Function}!compute\+Definite\+Integral@{compute\+Definite\+Integral}}
+\index{compute\+Definite\+Integral@{compute\+Definite\+Integral}!tudat\+::basic\+\_\+mathematics\+::\+Function@{tudat\+::basic\+\_\+mathematics\+::\+Function}}
+\subsubsection[{\texorpdfstring{compute\+Definite\+Integral(const unsigned int order, const Independent\+Variable lower\+Bound, const Independent\+Variable upperbound)=0}{computeDefiniteIntegral(const unsigned int order, const IndependentVariable lowerBound, const IndependentVariable upperbound)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable = double, typename Dependent\+Variable = double$>$ virtual Dependent\+Variable {\bf tudat\+::basic\+\_\+mathematics\+::\+Function}$<$ Independent\+Variable, Dependent\+Variable $>$\+::compute\+Definite\+Integral (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{order, }
+\item[{const Independent\+Variable}]{lower\+Bound, }
+\item[{const Independent\+Variable}]{upperbound}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1basic__mathematics_1_1Function_a74c5639b8c6288471368e65312569e52}{}\label{classtudat_1_1basic__mathematics_1_1Function_a74c5639b8c6288471368e65312569e52}
+
+
+Evaluate the definite integral of the function. 
+
+This evaluates the definite integral of a given order of this function. This implementation is a pure virtual function. 
+\begin{DoxyParams}{Parameters}
+{\em order} & Order of the integral to evaluate. \\
+\hline
+{\em lower\+Bound} & Integration lower bound (integrate from this point). \\
+\hline
+{\em upperbound} & Integration upper bound (integrate to this point). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the definite numerical integral of this function 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1mission__segments_1_1ImprovedInversePolynomialWall_aafcdb10c4212c31db81a955030719e01}{tudat\+::mission\+\_\+segments\+::\+Improved\+Inverse\+Polynomial\+Wall}, \hyperlink{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_ac8f56d30994eb778970c8b7d2b9a4568}{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak}, \hyperlink{structtudat_1_1unit__tests_1_1TestFunction3_a449b1eaeb3acc3fae0f584cb55f0452b}{tudat\+::unit\+\_\+tests\+::\+Test\+Function3}, \hyperlink{classtudat_1_1basic__mathematics_1_1BasicFunction_a9ff1a3c03832150f34c06c86317c2ac7}{tudat\+::basic\+\_\+mathematics\+::\+Basic\+Function$<$ Independent\+Variable, Dependent\+Variable $>$}, \hyperlink{classtudat_1_1basic__mathematics_1_1BasicFunction_a9ff1a3c03832150f34c06c86317c2ac7}{tudat\+::basic\+\_\+mathematics\+::\+Basic\+Function$<$ double, double $>$}, \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithLargeRootDifference_ad6962299859f91ab61908e9097fbe6f7}{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Large\+Root\+Difference}, \hyperlink{structtudat_1_1unit__tests_1_1TestFunction1_abdca794bafaa237e6dccd248a9dda59b}{tudat\+::unit\+\_\+tests\+::\+Test\+Function1}, \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a668c0a82b75c8a1edcb94bdd8f923f7e}{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root}, \hyperlink{structtudat_1_1unit__tests_1_1TestFunction2_a48c8418d145c79eec735d44d96cbf893}{tudat\+::unit\+\_\+tests\+::\+Test\+Function2}, and \hyperlink{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_af80114f81558e28479d8f945a209ac77}{tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function}.
+
+\index{tudat\+::basic\+\_\+mathematics\+::\+Function@{tudat\+::basic\+\_\+mathematics\+::\+Function}!compute\+Derivative@{compute\+Derivative}}
+\index{compute\+Derivative@{compute\+Derivative}!tudat\+::basic\+\_\+mathematics\+::\+Function@{tudat\+::basic\+\_\+mathematics\+::\+Function}}
+\subsubsection[{\texorpdfstring{compute\+Derivative(const unsigned int order, const Independent\+Variable independent\+Variable)=0}{computeDerivative(const unsigned int order, const IndependentVariable independentVariable)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable = double, typename Dependent\+Variable = double$>$ virtual Dependent\+Variable {\bf tudat\+::basic\+\_\+mathematics\+::\+Function}$<$ Independent\+Variable, Dependent\+Variable $>$\+::compute\+Derivative (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{order, }
+\item[{const Independent\+Variable}]{independent\+Variable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1basic__mathematics_1_1Function_a0929cfbeb90a6cbc85d50455fd01d75f}{}\label{classtudat_1_1basic__mathematics_1_1Function_a0929cfbeb90a6cbc85d50455fd01d75f}
+
+
+Evaluate the derivative of the function. This implementation is a pure virtual function. 
+
+This evaluates the derivative of a given order of this function. 
+\begin{DoxyParams}{Parameters}
+{\em order} & Order of the derivative to evaluate. \\
+\hline
+{\em independent\+Variable} & Location where to evaluate the derivative. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the derivative of the function 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1mission__segments_1_1ImprovedInversePolynomialWall_aeac28ab0027cf43dbb2e443ddd133d67}{tudat\+::mission\+\_\+segments\+::\+Improved\+Inverse\+Polynomial\+Wall}, \hyperlink{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_ab6a7579fe3bed9a3901140f9e58d004c}{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak}, \hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy_a5f79c3fef685b7b2eaaec22661680d61}{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy$<$ Independent\+Variable, Dependent\+Variable $>$}, \hyperlink{classtudat_1_1basic__mathematics_1_1BasicFunction_ae0a0844b6c72c55ef059039eb147453b}{tudat\+::basic\+\_\+mathematics\+::\+Basic\+Function$<$ Independent\+Variable, Dependent\+Variable $>$}, \hyperlink{classtudat_1_1basic__mathematics_1_1BasicFunction_ae0a0844b6c72c55ef059039eb147453b}{tudat\+::basic\+\_\+mathematics\+::\+Basic\+Function$<$ double, double $>$}, \hyperlink{structtudat_1_1unit__tests_1_1TestFunction3_ad2d7f08fa955641521a436cc280252cc}{tudat\+::unit\+\_\+tests\+::\+Test\+Function3}, \hyperlink{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_abffe5b7f1fb949b9e1009d0434092ba8}{tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function}, \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithLargeRootDifference_aad326dd34b4429048eb91d4d817892a2}{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Large\+Root\+Difference}, \hyperlink{structtudat_1_1unit__tests_1_1TestFunction2_ad4de6c3724f2c6684ece65b7628c3e24}{tudat\+::unit\+\_\+tests\+::\+Test\+Function2}, \hyperlink{structtudat_1_1unit__tests_1_1TestFunction1_ad5c6ff20438f21b73c9148897c4e5c3c}{tudat\+::unit\+\_\+tests\+::\+Test\+Function1}, and \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a8fb918e0e9e380dd493683892579336a}{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root}.
+
+\index{tudat\+::basic\+\_\+mathematics\+::\+Function@{tudat\+::basic\+\_\+mathematics\+::\+Function}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!tudat\+::basic\+\_\+mathematics\+::\+Function@{tudat\+::basic\+\_\+mathematics\+::\+Function}}
+\subsubsection[{\texorpdfstring{evaluate(const Independent\+Variable input\+Value)=0}{evaluate(const IndependentVariable inputValue)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable = double, typename Dependent\+Variable = double$>$ virtual Dependent\+Variable {\bf tudat\+::basic\+\_\+mathematics\+::\+Function}$<$ Independent\+Variable, Dependent\+Variable $>$\+::evaluate (
+\begin{DoxyParamCaption}
+\item[{const Independent\+Variable}]{input\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1basic__mathematics_1_1Function_a69b59769da9784abaaa8a0a309d16de8}{}\label{classtudat_1_1basic__mathematics_1_1Function_a69b59769da9784abaaa8a0a309d16de8}
+
+
+Compute mathematical function value. This implementation is a pure virtual function. 
+
+Computes the value of the mathematical function used for the root-\/finder algorithm being used. 
+\begin{DoxyParams}{Parameters}
+{\em input\+Value} & Input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Computed mathematical function value. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1mission__segments_1_1ImprovedInversePolynomialWall_a9fe09f98e8bb360bba7b90d5462150ca}{tudat\+::mission\+\_\+segments\+::\+Improved\+Inverse\+Polynomial\+Wall}, \hyperlink{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_a3d0ac0b2d7a09ed14894740fab68a0e6}{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak}, \hyperlink{classtudat_1_1basic__mathematics_1_1FunctionProxy_ab8ef1b8407695652bb20416bbbf5909c}{tudat\+::basic\+\_\+mathematics\+::\+Function\+Proxy$<$ Independent\+Variable, Dependent\+Variable $>$}, \hyperlink{structtudat_1_1unit__tests_1_1TestFunction3_a4ffdf6e236017692b9ee4b9fcf9d3f00}{tudat\+::unit\+\_\+tests\+::\+Test\+Function3}, \hyperlink{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_abd89b7690138e463bcc52ebd667f7bfa}{tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function}, \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithLargeRootDifference_a60e68f6399dbcd0204dba345f8fac4cd}{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Large\+Root\+Difference}, \hyperlink{structtudat_1_1unit__tests_1_1TestFunction2_af48f8ec9949c4a3fd79600e945490c9b}{tudat\+::unit\+\_\+tests\+::\+Test\+Function2}, \hyperlink{structtudat_1_1unit__tests_1_1TestFunction1_ac8b0089177fd73eac4cc3f4cf80807ec}{tudat\+::unit\+\_\+tests\+::\+Test\+Function1}, and \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a48ea1d8818820199485e588721d198f1}{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Basic\+Mathematics/function.\+h\end{DoxyCompactItemize}

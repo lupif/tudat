@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1basic__astrodynamics_1_1MassRateModel.html" title="Base class for determining the rate of change of a body&#39;s mass, to be used in numerical integration..." alt="" coords="5,39,188,80"/>
+<area shape="rect" id="node2" href="$classtudat_1_1basic__astrodynamics_1_1CustomMassRateModel.html" title="Derived class for determining the rate of change of a body&#39;s mass, user&#45;defined by a function pointer..." alt="" coords="237,5,419,47"/>
+<area shape="rect" id="node3" href="$classtudat_1_1propulsion_1_1FromThrustMassRateModel.html" title="This class provides the mass rate from a (set of) thrust model(s), used in numerically propagating a ..." alt="" coords="236,71,420,112"/>
+</map>

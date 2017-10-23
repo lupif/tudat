@@ -1,0 +1,418 @@
+\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution}{}\section{tudat\+:\+:statistics\+:\+:Kernel\+Density\+Distribution Class Reference}
+\label{classtudat_1_1statistics_1_1KernelDensityDistribution}\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+
+
+Class that uses random samples to generate a multivariate probability distribution using Kernel Density distribution.  
+
+
+
+
+{\ttfamily \#include $<$kernel\+Density\+Distribution.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:statistics\+:\+:Kernel\+Density\+Distribution\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classtudat_1_1statistics_1_1KernelDensityDistribution__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:statistics\+:\+:Kernel\+Density\+Distribution\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classtudat_1_1statistics_1_1KernelDensityDistribution__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_ae326df1759095eb05aae78280bf7fa20}{Kernel\+Density\+Distribution} (const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&samples, const double band\+Width\+Factor=1.\+0, const Kernel\+Type kernel\+\_\+type=Kernel\+Type\+::gaussian\+\_\+kernel, const Eigen\+::\+Vector\+Xd \&manual\+Standard\+Deviation=Eigen\+::\+Vector\+Xd\+::\+Zero(0), const Eigen\+::\+Vector\+Xd \&manual\+Bandwidth=Eigen\+::\+Vector\+Xd\+::\+Zero(0))
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_ac8713330d605559df79f572175d9136c}{evaluate\+Pdf} (const Eigen\+::\+Vector\+Xd \&independent\+Variables)
+\begin{DoxyCompactList}\small\item\em Function to evaluate pdf of distribution. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_a414da60bdbf0bbcd97cdccc42521d6aa}{evaluate\+Cdf} (const Eigen\+::\+Vector\+Xd \&independent\+Variables)
+\begin{DoxyCompactList}\small\item\em Function to evaluate cdf of distribution. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_a7ae58f7bbdc51bdfbb0655ff98fee4dc}{evaluate\+Marginal\+Probability\+Density} (const std\+::vector$<$ int $>$ \&marginal\+Dimensions, const Eigen\+::\+Vector\+Xd \&independent\+Variables)
+\begin{DoxyCompactList}\small\item\em Function to evaluate probability density of marginal (in one or more dimensions) distribution. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_a17e30a2f4db5bfb68c35d3be551802bb}{evaluate\+Marginal\+Probability\+Density} (const int marginal\+Dimension, const double independent\+Variable)
+\begin{DoxyCompactList}\small\item\em Function to evaluate marginal distribution density at single dimension. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_a20e89a464116be53ca29c7344c34fb06}{evaluate\+Cumulative\+Marginal\+Probability} (const int marginal\+Dimension, const double independent\+Variable)
+\begin{DoxyCompactList}\small\item\em Function to evaluate cumulative probability of marginal distribution at single dimension. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_a880a77577d2ef5a77e168fa0df101cf7}{evaluate\+Cumulative\+Conditional\+Marginal\+Probability} (const std\+::vector$<$ int $>$ \&condition\+Dimensions, const std\+::vector$<$ double $>$ \&conditions, const int marginal\+Dimension, const double independent\+Variable)
+\begin{DoxyCompactList}\small\item\em Function to evaluate cumulative probability of marginal distribution of conditional distribution at single dimension. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_a05756e1d03cdeeaf55e6e6677d844841}{evaluate\+Conditional\+Marginal\+Probability\+Density} (const std\+::vector$<$ int $>$ \&condition\+Dimensions, const std\+::vector$<$ double $>$ \&conditions, const int marginal\+Dimension, const double independent\+Variable)
+\begin{DoxyCompactList}\small\item\em Function to evaluate probability density of marginal distribution of conditional distribution at single dimension. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_ab2049005a0f3decd363646f2832b5c89}{compute\+Optimal\+Band\+Width} ()
+\begin{DoxyCompactList}\small\item\em Compute optimal bandwidth using the provided samples. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_ae4f8ad854752925254940a989399f141}{get\+Optimal\+Band\+Width} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the optimal bandwidth. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_afc9e72b066ced6e06347a569df69c556}{get\+Band\+Width} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the bandwidth. \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_a085c6ea1a52e4e2ce859d0a6865c8793}{get\+Samples} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the data samples used to generate kernel density distribution. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_ab80de71e5a2bc8ed07d5dcaf468fd834}{set\+Band\+Width} (const Eigen\+::\+Vector\+Xd \&band\+Width)
+\begin{DoxyCompactList}\small\item\em Function to manually reset the bandwidth. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_a3ce8d6572385efa10c80d70d898aade5}{get\+Sample\+Mean} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the sample mean. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_abc1c800ffc9b8365dd47ff1927cbec11}{get\+Sample\+Variance} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the sample variance. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_a234e3d235dafb5f52caca40249ffc2fd}{get\+Sample\+Standard\+Deviation} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the sample standard deviation. \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_aea73cb503e18645c591dfc52e589be99}{get\+Number\+Of\+Samples} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the number of samples. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that uses random samples to generate a multivariate probability distribution using Kernel Density distribution. 
+
+Class that uses random samples to generate a multivariate probability distribution using Kernel Density distribution. The bandwidth of the kernels may be supplied by the user, or an optimal distrubution may be computed by this class At present, the user has the choice of a Gaussian or Epanechnikov distribution for the kernels. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!Kernel\+Density\+Distribution@{Kernel\+Density\+Distribution}}
+\index{Kernel\+Density\+Distribution@{Kernel\+Density\+Distribution}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{Kernel\+Density\+Distribution(const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&samples, const double band\+Width\+Factor=1.\+0, const Kernel\+Type kernel\+\_\+type=\+Kernel\+Type\+::gaussian\+\_\+kernel, const Eigen\+::\+Vector\+Xd \&manual\+Standard\+Deviation=\+Eigen\+::\+Vector\+Xd\+::\+Zero(0), const Eigen\+::\+Vector\+Xd \&manual\+Bandwidth=\+Eigen\+::\+Vector\+Xd\+::\+Zero(0))}{KernelDensityDistribution(const std::vector< Eigen::VectorXd > &samples, const double bandWidthFactor=1.0, const KernelType kernel_type=KernelType::gaussian_kernel, const Eigen::VectorXd &manualStandardDeviation=Eigen::VectorXd::Zero(0), const Eigen::VectorXd &manualBandwidth=Eigen::VectorXd::Zero(0))}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::\+Kernel\+Density\+Distribution (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{samples, }
+\item[{const double}]{band\+Width\+Factor = {\ttfamily 1.0}, }
+\item[{const Kernel\+Type}]{kernel\+\_\+type = {\ttfamily KernelType\+:\+:gaussian\+\_\+kernel}, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{manual\+Standard\+Deviation = {\ttfamily Eigen\+:\+:VectorXd\+:\+:Zero(~0~)}, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{manual\+Bandwidth = {\ttfamily Eigen\+:\+:VectorXd\+:\+:Zero(~0~)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_ae326df1759095eb05aae78280bf7fa20}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_ae326df1759095eb05aae78280bf7fa20}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em samples} & Data samples from which the empirical distribution is to be created. \\
+\hline
+{\em band\+Width\+Factor} & Factor by which to multiply the computed bandwidth values of the kernels. \\
+\hline
+{\em kernel\+\_\+type} & Type of distribution to be used for the kernels in the distribution. \\
+\hline
+{\em manual\+Standard\+Deviation} & Standard deviations with which to scale the entries of each sample. By default this vector is empty and not used. If it is provided, it is used to scale the entry i of each sample by manual\+Standard\+Deviation( i ) / sample\+Standard\+Deviation( i ), where sample\+Standard\+Deviation is the standard deviation computed from the samples/ \\
+\hline
+{\em manual\+Bandwidth} & Vector of bandwidths for each dimension that is to be used in the kernels. By default this vector is empty and not used. Optimal bandwidths (scaled by band\+Width\+Factor) are used in this default case. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!compute\+Optimal\+Band\+Width@{compute\+Optimal\+Band\+Width}}
+\index{compute\+Optimal\+Band\+Width@{compute\+Optimal\+Band\+Width}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{compute\+Optimal\+Band\+Width()}{computeOptimalBandWidth()}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::compute\+Optimal\+Band\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_ab2049005a0f3decd363646f2832b5c89}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_ab2049005a0f3decd363646f2832b5c89}
+
+
+Compute optimal bandwidth using the provided samples. 
+
+Compute the optimal bandwidth. \index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!evaluate\+Cdf@{evaluate\+Cdf}}
+\index{evaluate\+Cdf@{evaluate\+Cdf}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{evaluate\+Cdf(const Eigen\+::\+Vector\+Xd \&independent\+Variables)}{evaluateCdf(const Eigen::VectorXd &independentVariables)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::evaluate\+Cdf (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{independent\+Variables}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_a414da60bdbf0bbcd97cdccc42521d6aa}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_a414da60bdbf0bbcd97cdccc42521d6aa}
+
+
+Function to evaluate cdf of distribution. 
+
+Get cumulative probability of the kernel density distribution.
+
+Function to evaluate cumulative distribution function at given independent\+Variable value. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & Values of independent variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Evaluated cdf 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_ad60887b5623ded9e73456dedcbf32a8a}{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution$<$ Eigen\+::\+Vector\+Xd $>$}.
+
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!evaluate\+Conditional\+Marginal\+Probability\+Density@{evaluate\+Conditional\+Marginal\+Probability\+Density}}
+\index{evaluate\+Conditional\+Marginal\+Probability\+Density@{evaluate\+Conditional\+Marginal\+Probability\+Density}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{evaluate\+Conditional\+Marginal\+Probability\+Density(const std\+::vector$<$ int $>$ \&condition\+Dimensions, const std\+::vector$<$ double $>$ \&conditions, const int marginal\+Dimension, const double independent\+Variable)}{evaluateConditionalMarginalProbabilityDensity(const std::vector< int > &conditionDimensions, const std::vector< double > &conditions, const int marginalDimension, const double independentVariable)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::evaluate\+Conditional\+Marginal\+Probability\+Density (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{condition\+Dimensions, }
+\item[{const std\+::vector$<$ double $>$ \&}]{conditions, }
+\item[{const int}]{marginal\+Dimension, }
+\item[{const double}]{independent\+Variable}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_a05756e1d03cdeeaf55e6e6677d844841}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_a05756e1d03cdeeaf55e6e6677d844841}
+
+
+Function to evaluate probability density of marginal distribution of conditional distribution at single dimension. 
+
+Function to evaluate conditional probability density of marginal distribution at single dimension.
+
+Function to evaluate probability density of marginal distribution of conditional distribution at single dimension, given conditions of cdf on other dimensions 
+\begin{DoxyParams}{Parameters}
+{\em condition\+Dimensions} & List of dimensions in which pdf is given \\
+\hline
+{\em conditions} & Independent variables at which values of pdf, in dimensions listed in condition\+Dimensions, are to be computed. \\
+\hline
+{\em marginal\+Dimension} & Dimension in which the marginal pdf is to be computed \\
+\hline
+{\em independent\+Variable} & Independent variable at which conditional marginal pdf is to be computed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Conditional pdf of marginal distribution at given settings. 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!evaluate\+Cumulative\+Conditional\+Marginal\+Probability@{evaluate\+Cumulative\+Conditional\+Marginal\+Probability}}
+\index{evaluate\+Cumulative\+Conditional\+Marginal\+Probability@{evaluate\+Cumulative\+Conditional\+Marginal\+Probability}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{evaluate\+Cumulative\+Conditional\+Marginal\+Probability(const std\+::vector$<$ int $>$ \&condition\+Dimensions, const std\+::vector$<$ double $>$ \&conditions, const int marginal\+Dimension, const double independent\+Variable)}{evaluateCumulativeConditionalMarginalProbability(const std::vector< int > &conditionDimensions, const std::vector< double > &conditions, const int marginalDimension, const double independentVariable)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::evaluate\+Cumulative\+Conditional\+Marginal\+Probability (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{condition\+Dimensions, }
+\item[{const std\+::vector$<$ double $>$ \&}]{conditions, }
+\item[{const int}]{marginal\+Dimension, }
+\item[{const double}]{independent\+Variable}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_a880a77577d2ef5a77e168fa0df101cf7}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_a880a77577d2ef5a77e168fa0df101cf7}
+
+
+Function to evaluate cumulative probability of marginal distribution of conditional distribution at single dimension. 
+
+Function to evaluate cumulative conditional probability of marginal distribution at single dimension.
+
+Function to evaluate cumulative probability of marginal distribution of conditional distribution at single dimension, given conditions of cdf on other dimensions 
+\begin{DoxyParams}{Parameters}
+{\em condition\+Dimensions} & List of dimensions in which cdf is given \\
+\hline
+{\em conditions} & Independent variables at which values of cdf, in dimensions listed in condition\+Dimensions, are to be computed. \\
+\hline
+{\em marginal\+Dimension} & Dimension in which the marginal cdf is to be computed \\
+\hline
+{\em independent\+Variable} & Independent variable at which conditional marginal cdf is to be computed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cumulative conditional probability of marginal distribution at given settings. 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!evaluate\+Cumulative\+Marginal\+Probability@{evaluate\+Cumulative\+Marginal\+Probability}}
+\index{evaluate\+Cumulative\+Marginal\+Probability@{evaluate\+Cumulative\+Marginal\+Probability}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{evaluate\+Cumulative\+Marginal\+Probability(const int marginal\+Dimension, const double independent\+Variable)}{evaluateCumulativeMarginalProbability(const int marginalDimension, const double independentVariable)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::evaluate\+Cumulative\+Marginal\+Probability (
+\begin{DoxyParamCaption}
+\item[{const int}]{marginal\+Dimension, }
+\item[{const double}]{independent\+Variable}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_a20e89a464116be53ca29c7344c34fb06}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_a20e89a464116be53ca29c7344c34fb06}
+
+
+Function to evaluate cumulative probability of marginal distribution at single dimension. 
+
+Get cumulative probability of marginal distribution.
+
+Function to evaluate cumulative probability of marginal distribution at single dimension. 
+\begin{DoxyParams}{Parameters}
+{\em marginal\+Dimension} & Dimension in whihc the marginal distribution is to be computed \\
+\hline
+{\em independent\+Variable} & Value of independent variable in dimension marginal\+Dimension \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cumulative probability of marginal distribution at given dimension and independent variable. 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!evaluate\+Marginal\+Probability\+Density@{evaluate\+Marginal\+Probability\+Density}}
+\index{evaluate\+Marginal\+Probability\+Density@{evaluate\+Marginal\+Probability\+Density}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{evaluate\+Marginal\+Probability\+Density(const std\+::vector$<$ int $>$ \&marginal\+Dimensions, const Eigen\+::\+Vector\+Xd \&independent\+Variables)}{evaluateMarginalProbabilityDensity(const std::vector< int > &marginalDimensions, const Eigen::VectorXd &independentVariables)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::evaluate\+Marginal\+Probability\+Density (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{marginal\+Dimensions, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{independent\+Variables}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_a7ae58f7bbdc51bdfbb0655ff98fee4dc}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_a7ae58f7bbdc51bdfbb0655ff98fee4dc}
+
+
+Function to evaluate probability density of marginal (in one or more dimensions) distribution. 
+
+Function to evaluate probability density of joint marginal distribution.
+
+Function to evaluate probability density of marginal (in one or more dimensions) distribution, 
+\begin{DoxyParams}{Parameters}
+{\em marginal\+Dimensions} & Dimensions over which the marginal probaility is to be computed \\
+\hline
+{\em independent\+Variables} & Values of independent variables (in marginal\+Dimensions) at which marginal probability is to be computed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Probability density of marginal distribution. 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!evaluate\+Marginal\+Probability\+Density@{evaluate\+Marginal\+Probability\+Density}}
+\index{evaluate\+Marginal\+Probability\+Density@{evaluate\+Marginal\+Probability\+Density}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{evaluate\+Marginal\+Probability\+Density(const int marginal\+Dimension, const double independent\+Variable)}{evaluateMarginalProbabilityDensity(const int marginalDimension, const double independentVariable)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::evaluate\+Marginal\+Probability\+Density (
+\begin{DoxyParamCaption}
+\item[{const int}]{marginal\+Dimension, }
+\item[{const double}]{independent\+Variable}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_a17e30a2f4db5bfb68c35d3be551802bb}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_a17e30a2f4db5bfb68c35d3be551802bb}
+
+
+Function to evaluate marginal distribution density at single dimension. 
+
+Function to evaluate marginal distribution density at single dimension. 
+\begin{DoxyParams}{Parameters}
+{\em marginal\+Dimension} & Dimension in which the marginal distribution is to be computed \\
+\hline
+{\em independent\+Variable} & Value of independent variable in dimension marginal\+Dimension \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Probability density of marginal distribution at given dimension and independent variable. 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!evaluate\+Pdf@{evaluate\+Pdf}}
+\index{evaluate\+Pdf@{evaluate\+Pdf}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{evaluate\+Pdf(const Eigen\+::\+Vector\+Xd \&independent\+Variables)}{evaluatePdf(const Eigen::VectorXd &independentVariables)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::evaluate\+Pdf (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{independent\+Variables}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_ac8713330d605559df79f572175d9136c}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_ac8713330d605559df79f572175d9136c}
+
+
+Function to evaluate pdf of distribution. 
+
+Get probability density of the kernel density distribution.
+
+Function to evaluate probability distribution function at given independent\+Variable value. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & Values of independent variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Evaluated pdf 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_a7edfe6753ce63fe4e12409d3fb88e499}{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution$<$ Eigen\+::\+Vector\+Xd $>$}.
+
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!get\+Band\+Width@{get\+Band\+Width}}
+\index{get\+Band\+Width@{get\+Band\+Width}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{get\+Band\+Width()}{getBandWidth()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::get\+Band\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_afc9e72b066ced6e06347a569df69c556}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_afc9e72b066ced6e06347a569df69c556}
+
+
+Function to retrieve the bandwidth. 
+
+Function to retrieve the bandwidth \begin{DoxyReturn}{Returns}
+Bandwidth 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!get\+Number\+Of\+Samples@{get\+Number\+Of\+Samples}}
+\index{get\+Number\+Of\+Samples@{get\+Number\+Of\+Samples}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{get\+Number\+Of\+Samples()}{getNumberOfSamples()}}]{\setlength{\rightskip}{0pt plus 5cm}int tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::get\+Number\+Of\+Samples (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_aea73cb503e18645c591dfc52e589be99}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_aea73cb503e18645c591dfc52e589be99}
+
+
+Function to retrieve the number of samples. 
+
+Function to retrieve the number of samples. \begin{DoxyReturn}{Returns}
+Number of samples. 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!get\+Optimal\+Band\+Width@{get\+Optimal\+Band\+Width}}
+\index{get\+Optimal\+Band\+Width@{get\+Optimal\+Band\+Width}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{get\+Optimal\+Band\+Width()}{getOptimalBandWidth()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::get\+Optimal\+Band\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_ae4f8ad854752925254940a989399f141}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_ae4f8ad854752925254940a989399f141}
+
+
+Function to retrieve the optimal bandwidth. 
+
+Function to retrieve the optimal bandwidth \begin{DoxyReturn}{Returns}
+Optimal bandwidth 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!get\+Sample\+Mean@{get\+Sample\+Mean}}
+\index{get\+Sample\+Mean@{get\+Sample\+Mean}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{get\+Sample\+Mean()}{getSampleMean()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::get\+Sample\+Mean (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_a3ce8d6572385efa10c80d70d898aade5}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_a3ce8d6572385efa10c80d70d898aade5}
+
+
+Function to retrieve the sample mean. 
+
+Function to retrieve the sample mean. \begin{DoxyReturn}{Returns}
+Sample mean. 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!get\+Samples@{get\+Samples}}
+\index{get\+Samples@{get\+Samples}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{get\+Samples()}{getSamples()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::get\+Samples (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_a085c6ea1a52e4e2ce859d0a6865c8793}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_a085c6ea1a52e4e2ce859d0a6865c8793}
+
+
+Function to retrieve the data samples used to generate kernel density distribution. 
+
+Function to retrieve the data samples used to generate kernel density distribution. \begin{DoxyReturn}{Returns}
+Data samples used to generate kernel density distribution. 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!get\+Sample\+Standard\+Deviation@{get\+Sample\+Standard\+Deviation}}
+\index{get\+Sample\+Standard\+Deviation@{get\+Sample\+Standard\+Deviation}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{get\+Sample\+Standard\+Deviation()}{getSampleStandardDeviation()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::get\+Sample\+Standard\+Deviation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_a234e3d235dafb5f52caca40249ffc2fd}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_a234e3d235dafb5f52caca40249ffc2fd}
+
+
+Function to retrieve the sample standard deviation. 
+
+Function to retrieve the sample standard deviation. \begin{DoxyReturn}{Returns}
+Sample standard deviation. 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!get\+Sample\+Variance@{get\+Sample\+Variance}}
+\index{get\+Sample\+Variance@{get\+Sample\+Variance}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{get\+Sample\+Variance()}{getSampleVariance()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::get\+Sample\+Variance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_abc1c800ffc9b8365dd47ff1927cbec11}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_abc1c800ffc9b8365dd47ff1927cbec11}
+
+
+Function to retrieve the sample variance. 
+
+Function to retrieve the sample variance. \begin{DoxyReturn}{Returns}
+Sample variance. 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}!set\+Band\+Width@{set\+Band\+Width}}
+\index{set\+Band\+Width@{set\+Band\+Width}!tudat\+::statistics\+::\+Kernel\+Density\+Distribution@{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}}
+\subsubsection[{\texorpdfstring{set\+Band\+Width(const Eigen\+::\+Vector\+Xd \&band\+Width)}{setBandWidth(const Eigen::VectorXd &bandWidth)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::statistics\+::\+Kernel\+Density\+Distribution\+::set\+Band\+Width (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{band\+Width}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1KernelDensityDistribution_ab80de71e5a2bc8ed07d5dcaf468fd834}{}\label{classtudat_1_1statistics_1_1KernelDensityDistribution_ab80de71e5a2bc8ed07d5dcaf468fd834}
+
+
+Function to manually reset the bandwidth. 
+
+Function to manually reset the bandwidth. Calling this function automatically recomputes the kernels. 
+\begin{DoxyParams}{Parameters}
+{\em band\+Width} & New bandwidth to be used for each dimension. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Statistics/kernel\+Density\+Distribution.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Statistics/kernel\+Density\+Distribution.\+cpp\end{DoxyCompactItemize}

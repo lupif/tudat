@@ -1,0 +1,4 @@
+<map id="tudat::observation_partials::RotationMatrixPartial" name="tudat::observation_partials::RotationMatrixPartial">
+<area shape="rect" id="node2" href="$classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtConstantRotationRate.html" title="Class to calculate a rotation matrix from a body&#45;fixed to inertial frame w.r.t. a constant rotation r..." alt="" coords="255,5,456,61"/>
+<area shape="rect" id="node3" href="$classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation.html" title="tudat::observation\l_partials::RotationMatrixPartial\lWrtPoleOrientation" alt="" coords="255,85,456,141"/>
+</map>

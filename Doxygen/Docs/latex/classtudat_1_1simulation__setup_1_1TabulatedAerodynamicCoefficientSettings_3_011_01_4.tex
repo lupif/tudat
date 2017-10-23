@@ -1,0 +1,266 @@
+\hypertarget{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4}{}\section{tudat\+:\+:simulation\+\_\+setup\+:\+:Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$ Class Template Reference}
+\label{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4}\index{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}}
+
+
+Object for setting aerodynamic coefficients from a user-\/defined 1-\/dimensional table.  
+
+
+
+
+{\ttfamily \#include $<$create\+Aerodynamic\+Coefficient\+Interface.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:simulation\+\_\+setup\+:\+:Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:simulation\+\_\+setup\+:\+:Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_aaa7de23b189f8461b9bcec784cadc070}{Tabulated\+Aerodynamic\+Coefficient\+Settings} (const std\+::vector$<$ double $>$ independent\+Variables, const std\+::vector$<$ Eigen\+::\+Vector3d $>$ force\+Coefficients, const std\+::vector$<$ Eigen\+::\+Vector3d $>$ moment\+Coefficients, const double reference\+Length, const double reference\+Area, const double lateral\+Reference\+Length, const Eigen\+::\+Vector3d \&moment\+Reference\+Point, const aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables independent\+Variable\+Name, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings}{interpolators\+::\+Interpolator\+Settings} $>$ interpolation\+Settings, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=1, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=1)
+\begin{DoxyCompactList}\small\item\em Constructor, sets properties of aerodynamic coefficients. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_ad783723c3c3f76cdc8a37eccb67022c3}{Tabulated\+Aerodynamic\+Coefficient\+Settings} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ independent\+Variables, const boost\+::multi\+\_\+array$<$ Eigen\+::\+Vector3d, 1 $>$ force\+Coefficients, const boost\+::multi\+\_\+array$<$ Eigen\+::\+Vector3d, 1 $>$ moment\+Coefficients, const double reference\+Length, const double reference\+Area, const double lateral\+Reference\+Length, const Eigen\+::\+Vector3d \&moment\+Reference\+Point, const std\+::vector$<$ aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables $>$ independent\+Variable\+Name, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=1, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=1)
+\begin{DoxyCompactList}\small\item\em Constructor, sets properties of aerodynamic coefficients. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a3013fed4b51b91392495349e5543c745}{Tabulated\+Aerodynamic\+Coefficient\+Settings} (const std\+::vector$<$ double $>$ independent\+Variables, const std\+::vector$<$ Eigen\+::\+Vector3d $>$ force\+Coefficients, const double reference\+Area, const aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables independent\+Variable\+Name, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings}{interpolators\+::\+Interpolator\+Settings} $>$ interpolation\+Settings, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=1, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=1)
+\begin{DoxyCompactList}\small\item\em Constructor, sets properties of aerodynamic force coefficients, zero moment coefficients. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a414a049dd7beef7305fd3e3164c13edf}{Tabulated\+Aerodynamic\+Coefficient\+Settings} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ independent\+Variables, const boost\+::multi\+\_\+array$<$ Eigen\+::\+Vector3d, 1 $>$ force\+Coefficients, const double reference\+Area, const std\+::vector$<$ aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables $>$ independent\+Variable\+Names, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=1, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=1)
+\begin{DoxyCompactList}\small\item\em Constructor, sets properties of aerodynamic force coefficients, zero moment coefficients. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a054261d903f39ba3b0eb493f7c52431f}{$\sim$\+Tabulated\+Aerodynamic\+Coefficient\+Settings} ()\hypertarget{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a054261d903f39ba3b0eb493f7c52431f}{}\label{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a054261d903f39ba3b0eb493f7c52431f}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+std\+::map$<$ double, Eigen\+::\+Vector3d $>$ \hyperlink{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_ac042527a0371eb111e78d6544d2ae10e}{get\+Force\+Coefficients} ()
+\begin{DoxyCompactList}\small\item\em Function to return values of force coefficients in table. \end{DoxyCompactList}\item 
+std\+::map$<$ double, Eigen\+::\+Vector3d $>$ \hyperlink{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a1e205b5946695335e844dc848a14a82a}{get\+Moment\+Coefficients} ()
+\begin{DoxyCompactList}\small\item\em Function to return values of moment coefficients in table. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings}{interpolators\+::\+Interpolator\+Settings} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a979d21b8338faa8564ccc1de34f7c40e}{get\+Interpolation\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Function to return settings to be used for creating the one-\/dimensional interpoaltor of data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$$>$\\*
+class tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}
+
+Object for setting aerodynamic coefficients from a user-\/defined 1-\/dimensional table. 
+
+Object for setting aerodynamic coefficients from a user-\/defined 1-\/dimensional table. The user must provide the force (and moment) coefficients in std\+::vectors, and define the physical meaning of the independent variables. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}!Tabulated\+Aerodynamic\+Coefficient\+Settings@{Tabulated\+Aerodynamic\+Coefficient\+Settings}}
+\index{Tabulated\+Aerodynamic\+Coefficient\+Settings@{Tabulated\+Aerodynamic\+Coefficient\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}}
+\subsubsection[{\texorpdfstring{Tabulated\+Aerodynamic\+Coefficient\+Settings(const std\+::vector$<$ double $>$ independent\+Variables, const std\+::vector$<$ Eigen\+::\+Vector3d $>$ force\+Coefficients, const std\+::vector$<$ Eigen\+::\+Vector3d $>$ moment\+Coefficients, const double reference\+Length, const double reference\+Area, const double lateral\+Reference\+Length, const Eigen\+::\+Vector3d \&moment\+Reference\+Point, const aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables independent\+Variable\+Name, const boost\+::shared\+\_\+ptr$<$ interpolators\+::\+Interpolator\+Settings $>$ interpolation\+Settings, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=1, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=1)}{TabulatedAerodynamicCoefficientSettings(const std::vector< double > independentVariables, const std::vector< Eigen::Vector3d > forceCoefficients, const std::vector< Eigen::Vector3d > momentCoefficients, const double referenceLength, const double referenceArea, const double lateralReferenceLength, const Eigen::Vector3d &momentReferencePoint, const aerodynamics::AerodynamicCoefficientsIndependentVariables independentVariableName, const boost::shared_ptr< interpolators::InterpolatorSettings > interpolationSettings, const bool areCoefficientsInAerodynamicFrame=1, const bool areCoefficientsInNegativeAxisDirection=1)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings}$<$ 1 $>$\+::{\bf Tabulated\+Aerodynamic\+Coefficient\+Settings} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$}]{independent\+Variables, }
+\item[{const std\+::vector$<$ Eigen\+::\+Vector3d $>$}]{force\+Coefficients, }
+\item[{const std\+::vector$<$ Eigen\+::\+Vector3d $>$}]{moment\+Coefficients, }
+\item[{const double}]{reference\+Length, }
+\item[{const double}]{reference\+Area, }
+\item[{const double}]{lateral\+Reference\+Length, }
+\item[{const Eigen\+::\+Vector3d \&}]{moment\+Reference\+Point, }
+\item[{const aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables}]{independent\+Variable\+Name, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf interpolators\+::\+Interpolator\+Settings} $>$}]{interpolation\+Settings, }
+\item[{const bool}]{are\+Coefficients\+In\+Aerodynamic\+Frame = {\ttfamily 1}, }
+\item[{const bool}]{are\+Coefficients\+In\+Negative\+Axis\+Direction = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_aaa7de23b189f8461b9bcec784cadc070}{}\label{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_aaa7de23b189f8461b9bcec784cadc070}
+
+
+Constructor, sets properties of aerodynamic coefficients. 
+
+Constructor, sets properties of aerodynamic coefficients. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & Values of indepependent variables at which the coefficients in the input multi vector are defined. \\
+\hline
+{\em force\+Coefficients} & Values of force coefficients at independent variables defined by independent\+Variables. \\
+\hline
+{\em moment\+Coefficients} & Values of moment coefficients at independent variables defined by independent\+Variables. \\
+\hline
+{\em reference\+Length} & Reference length with which aerodynamic moments (about x-\/ and z-\/ axes) are non-\/dimensionalized. \\
+\hline
+{\em reference\+Area} & Reference area with which aerodynamic forces and moments are non-\/dimensionalized. \\
+\hline
+{\em lateral\+Reference\+Length} & Reference length with which aerodynamic moments (about y-\/axis) is non-\/dimensionalized. \\
+\hline
+{\em moment\+Reference\+Point} & Point w.\+r.\+t. aerodynamic moment is calculated \\
+\hline
+{\em independent\+Variable\+Name} & Identifiers the of physical meaning of the independent variable of the aerodynamic coefficients. \\
+\hline
+{\em interpolation\+Settings} & Settings to be used for creating the one-\/dimensional interpoaltor of data. \\
+\hline
+{\em are\+Coefficients\+In\+Aerodynamic\+Frame} & Boolean to define whether the aerodynamic coefficients are defined in the aerodynamic frame (lift, drag, side force) or in the body frame (typically denoted as Cx, Cy, Cz). \\
+\hline
+{\em are\+Coefficients\+In\+Negative\+Axis\+Direction} & Boolean to define whether the aerodynamic coefficients are positive along the positive axes of the body or aerodynamic frame (see are\+Coefficients\+In\+Aerodynamic\+Frame). Note that for (lift, drag, side force), the coefficients are typically defined in negative direction. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}!Tabulated\+Aerodynamic\+Coefficient\+Settings@{Tabulated\+Aerodynamic\+Coefficient\+Settings}}
+\index{Tabulated\+Aerodynamic\+Coefficient\+Settings@{Tabulated\+Aerodynamic\+Coefficient\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}}
+\subsubsection[{\texorpdfstring{Tabulated\+Aerodynamic\+Coefficient\+Settings(const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ independent\+Variables, const boost\+::multi\+\_\+array$<$ Eigen\+::\+Vector3d, 1 $>$ force\+Coefficients, const boost\+::multi\+\_\+array$<$ Eigen\+::\+Vector3d, 1 $>$ moment\+Coefficients, const double reference\+Length, const double reference\+Area, const double lateral\+Reference\+Length, const Eigen\+::\+Vector3d \&moment\+Reference\+Point, const std\+::vector$<$ aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables $>$ independent\+Variable\+Name, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=1, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=1)}{TabulatedAerodynamicCoefficientSettings(const std::vector< std::vector< double > > independentVariables, const boost::multi_array< Eigen::Vector3d, 1 > forceCoefficients, const boost::multi_array< Eigen::Vector3d, 1 > momentCoefficients, const double referenceLength, const double referenceArea, const double lateralReferenceLength, const Eigen::Vector3d &momentReferencePoint, const std::vector< aerodynamics::AerodynamicCoefficientsIndependentVariables > independentVariableName, const bool areCoefficientsInAerodynamicFrame=1, const bool areCoefficientsInNegativeAxisDirection=1)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings}$<$ 1 $>$\+::{\bf Tabulated\+Aerodynamic\+Coefficient\+Settings} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$}]{independent\+Variables, }
+\item[{const boost\+::multi\+\_\+array$<$ Eigen\+::\+Vector3d, 1 $>$}]{force\+Coefficients, }
+\item[{const boost\+::multi\+\_\+array$<$ Eigen\+::\+Vector3d, 1 $>$}]{moment\+Coefficients, }
+\item[{const double}]{reference\+Length, }
+\item[{const double}]{reference\+Area, }
+\item[{const double}]{lateral\+Reference\+Length, }
+\item[{const Eigen\+::\+Vector3d \&}]{moment\+Reference\+Point, }
+\item[{const std\+::vector$<$ aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables $>$}]{independent\+Variable\+Name, }
+\item[{const bool}]{are\+Coefficients\+In\+Aerodynamic\+Frame = {\ttfamily 1}, }
+\item[{const bool}]{are\+Coefficients\+In\+Negative\+Axis\+Direction = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_ad783723c3c3f76cdc8a37eccb67022c3}{}\label{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_ad783723c3c3f76cdc8a37eccb67022c3}
+
+
+Constructor, sets properties of aerodynamic coefficients. 
+
+Constructor, sets properties of aerodynamic coefficients. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & Values of indepependent variables at which the coefficients in the input multi vector are defined. \\
+\hline
+{\em force\+Coefficients} & Values of force coefficients at independent variables defined by independent\+Variables. \\
+\hline
+{\em moment\+Coefficients} & Values of moment coefficients at independent variables defined by independent\+Variables. \\
+\hline
+{\em reference\+Length} & Reference length with which aerodynamic moments (about x-\/ and z-\/ axes) are non-\/dimensionalized. \\
+\hline
+{\em reference\+Area} & Reference area with which aerodynamic forces and moments are non-\/dimensionalized. \\
+\hline
+{\em lateral\+Reference\+Length} & Reference length with which aerodynamic moments (about y-\/axis) is non-\/dimensionalized. \\
+\hline
+{\em moment\+Reference\+Point} & Point w.\+r.\+t. aerodynamic moment is calculated \\
+\hline
+{\em independent\+Variable\+Name} & Identifiers the of physical meaning of the independent variable of the aerodynamic coefficients (size 1). \\
+\hline
+{\em are\+Coefficients\+In\+Aerodynamic\+Frame} & Boolean to define whether the aerodynamic coefficients are defined in the aerodynamic frame (lift, drag, side force) or in the body frame (typically denoted as Cx, Cy, Cz). \\
+\hline
+{\em are\+Coefficients\+In\+Negative\+Axis\+Direction} & Boolean to define whether the aerodynamic coefficients are positive along the positive axes of the body or aerodynamic frame (see are\+Coefficients\+In\+Aerodynamic\+Frame). Note that for (lift, drag, side force), the coefficients are typically defined in negative direction. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}!Tabulated\+Aerodynamic\+Coefficient\+Settings@{Tabulated\+Aerodynamic\+Coefficient\+Settings}}
+\index{Tabulated\+Aerodynamic\+Coefficient\+Settings@{Tabulated\+Aerodynamic\+Coefficient\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}}
+\subsubsection[{\texorpdfstring{Tabulated\+Aerodynamic\+Coefficient\+Settings(const std\+::vector$<$ double $>$ independent\+Variables, const std\+::vector$<$ Eigen\+::\+Vector3d $>$ force\+Coefficients, const double reference\+Area, const aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables independent\+Variable\+Name, const boost\+::shared\+\_\+ptr$<$ interpolators\+::\+Interpolator\+Settings $>$ interpolation\+Settings, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=1, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=1)}{TabulatedAerodynamicCoefficientSettings(const std::vector< double > independentVariables, const std::vector< Eigen::Vector3d > forceCoefficients, const double referenceArea, const aerodynamics::AerodynamicCoefficientsIndependentVariables independentVariableName, const boost::shared_ptr< interpolators::InterpolatorSettings > interpolationSettings, const bool areCoefficientsInAerodynamicFrame=1, const bool areCoefficientsInNegativeAxisDirection=1)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings}$<$ 1 $>$\+::{\bf Tabulated\+Aerodynamic\+Coefficient\+Settings} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$}]{independent\+Variables, }
+\item[{const std\+::vector$<$ Eigen\+::\+Vector3d $>$}]{force\+Coefficients, }
+\item[{const double}]{reference\+Area, }
+\item[{const aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables}]{independent\+Variable\+Name, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf interpolators\+::\+Interpolator\+Settings} $>$}]{interpolation\+Settings, }
+\item[{const bool}]{are\+Coefficients\+In\+Aerodynamic\+Frame = {\ttfamily 1}, }
+\item[{const bool}]{are\+Coefficients\+In\+Negative\+Axis\+Direction = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a3013fed4b51b91392495349e5543c745}{}\label{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a3013fed4b51b91392495349e5543c745}
+
+
+Constructor, sets properties of aerodynamic force coefficients, zero moment coefficients. 
+
+Constructor, sets properties of aerodynamic force coefficients, zero moment coefficients. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & Values of indepependent variables at which the coefficients in the input multi vector are defined. \\
+\hline
+{\em force\+Coefficients} & Values of force coefficients at independent variables defined by independent\+Variables. \\
+\hline
+{\em reference\+Area} & Reference area with which aerodynamic forces and moments are non-\/dimensionalized. \\
+\hline
+{\em independent\+Variable\+Name} & Identifiers the of physical meaning of the independent variable of the aerodynamic coefficients. \\
+\hline
+{\em interpolation\+Settings} & Settings to be used for creating the one-\/dimensional interpoaltor of data. \\
+\hline
+{\em are\+Coefficients\+In\+Aerodynamic\+Frame} & Boolean to define whether the aerodynamic coefficients are defined in the aerodynamic frame (lift, drag, side force) or in the body frame (typically denoted as Cx, Cy, Cz). \\
+\hline
+{\em are\+Coefficients\+In\+Negative\+Axis\+Direction} & Boolean to define whether the aerodynamic coefficients are positive along the positive axes of the body or aerodynamic frame (see are\+Coefficients\+In\+Aerodynamic\+Frame). Note that for (lift, drag, side force), the coefficients are typically defined in negative direction. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}!Tabulated\+Aerodynamic\+Coefficient\+Settings@{Tabulated\+Aerodynamic\+Coefficient\+Settings}}
+\index{Tabulated\+Aerodynamic\+Coefficient\+Settings@{Tabulated\+Aerodynamic\+Coefficient\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}}
+\subsubsection[{\texorpdfstring{Tabulated\+Aerodynamic\+Coefficient\+Settings(const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ independent\+Variables, const boost\+::multi\+\_\+array$<$ Eigen\+::\+Vector3d, 1 $>$ force\+Coefficients, const double reference\+Area, const std\+::vector$<$ aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables $>$ independent\+Variable\+Names, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=1, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=1)}{TabulatedAerodynamicCoefficientSettings(const std::vector< std::vector< double > > independentVariables, const boost::multi_array< Eigen::Vector3d, 1 > forceCoefficients, const double referenceArea, const std::vector< aerodynamics::AerodynamicCoefficientsIndependentVariables > independentVariableNames, const bool areCoefficientsInAerodynamicFrame=1, const bool areCoefficientsInNegativeAxisDirection=1)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings}$<$ 1 $>$\+::{\bf Tabulated\+Aerodynamic\+Coefficient\+Settings} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$}]{independent\+Variables, }
+\item[{const boost\+::multi\+\_\+array$<$ Eigen\+::\+Vector3d, 1 $>$}]{force\+Coefficients, }
+\item[{const double}]{reference\+Area, }
+\item[{const std\+::vector$<$ aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables $>$}]{independent\+Variable\+Names, }
+\item[{const bool}]{are\+Coefficients\+In\+Aerodynamic\+Frame = {\ttfamily 1}, }
+\item[{const bool}]{are\+Coefficients\+In\+Negative\+Axis\+Direction = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a414a049dd7beef7305fd3e3164c13edf}{}\label{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a414a049dd7beef7305fd3e3164c13edf}
+
+
+Constructor, sets properties of aerodynamic force coefficients, zero moment coefficients. 
+
+Constructor, sets properties of aerodynamic force coefficients, zero moment coefficients. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & Values of indepependent variables at which the coefficients in the input multi vector are defined (size 1). \\
+\hline
+{\em force\+Coefficients} & Values of force coefficients at independent variables defined by independent\+Variables. \\
+\hline
+{\em reference\+Area} & Reference area with which aerodynamic forces and moments are non-\/dimensionalized. \\
+\hline
+{\em independent\+Variable\+Names} & Identifiers the of physical meaning of the independent variable of the aerodynamic coefficients (size 1). \\
+\hline
+{\em are\+Coefficients\+In\+Aerodynamic\+Frame} & Boolean to define whether the aerodynamic coefficients are defined in the aerodynamic frame (lift, drag, side force) or in the body frame (typically denoted as Cx, Cy, Cz). \\
+\hline
+{\em are\+Coefficients\+In\+Negative\+Axis\+Direction} & Boolean to define whether the aerodynamic coefficients are positive along the positive axes of the body or aerodynamic frame (see are\+Coefficients\+In\+Aerodynamic\+Frame). Note that for (lift, drag, side force), the coefficients are typically defined in negative direction. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}!get\+Force\+Coefficients@{get\+Force\+Coefficients}}
+\index{get\+Force\+Coefficients@{get\+Force\+Coefficients}!tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}}
+\subsubsection[{\texorpdfstring{get\+Force\+Coefficients()}{getForceCoefficients()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ double, Eigen\+::\+Vector3d $>$ {\bf tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings}$<$ 1 $>$\+::get\+Force\+Coefficients (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_ac042527a0371eb111e78d6544d2ae10e}{}\label{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_ac042527a0371eb111e78d6544d2ae10e}
+
+
+Function to return values of force coefficients in table. 
+
+Function to return values of force coefficients in table. \begin{DoxyReturn}{Returns}
+Values of force coefficients in table. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}!get\+Interpolation\+Settings@{get\+Interpolation\+Settings}}
+\index{get\+Interpolation\+Settings@{get\+Interpolation\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}}
+\subsubsection[{\texorpdfstring{get\+Interpolation\+Settings()}{getInterpolationSettings()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf interpolators\+::\+Interpolator\+Settings} $>$ {\bf tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings}$<$ 1 $>$\+::get\+Interpolation\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a979d21b8338faa8564ccc1de34f7c40e}{}\label{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a979d21b8338faa8564ccc1de34f7c40e}
+
+
+Function to return settings to be used for creating the one-\/dimensional interpoaltor of data. 
+
+Function to return settings to be used for creating the one-\/dimensional interpoaltor of data. \begin{DoxyReturn}{Returns}
+Settings to be used for creating the one-\/dimensional interpoaltor of data. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}!get\+Moment\+Coefficients@{get\+Moment\+Coefficients}}
+\index{get\+Moment\+Coefficients@{get\+Moment\+Coefficients}!tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$@{tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings$<$ 1 $>$}}
+\subsubsection[{\texorpdfstring{get\+Moment\+Coefficients()}{getMomentCoefficients()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ double, Eigen\+::\+Vector3d $>$ {\bf tudat\+::simulation\+\_\+setup\+::\+Tabulated\+Aerodynamic\+Coefficient\+Settings}$<$ 1 $>$\+::get\+Moment\+Coefficients (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a1e205b5946695335e844dc848a14a82a}{}\label{classtudat_1_1simulation__setup_1_1TabulatedAerodynamicCoefficientSettings_3_011_01_4_a1e205b5946695335e844dc848a14a82a}
+
+
+Function to return values of moment coefficients in table. 
+
+Function to return values of moment coefficients in table. \begin{DoxyReturn}{Returns}
+Values of moment coefficients in table. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Environment\+Setup/create\+Aerodynamic\+Coefficient\+Interface.\+h\end{DoxyCompactItemize}

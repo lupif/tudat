@@ -1,0 +1,450 @@
+\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings}{}\section{tudat\+:\+:optimization\+:\+:Mission\+Segment\+Settings Struct Reference}
+\label{structtudat_1_1optimization_1_1MissionSegmentSettings}\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+
+
+Class for the definition of a mission segment.  
+
+
+
+
+{\ttfamily \#include $<$mission\+Segment\+Settings.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_ac82df8c6df3b28595643c95edd82826a}{Mission\+Segment\+Settings} (boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator}{propagators\+::\+Single\+Arc\+Dynamics\+Simulator}$<$  $>$ $>$ dynamics\+Simulator, boost\+::shared\+\_\+ptr$<$ \hyperlink{structtudat_1_1optimization_1_1DecisionVariableSettings}{Decision\+Variable\+Settings} $>$ decision\+Variable\+Settings=N\+U\+LL, boost\+::shared\+\_\+ptr$<$ \hyperlink{structtudat_1_1optimization_1_1ObjectiveFunctionSettings}{Objective\+Function\+Settings} $>$ objective\+Function\+Settings=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a623bedefe73209d53fdc2fcdf3d4a922}{Mission\+Segment\+Settings} (boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator}{propagators\+::\+Single\+Arc\+Dynamics\+Simulator}$<$  $>$ $>$ dynamics\+Simulator, boost\+::shared\+\_\+ptr$<$ \hyperlink{structtudat_1_1optimization_1_1SingleDecisionVariableSettings}{Single\+Decision\+Variable\+Settings} $>$ single\+Decision\+Variable\+Settings, boost\+::shared\+\_\+ptr$<$ \hyperlink{structtudat_1_1optimization_1_1ObjectiveFunctionSettings}{Objective\+Function\+Settings} $>$ objective\+Function\+Settings=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a621262e2c45a699eb4532b3ed60faf67}{Mission\+Segment\+Settings} (boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator}{propagators\+::\+Single\+Arc\+Dynamics\+Simulator}$<$  $>$ $>$ dynamics\+Simulator, boost\+::shared\+\_\+ptr$<$ \hyperlink{structtudat_1_1optimization_1_1ObjectiveFunctionSettings}{Objective\+Function\+Settings} $>$ objective\+Function\+Settings)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a76e3b194435e688da751e353ebeb12f7}{has\+Propagator\+Settings} (propagators\+::\+Integrated\+State\+Type propagator\+Type=propagators\+::transational\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Method to check the propagator settings in the dynamics simulator. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings}{propagators\+::\+Propagator\+Settings}$<$  $>$ $>$ \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_ab67c2aff92faf1663f79d98438ef44ae}{select\+Propagator\+Settings} (propagators\+::\+Integrated\+State\+Type propagator\+Type=propagators\+::transational\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Method to retrieve the propagator settings from the dynamics simulator. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector6d \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a880db4d100e81410e19ba8fa391265f5}{get\+Initial\+Orbital\+State} (const std\+::string selected\+Body\+Name, int $\ast$initial\+Segment\+Size)
+\begin{DoxyCompactList}\small\item\em Method to retrieve the initial translational cartesian states of a certain body. \end{DoxyCompactList}\item 
+void \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a97ec854c48f8eac4e472f1bdffe09655}{reset\+Orbital\+State} (Eigen\+::\+Vector6d modified\+State, int initial\+Segment\+Size)
+\begin{DoxyCompactList}\small\item\em Method to modify the initial orbital state of a body. \end{DoxyCompactList}\item 
+void \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a476445910c06b0f86a636f0f18a3009a}{modify\+Cartesian\+Component} (orbital\+\_\+elements\+::\+Cartesian\+Elements cartesian\+Component, const std\+::string selected\+Body\+Name, const double new\+Value)
+\begin{DoxyCompactList}\small\item\em Method to modify the value of a specified initial cartesian component. \end{DoxyCompactList}\item 
+void \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a068451b9141ac549080da867505a3c9d}{modify\+Kepler\+Element} (orbital\+\_\+elements\+::\+Keplerian\+Elements kepler\+Element, const std\+::string selected\+Body\+Name, const std\+::string central\+Body, const double new\+Value)
+\begin{DoxyCompactList}\small\item\em Method to modify the value of a specified initial Kepler element. \end{DoxyCompactList}\item 
+void \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a2ca87c8464e7aa25098884898e65cb42}{modify\+Spherical\+Component} (orbital\+\_\+elements\+::\+Spherical\+Orbital\+State\+Elements spherical\+Orbital\+Element, const std\+::string selected\+Body\+Name, const double new\+Value)
+\begin{DoxyCompactList}\small\item\em Method to modify the value of a specified initial spherical orbital element. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a882af2b7c4897e940b840a723274c8c0}{get\+Final\+Simulation\+Epoch} ()
+\begin{DoxyCompactList}\small\item\em Returns the final simulation epoch. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, Eigen\+::\+Vector6d $>$ \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_ab575fb0d094a8c8562f772570cdae41c}{get\+Final\+Orbital\+States} (const double final\+Time)
+\begin{DoxyCompactList}\small\item\em Returns the final interpolated orbital states. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, double $>$ \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_ae8ddf559d8bd4fe45ab3aec4508a91b3}{get\+Final\+Body\+Masses} (const double final\+Time)
+\begin{DoxyCompactList}\small\item\em Returns the final body masses. \end{DoxyCompactList}\item 
+void \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a99d3514bd38a195b02e42e00cc173ee8}{reset\+Initial\+Orbital\+States} (std\+::map$<$ std\+::string, Eigen\+::\+Vector6d $>$ new\+States)
+\begin{DoxyCompactList}\small\item\em Reset the initial cartesian states of all the bodies. \end{DoxyCompactList}\item 
+void \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a583644cd0c920f276f119b1645ddeff0}{reset\+Start\+Epoch} (const double start\+Epoch)
+\begin{DoxyCompactList}\small\item\em Reset the simulation start epoch in the integrator settings. \end{DoxyCompactList}\item 
+void \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a4fc917e2c0eb2279d687abab32ac545b}{reset\+Body\+Masses} (std\+::map$<$ std\+::string, double $>$ new\+Masses)
+\begin{DoxyCompactList}\small\item\em Reset the initial body masses. \end{DoxyCompactList}\item 
+void \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_ae9f9953868505feb740cfb1795bf1861}{set\+Preliminary\+Conditions} (const double start\+Epoch, std\+::map$<$ std\+::string, Eigen\+::\+Vector6d $>$ new\+States, std\+::map$<$ std\+::string, double $>$ new\+Masses=std\+::map$<$ std\+::string, double $>$())
+\begin{DoxyCompactList}\small\item\em Reset simulation start epoch, initial orbital states and initial body masses. \end{DoxyCompactList}\item 
+void \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_ac4ec457f12b9b691c3afb92bad8fef38}{set\+Propagation\+Conditions} (Eigen\+::\+Vector\+Xd \&new\+Values)
+\begin{DoxyCompactList}\small\item\em Reset the values of the decision variables in the dynamics simulator. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a778ecad548173f907b9268ebb452bd68}{get\+Objective\+Function\+Value} (void)
+\begin{DoxyCompactList}\small\item\em Return the value of the objective function with the current configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1SingleArcDynamicsSimulator}{propagators\+::\+Single\+Arc\+Dynamics\+Simulator}$<$  $>$ $>$ \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a276bfcac1c9719c06553124a67b51dfb}{dynamics\+Simulator\+\_\+}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a276bfcac1c9719c06553124a67b51dfb}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a276bfcac1c9719c06553124a67b51dfb}
+
+\begin{DoxyCompactList}\small\item\em Storage variable for the dynamics simulator. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{structtudat_1_1optimization_1_1DecisionVariableSettings}{Decision\+Variable\+Settings} $>$ \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a6ce13cf8c15e064ea822687c32f93c96}{decision\+Variable\+Settings\+\_\+}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a6ce13cf8c15e064ea822687c32f93c96}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a6ce13cf8c15e064ea822687c32f93c96}
+
+\begin{DoxyCompactList}\small\item\em Storage variable for the (multiple) decision variable settings. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{structtudat_1_1optimization_1_1ObjectiveFunctionSettings}{Objective\+Function\+Settings} $>$ \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_a9e6bfd78e3a8223055add035517aded0}{objective\+Function\+Settings\+\_\+}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a9e6bfd78e3a8223055add035517aded0}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a9e6bfd78e3a8223055add035517aded0}
+
+\begin{DoxyCompactList}\small\item\em Storage variable for the objective function settingd. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings_ac9b64e893444b93efbb3acedc2c02046}{decision\+Variable\+Values\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for the definition of a mission segment. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!Mission\+Segment\+Settings@{Mission\+Segment\+Settings}}
+\index{Mission\+Segment\+Settings@{Mission\+Segment\+Settings}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{Mission\+Segment\+Settings(boost\+::shared\+\_\+ptr$<$ propagators\+::\+Single\+Arc\+Dynamics\+Simulator$<$  $>$ $>$ dynamics\+Simulator, boost\+::shared\+\_\+ptr$<$ Decision\+Variable\+Settings $>$ decision\+Variable\+Settings=\+N\+U\+L\+L, boost\+::shared\+\_\+ptr$<$ Objective\+Function\+Settings $>$ objective\+Function\+Settings=\+N\+U\+L\+L)}{MissionSegmentSettings(boost::shared_ptr< propagators::SingleArcDynamicsSimulator<  > > dynamicsSimulator, boost::shared_ptr< DecisionVariableSettings > decisionVariableSettings=NULL, boost::shared_ptr< ObjectiveFunctionSettings > objectiveFunctionSettings=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::\+Mission\+Segment\+Settings (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf propagators\+::\+Single\+Arc\+Dynamics\+Simulator}$<$  $>$ $>$}]{dynamics\+Simulator, }
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf Decision\+Variable\+Settings} $>$}]{decision\+Variable\+Settings = {\ttfamily NULL}, }
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf Objective\+Function\+Settings} $>$}]{objective\+Function\+Settings = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_ac82df8c6df3b28595643c95edd82826a}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_ac82df8c6df3b28595643c95edd82826a}
+
+
+Constructor. 
+
+Constructor for the definition of multiple decision variable 
+\begin{DoxyParams}{Parameters}
+{\em dynamics\+Simulator} & pre-\/defined single arc dynamics simulator that will be automatically modified during the optimization \\
+\hline
+{\em decision\+Variable\+Settings} & object containing a vector of multiple decision variable settings associated with the dynamics simulator \\
+\hline
+{\em objective\+Function\+Settings} & object containing the objective function settings \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!Mission\+Segment\+Settings@{Mission\+Segment\+Settings}}
+\index{Mission\+Segment\+Settings@{Mission\+Segment\+Settings}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{Mission\+Segment\+Settings(boost\+::shared\+\_\+ptr$<$ propagators\+::\+Single\+Arc\+Dynamics\+Simulator$<$  $>$ $>$ dynamics\+Simulator, boost\+::shared\+\_\+ptr$<$ Single\+Decision\+Variable\+Settings $>$ single\+Decision\+Variable\+Settings, boost\+::shared\+\_\+ptr$<$ Objective\+Function\+Settings $>$ objective\+Function\+Settings=\+N\+U\+L\+L)}{MissionSegmentSettings(boost::shared_ptr< propagators::SingleArcDynamicsSimulator<  > > dynamicsSimulator, boost::shared_ptr< SingleDecisionVariableSettings > singleDecisionVariableSettings, boost::shared_ptr< ObjectiveFunctionSettings > objectiveFunctionSettings=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::\+Mission\+Segment\+Settings (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf propagators\+::\+Single\+Arc\+Dynamics\+Simulator}$<$  $>$ $>$}]{dynamics\+Simulator, }
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf Single\+Decision\+Variable\+Settings} $>$}]{single\+Decision\+Variable\+Settings, }
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf Objective\+Function\+Settings} $>$}]{objective\+Function\+Settings = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a623bedefe73209d53fdc2fcdf3d4a922}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a623bedefe73209d53fdc2fcdf3d4a922}
+
+
+Constructor. 
+
+Constructor for the definition of a single decision variable settings 
+\begin{DoxyParams}{Parameters}
+{\em dynamics\+Simulator} & pre-\/defined single arc dynamics simulator that will be automatically modified during the optimization \\
+\hline
+{\em single\+Decision\+Variable\+Settings} & object containing a single decision variable settings \\
+\hline
+{\em objective\+Function\+Settings} & object containing the objective function settings \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!Mission\+Segment\+Settings@{Mission\+Segment\+Settings}}
+\index{Mission\+Segment\+Settings@{Mission\+Segment\+Settings}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{Mission\+Segment\+Settings(boost\+::shared\+\_\+ptr$<$ propagators\+::\+Single\+Arc\+Dynamics\+Simulator$<$  $>$ $>$ dynamics\+Simulator, boost\+::shared\+\_\+ptr$<$ Objective\+Function\+Settings $>$ objective\+Function\+Settings)}{MissionSegmentSettings(boost::shared_ptr< propagators::SingleArcDynamicsSimulator<  > > dynamicsSimulator, boost::shared_ptr< ObjectiveFunctionSettings > objectiveFunctionSettings)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::\+Mission\+Segment\+Settings (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf propagators\+::\+Single\+Arc\+Dynamics\+Simulator}$<$  $>$ $>$}]{dynamics\+Simulator, }
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf Objective\+Function\+Settings} $>$}]{objective\+Function\+Settings}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a621262e2c45a699eb4532b3ed60faf67}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a621262e2c45a699eb4532b3ed60faf67}
+
+
+Constructor. 
+
+Constructor for a mission segment without decision variables 
+\begin{DoxyParams}{Parameters}
+{\em dynamics\+Simulator} & pre-\/defined single arc dynamics simulator that will be automatically modified during the optimization \\
+\hline
+{\em objective\+Function\+Settings} & object containing the objective function settings \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!get\+Final\+Body\+Masses@{get\+Final\+Body\+Masses}}
+\index{get\+Final\+Body\+Masses@{get\+Final\+Body\+Masses}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Final\+Body\+Masses(const double final\+Time)}{getFinalBodyMasses(const double finalTime)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ std\+::string, double $>$ tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::get\+Final\+Body\+Masses (
+\begin{DoxyParamCaption}
+\item[{const double}]{final\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_ae8ddf559d8bd4fe45ab3aec4508a91b3}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_ae8ddf559d8bd4fe45ab3aec4508a91b3}
+
+
+Returns the final body masses. 
+
+Returns the final body masses interpolated to the epoch final\+Time. The masses are stored in a map with the associated body names as key 
+\begin{DoxyParams}{Parameters}
+{\em final\+Time} & \hyperlink{classtudat_1_1Time}{Time} to which the body masses must be interpolated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map of final body masses interpolated to the epoch final\+Time with the associated body names as key 
+\end{DoxyReturn}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!get\+Final\+Orbital\+States@{get\+Final\+Orbital\+States}}
+\index{get\+Final\+Orbital\+States@{get\+Final\+Orbital\+States}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Final\+Orbital\+States(const double final\+Time)}{getFinalOrbitalStates(const double finalTime)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ std\+::string, Eigen\+::\+Vector6d $>$ tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::get\+Final\+Orbital\+States (
+\begin{DoxyParamCaption}
+\item[{const double}]{final\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_ab575fb0d094a8c8562f772570cdae41c}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_ab575fb0d094a8c8562f772570cdae41c}
+
+
+Returns the final interpolated orbital states. 
+
+Returns the final orbital states interpolated to the epoch final\+Time. The orbital states are stored in a map with the associated body names as key 
+\begin{DoxyParams}{Parameters}
+{\em final\+Time} & \hyperlink{classtudat_1_1Time}{Time} to which the orbital states must be interpolated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map of final orbital states interpolated to the epoch final\+Time with the associated body names as key 
+\end{DoxyReturn}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!get\+Final\+Simulation\+Epoch@{get\+Final\+Simulation\+Epoch}}
+\index{get\+Final\+Simulation\+Epoch@{get\+Final\+Simulation\+Epoch}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Final\+Simulation\+Epoch()}{getFinalSimulationEpoch()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::get\+Final\+Simulation\+Epoch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a882af2b7c4897e940b840a723274c8c0}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a882af2b7c4897e940b840a723274c8c0}
+
+
+Returns the final simulation epoch. 
+
+Returns the final simulation epoch, which is either defined in the time termination settings or is interpolated from the actual termination conditions. \begin{DoxyReturn}{Returns}
+Final simulation epoch 
+\end{DoxyReturn}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!get\+Initial\+Orbital\+State@{get\+Initial\+Orbital\+State}}
+\index{get\+Initial\+Orbital\+State@{get\+Initial\+Orbital\+State}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Initial\+Orbital\+State(const std\+::string selected\+Body\+Name, int $\ast$initial\+Segment\+Size)}{getInitialOrbitalState(const std::string selectedBodyName, int *initialSegmentSize)}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector6d tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::get\+Initial\+Orbital\+State (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{selected\+Body\+Name, }
+\item[{int $\ast$}]{initial\+Segment\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a880db4d100e81410e19ba8fa391265f5}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a880db4d100e81410e19ba8fa391265f5}
+
+
+Method to retrieve the initial translational cartesian states of a certain body. 
+
+Method to retrieve the initial orbital states of a certain body specified by its name in the body\+Map in the dynamics simulator. The method also returns the initial position of the state in the initial state vector. 
+\begin{DoxyParams}{Parameters}
+{\em selected\+Body\+Name} & Name of the body for which the initial orbital state is required, as specified in the body\+Map keys. \\
+\hline
+{\em initial\+Segment\+Size} & Return value of the initial segment size. (specify any int) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Orbital state 
+\end{DoxyReturn}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!get\+Objective\+Function\+Value@{get\+Objective\+Function\+Value}}
+\index{get\+Objective\+Function\+Value@{get\+Objective\+Function\+Value}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Objective\+Function\+Value(void)}{getObjectiveFunctionValue(void)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::get\+Objective\+Function\+Value (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a778ecad548173f907b9268ebb452bd68}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a778ecad548173f907b9268ebb452bd68}
+
+
+Return the value of the objective function with the current configuration. 
+
+Return the value of the objective function with the current configuration \begin{DoxyReturn}{Returns}
+Current value of the objective function 
+\end{DoxyReturn}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!has\+Propagator\+Settings@{has\+Propagator\+Settings}}
+\index{has\+Propagator\+Settings@{has\+Propagator\+Settings}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{has\+Propagator\+Settings(propagators\+::\+Integrated\+State\+Type propagator\+Type=propagators\+::transational\+\_\+state)}{hasPropagatorSettings(propagators::IntegratedStateType propagatorType=propagators::transational_state)}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::has\+Propagator\+Settings (
+\begin{DoxyParamCaption}
+\item[{propagators\+::\+Integrated\+State\+Type}]{propagator\+Type = {\ttfamily propagators\+:\+:transational\+\_\+state}}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a76e3b194435e688da751e353ebeb12f7}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a76e3b194435e688da751e353ebeb12f7}
+
+
+Method to check the propagator settings in the dynamics simulator. 
+
+Method to check wether the dynamics simulator possesses a propagator settings with state type propagator\+Type 
+\begin{DoxyParams}{Parameters}
+{\em propagator\+Type} & state type of the propagator settings to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the propagator with propagator\+Type state type is found, false otherwise 
+\end{DoxyReturn}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!modify\+Cartesian\+Component@{modify\+Cartesian\+Component}}
+\index{modify\+Cartesian\+Component@{modify\+Cartesian\+Component}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{modify\+Cartesian\+Component(orbital\+\_\+elements\+::\+Cartesian\+Elements cartesian\+Component, const std\+::string selected\+Body\+Name, const double new\+Value)}{modifyCartesianComponent(orbital_elements::CartesianElements cartesianComponent, const std::string selectedBodyName, const double newValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::modify\+Cartesian\+Component (
+\begin{DoxyParamCaption}
+\item[{orbital\+\_\+elements\+::\+Cartesian\+Elements}]{cartesian\+Component, }
+\item[{const std\+::string}]{selected\+Body\+Name, }
+\item[{const double}]{new\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a476445910c06b0f86a636f0f18a3009a}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a476445910c06b0f86a636f0f18a3009a}
+
+
+Method to modify the value of a specified initial cartesian component. 
+
+Method to modify a specified initial cartesian component of a specified body from the body\+Map in the dynamics simulator. 
+\begin{DoxyParams}{Parameters}
+{\em cartesian\+Component} & Name of the cartesian component to be modified \\
+\hline
+{\em selected\+Body\+Name} & Name of the associated body in the body\+Map in the dynamics simulator \\
+\hline
+{\em new\+Value} & New value of the cartesian component \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!modify\+Kepler\+Element@{modify\+Kepler\+Element}}
+\index{modify\+Kepler\+Element@{modify\+Kepler\+Element}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{modify\+Kepler\+Element(orbital\+\_\+elements\+::\+Keplerian\+Elements kepler\+Element, const std\+::string selected\+Body\+Name, const std\+::string central\+Body, const double new\+Value)}{modifyKeplerElement(orbital_elements::KeplerianElements keplerElement, const std::string selectedBodyName, const std::string centralBody, const double newValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::modify\+Kepler\+Element (
+\begin{DoxyParamCaption}
+\item[{orbital\+\_\+elements\+::\+Keplerian\+Elements}]{kepler\+Element, }
+\item[{const std\+::string}]{selected\+Body\+Name, }
+\item[{const std\+::string}]{central\+Body, }
+\item[{const double}]{new\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a068451b9141ac549080da867505a3c9d}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a068451b9141ac549080da867505a3c9d}
+
+
+Method to modify the value of a specified initial Kepler element. 
+
+Method to modify the value a specified initial Kepler component of a specified body from the body\+Map in the dynamics simulator. 
+\begin{DoxyParams}{Parameters}
+{\em kepler\+Element} & Name of the Kepler orbital element to be modified \\
+\hline
+{\em selected\+Body\+Name} & Name of the associated body in the body\+Map in the dynamics simulator \\
+\hline
+{\em central\+Body} & Name of the associated central body in the body\+Map in the dyamics simulator \\
+\hline
+{\em new\+Value} & New value of the Kepler element \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!modify\+Spherical\+Component@{modify\+Spherical\+Component}}
+\index{modify\+Spherical\+Component@{modify\+Spherical\+Component}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{modify\+Spherical\+Component(orbital\+\_\+elements\+::\+Spherical\+Orbital\+State\+Elements spherical\+Orbital\+Element, const std\+::string selected\+Body\+Name, const double new\+Value)}{modifySphericalComponent(orbital_elements::SphericalOrbitalStateElements sphericalOrbitalElement, const std::string selectedBodyName, const double newValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::modify\+Spherical\+Component (
+\begin{DoxyParamCaption}
+\item[{orbital\+\_\+elements\+::\+Spherical\+Orbital\+State\+Elements}]{spherical\+Orbital\+Element, }
+\item[{const std\+::string}]{selected\+Body\+Name, }
+\item[{const double}]{new\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a2ca87c8464e7aa25098884898e65cb42}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a2ca87c8464e7aa25098884898e65cb42}
+
+
+Method to modify the value of a specified initial spherical orbital element. 
+
+Method to modify the value a specified initial spherical orbital component of a specified body from the body\+Map in the dynamics simulator. 
+\begin{DoxyParams}{Parameters}
+{\em spherical\+Orbital\+Element} & Name of the spherical orbital element to be modified \\
+\hline
+{\em selected\+Body\+Name} & Name of the associated body in the body\+Map in the dynamics simulator \\
+\hline
+{\em new\+Value} & New value of the spherical orbital element \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!reset\+Body\+Masses@{reset\+Body\+Masses}}
+\index{reset\+Body\+Masses@{reset\+Body\+Masses}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{reset\+Body\+Masses(std\+::map$<$ std\+::string, double $>$ new\+Masses)}{resetBodyMasses(std::map< std::string, double > newMasses)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::reset\+Body\+Masses (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ std\+::string, double $>$}]{new\+Masses}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a4fc917e2c0eb2279d687abab32ac545b}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a4fc917e2c0eb2279d687abab32ac545b}
+
+
+Reset the initial body masses. 
+
+Reset the constant body masses and the initial body masses (if a mass propagator is present) of all the bodies 
+\begin{DoxyParams}{Parameters}
+{\em new\+Masses} & Map of new body mass values with associated body names as key \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!reset\+Initial\+Orbital\+States@{reset\+Initial\+Orbital\+States}}
+\index{reset\+Initial\+Orbital\+States@{reset\+Initial\+Orbital\+States}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{reset\+Initial\+Orbital\+States(std\+::map$<$ std\+::string, Eigen\+::\+Vector6d $>$ new\+States)}{resetInitialOrbitalStates(std::map< std::string, Eigen::Vector6d > newStates)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::reset\+Initial\+Orbital\+States (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ std\+::string, Eigen\+::\+Vector6d $>$}]{new\+States}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a99d3514bd38a195b02e42e00cc173ee8}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a99d3514bd38a195b02e42e00cc173ee8}
+
+
+Reset the initial cartesian states of all the bodies. 
+
+Reset the initial cartesian states of all the bodies in the translational state propagator settings in the dynamics simulator 
+\begin{DoxyParams}{Parameters}
+{\em new\+States} & Map of new cartesian states with associated body name as key \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!reset\+Orbital\+State@{reset\+Orbital\+State}}
+\index{reset\+Orbital\+State@{reset\+Orbital\+State}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{reset\+Orbital\+State(\+Eigen\+::\+Vector6d modified\+State, int initial\+Segment\+Size)}{resetOrbitalState(Eigen::Vector6d modifiedState, int initialSegmentSize)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::reset\+Orbital\+State (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector6d}]{modified\+State, }
+\item[{int}]{initial\+Segment\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a97ec854c48f8eac4e472f1bdffe09655}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a97ec854c48f8eac4e472f1bdffe09655}
+
+
+Method to modify the initial orbital state of a body. 
+
+Method to modify the initial orbital state of a body in the translational state propagator settings by specifing the position in the vector of initial states of the first member 
+\begin{DoxyParams}{Parameters}
+{\em modified\+State} & New orbital state to be substituted in the vector of orbital states \\
+\hline
+{\em initial\+Segment\+Size} & Position in the vector of the first member of the orbital state \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!reset\+Start\+Epoch@{reset\+Start\+Epoch}}
+\index{reset\+Start\+Epoch@{reset\+Start\+Epoch}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{reset\+Start\+Epoch(const double start\+Epoch)}{resetStartEpoch(const double startEpoch)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::reset\+Start\+Epoch (
+\begin{DoxyParamCaption}
+\item[{const double}]{start\+Epoch}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_a583644cd0c920f276f119b1645ddeff0}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_a583644cd0c920f276f119b1645ddeff0}
+
+
+Reset the simulation start epoch in the integrator settings. 
+
+Reset the simulation start epoch in the integrator settings in the dynamics simulator 
+\begin{DoxyParams}{Parameters}
+{\em start\+Epoch} & New value for the simulation start epoch \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!select\+Propagator\+Settings@{select\+Propagator\+Settings}}
+\index{select\+Propagator\+Settings@{select\+Propagator\+Settings}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{select\+Propagator\+Settings(propagators\+::\+Integrated\+State\+Type propagator\+Type=propagators\+::transational\+\_\+state)}{selectPropagatorSettings(propagators::IntegratedStateType propagatorType=propagators::transational_state)}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf propagators\+::\+Propagator\+Settings}$<$  $>$ $>$ tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::select\+Propagator\+Settings (
+\begin{DoxyParamCaption}
+\item[{propagators\+::\+Integrated\+State\+Type}]{propagator\+Type = {\ttfamily propagators\+:\+:transational\+\_\+state}}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_ab67c2aff92faf1663f79d98438ef44ae}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_ab67c2aff92faf1663f79d98438ef44ae}
+
+
+Method to retrieve the propagator settings from the dynamics simulator. 
+
+Method to retrieve the propagator settings from the dynamics simulator, specifying what state type you need 
+\begin{DoxyParams}{Parameters}
+{\em propagator\+Type} & state type of the propagator settings that you need \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+shared pointer to the propagator settings required. Runtime error if the propagator settings specified do not exist. 
+\end{DoxyReturn}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!set\+Preliminary\+Conditions@{set\+Preliminary\+Conditions}}
+\index{set\+Preliminary\+Conditions@{set\+Preliminary\+Conditions}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{set\+Preliminary\+Conditions(const double start\+Epoch, std\+::map$<$ std\+::string, Eigen\+::\+Vector6d $>$ new\+States, std\+::map$<$ std\+::string, double $>$ new\+Masses=std\+::map$<$ std\+::string, double $>$())}{setPreliminaryConditions(const double startEpoch, std::map< std::string, Eigen::Vector6d > newStates, std::map< std::string, double > newMasses=std::map< std::string, double >())}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::set\+Preliminary\+Conditions (
+\begin{DoxyParamCaption}
+\item[{const double}]{start\+Epoch, }
+\item[{std\+::map$<$ std\+::string, Eigen\+::\+Vector6d $>$}]{new\+States, }
+\item[{std\+::map$<$ std\+::string, double $>$}]{new\+Masses = {\ttfamily std\+:\+:map$<$~std\+:\+:string,~double~$>$()}}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_ae9f9953868505feb740cfb1795bf1861}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_ae9f9953868505feb740cfb1795bf1861}
+
+
+Reset simulation start epoch, initial orbital states and initial body masses. 
+
+Reset simulation start epoch in the integrator settings, initial orbital states in the translational state propagator settings, body masses in the body\+Mass and initial body masses in the mass propagator settings if present 
+\begin{DoxyParams}{Parameters}
+{\em start\+Epoch} & New value of the simulation start epoch \\
+\hline
+{\em new\+States} & Map containing the new initial cartesian orbital states with associated body names as key \\
+\hline
+{\em new\+Masses} & Map containing the new initial body masses with associated body names as key \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!set\+Propagation\+Conditions@{set\+Propagation\+Conditions}}
+\index{set\+Propagation\+Conditions@{set\+Propagation\+Conditions}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{set\+Propagation\+Conditions(\+Eigen\+::\+Vector\+Xd \&new\+Values)}{setPropagationConditions(Eigen::VectorXd &newValues)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::set\+Propagation\+Conditions (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_ac4ec457f12b9b691c3afb92bad8fef38}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_ac4ec457f12b9b691c3afb92bad8fef38}
+
+
+Reset the values of the decision variables in the dynamics simulator. 
+
+Reset the values of the decision variables in the dynamics simulator 
+\begin{DoxyParams}{Parameters}
+{\em new\+Values} & Vector of size n = number of decision variable settings \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}!decision\+Variable\+Values\+\_\+@{decision\+Variable\+Values\+\_\+}}
+\index{decision\+Variable\+Values\+\_\+@{decision\+Variable\+Values\+\_\+}!tudat\+::optimization\+::\+Mission\+Segment\+Settings@{tudat\+::optimization\+::\+Mission\+Segment\+Settings}}
+\subsubsection[{\texorpdfstring{decision\+Variable\+Values\+\_\+}{decisionVariableValues_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::optimization\+::\+Mission\+Segment\+Settings\+::decision\+Variable\+Values\+\_\+}\hypertarget{structtudat_1_1optimization_1_1MissionSegmentSettings_ac9b64e893444b93efbb3acedc2c02046}{}\label{structtudat_1_1optimization_1_1MissionSegmentSettings_ac9b64e893444b93efbb3acedc2c02046}
+Storage variable for the best decision variables values after optimization 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Optimization/mission\+Segment\+Settings.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Optimization/mission\+Segment\+Settings.\+cpp\end{DoxyCompactItemize}

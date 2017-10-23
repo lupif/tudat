@@ -1,0 +1,4 @@
+<map id="tudat::simulation_setup::InterpolatedSpiceEphemerisSettings" name="tudat::simulation_setup::InterpolatedSpiceEphemerisSettings">
+<area shape="rect" id="node2" href="$classtudat_1_1simulation__setup_1_1DirectSpiceEphemerisSettings.html" title="EphemerisSettings derived class for defining settings of an ephemeris linked directly to Spice..." alt="" coords="5,95,213,136"/>
+<area shape="rect" id="node3" href="$classtudat_1_1simulation__setup_1_1EphemerisSettings.html" title="Class for providing settings for ephemeris model. " alt="" coords="31,5,188,47"/>
+</map>

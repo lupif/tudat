@@ -1,0 +1,5 @@
+<map id="tudat::propagators::PropagationTerminationSettings" name="tudat::propagators::PropagationTerminationSettings">
+<area shape="rect" id="node2" href="$classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings.html" title="tudat::propagators\l::PropagationDependentVariable\lTerminationSettings" alt="" coords="268,5,477,61"/>
+<area shape="rect" id="node3" href="$classtudat_1_1propagators_1_1PropagationHybridTerminationSettings.html" title="Class for propagation stopping conditions settings: combination of other stopping conditions..." alt="" coords="270,85,475,141"/>
+<area shape="rect" id="node4" href="$classtudat_1_1propagators_1_1PropagationTimeTerminationSettings.html" title="Class for propagation stopping conditions settings: stopping the propagation after a fixed amount of ..." alt="" coords="275,165,471,221"/>
+</map>

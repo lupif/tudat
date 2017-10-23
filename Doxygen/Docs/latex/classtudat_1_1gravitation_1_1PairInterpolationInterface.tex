@@ -1,0 +1,80 @@
+\hypertarget{classtudat_1_1gravitation_1_1PairInterpolationInterface}{}\section{tudat\+:\+:gravitation\+:\+:Pair\+Interpolation\+Interface Class Reference}
+\label{classtudat_1_1gravitation_1_1PairInterpolationInterface}\index{tudat\+::gravitation\+::\+Pair\+Interpolation\+Interface@{tudat\+::gravitation\+::\+Pair\+Interpolation\+Interface}}
+
+
+{\ttfamily \#include $<$gravity\+Field\+Variations.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1gravitation_1_1PairInterpolationInterface_a0389d333f9beec7ca7d2ac893ea105f7}{Pair\+Interpolation\+Interface} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator}{interpolators\+::\+One\+Dimensional\+Interpolator}$<$ double, Eigen\+::\+Matrix\+Xd $>$ $>$ cosine\+Sine\+Interpolator, const int start\+Degree, const int start\+Order, const int number\+Of\+Degrees, const int number\+Of\+Orders)
+\begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1gravitation_1_1PairInterpolationInterface_ab550f64bdb760f1cf3562610c716ed99}{get\+Cosine\+Sine\+Pair} (const double time, Eigen\+::\+Matrix\+Xd \&sine\+Coefficients, Eigen\+::\+Matrix\+Xd \&cosine\+Coefficients)
+\begin{DoxyCompactList}\small\item\em Function to add sine and cosine corrections at given time to coefficient matrices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface class between \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariations}{Gravity\+Field\+Variations} objects that are interpolated and \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField}{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}.
+
+Interface class between \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariations}{Gravity\+Field\+Variations} objects that are interpolated and \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField}{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}, the get\+Cosine\+Sine\+Pair function mimics the add\+Spherical\+Harmonics\+Corrections function of \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariations}{Gravity\+Field\+Variations}. All correction coefficients are calculated as rectnagular blocks in both the cosine and sine matrices (of equal size) 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::gravitation\+::\+Pair\+Interpolation\+Interface@{tudat\+::gravitation\+::\+Pair\+Interpolation\+Interface}!Pair\+Interpolation\+Interface@{Pair\+Interpolation\+Interface}}
+\index{Pair\+Interpolation\+Interface@{Pair\+Interpolation\+Interface}!tudat\+::gravitation\+::\+Pair\+Interpolation\+Interface@{tudat\+::gravitation\+::\+Pair\+Interpolation\+Interface}}
+\subsubsection[{\texorpdfstring{Pair\+Interpolation\+Interface(const boost\+::shared\+\_\+ptr$<$ interpolators\+::\+One\+Dimensional\+Interpolator$<$ double, Eigen\+::\+Matrix\+Xd $>$ $>$ cosine\+Sine\+Interpolator, const int start\+Degree, const int start\+Order, const int number\+Of\+Degrees, const int number\+Of\+Orders)}{PairInterpolationInterface(const boost::shared_ptr< interpolators::OneDimensionalInterpolator< double, Eigen::MatrixXd > > cosineSineInterpolator, const int startDegree, const int startOrder, const int numberOfDegrees, const int numberOfOrders)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::gravitation\+::\+Pair\+Interpolation\+Interface\+::\+Pair\+Interpolation\+Interface (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf interpolators\+::\+One\+Dimensional\+Interpolator}$<$ double, Eigen\+::\+Matrix\+Xd $>$ $>$}]{cosine\+Sine\+Interpolator, }
+\item[{const int}]{start\+Degree, }
+\item[{const int}]{start\+Order, }
+\item[{const int}]{number\+Of\+Degrees, }
+\item[{const int}]{number\+Of\+Orders}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1PairInterpolationInterface_a0389d333f9beec7ca7d2ac893ea105f7}{}\label{classtudat_1_1gravitation_1_1PairInterpolationInterface_a0389d333f9beec7ca7d2ac893ea105f7}
+
+
+Class constructor. 
+
+Constructor, receives an interpolator (typically created from a \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariations}{Gravity\+Field\+Variations} object by the create\+Interpolated\+Spherical\+Harmonic\+Correction\+Functions function), which is used to approximate the spherical harmonic coefficient corrections at any given time (inside the interpolation window). All correction coefficients are calculated as rectangular blocks in both the cosine and sine matrices (of equal size) 
+\begin{DoxyParams}{Parameters}
+{\em cosine\+Sine\+Interpolator} & Interpolator object for approximating coefficient corrections. \\
+\hline
+{\em start\+Degree} & Degree where the rectangular correction block starts. \\
+\hline
+{\em start\+Order} & Order where the rectangular correction block starts. \\
+\hline
+{\em number\+Of\+Degrees} & Size of the rectangular correction block in the degree direction. \\
+\hline
+{\em number\+Of\+Orders} & Size of the rectangular correction block in the order direction. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::gravitation\+::\+Pair\+Interpolation\+Interface@{tudat\+::gravitation\+::\+Pair\+Interpolation\+Interface}!get\+Cosine\+Sine\+Pair@{get\+Cosine\+Sine\+Pair}}
+\index{get\+Cosine\+Sine\+Pair@{get\+Cosine\+Sine\+Pair}!tudat\+::gravitation\+::\+Pair\+Interpolation\+Interface@{tudat\+::gravitation\+::\+Pair\+Interpolation\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Cosine\+Sine\+Pair(const double time, Eigen\+::\+Matrix\+Xd \&sine\+Coefficients, Eigen\+::\+Matrix\+Xd \&cosine\+Coefficients)}{getCosineSinePair(const double time, Eigen::MatrixXd &sineCoefficients, Eigen::MatrixXd &cosineCoefficients)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::gravitation\+::\+Pair\+Interpolation\+Interface\+::get\+Cosine\+Sine\+Pair (
+\begin{DoxyParamCaption}
+\item[{const double}]{time, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{sine\+Coefficients, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{cosine\+Coefficients}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1gravitation_1_1PairInterpolationInterface_ab550f64bdb760f1cf3562610c716ed99}{}\label{classtudat_1_1gravitation_1_1PairInterpolationInterface_ab550f64bdb760f1cf3562610c716ed99}
+
+
+Function to add sine and cosine corrections at given time to coefficient matrices. 
+
+Function to add sine and cosine corrections at given time to coefficient matrices. The current sine and cosine matrices are passed by reference, the corrections are calculated internally and added to them. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which corrections are to be evaluated. \\
+\hline
+{\em sine\+Coefficients} & Current spherical harmonic sine coefficients, calculated corrections are added and returned by reference \\
+\hline
+{\em cosine\+Coefficients} & Current spherical harmonic cosine coefficients, calculated corrections are added and returned by reference \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Gravitation/gravity\+Field\+Variations.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Gravitation/gravity\+Field\+Variations.\+cpp\end{DoxyCompactItemize}

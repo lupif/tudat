@@ -1,0 +1,6 @@
+<map id="tudat::optimization::SingleDecisionVariableSettings" name="tudat::optimization::SingleDecisionVariableSettings">
+<area shape="rect" id="node2" href="$structtudat_1_1optimization_1_1SingleCartesianComponentDecisionVariableSettings.html" title="Class to define a cartesian component as decision variable. " alt="" coords="274,5,463,61"/>
+<area shape="rect" id="node3" href="$structtudat_1_1optimization_1_1SingleDecisionVariableFromTerminationSettings.html" title="Class to use one of the termination settings as decision variable (including the final time) ..." alt="" coords="271,85,466,141"/>
+<area shape="rect" id="node4" href="$structtudat_1_1optimization_1_1SingleKeplerElementDecisionVariableSettings.html" title="Class to define a kepler element as decision variable. " alt="" coords="267,165,470,221"/>
+<area shape="rect" id="node5" href="$structtudat_1_1optimization_1_1SingleSphericalOrbitalElementDecisionVariableSettings.html" title="Class to define a spherical orbital component as decision variable. " alt="" coords="265,245,472,301"/>
+</map>

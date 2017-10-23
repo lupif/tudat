@@ -1,0 +1,8 @@
+<map id="tudat::optimization::ObjectiveFunctionSettings" name="tudat::optimization::ObjectiveFunctionSettings">
+<area shape="rect" id="node2" href="$structtudat_1_1optimization_1_1FinalCartesianComponentObjectiveFunctionSettings.html" title="tudat::optimization\l::FinalCartesianComponentObjective\lFunctionSettings" alt="" coords="236,5,472,61"/>
+<area shape="rect" id="node3" href="$structtudat_1_1optimization_1_1FinalKeplerElementObjectiveFunctionSettings.html" title="tudat::optimization\l::FinalKeplerElementObjective\lFunctionSettings" alt="" coords="255,85,453,141"/>
+<area shape="rect" id="node4" href="$structtudat_1_1optimization_1_1FinalSphericalOrbitalElementObjectiveFunctionSettings.html" title="tudat::optimization\l::FinalSphericalOrbitalElement\lObjectiveFunctionSettings" alt="" coords="255,165,453,221"/>
+<area shape="rect" id="node5" href="$structtudat_1_1optimization_1_1ObjectiveFunctionFromFinalDependentVariableSettings.html" title="tudat::optimization\l::ObjectiveFunctionFromFinal\lDependentVariableSettings" alt="" coords="257,245,451,301"/>
+<area shape="rect" id="node7" href="$structtudat_1_1optimization_1_1UserDefinedObjectiveFunctionSettings.html" title="The UserDefinedObjectiveFunctionSettings struct. " alt="" coords="250,325,458,381"/>
+<area shape="rect" id="node6" href="$structtudat_1_1optimization_1_1ObjectiveFunctionFromMinOrMaxDependentVariableSettings.html" title="tudat::optimization\l::ObjectiveFunctionFromMin\lOrMaxDependentVariableSettings" alt="" coords="520,245,739,301"/>
+</map>

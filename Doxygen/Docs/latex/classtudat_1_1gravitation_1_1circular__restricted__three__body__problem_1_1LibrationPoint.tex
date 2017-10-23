@@ -1,0 +1,118 @@
+\hypertarget{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint}{}\section{tudat\+:\+:gravitation\+:\+:circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+:\+:Libration\+Point Class Reference}
+\label{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint}\index{tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point@{tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point}}
+
+
+Libration point class.  
+
+
+
+
+{\ttfamily \#include $<$libration\+Point.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_a5214173f012fc769e5c89dba4fd2c741}{Lagrange\+Libration\+Points} \{ \\*
+{\bfseries l1}, 
+{\bfseries l2}, 
+{\bfseries l3}, 
+{\bfseries l4}, 
+\\*
+{\bfseries l5}
+ \}\hypertarget{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_a5214173f012fc769e5c89dba4fd2c741}{}\label{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_a5214173f012fc769e5c89dba4fd2c741}
+\begin{DoxyCompactList}\small\item\em Lagrange libration points. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_ab8cfd514459d7d758d54626058cb5d10}{Libration\+Point} (const double a\+Primary\+Gravitational\+Parameter, const double a\+Secondary\+Gravitational\+Parameter, const root\+\_\+finders\+::\+Root\+Finder\+Pointer a\+Root\+Finder)\hypertarget{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_ab8cfd514459d7d758d54626058cb5d10}{}\label{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_ab8cfd514459d7d758d54626058cb5d10}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_a50d214a8cc85b5d56ece50234830b81d}{Libration\+Point} (const double a\+Mass\+Parameter, const root\+\_\+finders\+::\+Root\+Finder\+Pointer a\+Root\+Finder)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_aa67e55f3d0b60b3e70a630f4569d81ac}{get\+Mass\+Parameter} ()
+\begin{DoxyCompactList}\small\item\em Get dimensionless mass parameter. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_a95282e2dc3cb4a7ae4d278469dabc82d}{get\+Location\+Of\+Lagrange\+Libration\+Point} ()
+\begin{DoxyCompactList}\small\item\em Get location of Lagrange libration point. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_a0b4e0d0015a41964210f605dd2ab018d}{compute\+Location\+Of\+Libration\+Point} (\hyperlink{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_a5214173f012fc769e5c89dba4fd2c741}{Lagrange\+Libration\+Points} lagrange\+Libration\+Point)
+\begin{DoxyCompactList}\small\item\em Compute location of Lagrange libration point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Libration point class. 
+
+This class includes functions to compute the location of Lagrange libration points in the C\+R\+T\+BP. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point@{tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point}!Libration\+Point@{Libration\+Point}}
+\index{Libration\+Point@{Libration\+Point}!tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point@{tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point}}
+\subsubsection[{\texorpdfstring{Libration\+Point(const double a\+Mass\+Parameter, const root\+\_\+finders\+::\+Root\+Finder\+Pointer a\+Root\+Finder)}{LibrationPoint(const double aMassParameter, const root_finders::RootFinderPointer aRootFinder)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point\+::\+Libration\+Point (
+\begin{DoxyParamCaption}
+\item[{const double}]{a\+Mass\+Parameter, }
+\item[{const root\+\_\+finders\+::\+Root\+Finder\+Pointer}]{a\+Root\+Finder}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_a50d214a8cc85b5d56ece50234830b81d}{}\label{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_a50d214a8cc85b5d56ece50234830b81d}
+
+
+Default constructor. 
+
+Default constructor. 
+\begin{DoxyParams}{Parameters}
+{\em a\+Mass\+Parameter} & Dimensionless mass parameter of the smaller of the massive bodies in the C\+R\+T\+BP. \\
+\hline
+{\em a\+Root\+Finder} & Shared pointer to the rootfinder which is used for finding the L1, L2 and L3 libration points. The rootfinder contains termination conditions inside. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point@{tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point}!compute\+Location\+Of\+Libration\+Point@{compute\+Location\+Of\+Libration\+Point}}
+\index{compute\+Location\+Of\+Libration\+Point@{compute\+Location\+Of\+Libration\+Point}!tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point@{tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point}}
+\subsubsection[{\texorpdfstring{compute\+Location\+Of\+Libration\+Point(\+Lagrange\+Libration\+Points lagrange\+Libration\+Point)}{computeLocationOfLibrationPoint(LagrangeLibrationPoints lagrangeLibrationPoint)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point\+::compute\+Location\+Of\+Libration\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf Lagrange\+Libration\+Points}}]{lagrange\+Libration\+Point}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_a0b4e0d0015a41964210f605dd2ab018d}{}\label{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_a0b4e0d0015a41964210f605dd2ab018d}
+
+
+Compute location of Lagrange libration point. 
+
+Computes the location as a position vector in Cartesian elements of a given Lagrange libration point. 
+\begin{DoxyParams}{Parameters}
+{\em lagrange\+Libration\+Point} & Lagrange libration point. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point@{tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point}!get\+Location\+Of\+Lagrange\+Libration\+Point@{get\+Location\+Of\+Lagrange\+Libration\+Point}}
+\index{get\+Location\+Of\+Lagrange\+Libration\+Point@{get\+Location\+Of\+Lagrange\+Libration\+Point}!tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point@{tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point}}
+\subsubsection[{\texorpdfstring{get\+Location\+Of\+Lagrange\+Libration\+Point()}{getLocationOfLagrangeLibrationPoint()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point\+::get\+Location\+Of\+Lagrange\+Libration\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_a95282e2dc3cb4a7ae4d278469dabc82d}{}\label{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_a95282e2dc3cb4a7ae4d278469dabc82d}
+
+
+Get location of Lagrange libration point. 
+
+Returns the position vector in Cartesian elements of a Lagrange libration point. The libration point is selected when the \hyperlink{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_a0b4e0d0015a41964210f605dd2ab018d}{compute\+Location\+Of\+Libration\+Point( )} function is called. \begin{DoxyReturn}{Returns}
+Cartesian position elements of Lagrange libration point. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point@{tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point}!get\+Mass\+Parameter@{get\+Mass\+Parameter}}
+\index{get\+Mass\+Parameter@{get\+Mass\+Parameter}!tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point@{tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point}}
+\subsubsection[{\texorpdfstring{get\+Mass\+Parameter()}{getMassParameter()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::gravitation\+::circular\+\_\+restricted\+\_\+three\+\_\+body\+\_\+problem\+::\+Libration\+Point\+::get\+Mass\+Parameter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_aa67e55f3d0b60b3e70a630f4569d81ac}{}\label{classtudat_1_1gravitation_1_1circular__restricted__three__body__problem_1_1LibrationPoint_aa67e55f3d0b60b3e70a630f4569d81ac}
+
+
+Get dimensionless mass parameter. 
+
+Returns the dimensionless mass parameter based on the gravitational parameters of the primary and secondary bodies. \begin{DoxyReturn}{Returns}
+Dimensionless mass parameter. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Gravitation/libration\+Point.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Gravitation/libration\+Point.\+cpp\end{DoxyCompactItemize}

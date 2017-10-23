@@ -1,0 +1,338 @@
+\hypertarget{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator}{}\section{tudat\+:\+:reference\+\_\+frames\+:\+:Aerodynamic\+Angle\+Calculator Class Reference}
+\label{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator}\index{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}}
+
+
+Object to calculate aerodynamic orientation angles from current vehicle state.  
+
+
+
+
+{\ttfamily \#include $<$aerodynamic\+Angle\+Calculator.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:reference\+\_\+frames\+:\+:Aerodynamic\+Angle\+Calculator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:reference\+\_\+frames\+:\+:Aerodynamic\+Angle\+Calculator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a191c7666c72fc3fdb68f888fd33700cc}{Aerodynamic\+Angle\+Calculator} (const boost\+::function$<$ Eigen\+::\+Vector6d() $>$ body\+Fixed\+State\+Function, const boost\+::function$<$ Eigen\+::\+Quaterniond() $>$ rotation\+From\+Corotating\+To\+Inertial\+Frame, const std\+::string central\+Body\+Name, const bool calculate\+Vertical\+To\+Aerodynamic\+Frame=0, const boost\+::function$<$ double() $>$ angle\+Of\+Attack\+Function=boost\+::function$<$ double() $>$(), const boost\+::function$<$ double() $>$ angle\+Of\+Sideslip\+Function=boost\+::function$<$ double() $>$(), const boost\+::function$<$ double() $>$ bank\+Angle\+Function=boost\+::function$<$ double() $>$(), const boost\+::function$<$ void(const double) $>$ angle\+Update\+Function=boost\+::function$<$ void(const double) $>$())
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_ae8de3add4e5d89be447eb707f17fbd13}{get\+Rotation\+To\+Local\+Frame} ()
+\begin{DoxyCompactList}\small\item\em Function to get the current rotation from the global (propagation/inertial) to the local (body-\/fixed) frame. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_ae7b951843ce6578117c64db9c7a54720}{get\+Rotation\+To\+Global\+Frame} ()
+\begin{DoxyCompactList}\small\item\em Function to get the current rotation from the local (body-\/fixed) to the global (propagation/inertial) frame. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_aceb968e26cbe6d3f40590c4f7faeba21}{update\+Calculator} (const double current\+Time)
+\begin{DoxyCompactList}\small\item\em Function to update the orientation angles to the current state. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_acdeec390f822d521bcb3c09168da5a57}{update} (const double current\+Time, const bool update\+Body\+Orientation)
+\begin{DoxyCompactList}\small\item\em Function to update the orientation angles to the current state. \end{DoxyCompactList}\item 
+Eigen\+::\+Quaterniond \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a589f1ac87019bd9ec7cebb366fc7a700}{get\+Rotation\+Quaternion\+Between\+Frames} (const Aerodynamics\+Reference\+Frames original\+Frame, const Aerodynamics\+Reference\+Frames target\+Frame)
+\begin{DoxyCompactList}\small\item\em Function to get the rotation quaternion between two frames. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_adf020e81f7cc48e456d133670c087671}{get\+Aerodynamic\+Angle} (const Aerodynamics\+Reference\+Frame\+Angles angle\+Id)
+\begin{DoxyCompactList}\small\item\em Function to get a single orientation angle. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a9250572fd17abf1079f2a2c9a14480d1}{set\+Orientation\+Angle\+Functions} (const boost\+::function$<$ double() $>$ angle\+Of\+Attack\+Function=boost\+::function$<$ double() $>$(), const boost\+::function$<$ double() $>$ angle\+Of\+Sideslip\+Function=boost\+::function$<$ double() $>$(), const boost\+::function$<$ double() $>$ bank\+Angle\+Function=boost\+::function$<$ double() $>$(), const boost\+::function$<$ void(const double) $>$ angle\+Update\+Function=boost\+::function$<$ void(const double) $>$())
+\begin{DoxyCompactList}\small\item\em Function to set the trajectory$<$-\/$>$body-\/fixed orientation angles. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a7c2ca8de8fe95544225c74e6f26a975e}{set\+Orientation\+Angle\+Functions} (const double angle\+Of\+Attack=T\+U\+D\+A\+T\+\_\+\+N\+AN, const double angle\+Of\+Sideslip=T\+U\+D\+A\+T\+\_\+\+N\+AN, const double bank\+Angle=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Function to set constant trajectory$<$-\/$>$body-\/fixed orientation angles. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Quaterniond() $>$ \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_ac33bcade09603d504123a5200348752b}{get\+Rotation\+From\+Corotating\+To\+Inertial\+Frame} ()
+\begin{DoxyCompactList}\small\item\em Function to get the function returning the quaternion that rotates from the corotating to the inertial frame. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a9929cecdca0cfc997f41f8fd1bf6d1ad}{get\+Central\+Body\+Name} ()
+\begin{DoxyCompactList}\small\item\em Function to get the name of central body w.\+r.\+t. which the angles are computed. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector6d \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_acb987f236459228bf4c3248a4bebe18d}{get\+Current\+Body\+Fixed\+State} ()
+\begin{DoxyCompactList}\small\item\em Function to get the current body-\/fixed state of vehicle, as set by previous call to \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_acdeec390f822d521bcb3c09168da5a57}{update( )}. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_af68c8b73b9ec1e17d6e36cadd525e633}{reset\+Derived\+Class\+Time} (const double current\+Time=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Function to reset the value of the current\+Body\+Angle\+Time\+\_\+ variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Object to calculate aerodynamic orientation angles from current vehicle state. 
+
+Object to calculate aerodynamic orientation angles from current vehicle state. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}!Aerodynamic\+Angle\+Calculator@{Aerodynamic\+Angle\+Calculator}}
+\index{Aerodynamic\+Angle\+Calculator@{Aerodynamic\+Angle\+Calculator}!tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}}
+\subsubsection[{\texorpdfstring{Aerodynamic\+Angle\+Calculator(const boost\+::function$<$ Eigen\+::\+Vector6d() $>$ body\+Fixed\+State\+Function, const boost\+::function$<$ Eigen\+::\+Quaterniond() $>$ rotation\+From\+Corotating\+To\+Inertial\+Frame, const std\+::string central\+Body\+Name, const bool calculate\+Vertical\+To\+Aerodynamic\+Frame=0, const boost\+::function$<$ double() $>$ angle\+Of\+Attack\+Function=boost\+::function$<$ double() $>$(), const boost\+::function$<$ double() $>$ angle\+Of\+Sideslip\+Function=boost\+::function$<$ double() $>$(), const boost\+::function$<$ double() $>$ bank\+Angle\+Function=boost\+::function$<$ double() $>$(), const boost\+::function$<$ void(const double) $>$ angle\+Update\+Function=boost\+::function$<$ void(const double) $>$())}{AerodynamicAngleCalculator(const boost::function< Eigen::Vector6d() > bodyFixedStateFunction, const boost::function< Eigen::Quaterniond() > rotationFromCorotatingToInertialFrame, const std::string centralBodyName, const bool calculateVerticalToAerodynamicFrame=0, const boost::function< double() > angleOfAttackFunction=boost::function< double() >(), const boost::function< double() > angleOfSideslipFunction=boost::function< double() >(), const boost::function< double() > bankAngleFunction=boost::function< double() >(), const boost::function< void(const double) > angleUpdateFunction=boost::function< void(const double) >())}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator\+::\+Aerodynamic\+Angle\+Calculator (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ Eigen\+::\+Vector6d() $>$}]{body\+Fixed\+State\+Function, }
+\item[{const boost\+::function$<$ Eigen\+::\+Quaterniond() $>$}]{rotation\+From\+Corotating\+To\+Inertial\+Frame, }
+\item[{const std\+::string}]{central\+Body\+Name, }
+\item[{const bool}]{calculate\+Vertical\+To\+Aerodynamic\+Frame = {\ttfamily 0}, }
+\item[{const boost\+::function$<$ double() $>$}]{angle\+Of\+Attack\+Function = {\ttfamily boost\+:\+:function$<$~double(~)~$>$(~)}, }
+\item[{const boost\+::function$<$ double() $>$}]{angle\+Of\+Sideslip\+Function = {\ttfamily boost\+:\+:function$<$~double(~)~$>$(~)}, }
+\item[{const boost\+::function$<$ double() $>$}]{bank\+Angle\+Function = {\ttfamily boost\+:\+:function$<$~double(~)~$>$(~)}, }
+\item[{const boost\+::function$<$ void(const double) $>$}]{angle\+Update\+Function = {\ttfamily boost\+:\+:function$<$~void(~const~double~)~$>$(~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a191c7666c72fc3fdb68f888fd33700cc}{}\label{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a191c7666c72fc3fdb68f888fd33700cc}
+
+
+Constructor. 
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em body\+Fixed\+State\+Function} & Vehicle state in a frame fixed w.\+r.\+t. the central body. Note that this state is w.\+r.\+t. the body itself, not w.\+r.\+t. the local atmosphere. \\
+\hline
+{\em rotation\+From\+Corotating\+To\+Inertial\+Frame} & Function returning the quaternion that rotates from the corotating to the inertial frame. \\
+\hline
+{\em central\+Body\+Name} & Name of central body w.\+r.\+t. which the angles are computed. \\
+\hline
+{\em calculate\+Vertical\+To\+Aerodynamic\+Frame} & Boolean to determine whether to determine vertical $<$-\/$>$ aerodynamic frame conversion when calling update function. \\
+\hline
+{\em angle\+Of\+Attack\+Function} & Function to determine the angle of attack of the vehicle. \\
+\hline
+{\em angle\+Of\+Sideslip\+Function} & Function to determine the angle of sideslip of the vehicle. \\
+\hline
+{\em bank\+Angle\+Function} & Function to determine the bank angle of the vehicle. \\
+\hline
+{\em angle\+Update\+Function} & Function to update the aerodynamic angles to the current time (default none). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}!get\+Aerodynamic\+Angle@{get\+Aerodynamic\+Angle}}
+\index{get\+Aerodynamic\+Angle@{get\+Aerodynamic\+Angle}!tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}}
+\subsubsection[{\texorpdfstring{get\+Aerodynamic\+Angle(const Aerodynamics\+Reference\+Frame\+Angles angle\+Id)}{getAerodynamicAngle(const AerodynamicsReferenceFrameAngles angleId)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator\+::get\+Aerodynamic\+Angle (
+\begin{DoxyParamCaption}
+\item[{const Aerodynamics\+Reference\+Frame\+Angles}]{angle\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_adf020e81f7cc48e456d133670c087671}{}\label{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_adf020e81f7cc48e456d133670c087671}
+
+
+Function to get a single orientation angle. 
+
+Function to get a single orientation angle, as calculated by previous call to \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_acdeec390f822d521bcb3c09168da5a57}{update( )} function. 
+\begin{DoxyParams}{Parameters}
+{\em angle\+Id} & Id of requested angle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of requested angle. 
+\end{DoxyReturn}
+\index{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}!get\+Central\+Body\+Name@{get\+Central\+Body\+Name}}
+\index{get\+Central\+Body\+Name@{get\+Central\+Body\+Name}!tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}}
+\subsubsection[{\texorpdfstring{get\+Central\+Body\+Name()}{getCentralBodyName()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator\+::get\+Central\+Body\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a9929cecdca0cfc997f41f8fd1bf6d1ad}{}\label{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a9929cecdca0cfc997f41f8fd1bf6d1ad}
+
+
+Function to get the name of central body w.\+r.\+t. which the angles are computed. 
+
+Function to get the name of central body w.\+r.\+t. which the angles are computed. \begin{DoxyReturn}{Returns}
+Name of central body w.\+r.\+t. which the angles are computed. 
+\end{DoxyReturn}
+\index{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}!get\+Current\+Body\+Fixed\+State@{get\+Current\+Body\+Fixed\+State}}
+\index{get\+Current\+Body\+Fixed\+State@{get\+Current\+Body\+Fixed\+State}!tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}}
+\subsubsection[{\texorpdfstring{get\+Current\+Body\+Fixed\+State()}{getCurrentBodyFixedState()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector6d tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator\+::get\+Current\+Body\+Fixed\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_acb987f236459228bf4c3248a4bebe18d}{}\label{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_acb987f236459228bf4c3248a4bebe18d}
+
+
+Function to get the current body-\/fixed state of vehicle, as set by previous call to \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_acdeec390f822d521bcb3c09168da5a57}{update( )}. 
+
+Function to get the current body-\/fixed state of vehicle, as set by previous call to \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_acdeec390f822d521bcb3c09168da5a57}{update( )}. \begin{DoxyReturn}{Returns}
+Current body-\/fixed state of vehicle, as set by previous call to \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_acdeec390f822d521bcb3c09168da5a57}{update( )}. 
+\end{DoxyReturn}
+\index{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}!get\+Rotation\+From\+Corotating\+To\+Inertial\+Frame@{get\+Rotation\+From\+Corotating\+To\+Inertial\+Frame}}
+\index{get\+Rotation\+From\+Corotating\+To\+Inertial\+Frame@{get\+Rotation\+From\+Corotating\+To\+Inertial\+Frame}!tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}}
+\subsubsection[{\texorpdfstring{get\+Rotation\+From\+Corotating\+To\+Inertial\+Frame()}{getRotationFromCorotatingToInertialFrame()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ Eigen\+::\+Quaterniond( ) $>$ tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator\+::get\+Rotation\+From\+Corotating\+To\+Inertial\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_ac33bcade09603d504123a5200348752b}{}\label{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_ac33bcade09603d504123a5200348752b}
+
+
+Function to get the function returning the quaternion that rotates from the corotating to the inertial frame. 
+
+Function to get the function returning the quaternion that rotates from the corotating to the inertial frame. \begin{DoxyReturn}{Returns}
+Function returning the quaternion that rotates from the corotating to the inertial frame. 
+\end{DoxyReturn}
+\index{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}!get\+Rotation\+Quaternion\+Between\+Frames@{get\+Rotation\+Quaternion\+Between\+Frames}}
+\index{get\+Rotation\+Quaternion\+Between\+Frames@{get\+Rotation\+Quaternion\+Between\+Frames}!tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}}
+\subsubsection[{\texorpdfstring{get\+Rotation\+Quaternion\+Between\+Frames(const Aerodynamics\+Reference\+Frames original\+Frame, const Aerodynamics\+Reference\+Frames target\+Frame)}{getRotationQuaternionBetweenFrames(const AerodynamicsReferenceFrames originalFrame, const AerodynamicsReferenceFrames targetFrame)}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Quaterniond tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator\+::get\+Rotation\+Quaternion\+Between\+Frames (
+\begin{DoxyParamCaption}
+\item[{const Aerodynamics\+Reference\+Frames}]{original\+Frame, }
+\item[{const Aerodynamics\+Reference\+Frames}]{target\+Frame}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a589f1ac87019bd9ec7cebb366fc7a700}{}\label{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a589f1ac87019bd9ec7cebb366fc7a700}
+
+
+Function to get the rotation quaternion between two frames. 
+
+Function to get the rotation quaternion between two frames. This function uses the values calculated by the previous call of the \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_acdeec390f822d521bcb3c09168da5a57}{update( )} function. 
+\begin{DoxyParams}{Parameters}
+{\em original\+Frame} & Id for \textquotesingle{}current\textquotesingle{} frame \\
+\hline
+{\em target\+Frame} & Id for frame to which transformation object should transfrom a vector (from original\+Frame). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rotation quaternion from original\+Frame to target\+Frame. 
+\end{DoxyReturn}
+\index{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}!get\+Rotation\+To\+Global\+Frame@{get\+Rotation\+To\+Global\+Frame}}
+\index{get\+Rotation\+To\+Global\+Frame@{get\+Rotation\+To\+Global\+Frame}!tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}}
+\subsubsection[{\texorpdfstring{get\+Rotation\+To\+Global\+Frame()}{getRotationToGlobalFrame()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Quaterniond tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator\+::get\+Rotation\+To\+Global\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_ae7b951843ce6578117c64db9c7a54720}{}\label{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_ae7b951843ce6578117c64db9c7a54720}
+
+
+Function to get the current rotation from the local (body-\/fixed) to the global (propagation/inertial) frame. 
+
+Function to get the current rotation from the local (body-\/fixed) to the global (propagation/inertial) frame. Implementation of pure virtual base class function, calls get\+Rotation\+Quaternion\+Between\+Frames function. \begin{DoxyReturn}{Returns}
+Current rotation from the local (body-\/fixed) to the global (propagation/inertial) frame. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1reference__frames_1_1DependentOrientationCalculator_a1b34033b2b7a0a65fa88482b3cbb46af}{tudat\+::reference\+\_\+frames\+::\+Dependent\+Orientation\+Calculator}.
+
+\index{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}!get\+Rotation\+To\+Local\+Frame@{get\+Rotation\+To\+Local\+Frame}}
+\index{get\+Rotation\+To\+Local\+Frame@{get\+Rotation\+To\+Local\+Frame}!tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}}
+\subsubsection[{\texorpdfstring{get\+Rotation\+To\+Local\+Frame()}{getRotationToLocalFrame()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Quaterniond tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator\+::get\+Rotation\+To\+Local\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_ae8de3add4e5d89be447eb707f17fbd13}{}\label{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_ae8de3add4e5d89be447eb707f17fbd13}
+
+
+Function to get the current rotation from the global (propagation/inertial) to the local (body-\/fixed) frame. 
+
+Function to get the current rotation from the global (propagation/inertial) to the local (body-\/fixed) frame. Implementation of pure virtual base class function, calls get\+Rotation\+Quaternion\+Between\+Frames function. \begin{DoxyReturn}{Returns}
+Current rotation from the global (propagation/inertial) to the local (body-\/fixed) frame. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1reference__frames_1_1DependentOrientationCalculator_ae55893820994179e02ec6189cd9fb00b}{tudat\+::reference\+\_\+frames\+::\+Dependent\+Orientation\+Calculator}.
+
+\index{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}!reset\+Derived\+Class\+Time@{reset\+Derived\+Class\+Time}}
+\index{reset\+Derived\+Class\+Time@{reset\+Derived\+Class\+Time}!tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}}
+\subsubsection[{\texorpdfstring{reset\+Derived\+Class\+Time(const double current\+Time=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{resetDerivedClassTime(const double currentTime=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator\+::reset\+Derived\+Class\+Time (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Time = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_af68c8b73b9ec1e17d6e36cadd525e633}{}\label{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_af68c8b73b9ec1e17d6e36cadd525e633}
+
+
+Function to reset the value of the current\+Body\+Angle\+Time\+\_\+ variable. 
+
+Function to reset the value of the current\+Body\+Angle\+Time\+\_\+ variable. Typically used to reset the time to NaN, signalling the need to recompute all quantities upon the next relevant function call. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Time} & New current time. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtudat_1_1reference__frames_1_1DependentOrientationCalculator_adc03930adf46bdc8cb9702d0f62055c1}{tudat\+::reference\+\_\+frames\+::\+Dependent\+Orientation\+Calculator}.
+
+\index{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}!set\+Orientation\+Angle\+Functions@{set\+Orientation\+Angle\+Functions}}
+\index{set\+Orientation\+Angle\+Functions@{set\+Orientation\+Angle\+Functions}!tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}}
+\subsubsection[{\texorpdfstring{set\+Orientation\+Angle\+Functions(const boost\+::function$<$ double() $>$ angle\+Of\+Attack\+Function=boost\+::function$<$ double() $>$(), const boost\+::function$<$ double() $>$ angle\+Of\+Sideslip\+Function=boost\+::function$<$ double() $>$(), const boost\+::function$<$ double() $>$ bank\+Angle\+Function=boost\+::function$<$ double() $>$(), const boost\+::function$<$ void(const double) $>$ angle\+Update\+Function=boost\+::function$<$ void(const double) $>$())}{setOrientationAngleFunctions(const boost::function< double() > angleOfAttackFunction=boost::function< double() >(), const boost::function< double() > angleOfSideslipFunction=boost::function< double() >(), const boost::function< double() > bankAngleFunction=boost::function< double() >(), const boost::function< void(const double) > angleUpdateFunction=boost::function< void(const double) >())}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator\+::set\+Orientation\+Angle\+Functions (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ double() $>$}]{angle\+Of\+Attack\+Function = {\ttfamily boost\+:\+:function$<$~double(~)~$>$(~)}, }
+\item[{const boost\+::function$<$ double() $>$}]{angle\+Of\+Sideslip\+Function = {\ttfamily boost\+:\+:function$<$~double(~)~$>$(~)}, }
+\item[{const boost\+::function$<$ double() $>$}]{bank\+Angle\+Function = {\ttfamily boost\+:\+:function$<$~double(~)~$>$(~)}, }
+\item[{const boost\+::function$<$ void(const double) $>$}]{angle\+Update\+Function = {\ttfamily boost\+:\+:function$<$~void(~const~double~)~$>$(~)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a9250572fd17abf1079f2a2c9a14480d1}{}\label{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a9250572fd17abf1079f2a2c9a14480d1}
+
+
+Function to set the trajectory$<$-\/$>$body-\/fixed orientation angles. 
+
+Function to set the trajectory$<$-\/$>$body-\/fixed orientation angles. 
+\begin{DoxyParams}{Parameters}
+{\em angle\+Of\+Attack\+Function} & Function to return the angle of attack. \\
+\hline
+{\em angle\+Of\+Sideslip\+Function} & Function to return the angle of sideslip. \\
+\hline
+{\em bank\+Angle\+Function} & Function to return the bank angle. \\
+\hline
+{\em angle\+Update\+Function} & Function to update the angles to the current time. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}!set\+Orientation\+Angle\+Functions@{set\+Orientation\+Angle\+Functions}}
+\index{set\+Orientation\+Angle\+Functions@{set\+Orientation\+Angle\+Functions}!tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}}
+\subsubsection[{\texorpdfstring{set\+Orientation\+Angle\+Functions(const double angle\+Of\+Attack=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N, const double angle\+Of\+Sideslip=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N, const double bank\+Angle=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{setOrientationAngleFunctions(const double angleOfAttack=TUDAT_NAN, const double angleOfSideslip=TUDAT_NAN, const double bankAngle=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator\+::set\+Orientation\+Angle\+Functions (
+\begin{DoxyParamCaption}
+\item[{const double}]{angle\+Of\+Attack = {\ttfamily TUDAT\+\_\+NAN}, }
+\item[{const double}]{angle\+Of\+Sideslip = {\ttfamily TUDAT\+\_\+NAN}, }
+\item[{const double}]{bank\+Angle = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a7c2ca8de8fe95544225c74e6f26a975e}{}\label{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_a7c2ca8de8fe95544225c74e6f26a975e}
+
+
+Function to set constant trajectory$<$-\/$>$body-\/fixed orientation angles. 
+
+Function to set constant trajectory$<$-\/$>$body-\/fixed orientation angles. 
+\begin{DoxyParams}{Parameters}
+{\em angle\+Of\+Attack} & Constant angle of attack (default NaN, used if no angle is to be defined). \\
+\hline
+{\em angle\+Of\+Sideslip} & Constant angle of sideslip (default NaN, used if no angle is to be defined). \\
+\hline
+{\em bank\+Angle} & Constant bank angle (default NaN, used if no angle is to be defined). \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}!update@{update}}
+\index{update@{update}!tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}}
+\subsubsection[{\texorpdfstring{update(const double current\+Time, const bool update\+Body\+Orientation)}{update(const double currentTime, const bool updateBodyOrientation)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator\+::update (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Time, }
+\item[{const bool}]{update\+Body\+Orientation}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_acdeec390f822d521bcb3c09168da5a57}{}\label{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_acdeec390f822d521bcb3c09168da5a57}
+
+
+Function to update the orientation angles to the current state. 
+
+This function updates all requires orientation angles to the current state of the vehicle. The current state is retrieved from the body\+Fixed\+State\+Function\+\_\+ member variable function pointer. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Time} & \hyperlink{classtudat_1_1Time}{Time} to which angle calculator is to be updated. \\
+\hline
+{\em update\+Body\+Orientation} & Boolean denoting whether the trajectory$<$-\/$>$body-\/fixed angles are to be updated. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}!update\+Calculator@{update\+Calculator}}
+\index{update\+Calculator@{update\+Calculator}!tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator@{tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator}}
+\subsubsection[{\texorpdfstring{update\+Calculator(const double current\+Time)}{updateCalculator(const double currentTime)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator\+::update\+Calculator (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_aceb968e26cbe6d3f40590c4f7faeba21}{}\label{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_aceb968e26cbe6d3f40590c4f7faeba21}
+
+
+Function to update the orientation angles to the current state. 
+
+Function to update the orientation angles to the current state, implements base class pure virtual function; calls update function. Note, when calling this function, the bank angle, angle of attack and sideslip angle are N\+OT updated (due to possible cross-\/dependency with aerodynamic coefficients). \begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator_acdeec390f822d521bcb3c09168da5a57}{Aerodynamic\+Angle\+Calculator\+::update} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classtudat_1_1reference__frames_1_1DependentOrientationCalculator_a801bc21f0df6beecea976cf5728c79ce}{tudat\+::reference\+\_\+frames\+::\+Dependent\+Orientation\+Calculator}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Reference\+Frames/aerodynamic\+Angle\+Calculator.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Reference\+Frames/aerodynamic\+Angle\+Calculator.\+cpp\end{DoxyCompactItemize}

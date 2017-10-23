@@ -1,0 +1,327 @@
+\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface}{}\section{tudat\+:\+:electro\+\_\+magnetism\+:\+:Radiation\+Pressure\+Interface Class Reference}
+\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface}\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+
+
+Class in which the properties of a solar radiation pressure acceleration model are stored.  
+
+
+
+
+{\ttfamily \#include $<$radiation\+Pressure\+Interface.\+h$>$}
+
+
+
+Collaboration diagram for tudat\+:\+:electro\+\_\+magnetism\+:\+:Radiation\+Pressure\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a8948315705d771b072ddc84a745336cb}{Radiation\+Pressure\+Interface} (const boost\+::function$<$ double() $>$ source\+Power, const boost\+::function$<$ Eigen\+::\+Vector3d() $>$ source\+Position\+Function, const boost\+::function$<$ Eigen\+::\+Vector3d() $>$ target\+Position\+Function, const double radiation\+Pressure\+Coefficient, const double area, const std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector3d() $>$ $>$ occulting\+Body\+Positions=std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector3d() $>$ $>$(), const std\+::vector$<$ double $>$ occulting\+Body\+Radii=std\+::vector$<$ double $>$(), const double source\+Radius=0.\+0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_afd8f599da3ee8096f5201aa19645149e}{$\sim$\+Radiation\+Pressure\+Interface} ()\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_afd8f599da3ee8096f5201aa19645149e}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_afd8f599da3ee8096f5201aa19645149e}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a3a48081c956952226fe91447b405a993}{update\+Interface} (const double current\+Time=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Function to update the current value of the radiation pressure. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a5771c2ca31eccf97d38c11b6b2019f3c}{get\+Current\+Radiation\+Pressure} () const 
+\begin{DoxyCompactList}\small\item\em Function to return the current radiation pressure due to source at target (in N/m$^\wedge$2). \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a72463a39729493b51bd9670aed832812}{get\+Current\+Solar\+Vector} () const 
+\begin{DoxyCompactList}\small\item\em Function to return the current vector from the target to the source. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Vector3d() $>$ \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a951e3badd78f7714be9d8c004341cd38}{get\+Source\+Position\+Function} () const 
+\begin{DoxyCompactList}\small\item\em Function to return the function returning the current position of the source body. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Vector3d() $>$ \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a9e423805f25996b655563ad4c4aaa27b}{get\+Target\+Position\+Function} () const 
+\begin{DoxyCompactList}\small\item\em Function to return the function returning the current position of the target body. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a5325694fd8405b5645cfe418f6f405ab}{get\+Area} () const 
+\begin{DoxyCompactList}\small\item\em Function to return the reflecting area of the target body. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_aa842d443f73b0af16be5e0642ec4fa57}{get\+Radiation\+Pressure\+Coefficient} () const 
+\begin{DoxyCompactList}\small\item\em Function to return the radiation pressure coefficient of the target body. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a8677c222996dd15c80037739d643731c}{reset\+Radiation\+Pressure\+Coefficient} (const double radiation\+Pressure\+Coefficient)
+\begin{DoxyCompactList}\small\item\em Function to reset the radiation pressure coefficient of the target body. \end{DoxyCompactList}\item 
+boost\+::function$<$ double() $>$ \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a1439814afc2c6d8fbf43f46a4dc021f7}{get\+Source\+Power\+Function} () const 
+\item 
+double \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a7fd4c43372b7add206e54044e18a5d35}{get\+Current\+Time} ()
+\begin{DoxyCompactList}\small\item\em Function to return the current time of interface (i.\+e. time of last update\+Interface call). \end{DoxyCompactList}\item 
+std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector3d() $>$ $>$ \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_ae3c8e131751ec18ca2dd6cdff0ae0898}{get\+Occulting\+Body\+Positions} ()
+\item 
+std\+::vector$<$ double $>$ \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a3417a71782baee1f6868bceea6664c74}{get\+Occulting\+Body\+Radii} ()
+\begin{DoxyCompactList}\small\item\em Function to return the list of radii of the bodies causing occultations. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_ac6ad709c6a0ccb789407e1f4297ba392}{get\+Source\+Radius} ()
+\begin{DoxyCompactList}\small\item\em Function to return the radius of the source body. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::function$<$ double() $>$ \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a6d59e036b87d0fe805427400e491cb3a}{source\+Power\+\_\+}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a6d59e036b87d0fe805427400e491cb3a}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a6d59e036b87d0fe805427400e491cb3a}
+
+\begin{DoxyCompactList}\small\item\em Function returning the current total power (in W) emitted by the source body. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Vector3d() $>$ \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a4b5a361fefba821f2ae123ac0ee8cca0}{source\+Position\+Function\+\_\+}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a4b5a361fefba821f2ae123ac0ee8cca0}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a4b5a361fefba821f2ae123ac0ee8cca0}
+
+\begin{DoxyCompactList}\small\item\em Function returning the current position of the source body. \end{DoxyCompactList}\item 
+boost\+::function$<$ Eigen\+::\+Vector3d() $>$ \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_af9a23761b1c8aab7aadfd36011c4189c}{target\+Position\+Function\+\_\+}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_af9a23761b1c8aab7aadfd36011c4189c}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_af9a23761b1c8aab7aadfd36011c4189c}
+
+\begin{DoxyCompactList}\small\item\em Function returning the current position of the target body. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_ac18b9903296ad8cb5b48940fee633696}{radiation\+Pressure\+Coefficient\+\_\+}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_ac18b9903296ad8cb5b48940fee633696}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_ac18b9903296ad8cb5b48940fee633696}
+
+\begin{DoxyCompactList}\small\item\em Radiation pressure coefficient of the target body. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a67aeeda2137537e69ba14e82b0ae4fbb}{area\+\_\+}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a67aeeda2137537e69ba14e82b0ae4fbb}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a67aeeda2137537e69ba14e82b0ae4fbb}
+
+\begin{DoxyCompactList}\small\item\em Reflecting area of the target body. \end{DoxyCompactList}\item 
+std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector3d() $>$ $>$ \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_acd4e524cf63b57fcd3e115e105fe06bb}{occulting\+Body\+Positions\+\_\+}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_acd4e524cf63b57fcd3e115e105fe06bb}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_acd4e524cf63b57fcd3e115e105fe06bb}
+
+\begin{DoxyCompactList}\small\item\em List of functions returning the positions of the bodies causing occultations. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a425ec6ba68e48fcfd066e5e3e892b5d5}{occulting\+Body\+Radii\+\_\+}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a425ec6ba68e48fcfd066e5e3e892b5d5}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a425ec6ba68e48fcfd066e5e3e892b5d5}
+
+\begin{DoxyCompactList}\small\item\em List of radii of the bodies causing occultations. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a8032468237ddf2bb422bcdd317a58d8d}{source\+Radius\+\_\+}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a8032468237ddf2bb422bcdd317a58d8d}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a8032468237ddf2bb422bcdd317a58d8d}
+
+\begin{DoxyCompactList}\small\item\em Radius of the source body. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a752c46bc8f609515efbd53ecba3fa607}{current\+Radiation\+Pressure\+\_\+}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a752c46bc8f609515efbd53ecba3fa607}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a752c46bc8f609515efbd53ecba3fa607}
+
+\begin{DoxyCompactList}\small\item\em Current radiation pressure due to source at target (in N/m$^\wedge$2). \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a755907cb63f6f57d766fca2e7361623b}{current\+Solar\+Vector\+\_\+}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a755907cb63f6f57d766fca2e7361623b}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a755907cb63f6f57d766fca2e7361623b}
+
+\begin{DoxyCompactList}\small\item\em Current vector from the target to the source. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_aa25367b2a6ffa30a0c73a416f1a11e90}{current\+Time\+\_\+}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_aa25367b2a6ffa30a0c73a416f1a11e90}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_aa25367b2a6ffa30a0c73a416f1a11e90}
+
+\begin{DoxyCompactList}\small\item\em Current time of interface (i.\+e. time of last update\+Interface call). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class in which the properties of a solar radiation pressure acceleration model are stored. 
+
+Class in which the properties of a solar radiation pressure acceleration model are stored and the current radiation pressure is calculated based on the source power and geometry. The current implementation is limited to a cannonball model. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}!Radiation\+Pressure\+Interface@{Radiation\+Pressure\+Interface}}
+\index{Radiation\+Pressure\+Interface@{Radiation\+Pressure\+Interface}!tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+\subsubsection[{\texorpdfstring{Radiation\+Pressure\+Interface(const boost\+::function$<$ double() $>$ source\+Power, const boost\+::function$<$ Eigen\+::\+Vector3d() $>$ source\+Position\+Function, const boost\+::function$<$ Eigen\+::\+Vector3d() $>$ target\+Position\+Function, const double radiation\+Pressure\+Coefficient, const double area, const std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector3d() $>$ $>$ occulting\+Body\+Positions=std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector3d() $>$ $>$(), const std\+::vector$<$ double $>$ occulting\+Body\+Radii=std\+::vector$<$ double $>$(), const double source\+Radius=0.\+0)}{RadiationPressureInterface(const boost::function< double() > sourcePower, const boost::function< Eigen::Vector3d() > sourcePositionFunction, const boost::function< Eigen::Vector3d() > targetPositionFunction, const double radiationPressureCoefficient, const double area, const std::vector< boost::function< Eigen::Vector3d() > > occultingBodyPositions=std::vector< boost::function< Eigen::Vector3d() > >(), const std::vector< double > occultingBodyRadii=std::vector< double >(), const double sourceRadius=0.0)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface\+::\+Radiation\+Pressure\+Interface (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ double() $>$}]{source\+Power, }
+\item[{const boost\+::function$<$ Eigen\+::\+Vector3d() $>$}]{source\+Position\+Function, }
+\item[{const boost\+::function$<$ Eigen\+::\+Vector3d() $>$}]{target\+Position\+Function, }
+\item[{const double}]{radiation\+Pressure\+Coefficient, }
+\item[{const double}]{area, }
+\item[{const std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector3d() $>$ $>$}]{occulting\+Body\+Positions = {\ttfamily std\+:\+:vector$<$~boost\+:\+:function$<$~Eigen\+:\+:Vector3d(~)~$>$~$>$(~)}, }
+\item[{const std\+::vector$<$ double $>$}]{occulting\+Body\+Radii = {\ttfamily std\+:\+:vector$<$~double~$>$~(~)}, }
+\item[{const double}]{source\+Radius = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a8948315705d771b072ddc84a745336cb}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a8948315705d771b072ddc84a745336cb}
+
+
+Constructor. 
+
+Class construtor for radiation pressure interface. 
+\begin{DoxyParams}{Parameters}
+{\em source\+Power} & Function returning the current total power (in W) emitted by the source body. \\
+\hline
+{\em source\+Position\+Function} & Function returning the current position of the source body. \\
+\hline
+{\em target\+Position\+Function} & Function returning the current position of the target body. \\
+\hline
+{\em radiation\+Pressure\+Coefficient} & Reflectivity coefficient of the target body. \\
+\hline
+{\em area} & Reflecting area of the target body. \\
+\hline
+{\em occulting\+Body\+Positions} & List of functions returning the positions of the bodies causing occultations (default none) N\+O\+TE\+: Multiple concurrent occultations may currently result in slighlty underestimted radiation pressure. \\
+\hline
+{\em occulting\+Body\+Radii} & List of radii of the bodies causing occultations (default none). \\
+\hline
+{\em source\+Radius} & Radius of the source body (used for occultation calculations) (default 0). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}!get\+Area@{get\+Area}}
+\index{get\+Area@{get\+Area}!tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Area() const }{getArea() const }}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface\+::get\+Area (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a5325694fd8405b5645cfe418f6f405ab}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a5325694fd8405b5645cfe418f6f405ab}
+
+
+Function to return the reflecting area of the target body. 
+
+Function to return the reflecting area of the target body. \begin{DoxyReturn}{Returns}
+The reflecting area of the target body. 
+\end{DoxyReturn}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}!get\+Current\+Radiation\+Pressure@{get\+Current\+Radiation\+Pressure}}
+\index{get\+Current\+Radiation\+Pressure@{get\+Current\+Radiation\+Pressure}!tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Current\+Radiation\+Pressure() const }{getCurrentRadiationPressure() const }}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface\+::get\+Current\+Radiation\+Pressure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a5771c2ca31eccf97d38c11b6b2019f3c}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a5771c2ca31eccf97d38c11b6b2019f3c}
+
+
+Function to return the current radiation pressure due to source at target (in N/m$^\wedge$2). 
+
+Function to return the current radiation pressure due to source at target (in N/m$^\wedge$2). \begin{DoxyReturn}{Returns}
+Current radiation pressure due to source at target (in N/m$^\wedge$2). 
+\end{DoxyReturn}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}!get\+Current\+Solar\+Vector@{get\+Current\+Solar\+Vector}}
+\index{get\+Current\+Solar\+Vector@{get\+Current\+Solar\+Vector}!tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Current\+Solar\+Vector() const }{getCurrentSolarVector() const }}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface\+::get\+Current\+Solar\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a72463a39729493b51bd9670aed832812}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a72463a39729493b51bd9670aed832812}
+
+
+Function to return the current vector from the target to the source. 
+
+Function to return the current vector from the target to the source. \begin{DoxyReturn}{Returns}
+Current vector from the target to the source. 
+\end{DoxyReturn}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}!get\+Current\+Time@{get\+Current\+Time}}
+\index{get\+Current\+Time@{get\+Current\+Time}!tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Current\+Time()}{getCurrentTime()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface\+::get\+Current\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a7fd4c43372b7add206e54044e18a5d35}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a7fd4c43372b7add206e54044e18a5d35}
+
+
+Function to return the current time of interface (i.\+e. time of last update\+Interface call). 
+
+Function to return the current time of interface (i.\+e. time of last update\+Interface call). \begin{DoxyReturn}{Returns}
+Current time of interface (i.\+e. time of last update\+Interface call). 
+\end{DoxyReturn}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}!get\+Occulting\+Body\+Positions@{get\+Occulting\+Body\+Positions}}
+\index{get\+Occulting\+Body\+Positions@{get\+Occulting\+Body\+Positions}!tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Occulting\+Body\+Positions()}{getOccultingBodyPositions()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ boost\+::function$<$ Eigen\+::\+Vector3d( ) $>$ $>$ tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface\+::get\+Occulting\+Body\+Positions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_ae3c8e131751ec18ca2dd6cdff0ae0898}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_ae3c8e131751ec18ca2dd6cdff0ae0898}
+Function to return the list of functions returning the positions of the bodies causing occultations
+
+Function to return the list of functions returning the positions of the bodies causing occultations \begin{DoxyReturn}{Returns}
+List of functions returning the positions of the bodies causing occultations 
+\end{DoxyReturn}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}!get\+Occulting\+Body\+Radii@{get\+Occulting\+Body\+Radii}}
+\index{get\+Occulting\+Body\+Radii@{get\+Occulting\+Body\+Radii}!tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Occulting\+Body\+Radii()}{getOccultingBodyRadii()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ double $>$ tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface\+::get\+Occulting\+Body\+Radii (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a3417a71782baee1f6868bceea6664c74}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a3417a71782baee1f6868bceea6664c74}
+
+
+Function to return the list of radii of the bodies causing occultations. 
+
+Function to return the list of radii of the bodies causing occultations \begin{DoxyReturn}{Returns}
+List of radii of the bodies causing occultations 
+\end{DoxyReturn}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}!get\+Radiation\+Pressure\+Coefficient@{get\+Radiation\+Pressure\+Coefficient}}
+\index{get\+Radiation\+Pressure\+Coefficient@{get\+Radiation\+Pressure\+Coefficient}!tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Radiation\+Pressure\+Coefficient() const }{getRadiationPressureCoefficient() const }}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface\+::get\+Radiation\+Pressure\+Coefficient (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_aa842d443f73b0af16be5e0642ec4fa57}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_aa842d443f73b0af16be5e0642ec4fa57}
+
+
+Function to return the radiation pressure coefficient of the target body. 
+
+Function to return the radiation pressure coefficient of the target body. \begin{DoxyReturn}{Returns}
+The radiation pressure coefficient of the target body. 
+\end{DoxyReturn}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}!get\+Source\+Position\+Function@{get\+Source\+Position\+Function}}
+\index{get\+Source\+Position\+Function@{get\+Source\+Position\+Function}!tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Source\+Position\+Function() const }{getSourcePositionFunction() const }}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ Eigen\+::\+Vector3d( ) $>$ tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface\+::get\+Source\+Position\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a951e3badd78f7714be9d8c004341cd38}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a951e3badd78f7714be9d8c004341cd38}
+
+
+Function to return the function returning the current position of the source body. 
+
+Function to return the function returning the current position of the source body. \begin{DoxyReturn}{Returns}
+The function returning the current position of the source body. 
+\end{DoxyReturn}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}!get\+Source\+Power\+Function@{get\+Source\+Power\+Function}}
+\index{get\+Source\+Power\+Function@{get\+Source\+Power\+Function}!tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Source\+Power\+Function() const }{getSourcePowerFunction() const }}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ double( ) $>$ tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface\+::get\+Source\+Power\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a1439814afc2c6d8fbf43f46a4dc021f7}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a1439814afc2c6d8fbf43f46a4dc021f7}
+Function to return the function returning the current total power (in W) emitted by the source body.
+
+Function to return the function returning the current total power (in W) emitted by the source body. \begin{DoxyReturn}{Returns}
+The function returning the current total power emitted by the source body. 
+\end{DoxyReturn}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}!get\+Source\+Radius@{get\+Source\+Radius}}
+\index{get\+Source\+Radius@{get\+Source\+Radius}!tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Source\+Radius()}{getSourceRadius()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface\+::get\+Source\+Radius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_ac6ad709c6a0ccb789407e1f4297ba392}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_ac6ad709c6a0ccb789407e1f4297ba392}
+
+
+Function to return the radius of the source body. 
+
+Function to return the source radius of the target body. \begin{DoxyReturn}{Returns}
+The source radius of the target body. 
+\end{DoxyReturn}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}!get\+Target\+Position\+Function@{get\+Target\+Position\+Function}}
+\index{get\+Target\+Position\+Function@{get\+Target\+Position\+Function}!tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Target\+Position\+Function() const }{getTargetPositionFunction() const }}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::function$<$ Eigen\+::\+Vector3d( ) $>$ tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface\+::get\+Target\+Position\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a9e423805f25996b655563ad4c4aaa27b}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a9e423805f25996b655563ad4c4aaa27b}
+
+
+Function to return the function returning the current position of the target body. 
+
+Function to return the function returning the current position of the target body. \begin{DoxyReturn}{Returns}
+The function returning the current position of the target body. 
+\end{DoxyReturn}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}!reset\+Radiation\+Pressure\+Coefficient@{reset\+Radiation\+Pressure\+Coefficient}}
+\index{reset\+Radiation\+Pressure\+Coefficient@{reset\+Radiation\+Pressure\+Coefficient}!tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+\subsubsection[{\texorpdfstring{reset\+Radiation\+Pressure\+Coefficient(const double radiation\+Pressure\+Coefficient)}{resetRadiationPressureCoefficient(const double radiationPressureCoefficient)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface\+::reset\+Radiation\+Pressure\+Coefficient (
+\begin{DoxyParamCaption}
+\item[{const double}]{radiation\+Pressure\+Coefficient}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a8677c222996dd15c80037739d643731c}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a8677c222996dd15c80037739d643731c}
+
+
+Function to reset the radiation pressure coefficient of the target body. 
+
+Function to reset the radiation pressure coefficient of the target body. 
+\begin{DoxyParams}{Parameters}
+{\em radiation\+Pressure\+Coefficient} & The new radiation pressure coefficient of the target body. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}!update\+Interface@{update\+Interface}}
+\index{update\+Interface@{update\+Interface}!tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface@{tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface}}
+\subsubsection[{\texorpdfstring{update\+Interface(const double current\+Time=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{updateInterface(const double currentTime=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface\+::update\+Interface (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Time = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a3a48081c956952226fe91447b405a993}{}\label{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface_a3a48081c956952226fe91447b405a993}
+
+
+Function to update the current value of the radiation pressure. 
+
+Function to update the current value of the radiation pressure, based on functions returning the positions of the bodies involved and the source power. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Time} & \hyperlink{classtudat_1_1Time}{Time} at which acceleration model is to be updated. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Electro\+Magnetism/radiation\+Pressure\+Interface.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Electro\+Magnetism/radiation\+Pressure\+Interface.\+cpp\end{DoxyCompactItemize}

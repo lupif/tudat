@@ -1,0 +1,70 @@
+\hypertarget{classtudat_1_1input__output_1_1MultiArrayFileReader_3_011_01_4}{}\section{tudat\+:\+:input\+\_\+output\+:\+:Multi\+Array\+File\+Reader$<$ 1 $>$ Class Template Reference}
+\label{classtudat_1_1input__output_1_1MultiArrayFileReader_3_011_01_4}\index{tudat\+::input\+\_\+output\+::\+Multi\+Array\+File\+Reader$<$ 1 $>$@{tudat\+::input\+\_\+output\+::\+Multi\+Array\+File\+Reader$<$ 1 $>$}}
+
+
+Interface class for reading coefficients as a function of 1 independent variables from a file.  
+
+
+
+
+{\ttfamily \#include $<$multi\+Dimensional\+Array\+Reader.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boost\+::multi\+\_\+array$<$ double, 1 $>$ \hyperlink{classtudat_1_1input__output_1_1MultiArrayFileReader_3_011_01_4_a886e534bbc95306fb55b7f3100951c6a}{read\+Multi\+Array} (const std\+::string file\+Name)
+\begin{DoxyCompactList}\small\item\em Function to read only a multi-\/array of size 1 from the file. \end{DoxyCompactList}\item 
+static std\+::pair$<$ boost\+::multi\+\_\+array$<$ double, 1 $>$, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \hyperlink{classtudat_1_1input__output_1_1MultiArrayFileReader_3_011_01_4_ae0bc3012f5bffdd3cb658c7817960fc3}{read\+Multi\+Array\+And\+Independent\+Variables} (const std\+::string file\+Name)
+\begin{DoxyCompactList}\small\item\em Function to read a multi-\/array from the file, and the values of the independent variables at which it is defined. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$$>$\\*
+class tudat\+::input\+\_\+output\+::\+Multi\+Array\+File\+Reader$<$ 1 $>$}
+
+Interface class for reading coefficients as a function of 1 independent variables from a file. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::input\+\_\+output\+::\+Multi\+Array\+File\+Reader$<$ 1 $>$@{tudat\+::input\+\_\+output\+::\+Multi\+Array\+File\+Reader$<$ 1 $>$}!read\+Multi\+Array@{read\+Multi\+Array}}
+\index{read\+Multi\+Array@{read\+Multi\+Array}!tudat\+::input\+\_\+output\+::\+Multi\+Array\+File\+Reader$<$ 1 $>$@{tudat\+::input\+\_\+output\+::\+Multi\+Array\+File\+Reader$<$ 1 $>$}}
+\subsubsection[{\texorpdfstring{read\+Multi\+Array(const std\+::string file\+Name)}{readMultiArray(const std::string fileName)}}]{\setlength{\rightskip}{0pt plus 5cm}static boost\+::multi\+\_\+array$<$ double, 1 $>$ {\bf tudat\+::input\+\_\+output\+::\+Multi\+Array\+File\+Reader}$<$ 1 $>$\+::read\+Multi\+Array (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtudat_1_1input__output_1_1MultiArrayFileReader_3_011_01_4_a886e534bbc95306fb55b7f3100951c6a}{}\label{classtudat_1_1input__output_1_1MultiArrayFileReader_3_011_01_4_a886e534bbc95306fb55b7f3100951c6a}
+
+
+Function to read only a multi-\/array of size 1 from the file. 
+
+Function to read only a multi-\/array of size 1 from the file, not saving the values of the independent variables it is defined. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Name of the coefficient file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Multi-\/array containing file contents. 
+\end{DoxyReturn}
+\index{tudat\+::input\+\_\+output\+::\+Multi\+Array\+File\+Reader$<$ 1 $>$@{tudat\+::input\+\_\+output\+::\+Multi\+Array\+File\+Reader$<$ 1 $>$}!read\+Multi\+Array\+And\+Independent\+Variables@{read\+Multi\+Array\+And\+Independent\+Variables}}
+\index{read\+Multi\+Array\+And\+Independent\+Variables@{read\+Multi\+Array\+And\+Independent\+Variables}!tudat\+::input\+\_\+output\+::\+Multi\+Array\+File\+Reader$<$ 1 $>$@{tudat\+::input\+\_\+output\+::\+Multi\+Array\+File\+Reader$<$ 1 $>$}}
+\subsubsection[{\texorpdfstring{read\+Multi\+Array\+And\+Independent\+Variables(const std\+::string file\+Name)}{readMultiArrayAndIndependentVariables(const std::string fileName)}}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::pair$<$ boost\+::multi\+\_\+array$<$ double, 1 $>$, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ {\bf tudat\+::input\+\_\+output\+::\+Multi\+Array\+File\+Reader}$<$ 1 $>$\+::read\+Multi\+Array\+And\+Independent\+Variables (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtudat_1_1input__output_1_1MultiArrayFileReader_3_011_01_4_ae0bc3012f5bffdd3cb658c7817960fc3}{}\label{classtudat_1_1input__output_1_1MultiArrayFileReader_3_011_01_4_ae0bc3012f5bffdd3cb658c7817960fc3}
+
+
+Function to read a multi-\/array from the file, and the values of the independent variables at which it is defined. 
+
+Function to read a multi-\/array of size 1 from the file, and the values of the independent variables at which it is defined 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Name of the coefficient file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair\+: first entry containing multi-\/array of double coefficients, second containing list of independent variables at which coefficients are defined. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Input\+Output/multi\+Dimensional\+Array\+Reader.\+h\end{DoxyCompactItemize}

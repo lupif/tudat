@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1input__output_1_1Parser.html" title="Parser interface, indicates that the class can parse passed string and stream data. " alt="" coords="5,104,136,145"/>
+<area shape="rect" id="node2" href="$classtudat_1_1input__output_1_1TextParser.html" title="A TextParser is a Parser that specialized in parsing text files. " alt="" coords="184,104,315,145"/>
+<area shape="rect" id="node3" href="$classtudat_1_1input__output_1_1dummyTextParser.html" title="tudat::input_output\l::dummyTextParser" alt="" coords="383,5,521,47"/>
+<area shape="rect" id="node4" href="$classtudat_1_1input__output_1_1FixedWidthParser.html" title="Fixed&#45;width parser. " alt="" coords="385,71,519,112"/>
+<area shape="rect" id="node5" href="$classtudat_1_1input__output_1_1SeparatedParser.html" title="Separated parser class. " alt="" coords="387,136,517,177"/>
+<area shape="rect" id="node6" href="$classtudat_1_1input__output_1_1solar__activity_1_1ParseSolarActivityData.html" title="Solar activity parser class. " alt="" coords="363,201,541,257"/>
+</map>

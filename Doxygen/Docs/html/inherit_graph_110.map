@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1propagators_1_1VariationalEquationsSolver.html" title="Base class to manage and execute the numerical integration of equations of motion and variational equ..." alt="" coords="5,5,207,76"/>
+<area shape="rect" id="node2" href="$classtudat_1_1propagators_1_1SingleArcVariationalEquationsSolver.html" title="Class to manage and execute the numerical integration of variational equations of a dynamical system ..." alt="" coords="255,5,493,76"/>
+</map>

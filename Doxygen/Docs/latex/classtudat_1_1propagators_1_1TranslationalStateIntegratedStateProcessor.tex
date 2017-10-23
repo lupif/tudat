@@ -1,0 +1,106 @@
+\hypertarget{classtudat_1_1propagators_1_1TranslationalStateIntegratedStateProcessor}{}\section{tudat\+:\+:propagators\+:\+:Translational\+State\+Integrated\+State\+Processor$<$ Time\+Type, State\+Scalar\+Type $>$ Class Template Reference}
+\label{classtudat_1_1propagators_1_1TranslationalStateIntegratedStateProcessor}\index{tudat\+::propagators\+::\+Translational\+State\+Integrated\+State\+Processor$<$ Time\+Type, State\+Scalar\+Type $>$@{tudat\+::propagators\+::\+Translational\+State\+Integrated\+State\+Processor$<$ Time\+Type, State\+Scalar\+Type $>$}}
+
+
+Class used for processing numerically integrated translational states.  
+
+
+
+
+{\ttfamily \#include $<$set\+Numerically\+Integrated\+States.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:propagators\+:\+:Translational\+State\+Integrated\+State\+Processor$<$ Time\+Type, State\+Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classtudat_1_1propagators_1_1TranslationalStateIntegratedStateProcessor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:propagators\+:\+:Translational\+State\+Integrated\+State\+Processor$<$ Time\+Type, State\+Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classtudat_1_1propagators_1_1TranslationalStateIntegratedStateProcessor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1propagators_1_1TranslationalStateIntegratedStateProcessor_a49de6dace6eb8a06a5c03b7ef1f2ed3c}{Translational\+State\+Integrated\+State\+Processor} (const int start\+Index, const simulation\+\_\+setup\+::\+Named\+Body\+Map \&body\+Map, const std\+::vector$<$ std\+::string $>$ \&bodies\+To\+Integrate, const std\+::vector$<$ std\+::string $>$ \&central\+Bodies, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1ephemerides_1_1ReferenceFrameManager}{ephemerides\+::\+Reference\+Frame\+Manager} $>$ frame\+Manager)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1propagators_1_1TranslationalStateIntegratedStateProcessor_af6a1bc3febf6a960c16a7186cfd4642a}{process\+Integrated\+States} (const std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \&numerical\+Solution)
+\begin{DoxyCompactList}\small\item\em Function processing translational state in the full numerical\+Solution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Time\+Type, typename State\+Scalar\+Type$>$\\*
+class tudat\+::propagators\+::\+Translational\+State\+Integrated\+State\+Processor$<$ Time\+Type, State\+Scalar\+Type $>$}
+
+Class used for processing numerically integrated translational states. 
+
+Class used for processing numerically integrated translational states, updates ephemeris object of each integrated body, performing frame translations if needed. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::propagators\+::\+Translational\+State\+Integrated\+State\+Processor@{tudat\+::propagators\+::\+Translational\+State\+Integrated\+State\+Processor}!Translational\+State\+Integrated\+State\+Processor@{Translational\+State\+Integrated\+State\+Processor}}
+\index{Translational\+State\+Integrated\+State\+Processor@{Translational\+State\+Integrated\+State\+Processor}!tudat\+::propagators\+::\+Translational\+State\+Integrated\+State\+Processor@{tudat\+::propagators\+::\+Translational\+State\+Integrated\+State\+Processor}}
+\subsubsection[{\texorpdfstring{Translational\+State\+Integrated\+State\+Processor(const int start\+Index, const simulation\+\_\+setup\+::\+Named\+Body\+Map \&body\+Map, const std\+::vector$<$ std\+::string $>$ \&bodies\+To\+Integrate, const std\+::vector$<$ std\+::string $>$ \&central\+Bodies, const boost\+::shared\+\_\+ptr$<$ ephemerides\+::\+Reference\+Frame\+Manager $>$ frame\+Manager)}{TranslationalStateIntegratedStateProcessor(const int startIndex, const simulation_setup::NamedBodyMap &bodyMap, const std::vector< std::string > &bodiesToIntegrate, const std::vector< std::string > &centralBodies, const boost::shared_ptr< ephemerides::ReferenceFrameManager > frameManager)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type , typename State\+Scalar\+Type $>$ {\bf tudat\+::propagators\+::\+Translational\+State\+Integrated\+State\+Processor}$<$ Time\+Type, State\+Scalar\+Type $>$\+::{\bf Translational\+State\+Integrated\+State\+Processor} (
+\begin{DoxyParamCaption}
+\item[{const int}]{start\+Index, }
+\item[{const simulation\+\_\+setup\+::\+Named\+Body\+Map \&}]{body\+Map, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{bodies\+To\+Integrate, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{central\+Bodies, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf ephemerides\+::\+Reference\+Frame\+Manager} $>$}]{frame\+Manager}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1TranslationalStateIntegratedStateProcessor_a49de6dace6eb8a06a5c03b7ef1f2ed3c}{}\label{classtudat_1_1propagators_1_1TranslationalStateIntegratedStateProcessor_a49de6dace6eb8a06a5c03b7ef1f2ed3c}
+
+
+Constructor. 
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em start\+Index} & Index in the state vector where the translational state starts. \\
+\hline
+{\em body\+Map} & List of bodies used in simulations. \\
+\hline
+{\em bodies\+To\+Integrate} & List of bodies for which the translational state is numerically integrated. Order in this vector is the same as the order in state vector. \\
+\hline
+{\em central\+Bodies} & List of origing w.\+r.\+t. which the translational states are integrated (with the same order as bodies\+To\+Integrate). \\
+\hline
+{\em frame\+Manager} & Object to get state of one body w.\+r.\+t. another body. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::propagators\+::\+Translational\+State\+Integrated\+State\+Processor@{tudat\+::propagators\+::\+Translational\+State\+Integrated\+State\+Processor}!process\+Integrated\+States@{process\+Integrated\+States}}
+\index{process\+Integrated\+States@{process\+Integrated\+States}!tudat\+::propagators\+::\+Translational\+State\+Integrated\+State\+Processor@{tudat\+::propagators\+::\+Translational\+State\+Integrated\+State\+Processor}}
+\subsubsection[{\texorpdfstring{process\+Integrated\+States(const std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \&numerical\+Solution)}{processIntegratedStates(const std::map< TimeType, Eigen::Matrix< StateScalarType, Eigen::Dynamic, 1 > > &numericalSolution)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type , typename State\+Scalar\+Type $>$ void {\bf tudat\+::propagators\+::\+Translational\+State\+Integrated\+State\+Processor}$<$ Time\+Type, State\+Scalar\+Type $>$\+::process\+Integrated\+States (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \&}]{numerical\+Solution}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1propagators_1_1TranslationalStateIntegratedStateProcessor_af6a1bc3febf6a960c16a7186cfd4642a}{}\label{classtudat_1_1propagators_1_1TranslationalStateIntegratedStateProcessor_af6a1bc3febf6a960c16a7186cfd4642a}
+
+
+Function processing translational state in the full numerical\+Solution. 
+
+Function that processes the entries of the translational state in the full numerical\+Solution, extracts and converts the states to the required frames, and updates the associated ephemerides. 
+\begin{DoxyParams}{Parameters}
+{\em numerical\+Solution} & Full numerical solution, in global representation (see convert\+To\+Output\+Solution function in \hyperlink{classtudat_1_1propagators_1_1NBodyStateDerivative}{N\+Body\+State\+Derivative} class. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1propagators_1_1IntegratedStateProcessor_a379cb44bfbb3506b9de350719e1a05ac}{tudat\+::propagators\+::\+Integrated\+State\+Processor$<$ Time\+Type, State\+Scalar\+Type $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/set\+Numerically\+Integrated\+States.\+h\end{DoxyCompactItemize}

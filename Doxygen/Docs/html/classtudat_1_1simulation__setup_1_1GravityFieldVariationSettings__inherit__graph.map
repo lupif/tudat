@@ -1,0 +1,4 @@
+<map id="tudat::simulation_setup::GravityFieldVariationSettings" name="tudat::simulation_setup::GravityFieldVariationSettings">
+<area shape="rect" id="node2" href="$classtudat_1_1simulation__setup_1_1BasicSolidBodyGravityFieldVariationSettings.html" title="tudat::simulation_setup\l::BasicSolidBodyGravityField\lVariationSettings" alt="" coords="260,5,452,61"/>
+<area shape="rect" id="node3" href="$classtudat_1_1simulation__setup_1_1TabulatedGravityFieldVariationSettings.html" title="Class to define settings for tabulated gravity field variations. " alt="" coords="252,85,460,141"/>
+</map>

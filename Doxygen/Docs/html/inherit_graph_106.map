@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1propagators_1_1PropagatorSettings.html" title="Base class for defining setting of a propagator. " alt="" coords="5,125,148,181"/>
+<area shape="rect" id="node2" href="$classtudat_1_1propagators_1_1CustomStatePropagatorSettings.html" title="Class used to provide settings for a custom state derivative model. " alt="" coords="196,5,415,61"/>
+<area shape="rect" id="node3" href="$classtudat_1_1propagators_1_1MassPropagatorSettings.html" title="Class for defining settings for propagating the mass of a body. " alt="" coords="219,85,392,141"/>
+<area shape="rect" id="node4" href="$classtudat_1_1propagators_1_1MultiTypePropagatorSettings.html" title="Class for defining settings for propagating multiple types of dynamics concurrently. " alt="" coords="206,165,405,221"/>
+<area shape="rect" id="node5" href="$classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings.html" title="Class for defining settings for propagating translational dynamics. " alt="" coords="206,245,405,301"/>
+</map>

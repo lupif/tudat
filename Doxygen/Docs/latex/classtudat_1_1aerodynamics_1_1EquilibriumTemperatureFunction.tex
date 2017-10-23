@@ -1,0 +1,115 @@
+\hypertarget{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction}{}\section{tudat\+:\+:aerodynamics\+:\+:Equilibrium\+Temperature\+Function Class Reference}
+\label{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction}\index{tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function@{tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function}}
+
+
+Function that is used to compute the net heat flux from a given heat input and wall temperature.  
+
+
+
+
+{\ttfamily \#include $<$equilibrium\+Wall\+Temperature.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:aerodynamics\+:\+:Equilibrium\+Temperature\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:aerodynamics\+:\+:Equilibrium\+Temperature\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_ac92385ff36562a2595b10800e2d7dcaa}{Equilibrium\+Temperature\+Function} (const boost\+::function$<$ double(const double) $>$ heat\+Transfer\+Function, const double wall\+Emissivity, double adiabatic\+Wall\+Temperature)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_a94178bbbf87129eb32dfc2aa82aafa80}{$\sim$\+Equilibrium\+Temperature\+Function} ()\hypertarget{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_a94178bbbf87129eb32dfc2aa82aafa80}{}\label{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_a94178bbbf87129eb32dfc2aa82aafa80}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_abd89b7690138e463bcc52ebd667f7bfa}{evaluate} (const double current\+Wall\+Temperature)
+\begin{DoxyCompactList}\small\item\em Compute net heat flux at given wall temperature. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_abffe5b7f1fb949b9e1009d0434092ba8}{compute\+Derivative} (const unsigned int order, const double independent\+Variable)\hypertarget{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_abffe5b7f1fb949b9e1009d0434092ba8}{}\label{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_abffe5b7f1fb949b9e1009d0434092ba8}
+
+\begin{DoxyCompactList}\small\item\em Compute first derivative of net heat flux at given wall temperature (F\+U\+N\+C\+T\+I\+ON N\+OT I\+M\+P\+L\+E\+M\+E\+N\+T\+ED) \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_af80114f81558e28479d8f945a209ac77}{compute\+Definite\+Integral} (const unsigned int order, const double lower\+Bound, const double upperbound)\hypertarget{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_af80114f81558e28479d8f945a209ac77}{}\label{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_af80114f81558e28479d8f945a209ac77}
+
+\begin{DoxyCompactList}\small\item\em Compute first derivative of net heat flux at given wall temperature (F\+U\+N\+C\+T\+I\+ON N\+OT I\+M\+P\+L\+E\+M\+E\+N\+T\+ED) \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_ae04093a1bd72acd39f2d22e9d47bf297}{get\+Lower\+Bound} ()\hypertarget{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_ae04093a1bd72acd39f2d22e9d47bf297}{}\label{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_ae04093a1bd72acd39f2d22e9d47bf297}
+
+\begin{DoxyCompactList}\small\item\em Function to retrieve the lower bound of the wall temperature. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_a3be24594e7019e225a1fa86a21a66a50}{get\+Upper\+Bound} ()\hypertarget{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_a3be24594e7019e225a1fa86a21a66a50}{}\label{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_a3be24594e7019e225a1fa86a21a66a50}
+
+\begin{DoxyCompactList}\small\item\em Function to retrieve the upper bound of the wall temperature. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_a39fab24957a98060eb1a49295f8e8feb}{get\+Initial\+Guess} ()\hypertarget{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_a39fab24957a98060eb1a49295f8e8feb}{}\label{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_a39fab24957a98060eb1a49295f8e8feb}
+
+\begin{DoxyCompactList}\small\item\em Function to retrieve the initial guess of the wall temperature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Function that is used to compute the net heat flux from a given heat input and wall temperature. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function@{tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function}!Equilibrium\+Temperature\+Function@{Equilibrium\+Temperature\+Function}}
+\index{Equilibrium\+Temperature\+Function@{Equilibrium\+Temperature\+Function}!tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function@{tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function}}
+\subsubsection[{\texorpdfstring{Equilibrium\+Temperature\+Function(const boost\+::function$<$ double(const double) $>$ heat\+Transfer\+Function, const double wall\+Emissivity, double adiabatic\+Wall\+Temperature)}{EquilibriumTemperatureFunction(const boost::function< double(const double) > heatTransferFunction, const double wallEmissivity, double adiabaticWallTemperature)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function\+::\+Equilibrium\+Temperature\+Function (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ double(const double) $>$}]{heat\+Transfer\+Function, }
+\item[{const double}]{wall\+Emissivity, }
+\item[{double}]{adiabatic\+Wall\+Temperature}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_ac92385ff36562a2595b10800e2d7dcaa}{}\label{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_ac92385ff36562a2595b10800e2d7dcaa}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em heat\+Transfer\+Function} & Function returning the feat flux as a function of wall temperature. \\
+\hline
+{\em wall\+Emissivity} & Emmissivity of the wall to which heat transfer is taking place \\
+\hline
+{\em adiabatic\+Wall\+Temperature} & Adiabatic wall temperature \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function@{tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function@{tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function}}
+\subsubsection[{\texorpdfstring{evaluate(const double current\+Wall\+Temperature)}{evaluate(const double currentWallTemperature)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Equilibrium\+Temperature\+Function\+::evaluate (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Wall\+Temperature}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_abd89b7690138e463bcc52ebd667f7bfa}{}\label{classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction_abd89b7690138e463bcc52ebd667f7bfa}
+
+
+Compute net heat flux at given wall temperature. 
+
+Compute net heat flux at given wall temperature 
+\begin{DoxyParams}{Parameters}
+{\em current\+Wall\+Temperature} & Wall temperature to be used for computation of input and output of heat. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Net heat input to wall 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1basic__mathematics_1_1Function_a69b59769da9784abaaa8a0a309d16de8}{tudat\+::basic\+\_\+mathematics\+::\+Function$<$ double, double $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Aerodynamics/equilibrium\+Wall\+Temperature.\+h\end{DoxyCompactItemize}

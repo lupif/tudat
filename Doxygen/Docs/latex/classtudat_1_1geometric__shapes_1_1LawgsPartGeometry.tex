@@ -1,0 +1,314 @@
+\hypertarget{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry}{}\section{tudat\+:\+:geometric\+\_\+shapes\+:\+:Lawgs\+Part\+Geometry Class Reference}
+\label{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry}\index{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}}
+
+
+Class to define a mesh accoring to Lawgs standards.  
+
+
+
+
+{\ttfamily \#include $<$lawgs\+Part\+Geometry.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:geometric\+\_\+shapes\+:\+:Lawgs\+Part\+Geometry\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:geometric\+\_\+shapes\+:\+:Lawgs\+Part\+Geometry\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_ad94fc244be9691996b9ee1703b66925d}{Lawgs\+Part\+Geometry} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_aab069c9b07682f09943011c3a653113c}{$\sim$\+Lawgs\+Part\+Geometry} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_afa3ac8b84737b41184c9af54e49c8933}{set\+Mesh} (boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1geometric__shapes_1_1SingleSurfaceGeometry}{Single\+Surface\+Geometry} $>$ original\+Surface, int number\+Of\+Lines, int number\+Of\+Points)
+\begin{DoxyCompactList}\small\item\em Create a mesh surface on a single-\/surface geometry. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a2cd980840078ea65ecad3d6768c8b82d}{Lawgs\+Part\+Geometry} (const \hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry}{Lawgs\+Part\+Geometry} \&part\+To\+Copy)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+virtual Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a7076f2fc68b8df7032c191805a41ac57}{get\+Surface\+Point} (const double independent\+Variable1, const double independent\+Variable2)
+\begin{DoxyCompactList}\small\item\em Function to retrieve surface point. \end{DoxyCompactList}\item 
+virtual Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a1f1cb867a6612ee3bb9dffa30e4f5755}{get\+Surface\+Derivative} (const double u, const double v, const int u\+Derivative, const int v\+Derivative)
+\begin{DoxyCompactList}\small\item\em Get surface derivative (currently not implemented). \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a2ef6186379526cc3bc090ee3225dd7bf}{set\+Name} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Set name of a Lawgs part. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_af7846a5393045d590ba4d1fb58e30fb0}{get\+Parameter} (const int i)
+\begin{DoxyCompactList}\small\item\em Get parameter. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_ac10cdea82268f795ebd1f95e994317c4}{set\+Parameter} (const int parameter\+Index, const double value)
+\begin{DoxyCompactList}\small\item\em Set parameter. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_ab5d086fe776b2e09918fa12e2ecf1d0f}{get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get part name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a45a1463a81f989e428f955686ab986c9}{name\+\_\+}
+\begin{DoxyCompactList}\small\item\em Part name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a4f16202de16c8bf7ed8f9c15208f8fcc}{operator$<$$<$} (std\+::ostream \&stream, \hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry}{Lawgs\+Part\+Geometry} \&lawgs\+Part\+Geometry)
+\begin{DoxyCompactList}\small\item\em Overload ostream to print class information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class to define a mesh accoring to Lawgs standards. 
+
+Class to define a surface mesh accoring to the Langley Wireframe Geometry standard, seet reference. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}!Lawgs\+Part\+Geometry@{Lawgs\+Part\+Geometry}}
+\index{Lawgs\+Part\+Geometry@{Lawgs\+Part\+Geometry}!tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}}
+\subsubsection[{\texorpdfstring{Lawgs\+Part\+Geometry()}{LawgsPartGeometry()}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry\+::\+Lawgs\+Part\+Geometry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_ad94fc244be9691996b9ee1703b66925d}{}\label{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_ad94fc244be9691996b9ee1703b66925d}
+
+
+Default constructor. 
+
+Default constructor. \index{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}!````~Lawgs\+Part\+Geometry@{$\sim$\+Lawgs\+Part\+Geometry}}
+\index{````~Lawgs\+Part\+Geometry@{$\sim$\+Lawgs\+Part\+Geometry}!tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}}
+\subsubsection[{\texorpdfstring{$\sim$\+Lawgs\+Part\+Geometry()}{~LawgsPartGeometry()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry\+::$\sim$\+Lawgs\+Part\+Geometry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_aab069c9b07682f09943011c3a653113c}{}\label{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_aab069c9b07682f09943011c3a653113c}
+
+
+Default destructor. 
+
+Default destructor. \index{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}!Lawgs\+Part\+Geometry@{Lawgs\+Part\+Geometry}}
+\index{Lawgs\+Part\+Geometry@{Lawgs\+Part\+Geometry}!tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}}
+\subsubsection[{\texorpdfstring{Lawgs\+Part\+Geometry(const Lawgs\+Part\+Geometry \&part\+To\+Copy)}{LawgsPartGeometry(const LawgsPartGeometry &partToCopy)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry\+::\+Lawgs\+Part\+Geometry (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lawgs\+Part\+Geometry} \&}]{part\+To\+Copy}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a2cd980840078ea65ecad3d6768c8b82d}{}\label{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a2cd980840078ea65ecad3d6768c8b82d}
+
+
+Copy constructor. 
+
+Copy constructor to deep-\/copy contents of a Lawgs\+Part\+Geomtry object to a new one. 
+\begin{DoxyParams}{Parameters}
+{\em part\+To\+Copy} & \hyperlink{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry}{Lawgs\+Part\+Geometry} to copy \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}}
+\subsubsection[{\texorpdfstring{get\+Name()}{getName()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_ab5d086fe776b2e09918fa12e2ecf1d0f}{}\label{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_ab5d086fe776b2e09918fa12e2ecf1d0f}
+
+
+Get part name. 
+
+Returns part name. \begin{DoxyReturn}{Returns}
+Part name. 
+\end{DoxyReturn}
+\index{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}!get\+Parameter@{get\+Parameter}}
+\index{get\+Parameter@{get\+Parameter}!tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}}
+\subsubsection[{\texorpdfstring{get\+Parameter(const int i)}{getParameter(const int i)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry\+::get\+Parameter (
+\begin{DoxyParamCaption}
+\item[{const int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_af7846a5393045d590ba4d1fb58e30fb0}{}\label{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_af7846a5393045d590ba4d1fb58e30fb0}
+
+
+Get parameter. 
+
+Function not currently impemented for Lawgs. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Function not currently impemented for Lawgs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Function not currently impemented for Lawgs. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1geometric__shapes_1_1SingleSurfaceGeometry_a17437a185d1bc67dd7dc3cdfb43d92a6}{tudat\+::geometric\+\_\+shapes\+::\+Single\+Surface\+Geometry}.
+
+\index{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}!get\+Surface\+Derivative@{get\+Surface\+Derivative}}
+\index{get\+Surface\+Derivative@{get\+Surface\+Derivative}!tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}}
+\subsubsection[{\texorpdfstring{get\+Surface\+Derivative(const double u, const double v, const int u\+Derivative, const int v\+Derivative)}{getSurfaceDerivative(const double u, const double v, const int uDerivative, const int vDerivative)}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry\+::get\+Surface\+Derivative (
+\begin{DoxyParamCaption}
+\item[{const double}]{u, }
+\item[{const double}]{v, }
+\item[{const int}]{u\+Derivative, }
+\item[{const int}]{v\+Derivative}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a1f1cb867a6612ee3bb9dffa30e4f5755}{}\label{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a1f1cb867a6612ee3bb9dffa30e4f5755}
+
+
+Get surface derivative (currently not implemented). 
+
+Currently unavailable function to return surface derivative. 
+\begin{DoxyParams}{Parameters}
+{\em u} & N\+O\+TE\+: Function unavailable. \\
+\hline
+{\em v} & N\+O\+TE\+: Function unavailable. \\
+\hline
+{\em u\+Derivative} & N\+O\+TE\+: Function unavailable. \\
+\hline
+{\em v\+Derivative} & N\+O\+TE\+: Function unavailable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+O\+TE\+: Function unavailable. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1geometric__shapes_1_1SingleSurfaceGeometry_ad5d412eff63b46b71cc774d222131795}{tudat\+::geometric\+\_\+shapes\+::\+Single\+Surface\+Geometry}.
+
+\index{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}!get\+Surface\+Point@{get\+Surface\+Point}}
+\index{get\+Surface\+Point@{get\+Surface\+Point}!tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}}
+\subsubsection[{\texorpdfstring{get\+Surface\+Point(const double independent\+Variable1, const double independent\+Variable2)}{getSurfacePoint(const double independentVariable1, const double independentVariable2)}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry\+::get\+Surface\+Point (
+\begin{DoxyParamCaption}
+\item[{const double}]{independent\+Variable1, }
+\item[{const double}]{independent\+Variable2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a7076f2fc68b8df7032c191805a41ac57}{}\label{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a7076f2fc68b8df7032c191805a41ac57}
+
+
+Function to retrieve surface point. 
+
+Get surface point.
+
+This function retrieves a surface point from on a panel. Because four points define a panel in this mesh format, the collection of panels will not be necessarilly watertight, making this function non-\/trivial, since the four points defining the panel will not necessarily lie in the same plane. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variable1} & Independent variable indicating on (or between) which lines to retrieve a point. \\
+\hline
+{\em independent\+Variable2} & Independent variable indicating on (or between) which points to retrieve a point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+point on mesh panel. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1geometric__shapes_1_1SingleSurfaceGeometry_aec5c9957aa261662b34ddb0acf5eac40}{tudat\+::geometric\+\_\+shapes\+::\+Single\+Surface\+Geometry}.
+
+\index{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}!set\+Mesh@{set\+Mesh}}
+\index{set\+Mesh@{set\+Mesh}!tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}}
+\subsubsection[{\texorpdfstring{set\+Mesh(boost\+::shared\+\_\+ptr$<$ Single\+Surface\+Geometry $>$ original\+Surface, int number\+Of\+Lines, int number\+Of\+Points)}{setMesh(boost::shared_ptr< SingleSurfaceGeometry > originalSurface, int numberOfLines, int numberOfPoints)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry\+::set\+Mesh (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf Single\+Surface\+Geometry} $>$}]{original\+Surface, }
+\item[{int}]{number\+Of\+Lines, }
+\item[{int}]{number\+Of\+Points}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_afa3ac8b84737b41184c9af54e49c8933}{}\label{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_afa3ac8b84737b41184c9af54e49c8933}
+
+
+Create a mesh surface on a single-\/surface geometry. 
+
+Constructor from surface geometry (i.\+e., geometry type conversion).
+
+Creates a mesh surface on a single-\/surface geometry. A meshed surface based on the given surface geometry is created. 
+\begin{DoxyParams}{Parameters}
+{\em original\+Surface} & surface from which a mesh is to be created. \\
+\hline
+{\em number\+Of\+Lines} & Number of points to be sampled from 1st independent variable. \\
+\hline
+{\em number\+Of\+Points} & Number of points to be sampled from 2nd independent variable. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}}
+\subsubsection[{\texorpdfstring{set\+Name(const std\+::string \&name)}{setName(const std::string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a2ef6186379526cc3bc090ee3225dd7bf}{}\label{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a2ef6186379526cc3bc090ee3225dd7bf}
+
+
+Set name of a Lawgs part. 
+
+Sets the name of a Lawgs part. 
+\begin{DoxyParams}{Parameters}
+{\em name} & New name of a Lawgs part. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}!set\+Parameter@{set\+Parameter}}
+\index{set\+Parameter@{set\+Parameter}!tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}}
+\subsubsection[{\texorpdfstring{set\+Parameter(const int parameter\+Index, const double value)}{setParameter(const int parameterIndex, const double value)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry\+::set\+Parameter (
+\begin{DoxyParamCaption}
+\item[{const int}]{parameter\+Index, }
+\item[{const double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_ac10cdea82268f795ebd1f95e994317c4}{}\label{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_ac10cdea82268f795ebd1f95e994317c4}
+
+
+Set parameter. 
+
+Sets parameter. Function not currently impemented for Lawgs. 
+\begin{DoxyParams}{Parameters}
+{\em parameter\+Index} & Function not currently impemented for Lawgs. \\
+\hline
+{\em value} & Function not currently impemented for Lawgs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Function not currently impemented for Lawgs. 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{stream, }
+\item[{{\bf Lawgs\+Part\+Geometry} \&}]{lawgs\+Part\+Geometry}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a4f16202de16c8bf7ed8f9c15208f8fcc}{}\label{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a4f16202de16c8bf7ed8f9c15208f8fcc}
+
+
+Overload ostream to print class information. 
+
+Overloads ostream to print class information, prints the number of lines and points, and the name of the part. 
+\begin{DoxyParams}{Parameters}
+{\em stream} & Stream object. \\
+\hline
+{\em lawgs\+Part\+Geometry} & Lawgs part geometry. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stream object. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}!name\+\_\+@{name\+\_\+}}
+\index{name\+\_\+@{name\+\_\+}!tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry@{tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry}}
+\subsubsection[{\texorpdfstring{name\+\_\+}{name_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::geometric\+\_\+shapes\+::\+Lawgs\+Part\+Geometry\+::name\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a45a1463a81f989e428f955686ab986c9}{}\label{classtudat_1_1geometric__shapes_1_1LawgsPartGeometry_a45a1463a81f989e428f955686ab986c9}
+
+
+Part name. 
+
+Part name. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Geometric\+Shapes/lawgs\+Part\+Geometry.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Geometric\+Shapes/lawgs\+Part\+Geometry.\+cpp\end{DoxyCompactItemize}

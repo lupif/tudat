@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1simulation__setup_1_1ThrustEngineSettings.html" title="Class defining settings for the thrust magnitude. " alt="" coords="5,104,163,145"/>
+<area shape="rect" id="node2" href="$classtudat_1_1simulation__setup_1_1ConstantThrustEngineSettings.html" title="Class to define settigns for constant thrust settings. " alt="" coords="224,5,432,47"/>
+<area shape="rect" id="node3" href="$classtudat_1_1simulation__setup_1_1FromBodyThrustEngineSettings.html" title="Class to define thrust magnitude to be taken directly from an engine model. " alt="" coords="221,71,435,112"/>
+<area shape="rect" id="node4" href="$classtudat_1_1simulation__setup_1_1FromFunctionThrustEngineSettings.html" title="Class to define custom settings for thrust magnitude/specific impulse. " alt="" coords="211,136,445,177"/>
+<area shape="rect" id="node5" href="$classtudat_1_1simulation__setup_1_1ParameterizedThrustMagnitudeSettings.html" title="Class to define the thrust magnitude and specific impulse as an interpolated function of N independen..." alt="" coords="223,201,433,257"/>
+</map>

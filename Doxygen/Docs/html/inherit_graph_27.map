@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1estimatable__parameters_1_1EstimatableParameterSettings.html" title="Class for providing settings for parameters to estimate. " alt="" coords="5,57,236,113"/>
+<area shape="rect" id="node2" href="$classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateEstimatableParameterSettings.html" title="Class to define settings for estimating an initial translational state. " alt="" coords="284,5,515,76"/>
+<area shape="rect" id="node3" href="$classtudat_1_1estimatable__parameters_1_1SphericalHarmonicEstimatableParameterSettings.html" title="Class for providing settings spherical harmonic coefficient(s) parameter. " alt="" coords="293,101,505,157"/>
+</map>

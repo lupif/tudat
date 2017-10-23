@@ -1,0 +1,150 @@
+\hypertarget{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings}{}\section{tudat\+:\+:numerical\+\_\+integrators\+:\+:Runge\+Kutta\+Variable\+Step\+Size\+Settings$<$ Time\+Type $>$ Class Template Reference}
+\label{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings}\index{tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings$<$ Time\+Type $>$@{tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings$<$ Time\+Type $>$}}
+
+
+Class to define settings of variable step RK numerical integrator.  
+
+
+
+
+{\ttfamily \#include $<$create\+Numerical\+Integrator.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:numerical\+\_\+integrators\+:\+:Runge\+Kutta\+Variable\+Step\+Size\+Settings$<$ Time\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:numerical\+\_\+integrators\+:\+:Runge\+Kutta\+Variable\+Step\+Size\+Settings$<$ Time\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a29982d03bc0f1fb95e59a17e6d14b135}{Runge\+Kutta\+Variable\+Step\+Size\+Settings} (const Available\+Integrators integrator\+Type, const Time\+Type initial\+Time, const Time\+Type initial\+Time\+Step, const \hyperlink{structtudat_1_1numerical__integrators_1_1RungeKuttaCoefficients_a462b6c2e353f7f84ce09e693fb6c7f17}{numerical\+\_\+integrators\+::\+Runge\+Kutta\+Coefficients\+::\+Coefficient\+Sets} coefficient\+Set, const Time\+Type minimum\+Step\+Size, const Time\+Type maximum\+Step\+Size, const Time\+Type relative\+Error\+Tolerance=1.\+0\+E-\/12, const Time\+Type absolute\+Error\+Tolerance=1.\+0\+E-\/12, const int save\+Frequency=1, const Time\+Type safety\+Factor\+For\+Next\+Step\+Size=0.\+8, const Time\+Type maximum\+Factor\+Increase\+For\+Next\+Step\+Size=4.\+0, const Time\+Type minimum\+Factor\+Decrease\+For\+Next\+Step\+Size=0.\+1)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a6af9737de9c5c100a923f99cda55b7e2}{$\sim$\+Runge\+Kutta\+Variable\+Step\+Size\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtudat_1_1numerical__integrators_1_1RungeKuttaCoefficients_a462b6c2e353f7f84ce09e693fb6c7f17}{numerical\+\_\+integrators\+::\+Runge\+Kutta\+Coefficients\+::\+Coefficient\+Sets} \hyperlink{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_aa63544cda84018617216c7b1f62774a1}{coefficient\+Set\+\_\+}\hypertarget{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_aa63544cda84018617216c7b1f62774a1}{}\label{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_aa63544cda84018617216c7b1f62774a1}
+
+\begin{DoxyCompactList}\small\item\em Type of numerical integrator (must be an RK variable step type) \end{DoxyCompactList}\item 
+const Time\+Type \hyperlink{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a3ae8eb99d3d46e02fa514e74c5ed9617}{minimum\+Step\+Size\+\_\+}
+\begin{DoxyCompactList}\small\item\em Minimum step size for integration. \end{DoxyCompactList}\item 
+const Time\+Type \hyperlink{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a2a69bb81bd411c3da593816d1b9c8b43}{maximum\+Step\+Size\+\_\+}\hypertarget{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a2a69bb81bd411c3da593816d1b9c8b43}{}\label{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a2a69bb81bd411c3da593816d1b9c8b43}
+
+\begin{DoxyCompactList}\small\item\em Maximum step size for integration. \end{DoxyCompactList}\item 
+const Time\+Type \hyperlink{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_abf570603de3942b8825d3edaf4ca45f4}{relative\+Error\+Tolerance\+\_\+}\hypertarget{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_abf570603de3942b8825d3edaf4ca45f4}{}\label{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_abf570603de3942b8825d3edaf4ca45f4}
+
+\begin{DoxyCompactList}\small\item\em Relative error tolerance for step size control. \end{DoxyCompactList}\item 
+const Time\+Type \hyperlink{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a428c7dac0805137b458ab6e01dcf38da}{absolute\+Error\+Tolerance\+\_\+}\hypertarget{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a428c7dac0805137b458ab6e01dcf38da}{}\label{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a428c7dac0805137b458ab6e01dcf38da}
+
+\begin{DoxyCompactList}\small\item\em Absolute error tolerance for step size control. \end{DoxyCompactList}\item 
+const Time\+Type \hyperlink{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_af5b922484a9c04a517a4fbc784c1319a}{safety\+Factor\+For\+Next\+Step\+Size\+\_\+}\hypertarget{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_af5b922484a9c04a517a4fbc784c1319a}{}\label{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_af5b922484a9c04a517a4fbc784c1319a}
+
+\begin{DoxyCompactList}\small\item\em Safety factor for step size control. \end{DoxyCompactList}\item 
+const Time\+Type \hyperlink{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_ae32e20af648a7162901d99f211406df5}{maximum\+Factor\+Increase\+For\+Next\+Step\+Size\+\_\+}\hypertarget{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_ae32e20af648a7162901d99f211406df5}{}\label{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_ae32e20af648a7162901d99f211406df5}
+
+\begin{DoxyCompactList}\small\item\em Maximum increase factor in time step in subsequent iterations. \end{DoxyCompactList}\item 
+const Time\+Type \hyperlink{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_ad81b8c8e5d486910514bb545facc09c3}{minimum\+Factor\+Decrease\+For\+Next\+Step\+Size\+\_\+}\hypertarget{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_ad81b8c8e5d486910514bb545facc09c3}{}\label{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_ad81b8c8e5d486910514bb545facc09c3}
+
+\begin{DoxyCompactList}\small\item\em Maximum decrease factor in time step in subsequent iterations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Time\+Type = double$>$\\*
+class tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings$<$ Time\+Type $>$}
+
+Class to define settings of variable step RK numerical integrator. 
+
+Class to define settings of variable step RK numerical integrator, for instance for use in numerical integration of equations of motion/ variational equations. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings}!Runge\+Kutta\+Variable\+Step\+Size\+Settings@{Runge\+Kutta\+Variable\+Step\+Size\+Settings}}
+\index{Runge\+Kutta\+Variable\+Step\+Size\+Settings@{Runge\+Kutta\+Variable\+Step\+Size\+Settings}!tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings}}
+\subsubsection[{\texorpdfstring{Runge\+Kutta\+Variable\+Step\+Size\+Settings(const Available\+Integrators integrator\+Type, const Time\+Type initial\+Time, const Time\+Type initial\+Time\+Step, const numerical\+\_\+integrators\+::\+Runge\+Kutta\+Coefficients\+::\+Coefficient\+Sets coefficient\+Set, const Time\+Type minimum\+Step\+Size, const Time\+Type maximum\+Step\+Size, const Time\+Type relative\+Error\+Tolerance=1.\+0\+E-\/12, const Time\+Type absolute\+Error\+Tolerance=1.\+0\+E-\/12, const int save\+Frequency=1, const Time\+Type safety\+Factor\+For\+Next\+Step\+Size=0.\+8, const Time\+Type maximum\+Factor\+Increase\+For\+Next\+Step\+Size=4.\+0, const Time\+Type minimum\+Factor\+Decrease\+For\+Next\+Step\+Size=0.\+1)}{RungeKuttaVariableStepSizeSettings(const AvailableIntegrators integratorType, const TimeType initialTime, const TimeType initialTimeStep, const numerical_integrators::RungeKuttaCoefficients::CoefficientSets coefficientSet, const TimeType minimumStepSize, const TimeType maximumStepSize, const TimeType relativeErrorTolerance=1.0E-12, const TimeType absoluteErrorTolerance=1.0E-12, const int saveFrequency=1, const TimeType safetyFactorForNextStepSize=0.8, const TimeType maximumFactorIncreaseForNextStepSize=4.0, const TimeType minimumFactorDecreaseForNextStepSize=0.1)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double$>$ {\bf tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings}$<$ Time\+Type $>$\+::{\bf Runge\+Kutta\+Variable\+Step\+Size\+Settings} (
+\begin{DoxyParamCaption}
+\item[{const Available\+Integrators}]{integrator\+Type, }
+\item[{const Time\+Type}]{initial\+Time, }
+\item[{const Time\+Type}]{initial\+Time\+Step, }
+\item[{const {\bf numerical\+\_\+integrators\+::\+Runge\+Kutta\+Coefficients\+::\+Coefficient\+Sets}}]{coefficient\+Set, }
+\item[{const Time\+Type}]{minimum\+Step\+Size, }
+\item[{const Time\+Type}]{maximum\+Step\+Size, }
+\item[{const Time\+Type}]{relative\+Error\+Tolerance = {\ttfamily 1.0E-\/12}, }
+\item[{const Time\+Type}]{absolute\+Error\+Tolerance = {\ttfamily 1.0E-\/12}, }
+\item[{const int}]{save\+Frequency = {\ttfamily 1}, }
+\item[{const Time\+Type}]{safety\+Factor\+For\+Next\+Step\+Size = {\ttfamily 0.8}, }
+\item[{const Time\+Type}]{maximum\+Factor\+Increase\+For\+Next\+Step\+Size = {\ttfamily 4.0}, }
+\item[{const Time\+Type}]{minimum\+Factor\+Decrease\+For\+Next\+Step\+Size = {\ttfamily 0.1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a29982d03bc0f1fb95e59a17e6d14b135}{}\label{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a29982d03bc0f1fb95e59a17e6d14b135}
+
+
+Constructor. 
+
+Constructor for variable step RK integrator settings. 
+\begin{DoxyParams}{Parameters}
+{\em integrator\+Type} & Type of numerical integrator (must be an RK variable step type) \\
+\hline
+{\em initial\+Time} & Start time (independent variable) of numerical integration. \\
+\hline
+{\em initial\+Time\+Step} & Initial time (independent variable) step used in numerical integration. Adapted during integration \\
+\hline
+{\em coefficient\+Set} & Coefficient set (butcher tableau) to use in integration. \\
+\hline
+{\em minimum\+Step\+Size} & Minimum step size for integration. Integration stops (exception thrown) if time step comes below this value. \\
+\hline
+{\em maximum\+Step\+Size} & Maximum step size for integration. \\
+\hline
+{\em relative\+Error\+Tolerance} & Relative error tolerance for step size control \\
+\hline
+{\em absolute\+Error\+Tolerance} & Absolute error tolerance for step size control \\
+\hline
+{\em save\+Frequency} & Frequency at which to save the numerical integrated states (in units of i.\+e. per n integration time steps, with n = save\+Frequency). \\
+\hline
+{\em safety\+Factor\+For\+Next\+Step\+Size} & Safety factor for step size control \\
+\hline
+{\em maximum\+Factor\+Increase\+For\+Next\+Step\+Size} & Maximum increase factor in time step in subsequent iterations. \\
+\hline
+{\em minimum\+Factor\+Decrease\+For\+Next\+Step\+Size} & Maximum decrease factor in time step in subsequent iterations. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings}!````~Runge\+Kutta\+Variable\+Step\+Size\+Settings@{$\sim$\+Runge\+Kutta\+Variable\+Step\+Size\+Settings}}
+\index{````~Runge\+Kutta\+Variable\+Step\+Size\+Settings@{$\sim$\+Runge\+Kutta\+Variable\+Step\+Size\+Settings}!tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings}}
+\subsubsection[{\texorpdfstring{$\sim$\+Runge\+Kutta\+Variable\+Step\+Size\+Settings()}{~RungeKuttaVariableStepSizeSettings()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double$>$ {\bf tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings}$<$ Time\+Type $>$\+::$\sim${\bf Runge\+Kutta\+Variable\+Step\+Size\+Settings} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a6af9737de9c5c100a923f99cda55b7e2}{}\label{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a6af9737de9c5c100a923f99cda55b7e2}
+
+
+Destructor. 
+
+Destructor 
+
+\subsection{Member Data Documentation}
+\index{tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings}!minimum\+Step\+Size\+\_\+@{minimum\+Step\+Size\+\_\+}}
+\index{minimum\+Step\+Size\+\_\+@{minimum\+Step\+Size\+\_\+}!tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings@{tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings}}
+\subsubsection[{\texorpdfstring{minimum\+Step\+Size\+\_\+}{minimumStepSize_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double$>$ const Time\+Type {\bf tudat\+::numerical\+\_\+integrators\+::\+Runge\+Kutta\+Variable\+Step\+Size\+Settings}$<$ Time\+Type $>$\+::minimum\+Step\+Size\+\_\+}\hypertarget{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a3ae8eb99d3d46e02fa514e74c5ed9617}{}\label{classtudat_1_1numerical__integrators_1_1RungeKuttaVariableStepSizeSettings_a3ae8eb99d3d46e02fa514e74c5ed9617}
+
+
+Minimum step size for integration. 
+
+Minimum step size for integration. Integration stops (exception thrown) if time step comes below this value. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Numerical\+Integrators/create\+Numerical\+Integrator.\+h\end{DoxyCompactItemize}

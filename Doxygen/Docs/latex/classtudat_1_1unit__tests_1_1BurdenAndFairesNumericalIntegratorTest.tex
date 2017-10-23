@@ -1,0 +1,124 @@
+\hypertarget{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest}{}\section{tudat\+:\+:unit\+\_\+tests\+:\+:Burden\+And\+Faires\+Numerical\+Integrator\+Test Class Reference}
+\label{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest}\index{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test@{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test}}
+
+
+Class for Burden and Faires numerical integrators tests.  
+
+
+
+
+{\ttfamily \#include $<$burden\+And\+Faires\+Numerical\+Integrator\+Test.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_a1440ed7a1ac678d95f75e034323d66a7}{Burden\+And\+Faires\+Numerical\+Integrator\+Test} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+std\+::pair$<$ double, bool $>$ \hyperlink{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_a798b53f6d7ede7fb9aa068107d4d0c4d}{compute\+New\+Step\+Size} (const double step\+Size, const double lower\+Order, const double higher\+Order, const double safety\+Factor\+For\+Next\+Step\+Size, const Eigen\+::\+Vector\+Xd \&relative\+Error\+Tolerance, const Eigen\+::\+Vector\+Xd \&absolute\+Error\+Tolerance, const Eigen\+::\+Vector\+Xd \&lower\+Order\+Estimate, const Eigen\+::\+Vector\+Xd \&higher\+Order\+Estimate)
+\begin{DoxyCompactList}\small\item\em Compute new step size using method taken from (Burden and Faires, 2001). \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_a657962dfec31b21d35f339789be55662}{compute\+State\+Derivative} (const double time, const Eigen\+::\+Vector\+Xd \&state)
+\begin{DoxyCompactList}\small\item\em Compute state derivative for Burden and Faires example. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_ad4421029c5b1ac5077f1365af4552135}{relative\+Error\+\_\+}
+\begin{DoxyCompactList}\small\item\em Relative error. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_abef947500fcc216338b8232322e1870f}{lower\+Order\+Estimate\+\_\+}
+\begin{DoxyCompactList}\small\item\em Lower order estimate. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_a1971ea7cf0958eb3200b35644516e2bf}{higher\+Order\+Estimate\+\_\+}
+\begin{DoxyCompactList}\small\item\em Higher order estimate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for Burden and Faires numerical integrators tests. 
+
+Class with function to compute new step size for Runge-\/\+Kutta variable step size integrators. The function is based on the error estimation method given in Algorithm 5.\+3 in (Burden and Faires, 2001). 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test@{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test}!Burden\+And\+Faires\+Numerical\+Integrator\+Test@{Burden\+And\+Faires\+Numerical\+Integrator\+Test}}
+\index{Burden\+And\+Faires\+Numerical\+Integrator\+Test@{Burden\+And\+Faires\+Numerical\+Integrator\+Test}!tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test@{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test}}
+\subsubsection[{\texorpdfstring{Burden\+And\+Faires\+Numerical\+Integrator\+Test()}{BurdenAndFairesNumericalIntegratorTest()}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_a1440ed7a1ac678d95f75e034323d66a7}{}\label{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_a1440ed7a1ac678d95f75e034323d66a7}
+
+
+Default constructor. 
+
+Default constructor, initializing input parameters. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test@{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test}!compute\+New\+Step\+Size@{compute\+New\+Step\+Size}}
+\index{compute\+New\+Step\+Size@{compute\+New\+Step\+Size}!tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test@{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test}}
+\subsubsection[{\texorpdfstring{compute\+New\+Step\+Size(const double step\+Size, const double lower\+Order, const double higher\+Order, const double safety\+Factor\+For\+Next\+Step\+Size, const Eigen\+::\+Vector\+Xd \&relative\+Error\+Tolerance, const Eigen\+::\+Vector\+Xd \&absolute\+Error\+Tolerance, const Eigen\+::\+Vector\+Xd \&lower\+Order\+Estimate, const Eigen\+::\+Vector\+Xd \&higher\+Order\+Estimate)}{computeNewStepSize(const double stepSize, const double lowerOrder, const double higherOrder, const double safetyFactorForNextStepSize, const Eigen::VectorXd &relativeErrorTolerance, const Eigen::VectorXd &absoluteErrorTolerance, const Eigen::VectorXd &lowerOrderEstimate, const Eigen::VectorXd &higherOrderEstimate)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ double, bool $>$ tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test\+::compute\+New\+Step\+Size (
+\begin{DoxyParamCaption}
+\item[{const double}]{step\+Size, }
+\item[{const double}]{lower\+Order, }
+\item[{const double}]{higher\+Order, }
+\item[{const double}]{safety\+Factor\+For\+Next\+Step\+Size, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{relative\+Error\+Tolerance, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{absolute\+Error\+Tolerance, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{lower\+Order\+Estimate, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{higher\+Order\+Estimate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_a798b53f6d7ede7fb9aa068107d4d0c4d}{}\label{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_a798b53f6d7ede7fb9aa068107d4d0c4d}
+
+
+Compute new step size using method taken from (Burden and Faires, 2001). 
+
+Computes the new step size based on the error estimation method given in Algorithm 5.\+3 in (Burden and Faires, 2001). \index{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test@{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test}!compute\+State\+Derivative@{compute\+State\+Derivative}}
+\index{compute\+State\+Derivative@{compute\+State\+Derivative}!tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test@{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test}}
+\subsubsection[{\texorpdfstring{compute\+State\+Derivative(const double time, const Eigen\+::\+Vector\+Xd \&state)}{computeStateDerivative(const double time, const Eigen::VectorXd &state)}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test\+::compute\+State\+Derivative (
+\begin{DoxyParamCaption}
+\item[{const double}]{time, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_a657962dfec31b21d35f339789be55662}{}\label{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_a657962dfec31b21d35f339789be55662}
+
+
+Compute state derivative for Burden and Faires example. 
+
+Computes state derivative. The state derivative function defined corresponds to Example 3, pg. 278 in (Burden and Faires, 2001). The initial-\/value problem is\+:
+
+\[ y' = y - t^{ 2 } + 1 \]
+
+with $ 0 \leq t \leq 2 $ and $ y( 0 ) = 0.5 $. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which the state derivative needs to be evaluated. \\
+\hline
+{\em state} & State, length of which should be 1, at which the state derivative needs to be evaluated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State derivative, length equal to state values according to above expression. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test@{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test}!higher\+Order\+Estimate\+\_\+@{higher\+Order\+Estimate\+\_\+}}
+\index{higher\+Order\+Estimate\+\_\+@{higher\+Order\+Estimate\+\_\+}!tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test@{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test}}
+\subsubsection[{\texorpdfstring{higher\+Order\+Estimate\+\_\+}{higherOrderEstimate_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test\+::higher\+Order\+Estimate\+\_\+}\hypertarget{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_a1971ea7cf0958eb3200b35644516e2bf}{}\label{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_a1971ea7cf0958eb3200b35644516e2bf}
+
+
+Higher order estimate. 
+
+Higher order estimate computed for error control. \index{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test@{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test}!lower\+Order\+Estimate\+\_\+@{lower\+Order\+Estimate\+\_\+}}
+\index{lower\+Order\+Estimate\+\_\+@{lower\+Order\+Estimate\+\_\+}!tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test@{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test}}
+\subsubsection[{\texorpdfstring{lower\+Order\+Estimate\+\_\+}{lowerOrderEstimate_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test\+::lower\+Order\+Estimate\+\_\+}\hypertarget{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_abef947500fcc216338b8232322e1870f}{}\label{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_abef947500fcc216338b8232322e1870f}
+
+
+Lower order estimate. 
+
+Lower order estimate computed for error control. \index{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test@{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test}!relative\+Error\+\_\+@{relative\+Error\+\_\+}}
+\index{relative\+Error\+\_\+@{relative\+Error\+\_\+}!tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test@{tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test}}
+\subsubsection[{\texorpdfstring{relative\+Error\+\_\+}{relativeError_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::unit\+\_\+tests\+::\+Burden\+And\+Faires\+Numerical\+Integrator\+Test\+::relative\+Error\+\_\+}\hypertarget{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_ad4421029c5b1ac5077f1365af4552135}{}\label{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_ad4421029c5b1ac5077f1365af4552135}
+
+
+Relative error. 
+
+Relative error computed by \hyperlink{classtudat_1_1unit__tests_1_1BurdenAndFairesNumericalIntegratorTest_a798b53f6d7ede7fb9aa068107d4d0c4d}{compute\+New\+Step\+Size( )}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Numerical\+Integrators/\+Unit\+Tests/burden\+And\+Faires\+Numerical\+Integrator\+Test.\+h\end{DoxyCompactItemize}

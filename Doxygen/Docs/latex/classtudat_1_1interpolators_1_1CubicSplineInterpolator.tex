@@ -1,0 +1,144 @@
+\hypertarget{classtudat_1_1interpolators_1_1CubicSplineInterpolator}{}\section{tudat\+:\+:interpolators\+:\+:Cubic\+Spline\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$ Class Template Reference}
+\label{classtudat_1_1interpolators_1_1CubicSplineInterpolator}\index{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$@{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$}}
+
+
+Cubic spline interpolator, implementation from (Press W.\+H., et al., 2002).  
+
+
+
+
+{\ttfamily \#include $<$cubic\+Spline\+Interpolator.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:interpolators\+:\+:Cubic\+Spline\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1interpolators_1_1CubicSplineInterpolator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:interpolators\+:\+:Cubic\+Spline\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1interpolators_1_1CubicSplineInterpolator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1interpolators_1_1CubicSplineInterpolator_a003322336ae7c4f8ffb9afeda10fa7df}{Cubic\+Spline\+Interpolator} (const std\+::vector$<$ Independent\+Variable\+Type $>$ \&independent\+Variables, const std\+::vector$<$ Dependent\+Variable\+Type $>$ \&dependent\+Variables, Available\+Lookup\+Scheme selected\+Lookup\+Scheme=hunting\+Algorithm)
+\begin{DoxyCompactList}\small\item\em Cubic spline interpolator constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1interpolators_1_1CubicSplineInterpolator_a91f030d51e69eb2115da2ed4e8fcbb15}{Cubic\+Spline\+Interpolator} (const std\+::map$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$ data\+Map, const Available\+Lookup\+Scheme selected\+Lookup\+Scheme=hunting\+Algorithm)
+\begin{DoxyCompactList}\small\item\em Cubic spline interpolator constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1interpolators_1_1CubicSplineInterpolator_afc6890b74cb63542a2a450d14d089c73}{$\sim$\+Cubic\+Spline\+Interpolator} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+Dependent\+Variable\+Type \hyperlink{classtudat_1_1interpolators_1_1CubicSplineInterpolator_a81ec99d79a07248afe3523dcf668e00b}{interpolate} (const Independent\+Variable\+Type target\+Independent\+Variable\+Value)
+\begin{DoxyCompactList}\small\item\em Interpolate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type, typename Scalar\+Type = Independent\+Variable\+Type$>$\\*
+class tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$}
+
+Cubic spline interpolator, implementation from (Press W.\+H., et al., 2002). 
+
+Cubic spline interpolator, implementation from (Press W.\+H., et al., 2002). Natural boundary conditions are imposed, meaning zero second derivatives (curvature) at end points. Continuity of first derivatives is imposed. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Independent\+Variable\+Type} & Type of independent variables. \\
+\hline
+{\em Dependent\+Variable\+Type} & Type of dependent variables. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator@{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator}!Cubic\+Spline\+Interpolator@{Cubic\+Spline\+Interpolator}}
+\index{Cubic\+Spline\+Interpolator@{Cubic\+Spline\+Interpolator}!tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator@{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator}}
+\subsubsection[{\texorpdfstring{Cubic\+Spline\+Interpolator(const std\+::vector$<$ Independent\+Variable\+Type $>$ \&independent\+Variables, const std\+::vector$<$ Dependent\+Variable\+Type $>$ \&dependent\+Variables, Available\+Lookup\+Scheme selected\+Lookup\+Scheme=hunting\+Algorithm)}{CubicSplineInterpolator(const std::vector< IndependentVariableType > &independentVariables, const std::vector< DependentVariableType > &dependentVariables, AvailableLookupScheme selectedLookupScheme=huntingAlgorithm)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type , typename Dependent\+Variable\+Type , typename Scalar\+Type  = Independent\+Variable\+Type$>$ {\bf tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$\+::{\bf Cubic\+Spline\+Interpolator} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Independent\+Variable\+Type $>$ \&}]{independent\+Variables, }
+\item[{const std\+::vector$<$ Dependent\+Variable\+Type $>$ \&}]{dependent\+Variables, }
+\item[{Available\+Lookup\+Scheme}]{selected\+Lookup\+Scheme = {\ttfamily huntingAlgorithm}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1CubicSplineInterpolator_a003322336ae7c4f8ffb9afeda10fa7df}{}\label{classtudat_1_1interpolators_1_1CubicSplineInterpolator_a003322336ae7c4f8ffb9afeda10fa7df}
+
+
+Cubic spline interpolator constructor. 
+
+Cubic spline interpolator constructor taking separate vectors of dependent and independent variable values. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & Vector with the independent variable values, must be sorted in ascending order. \\
+\hline
+{\em dependent\+Variables} & Vector with the dependent variable values. \\
+\hline
+{\em selected\+Lookup\+Scheme} & Look-\/up scheme that is to be used when finding interval of requested independent variable value. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator@{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator}!Cubic\+Spline\+Interpolator@{Cubic\+Spline\+Interpolator}}
+\index{Cubic\+Spline\+Interpolator@{Cubic\+Spline\+Interpolator}!tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator@{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator}}
+\subsubsection[{\texorpdfstring{Cubic\+Spline\+Interpolator(const std\+::map$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$ data\+Map, const Available\+Lookup\+Scheme selected\+Lookup\+Scheme=hunting\+Algorithm)}{CubicSplineInterpolator(const std::map< IndependentVariableType, DependentVariableType > dataMap, const AvailableLookupScheme selectedLookupScheme=huntingAlgorithm)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type , typename Dependent\+Variable\+Type , typename Scalar\+Type  = Independent\+Variable\+Type$>$ {\bf tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$\+::{\bf Cubic\+Spline\+Interpolator} (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}]{data\+Map, }
+\item[{const Available\+Lookup\+Scheme}]{selected\+Lookup\+Scheme = {\ttfamily huntingAlgorithm}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1CubicSplineInterpolator_a91f030d51e69eb2115da2ed4e8fcbb15}{}\label{classtudat_1_1interpolators_1_1CubicSplineInterpolator_a91f030d51e69eb2115da2ed4e8fcbb15}
+
+
+Cubic spline interpolator constructor. 
+
+Cubic spline interpolator constructor taking single map of independent and dependent variable values. 
+\begin{DoxyParams}{Parameters}
+{\em data\+Map} & Map with the independent variable values as keys and corresponding dependent variable values as values. \\
+\hline
+{\em selected\+Lookup\+Scheme} & Lookup scheme that is to be used when finding interval of requested independent variable value. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator@{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator}!````~Cubic\+Spline\+Interpolator@{$\sim$\+Cubic\+Spline\+Interpolator}}
+\index{````~Cubic\+Spline\+Interpolator@{$\sim$\+Cubic\+Spline\+Interpolator}!tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator@{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator}}
+\subsubsection[{\texorpdfstring{$\sim$\+Cubic\+Spline\+Interpolator()}{~CubicSplineInterpolator()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type , typename Dependent\+Variable\+Type , typename Scalar\+Type  = Independent\+Variable\+Type$>$ {\bf tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$\+::$\sim${\bf Cubic\+Spline\+Interpolator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1CubicSplineInterpolator_afc6890b74cb63542a2a450d14d089c73}{}\label{classtudat_1_1interpolators_1_1CubicSplineInterpolator_afc6890b74cb63542a2a450d14d089c73}
+
+
+Default destructor. 
+
+Default destructor 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator@{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator}!interpolate@{interpolate}}
+\index{interpolate@{interpolate}!tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator@{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator}}
+\subsubsection[{\texorpdfstring{interpolate(const Independent\+Variable\+Type target\+Independent\+Variable\+Value)}{interpolate(const IndependentVariableType targetIndependentVariableValue)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type , typename Dependent\+Variable\+Type , typename Scalar\+Type  = Independent\+Variable\+Type$>$ Dependent\+Variable\+Type {\bf tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$\+::interpolate (
+\begin{DoxyParamCaption}
+\item[{const Independent\+Variable\+Type}]{target\+Independent\+Variable\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1interpolators_1_1CubicSplineInterpolator_a81ec99d79a07248afe3523dcf668e00b}{}\label{classtudat_1_1interpolators_1_1CubicSplineInterpolator_a81ec99d79a07248afe3523dcf668e00b}
+
+
+Interpolate. 
+
+Executes interpolation of data at a given target value of the independent variable, to yield an interpolated value of the dependent variable. 
+\begin{DoxyParams}{Parameters}
+{\em target\+Independent\+Variable\+Value} & Target independent variable value at which point the interpolation is performed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Interpolated dependent variable value. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a1756cce160465357493e18221aa49dee}{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Interpolators/cubic\+Spline\+Interpolator.\+h\end{DoxyCompactItemize}

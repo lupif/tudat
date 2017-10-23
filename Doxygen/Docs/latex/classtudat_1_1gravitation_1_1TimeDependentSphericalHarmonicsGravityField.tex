@@ -1,0 +1,322 @@
+\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField}{}\section{tudat\+:\+:gravitation\+:\+:Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field Class Reference}
+\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField}\index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+
+
+Class for time dependent spherical harmonic gravity field.  
+
+
+
+
+{\ttfamily \#include $<$time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:gravitation\+:\+:Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:gravitation\+:\+:Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a70852ec08158ab1f56592b8d0452f5cf}{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field} (const double gravitational\+Parameter, const double reference\+Radius, const Eigen\+::\+Matrix\+Xd \&nominal\+Cosine\+Coefficients, const Eigen\+::\+Matrix\+Xd \&nominal\+Sine\+Coefficients, const std\+::string \&fixed\+Reference\+Frame=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Semi-\/dummy constructor, used for setting up gravity field and variations. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_ae8bc5b0f8af2a3b96fb96890bc04fbff}{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field} (const double gravitational\+Parameter, const double reference\+Radius, const Eigen\+::\+Matrix\+Xd \&nominal\+Cosine\+Coefficients, const Eigen\+::\+Matrix\+Xd \&nominal\+Sine\+Coefficients, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariationsSet}{Gravity\+Field\+Variations\+Set} $>$ gravity\+Field\+Variation\+Update\+Settings, const std\+::string \&fixed\+Reference\+Frame=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Full class constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_ab72eb00152063353b3c5306f5a12c94e}{$\sim$\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a4ab10f4a9f2fb257df5b47e8b6c39fb9}{update} (const double time)
+\begin{DoxyCompactList}\small\item\em Update gravity field to current time. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a869a32a27923e1d7c693f609b957bd81}{update\+Correction\+Functions} ()
+\begin{DoxyCompactList}\small\item\em Update correction functions. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a14b0facf17bdbc355512711ddb4cde57}{set\+Field\+Variation\+Settings} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariationsSet}{Gravity\+Field\+Variations\+Set} $>$ gravity\+Field\+Variation\+Update\+Settings, const bool update\+Corrections=1)
+\begin{DoxyCompactList}\small\item\em Function to (re)set the gravity field variations. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a26ff5e9340b27570340695b24b4501e6}{clear\+Variations} ()
+\begin{DoxyCompactList}\small\item\em Function to clear all gravity field variations. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a8ce8c65214e7e50a7221963f97d2ff53}{get\+Nominal\+Cosine\+Coefficients} ()
+\begin{DoxyCompactList}\small\item\em Get nominal (i.\+e. with zero variations) cosine coefficients. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a8468b41ec8dfa77f53b6ee6124a89df4}{set\+Nominal\+Cosine\+Coefficients} (Eigen\+::\+Matrix\+Xd nominal\+Cosine\+Coefficients)
+\begin{DoxyCompactList}\small\item\em Set nominal (i.\+e. with zero variations) cosine coefficients. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_af7dc076f65d45c8a272c95232eb2231e}{set\+Nominal\+Cosine\+Coefficient} (const int degree, const int order, const double coefficient)
+\begin{DoxyCompactList}\small\item\em Set nominal (i.\+e. with zero variations) cosine coefficient of given degree and order. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a18e35b1aa0964d8fb0a5f0e5fa001f7e}{get\+Nominal\+Sine\+Coefficients} ()
+\begin{DoxyCompactList}\small\item\em Get nominal (i.\+e. with zero variations) sine coefficients. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a436fcab37a159058ddbc9596db756bdf}{set\+Nominal\+Sine\+Coefficients} (const Eigen\+::\+Matrix\+Xd \&nominal\+Sine\+Coefficients)
+\begin{DoxyCompactList}\small\item\em Set nominal (i.\+e. with zero variations) sine coefficients. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a7cbad34b609e5fc7ea747a5f14eaabd0}{set\+Nominal\+Sine\+Coefficient} (const int degree, const int order, const double coefficient)
+\begin{DoxyCompactList}\small\item\em Set nominal (i.\+e. with zero variations) sine coefficient of given degree and order. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariationsSet}{Gravity\+Field\+Variations\+Set} $>$ \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a2c3d2908aa7a758c638451f9bac78eb9}{get\+Gravity\+Field\+Variations\+Set} ()
+\begin{DoxyCompactList}\small\item\em Function to get object containing all gravity field variations and related settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class for time dependent spherical harmonic gravity field. 
+
+Class for time dependent spherical harmonic gravity field, i.\+e where the sine and cosine coefficients are functions of time. This class combines nominal values with time-\/dependent variations, which are calculated by object of Gravity\+Field\+Variation derived classes (one object per variation). All spherical harmonic coefficients used in this class, as well as the variations, are implicitly assumed to be geodesy-\/normalized. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\index{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\subsubsection[{\texorpdfstring{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field(const double gravitational\+Parameter, const double reference\+Radius, const Eigen\+::\+Matrix\+Xd \&nominal\+Cosine\+Coefficients, const Eigen\+::\+Matrix\+Xd \&nominal\+Sine\+Coefficients, const std\+::string \&fixed\+Reference\+Frame="""")}{TimeDependentSphericalHarmonicsGravityField(const double gravitationalParameter, const double referenceRadius, const Eigen::MatrixXd &nominalCosineCoefficients, const Eigen::MatrixXd &nominalSineCoefficients, const std::string &fixedReferenceFrame="")}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field (
+\begin{DoxyParamCaption}
+\item[{const double}]{gravitational\+Parameter, }
+\item[{const double}]{reference\+Radius, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{nominal\+Cosine\+Coefficients, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{nominal\+Sine\+Coefficients, }
+\item[{const std\+::string \&}]{fixed\+Reference\+Frame = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a70852ec08158ab1f56592b8d0452f5cf}{}\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a70852ec08158ab1f56592b8d0452f5cf}
+
+
+Semi-\/dummy constructor, used for setting up gravity field and variations. 
+
+Semi-\/dummy constructor, used for setting up gravity field and variations. This constructor is neede, as some gravity field variations need to be linked to properties of the nominal gravity field (for instance gravitational parameter), but the complete object of this type cannot be created until all variations are created, causing a circular dependency. The object is fully created when subsequently calling the set\+Field\+Variation\+Settings function and setting the field variation objects. 
+\begin{DoxyParams}{Parameters}
+{\em gravitational\+Parameter} & Gravitational parameter of massive body. \\
+\hline
+{\em reference\+Radius} & Reference radius of spherical harmonic field expansion. \\
+\hline
+{\em nominal\+Cosine\+Coefficients} & Nominal (i.\+e. with zero variation) cosine spherical harmonic coefficients. \\
+\hline
+{\em nominal\+Sine\+Coefficients} & Nominal (i.\+e. with zero variation) sine spherical harmonic coefficients. \\
+\hline
+{\em fixed\+Reference\+Frame} & Identifier for body-\/fixed reference frame to which the field is fixed (optional). \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\index{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\subsubsection[{\texorpdfstring{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field(const double gravitational\+Parameter, const double reference\+Radius, const Eigen\+::\+Matrix\+Xd \&nominal\+Cosine\+Coefficients, const Eigen\+::\+Matrix\+Xd \&nominal\+Sine\+Coefficients, const boost\+::shared\+\_\+ptr$<$ Gravity\+Field\+Variations\+Set $>$ gravity\+Field\+Variation\+Update\+Settings, const std\+::string \&fixed\+Reference\+Frame="""")}{TimeDependentSphericalHarmonicsGravityField(const double gravitationalParameter, const double referenceRadius, const Eigen::MatrixXd &nominalCosineCoefficients, const Eigen::MatrixXd &nominalSineCoefficients, const boost::shared_ptr< GravityFieldVariationsSet > gravityFieldVariationUpdateSettings, const std::string &fixedReferenceFrame="")}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field (
+\begin{DoxyParamCaption}
+\item[{const double}]{gravitational\+Parameter, }
+\item[{const double}]{reference\+Radius, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{nominal\+Cosine\+Coefficients, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{nominal\+Sine\+Coefficients, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Gravity\+Field\+Variations\+Set} $>$}]{gravity\+Field\+Variation\+Update\+Settings, }
+\item[{const std\+::string \&}]{fixed\+Reference\+Frame = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_ae8bc5b0f8af2a3b96fb96890bc04fbff}{}\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_ae8bc5b0f8af2a3b96fb96890bc04fbff}
+
+
+Full class constructor. 
+
+Full class constructor. 
+\begin{DoxyParams}{Parameters}
+{\em gravitational\+Parameter} & Gravitational parameter of massive body. \\
+\hline
+{\em reference\+Radius} & Reference radius of spherical harmonic field expansion. \\
+\hline
+{\em nominal\+Cosine\+Coefficients} & Nominal (i.\+e. with zero variation) cosine spherical harmonic coefficients. \\
+\hline
+{\em nominal\+Sine\+Coefficients} & Nominal (i.\+e. with zero variation) sine spherical harmonic coefficients. \\
+\hline
+{\em gravity\+Field\+Variation\+Update\+Settings} & Object containing all gravity field variations and related settings. \\
+\hline
+{\em fixed\+Reference\+Frame} & Identifier for body-\/fixed reference frame to which the field is fixed (optional). \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!````~Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{$\sim$\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\index{````~Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{$\sim$\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\subsubsection[{\texorpdfstring{$\sim$\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field()}{~TimeDependentSphericalHarmonicsGravityField()}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+::$\sim$\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_ab72eb00152063353b3c5306f5a12c94e}{}\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_ab72eb00152063353b3c5306f5a12c94e}
+
+
+Destructor. 
+
+Destructor 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!clear\+Variations@{clear\+Variations}}
+\index{clear\+Variations@{clear\+Variations}!tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\subsubsection[{\texorpdfstring{clear\+Variations()}{clearVariations()}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+::clear\+Variations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a26ff5e9340b27570340695b24b4501e6}{}\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a26ff5e9340b27570340695b24b4501e6}
+
+
+Function to clear all gravity field variations. 
+
+Function to clear all gravity field variations, the gravity\+Field\+Variations\+Set\+\_\+ is set to N\+U\+LL, and the correction\+Functions\+\_\+ list is cleared. \index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!get\+Gravity\+Field\+Variations\+Set@{get\+Gravity\+Field\+Variations\+Set}}
+\index{get\+Gravity\+Field\+Variations\+Set@{get\+Gravity\+Field\+Variations\+Set}!tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\subsubsection[{\texorpdfstring{get\+Gravity\+Field\+Variations\+Set()}{getGravityFieldVariationsSet()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf Gravity\+Field\+Variations\+Set} $>$ tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+::get\+Gravity\+Field\+Variations\+Set (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a2c3d2908aa7a758c638451f9bac78eb9}{}\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a2c3d2908aa7a758c638451f9bac78eb9}
+
+
+Function to get object containing all gravity field variations and related settings. 
+
+Function to get object containing all gravity field variations and related settings \index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!get\+Nominal\+Cosine\+Coefficients@{get\+Nominal\+Cosine\+Coefficients}}
+\index{get\+Nominal\+Cosine\+Coefficients@{get\+Nominal\+Cosine\+Coefficients}!tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\subsubsection[{\texorpdfstring{get\+Nominal\+Cosine\+Coefficients()}{getNominalCosineCoefficients()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix\+Xd tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+::get\+Nominal\+Cosine\+Coefficients (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a8ce8c65214e7e50a7221963f97d2ff53}{}\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a8ce8c65214e7e50a7221963f97d2ff53}
+
+
+Get nominal (i.\+e. with zero variations) cosine coefficients. 
+
+Function to get nominal (i.\+e. with zero variations) cosine coefficients. \begin{DoxyReturn}{Returns}
+Nominal cosine coefficients. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!get\+Nominal\+Sine\+Coefficients@{get\+Nominal\+Sine\+Coefficients}}
+\index{get\+Nominal\+Sine\+Coefficients@{get\+Nominal\+Sine\+Coefficients}!tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\subsubsection[{\texorpdfstring{get\+Nominal\+Sine\+Coefficients()}{getNominalSineCoefficients()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix\+Xd tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+::get\+Nominal\+Sine\+Coefficients (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a18e35b1aa0964d8fb0a5f0e5fa001f7e}{}\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a18e35b1aa0964d8fb0a5f0e5fa001f7e}
+
+
+Get nominal (i.\+e. with zero variations) sine coefficients. 
+
+Function to get nominal (i.\+e. with zero variations) sine coefficients. \begin{DoxyReturn}{Returns}
+Nominal sine coefficients. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!set\+Field\+Variation\+Settings@{set\+Field\+Variation\+Settings}}
+\index{set\+Field\+Variation\+Settings@{set\+Field\+Variation\+Settings}!tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\subsubsection[{\texorpdfstring{set\+Field\+Variation\+Settings(const boost\+::shared\+\_\+ptr$<$ Gravity\+Field\+Variations\+Set $>$ gravity\+Field\+Variation\+Update\+Settings, const bool update\+Corrections=1)}{setFieldVariationSettings(const boost::shared_ptr< GravityFieldVariationsSet > gravityFieldVariationUpdateSettings, const bool updateCorrections=1)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+::set\+Field\+Variation\+Settings (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Gravity\+Field\+Variations\+Set} $>$}]{gravity\+Field\+Variation\+Update\+Settings, }
+\item[{const bool}]{update\+Corrections = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a14b0facf17bdbc355512711ddb4cde57}{}\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a14b0facf17bdbc355512711ddb4cde57}
+
+
+Function to (re)set the gravity field variations. 
+
+Function to (re)set the gravity field variations object. An option is provided for determining whether or not the variations should be immediately recalculated. 
+\begin{DoxyParams}{Parameters}
+{\em gravity\+Field\+Variation\+Update\+Settings} & Object storing all variation models and associated settings. \\
+\hline
+{\em update\+Corrections} & Flag to determine whether the gravity field variation functions should be immediately updated with new settings. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!set\+Nominal\+Cosine\+Coefficient@{set\+Nominal\+Cosine\+Coefficient}}
+\index{set\+Nominal\+Cosine\+Coefficient@{set\+Nominal\+Cosine\+Coefficient}!tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\subsubsection[{\texorpdfstring{set\+Nominal\+Cosine\+Coefficient(const int degree, const int order, const double coefficient)}{setNominalCosineCoefficient(const int degree, const int order, const double coefficient)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+::set\+Nominal\+Cosine\+Coefficient (
+\begin{DoxyParamCaption}
+\item[{const int}]{degree, }
+\item[{const int}]{order, }
+\item[{const double}]{coefficient}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_af7dc076f65d45c8a272c95232eb2231e}{}\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_af7dc076f65d45c8a272c95232eb2231e}
+
+
+Set nominal (i.\+e. with zero variations) cosine coefficient of given degree and order. 
+
+Set nominal (i.\+e. with zero variations) cosine coefficients of given degree and order. 
+\begin{DoxyParams}{Parameters}
+{\em degree} & Spherical harmonic degree. \\
+\hline
+{\em order} & Spherical harmonic order. \\
+\hline
+{\em coefficient} & New cosine coefficient for given degree and order. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!set\+Nominal\+Cosine\+Coefficients@{set\+Nominal\+Cosine\+Coefficients}}
+\index{set\+Nominal\+Cosine\+Coefficients@{set\+Nominal\+Cosine\+Coefficients}!tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\subsubsection[{\texorpdfstring{set\+Nominal\+Cosine\+Coefficients(\+Eigen\+::\+Matrix\+Xd nominal\+Cosine\+Coefficients)}{setNominalCosineCoefficients(Eigen::MatrixXd nominalCosineCoefficients)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+::set\+Nominal\+Cosine\+Coefficients (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Matrix\+Xd}]{nominal\+Cosine\+Coefficients}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a8468b41ec8dfa77f53b6ee6124a89df4}{}\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a8468b41ec8dfa77f53b6ee6124a89df4}
+
+
+Set nominal (i.\+e. with zero variations) cosine coefficients. 
+
+Function to set nominal (i.\+e. with zero variations) cosine coefficients. 
+\begin{DoxyParams}{Parameters}
+{\em nominal\+Cosine\+Coefficients} & New nominal cosine coefficients. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!set\+Nominal\+Sine\+Coefficient@{set\+Nominal\+Sine\+Coefficient}}
+\index{set\+Nominal\+Sine\+Coefficient@{set\+Nominal\+Sine\+Coefficient}!tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\subsubsection[{\texorpdfstring{set\+Nominal\+Sine\+Coefficient(const int degree, const int order, const double coefficient)}{setNominalSineCoefficient(const int degree, const int order, const double coefficient)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+::set\+Nominal\+Sine\+Coefficient (
+\begin{DoxyParamCaption}
+\item[{const int}]{degree, }
+\item[{const int}]{order, }
+\item[{const double}]{coefficient}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a7cbad34b609e5fc7ea747a5f14eaabd0}{}\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a7cbad34b609e5fc7ea747a5f14eaabd0}
+
+
+Set nominal (i.\+e. with zero variations) sine coefficient of given degree and order. 
+
+Set nominal (i.\+e. with zero variations) sine coefficients of given degree and order. 
+\begin{DoxyParams}{Parameters}
+{\em degree} & Spherical harmonic degree. \\
+\hline
+{\em order} & Spherical harmonic order. \\
+\hline
+{\em coefficient} & New sine coefficient for given degree and order. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!set\+Nominal\+Sine\+Coefficients@{set\+Nominal\+Sine\+Coefficients}}
+\index{set\+Nominal\+Sine\+Coefficients@{set\+Nominal\+Sine\+Coefficients}!tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\subsubsection[{\texorpdfstring{set\+Nominal\+Sine\+Coefficients(const Eigen\+::\+Matrix\+Xd \&nominal\+Sine\+Coefficients)}{setNominalSineCoefficients(const Eigen::MatrixXd &nominalSineCoefficients)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+::set\+Nominal\+Sine\+Coefficients (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{nominal\+Sine\+Coefficients}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a436fcab37a159058ddbc9596db756bdf}{}\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a436fcab37a159058ddbc9596db756bdf}
+
+
+Set nominal (i.\+e. with zero variations) sine coefficients. 
+
+Function to set nominal (i.\+e. with zero variations) sine coefficients. 
+\begin{DoxyParams}{Parameters}
+{\em nominal\+Sine\+Coefficients} & New nominal sine coefficients. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!update@{update}}
+\index{update@{update}!tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\subsubsection[{\texorpdfstring{update(const double time)}{update(const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+::update (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a4ab10f4a9f2fb257df5b47e8b6c39fb9}{}\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a4ab10f4a9f2fb257df5b47e8b6c39fb9}
+
+
+Update gravity field to current time. 
+
+Update gravity field coefficient corrections to current time. All correction functions are called and subsequently added to the nominal value. 
+\begin{DoxyParams}{Parameters}
+{\em time} & Current time. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}!update\+Correction\+Functions@{update\+Correction\+Functions}}
+\index{update\+Correction\+Functions@{update\+Correction\+Functions}!tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field@{tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}}
+\subsubsection[{\texorpdfstring{update\+Correction\+Functions()}{updateCorrectionFunctions()}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::gravitation\+::\+Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field\+::update\+Correction\+Functions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a869a32a27923e1d7c693f609b957bd81}{}\label{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField_a869a32a27923e1d7c693f609b957bd81}
+
+
+Update correction functions. 
+
+Update correction functions, for instance to account for changed changed environmental parameters. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Gravitation/time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Gravitation/time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field.\+cpp\end{DoxyCompactItemize}

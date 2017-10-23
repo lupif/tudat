@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1basic__astrodynamics_1_1AccelerationModel.html" title="tudat::basic_astrodynamics\l::AccelerationModel\&lt; Eigen\l::Vector3d \&gt;" alt="" coords="24,317,207,373"/>
+<area shape="rect" id="node2" href="$classtudat_1_1aerodynamics_1_1AerodynamicAcceleration.html" title="Class for calculation of aerodynamic accelerations. " alt="" coords="299,455,478,497"/>
+<area shape="rect" id="node3" href="$classtudat_1_1gravitation_1_1CentralJ2GravitationalAccelerationModel.html" title="Central + J2 gravitational acceleration model class. " alt="" coords="273,85,504,141"/>
+<area shape="rect" id="node4" href="$classtudat_1_1gravitation_1_1CentralJ2J3GravitationalAccelerationModel.html" title="Central + J2 + J3 gravitational acceleration model class. " alt="" coords="302,165,475,221"/>
+<area shape="rect" id="node5" href="$classtudat_1_1gravitation_1_1CentralJ2J3J4GravitationalAccelerationModel.html" title="Central + J2 + J3 + J4 gravitational acceleration model class. " alt="" coords="295,245,482,301"/>
+<area shape="rect" id="node6" href="$classtudat_1_1gravitation_1_1MutualSphericalHarmonicsGravitationalAccelerationModel.html" title="Class to calculate the mutual spherical harmonic gravitational acceleration between two bodies..." alt="" coords="287,520,490,576"/>
+<area shape="rect" id="node7" href="$classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel.html" title="Template class for general spherical harmonics gravitational acceleration model. " alt="" coords="279,5,499,61"/>
+<area shape="rect" id="node8" href="$classtudat_1_1gravitation_1_1ThirdBodyAcceleration.html" title="Class for calculating third&#45;body (gravitational) accelerations. " alt="" coords="280,600,497,656"/>
+<area shape="rect" id="node9" href="$classtudat_1_1propulsion_1_1ThrustAcceleration.html" title="Class used for computing an acceleration due to a continuous thrust. " alt="" coords="323,325,454,366"/>
+<area shape="rect" id="node10" href="$classtudat_1_1reference__frames_1_1ApparentAccelerationModel.html" title="Apparent acceleration model class. " alt="" coords="294,390,483,431"/>
+<area shape="rect" id="node11" href="$classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase.html" title="tudat::gravitation\l::SphericalHarmonicsGravitational\lAccelerationModelBase\&lt; Eigen\l::Vector3d \&gt;" alt="" coords="5,118,225,189"/>
+</map>

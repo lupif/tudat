@@ -1,0 +1,119 @@
+\hypertarget{classtudat_1_1interpolators_1_1LookUpScheme}{}\section{tudat\+:\+:interpolators\+:\+:Look\+Up\+Scheme$<$ Independent\+Variable\+Type $>$ Class Template Reference}
+\label{classtudat_1_1interpolators_1_1LookUpScheme}\index{tudat\+::interpolators\+::\+Look\+Up\+Scheme$<$ Independent\+Variable\+Type $>$@{tudat\+::interpolators\+::\+Look\+Up\+Scheme$<$ Independent\+Variable\+Type $>$}}
+
+
+Look-\/up scheme class for nearest left neighbour search.  
+
+
+
+
+{\ttfamily \#include $<$lookup\+Scheme.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:interpolators\+:\+:Look\+Up\+Scheme$<$ Independent\+Variable\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1interpolators_1_1LookUpScheme__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1interpolators_1_1LookUpScheme_a6e9a14c5e9a66966beba83a190f145eb}{Look\+Up\+Scheme} (const std\+::vector$<$ Independent\+Variable\+Type $>$ \&independent\+Variable\+Values)
+\begin{DoxyCompactList}\small\item\em Constructor, used to set data vector. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1interpolators_1_1LookUpScheme_a61dad132b9b66c6a673d6afa811a516d}{$\sim$\+Look\+Up\+Scheme} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classtudat_1_1interpolators_1_1LookUpScheme_a7749ee1bb2df25690a6e040a3e61f646}{find\+Nearest\+Lower\+Neighbour} (const Independent\+Variable\+Type value\+To\+Lookup)=0
+\begin{DoxyCompactList}\small\item\em Find nearest left neighbour. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Independent\+Variable\+Type $>$ \hyperlink{classtudat_1_1interpolators_1_1LookUpScheme_a753a3db9ce3acfe0bbb4272155360ab7}{independent\+Variable\+Values\+\_\+}
+\begin{DoxyCompactList}\small\item\em Vector of independent variable values in which lookup is to be performed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Independent\+Variable\+Type$>$\\*
+class tudat\+::interpolators\+::\+Look\+Up\+Scheme$<$ Independent\+Variable\+Type $>$}
+
+Look-\/up scheme class for nearest left neighbour search. 
+
+Look-\/up scheme class for nearest left neighbour search, allows for different types of look-\/up scheme with a single interface. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Independent\+Variable\+Type} & Type of entries of vector in which lookup is to be performed. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::interpolators\+::\+Look\+Up\+Scheme@{tudat\+::interpolators\+::\+Look\+Up\+Scheme}!Look\+Up\+Scheme@{Look\+Up\+Scheme}}
+\index{Look\+Up\+Scheme@{Look\+Up\+Scheme}!tudat\+::interpolators\+::\+Look\+Up\+Scheme@{tudat\+::interpolators\+::\+Look\+Up\+Scheme}}
+\subsubsection[{\texorpdfstring{Look\+Up\+Scheme(const std\+::vector$<$ Independent\+Variable\+Type $>$ \&independent\+Variable\+Values)}{LookUpScheme(const std::vector< IndependentVariableType > &independentVariableValues)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type $>$ {\bf tudat\+::interpolators\+::\+Look\+Up\+Scheme}$<$ Independent\+Variable\+Type $>$\+::{\bf Look\+Up\+Scheme} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Independent\+Variable\+Type $>$ \&}]{independent\+Variable\+Values}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1LookUpScheme_a6e9a14c5e9a66966beba83a190f145eb}{}\label{classtudat_1_1interpolators_1_1LookUpScheme_a6e9a14c5e9a66966beba83a190f145eb}
+
+
+Constructor, used to set data vector. 
+
+Constructor, used to set data vector. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variable\+Values} & vector of independent variable values in which to perform lookup procedure. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::interpolators\+::\+Look\+Up\+Scheme@{tudat\+::interpolators\+::\+Look\+Up\+Scheme}!````~Look\+Up\+Scheme@{$\sim$\+Look\+Up\+Scheme}}
+\index{````~Look\+Up\+Scheme@{$\sim$\+Look\+Up\+Scheme}!tudat\+::interpolators\+::\+Look\+Up\+Scheme@{tudat\+::interpolators\+::\+Look\+Up\+Scheme}}
+\subsubsection[{\texorpdfstring{$\sim$\+Look\+Up\+Scheme()}{~LookUpScheme()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type $>$ virtual {\bf tudat\+::interpolators\+::\+Look\+Up\+Scheme}$<$ Independent\+Variable\+Type $>$\+::$\sim${\bf Look\+Up\+Scheme} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1interpolators_1_1LookUpScheme_a61dad132b9b66c6a673d6afa811a516d}{}\label{classtudat_1_1interpolators_1_1LookUpScheme_a61dad132b9b66c6a673d6afa811a516d}
+
+
+Destructor. 
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::interpolators\+::\+Look\+Up\+Scheme@{tudat\+::interpolators\+::\+Look\+Up\+Scheme}!find\+Nearest\+Lower\+Neighbour@{find\+Nearest\+Lower\+Neighbour}}
+\index{find\+Nearest\+Lower\+Neighbour@{find\+Nearest\+Lower\+Neighbour}!tudat\+::interpolators\+::\+Look\+Up\+Scheme@{tudat\+::interpolators\+::\+Look\+Up\+Scheme}}
+\subsubsection[{\texorpdfstring{find\+Nearest\+Lower\+Neighbour(const Independent\+Variable\+Type value\+To\+Lookup)=0}{findNearestLowerNeighbour(const IndependentVariableType valueToLookup)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type $>$ virtual int {\bf tudat\+::interpolators\+::\+Look\+Up\+Scheme}$<$ Independent\+Variable\+Type $>$\+::find\+Nearest\+Lower\+Neighbour (
+\begin{DoxyParamCaption}
+\item[{const Independent\+Variable\+Type}]{value\+To\+Lookup}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1interpolators_1_1LookUpScheme_a7749ee1bb2df25690a6e040a3e61f646}{}\label{classtudat_1_1interpolators_1_1LookUpScheme_a7749ee1bb2df25690a6e040a3e61f646}
+
+
+Find nearest left neighbour. 
+
+Function finds nearest left neighbour of given value in independent\+Variable\+Values\+\_\+. 
+\begin{DoxyParams}{Parameters}
+{\em value\+To\+Lookup} & Value of which nearest neaighbour is to be determined. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of entry in independent\+Variable\+Values\+\_\+ vector which is nearest lower neighbour to value\+To\+Lookup. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1interpolators_1_1BinarySearchLookupScheme_a9c91bd06d198e6a5dc2a15ad7314c91f}{tudat\+::interpolators\+::\+Binary\+Search\+Lookup\+Scheme$<$ Independent\+Variable\+Type $>$}, and \hyperlink{classtudat_1_1interpolators_1_1HuntingAlgorithmLookupScheme_a52750dd9d4c1b1177459ee5630b24451}{tudat\+::interpolators\+::\+Hunting\+Algorithm\+Lookup\+Scheme$<$ Independent\+Variable\+Type $>$}.
+
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::interpolators\+::\+Look\+Up\+Scheme@{tudat\+::interpolators\+::\+Look\+Up\+Scheme}!independent\+Variable\+Values\+\_\+@{independent\+Variable\+Values\+\_\+}}
+\index{independent\+Variable\+Values\+\_\+@{independent\+Variable\+Values\+\_\+}!tudat\+::interpolators\+::\+Look\+Up\+Scheme@{tudat\+::interpolators\+::\+Look\+Up\+Scheme}}
+\subsubsection[{\texorpdfstring{independent\+Variable\+Values\+\_\+}{independentVariableValues_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type $>$ std\+::vector$<$ Independent\+Variable\+Type $>$ {\bf tudat\+::interpolators\+::\+Look\+Up\+Scheme}$<$ Independent\+Variable\+Type $>$\+::independent\+Variable\+Values\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1interpolators_1_1LookUpScheme_a753a3db9ce3acfe0bbb4272155360ab7}{}\label{classtudat_1_1interpolators_1_1LookUpScheme_a753a3db9ce3acfe0bbb4272155360ab7}
+
+
+Vector of independent variable values in which lookup is to be performed. 
+
+Vector of independent variable values in which lookup is to be performed. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Interpolators/lookup\+Scheme.\+h\end{DoxyCompactItemize}

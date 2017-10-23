@@ -1,0 +1,68 @@
+\hypertarget{classtudat_1_1input__output_1_1FieldTransform}{}\section{tudat\+:\+:input\+\_\+output\+:\+:Field\+Transform Class Reference}
+\label{classtudat_1_1input__output_1_1FieldTransform}\index{tudat\+::input\+\_\+output\+::\+Field\+Transform@{tudat\+::input\+\_\+output\+::\+Field\+Transform}}
+
+
+Field transform base class.  
+
+
+
+
+{\ttfamily \#include $<$field\+Transform.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:input\+\_\+output\+:\+:Field\+Transform\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classtudat_1_1input__output_1_1FieldTransform__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classtudat_1_1input__output_1_1FieldTransform_af96f02794dd22ee9db116bb83f81f0a9}{$\sim$\+Field\+Transform} ()\hypertarget{classtudat_1_1input__output_1_1FieldTransform_af96f02794dd22ee9db116bb83f81f0a9}{}\label{classtudat_1_1input__output_1_1FieldTransform_af96f02794dd22ee9db116bb83f81f0a9}
+
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+virtual boost\+::shared\+\_\+ptr$<$ std\+::string $>$ \hyperlink{classtudat_1_1input__output_1_1FieldTransform_ab4be93a414fa1175cbc518fffe3b912a}{transform} (const std\+::string \&input)=0
+\begin{DoxyCompactList}\small\item\em Transform input string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Field transform base class. 
+
+This abstract class belongs to the parser-\/extractor architecture implemented in Tudat. This base class can be used to derive specific transformation classes that take strings and return shared-\/pointers to transformed strings. \begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1input__output_1_1Extractor}{Extractor}, \hyperlink{classtudat_1_1input__output_1_1Parser}{Parser} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::input\+\_\+output\+::\+Field\+Transform@{tudat\+::input\+\_\+output\+::\+Field\+Transform}!transform@{transform}}
+\index{transform@{transform}!tudat\+::input\+\_\+output\+::\+Field\+Transform@{tudat\+::input\+\_\+output\+::\+Field\+Transform}}
+\subsubsection[{\texorpdfstring{transform(const std\+::string \&input)=0}{transform(const std::string &input)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual boost\+::shared\+\_\+ptr$<$ std\+::string $>$ tudat\+::input\+\_\+output\+::\+Field\+Transform\+::transform (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1input__output_1_1FieldTransform_ab4be93a414fa1175cbc518fffe3b912a}{}\label{classtudat_1_1input__output_1_1FieldTransform_ab4be93a414fa1175cbc518fffe3b912a}
+
+
+Transform input string. 
+
+Returns a transformed string. 
+\begin{DoxyParams}{Parameters}
+{\em input} & Input string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shared-\/pointer to transformed string. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1input__output_1_1LinearFieldTransform_ac4bb87a66f329fc36999f8fd78d477e4}{tudat\+::input\+\_\+output\+::\+Linear\+Field\+Transform}, and \hyperlink{structtudat_1_1unit__tests_1_1TestTransform_aa68c181987c9d82d51bcfae675c6fdba}{tudat\+::unit\+\_\+tests\+::\+Test\+Transform}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Input\+Output/field\+Transform.\+h\end{DoxyCompactItemize}

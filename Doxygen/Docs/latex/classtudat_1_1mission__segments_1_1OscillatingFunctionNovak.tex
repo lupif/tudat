@@ -1,0 +1,196 @@
+\hypertarget{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak}{}\section{tudat\+:\+:mission\+\_\+segments\+:\+:Oscillating\+Function\+Novak Class Reference}
+\label{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak}\index{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak@{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak}}
+
+
+{\ttfamily \#include $<$oscillating\+Function\+Novak.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:mission\+\_\+segments\+:\+:Oscillating\+Function\+Novak\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:mission\+\_\+segments\+:\+:Oscillating\+Function\+Novak\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_a2ad7eec25cc8fd85af87dca564544afb}{Oscillating\+Function\+Novak} (const boost\+::function$<$ std\+::pair$<$ Eigen\+::\+Vector2d, const Eigen\+::\+Vector2d $>$() $>$ a\+Set\+Of\+Boundary\+Parameters)
+\begin{DoxyCompactList}\small\item\em Default constructor with immediate definition of parameters. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_acbdd7fcee056d0b6433dbe909e24cd89}{$\sim$\+Oscillating\+Function\+Novak} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_a3d0ac0b2d7a09ed14894740fab68a0e6}{evaluate} (const double an\+Azimuthal\+Angle)
+\begin{DoxyCompactList}\small\item\em Evaluate the function value for a given (in-\/plane) azimuthal angle. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_ab6a7579fe3bed9a3901140f9e58d004c}{compute\+Derivative} (const unsigned int order, const double an\+Azimuthal\+Angle)
+\begin{DoxyCompactList}\small\item\em Compute the derivative of the function. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_ac8f56d30994eb778970c8b7d2b9a4568}{compute\+Definite\+Integral} (const unsigned int order, const double lower\+Bound, const double upper\+Bound)
+\begin{DoxyCompactList}\small\item\em Compute the definite integral of the function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Oscillating function approximating the (out-\/of-\/plane) elevation angle of a thrusting spacecraft.
+
+This class contains an oscillating function, and its exact first and second derivative w.\+r.\+t. the azimuthal angle $ \theta $. It is a mathematical function, and can be used to approximate the out-\/of-\/plane motion of a thrusting spacecraft. The function is documented by Novak and Vasile \mbox{[}2011\mbox{]}. It approximates the (out-\/of-\/plane) elevation angle of the spacecraft. The (out-\/of-\/plane) elevation angle is parameterized in terms of an independent variable, the (in-\/plane) azimuthal angle $ \theta $. The first and second derivative are taken with respect to this independent variable.
+
+The function is completely described by the independent variable $ \theta $ and a set of four parameters. These parameters are related to the boundary conditions of the problem\+: two initial conditions and two final conditions. These parameters are passed to this class as boost\+::functions to facilitate the flexible external manipulation of their values. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak@{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak}!Oscillating\+Function\+Novak@{Oscillating\+Function\+Novak}}
+\index{Oscillating\+Function\+Novak@{Oscillating\+Function\+Novak}!tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak@{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak}}
+\subsubsection[{\texorpdfstring{Oscillating\+Function\+Novak(const boost\+::function$<$ std\+::pair$<$ Eigen\+::\+Vector2d, const Eigen\+::\+Vector2d $>$() $>$ a\+Set\+Of\+Boundary\+Parameters)}{OscillatingFunctionNovak(const boost::function< std::pair< Eigen::Vector2d, const Eigen::Vector2d >() > aSetOfBoundaryParameters)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak\+::\+Oscillating\+Function\+Novak (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ std\+::pair$<$ Eigen\+::\+Vector2d, const Eigen\+::\+Vector2d $>$() $>$}]{a\+Set\+Of\+Boundary\+Parameters}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_a2ad7eec25cc8fd85af87dca564544afb}{}\label{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_a2ad7eec25cc8fd85af87dca564544afb}
+
+
+Default constructor with immediate definition of parameters. 
+
+Default constructor with immediate definition of parameters through boost\+::functions. This setup allows for a flexible external manipulation of the values of the parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Set\+Of\+Boundary\+Parameters} & A set of four parameters, related to the boundary conditions. These parameters are equivalent to the parameters b0, b1, b2, and b3 from Novak and Vasile \mbox{[}2011\mbox{]}. The order is important! a\+Set\+Of\+Boundary\+Parameters.\+first( 0 ) = b0 a\+Set\+Of\+Boundary\+Parameters.\+first( 1 ) = b1 a\+Set\+Of\+Boundary\+Parameters.\+second( 0 ) = b2 a\+Set\+Of\+Boundary\+Parameters.\+second( 1 ) = b3 \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak@{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak}!````~Oscillating\+Function\+Novak@{$\sim$\+Oscillating\+Function\+Novak}}
+\index{````~Oscillating\+Function\+Novak@{$\sim$\+Oscillating\+Function\+Novak}!tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak@{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak}}
+\subsubsection[{\texorpdfstring{$\sim$\+Oscillating\+Function\+Novak()}{~OscillatingFunctionNovak()}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak\+::$\sim$\+Oscillating\+Function\+Novak (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_acbdd7fcee056d0b6433dbe909e24cd89}{}\label{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_acbdd7fcee056d0b6433dbe909e24cd89}
+
+
+Default destructor. 
+
+Default destructor. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak@{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak}!compute\+Definite\+Integral@{compute\+Definite\+Integral}}
+\index{compute\+Definite\+Integral@{compute\+Definite\+Integral}!tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak@{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak}}
+\subsubsection[{\texorpdfstring{compute\+Definite\+Integral(const unsigned int order, const double lower\+Bound, const double upper\+Bound)}{computeDefiniteIntegral(const unsigned int order, const double lowerBound, const double upperBound)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak\+::compute\+Definite\+Integral (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{order, }
+\item[{const double}]{lower\+Bound, }
+\item[{const double}]{upper\+Bound}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_ac8f56d30994eb778970c8b7d2b9a4568}{}\label{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_ac8f56d30994eb778970c8b7d2b9a4568}
+
+
+Compute the definite integral of the function. 
+
+This function throws a runtime error when it is called. The integral of the inverse polynomial function is not part of the shape-\/based method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & Order of the integral to evaluate. \\
+\hline
+{\em lower\+Bound} & Integration lower bound (integrate from this point). \\
+\hline
+{\em upper\+Bound} & Integration upper bound (integrate to this point). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the integral.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & when this function is used. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classtudat_1_1basic__mathematics_1_1Function_a74c5639b8c6288471368e65312569e52}{tudat\+::basic\+\_\+mathematics\+::\+Function$<$  $>$}.
+
+\index{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak@{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak}!compute\+Derivative@{compute\+Derivative}}
+\index{compute\+Derivative@{compute\+Derivative}!tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak@{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak}}
+\subsubsection[{\texorpdfstring{compute\+Derivative(const unsigned int order, const double an\+Azimuthal\+Angle)}{computeDerivative(const unsigned int order, const double anAzimuthalAngle)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak\+::compute\+Derivative (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{order, }
+\item[{const double}]{an\+Azimuthal\+Angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_ab6a7579fe3bed9a3901140f9e58d004c}{}\label{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_ab6a7579fe3bed9a3901140f9e58d004c}
+
+
+Compute the derivative of the function. 
+
+Computes the derivative of a given order of the function, for a given (in-\/plane) azimuthal angle $ \theta $. It only evaluates the first, second or third derivative, therefore the order should be 1, 2 or 3.
+
+The first derivative of the function is\+:
+
+\[ \frac{ d \phi }{ d \theta } ( \theta ) = \left( b_1 + b_2 + b_3 \theta \right) \cos \theta - \left( b_0 + b_1 \theta - b_3 \right) \sin \theta \]
+
+The second derivative of the function is\+:
+
+\[ \frac{ d^2 \phi }{ d \theta^2 } ( \theta ) = \left( - b_0 - b_1 \theta + 2 b_3 \right) \cos \theta - \left( 2 b_1 + b_2 + b_3 \theta \right) \sin \theta \]
+
+The third derivative of the function is\+:
+
+\[ \frac{ d^3 \phi }{ d \theta^3 } ( \theta ) = - \left( 3 b_1 + b_2 + b_3 \theta \right) \cos \theta - \left( b_0 + b_1 \theta - 3 b_3 \right) \sin \theta \]
+
+In these formulas $ \phi $ is the (out-\/of-\/plane) elevation angle of the spacecraft, $ \theta $ is the (in-\/plane) azimuthal angle, the prime indicates the derivative with respect to $ \theta $, and $ ( b_0 ,b_1, b_2, b_3 ) $ are parameters that define the shape of the trajectory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & Order of the derivative to evaluate. Can be either 1, 2 or 3. \\
+\hline
+{\em an\+Azimuthal\+Angle} & Value of the (in-\/plane) azimuthal angle \mbox{[}rad\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the derivative of order 1, 2 or 3 of the function \mbox{[}-\/, rad$^\wedge$-\/1, rad$^\wedge$-\/2\mbox{]}. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1basic__mathematics_1_1Function_a0929cfbeb90a6cbc85d50455fd01d75f}{tudat\+::basic\+\_\+mathematics\+::\+Function$<$  $>$}.
+
+\index{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak@{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak@{tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak}}
+\subsubsection[{\texorpdfstring{evaluate(const double an\+Azimuthal\+Angle)}{evaluate(const double anAzimuthalAngle)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::mission\+\_\+segments\+::\+Oscillating\+Function\+Novak\+::evaluate (
+\begin{DoxyParamCaption}
+\item[{const double}]{an\+Azimuthal\+Angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_a3d0ac0b2d7a09ed14894740fab68a0e6}{}\label{classtudat_1_1mission__segments_1_1OscillatingFunctionNovak_a3d0ac0b2d7a09ed14894740fab68a0e6}
+
+
+Evaluate the function value for a given (in-\/plane) azimuthal angle. 
+
+Evaluates the oscillating function for a given (in-\/plane) azimuthal angle $ \theta $.
+
+The function is given by Novak and Vasile \mbox{[}2011\mbox{]} as\+:
+
+\[ \phi ( \theta ) = \left( b_0 + b_1 \theta \right) \cos \theta + \left( b_2 + b_3 \theta \right) sin \theta \]
+
+in which $ \phi $ is the (out-\/of-\/plane) elevation angle of the spacecraft, $ \theta $ is the (in-\/plane) azimuthal angle and $ ( b_0 ,b_1, b_2, b_3) $ are parameters that define the shape of the trajectory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em an\+Azimuthal\+Angle} & Value of the (in-\/plane) azimuthal angle \mbox{[}rad\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The (out-\/of-\/plane) elevation angle at $ \theta $ \mbox{[}m\mbox{]}. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1basic__mathematics_1_1Function_a69b59769da9784abaaa8a0a309d16de8}{tudat\+::basic\+\_\+mathematics\+::\+Function$<$  $>$}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Mission\+Segments/oscillating\+Function\+Novak.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Mission\+Segments/oscillating\+Function\+Novak.\+cpp\end{DoxyCompactItemize}

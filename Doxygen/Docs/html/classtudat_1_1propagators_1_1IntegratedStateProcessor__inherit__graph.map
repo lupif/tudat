@@ -1,0 +1,4 @@
+<map id="tudat::propagators::IntegratedStateProcessor&lt; TimeType, StateScalarType &gt;" name="tudat::propagators::IntegratedStateProcessor&lt; TimeType, StateScalarType &gt;">
+<area shape="rect" id="node2" href="$classtudat_1_1propagators_1_1BodyMassIntegratedStateProcessor.html" title="Class used for processing numerically integrated masses of bodies. " alt="" coords="263,5,503,61"/>
+<area shape="rect" id="node3" href="$classtudat_1_1propagators_1_1TranslationalStateIntegratedStateProcessor.html" title="Class used for processing numerically integrated translational states. " alt="" coords="286,86,479,157"/>
+</map>

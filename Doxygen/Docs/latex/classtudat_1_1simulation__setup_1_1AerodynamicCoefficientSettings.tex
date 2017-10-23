@@ -1,0 +1,234 @@
+\hypertarget{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings}{}\section{tudat\+:\+:simulation\+\_\+setup\+:\+:Aerodynamic\+Coefficient\+Settings Class Reference}
+\label{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings}\index{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}}
+
+
+Class for providing settings for aerodynamic coefficient model.  
+
+
+
+
+{\ttfamily \#include $<$create\+Aerodynamic\+Coefficient\+Interface.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:simulation\+\_\+setup\+:\+:Aerodynamic\+Coefficient\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_aa7965f3d180b9fbc3fdefa8b399473e8}{Aerodynamic\+Coefficient\+Settings} (const Aerodynamic\+Coefficient\+Types aerodynamic\+Coefficient\+Types, const double reference\+Length, const double reference\+Area, const double lateral\+Reference\+Length, const Eigen\+::\+Vector3d \&moment\+Reference\+Point, const std\+::vector$<$ aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables $>$ independent\+Variable\+Names, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=1, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=1)
+\begin{DoxyCompactList}\small\item\em Constructor, sets type of aerodynamic coefficient model. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a2286359e82a186bbfa640447859dffcb}{$\sim$\+Aerodynamic\+Coefficient\+Settings} ()\hypertarget{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a2286359e82a186bbfa640447859dffcb}{}\label{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a2286359e82a186bbfa640447859dffcb}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+Aerodynamic\+Coefficient\+Types \hyperlink{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_ac9cdc44679a42e11702489a3720b1e97}{get\+Aerodynamic\+Coefficient\+Type} ()
+\begin{DoxyCompactList}\small\item\em Function to return type of aerodynamic coefficient model that is to be created. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a435aa9070052b7442625e9ad010e4c57}{get\+Reference\+Area} ()
+\begin{DoxyCompactList}\small\item\em Get reference area. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a1332da808b8afe7418344d4009904427}{get\+Reference\+Length} ()
+\begin{DoxyCompactList}\small\item\em Get reference length. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a22915d5cfb8a662caf82b7ac082d7368}{get\+Lateral\+Reference\+Length} ()
+\begin{DoxyCompactList}\small\item\em Get lateral reference length. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a16b2b67e431df72bc0267189dd0dd4cc}{get\+Moment\+Reference\+Point} ()
+\begin{DoxyCompactList}\small\item\em Get moment reference point. \end{DoxyCompactList}\item 
+std\+::vector$<$ aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables $>$ \hyperlink{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a884a3349c41d023ab72e7566053227aa}{get\+Independent\+Variable\+Names} ()
+\begin{DoxyCompactList}\small\item\em Function to return identifiers of physical meaning of independent variables. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a19ec87d7db67573936c8c60825f56875}{get\+Are\+Coefficients\+In\+Aerodynamic\+Frame} ()
+\begin{DoxyCompactList}\small\item\em Function to return whether coefficients are in aerodynamic frame. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a8446d225c5c7011a81280fe0fa1958c3}{get\+Are\+Coefficients\+In\+Negative\+Axis\+Direction} ()
+\begin{DoxyCompactList}\small\item\em Function to return whether coefficients are positive along positive axes. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1simulation__setup_1_1ControlSurfaceIncrementAerodynamicCoefficientSettings}{Control\+Surface\+Increment\+Aerodynamic\+Coefficient\+Settings} $>$ $>$ {\bfseries get\+Control\+Surface\+Settings} ()\hypertarget{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a731406ba0baef00ccba55e8f965863f4}{}\label{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a731406ba0baef00ccba55e8f965863f4}
+
+\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a0e4b68cde88bc1e46fd0fccc00b5f524}{set\+Control\+Surface\+Settings} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1simulation__setup_1_1ControlSurfaceIncrementAerodynamicCoefficientSettings}{Control\+Surface\+Increment\+Aerodynamic\+Coefficient\+Settings} $>$ control\+Surface\+Setting, const std\+::string control\+Surface\+Name)
+\begin{DoxyCompactList}\small\item\em Function to define settings for the aerodynamic coefficients of a single control surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for providing settings for aerodynamic coefficient model. 
+
+Class for providing settings for automatic aerodynamic coefficient model creation. This class is a functional (base) class for settings of aerodynamic coefficient models that require no information in addition to their type. Aerodynamic coefficient model classes defining requiring additional information must be created using an object derived from this class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}!Aerodynamic\+Coefficient\+Settings@{Aerodynamic\+Coefficient\+Settings}}
+\index{Aerodynamic\+Coefficient\+Settings@{Aerodynamic\+Coefficient\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}}
+\subsubsection[{\texorpdfstring{Aerodynamic\+Coefficient\+Settings(const Aerodynamic\+Coefficient\+Types aerodynamic\+Coefficient\+Types, const double reference\+Length, const double reference\+Area, const double lateral\+Reference\+Length, const Eigen\+::\+Vector3d \&moment\+Reference\+Point, const std\+::vector$<$ aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables $>$ independent\+Variable\+Names, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=1, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=1)}{AerodynamicCoefficientSettings(const AerodynamicCoefficientTypes aerodynamicCoefficientTypes, const double referenceLength, const double referenceArea, const double lateralReferenceLength, const Eigen::Vector3d &momentReferencePoint, const std::vector< aerodynamics::AerodynamicCoefficientsIndependentVariables > independentVariableNames, const bool areCoefficientsInAerodynamicFrame=1, const bool areCoefficientsInNegativeAxisDirection=1)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings\+::\+Aerodynamic\+Coefficient\+Settings (
+\begin{DoxyParamCaption}
+\item[{const Aerodynamic\+Coefficient\+Types}]{aerodynamic\+Coefficient\+Types, }
+\item[{const double}]{reference\+Length, }
+\item[{const double}]{reference\+Area, }
+\item[{const double}]{lateral\+Reference\+Length, }
+\item[{const Eigen\+::\+Vector3d \&}]{moment\+Reference\+Point, }
+\item[{const std\+::vector$<$ aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables $>$}]{independent\+Variable\+Names, }
+\item[{const bool}]{are\+Coefficients\+In\+Aerodynamic\+Frame = {\ttfamily 1}, }
+\item[{const bool}]{are\+Coefficients\+In\+Negative\+Axis\+Direction = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_aa7965f3d180b9fbc3fdefa8b399473e8}{}\label{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_aa7965f3d180b9fbc3fdefa8b399473e8}
+
+
+Constructor, sets type of aerodynamic coefficient model. 
+
+Constructor, sets type of aerodynamic coefficient model. Settings for aerodynamic coefficient models requiring additional information should be defined in a derived class. 
+\begin{DoxyParams}{Parameters}
+{\em aerodynamic\+Coefficient\+Types} & Type of aerodynamic coefficient model that is to be created. \\
+\hline
+{\em reference\+Length} & Reference length with which aerodynamic moments (about x-\/ and z-\/ axes) are non-\/dimensionalized. \\
+\hline
+{\em reference\+Area} & Reference area with which aerodynamic forces and moments are non-\/dimensionalized. \\
+\hline
+{\em lateral\+Reference\+Length} & Reference length with which aerodynamic moments (about y-\/axis) is non-\/dimensionalized. \\
+\hline
+{\em moment\+Reference\+Point} & Point w.\+r.\+t. aerodynamic moment is calculated \\
+\hline
+{\em independent\+Variable\+Names} & Vector with identifiers the physical meaning of each independent variable of the aerodynamic coefficients. \\
+\hline
+{\em are\+Coefficients\+In\+Aerodynamic\+Frame} & Boolean to define whether the aerodynamic coefficients are defined in the aerodynamic frame (lift, drag, side force) or in the body frame (typically denoted as Cx, Cy, Cz). \\
+\hline
+{\em are\+Coefficients\+In\+Negative\+Axis\+Direction} & Boolean to define whether the aerodynamic coefficients are positive along the positive axes of the body or aerodynamic frame (see are\+Coefficients\+In\+Aerodynamic\+Frame). Note that for (lift, drag, side force), the coefficients are typically defined in negative direction. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}!get\+Aerodynamic\+Coefficient\+Type@{get\+Aerodynamic\+Coefficient\+Type}}
+\index{get\+Aerodynamic\+Coefficient\+Type@{get\+Aerodynamic\+Coefficient\+Type}!tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Aerodynamic\+Coefficient\+Type()}{getAerodynamicCoefficientType()}}]{\setlength{\rightskip}{0pt plus 5cm}Aerodynamic\+Coefficient\+Types tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings\+::get\+Aerodynamic\+Coefficient\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_ac9cdc44679a42e11702489a3720b1e97}{}\label{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_ac9cdc44679a42e11702489a3720b1e97}
+
+
+Function to return type of aerodynamic coefficient model that is to be created. 
+
+Function to return type of aerodynamic coefficient model that is to be created. \begin{DoxyReturn}{Returns}
+Type of aerodynamic coefficient model that is to be created. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}!get\+Are\+Coefficients\+In\+Aerodynamic\+Frame@{get\+Are\+Coefficients\+In\+Aerodynamic\+Frame}}
+\index{get\+Are\+Coefficients\+In\+Aerodynamic\+Frame@{get\+Are\+Coefficients\+In\+Aerodynamic\+Frame}!tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Are\+Coefficients\+In\+Aerodynamic\+Frame()}{getAreCoefficientsInAerodynamicFrame()}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings\+::get\+Are\+Coefficients\+In\+Aerodynamic\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a19ec87d7db67573936c8c60825f56875}{}\label{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a19ec87d7db67573936c8c60825f56875}
+
+
+Function to return whether coefficients are in aerodynamic frame. 
+
+Function to return whether coefficients are in aerodynamic frame. \begin{DoxyReturn}{Returns}
+Boolean defining whether coefficients are in aerodynamic frame. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}!get\+Are\+Coefficients\+In\+Negative\+Axis\+Direction@{get\+Are\+Coefficients\+In\+Negative\+Axis\+Direction}}
+\index{get\+Are\+Coefficients\+In\+Negative\+Axis\+Direction@{get\+Are\+Coefficients\+In\+Negative\+Axis\+Direction}!tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Are\+Coefficients\+In\+Negative\+Axis\+Direction()}{getAreCoefficientsInNegativeAxisDirection()}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings\+::get\+Are\+Coefficients\+In\+Negative\+Axis\+Direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a8446d225c5c7011a81280fe0fa1958c3}{}\label{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a8446d225c5c7011a81280fe0fa1958c3}
+
+
+Function to return whether coefficients are positive along positive axes. 
+
+Function to return whether coefficients are positive along positive axes. \begin{DoxyReturn}{Returns}
+Boolean defining whether coefficients are positive along positive axes. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}!get\+Independent\+Variable\+Names@{get\+Independent\+Variable\+Names}}
+\index{get\+Independent\+Variable\+Names@{get\+Independent\+Variable\+Names}!tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Independent\+Variable\+Names()}{getIndependentVariableNames()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ aerodynamics\+::\+Aerodynamic\+Coefficients\+Independent\+Variables $>$ tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings\+::get\+Independent\+Variable\+Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a884a3349c41d023ab72e7566053227aa}{}\label{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a884a3349c41d023ab72e7566053227aa}
+
+
+Function to return identifiers of physical meaning of independent variables. 
+
+Function to return identifiers of physical meaning of independent variables. \begin{DoxyReturn}{Returns}
+Identifiers of physical meaning of independent variables. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}!get\+Lateral\+Reference\+Length@{get\+Lateral\+Reference\+Length}}
+\index{get\+Lateral\+Reference\+Length@{get\+Lateral\+Reference\+Length}!tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Lateral\+Reference\+Length()}{getLateralReferenceLength()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings\+::get\+Lateral\+Reference\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a22915d5cfb8a662caf82b7ac082d7368}{}\label{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a22915d5cfb8a662caf82b7ac082d7368}
+
+
+Get lateral reference length. 
+
+Returns lateral reference length used to non-\/dimensionalize aerodynamic moments. \begin{DoxyReturn}{Returns}
+Aerodynamic lateral reference length. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}!get\+Moment\+Reference\+Point@{get\+Moment\+Reference\+Point}}
+\index{get\+Moment\+Reference\+Point@{get\+Moment\+Reference\+Point}!tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Moment\+Reference\+Point()}{getMomentReferencePoint()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings\+::get\+Moment\+Reference\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a16b2b67e431df72bc0267189dd0dd4cc}{}\label{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a16b2b67e431df72bc0267189dd0dd4cc}
+
+
+Get moment reference point. 
+
+Returns the point w.\+r.\+t. which the arm of the aerodynamic moment on a vehicle panel is determined. \begin{DoxyReturn}{Returns}
+Aerodynamic reference point. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}!get\+Reference\+Area@{get\+Reference\+Area}}
+\index{get\+Reference\+Area@{get\+Reference\+Area}!tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Reference\+Area()}{getReferenceArea()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings\+::get\+Reference\+Area (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a435aa9070052b7442625e9ad010e4c57}{}\label{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a435aa9070052b7442625e9ad010e4c57}
+
+
+Get reference area. 
+
+Returns reference area used to non-\/dimensionalize aerodynamic forces and moments. \begin{DoxyReturn}{Returns}
+Aerodynamic reference area. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}!get\+Reference\+Length@{get\+Reference\+Length}}
+\index{get\+Reference\+Length@{get\+Reference\+Length}!tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Reference\+Length()}{getReferenceLength()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings\+::get\+Reference\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a1332da808b8afe7418344d4009904427}{}\label{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a1332da808b8afe7418344d4009904427}
+
+
+Get reference length. 
+
+Returns reference length used to non-\/dimensionalize aerodynamic moments. \begin{DoxyReturn}{Returns}
+Aerodynamic reference length. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}!set\+Control\+Surface\+Settings@{set\+Control\+Surface\+Settings}}
+\index{set\+Control\+Surface\+Settings@{set\+Control\+Surface\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings}}
+\subsubsection[{\texorpdfstring{set\+Control\+Surface\+Settings(const boost\+::shared\+\_\+ptr$<$ Control\+Surface\+Increment\+Aerodynamic\+Coefficient\+Settings $>$ control\+Surface\+Setting, const std\+::string control\+Surface\+Name)}{setControlSurfaceSettings(const boost::shared_ptr< ControlSurfaceIncrementAerodynamicCoefficientSettings > controlSurfaceSetting, const std::string controlSurfaceName)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Aerodynamic\+Coefficient\+Settings\+::set\+Control\+Surface\+Settings (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Control\+Surface\+Increment\+Aerodynamic\+Coefficient\+Settings} $>$}]{control\+Surface\+Setting, }
+\item[{const std\+::string}]{control\+Surface\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a0e4b68cde88bc1e46fd0fccc00b5f524}{}\label{classtudat_1_1simulation__setup_1_1AerodynamicCoefficientSettings_a0e4b68cde88bc1e46fd0fccc00b5f524}
+
+
+Function to define settings for the aerodynamic coefficients of a single control surface. 
+
+Function to define settings for the aerodynamic coefficients of a single control surface 
+\begin{DoxyParams}{Parameters}
+{\em control\+Surface\+Setting} & Settings for the arodynamic coefficients of control surface. \\
+\hline
+{\em control\+Surface\+Name} & Id of control surface. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Environment\+Setup/create\+Aerodynamic\+Coefficient\+Interface.\+h\end{DoxyCompactItemize}

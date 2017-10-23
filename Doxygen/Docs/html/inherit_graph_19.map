@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1ephemerides_1_1Ephemeris.html" title="Ephemeris base class. " alt="" coords="5,219,139,260"/>
+<area shape="rect" id="node2" href="$classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsBase.html" title="Ephemeris base class using JPL &quot;Approximate Positions of Major Planets&quot;. " alt="" coords="187,41,411,83"/>
+<area shape="rect" id="node5" href="$classtudat_1_1ephemerides_1_1CompositeEphemeris.html" title="Class that combines a series of translational and rotational ephemeris functions. ..." alt="" coords="194,106,403,162"/>
+<area shape="rect" id="node6" href="$classtudat_1_1ephemerides_1_1ConstantEphemeris.html" title="Ephemeris class that gives a constant (i.e. time independent) state. " alt="" coords="226,185,371,227"/>
+<area shape="rect" id="node7" href="$classtudat_1_1ephemerides_1_1KeplerEphemeris.html" title="tudat::ephemerides\l::KeplerEphemeris" alt="" coords="232,251,365,292"/>
+<area shape="rect" id="node8" href="$classtudat_1_1ephemerides_1_1SpiceEphemeris.html" title="Ephemeris derived class which retrieves the state of a body directly from the SPICE library..." alt="" coords="232,316,365,357"/>
+<area shape="rect" id="node9" href="$classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris.html" title="Class that determines an ephemeris from tabulated data. " alt="" coords="194,381,403,437"/>
+<area shape="rect" id="node3" href="$classtudat_1_1ephemerides_1_1ApproximatePlanetPositions.html" title="Ephemeris class using JPL &quot;Approximate Positions of Major Planets&quot;. " alt="" coords="459,5,653,47"/>
+<area shape="rect" id="node4" href="$classtudat_1_1ephemerides_1_1ApproximatePlanetPositionsCircularCoplanar.html" title="Ephemeris class for circular, coplanar orbits using Approximate Positions of Major Planets..." alt="" coords="459,70,653,126"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1system__models_1_1EngineModel.html" title="Base class for a model of an engine, the mass rate/thrust computations are not implemented here..." alt="" coords="5,5,156,47"/>
+<area shape="rect" id="node2" href="$classtudat_1_1system__models_1_1DirectEngineModel.html" title="Engine model derived class in which the thrust is computed directly from teh propellant mass flow and..." alt="" coords="204,5,355,47"/>
+</map>

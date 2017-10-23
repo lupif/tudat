@@ -1,0 +1,4 @@
+<map id="tudat::estimatable_parameters::EstimatableParameterSettings" name="tudat::estimatable_parameters::EstimatableParameterSettings">
+<area shape="rect" id="node2" href="$classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateEstimatableParameterSettings.html" title="Class to define settings for estimating an initial translational state. " alt="" coords="284,5,515,76"/>
+<area shape="rect" id="node3" href="$classtudat_1_1estimatable__parameters_1_1SphericalHarmonicEstimatableParameterSettings.html" title="Class for providing settings spherical harmonic coefficient(s) parameter. " alt="" coords="293,101,505,157"/>
+</map>

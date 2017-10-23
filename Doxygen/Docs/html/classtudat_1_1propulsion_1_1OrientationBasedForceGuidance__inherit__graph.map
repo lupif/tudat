@@ -1,0 +1,4 @@
+<map id="tudat::propulsion::OrientationBasedForceGuidance" name="tudat::propulsion::OrientationBasedForceGuidance">
+<area shape="rect" id="node2" href="$classtudat_1_1propulsion_1_1BodyFixedForceDirectionGuidance.html" title="Base class for computing the direction of a given force/acceleration. " alt="" coords="5,95,229,136"/>
+<area shape="rect" id="node3" href="$classtudat_1_1reference__frames_1_1DependentOrientationCalculator.html" title="Class that computes the orientation of a body as a function of the current state and time..." alt="" coords="10,5,225,47"/>
+</map>

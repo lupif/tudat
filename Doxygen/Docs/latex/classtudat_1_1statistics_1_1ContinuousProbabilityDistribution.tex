@@ -1,0 +1,93 @@
+\hypertarget{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution}{}\section{tudat\+:\+:statistics\+:\+:Continuous\+Probability\+Distribution$<$ Independent\+Variable\+Type $>$ Class Template Reference}
+\label{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution}\index{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution$<$ Independent\+Variable\+Type $>$@{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution$<$ Independent\+Variable\+Type $>$}}
+
+
+Base class for a continuous random variable.  
+
+
+
+
+{\ttfamily \#include $<$continuous\+Probability\+Distributions.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:statistics\+:\+:Continuous\+Probability\+Distribution$<$ Independent\+Variable\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_a621a691342d27745eb2e9f617372e075}{$\sim$\+Continuous\+Probability\+Distribution} ()\hypertarget{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_a621a691342d27745eb2e9f617372e075}{}\label{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_a621a691342d27745eb2e9f617372e075}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_a7edfe6753ce63fe4e12409d3fb88e499}{evaluate\+Pdf} (const Independent\+Variable\+Type \&independent\+Variable)=0
+\begin{DoxyCompactList}\small\item\em Function to evaluate pdf of distribution. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_ad60887b5623ded9e73456dedcbf32a8a}{evaluate\+Cdf} (const Independent\+Variable\+Type \&independent\+Variable)=0
+\begin{DoxyCompactList}\small\item\em Function to evaluate cdf of distribution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Independent\+Variable\+Type$>$\\*
+class tudat\+::statistics\+::\+Continuous\+Probability\+Distribution$<$ Independent\+Variable\+Type $>$}
+
+Base class for a continuous random variable. 
+
+Base class for a continuous random variable, providing interfaces for evaluating probability and cumulative distribution functions (inverse cdf is only available for derived class \hyperlink{classtudat_1_1statistics_1_1InvertibleContinuousProbabilityDistribution}{Invertible\+Continuous\+Probability\+Distribution}). Specific functions are to be implemented by derived class. Derived class may be used for random number generation through \hyperlink{classtudat_1_1statistics_1_1ContinuousRandomVariableGenerator}{Continuous\+Random\+Variable\+Generator} class. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution@{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution}!evaluate\+Cdf@{evaluate\+Cdf}}
+\index{evaluate\+Cdf@{evaluate\+Cdf}!tudat\+::statistics\+::\+Continuous\+Probability\+Distribution@{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution}}
+\subsubsection[{\texorpdfstring{evaluate\+Cdf(const Independent\+Variable\+Type \&independent\+Variable)=0}{evaluateCdf(const IndependentVariableType &independentVariable)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type$>$ virtual double {\bf tudat\+::statistics\+::\+Continuous\+Probability\+Distribution}$<$ Independent\+Variable\+Type $>$\+::evaluate\+Cdf (
+\begin{DoxyParamCaption}
+\item[{const Independent\+Variable\+Type \&}]{independent\+Variable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_ad60887b5623ded9e73456dedcbf32a8a}{}\label{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_ad60887b5623ded9e73456dedcbf32a8a}
+
+
+Function to evaluate cdf of distribution. 
+
+Function to evaluate cumulative distribution function at given independent\+Variable value. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variable} & Value of independent variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Evaluated cdf 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd_a0c12013ebf12d3c5418431fef33fc2a8}{tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd}, \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_a414da60bdbf0bbcd97cdccc42521d6aa}{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}, \hyperlink{classtudat_1_1statistics_1_1GaussianDistributionXd_a35b5b2168a1856aa4f93fca963c430e1}{tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd}, \hyperlink{classtudat_1_1statistics_1_1BoostContinuousProbabilityDistribution_aacf2e0c715bddf0618d0af5f8abf8eb9}{tudat\+::statistics\+::\+Boost\+Continuous\+Probability\+Distribution$<$ Boost\+Distribution\+Type $>$}, and \hyperlink{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution_a168c6dc6cec1b90c5eb98fc04509a980}{tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution}.
+
+\index{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution@{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution}!evaluate\+Pdf@{evaluate\+Pdf}}
+\index{evaluate\+Pdf@{evaluate\+Pdf}!tudat\+::statistics\+::\+Continuous\+Probability\+Distribution@{tudat\+::statistics\+::\+Continuous\+Probability\+Distribution}}
+\subsubsection[{\texorpdfstring{evaluate\+Pdf(const Independent\+Variable\+Type \&independent\+Variable)=0}{evaluatePdf(const IndependentVariableType &independentVariable)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type$>$ virtual double {\bf tudat\+::statistics\+::\+Continuous\+Probability\+Distribution}$<$ Independent\+Variable\+Type $>$\+::evaluate\+Pdf (
+\begin{DoxyParamCaption}
+\item[{const Independent\+Variable\+Type \&}]{independent\+Variable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_a7edfe6753ce63fe4e12409d3fb88e499}{}\label{classtudat_1_1statistics_1_1ContinuousProbabilityDistribution_a7edfe6753ce63fe4e12409d3fb88e499}
+
+
+Function to evaluate pdf of distribution. 
+
+Function to evaluate probability distribution function at given independent\+Variable value. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variable} & Value of independent variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Evaluated pdf 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1statistics_1_1GaussianCopulaDistributionXd_afa1a343fc638373f6df65402327f2135}{tudat\+::statistics\+::\+Gaussian\+Copula\+Distribution\+Xd}, \hyperlink{classtudat_1_1statistics_1_1KernelDensityDistribution_ac8713330d605559df79f572175d9136c}{tudat\+::statistics\+::\+Kernel\+Density\+Distribution}, \hyperlink{classtudat_1_1statistics_1_1GaussianDistributionXd_a8b09ee64c8fe4ddb15bdba86b9eb5a5a}{tudat\+::statistics\+::\+Gaussian\+Distribution\+Xd}, \hyperlink{classtudat_1_1statistics_1_1BoostContinuousProbabilityDistribution_a4ca43440bd33baebea62c568f0fb5df4}{tudat\+::statistics\+::\+Boost\+Continuous\+Probability\+Distribution$<$ Boost\+Distribution\+Type $>$}, and \hyperlink{classtudat_1_1statistics_1_1EpanechnikovKernelDistribution_ad4ef6494dd02a5efae26ffe69e1f8008}{tudat\+::statistics\+::\+Epanechnikov\+Kernel\+Distribution}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Statistics/continuous\+Probability\+Distributions.\+h\end{DoxyCompactItemize}

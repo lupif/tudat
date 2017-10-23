@@ -75,10 +75,10 @@ public:
      */
     bool checkStopCondition( const double time );
 
-private:
-
     //! Time at which the propagation is to stop.
     double stopTime_;
+
+private:
 
     //!  Boolean denoting whether propagation is forward (if true) or backwards (if false) in time.
     bool propagationDirectionIsPositive_;

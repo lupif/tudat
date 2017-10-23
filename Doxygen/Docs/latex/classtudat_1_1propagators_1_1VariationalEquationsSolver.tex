@@ -1,0 +1,276 @@
+\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver}{}\section{tudat\+:\+:propagators\+:\+:Variational\+Equations\+Solver$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$ Class Template Reference}
+\label{classtudat_1_1propagators_1_1VariationalEquationsSolver}\index{tudat\+::propagators\+::\+Variational\+Equations\+Solver$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$@{tudat\+::propagators\+::\+Variational\+Equations\+Solver$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$}}
+
+
+Base class to manage and execute the numerical integration of equations of motion and variational equations.  
+
+
+
+
+{\ttfamily \#include $<$variational\+Equations\+Solver.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:propagators\+:\+:Variational\+Equations\+Solver$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1propagators_1_1VariationalEquationsSolver__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ {\bfseries Matrix\+Type}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_ad4639e1aad6a3e6b811769f9d1c51feb}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_ad4639e1aad6a3e6b811769f9d1c51feb}
+
+\item 
+typedef Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ {\bfseries Vector\+Type}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_a95c5bdd319fc92458c5eda3e5a4906c0}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_a95c5bdd319fc92458c5eda3e5a4906c0}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_adc3b68e3033ad7cfefe4266321e85095}{Variational\+Equations\+Solver} (const simulation\+\_\+setup\+::\+Named\+Body\+Map \&body\+Map, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1numerical__integrators_1_1IntegratorSettings}{numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ Time\+Type $>$ $>$ integrator\+Settings, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings}{Propagator\+Settings}$<$ State\+Scalar\+Type $>$ $>$ propagator\+Settings, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSet}{estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Set}$<$ Parameter\+Type $>$ $>$ parameters\+To\+Estimate, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1numerical__integrators_1_1IntegratorSettings}{numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ double $>$ $>$ variational\+Only\+Integrator\+Settings=boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1numerical__integrators_1_1IntegratorSettings}{numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ double $>$ $>$(), const bool clear\+Numerical\+Solution=1)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_abbc0a83ac50173cc4b1aae6985bc2853}{$\sim$\+Variational\+Equations\+Solver} ()\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_abbc0a83ac50173cc4b1aae6985bc2853}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_abbc0a83ac50173cc4b1aae6985bc2853}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_a89625f4936bc9e218393ab04f1c5437d}{integrate\+Variational\+And\+Dynamical\+Equations} (const Vector\+Type \&initial\+State\+Estimate, const bool integrate\+Equations\+Concurrently)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to integrate variational equations and equations of motion. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_ad54e671becd6caf888e642ad0d50bec8}{integrate\+Dynamical\+Equations\+Of\+Motion\+Only} (const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \&initial\+State\+Estimate)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to integrate equations of motion only. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSet}{estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Set}$<$ Parameter\+Type $>$ $>$ \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_af2559bdd3b95e84ebcefd15477839073}{get\+Parameters\+To\+Estimate} ()
+\begin{DoxyCompactList}\small\item\em Function to get the list of objects representing the parameters that are to be integrated. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_a6141e2cd3c359ebc2c7a57f5d25e6d85}{reset\+Parameter\+Estimate} (const Eigen\+::\+Matrix$<$ Parameter\+Type, Eigen\+::\+Dynamic, 1 $>$ new\+Parameter\+Estimate, const bool are\+Variational\+Equations\+To\+Be\+Integrated=true)
+\begin{DoxyCompactList}\small\item\em Function to reset parameter estimate and re-\/integrate equations of motion and, if desired, variational equations. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1CombinedStateTransitionAndSensitivityMatrixInterface}{Combined\+State\+Transition\+And\+Sensitivity\+Matrix\+Interface} $>$ \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_a8b3fe85d9b41b41e8660f28f6f09b6ff}{get\+State\+Transition\+Matrix\+Interface} ()
+\begin{DoxyCompactList}\small\item\em Function to get the state transition matric interface object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Matrix\+Type \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_a092e25fe320b08f16d262ff076eec174}{create\+Initial\+Conditions} (const Vector\+Type initial\+State\+Estimate)
+\begin{DoxyCompactList}\small\item\em Create initial matrix of numerical soluation to variational + dynamical equations. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_a7926238714b28632fa31412c602deb32}{create\+Initial\+Variational\+Equations\+Solution} ()
+\begin{DoxyCompactList}\small\item\em Create initial matrix of numerical soluation to variational equations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameterSet}{estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Set}$<$ Parameter\+Type $>$ $>$ \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_a6817642d5b3777aefb2afa6aa4a837c7}{parameters\+To\+Estimate\+\_\+}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_a6817642d5b3777aefb2afa6aa4a837c7}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_a6817642d5b3777aefb2afa6aa4a837c7}
+
+\begin{DoxyCompactList}\small\item\em Object containing all parameters that are to be estimated and their current settings and values. \end{DoxyCompactList}\item 
+simulation\+\_\+setup\+::\+Named\+Body\+Map \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_a40b4be0225f2330905ab9f1682949a01}{body\+Map\+\_\+}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_a40b4be0225f2330905ab9f1682949a01}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_a40b4be0225f2330905ab9f1682949a01}
+
+\begin{DoxyCompactList}\small\item\em Map of bodies (with names) of all bodies in integration. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings}{Propagator\+Settings}$<$ State\+Scalar\+Type $>$ $>$ \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_a05efc1aa102c904f9fd067c42d0f0147}{propagator\+Settings\+\_\+}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_a05efc1aa102c904f9fd067c42d0f0147}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_a05efc1aa102c904f9fd067c42d0f0147}
+
+\begin{DoxyCompactList}\small\item\em Settings for propagation of equations of motion. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1numerical__integrators_1_1IntegratorSettings}{numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ Time\+Type $>$ $>$ \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_a6dcce7f553899e40a95ee33ceb7535d8}{integrator\+Settings\+\_\+}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_a6dcce7f553899e40a95ee33ceb7535d8}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_a6dcce7f553899e40a95ee33ceb7535d8}
+
+\begin{DoxyCompactList}\small\item\em Settings for numerical integrator of combined propagation of variational equations and equations of motion. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1numerical__integrators_1_1IntegratorSettings}{numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ double $>$ $>$ \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_aab806e22e2846e9a3fe728415d4bc3e0}{variational\+Only\+Integrator\+Settings\+\_\+}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_aab806e22e2846e9a3fe728415d4bc3e0}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_aab806e22e2846e9a3fe728415d4bc3e0}
+
+\begin{DoxyCompactList}\small\item\em Settings for numerical integrator when integrating only variational equations. \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_a95ad604b916f45a66a30f39b9fd3ccfe}{state\+Transition\+Matrix\+Size\+\_\+}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_a95ad604b916f45a66a30f39b9fd3ccfe}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_a95ad604b916f45a66a30f39b9fd3ccfe}
+
+\begin{DoxyCompactList}\small\item\em Size (rows and columns are equal) of state transition matrix. \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_a9588a7ecfb76f72d9a0446701c0ae9cd}{parameter\+Vector\+Size\+\_\+}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_a9588a7ecfb76f72d9a0446701c0ae9cd}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_a9588a7ecfb76f72d9a0446701c0ae9cd}
+
+\begin{DoxyCompactList}\small\item\em Number of rows in sensitivity matrix. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_af7c2f15b08a06114fe9a2b899e3a4382}{clear\+Numerical\+Solution\+\_\+}
+\begin{DoxyCompactList}\small\item\em Boolean to determine whether to clear the raw numerical solution member variables after propagation. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1CombinedStateTransitionAndSensitivityMatrixInterface}{Combined\+State\+Transition\+And\+Sensitivity\+Matrix\+Interface} $>$ \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_af3827ac779928436b6d1e8297988af97}{state\+Transition\+Interface\+\_\+}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_af3827ac779928436b6d1e8297988af97}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_af3827ac779928436b6d1e8297988af97}
+
+\begin{DoxyCompactList}\small\item\em Object used for interpolating numerical results of state transition and sensitivity matrix. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel}{Dynamics\+State\+Derivative\+Model}$<$ Time\+Type, State\+Scalar\+Type $>$ $>$ \hyperlink{classtudat_1_1propagators_1_1VariationalEquationsSolver_a4b2adaa9bdcae6706d5413878790aa41}{dynamics\+State\+Derivative\+\_\+}
+\begin{DoxyCompactList}\small\item\em Object used to compute the full state derivative in equations of motion and variational equations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename State\+Scalar\+Type = double, typename Time\+Type = double, typename Parameter\+Type = double$>$\\*
+class tudat\+::propagators\+::\+Variational\+Equations\+Solver$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$}
+
+Base class to manage and execute the numerical integration of equations of motion and variational equations. 
+
+Base class to manage and execute the numerical integration of equations of motion and variational equations. Governing equations are set once, but can be re-\/integrated for different initial conditions using the same instance of the class. Derived classes define the specific kind of integration that is performed (single-\/arc/multi-\/arc; dynamics/variational equations, etc.) 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}!Variational\+Equations\+Solver@{Variational\+Equations\+Solver}}
+\index{Variational\+Equations\+Solver@{Variational\+Equations\+Solver}!tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}}
+\subsubsection[{\texorpdfstring{Variational\+Equations\+Solver(const simulation\+\_\+setup\+::\+Named\+Body\+Map \&body\+Map, const boost\+::shared\+\_\+ptr$<$ numerical\+\_\+integrators\+::\+Integrator\+Settings$<$ Time\+Type $>$ $>$ integrator\+Settings, const boost\+::shared\+\_\+ptr$<$ Propagator\+Settings$<$ State\+Scalar\+Type $>$ $>$ propagator\+Settings, const boost\+::shared\+\_\+ptr$<$ estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Set$<$ Parameter\+Type $>$ $>$ parameters\+To\+Estimate, const boost\+::shared\+\_\+ptr$<$ numerical\+\_\+integrators\+::\+Integrator\+Settings$<$ double $>$ $>$ variational\+Only\+Integrator\+Settings=boost\+::shared\+\_\+ptr$<$ numerical\+\_\+integrators\+::\+Integrator\+Settings$<$ double $>$ $>$(), const bool clear\+Numerical\+Solution=1)}{VariationalEquationsSolver(const simulation_setup::NamedBodyMap &bodyMap, const boost::shared_ptr< numerical_integrators::IntegratorSettings< TimeType > > integratorSettings, const boost::shared_ptr< PropagatorSettings< StateScalarType > > propagatorSettings, const boost::shared_ptr< estimatable_parameters::EstimatableParameterSet< ParameterType > > parametersToEstimate, const boost::shared_ptr< numerical_integrators::IntegratorSettings< double > > variationalOnlyIntegratorSettings=boost::shared_ptr< numerical_integrators::IntegratorSettings< double > >(), const bool clearNumericalSolution=1)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double, typename Parameter\+Type  = double$>$ {\bf tudat\+::propagators\+::\+Variational\+Equations\+Solver}$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$\+::{\bf Variational\+Equations\+Solver} (
+\begin{DoxyParamCaption}
+\item[{const simulation\+\_\+setup\+::\+Named\+Body\+Map \&}]{body\+Map, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ Time\+Type $>$ $>$}]{integrator\+Settings, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Propagator\+Settings}$<$ State\+Scalar\+Type $>$ $>$}]{propagator\+Settings, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Set}$<$ Parameter\+Type $>$ $>$}]{parameters\+To\+Estimate, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$ double $>$ $>$}]{variational\+Only\+Integrator\+Settings = {\ttfamily boost\+:\+:shared\+\_\+ptr$<$~{\bf numerical\+\_\+integrators\+::\+Integrator\+Settings}$<$~double~$>$~$>$(~)}, }
+\item[{const bool}]{clear\+Numerical\+Solution = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_adc3b68e3033ad7cfefe4266321e85095}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_adc3b68e3033ad7cfefe4266321e85095}
+
+
+Constructor. 
+
+Constructor, sets up object for automatic evaluation and numerical integration of variational equations and equations of motion. 
+\begin{DoxyParams}{Parameters}
+{\em body\+Map} & Map of bodies (with names) of all bodies in integration. \\
+\hline
+{\em integrator\+Settings} & Settings for numerical integrator of combined propagation of variational equations and equations of motion. \\
+\hline
+{\em propagator\+Settings} & Settings for propagation of equations of motion. \\
+\hline
+{\em parameters\+To\+Estimate} & Object containing all parameters that are to be estimated and their current settings and values. \\
+\hline
+{\em variational\+Only\+Integrator\+Settings} & Settings for numerical integrator when integrating only variational equations. \\
+\hline
+{\em clear\+Numerical\+Solution} & Boolean to determine whether to clear the raw numerical solution member variables (default true) after propagation and resetting of state transition interface. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}!create\+Initial\+Conditions@{create\+Initial\+Conditions}}
+\index{create\+Initial\+Conditions@{create\+Initial\+Conditions}!tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}}
+\subsubsection[{\texorpdfstring{create\+Initial\+Conditions(const Vector\+Type initial\+State\+Estimate)}{createInitialConditions(const VectorType initialStateEstimate)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double, typename Parameter\+Type  = double$>$ Matrix\+Type {\bf tudat\+::propagators\+::\+Variational\+Equations\+Solver}$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$\+::create\+Initial\+Conditions (
+\begin{DoxyParamCaption}
+\item[{const Vector\+Type}]{initial\+State\+Estimate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_a092e25fe320b08f16d262ff076eec174}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_a092e25fe320b08f16d262ff076eec174}
+
+
+Create initial matrix of numerical soluation to variational + dynamical equations. 
+
+Create initial matrix of numerical soluation to variational + dynamical equations. The structure of the matrix is \mbox{[}Phi;S;y\mbox{]}, with Phi the state transition matrix, S the sensitivity matrix y the state vector. 
+\begin{DoxyParams}{Parameters}
+{\em initial\+State\+Estimate} & vector of initial state (position/velocity) of bodies to be integrated numerically. order determined by order of bodies\+To\+Integrate\+\_\+. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Initial matrix of numerical soluation to variation + state equations. 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}!create\+Initial\+Variational\+Equations\+Solution@{create\+Initial\+Variational\+Equations\+Solution}}
+\index{create\+Initial\+Variational\+Equations\+Solution@{create\+Initial\+Variational\+Equations\+Solution}!tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}}
+\subsubsection[{\texorpdfstring{create\+Initial\+Variational\+Equations\+Solution()}{createInitialVariationalEquationsSolution()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double, typename Parameter\+Type  = double$>$ Eigen\+::\+Matrix\+Xd {\bf tudat\+::propagators\+::\+Variational\+Equations\+Solver}$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$\+::create\+Initial\+Variational\+Equations\+Solution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_a7926238714b28632fa31412c602deb32}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_a7926238714b28632fa31412c602deb32}
+
+
+Create initial matrix of numerical soluation to variational equations. 
+
+Create initial matrix of numerical soluation to variational equations, with structure \mbox{[}Phi;S\mbox{]}. Initial state transition matrix Phi is identity matrix. Initial sensitivity matrix S is all zeros. \begin{DoxyReturn}{Returns}
+Initial matrix solution to variational equations. 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}!get\+Parameters\+To\+Estimate@{get\+Parameters\+To\+Estimate}}
+\index{get\+Parameters\+To\+Estimate@{get\+Parameters\+To\+Estimate}!tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}}
+\subsubsection[{\texorpdfstring{get\+Parameters\+To\+Estimate()}{getParametersToEstimate()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double, typename Parameter\+Type  = double$>$ boost\+::shared\+\_\+ptr$<$ {\bf estimatable\+\_\+parameters\+::\+Estimatable\+Parameter\+Set}$<$ Parameter\+Type $>$ $>$ {\bf tudat\+::propagators\+::\+Variational\+Equations\+Solver}$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$\+::get\+Parameters\+To\+Estimate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_af2559bdd3b95e84ebcefd15477839073}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_af2559bdd3b95e84ebcefd15477839073}
+
+
+Function to get the list of objects representing the parameters that are to be integrated. 
+
+Function to get the list of objects representing the parameters that are to be integrated. \begin{DoxyReturn}{Returns}
+List of objects representing the parameters that are to be integrated. 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}!get\+State\+Transition\+Matrix\+Interface@{get\+State\+Transition\+Matrix\+Interface}}
+\index{get\+State\+Transition\+Matrix\+Interface@{get\+State\+Transition\+Matrix\+Interface}!tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}}
+\subsubsection[{\texorpdfstring{get\+State\+Transition\+Matrix\+Interface()}{getStateTransitionMatrixInterface()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double, typename Parameter\+Type  = double$>$ boost\+::shared\+\_\+ptr$<$ {\bf Combined\+State\+Transition\+And\+Sensitivity\+Matrix\+Interface} $>$ {\bf tudat\+::propagators\+::\+Variational\+Equations\+Solver}$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$\+::get\+State\+Transition\+Matrix\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_a8b3fe85d9b41b41e8660f28f6f09b6ff}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_a8b3fe85d9b41b41e8660f28f6f09b6ff}
+
+
+Function to get the state transition matric interface object. 
+
+Function to get the state transition matric interface object. \begin{DoxyReturn}{Returns}
+The state transition matric interface object. 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}!integrate\+Dynamical\+Equations\+Of\+Motion\+Only@{integrate\+Dynamical\+Equations\+Of\+Motion\+Only}}
+\index{integrate\+Dynamical\+Equations\+Of\+Motion\+Only@{integrate\+Dynamical\+Equations\+Of\+Motion\+Only}!tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}}
+\subsubsection[{\texorpdfstring{integrate\+Dynamical\+Equations\+Of\+Motion\+Only(const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \&initial\+State\+Estimate)=0}{integrateDynamicalEquationsOfMotionOnly(const Eigen::Matrix< StateScalarType, Eigen::Dynamic, Eigen::Dynamic > &initialStateEstimate)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double, typename Parameter\+Type  = double$>$ virtual void {\bf tudat\+::propagators\+::\+Variational\+Equations\+Solver}$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$\+::integrate\+Dynamical\+Equations\+Of\+Motion\+Only (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \&}]{initial\+State\+Estimate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_ad54e671becd6caf888e642ad0d50bec8}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_ad54e671becd6caf888e642ad0d50bec8}
+
+
+Pure virtual function to integrate equations of motion only. 
+
+Pure virtual function to integrate equations of motion only, to be implemented in derived class 
+\begin{DoxyParams}{Parameters}
+{\em initial\+State\+Estimate} & Initial state of the equations of motion that is to be used. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classtudat_1_1propagators_1_1SingleArcVariationalEquationsSolver_a4539576388919b85435868ab187ddee3}{tudat\+::propagators\+::\+Single\+Arc\+Variational\+Equations\+Solver$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$}.
+
+\index{tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}!integrate\+Variational\+And\+Dynamical\+Equations@{integrate\+Variational\+And\+Dynamical\+Equations}}
+\index{integrate\+Variational\+And\+Dynamical\+Equations@{integrate\+Variational\+And\+Dynamical\+Equations}!tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}}
+\subsubsection[{\texorpdfstring{integrate\+Variational\+And\+Dynamical\+Equations(const Vector\+Type \&initial\+State\+Estimate, const bool integrate\+Equations\+Concurrently)=0}{integrateVariationalAndDynamicalEquations(const VectorType &initialStateEstimate, const bool integrateEquationsConcurrently)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double, typename Parameter\+Type  = double$>$ virtual void {\bf tudat\+::propagators\+::\+Variational\+Equations\+Solver}$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$\+::integrate\+Variational\+And\+Dynamical\+Equations (
+\begin{DoxyParamCaption}
+\item[{const Vector\+Type \&}]{initial\+State\+Estimate, }
+\item[{const bool}]{integrate\+Equations\+Concurrently}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_a89625f4936bc9e218393ab04f1c5437d}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_a89625f4936bc9e218393ab04f1c5437d}
+
+
+Pure virtual function to integrate variational equations and equations of motion. 
+
+Pure virtual function to integrate variational equations and equations of motion, to be implemented in derived class 
+\begin{DoxyParams}{Parameters}
+{\em initial\+State\+Estimate} & Initial state of the equations of motion that is to be used. \\
+\hline
+{\em integrate\+Equations\+Concurrently} & Variable determining whether the equations of motion are to be propagated concurrently with variational equations of motion (if true), or before variational equations (if false). \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classtudat_1_1propagators_1_1SingleArcVariationalEquationsSolver_a38c4b0a4a9d7e93990de7433e31552f1}{tudat\+::propagators\+::\+Single\+Arc\+Variational\+Equations\+Solver$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$}.
+
+\index{tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}!reset\+Parameter\+Estimate@{reset\+Parameter\+Estimate}}
+\index{reset\+Parameter\+Estimate@{reset\+Parameter\+Estimate}!tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}}
+\subsubsection[{\texorpdfstring{reset\+Parameter\+Estimate(const Eigen\+::\+Matrix$<$ Parameter\+Type, Eigen\+::\+Dynamic, 1 $>$ new\+Parameter\+Estimate, const bool are\+Variational\+Equations\+To\+Be\+Integrated=true)}{resetParameterEstimate(const Eigen::Matrix< ParameterType, Eigen::Dynamic, 1 > newParameterEstimate, const bool areVariationalEquationsToBeIntegrated=true)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double, typename Parameter\+Type  = double$>$ void {\bf tudat\+::propagators\+::\+Variational\+Equations\+Solver}$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$\+::reset\+Parameter\+Estimate (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix$<$ Parameter\+Type, Eigen\+::\+Dynamic, 1 $>$}]{new\+Parameter\+Estimate, }
+\item[{const bool}]{are\+Variational\+Equations\+To\+Be\+Integrated = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_a6141e2cd3c359ebc2c7a57f5d25e6d85}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_a6141e2cd3c359ebc2c7a57f5d25e6d85}
+
+
+Function to reset parameter estimate and re-\/integrate equations of motion and, if desired, variational equations. 
+
+Function to reset parameter estimate and re-\/integrate equations of motion and, if desired, variational equations using the new physical parameters/body initial states. 
+\begin{DoxyParams}{Parameters}
+{\em new\+Parameter\+Estimate} & New estimate of parameters that are to be estimated, in same order as defined in parameters\+To\+Estimate\+\_\+ member. \\
+\hline
+{\em are\+Variational\+Equations\+To\+Be\+Integrated} & Boolean defining whether the variational equations are to be reintegrated with the new parameter values. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}!clear\+Numerical\+Solution\+\_\+@{clear\+Numerical\+Solution\+\_\+}}
+\index{clear\+Numerical\+Solution\+\_\+@{clear\+Numerical\+Solution\+\_\+}!tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}}
+\subsubsection[{\texorpdfstring{clear\+Numerical\+Solution\+\_\+}{clearNumericalSolution_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double, typename Parameter\+Type  = double$>$ bool {\bf tudat\+::propagators\+::\+Variational\+Equations\+Solver}$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$\+::clear\+Numerical\+Solution\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_af7c2f15b08a06114fe9a2b899e3a4382}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_af7c2f15b08a06114fe9a2b899e3a4382}
+
+
+Boolean to determine whether to clear the raw numerical solution member variables after propagation. 
+
+Boolean to determine whether to clear the raw numerical solution member variables after propagation and resetting of state transition interface. \index{tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}!dynamics\+State\+Derivative\+\_\+@{dynamics\+State\+Derivative\+\_\+}}
+\index{dynamics\+State\+Derivative\+\_\+@{dynamics\+State\+Derivative\+\_\+}!tudat\+::propagators\+::\+Variational\+Equations\+Solver@{tudat\+::propagators\+::\+Variational\+Equations\+Solver}}
+\subsubsection[{\texorpdfstring{dynamics\+State\+Derivative\+\_\+}{dynamicsStateDerivative_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double, typename Parameter\+Type  = double$>$ boost\+::shared\+\_\+ptr$<$ {\bf Dynamics\+State\+Derivative\+Model}$<$ Time\+Type, State\+Scalar\+Type $>$ $>$ {\bf tudat\+::propagators\+::\+Variational\+Equations\+Solver}$<$ State\+Scalar\+Type, Time\+Type, Parameter\+Type $>$\+::dynamics\+State\+Derivative\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1propagators_1_1VariationalEquationsSolver_a4b2adaa9bdcae6706d5413878790aa41}{}\label{classtudat_1_1propagators_1_1VariationalEquationsSolver_a4b2adaa9bdcae6706d5413878790aa41}
+
+
+Object used to compute the full state derivative in equations of motion and variational equations. 
+
+Object used to compute the full state derivative in equations of motion and variational equations, including relevant updates of environment from current state and time. Object may be used for either full or separate propagation of equations. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/variational\+Equations\+Solver.\+h\end{DoxyCompactItemize}

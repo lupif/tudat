@@ -1,0 +1,86 @@
+\hypertarget{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings}{}\section{tudat\+:\+:propagators\+:\+:Propagation\+Dependent\+Variable\+Termination\+Settings Class Reference}
+\label{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings}\index{tudat\+::propagators\+::\+Propagation\+Dependent\+Variable\+Termination\+Settings@{tudat\+::propagators\+::\+Propagation\+Dependent\+Variable\+Termination\+Settings}}
+
+
+{\ttfamily \#include $<$propagation\+Termination\+Settings.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:propagators\+:\+:Propagation\+Dependent\+Variable\+Termination\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:propagators\+:\+:Propagation\+Dependent\+Variable\+Termination\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_a2870934fd3a86e18b10a012d829e54a1}{Propagation\+Dependent\+Variable\+Termination\+Settings} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings}{Single\+Dependent\+Variable\+Save\+Settings} $>$ dependent\+Variable\+Settings, const double limit\+Value, const bool use\+As\+Lower\+Limit)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_afe286f4a746984bb130683954da31d5b}{$\sim$\+Propagation\+Dependent\+Variable\+Termination\+Settings} ()\hypertarget{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_afe286f4a746984bb130683954da31d5b}{}\label{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_afe286f4a746984bb130683954da31d5b}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1SingleDependentVariableSaveSettings}{Single\+Dependent\+Variable\+Save\+Settings} $>$ \hyperlink{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_a5f33debc47d9d81936322a1601bc0f75}{dependent\+Variable\+Settings\+\_\+}\hypertarget{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_a5f33debc47d9d81936322a1601bc0f75}{}\label{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_a5f33debc47d9d81936322a1601bc0f75}
+
+\begin{DoxyCompactList}\small\item\em Settings for dependent variable that is to be checked. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_abd20020a0d0c71c95073ec55a77f7116}{limit\+Value\+\_\+}\hypertarget{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_abd20020a0d0c71c95073ec55a77f7116}{}\label{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_abd20020a0d0c71c95073ec55a77f7116}
+
+\begin{DoxyCompactList}\small\item\em Value at which the propagation is to be stopped. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_a7dc06eb4a8f0134d458185ef9d54a878}{use\+As\+Lower\+Limit\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for propagation stopping conditions settings\+: stopping the propagation after a given dependent variable reaches a certain value.
+
+Class for propagation stopping conditions settings\+: stopping the propagation after a given dependent variable reaches a certain value. The limit value may be set as both an upper or lower bound (i.\+e. the propagation continues while the value is below or above some given value). Note that the propagator will finish a given time step, slightly surpassing the defined limit value of the dependent variable 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::propagators\+::\+Propagation\+Dependent\+Variable\+Termination\+Settings@{tudat\+::propagators\+::\+Propagation\+Dependent\+Variable\+Termination\+Settings}!Propagation\+Dependent\+Variable\+Termination\+Settings@{Propagation\+Dependent\+Variable\+Termination\+Settings}}
+\index{Propagation\+Dependent\+Variable\+Termination\+Settings@{Propagation\+Dependent\+Variable\+Termination\+Settings}!tudat\+::propagators\+::\+Propagation\+Dependent\+Variable\+Termination\+Settings@{tudat\+::propagators\+::\+Propagation\+Dependent\+Variable\+Termination\+Settings}}
+\subsubsection[{\texorpdfstring{Propagation\+Dependent\+Variable\+Termination\+Settings(const boost\+::shared\+\_\+ptr$<$ Single\+Dependent\+Variable\+Save\+Settings $>$ dependent\+Variable\+Settings, const double limit\+Value, const bool use\+As\+Lower\+Limit)}{PropagationDependentVariableTerminationSettings(const boost::shared_ptr< SingleDependentVariableSaveSettings > dependentVariableSettings, const double limitValue, const bool useAsLowerLimit)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::propagators\+::\+Propagation\+Dependent\+Variable\+Termination\+Settings\+::\+Propagation\+Dependent\+Variable\+Termination\+Settings (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Single\+Dependent\+Variable\+Save\+Settings} $>$}]{dependent\+Variable\+Settings, }
+\item[{const double}]{limit\+Value, }
+\item[{const bool}]{use\+As\+Lower\+Limit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_a2870934fd3a86e18b10a012d829e54a1}{}\label{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_a2870934fd3a86e18b10a012d829e54a1}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em dependent\+Variable\+Settings} & Settings for dependent variable that is to be checked \\
+\hline
+{\em limit\+Value} & Value at which the propagation is to be stopped \\
+\hline
+{\em use\+As\+Lower\+Limit} & Boolean denoting whether the propagation should stop if the dependent variable goes below (if true) or above (if false) limiting\+Value \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::propagators\+::\+Propagation\+Dependent\+Variable\+Termination\+Settings@{tudat\+::propagators\+::\+Propagation\+Dependent\+Variable\+Termination\+Settings}!use\+As\+Lower\+Limit\+\_\+@{use\+As\+Lower\+Limit\+\_\+}}
+\index{use\+As\+Lower\+Limit\+\_\+@{use\+As\+Lower\+Limit\+\_\+}!tudat\+::propagators\+::\+Propagation\+Dependent\+Variable\+Termination\+Settings@{tudat\+::propagators\+::\+Propagation\+Dependent\+Variable\+Termination\+Settings}}
+\subsubsection[{\texorpdfstring{use\+As\+Lower\+Limit\+\_\+}{useAsLowerLimit_}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::propagators\+::\+Propagation\+Dependent\+Variable\+Termination\+Settings\+::use\+As\+Lower\+Limit\+\_\+}\hypertarget{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_a7dc06eb4a8f0134d458185ef9d54a878}{}\label{classtudat_1_1propagators_1_1PropagationDependentVariableTerminationSettings_a7dc06eb4a8f0134d458185ef9d54a878}
+Boolean denoting whether the propagation should stop if the dependent variable goes below (if true) or above (if false) limiting\+Value 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/propagation\+Termination\+Settings.\+h\end{DoxyCompactItemize}

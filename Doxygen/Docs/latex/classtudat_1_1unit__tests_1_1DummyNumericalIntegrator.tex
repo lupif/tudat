@@ -1,0 +1,211 @@
+\hypertarget{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator}{}\section{tudat\+:\+:unit\+\_\+tests\+:\+:Dummy\+Numerical\+Integrator Class Reference}
+\label{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator}\index{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}}
+
+
+Dummy numerical integrator.  
+
+
+
+
+Inheritance diagram for tudat\+:\+:unit\+\_\+tests\+:\+:Dummy\+Numerical\+Integrator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:unit\+\_\+tests\+:\+:Dummy\+Numerical\+Integrator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_acd6cd9cc4c5f567280ca6f6537e553dc}{Dummy\+Numerical\+Integrator} (const double interval\+Start, const Eigen\+::\+Vector\+Xd \&initial\+State)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a7e9a7cffb3ebf2cdf6057789de347f73}{get\+Next\+Step\+Size} () const 
+\begin{DoxyCompactList}\small\item\em Get step size of the next step. \end{DoxyCompactList}\item 
+virtual Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a114c322002865993772fb8af89b26b4f}{get\+Current\+State} () const 
+\begin{DoxyCompactList}\small\item\em Get current state. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_ac45e222c81d40070eaccc74cbf5dd2ca}{get\+Current\+Independent\+Variable} () const 
+\begin{DoxyCompactList}\small\item\em Get current independent variable. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a2fde96c0af702c49c80df90ce4540fbc}{rollback\+To\+Previous\+State} ()
+\begin{DoxyCompactList}\small\item\em Rollback the internal state to the last state. \end{DoxyCompactList}\item 
+virtual Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_aa000aed365de1583a25fd8be85497081}{perform\+Integration\+Step} (const double step\+Size)
+\begin{DoxyCompactList}\small\item\em Perform a single integration step that does not do anything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a2b2a2f958f57ce022b8bd442a71c62be}{number\+Of\+Steps}
+\begin{DoxyCompactList}\small\item\em Counter of the number of steps. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a27977d4076722219595e7e623bc3c7a1}{step\+Size\+\_\+}
+\begin{DoxyCompactList}\small\item\em Last used step size by this integrator. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a2c55274d8e9f155d59aaa17451d59d7c}{current\+Independent\+Variable\+\_\+}
+\begin{DoxyCompactList}\small\item\em Current independent variable value. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_ab2d46f039013f2f81de5e5d98de6ed64}{current\+State\+\_\+}
+\begin{DoxyCompactList}\small\item\em Current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Dummy numerical integrator. 
+
+Dummy numerical integrator that keeps track of the amount of steps made. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}!Dummy\+Numerical\+Integrator@{Dummy\+Numerical\+Integrator}}
+\index{Dummy\+Numerical\+Integrator@{Dummy\+Numerical\+Integrator}!tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}}
+\subsubsection[{\texorpdfstring{Dummy\+Numerical\+Integrator(const double interval\+Start, const Eigen\+::\+Vector\+Xd \&initial\+State)}{DummyNumericalIntegrator(const double intervalStart, const Eigen::VectorXd &initialState)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator\+::\+Dummy\+Numerical\+Integrator (
+\begin{DoxyParamCaption}
+\item[{const double}]{interval\+Start, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{initial\+State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_acd6cd9cc4c5f567280ca6f6537e553dc}{}\label{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_acd6cd9cc4c5f567280ca6f6537e553dc}
+
+
+Default constructor. 
+
+Default constructor, setting zero\+Derivative as the state derivative function. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}!get\+Current\+Independent\+Variable@{get\+Current\+Independent\+Variable}}
+\index{get\+Current\+Independent\+Variable@{get\+Current\+Independent\+Variable}!tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}}
+\subsubsection[{\texorpdfstring{get\+Current\+Independent\+Variable() const }{getCurrentIndependentVariable() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual double tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator\+::get\+Current\+Independent\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_ac45e222c81d40070eaccc74cbf5dd2ca}{}\label{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_ac45e222c81d40070eaccc74cbf5dd2ca}
+
+
+Get current independent variable. 
+
+Returns the current value of the independent variable stored interally by the integrator. \begin{DoxyReturn}{Returns}
+Current independent variable. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1numerical__integrators_1_1NumericalIntegrator_a8ca318a39081842472ccd1a165ec06a4}{tudat\+::numerical\+\_\+integrators\+::\+Numerical\+Integrator$<$ double, Eigen\+::\+Vector\+Xd, Eigen\+::\+Vector\+Xd $>$}.
+
+\index{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}!get\+Current\+State@{get\+Current\+State}}
+\index{get\+Current\+State@{get\+Current\+State}!tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}}
+\subsubsection[{\texorpdfstring{get\+Current\+State() const }{getCurrentState() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual Eigen\+::\+Vector\+Xd tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator\+::get\+Current\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a114c322002865993772fb8af89b26b4f}{}\label{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a114c322002865993772fb8af89b26b4f}
+
+
+Get current state. 
+
+Returns the current state stored interally by the integrator. \begin{DoxyReturn}{Returns}
+Current state. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1numerical__integrators_1_1NumericalIntegrator_a90b09d8d6a9b07d495bfabe9122748a1}{tudat\+::numerical\+\_\+integrators\+::\+Numerical\+Integrator$<$ double, Eigen\+::\+Vector\+Xd, Eigen\+::\+Vector\+Xd $>$}.
+
+\index{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}!get\+Next\+Step\+Size@{get\+Next\+Step\+Size}}
+\index{get\+Next\+Step\+Size@{get\+Next\+Step\+Size}!tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}}
+\subsubsection[{\texorpdfstring{get\+Next\+Step\+Size() const }{getNextStepSize() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual double tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator\+::get\+Next\+Step\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a7e9a7cffb3ebf2cdf6057789de347f73}{}\label{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a7e9a7cffb3ebf2cdf6057789de347f73}
+
+
+Get step size of the next step. 
+
+Returns the step size of the next step. \begin{DoxyReturn}{Returns}
+Step size to be used for the next step. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1numerical__integrators_1_1NumericalIntegrator_ab8b38ad002b10d53adf7b2c2282a86cc}{tudat\+::numerical\+\_\+integrators\+::\+Numerical\+Integrator$<$ double, Eigen\+::\+Vector\+Xd, Eigen\+::\+Vector\+Xd $>$}.
+
+\index{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}!perform\+Integration\+Step@{perform\+Integration\+Step}}
+\index{perform\+Integration\+Step@{perform\+Integration\+Step}!tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}}
+\subsubsection[{\texorpdfstring{perform\+Integration\+Step(const double step\+Size)}{performIntegrationStep(const double stepSize)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Eigen\+::\+Vector\+Xd tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator\+::perform\+Integration\+Step (
+\begin{DoxyParamCaption}
+\item[{const double}]{step\+Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_aa000aed365de1583a25fd8be85497081}{}\label{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_aa000aed365de1583a25fd8be85497081}
+
+
+Perform a single integration step that does not do anything. 
+
+Performs a single integration step that does not do anything, except incrementing the step counter. 
+\begin{DoxyParams}{Parameters}
+{\em step\+Size} & The step size of this step. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The state history at the end of the interval, which is basically equal to the input. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1numerical__integrators_1_1NumericalIntegrator_a125da80be4a16cd933707212caefe8a5}{tudat\+::numerical\+\_\+integrators\+::\+Numerical\+Integrator$<$ double, Eigen\+::\+Vector\+Xd, Eigen\+::\+Vector\+Xd $>$}.
+
+\index{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}!rollback\+To\+Previous\+State@{rollback\+To\+Previous\+State}}
+\index{rollback\+To\+Previous\+State@{rollback\+To\+Previous\+State}!tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}}
+\subsubsection[{\texorpdfstring{rollback\+To\+Previous\+State()}{rollbackToPreviousState()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator\+::rollback\+To\+Previous\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a2fde96c0af702c49c80df90ce4540fbc}{}\label{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a2fde96c0af702c49c80df90ce4540fbc}
+
+
+Rollback the internal state to the last state. 
+
+Performs rollback of the internal state to the last state. This function can only be called once after calling \hyperlink{classtudat_1_1numerical__integrators_1_1NumericalIntegrator_aed0dfa86d274bd9e71c2fd6428edfd3e}{integrate\+To( )} or \hyperlink{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_aa000aed365de1583a25fd8be85497081}{perform\+Integration\+Step( )} unless specified otherwise by implementations, and can not be called before any of these functions have been called. Will return true if the rollback was succesful, and false otherwise. \begin{DoxyReturn}{Returns}
+True if the rollback was successful. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1numerical__integrators_1_1NumericalIntegrator_a87d34e8535b55d430a511fb7e345dc2b}{tudat\+::numerical\+\_\+integrators\+::\+Numerical\+Integrator$<$ double, Eigen\+::\+Vector\+Xd, Eigen\+::\+Vector\+Xd $>$}.
+
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}!current\+Independent\+Variable\+\_\+@{current\+Independent\+Variable\+\_\+}}
+\index{current\+Independent\+Variable\+\_\+@{current\+Independent\+Variable\+\_\+}!tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}}
+\subsubsection[{\texorpdfstring{current\+Independent\+Variable\+\_\+}{currentIndependentVariable_}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator\+::current\+Independent\+Variable\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a2c55274d8e9f155d59aaa17451d59d7c}{}\label{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a2c55274d8e9f155d59aaa17451d59d7c}
+
+
+Current independent variable value. 
+
+Current value of independent variable stored internally by the integrator. \index{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}!current\+State\+\_\+@{current\+State\+\_\+}}
+\index{current\+State\+\_\+@{current\+State\+\_\+}!tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}}
+\subsubsection[{\texorpdfstring{current\+State\+\_\+}{currentState_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator\+::current\+State\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_ab2d46f039013f2f81de5e5d98de6ed64}{}\label{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_ab2d46f039013f2f81de5e5d98de6ed64}
+
+
+Current state. 
+
+Current state stored internally by the integrator. \index{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}!number\+Of\+Steps@{number\+Of\+Steps}}
+\index{number\+Of\+Steps@{number\+Of\+Steps}!tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}}
+\subsubsection[{\texorpdfstring{number\+Of\+Steps}{numberOfSteps}}]{\setlength{\rightskip}{0pt plus 5cm}int tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator\+::number\+Of\+Steps}\hypertarget{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a2b2a2f958f57ce022b8bd442a71c62be}{}\label{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a2b2a2f958f57ce022b8bd442a71c62be}
+
+
+Counter of the number of steps. 
+
+Counter of the number of steps taken. \index{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}!step\+Size\+\_\+@{step\+Size\+\_\+}}
+\index{step\+Size\+\_\+@{step\+Size\+\_\+}!tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator}}
+\subsubsection[{\texorpdfstring{step\+Size\+\_\+}{stepSize_}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::unit\+\_\+tests\+::\+Dummy\+Numerical\+Integrator\+::step\+Size\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a27977d4076722219595e7e623bc3c7a1}{}\label{classtudat_1_1unit__tests_1_1DummyNumericalIntegrator_a27977d4076722219595e7e623bc3c7a1}
+
+
+Last used step size by this integrator. 
+
+Last used step size by this integrator. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Numerical\+Integrators/\+Unit\+Tests/unit\+Test\+Numerical\+Integrator.\+cpp\end{DoxyCompactItemize}

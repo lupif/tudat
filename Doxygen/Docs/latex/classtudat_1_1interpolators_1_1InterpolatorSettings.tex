@@ -1,0 +1,127 @@
+\hypertarget{classtudat_1_1interpolators_1_1InterpolatorSettings}{}\section{tudat\+:\+:interpolators\+:\+:Interpolator\+Settings Class Reference}
+\label{classtudat_1_1interpolators_1_1InterpolatorSettings}\index{tudat\+::interpolators\+::\+Interpolator\+Settings@{tudat\+::interpolators\+::\+Interpolator\+Settings}}
+
+
+Base class for providing settings for creating an interpolator.  
+
+
+
+
+{\ttfamily \#include $<$create\+Interpolator.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:interpolators\+:\+:Interpolator\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classtudat_1_1interpolators_1_1InterpolatorSettings__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings_a71512d63540bb770739b9be0e85980b4}{Interpolator\+Settings} (const One\+Dimensional\+Interpolator\+Types interpolator\+Type, const Available\+Lookup\+Scheme selected\+Lookup\+Scheme=hunting\+Algorithm, const bool use\+Long\+Double\+Time\+Step=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings_ae32f4577b9bb2256efe74b57d8d7bad7}{$\sim$\+Interpolator\+Settings} ()\hypertarget{classtudat_1_1interpolators_1_1InterpolatorSettings_ae32f4577b9bb2256efe74b57d8d7bad7}{}\label{classtudat_1_1interpolators_1_1InterpolatorSettings_ae32f4577b9bb2256efe74b57d8d7bad7}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+One\+Dimensional\+Interpolator\+Types \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings_a16ceb8f2f1f002b46c9d0bec96495bdf}{get\+Interpolator\+Type} ()
+\begin{DoxyCompactList}\small\item\em Function to get the selected type of interpolator. \end{DoxyCompactList}\item 
+Available\+Lookup\+Scheme \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings_a92883f0636896ae9a1a366bb81399556}{get\+Selected\+Lookup\+Scheme} ()
+\begin{DoxyCompactList}\small\item\em Function to get the selected type of lookup scheme for independent variables. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings_adab7eabdb0659b3be137cf9eb44c0145}{get\+Use\+Long\+Double\+Time\+Step} ()
+\begin{DoxyCompactList}\small\item\em Function to get a boolean denoting whether time step is to be a long double. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+One\+Dimensional\+Interpolator\+Types \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings_a306a7d727e40447d14d8a83ac44292c6}{interpolator\+Type\+\_\+}\hypertarget{classtudat_1_1interpolators_1_1InterpolatorSettings_a306a7d727e40447d14d8a83ac44292c6}{}\label{classtudat_1_1interpolators_1_1InterpolatorSettings_a306a7d727e40447d14d8a83ac44292c6}
+
+\begin{DoxyCompactList}\small\item\em Selected type of interpolator. \end{DoxyCompactList}\item 
+Available\+Lookup\+Scheme \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings_a4953b3e5ee75ec9af2fd2bc1544fb976}{selected\+Lookup\+Scheme\+\_\+}\hypertarget{classtudat_1_1interpolators_1_1InterpolatorSettings_a4953b3e5ee75ec9af2fd2bc1544fb976}{}\label{classtudat_1_1interpolators_1_1InterpolatorSettings_a4953b3e5ee75ec9af2fd2bc1544fb976}
+
+\begin{DoxyCompactList}\small\item\em Selected type of lookup scheme for independent variables. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings_a9828fe406d08ef1c0435f4b2dca5a047}{use\+Long\+Double\+Time\+Step\+\_\+}\hypertarget{classtudat_1_1interpolators_1_1InterpolatorSettings_a9828fe406d08ef1c0435f4b2dca5a047}{}\label{classtudat_1_1interpolators_1_1InterpolatorSettings_a9828fe406d08ef1c0435f4b2dca5a047}
+
+\begin{DoxyCompactList}\small\item\em Boolean denoting whether time step is to be a long double. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for providing settings for creating an interpolator. 
+
+Base class for providing settings for creating an interpolator using the create\+Interpolator function. This base class is functional, i.\+e. may be used directly for interpolator types requiring no additional information. For interpolators that do require more information, a derived class is provided. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::interpolators\+::\+Interpolator\+Settings@{tudat\+::interpolators\+::\+Interpolator\+Settings}!Interpolator\+Settings@{Interpolator\+Settings}}
+\index{Interpolator\+Settings@{Interpolator\+Settings}!tudat\+::interpolators\+::\+Interpolator\+Settings@{tudat\+::interpolators\+::\+Interpolator\+Settings}}
+\subsubsection[{\texorpdfstring{Interpolator\+Settings(const One\+Dimensional\+Interpolator\+Types interpolator\+Type, const Available\+Lookup\+Scheme selected\+Lookup\+Scheme=hunting\+Algorithm, const bool use\+Long\+Double\+Time\+Step=0)}{InterpolatorSettings(const OneDimensionalInterpolatorTypes interpolatorType, const AvailableLookupScheme selectedLookupScheme=huntingAlgorithm, const bool useLongDoubleTimeStep=0)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::interpolators\+::\+Interpolator\+Settings\+::\+Interpolator\+Settings (
+\begin{DoxyParamCaption}
+\item[{const One\+Dimensional\+Interpolator\+Types}]{interpolator\+Type, }
+\item[{const Available\+Lookup\+Scheme}]{selected\+Lookup\+Scheme = {\ttfamily huntingAlgorithm}, }
+\item[{const bool}]{use\+Long\+Double\+Time\+Step = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1InterpolatorSettings_a71512d63540bb770739b9be0e85980b4}{}\label{classtudat_1_1interpolators_1_1InterpolatorSettings_a71512d63540bb770739b9be0e85980b4}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em interpolator\+Type} & Selected type of interpolator. \\
+\hline
+{\em selected\+Lookup\+Scheme} & Selected type of lookup scheme for independent variables. \\
+\hline
+{\em use\+Long\+Double\+Time\+Step} & Boolean denoting whether time step is to be a long double, time step is a double if false. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::interpolators\+::\+Interpolator\+Settings@{tudat\+::interpolators\+::\+Interpolator\+Settings}!get\+Interpolator\+Type@{get\+Interpolator\+Type}}
+\index{get\+Interpolator\+Type@{get\+Interpolator\+Type}!tudat\+::interpolators\+::\+Interpolator\+Settings@{tudat\+::interpolators\+::\+Interpolator\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Interpolator\+Type()}{getInterpolatorType()}}]{\setlength{\rightskip}{0pt plus 5cm}One\+Dimensional\+Interpolator\+Types tudat\+::interpolators\+::\+Interpolator\+Settings\+::get\+Interpolator\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1InterpolatorSettings_a16ceb8f2f1f002b46c9d0bec96495bdf}{}\label{classtudat_1_1interpolators_1_1InterpolatorSettings_a16ceb8f2f1f002b46c9d0bec96495bdf}
+
+
+Function to get the selected type of interpolator. 
+
+Function to get the selected type of interpolator. \begin{DoxyReturn}{Returns}
+Selected type of interpolator. 
+\end{DoxyReturn}
+\index{tudat\+::interpolators\+::\+Interpolator\+Settings@{tudat\+::interpolators\+::\+Interpolator\+Settings}!get\+Selected\+Lookup\+Scheme@{get\+Selected\+Lookup\+Scheme}}
+\index{get\+Selected\+Lookup\+Scheme@{get\+Selected\+Lookup\+Scheme}!tudat\+::interpolators\+::\+Interpolator\+Settings@{tudat\+::interpolators\+::\+Interpolator\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Selected\+Lookup\+Scheme()}{getSelectedLookupScheme()}}]{\setlength{\rightskip}{0pt plus 5cm}Available\+Lookup\+Scheme tudat\+::interpolators\+::\+Interpolator\+Settings\+::get\+Selected\+Lookup\+Scheme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1InterpolatorSettings_a92883f0636896ae9a1a366bb81399556}{}\label{classtudat_1_1interpolators_1_1InterpolatorSettings_a92883f0636896ae9a1a366bb81399556}
+
+
+Function to get the selected type of lookup scheme for independent variables. 
+
+Function to get the selected type of lookup scheme for independent variables. \begin{DoxyReturn}{Returns}
+Selected type of lookup scheme for independent variables. 
+\end{DoxyReturn}
+\index{tudat\+::interpolators\+::\+Interpolator\+Settings@{tudat\+::interpolators\+::\+Interpolator\+Settings}!get\+Use\+Long\+Double\+Time\+Step@{get\+Use\+Long\+Double\+Time\+Step}}
+\index{get\+Use\+Long\+Double\+Time\+Step@{get\+Use\+Long\+Double\+Time\+Step}!tudat\+::interpolators\+::\+Interpolator\+Settings@{tudat\+::interpolators\+::\+Interpolator\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Use\+Long\+Double\+Time\+Step()}{getUseLongDoubleTimeStep()}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::interpolators\+::\+Interpolator\+Settings\+::get\+Use\+Long\+Double\+Time\+Step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1InterpolatorSettings_adab7eabdb0659b3be137cf9eb44c0145}{}\label{classtudat_1_1interpolators_1_1InterpolatorSettings_adab7eabdb0659b3be137cf9eb44c0145}
+
+
+Function to get a boolean denoting whether time step is to be a long double. 
+
+Function to get a boolean denoting whether time step is to be a long double \begin{DoxyReturn}{Returns}
+Boolean denoting whether time step is to be a long double 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Interpolators/create\+Interpolator.\+h\end{DoxyCompactItemize}

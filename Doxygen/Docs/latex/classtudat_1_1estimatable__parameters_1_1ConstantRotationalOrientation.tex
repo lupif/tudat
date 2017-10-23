@@ -1,0 +1,137 @@
+\hypertarget{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation}{}\section{tudat\+:\+:estimatable\+\_\+parameters\+:\+:Constant\+Rotational\+Orientation Class Reference}
+\label{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation}\index{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation@{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation}}
+
+
+Interface class for estimation of a body\textquotesingle{}s constant pole position (right ascension and declination of north pole).  
+
+
+
+
+{\ttfamily \#include $<$constant\+Rotational\+Orientation.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:estimatable\+\_\+parameters\+:\+:Constant\+Rotational\+Orientation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:estimatable\+\_\+parameters\+:\+:Constant\+Rotational\+Orientation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_a8f382d9740b2400a4e4036f9dfe9f2fd}{Constant\+Rotational\+Orientation} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1ephemerides_1_1SimpleRotationalEphemeris}{ephemerides\+::\+Simple\+Rotational\+Ephemeris} $>$ rotation\+Model, const std\+::string \&associated\+Body)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_a7a9f5f110c6bf4d194d12303d8721256}{$\sim$\+Constant\+Rotational\+Orientation} ()\hypertarget{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_a7a9f5f110c6bf4d194d12303d8721256}{}\label{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_a7a9f5f110c6bf4d194d12303d8721256}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_ae5d7a223838d362632d8e1ac95833a88}{get\+Parameter\+Value} ()
+\begin{DoxyCompactList}\small\item\em Get value of pole right ascension and declination (in that order) \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_a7bd1cbe847e0d1db60c8cd8e3f6c5943}{set\+Parameter\+Value} (const Eigen\+::\+Vector\+Xd parameter\+Value)
+\begin{DoxyCompactList}\small\item\em Reset value of pole right ascension and declination (in that order) \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_a4222aa85e840c929eda9b6185c35d519}{get\+Parameter\+Size} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the size of the parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Interface class for estimation of a body\textquotesingle{}s constant pole position (right ascension and declination of north pole). 
+
+Interface class for estimation of a body\textquotesingle{}s constant pole position (right ascension and declination of north pole). Interfaces the estimation with the right ascension and declination Euler angle members of a Simple\+Rotational\+Ephemeris object 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation@{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation}!Constant\+Rotational\+Orientation@{Constant\+Rotational\+Orientation}}
+\index{Constant\+Rotational\+Orientation@{Constant\+Rotational\+Orientation}!tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation@{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation}}
+\subsubsection[{\texorpdfstring{Constant\+Rotational\+Orientation(const boost\+::shared\+\_\+ptr$<$ ephemerides\+::\+Simple\+Rotational\+Ephemeris $>$ rotation\+Model, const std\+::string \&associated\+Body)}{ConstantRotationalOrientation(const boost::shared_ptr< ephemerides::SimpleRotationalEphemeris > rotationModel, const std::string &associatedBody)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation\+::\+Constant\+Rotational\+Orientation (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf ephemerides\+::\+Simple\+Rotational\+Ephemeris} $>$}]{rotation\+Model, }
+\item[{const std\+::string \&}]{associated\+Body}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_a8f382d9740b2400a4e4036f9dfe9f2fd}{}\label{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_a8f382d9740b2400a4e4036f9dfe9f2fd}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em rotation\+Model} & Simple\+Rotational\+Ephemeris object of which pole position is a property \\
+\hline
+{\em associated\+Body} & Name of body of which parameter is a property. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation@{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation}!get\+Parameter\+Size@{get\+Parameter\+Size}}
+\index{get\+Parameter\+Size@{get\+Parameter\+Size}!tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation@{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation}}
+\subsubsection[{\texorpdfstring{get\+Parameter\+Size()}{getParameterSize()}}]{\setlength{\rightskip}{0pt plus 5cm}int tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation\+::get\+Parameter\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_a4222aa85e840c929eda9b6185c35d519}{}\label{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_a4222aa85e840c929eda9b6185c35d519}
+
+
+Function to retrieve the size of the parameter. 
+
+Function to retrieve the size of the parameter \begin{DoxyReturn}{Returns}
+Size of parameter value, 2 for this parameter 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a989d54bab5c5e09ab6f1b709755b22e8}{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ Eigen\+::\+Vector\+Xd $>$}.
+
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation@{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation}!get\+Parameter\+Value@{get\+Parameter\+Value}}
+\index{get\+Parameter\+Value@{get\+Parameter\+Value}!tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation@{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation}}
+\subsubsection[{\texorpdfstring{get\+Parameter\+Value()}{getParameterValue()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation\+::get\+Parameter\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_ae5d7a223838d362632d8e1ac95833a88}{}\label{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_ae5d7a223838d362632d8e1ac95833a88}
+
+
+Get value of pole right ascension and declination (in that order) 
+
+Get value of pole right ascension and declination (in that order) \begin{DoxyReturn}{Returns}
+Right ascension and declination (in that order) 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a63413b914f9e8b68705aba7048780200}{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ Eigen\+::\+Vector\+Xd $>$}.
+
+\index{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation@{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation}!set\+Parameter\+Value@{set\+Parameter\+Value}}
+\index{set\+Parameter\+Value@{set\+Parameter\+Value}!tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation@{tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation}}
+\subsubsection[{\texorpdfstring{set\+Parameter\+Value(const Eigen\+::\+Vector\+Xd parameter\+Value)}{setParameterValue(const Eigen::VectorXd parameterValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::estimatable\+\_\+parameters\+::\+Constant\+Rotational\+Orientation\+::set\+Parameter\+Value (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd}]{parameter\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_a7bd1cbe847e0d1db60c8cd8e3f6c5943}{}\label{classtudat_1_1estimatable__parameters_1_1ConstantRotationalOrientation_a7bd1cbe847e0d1db60c8cd8e3f6c5943}
+
+
+Reset value of pole right ascension and declination (in that order) 
+
+Reset value of pole right ascension and declination (in that order) 
+\begin{DoxyParams}{Parameters}
+{\em parameter\+Value} & New right ascension and declination (in that order) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter_a5df35bde257a6db401ca3c3613056554}{tudat\+::estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ Eigen\+::\+Vector\+Xd $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Orbit\+Determination/\+Estimatable\+Parameters/constant\+Rotational\+Orientation.\+h\end{DoxyCompactItemize}

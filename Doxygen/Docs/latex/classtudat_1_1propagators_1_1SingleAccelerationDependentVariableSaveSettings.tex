@@ -1,0 +1,80 @@
+\hypertarget{classtudat_1_1propagators_1_1SingleAccelerationDependentVariableSaveSettings}{}\section{tudat\+:\+:propagators\+:\+:Single\+Acceleration\+Dependent\+Variable\+Save\+Settings Class Reference}
+\label{classtudat_1_1propagators_1_1SingleAccelerationDependentVariableSaveSettings}\index{tudat\+::propagators\+::\+Single\+Acceleration\+Dependent\+Variable\+Save\+Settings@{tudat\+::propagators\+::\+Single\+Acceleration\+Dependent\+Variable\+Save\+Settings}}
+
+
+Class to define settings for saving a single acceleration (norm or vector) during propagation.  
+
+
+
+
+{\ttfamily \#include $<$propagation\+Output\+Settings.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:propagators\+:\+:Single\+Acceleration\+Dependent\+Variable\+Save\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classtudat_1_1propagators_1_1SingleAccelerationDependentVariableSaveSettings__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:propagators\+:\+:Single\+Acceleration\+Dependent\+Variable\+Save\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classtudat_1_1propagators_1_1SingleAccelerationDependentVariableSaveSettings__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1propagators_1_1SingleAccelerationDependentVariableSaveSettings_ad0f50d43f7db08da4ba1b828ac507638}{Single\+Acceleration\+Dependent\+Variable\+Save\+Settings} (const basic\+\_\+astrodynamics\+::\+Available\+Acceleration acceleration\+Mode\+Type, const std\+::string \&body\+Undergoing\+Acceleration, const std\+::string \&body\+Exerting\+Acceleration, const bool use\+Norm=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+basic\+\_\+astrodynamics\+::\+Available\+Acceleration \hyperlink{classtudat_1_1propagators_1_1SingleAccelerationDependentVariableSaveSettings_a80981b18fdd72ab98987b2427b183d02}{acceleration\+Mode\+Type\+\_\+}\hypertarget{classtudat_1_1propagators_1_1SingleAccelerationDependentVariableSaveSettings_a80981b18fdd72ab98987b2427b183d02}{}\label{classtudat_1_1propagators_1_1SingleAccelerationDependentVariableSaveSettings_a80981b18fdd72ab98987b2427b183d02}
+
+\begin{DoxyCompactList}\small\item\em Boolean denoting whether to use the norm (if true) or the vector (if false) of the acceleration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to define settings for saving a single acceleration (norm or vector) during propagation. 
+
+Class to define settings for saving a single acceleration (norm or vector) during propagation. N\+O\+TE\+: This acceleration is returned in the inertial frame! 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::propagators\+::\+Single\+Acceleration\+Dependent\+Variable\+Save\+Settings@{tudat\+::propagators\+::\+Single\+Acceleration\+Dependent\+Variable\+Save\+Settings}!Single\+Acceleration\+Dependent\+Variable\+Save\+Settings@{Single\+Acceleration\+Dependent\+Variable\+Save\+Settings}}
+\index{Single\+Acceleration\+Dependent\+Variable\+Save\+Settings@{Single\+Acceleration\+Dependent\+Variable\+Save\+Settings}!tudat\+::propagators\+::\+Single\+Acceleration\+Dependent\+Variable\+Save\+Settings@{tudat\+::propagators\+::\+Single\+Acceleration\+Dependent\+Variable\+Save\+Settings}}
+\subsubsection[{\texorpdfstring{Single\+Acceleration\+Dependent\+Variable\+Save\+Settings(const basic\+\_\+astrodynamics\+::\+Available\+Acceleration acceleration\+Mode\+Type, const std\+::string \&body\+Undergoing\+Acceleration, const std\+::string \&body\+Exerting\+Acceleration, const bool use\+Norm=0)}{SingleAccelerationDependentVariableSaveSettings(const basic_astrodynamics::AvailableAcceleration accelerationModeType, const std::string &bodyUndergoingAcceleration, const std::string &bodyExertingAcceleration, const bool useNorm=0)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::propagators\+::\+Single\+Acceleration\+Dependent\+Variable\+Save\+Settings\+::\+Single\+Acceleration\+Dependent\+Variable\+Save\+Settings (
+\begin{DoxyParamCaption}
+\item[{const basic\+\_\+astrodynamics\+::\+Available\+Acceleration}]{acceleration\+Mode\+Type, }
+\item[{const std\+::string \&}]{body\+Undergoing\+Acceleration, }
+\item[{const std\+::string \&}]{body\+Exerting\+Acceleration, }
+\item[{const bool}]{use\+Norm = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1SingleAccelerationDependentVariableSaveSettings_ad0f50d43f7db08da4ba1b828ac507638}{}\label{classtudat_1_1propagators_1_1SingleAccelerationDependentVariableSaveSettings_ad0f50d43f7db08da4ba1b828ac507638}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em acceleration\+Mode\+Type} & Type of acceleration that is to be saved. \\
+\hline
+{\em body\+Undergoing\+Acceleration} & Name of body undergoing the acceleration. \\
+\hline
+{\em body\+Exerting\+Acceleration} & Name of body exerting the acceleration. \\
+\hline
+{\em use\+Norm} & Boolean denoting whether to use the norm (if true) or the vector (if false) of the acceleration. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/propagation\+Output\+Settings.\+h\end{DoxyCompactItemize}

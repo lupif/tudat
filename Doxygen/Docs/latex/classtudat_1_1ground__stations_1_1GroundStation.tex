@@ -1,0 +1,102 @@
+\hypertarget{classtudat_1_1ground__stations_1_1GroundStation}{}\section{tudat\+:\+:ground\+\_\+stations\+:\+:Ground\+Station Class Reference}
+\label{classtudat_1_1ground__stations_1_1GroundStation}\index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station}}
+
+
+Class to store properties of a ground station (i.\+e. reference point with associated systems on a celestial body)  
+
+
+
+
+{\ttfamily \#include $<$ground\+Station.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1ground__stations_1_1GroundStation_a8df54bbd81d9794ba72c71aef7508f57}{Ground\+Station} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1ground__stations_1_1GroundStationState}{Ground\+Station\+State} $>$ station\+State, const std\+::string \&station\+Id)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename State\+Scalar\+Type , typename Time\+Type $>$ }\\Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ \hyperlink{classtudat_1_1ground__stations_1_1GroundStation_a59db63cb3b4693ebedd3a7fa8c340503}{get\+State\+In\+Planet\+Fixed\+Frame} (const Time\+Type \&time)
+\begin{DoxyCompactList}\small\item\em Function that returns (at reference epoch) the state of the ground station. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1ground__stations_1_1GroundStationState}{Ground\+Station\+State} $>$ \hyperlink{classtudat_1_1ground__stations_1_1GroundStation_ac653b3dea042e94d210f4f9af5b8bdf4}{get\+Nominal\+Station\+State} ()
+\begin{DoxyCompactList}\small\item\em Function to return object to define and compute the state of the ground station. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1ground__stations_1_1GroundStation_a00509a759dba9a0470fca4d143c3ccf4}{get\+Station\+Id} ()
+\begin{DoxyCompactList}\small\item\em Function to return name of the ground station. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to store properties of a ground station (i.\+e. reference point with associated systems on a celestial body) 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station}!Ground\+Station@{Ground\+Station}}
+\index{Ground\+Station@{Ground\+Station}!tudat\+::ground\+\_\+stations\+::\+Ground\+Station@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station}}
+\subsubsection[{\texorpdfstring{Ground\+Station(const boost\+::shared\+\_\+ptr$<$ Ground\+Station\+State $>$ station\+State, const std\+::string \&station\+Id)}{GroundStation(const boost::shared_ptr< GroundStationState > stationState, const std::string &stationId)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+::\+Ground\+Station (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Ground\+Station\+State} $>$}]{station\+State, }
+\item[{const std\+::string \&}]{station\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1ground__stations_1_1GroundStation_a8df54bbd81d9794ba72c71aef7508f57}{}\label{classtudat_1_1ground__stations_1_1GroundStation_a8df54bbd81d9794ba72c71aef7508f57}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em station\+State} & Object to define and compute the state of the ground station. \\
+\hline
+{\em station\+Id} & Name of the ground station \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station}!get\+Nominal\+Station\+State@{get\+Nominal\+Station\+State}}
+\index{get\+Nominal\+Station\+State@{get\+Nominal\+Station\+State}!tudat\+::ground\+\_\+stations\+::\+Ground\+Station@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station}}
+\subsubsection[{\texorpdfstring{get\+Nominal\+Station\+State()}{getNominalStationState()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf Ground\+Station\+State} $>$ tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+::get\+Nominal\+Station\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1ground__stations_1_1GroundStation_ac653b3dea042e94d210f4f9af5b8bdf4}{}\label{classtudat_1_1ground__stations_1_1GroundStation_ac653b3dea042e94d210f4f9af5b8bdf4}
+
+
+Function to return object to define and compute the state of the ground station. 
+
+Function to return object to define and compute the state of the ground station. \begin{DoxyReturn}{Returns}
+Object to define and compute the state of the ground station. 
+\end{DoxyReturn}
+\index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station}!get\+State\+In\+Planet\+Fixed\+Frame@{get\+State\+In\+Planet\+Fixed\+Frame}}
+\index{get\+State\+In\+Planet\+Fixed\+Frame@{get\+State\+In\+Planet\+Fixed\+Frame}!tudat\+::ground\+\_\+stations\+::\+Ground\+Station@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station}}
+\subsubsection[{\texorpdfstring{get\+State\+In\+Planet\+Fixed\+Frame(const Time\+Type \&time)}{getStateInPlanetFixedFrame(const TimeType &time)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type , typename Time\+Type $>$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+::get\+State\+In\+Planet\+Fixed\+Frame (
+\begin{DoxyParamCaption}
+\item[{const Time\+Type \&}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1ground__stations_1_1GroundStation_a59db63cb3b4693ebedd3a7fa8c340503}{}\label{classtudat_1_1ground__stations_1_1GroundStation_a59db63cb3b4693ebedd3a7fa8c340503}
+
+
+Function that returns (at reference epoch) the state of the ground station. 
+
+Function that returns (at reference epoch) the state of the ground station. State is computed by nominal\+Station\+State\+\_\+ and cast to the required format by this function 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} (in seconds since J2000) at which state is to be retrieved \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State at requested time. 
+\end{DoxyReturn}
+\index{tudat\+::ground\+\_\+stations\+::\+Ground\+Station@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station}!get\+Station\+Id@{get\+Station\+Id}}
+\index{get\+Station\+Id@{get\+Station\+Id}!tudat\+::ground\+\_\+stations\+::\+Ground\+Station@{tudat\+::ground\+\_\+stations\+::\+Ground\+Station}}
+\subsubsection[{\texorpdfstring{get\+Station\+Id()}{getStationId()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::ground\+\_\+stations\+::\+Ground\+Station\+::get\+Station\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1ground__stations_1_1GroundStation_a00509a759dba9a0470fca4d143c3ccf4}{}\label{classtudat_1_1ground__stations_1_1GroundStation_a00509a759dba9a0470fca4d143c3ccf4}
+
+
+Function to return name of the ground station. 
+
+Function to return name of the ground station \begin{DoxyReturn}{Returns}
+Name of the ground station 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Ground\+Stations/ground\+Station.\+h\end{DoxyCompactItemize}

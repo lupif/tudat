@@ -1,0 +1,104 @@
+\hypertarget{classtudat_1_1observation__partials_1_1RotationMatrixPartial}{}\section{tudat\+:\+:observation\+\_\+partials\+:\+:Rotation\+Matrix\+Partial Class Reference}
+\label{classtudat_1_1observation__partials_1_1RotationMatrixPartial}\index{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial@{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial}}
+
+
+Base class for partial derivatives of rotation matrix from body fixed to inertial frame w.\+r.\+t. a parameter.  
+
+
+
+
+{\ttfamily \#include $<$rotation\+Matrix\+Partial.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:observation\+\_\+partials\+:\+:Rotation\+Matrix\+Partial\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1observation__partials_1_1RotationMatrixPartial__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classtudat_1_1observation__partials_1_1RotationMatrixPartial_a74a1aafeff8ba51c4020aef18ec4d42b}{$\sim$\+Rotation\+Matrix\+Partial} ()\hypertarget{classtudat_1_1observation__partials_1_1RotationMatrixPartial_a74a1aafeff8ba51c4020aef18ec4d42b}{}\label{classtudat_1_1observation__partials_1_1RotationMatrixPartial_a74a1aafeff8ba51c4020aef18ec4d42b}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ Eigen\+::\+Matrix3d $>$ \hyperlink{classtudat_1_1observation__partials_1_1RotationMatrixPartial_a758db711ec18f3efbaa759488e45daf1}{calculate\+Partial\+Of\+Rotation\+Matrix\+To\+Base\+Frame\+Wr\+Parameter} (const double time)=0
+\begin{DoxyCompactList}\small\item\em Function to calculate partials of rotation matrix wrt a parameter (for either double or Vector\+Xd parameters). \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, 3, Eigen\+::\+Dynamic $>$ \hyperlink{classtudat_1_1observation__partials_1_1RotationMatrixPartial_a5c50ff0ee090a53772000357cf2855c4}{calculate\+Partial\+Of\+Rotated\+Vector} (const double time, const Eigen\+::\+Vector3d vector\+In\+Local\+Frame)
+\item 
+virtual std\+::string \hyperlink{classtudat_1_1observation__partials_1_1RotationMatrixPartial_a0e55c2d7ab65b053705dcfa3e37048b5}{get\+Secondary\+Identifier} ()
+\begin{DoxyCompactList}\small\item\em Function to return the secondary identifier of the estimated parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for partial derivatives of rotation matrix from body fixed to inertial frame w.\+r.\+t. a parameter. 
+
+Base class for partial derivatives of rotation matrix from body fixed to inertial frame w.\+r.\+t. a parameter. A derived class is implemented for each estimatable parameter which represents a property of a rotation matrix from a body-\/fixed frame (as defined by the is\+Parameter\+Rotation\+Matrix\+Property function). Pointers to this class are used for both Position\+Partials and the Spherical\+Harmonics\+Gravity\+Partial partial. In this manner, only a single partial object needs to be implemented for both the position and partial and the sh acceleration partial wrt a rotational parameter when such a parameter is added. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial@{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial}!calculate\+Partial\+Of\+Rotated\+Vector@{calculate\+Partial\+Of\+Rotated\+Vector}}
+\index{calculate\+Partial\+Of\+Rotated\+Vector@{calculate\+Partial\+Of\+Rotated\+Vector}!tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial@{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial}}
+\subsubsection[{\texorpdfstring{calculate\+Partial\+Of\+Rotated\+Vector(const double time, const Eigen\+::\+Vector3d vector\+In\+Local\+Frame)}{calculatePartialOfRotatedVector(const double time, const Eigen::Vector3d vectorInLocalFrame)}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix$<$ double, 3, Eigen\+::\+Dynamic $>$ tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+::calculate\+Partial\+Of\+Rotated\+Vector (
+\begin{DoxyParamCaption}
+\item[{const double}]{time, }
+\item[{const Eigen\+::\+Vector3d}]{vector\+In\+Local\+Frame}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1observation__partials_1_1RotationMatrixPartial_a5c50ff0ee090a53772000357cf2855c4}{}\label{classtudat_1_1observation__partials_1_1RotationMatrixPartial_a5c50ff0ee090a53772000357cf2855c4}
+Function to calculate the partial of the position of a vector, which is given in a body-\/fixed frame, in the inertial frame wrt a parameter.
+
+Function to calculate the partial of the position of a vector, which is given in a body-\/fixed frame, in the inertial frame wrt a parameter denoting a property of the rotation between a body-\/fixed and an inertial frame. The type of parameter is defined by the derived class and a a separate derived class is impleneted for each parameter. An example is the change in position of a ground station, as expressed in the inertial frame, wrt a rotational parameter. Each column of the return Matrix denotes a single entry of the parameter (so it is a Vector3d for a double parameter). 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which the partial is to be evaluated. \\
+\hline
+{\em vector\+In\+Local\+Frame} & Vector, expressed in the body-\/fixed frame, of which the partial in an inertial frame wrt parameter is to be determined. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Partial of the value of the vector in an inertial frame wrt the parameter(s). 
+\end{DoxyReturn}
+\index{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial@{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial}!calculate\+Partial\+Of\+Rotation\+Matrix\+To\+Base\+Frame\+Wr\+Parameter@{calculate\+Partial\+Of\+Rotation\+Matrix\+To\+Base\+Frame\+Wr\+Parameter}}
+\index{calculate\+Partial\+Of\+Rotation\+Matrix\+To\+Base\+Frame\+Wr\+Parameter@{calculate\+Partial\+Of\+Rotation\+Matrix\+To\+Base\+Frame\+Wr\+Parameter}!tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial@{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial}}
+\subsubsection[{\texorpdfstring{calculate\+Partial\+Of\+Rotation\+Matrix\+To\+Base\+Frame\+Wr\+Parameter(const double time)=0}{calculatePartialOfRotationMatrixToBaseFrameWrParameter(const double time)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::vector$<$ Eigen\+::\+Matrix3d $>$ tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+::calculate\+Partial\+Of\+Rotation\+Matrix\+To\+Base\+Frame\+Wr\+Parameter (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1observation__partials_1_1RotationMatrixPartial_a758db711ec18f3efbaa759488e45daf1}{}\label{classtudat_1_1observation__partials_1_1RotationMatrixPartial_a758db711ec18f3efbaa759488e45daf1}
+
+
+Function to calculate partials of rotation matrix wrt a parameter (for either double or Vector\+Xd parameters). 
+
+Function to calculate partials of rotation matrix from the body-\/fixed to the inertial base frame wrt a parameter. For a double parameter, the size of the return vector is 1, for a Vector\+Xd parameter, the size is equal to the size of the parameter and the entries of the vector returned from here correspond to partials of the same index in the parameter. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which the partial(s) is(are) to be evaluated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of partials of rotation matrix from body-\/fixed to inertial frame wrt parameter(s) 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtPoleOrientation_a71d9dc1d5b75f3ca59621a680d494d54}{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Wrt\+Pole\+Orientation}, and \hyperlink{classtudat_1_1observation__partials_1_1RotationMatrixPartialWrtConstantRotationRate_af7cfb6213d9fd66a0db3851082ac57e9}{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+Wrt\+Constant\+Rotation\+Rate}.
+
+\index{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial@{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial}!get\+Secondary\+Identifier@{get\+Secondary\+Identifier}}
+\index{get\+Secondary\+Identifier@{get\+Secondary\+Identifier}!tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial@{tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial}}
+\subsubsection[{\texorpdfstring{get\+Secondary\+Identifier()}{getSecondaryIdentifier()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string tudat\+::observation\+\_\+partials\+::\+Rotation\+Matrix\+Partial\+::get\+Secondary\+Identifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1observation__partials_1_1RotationMatrixPartial_a0e55c2d7ab65b053705dcfa3e37048b5}{}\label{classtudat_1_1observation__partials_1_1RotationMatrixPartial_a0e55c2d7ab65b053705dcfa3e37048b5}
+
+
+Function to return the secondary identifier of the estimated parameter. 
+
+Function to return the secondary identifier of the estimated parameter. This function returns an empty string by default, and can be overridden in the derived class if the associated parameter has a secondary identifier. \begin{DoxyReturn}{Returns}
+Secondary identifier of the estimated parameter 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Orbit\+Determination/\+Observation\+Partials/rotation\+Matrix\+Partial.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Orbit\+Determination/\+Observation\+Partials/rotation\+Matrix\+Partial.\+cpp\end{DoxyCompactItemize}

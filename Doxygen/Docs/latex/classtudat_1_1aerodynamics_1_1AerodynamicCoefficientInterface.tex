@@ -1,0 +1,564 @@
+\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface}{}\section{tudat\+:\+:aerodynamics\+:\+:Aerodynamic\+Coefficient\+Interface Class Reference}
+\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface}\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+
+
+Base class to hold an aerodynamic coefficient interface.  
+
+
+
+
+{\ttfamily \#include $<$aerodynamic\+Coefficient\+Interface.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:aerodynamics\+:\+:Aerodynamic\+Coefficient\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:aerodynamics\+:\+:Aerodynamic\+Coefficient\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_afcf63dcf774ca65e91ce8449f3e22d74}{Aerodynamic\+Coefficient\+Interface} (const double reference\+Length, const double reference\+Area, const double lateral\+Reference\+Length, const Eigen\+::\+Vector3d \&moment\+Reference\+Point, const std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$ independent\+Variable\+Names, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=true, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=true)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_aa1df9aca23300659cd752d9afa42efa4}{$\sim$\+Aerodynamic\+Coefficient\+Interface} ()\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_aa1df9aca23300659cd752d9afa42efa4}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_aa1df9aca23300659cd752d9afa42efa4}
+
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_aaf0325453208d06cfbf8aa7a854d6875}{get\+Reference\+Area} ()
+\begin{DoxyCompactList}\small\item\em Get reference area. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a8bf7126281dbe7017490e77768e23670}{get\+Reference\+Length} ()
+\begin{DoxyCompactList}\small\item\em Get reference length. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ac340c18b6cb008955c8dc426c31d6adb}{get\+Lateral\+Reference\+Length} ()
+\begin{DoxyCompactList}\small\item\em Get lateral reference length. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ab940adb9ffb34d7910bdb11ca06143f6}{get\+Moment\+Reference\+Point} ()
+\begin{DoxyCompactList}\small\item\em Get moment reference point. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_af68d685a47306b6525ea06bec6e91880}{update\+Current\+Coefficients} (const std\+::vector$<$ double $>$ \&independent\+Variables)=0
+\begin{DoxyCompactList}\small\item\em Compute the aerodynamic coefficients of the body itself (without control surfaces) at current flight condition. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a59727b07127b2e8ef0af43b3177a0808}{update\+Current\+Control\+Surface\+Coefficients\+Coefficients} (const std\+::string \&current\+Control\+Surface, std\+::vector$<$ double $>$ control\+Surface\+Independent\+Variables)
+\begin{DoxyCompactList}\small\item\em Compute the aerodynamic coefficients for a single control surface, and add to full configuration coefficients. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ad2199d6685cd70348ce5a3886a4b1df3}{update\+Full\+Current\+Coefficients} (const std\+::vector$<$ double $>$ \&independent\+Variables, const std\+::map$<$ std\+::string, std\+::vector$<$ double $>$ $>$ \&control\+Surface\+Independent\+Variables=std\+::map$<$ std\+::string, std\+::vector$<$ double $>$ $>$())
+\begin{DoxyCompactList}\small\item\em Function to update the aerodynamic coefficients of the full body with control surfaces. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a1d482f3c4cba5a2354d12610319aa7af}{get\+Current\+Force\+Coefficients} ()
+\begin{DoxyCompactList}\small\item\em Pure virtual function for calculating and returning aerodynamic force coefficients. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a81b6c6f36bea4e10bdde1d67f95740d7}{get\+Current\+Moment\+Coefficients} ()
+\begin{DoxyCompactList}\small\item\em Pure virtual function for calculating and returning aerodynamic moment coefficients. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ double, 6, 1 $>$ \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a954fde716c0874476c73130b5941036f}{get\+Current\+Aerodynamic\+Coefficients} ()
+\begin{DoxyCompactList}\small\item\em Function for calculating and returning aerodynamic force and moment coefficients. \end{DoxyCompactList}\item 
+std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$ \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a605d78a84519402354ac1551e7eb2d0d}{get\+Independent\+Variable\+Names} ()
+\begin{DoxyCompactList}\small\item\em Function to return the identifiers of the physical meaning of each independent variable. \end{DoxyCompactList}\item 
+Aerodynamic\+Coefficients\+Independent\+Variables \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a91798427fd03d66a696f97f9c01292c4}{get\+Independent\+Variable\+Name} (const unsigned int index)
+\begin{DoxyCompactList}\small\item\em Function to return a single identifier of the physical meaning of one independent variable. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_af10cc21f485df4f2c877f827c7a38493}{get\+Number\+Of\+Independent\+Variables} ()
+\begin{DoxyCompactList}\small\item\em Function to return the number of independent variables upon which the coeficients depend. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_acc664214ae5fee886b3a2ffa22dce2d9}{get\+Are\+Coefficients\+In\+Aerodynamic\+Frame} ()
+\begin{DoxyCompactList}\small\item\em Function that returns whether the coefficients are given in aerodynamic frame. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a55875655a4a678eaa5fdb80cb4827e9f}{get\+Are\+Coefficients\+In\+Negative\+Axis\+Direction} ()
+\begin{DoxyCompactList}\small\item\em Function that returns whether the coefficients are positive in positive axes directions. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a8bfd4247c0ac5d32c92b9ad859f33500}{set\+Control\+Surface\+Increments} (const std\+::map$<$ std\+::string, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1aerodynamics_1_1ControlSurfaceIncrementAerodynamicInterface}{Control\+Surface\+Increment\+Aerodynamic\+Interface} $>$ $>$ control\+Surface\+Increment\+Interfaces)
+\begin{DoxyCompactList}\small\item\em Function to set the list of control surface aerodynamic coefficient interfaces. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a69a2aa883a2fba8bc918dcd60a654eb9}{get\+Control\+Surface\+Name} (const int index)
+\begin{DoxyCompactList}\small\item\em Function to get control surface name at given index in list of control surfaces. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_aeec44dc3a056968cb685dd3f0642bf5d}{get\+Number\+Of\+Control\+Surfaces} ()
+\begin{DoxyCompactList}\small\item\em Function to return the number of control surfaces in current coefficient interface. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a1ca99957277b60ca79aaf4eb48e3f003}{get\+Number\+Of\+Control\+Surface\+Independent\+Variables} (const std\+::string control\+Surface)
+\begin{DoxyCompactList}\small\item\em Function to return the number of independent variables for a given control surface. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$ $>$ \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a63f2ffc4d03a6902e0760f93b1931b5a}{get\+Control\+Surface\+Independent\+Variables} ()
+\begin{DoxyCompactList}\small\item\em Function to get the list of independent variables for all control surfaces. \end{DoxyCompactList}\item 
+Aerodynamic\+Coefficients\+Independent\+Variables \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ad5c005acfa80f3761f20850a855d1644}{get\+Control\+Surface\+Independent\+Variable\+Name} (const std\+::string \&control\+Surface, const unsigned int index)
+\begin{DoxyCompactList}\small\item\em Function to get the identifier for a single independent variable for a single control surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ac2e2b9a55f0269a611599a652a556c9a}{current\+Force\+Coefficients\+\_\+}
+\begin{DoxyCompactList}\small\item\em The current force coefficients. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a421867bb3bd06711019c80621ac75473}{current\+Moment\+Coefficients\+\_\+}
+\begin{DoxyCompactList}\small\item\em The current moment coefficients. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a37ca00d965d756bbf54b727516a33a57}{reference\+Length\+\_\+}
+\begin{DoxyCompactList}\small\item\em Aerodynamic reference length. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_af4588066ab70f6866f5754016c7876c3}{reference\+Area\+\_\+}
+\begin{DoxyCompactList}\small\item\em Aerodynamic reference area. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_addb200a9776750fdc60ae9d5f9291fc8}{lateral\+Reference\+Length\+\_\+}
+\begin{DoxyCompactList}\small\item\em Lateral aerodynamic reference length. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a88e4085f5377db07dece01f46badc536}{moment\+Reference\+Point\+\_\+}
+\begin{DoxyCompactList}\small\item\em Aerodynamic moment reference point. \end{DoxyCompactList}\item 
+std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$ \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a5e0570c4a1562fa17fde2fa5c5e2b3a8}{independent\+Variable\+Names\+\_\+}
+\item 
+unsigned int \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ab8d9151ab40af2f5bce2cf0208020e1b}{number\+Of\+Independent\+Variables\+\_\+}
+\begin{DoxyCompactList}\small\item\em Number of independent variables upon which the force and moment coefficients depend. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a29e32be7cec1045dba10c7a60182ad05}{are\+Coefficients\+In\+Aerodynamic\+Frame\+\_\+}
+\begin{DoxyCompactList}\small\item\em Boolean to denote whether coefficients are defined in aerodynamic or body frame. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a6ede4ceff6ef3a4eb91e4061750e5c19}{are\+Coefficients\+In\+Negative\+Axis\+Direction\+\_\+}
+\begin{DoxyCompactList}\small\item\em Boolean to denote whether coefficients are positive along frame axes. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1aerodynamics_1_1ControlSurfaceIncrementAerodynamicInterface}{Control\+Surface\+Increment\+Aerodynamic\+Interface} $>$ $>$ \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a7f34228355d2b59ab660d79415df79ef}{control\+Surface\+Increment\+Interfaces\+\_\+}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a7f34228355d2b59ab660d79415df79ef}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a7f34228355d2b59ab660d79415df79ef}
+
+\begin{DoxyCompactList}\small\item\em List of control surface aerodynamic coefficient interfaces. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ab14a77a9c578c1153ec128fc927fc4f9}{control\+Surface\+Names\+\_\+}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ab14a77a9c578c1153ec128fc927fc4f9}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ab14a77a9c578c1153ec128fc927fc4f9}
+
+\begin{DoxyCompactList}\small\item\em Explicit list of control surface names, in same order as iterator over control\+Surface\+Increment\+Interfaces\+\_\+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class to hold an aerodynamic coefficient interface. 
+
+This interface can, for instance, be a database of coefficients or an aerodynamic analysis code which generates coefficients. The aerodynamic coefficients are defined as a function of any number of independent variables, the physical meaning of which is stored in the coefficient interface. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!Aerodynamic\+Coefficient\+Interface@{Aerodynamic\+Coefficient\+Interface}}
+\index{Aerodynamic\+Coefficient\+Interface@{Aerodynamic\+Coefficient\+Interface}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{Aerodynamic\+Coefficient\+Interface(const double reference\+Length, const double reference\+Area, const double lateral\+Reference\+Length, const Eigen\+::\+Vector3d \&moment\+Reference\+Point, const std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$ independent\+Variable\+Names, const bool are\+Coefficients\+In\+Aerodynamic\+Frame=true, const bool are\+Coefficients\+In\+Negative\+Axis\+Direction=true)}{AerodynamicCoefficientInterface(const double referenceLength, const double referenceArea, const double lateralReferenceLength, const Eigen::Vector3d &momentReferencePoint, const std::vector< AerodynamicCoefficientsIndependentVariables > independentVariableNames, const bool areCoefficientsInAerodynamicFrame=true, const bool areCoefficientsInNegativeAxisDirection=true)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::\+Aerodynamic\+Coefficient\+Interface (
+\begin{DoxyParamCaption}
+\item[{const double}]{reference\+Length, }
+\item[{const double}]{reference\+Area, }
+\item[{const double}]{lateral\+Reference\+Length, }
+\item[{const Eigen\+::\+Vector3d \&}]{moment\+Reference\+Point, }
+\item[{const std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$}]{independent\+Variable\+Names, }
+\item[{const bool}]{are\+Coefficients\+In\+Aerodynamic\+Frame = {\ttfamily true}, }
+\item[{const bool}]{are\+Coefficients\+In\+Negative\+Axis\+Direction = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_afcf63dcf774ca65e91ce8449f3e22d74}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_afcf63dcf774ca65e91ce8449f3e22d74}
+
+
+Constructor. 
+
+Constructor, sets quantities common to all derived class aerodynamic coefficient interfaces. 
+\begin{DoxyParams}{Parameters}
+{\em reference\+Length} & Reference length with which aerodynamic moments (about x-\/ and z-\/ axes) are non-\/dimensionalized. \\
+\hline
+{\em reference\+Area} & Reference area with which aerodynamic forces and moments are non-\/dimensionalized. \\
+\hline
+{\em lateral\+Reference\+Length} & Reference length with which aerodynamic moments (about y-\/axis) is non-\/dimensionalized. \\
+\hline
+{\em moment\+Reference\+Point} & Point w.\+r.\+t. aerodynamic moment is calculated \\
+\hline
+{\em independent\+Variable\+Names} & Vector with identifiers the physical meaning of each independent variable of the aerodynamic coefficients. \\
+\hline
+{\em are\+Coefficients\+In\+Aerodynamic\+Frame} & Boolean to define whether the aerodynamic coefficients are defined in the aerodynamic frame (lift, drag, side force) or in the body frame (typically denoted as Cx, Cy, Cz) (default true). \\
+\hline
+{\em are\+Coefficients\+In\+Negative\+Axis\+Direction} & Boolean to define whether the aerodynamic coefficients are positive along tyhe positive axes of the body or aerodynamic frame (see are\+Coefficients\+In\+Aerodynamic\+Frame). Note that for (lift, drag, side force), the coefficients are typically defined in negative direction (default true). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Are\+Coefficients\+In\+Aerodynamic\+Frame@{get\+Are\+Coefficients\+In\+Aerodynamic\+Frame}}
+\index{get\+Are\+Coefficients\+In\+Aerodynamic\+Frame@{get\+Are\+Coefficients\+In\+Aerodynamic\+Frame}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Are\+Coefficients\+In\+Aerodynamic\+Frame()}{getAreCoefficientsInAerodynamicFrame()}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Are\+Coefficients\+In\+Aerodynamic\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_acc664214ae5fee886b3a2ffa22dce2d9}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_acc664214ae5fee886b3a2ffa22dce2d9}
+
+
+Function that returns whether the coefficients are given in aerodynamic frame. 
+
+Function that returns whether the coefficients are given in aerodynamic frame (given in body) frame if false. \begin{DoxyReturn}{Returns}
+Boolean whether coefficients are in aerodynamic frame 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Are\+Coefficients\+In\+Negative\+Axis\+Direction@{get\+Are\+Coefficients\+In\+Negative\+Axis\+Direction}}
+\index{get\+Are\+Coefficients\+In\+Negative\+Axis\+Direction@{get\+Are\+Coefficients\+In\+Negative\+Axis\+Direction}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Are\+Coefficients\+In\+Negative\+Axis\+Direction()}{getAreCoefficientsInNegativeAxisDirection()}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Are\+Coefficients\+In\+Negative\+Axis\+Direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a55875655a4a678eaa5fdb80cb4827e9f}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a55875655a4a678eaa5fdb80cb4827e9f}
+
+
+Function that returns whether the coefficients are positive in positive axes directions. 
+
+Function that returns whether the coefficients are positive in positive axes directions, i.\+e. if positive force (in given frame) gives positive coefficients. \begin{DoxyReturn}{Returns}
+Boolean whether coefficients are in positive direction. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Control\+Surface\+Independent\+Variable\+Name@{get\+Control\+Surface\+Independent\+Variable\+Name}}
+\index{get\+Control\+Surface\+Independent\+Variable\+Name@{get\+Control\+Surface\+Independent\+Variable\+Name}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Control\+Surface\+Independent\+Variable\+Name(const std\+::string \&control\+Surface, const unsigned int index)}{getControlSurfaceIndependentVariableName(const std::string &controlSurface, const unsigned int index)}}]{\setlength{\rightskip}{0pt plus 5cm}Aerodynamic\+Coefficients\+Independent\+Variables tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Control\+Surface\+Independent\+Variable\+Name (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{control\+Surface, }
+\item[{const unsigned int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ad5c005acfa80f3761f20850a855d1644}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ad5c005acfa80f3761f20850a855d1644}
+
+
+Function to get the identifier for a single independent variable for a single control surface. 
+
+Function to get the identifier for a single independent variable for a single control surface 
+\begin{DoxyParams}{Parameters}
+{\em control\+Surface} & Control surface identifier. \\
+\hline
+{\em index} & Index of independent variable of control surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Identifier for a requested independent variable for requested control surface 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Control\+Surface\+Independent\+Variables@{get\+Control\+Surface\+Independent\+Variables}}
+\index{get\+Control\+Surface\+Independent\+Variables@{get\+Control\+Surface\+Independent\+Variables}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Control\+Surface\+Independent\+Variables()}{getControlSurfaceIndependentVariables()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ std\+::string, std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$ $>$ tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Control\+Surface\+Independent\+Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a63f2ffc4d03a6902e0760f93b1931b5a}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a63f2ffc4d03a6902e0760f93b1931b5a}
+
+
+Function to get the list of independent variables for all control surfaces. 
+
+Function to get the list of independent variables for all control surfaces \begin{DoxyReturn}{Returns}
+List of independent variables for all control surfaces, with map key denoting control surface identifier 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Control\+Surface\+Name@{get\+Control\+Surface\+Name}}
+\index{get\+Control\+Surface\+Name@{get\+Control\+Surface\+Name}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Control\+Surface\+Name(const int index)}{getControlSurfaceName(const int index)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Control\+Surface\+Name (
+\begin{DoxyParamCaption}
+\item[{const int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a69a2aa883a2fba8bc918dcd60a654eb9}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a69a2aa883a2fba8bc918dcd60a654eb9}
+
+
+Function to get control surface name at given index in list of control surfaces. 
+
+Function to get control surface name at given index in list of control surfaces 
+\begin{DoxyParams}{Parameters}
+{\em index} & Index in list of control surfaces (control\+Surface\+Names\+\_\+) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Name of requested control surfaces. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Current\+Aerodynamic\+Coefficients@{get\+Current\+Aerodynamic\+Coefficients}}
+\index{get\+Current\+Aerodynamic\+Coefficients@{get\+Current\+Aerodynamic\+Coefficients}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Current\+Aerodynamic\+Coefficients()}{getCurrentAerodynamicCoefficients()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix$<$ double, 6, 1 $>$ tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Current\+Aerodynamic\+Coefficients (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a954fde716c0874476c73130b5941036f}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a954fde716c0874476c73130b5941036f}
+
+
+Function for calculating and returning aerodynamic force and moment coefficients. 
+
+Function for calculating and returning aerodynamic force and moment coefficients \begin{DoxyReturn}{Returns}
+Force and moment coefficients at given independent variables 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Current\+Force\+Coefficients@{get\+Current\+Force\+Coefficients}}
+\index{get\+Current\+Force\+Coefficients@{get\+Current\+Force\+Coefficients}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Current\+Force\+Coefficients()}{getCurrentForceCoefficients()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Current\+Force\+Coefficients (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a1d482f3c4cba5a2354d12610319aa7af}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a1d482f3c4cba5a2354d12610319aa7af}
+
+
+Pure virtual function for calculating and returning aerodynamic force coefficients. 
+
+Pure virtual function for calculating and returning aerodynamic force coefficients. \begin{DoxyReturn}{Returns}
+Force coefficients at current independent variables 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Current\+Moment\+Coefficients@{get\+Current\+Moment\+Coefficients}}
+\index{get\+Current\+Moment\+Coefficients@{get\+Current\+Moment\+Coefficients}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Current\+Moment\+Coefficients()}{getCurrentMomentCoefficients()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Current\+Moment\+Coefficients (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a81b6c6f36bea4e10bdde1d67f95740d7}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a81b6c6f36bea4e10bdde1d67f95740d7}
+
+
+Pure virtual function for calculating and returning aerodynamic moment coefficients. 
+
+Pure virtual function for calculating and returning aerodynamic moment coefficients. \begin{DoxyReturn}{Returns}
+Moment coefficients at current independent variables 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Independent\+Variable\+Name@{get\+Independent\+Variable\+Name}}
+\index{get\+Independent\+Variable\+Name@{get\+Independent\+Variable\+Name}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Independent\+Variable\+Name(const unsigned int index)}{getIndependentVariableName(const unsigned int index)}}]{\setlength{\rightskip}{0pt plus 5cm}Aerodynamic\+Coefficients\+Independent\+Variables tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Independent\+Variable\+Name (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a91798427fd03d66a696f97f9c01292c4}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a91798427fd03d66a696f97f9c01292c4}
+
+
+Function to return a single identifier of the physical meaning of one independent variable. 
+
+Function to return a single identifier of the physical meaning of one of the independent independent variable of the coefficient interface. The index of the variable is defined by the input variable. 
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of list of identfiers to return \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The identifiers of the physical meaning of the independent variable at the position of the input variable. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Independent\+Variable\+Names@{get\+Independent\+Variable\+Names}}
+\index{get\+Independent\+Variable\+Names@{get\+Independent\+Variable\+Names}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Independent\+Variable\+Names()}{getIndependentVariableNames()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$ tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Independent\+Variable\+Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a605d78a84519402354ac1551e7eb2d0d}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a605d78a84519402354ac1551e7eb2d0d}
+
+
+Function to return the identifiers of the physical meaning of each independent variable. 
+
+Function to return the identifiers of the physical meaning of each independent variable of the aerodynamic coefficient interface. \begin{DoxyReturn}{Returns}
+A vector with the identifiers of the physical meaning of each independent variable. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Lateral\+Reference\+Length@{get\+Lateral\+Reference\+Length}}
+\index{get\+Lateral\+Reference\+Length@{get\+Lateral\+Reference\+Length}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Lateral\+Reference\+Length()}{getLateralReferenceLength()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Lateral\+Reference\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ac340c18b6cb008955c8dc426c31d6adb}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ac340c18b6cb008955c8dc426c31d6adb}
+
+
+Get lateral reference length. 
+
+Returns lateral reference length used to non-\/dimensionalize aerodynamic moments. \begin{DoxyReturn}{Returns}
+Aerodynamic lateral reference length. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Moment\+Reference\+Point@{get\+Moment\+Reference\+Point}}
+\index{get\+Moment\+Reference\+Point@{get\+Moment\+Reference\+Point}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Moment\+Reference\+Point()}{getMomentReferencePoint()}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Moment\+Reference\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ab940adb9ffb34d7910bdb11ca06143f6}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ab940adb9ffb34d7910bdb11ca06143f6}
+
+
+Get moment reference point. 
+
+Returns the point w.\+r.\+t. which the arm of the aerodynamic moment on a vehicle panel is determined. \begin{DoxyReturn}{Returns}
+Aerodynamic reference point. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Number\+Of\+Control\+Surface\+Independent\+Variables@{get\+Number\+Of\+Control\+Surface\+Independent\+Variables}}
+\index{get\+Number\+Of\+Control\+Surface\+Independent\+Variables@{get\+Number\+Of\+Control\+Surface\+Independent\+Variables}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Number\+Of\+Control\+Surface\+Independent\+Variables(const std\+::string control\+Surface)}{getNumberOfControlSurfaceIndependentVariables(const std::string controlSurface)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Number\+Of\+Control\+Surface\+Independent\+Variables (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{control\+Surface}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a1ca99957277b60ca79aaf4eb48e3f003}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a1ca99957277b60ca79aaf4eb48e3f003}
+
+
+Function to return the number of independent variables for a given control surface. 
+
+Function to return the number of independent variables for a given control surface. 
+\begin{DoxyParams}{Parameters}
+{\em control\+Surface} & Name of control surface for which the number of independent variables is to be retrieved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of independent variables for selected control surface. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Number\+Of\+Control\+Surfaces@{get\+Number\+Of\+Control\+Surfaces}}
+\index{get\+Number\+Of\+Control\+Surfaces@{get\+Number\+Of\+Control\+Surfaces}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Number\+Of\+Control\+Surfaces()}{getNumberOfControlSurfaces()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Number\+Of\+Control\+Surfaces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_aeec44dc3a056968cb685dd3f0642bf5d}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_aeec44dc3a056968cb685dd3f0642bf5d}
+
+
+Function to return the number of control surfaces in current coefficient interface. 
+
+Function to return the number of control surfaces in current coefficient interface. \begin{DoxyReturn}{Returns}
+Number of control surfaces in current coefficient interface. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Number\+Of\+Independent\+Variables@{get\+Number\+Of\+Independent\+Variables}}
+\index{get\+Number\+Of\+Independent\+Variables@{get\+Number\+Of\+Independent\+Variables}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Number\+Of\+Independent\+Variables()}{getNumberOfIndependentVariables()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Number\+Of\+Independent\+Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_af10cc21f485df4f2c877f827c7a38493}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_af10cc21f485df4f2c877f827c7a38493}
+
+
+Function to return the number of independent variables upon which the coeficients depend. 
+
+Function to return the number of independent variables upon which the coeficients depend. The size of the vector used as input for update\+Current\+Coefficients should always have the size returned by this variable. \begin{DoxyReturn}{Returns}
+Number of independent variables upon which the coeficients depend 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Reference\+Area@{get\+Reference\+Area}}
+\index{get\+Reference\+Area@{get\+Reference\+Area}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Reference\+Area()}{getReferenceArea()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Reference\+Area (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_aaf0325453208d06cfbf8aa7a854d6875}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_aaf0325453208d06cfbf8aa7a854d6875}
+
+
+Get reference area. 
+
+Returns reference area used to non-\/dimensionalize aerodynamic forces and moments. \begin{DoxyReturn}{Returns}
+Aerodynamic reference area. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!get\+Reference\+Length@{get\+Reference\+Length}}
+\index{get\+Reference\+Length@{get\+Reference\+Length}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Reference\+Length()}{getReferenceLength()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::get\+Reference\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a8bf7126281dbe7017490e77768e23670}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a8bf7126281dbe7017490e77768e23670}
+
+
+Get reference length. 
+
+Returns reference length used to non-\/dimensionalize aerodynamic moments. \begin{DoxyReturn}{Returns}
+Aerodynamic reference length. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!set\+Control\+Surface\+Increments@{set\+Control\+Surface\+Increments}}
+\index{set\+Control\+Surface\+Increments@{set\+Control\+Surface\+Increments}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{set\+Control\+Surface\+Increments(const std\+::map$<$ std\+::string, boost\+::shared\+\_\+ptr$<$ Control\+Surface\+Increment\+Aerodynamic\+Interface $>$ $>$ control\+Surface\+Increment\+Interfaces)}{setControlSurfaceIncrements(const std::map< std::string, boost::shared_ptr< ControlSurfaceIncrementAerodynamicInterface > > controlSurfaceIncrementInterfaces)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::set\+Control\+Surface\+Increments (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ std\+::string, boost\+::shared\+\_\+ptr$<$ {\bf Control\+Surface\+Increment\+Aerodynamic\+Interface} $>$ $>$}]{control\+Surface\+Increment\+Interfaces}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a8bfd4247c0ac5d32c92b9ad859f33500}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a8bfd4247c0ac5d32c92b9ad859f33500}
+
+
+Function to set the list of control surface aerodynamic coefficient interfaces. 
+
+Function to set the list of control surface aerodynamic coefficient interfaces 
+\begin{DoxyParams}{Parameters}
+{\em control\+Surface\+Increment\+Interfaces} & Map of \hyperlink{classtudat_1_1aerodynamics_1_1ControlSurfaceIncrementAerodynamicInterface}{Control\+Surface\+Increment\+Aerodynamic\+Interface} pointers, wach pointer denoting the coefficient interface of a single control sureface, where the map key denotes the surface\textquotesingle{}s name. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!update\+Current\+Coefficients@{update\+Current\+Coefficients}}
+\index{update\+Current\+Coefficients@{update\+Current\+Coefficients}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{update\+Current\+Coefficients(const std\+::vector$<$ double $>$ \&independent\+Variables)=0}{updateCurrentCoefficients(const std::vector< double > &independentVariables)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::update\+Current\+Coefficients (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{independent\+Variables}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_af68d685a47306b6525ea06bec6e91880}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_af68d685a47306b6525ea06bec6e91880}
+
+
+Compute the aerodynamic coefficients of the body itself (without control surfaces) at current flight condition. 
+
+Computes the current force and moment coefficients of the body itself (without control surfaces) and is to be implemented in derived classes. Input is a set of independent variables (doubles) which represent the variables from which the coefficients are calculated 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & Independent variables of force and moment coefficient determination implemented by derived class \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientGenerator_a90ff928cb8d868f9b05748e125d871ff}{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Generator$<$ Number\+Of\+Independent\+Variables, Number\+Of\+Coefficients $>$}, \hyperlink{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientGenerator_a90ff928cb8d868f9b05748e125d871ff}{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Generator$<$ 3, 6 $>$}, and \hyperlink{classtudat_1_1aerodynamics_1_1CustomAerodynamicCoefficientInterface_acaea0cdace6817da63eccc5c33a3d5ee}{tudat\+::aerodynamics\+::\+Custom\+Aerodynamic\+Coefficient\+Interface}.
+
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!update\+Current\+Control\+Surface\+Coefficients\+Coefficients@{update\+Current\+Control\+Surface\+Coefficients\+Coefficients}}
+\index{update\+Current\+Control\+Surface\+Coefficients\+Coefficients@{update\+Current\+Control\+Surface\+Coefficients\+Coefficients}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{update\+Current\+Control\+Surface\+Coefficients\+Coefficients(const std\+::string \&current\+Control\+Surface, std\+::vector$<$ double $>$ control\+Surface\+Independent\+Variables)}{updateCurrentControlSurfaceCoefficientsCoefficients(const std::string &currentControlSurface, std::vector< double > controlSurfaceIndependentVariables)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::update\+Current\+Control\+Surface\+Coefficients\+Coefficients (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{current\+Control\+Surface, }
+\item[{std\+::vector$<$ double $>$}]{control\+Surface\+Independent\+Variables}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a59727b07127b2e8ef0af43b3177a0808}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a59727b07127b2e8ef0af43b3177a0808}
+
+
+Compute the aerodynamic coefficients for a single control surface, and add to full configuration coefficients. 
+
+Compures the aerodynamic coefficients for a single control surface at the current flight conditions, and adds these to the coefficients of the full configuration, stored in class instance by current\+Force\+Coefficients\+\_\+ and current\+Moment\+Coefficients\+\_\+ variables. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Control\+Surface} & Name of control surface that is to be updated. \\
+\hline
+{\em control\+Surface\+Independent\+Variables} & Current values of independent variables of force and moment coefficient of given control surface. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!update\+Full\+Current\+Coefficients@{update\+Full\+Current\+Coefficients}}
+\index{update\+Full\+Current\+Coefficients@{update\+Full\+Current\+Coefficients}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{update\+Full\+Current\+Coefficients(const std\+::vector$<$ double $>$ \&independent\+Variables, const std\+::map$<$ std\+::string, std\+::vector$<$ double $>$ $>$ \&control\+Surface\+Independent\+Variables=std\+::map$<$ std\+::string, std\+::vector$<$ double $>$ $>$())}{updateFullCurrentCoefficients(const std::vector< double > &independentVariables, const std::map< std::string, std::vector< double > > &controlSurfaceIndependentVariables=std::map< std::string, std::vector< double > >())}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::update\+Full\+Current\+Coefficients (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{independent\+Variables, }
+\item[{const std\+::map$<$ std\+::string, std\+::vector$<$ double $>$ $>$ \&}]{control\+Surface\+Independent\+Variables = {\ttfamily std\+:\+:map$<$~std\+:\+:string,~std\+:\+:vector$<$~double~$>$~$>$~(~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ad2199d6685cd70348ce5a3886a4b1df3}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ad2199d6685cd70348ce5a3886a4b1df3}
+
+
+Function to update the aerodynamic coefficients of the full body with control surfaces. 
+
+Function to update the aerodynamic coefficients of the full body with control surfaces. The full body coefficients are cimputed first, after which the control surfaces are updated and the results added to teh full coefficients. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & Independent variables of force and moment coefficient of body without control surfaces \\
+\hline
+{\em control\+Surface\+Independent\+Variables} & Map of independent variables of force and moment coefficient of control surfaces, with map key denoting the control surface identifier. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!are\+Coefficients\+In\+Aerodynamic\+Frame\+\_\+@{are\+Coefficients\+In\+Aerodynamic\+Frame\+\_\+}}
+\index{are\+Coefficients\+In\+Aerodynamic\+Frame\+\_\+@{are\+Coefficients\+In\+Aerodynamic\+Frame\+\_\+}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{are\+Coefficients\+In\+Aerodynamic\+Frame\+\_\+}{areCoefficientsInAerodynamicFrame_}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::are\+Coefficients\+In\+Aerodynamic\+Frame\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a29e32be7cec1045dba10c7a60182ad05}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a29e32be7cec1045dba10c7a60182ad05}
+
+
+Boolean to denote whether coefficients are defined in aerodynamic or body frame. 
+
+Boolean to define whether the aerodynamic coefficients are defined in the aerodynamic frame (lift, drag, side force) or in the body frame (typically denoted as Cx, Cy, Cz). \index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!are\+Coefficients\+In\+Negative\+Axis\+Direction\+\_\+@{are\+Coefficients\+In\+Negative\+Axis\+Direction\+\_\+}}
+\index{are\+Coefficients\+In\+Negative\+Axis\+Direction\+\_\+@{are\+Coefficients\+In\+Negative\+Axis\+Direction\+\_\+}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{are\+Coefficients\+In\+Negative\+Axis\+Direction\+\_\+}{areCoefficientsInNegativeAxisDirection_}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::are\+Coefficients\+In\+Negative\+Axis\+Direction\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a6ede4ceff6ef3a4eb91e4061750e5c19}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a6ede4ceff6ef3a4eb91e4061750e5c19}
+
+
+Boolean to denote whether coefficients are positive along frame axes. 
+
+Boolean to define whether the aerodynamic coefficients are positive along tyhe positive axes of the body or aerodynamic frame (see are\+Coefficients\+In\+Aerodynamic\+Frame). Note that for (lift, drag, side force), the coefficients are typically defined in negative direction. \index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!current\+Force\+Coefficients\+\_\+@{current\+Force\+Coefficients\+\_\+}}
+\index{current\+Force\+Coefficients\+\_\+@{current\+Force\+Coefficients\+\_\+}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{current\+Force\+Coefficients\+\_\+}{currentForceCoefficients_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::current\+Force\+Coefficients\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ac2e2b9a55f0269a611599a652a556c9a}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ac2e2b9a55f0269a611599a652a556c9a}
+
+
+The current force coefficients. 
+
+The force coefficients at the current flight condition. \index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!current\+Moment\+Coefficients\+\_\+@{current\+Moment\+Coefficients\+\_\+}}
+\index{current\+Moment\+Coefficients\+\_\+@{current\+Moment\+Coefficients\+\_\+}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{current\+Moment\+Coefficients\+\_\+}{currentMomentCoefficients_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::current\+Moment\+Coefficients\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a421867bb3bd06711019c80621ac75473}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a421867bb3bd06711019c80621ac75473}
+
+
+The current moment coefficients. 
+
+The moment coefficients at the current flight condition. \index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!independent\+Variable\+Names\+\_\+@{independent\+Variable\+Names\+\_\+}}
+\index{independent\+Variable\+Names\+\_\+@{independent\+Variable\+Names\+\_\+}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{independent\+Variable\+Names\+\_\+}{independentVariableNames_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ Aerodynamic\+Coefficients\+Independent\+Variables $>$ tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::independent\+Variable\+Names\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a5e0570c4a1562fa17fde2fa5c5e2b3a8}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a5e0570c4a1562fa17fde2fa5c5e2b3a8}
+Vector with identifiers for the physical meaning of each independent variable of the aerodynamic coefficients. \index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!lateral\+Reference\+Length\+\_\+@{lateral\+Reference\+Length\+\_\+}}
+\index{lateral\+Reference\+Length\+\_\+@{lateral\+Reference\+Length\+\_\+}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{lateral\+Reference\+Length\+\_\+}{lateralReferenceLength_}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::lateral\+Reference\+Length\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_addb200a9776750fdc60ae9d5f9291fc8}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_addb200a9776750fdc60ae9d5f9291fc8}
+
+
+Lateral aerodynamic reference length. 
+
+Lateral reference length with which aerodynamic moments are non-\/dimensionalized. \index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!moment\+Reference\+Point\+\_\+@{moment\+Reference\+Point\+\_\+}}
+\index{moment\+Reference\+Point\+\_\+@{moment\+Reference\+Point\+\_\+}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{moment\+Reference\+Point\+\_\+}{momentReferencePoint_}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::moment\+Reference\+Point\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a88e4085f5377db07dece01f46badc536}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a88e4085f5377db07dece01f46badc536}
+
+
+Aerodynamic moment reference point. 
+
+Point w.\+r.\+t. which the arm of the moment on a vehicle panel is determined. \index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!number\+Of\+Independent\+Variables\+\_\+@{number\+Of\+Independent\+Variables\+\_\+}}
+\index{number\+Of\+Independent\+Variables\+\_\+@{number\+Of\+Independent\+Variables\+\_\+}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{number\+Of\+Independent\+Variables\+\_\+}{numberOfIndependentVariables_}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::number\+Of\+Independent\+Variables\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ab8d9151ab40af2f5bce2cf0208020e1b}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_ab8d9151ab40af2f5bce2cf0208020e1b}
+
+
+Number of independent variables upon which the force and moment coefficients depend. 
+
+Number of independent variables upon which the force and moment coefficients depend, i.\+e. the length of the vectors that should be used as input to update\+Current\+Coefficients \index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!reference\+Area\+\_\+@{reference\+Area\+\_\+}}
+\index{reference\+Area\+\_\+@{reference\+Area\+\_\+}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{reference\+Area\+\_\+}{referenceArea_}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::reference\+Area\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_af4588066ab70f6866f5754016c7876c3}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_af4588066ab70f6866f5754016c7876c3}
+
+
+Aerodynamic reference area. 
+
+Reference area with which aerodynamic forces and moments are non-\/dimensionalized. \index{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}!reference\+Length\+\_\+@{reference\+Length\+\_\+}}
+\index{reference\+Length\+\_\+@{reference\+Length\+\_\+}!tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface@{tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface}}
+\subsubsection[{\texorpdfstring{reference\+Length\+\_\+}{referenceLength_}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Aerodynamic\+Coefficient\+Interface\+::reference\+Length\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a37ca00d965d756bbf54b727516a33a57}{}\label{classtudat_1_1aerodynamics_1_1AerodynamicCoefficientInterface_a37ca00d965d756bbf54b727516a33a57}
+
+
+Aerodynamic reference length. 
+
+Reference length with which aerodynamic moments are non-\/dimensionalized. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Aerodynamics/aerodynamic\+Coefficient\+Interface.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,189 @@
+\hypertarget{classtudat_1_1aerodynamics_1_1AtmosphereModel}{}\section{tudat\+:\+:aerodynamics\+:\+:Atmosphere\+Model Class Reference}
+\label{classtudat_1_1aerodynamics_1_1AtmosphereModel}\index{tudat\+::aerodynamics\+::\+Atmosphere\+Model@{tudat\+::aerodynamics\+::\+Atmosphere\+Model}}
+
+
+Atmosphere model class.  
+
+
+
+
+{\ttfamily \#include $<$atmosphere\+Model.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:aerodynamics\+:\+:Atmosphere\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1aerodynamics_1_1AtmosphereModel__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classtudat_1_1aerodynamics_1_1AtmosphereModel_a1ceb7bfb8c497ca6b6a0ccbade902ed7}{$\sim$\+Atmosphere\+Model} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classtudat_1_1aerodynamics_1_1AtmosphereModel_a167feb7925eb65a4ca59317d5fba22fb}{get\+Density} (const double altitude, const double longitude, const double latitude, const double time)=0
+\begin{DoxyCompactList}\small\item\em Get local density. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classtudat_1_1aerodynamics_1_1AtmosphereModel_a516553ea32c89f55a5ba7abe5a417ddc}{get\+Pressure} (const double altitude, const double longitude, const double latitude, const double time)=0
+\begin{DoxyCompactList}\small\item\em Get local pressure. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classtudat_1_1aerodynamics_1_1AtmosphereModel_a9b6be6472481354320e2869e586be5ca}{get\+Temperature} (const double altitude, const double longitude, const double latitude, const double time)=0
+\begin{DoxyCompactList}\small\item\em Get local temperature. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classtudat_1_1aerodynamics_1_1AtmosphereModel_a815606ec0437866d6308679c6f078bce}{get\+Speed\+Of\+Sound} (const double altitude, const double longitude, const double latitude, const double time)=0
+\begin{DoxyCompactList}\small\item\em Get local speed of sound. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Atmosphere model class. 
+
+Base class for all atmosphere models. To keep the function generic for both reference atmospheres and standard atmospheres, altitude, longitude, latitude, and time are inputs for all functions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::aerodynamics\+::\+Atmosphere\+Model@{tudat\+::aerodynamics\+::\+Atmosphere\+Model}!````~Atmosphere\+Model@{$\sim$\+Atmosphere\+Model}}
+\index{````~Atmosphere\+Model@{$\sim$\+Atmosphere\+Model}!tudat\+::aerodynamics\+::\+Atmosphere\+Model@{tudat\+::aerodynamics\+::\+Atmosphere\+Model}}
+\subsubsection[{\texorpdfstring{$\sim$\+Atmosphere\+Model()}{~AtmosphereModel()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual tudat\+::aerodynamics\+::\+Atmosphere\+Model\+::$\sim$\+Atmosphere\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1AtmosphereModel_a1ceb7bfb8c497ca6b6a0ccbade902ed7}{}\label{classtudat_1_1aerodynamics_1_1AtmosphereModel_a1ceb7bfb8c497ca6b6a0ccbade902ed7}
+
+
+Default destructor. 
+
+Default destructor. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::aerodynamics\+::\+Atmosphere\+Model@{tudat\+::aerodynamics\+::\+Atmosphere\+Model}!get\+Density@{get\+Density}}
+\index{get\+Density@{get\+Density}!tudat\+::aerodynamics\+::\+Atmosphere\+Model@{tudat\+::aerodynamics\+::\+Atmosphere\+Model}}
+\subsubsection[{\texorpdfstring{get\+Density(const double altitude, const double longitude, const double latitude, const double time)=0}{getDensity(const double altitude, const double longitude, const double latitude, const double time)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double tudat\+::aerodynamics\+::\+Atmosphere\+Model\+::get\+Density (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude, }
+\item[{const double}]{latitude, }
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1AtmosphereModel_a167feb7925eb65a4ca59317d5fba22fb}{}\label{classtudat_1_1aerodynamics_1_1AtmosphereModel_a167feb7925eb65a4ca59317d5fba22fb}
+
+
+Get local density. 
+
+Returns the local density parameter of the atmosphere in kg per meter$^\wedge$3. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude. \\
+\hline
+{\em longitude} & Longitude. \\
+\hline
+{\em latitude} & Latitude. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Atmospheric density. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a47aa6bc2a6782701055d74ef26ef2652}{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}, \hyperlink{classtudat_1_1aerodynamics_1_1ExponentialAtmosphere_ac6bc5f5fee5475f805e34461fa77b29d}{tudat\+::aerodynamics\+::\+Exponential\+Atmosphere}, \hyperlink{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_a6185309cb023348803588eed3d80398b}{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}, and \hyperlink{classtudat_1_1aerodynamics_1_1StandardAtmosphere_a85b7e8803277496e8f5abc9bb36d5bf6}{tudat\+::aerodynamics\+::\+Standard\+Atmosphere}.
+
+\index{tudat\+::aerodynamics\+::\+Atmosphere\+Model@{tudat\+::aerodynamics\+::\+Atmosphere\+Model}!get\+Pressure@{get\+Pressure}}
+\index{get\+Pressure@{get\+Pressure}!tudat\+::aerodynamics\+::\+Atmosphere\+Model@{tudat\+::aerodynamics\+::\+Atmosphere\+Model}}
+\subsubsection[{\texorpdfstring{get\+Pressure(const double altitude, const double longitude, const double latitude, const double time)=0}{getPressure(const double altitude, const double longitude, const double latitude, const double time)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double tudat\+::aerodynamics\+::\+Atmosphere\+Model\+::get\+Pressure (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude, }
+\item[{const double}]{latitude, }
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1AtmosphereModel_a516553ea32c89f55a5ba7abe5a417ddc}{}\label{classtudat_1_1aerodynamics_1_1AtmosphereModel_a516553ea32c89f55a5ba7abe5a417ddc}
+
+
+Get local pressure. 
+
+Returns the local pressure of the atmosphere parameter in Newton per meter$^\wedge$2. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude. \\
+\hline
+{\em longitude} & Longitude. \\
+\hline
+{\em latitude} & Latitude. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Atmospheric pressure. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_afb3da940e795477c8f3fa112bf8dd5f5}{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}, \hyperlink{classtudat_1_1aerodynamics_1_1ExponentialAtmosphere_a5f9454b2cf717877723364ba3805e855}{tudat\+::aerodynamics\+::\+Exponential\+Atmosphere}, \hyperlink{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_a10a02961cbbf78570db466eee69d3778}{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}, and \hyperlink{classtudat_1_1aerodynamics_1_1StandardAtmosphere_aedd2b6b8824cebea8dea628bfec0e236}{tudat\+::aerodynamics\+::\+Standard\+Atmosphere}.
+
+\index{tudat\+::aerodynamics\+::\+Atmosphere\+Model@{tudat\+::aerodynamics\+::\+Atmosphere\+Model}!get\+Speed\+Of\+Sound@{get\+Speed\+Of\+Sound}}
+\index{get\+Speed\+Of\+Sound@{get\+Speed\+Of\+Sound}!tudat\+::aerodynamics\+::\+Atmosphere\+Model@{tudat\+::aerodynamics\+::\+Atmosphere\+Model}}
+\subsubsection[{\texorpdfstring{get\+Speed\+Of\+Sound(const double altitude, const double longitude, const double latitude, const double time)=0}{getSpeedOfSound(const double altitude, const double longitude, const double latitude, const double time)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double tudat\+::aerodynamics\+::\+Atmosphere\+Model\+::get\+Speed\+Of\+Sound (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude, }
+\item[{const double}]{latitude, }
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1AtmosphereModel_a815606ec0437866d6308679c6f078bce}{}\label{classtudat_1_1aerodynamics_1_1AtmosphereModel_a815606ec0437866d6308679c6f078bce}
+
+
+Get local speed of sound. 
+
+Returns the local speed of sound of the atmosphere in m/s. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude. \\
+\hline
+{\em longitude} & Longitude. \\
+\hline
+{\em latitude} & Latitude. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Atmospheric speed of sound. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a494e42d0266f7d9fa0ebc45bf0f7d78d}{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}, \hyperlink{classtudat_1_1aerodynamics_1_1ExponentialAtmosphere_a90283cd42dc4ee31892750b82bedf14c}{tudat\+::aerodynamics\+::\+Exponential\+Atmosphere}, \hyperlink{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_ae644bf870445c03d007984d946ceaee4}{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}, and \hyperlink{classtudat_1_1aerodynamics_1_1StandardAtmosphere_a9992c99f7994882307b05161e19fc298}{tudat\+::aerodynamics\+::\+Standard\+Atmosphere}.
+
+\index{tudat\+::aerodynamics\+::\+Atmosphere\+Model@{tudat\+::aerodynamics\+::\+Atmosphere\+Model}!get\+Temperature@{get\+Temperature}}
+\index{get\+Temperature@{get\+Temperature}!tudat\+::aerodynamics\+::\+Atmosphere\+Model@{tudat\+::aerodynamics\+::\+Atmosphere\+Model}}
+\subsubsection[{\texorpdfstring{get\+Temperature(const double altitude, const double longitude, const double latitude, const double time)=0}{getTemperature(const double altitude, const double longitude, const double latitude, const double time)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double tudat\+::aerodynamics\+::\+Atmosphere\+Model\+::get\+Temperature (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude, }
+\item[{const double}]{latitude, }
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1AtmosphereModel_a9b6be6472481354320e2869e586be5ca}{}\label{classtudat_1_1aerodynamics_1_1AtmosphereModel_a9b6be6472481354320e2869e586be5ca}
+
+
+Get local temperature. 
+
+Returns the local temperature of the atmosphere parameter in Kelvin. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude. \\
+\hline
+{\em longitude} & Longitude. \\
+\hline
+{\em latitude} & Latitude. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Atmospheric temperature. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a16b8b8363a3b7f6759cd764ba239d8bf}{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}, \hyperlink{classtudat_1_1aerodynamics_1_1ExponentialAtmosphere_aa486d36c2fbe56026d7a4cc17f7d04a2}{tudat\+::aerodynamics\+::\+Exponential\+Atmosphere}, \hyperlink{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_afdf6a072bd4c4d876ba2323f5955b441}{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}, and \hyperlink{classtudat_1_1aerodynamics_1_1StandardAtmosphere_ac5b9a16a96cbb496a4ee76b3dc495543}{tudat\+::aerodynamics\+::\+Standard\+Atmosphere}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Aerodynamics/atmosphere\+Model.\+h\end{DoxyCompactItemize}

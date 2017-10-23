@@ -1,0 +1,130 @@
+\hypertarget{classtudat_1_1unit__tests_1_1TestBody}{}\section{tudat\+:\+:unit\+\_\+tests\+:\+:Test\+Body$<$ Spatial\+Dimensions, Data\+Type $>$ Class Template Reference}
+\label{classtudat_1_1unit__tests_1_1TestBody}\index{tudat\+::unit\+\_\+tests\+::\+Test\+Body$<$ Spatial\+Dimensions, Data\+Type $>$@{tudat\+::unit\+\_\+tests\+::\+Test\+Body$<$ Spatial\+Dimensions, Data\+Type $>$}}
+
+
+Test body class.  
+
+
+
+
+{\ttfamily \#include $<$test\+Body.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1unit__tests_1_1TestBody_a5cf893fba94794b380b249bfc46c972b}{Test\+Body} (const State\+Vector\+Type \&a\+State, const Time\+Data\+Type a\+Time)
+\begin{DoxyCompactList}\small\item\em Constructor taking a state and a time. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1unit__tests_1_1TestBody_a910de69e011ddb330d9a9019dc8f6a58}{set\+Current\+Time\+And\+State} (const Time\+Data\+Type a\+Time, const State\+Vector\+Type \&a\+State)
+\begin{DoxyCompactList}\small\item\em Set current time and state. \end{DoxyCompactList}\item 
+Position\+Vector\+Type \hyperlink{classtudat_1_1unit__tests_1_1TestBody_aba1f689f4257ce9486fbb678aab36c8a}{get\+Current\+Position} ()
+\begin{DoxyCompactList}\small\item\em Get current position. \end{DoxyCompactList}\item 
+Velocity\+Vector\+Type \hyperlink{classtudat_1_1unit__tests_1_1TestBody_a68da07511b9cc5c88549d7cc451a2ca2}{get\+Current\+Velocity} ()
+\begin{DoxyCompactList}\small\item\em Get current velocity. \end{DoxyCompactList}\item 
+Time\+Data\+Type \hyperlink{classtudat_1_1unit__tests_1_1TestBody_aa21a70459d44cf3e6f5962a1f85b1819}{get\+Current\+Time} ()
+\begin{DoxyCompactList}\small\item\em Get current time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int Spatial\+Dimensions = 3, typename Data\+Type = double$>$\\*
+class tudat\+::unit\+\_\+tests\+::\+Test\+Body$<$ Spatial\+Dimensions, Data\+Type $>$}
+
+Test body class. 
+
+This class serves as an example of how a container can be constructed that stored state and time information, which can be used in conjunction with acceleration models, the Cartesian state derivative model, and the composite state derivative model. It should be noted that this class should N\+OT be used as is in the rest of the library, and is only used in conjunction with unit tests. Classes of this nature should go in user applications, since they are typically application-\/specific, hence not general enough to be added to the Tudat libraries. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Spatial\+Dimensions} & Spatial dimensions of position and velocity vectors. The state vector is taken to be twice the number of spatial dimensions. All vectors are represented by Eigen\+::\+Matrix-\/types. \\
+\hline
+{\em Data\+Type} & The data type of all of the internally stored state-\/related vectors and time. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::unit\+\_\+tests\+::\+Test\+Body@{tudat\+::unit\+\_\+tests\+::\+Test\+Body}!Test\+Body@{Test\+Body}}
+\index{Test\+Body@{Test\+Body}!tudat\+::unit\+\_\+tests\+::\+Test\+Body@{tudat\+::unit\+\_\+tests\+::\+Test\+Body}}
+\subsubsection[{\texorpdfstring{Test\+Body(const State\+Vector\+Type \&a\+State, const Time\+Data\+Type a\+Time)}{TestBody(const StateVectorType &aState, const TimeDataType aTime)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int Spatial\+Dimensions = 3, typename Data\+Type  = double$>$ {\bf tudat\+::unit\+\_\+tests\+::\+Test\+Body}$<$ Spatial\+Dimensions, Data\+Type $>$\+::{\bf Test\+Body} (
+\begin{DoxyParamCaption}
+\item[{const State\+Vector\+Type \&}]{a\+State, }
+\item[{const Time\+Data\+Type}]{a\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1unit__tests_1_1TestBody_a5cf893fba94794b380b249bfc46c972b}{}\label{classtudat_1_1unit__tests_1_1TestBody_a5cf893fba94794b380b249bfc46c972b}
+
+
+Constructor taking a state and a time. 
+
+Constructor taking an input state and time. The input state is used internally to set the current position (taken as a segment of the input state given by the indices (0, Spatial\+Dimensions)) and the current velocity (taken as a segment of the input state given by the indices (Spatial\+Dimensions, Spatial\+Dimensions). 
+\begin{DoxyParams}{Parameters}
+{\em a\+State} & An input state vector. \\
+\hline
+{\em a\+Time} & An input time. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::unit\+\_\+tests\+::\+Test\+Body@{tudat\+::unit\+\_\+tests\+::\+Test\+Body}!get\+Current\+Position@{get\+Current\+Position}}
+\index{get\+Current\+Position@{get\+Current\+Position}!tudat\+::unit\+\_\+tests\+::\+Test\+Body@{tudat\+::unit\+\_\+tests\+::\+Test\+Body}}
+\subsubsection[{\texorpdfstring{get\+Current\+Position()}{getCurrentPosition()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int Spatial\+Dimensions = 3, typename Data\+Type  = double$>$ Position\+Vector\+Type {\bf tudat\+::unit\+\_\+tests\+::\+Test\+Body}$<$ Spatial\+Dimensions, Data\+Type $>$\+::get\+Current\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1unit__tests_1_1TestBody_aba1f689f4257ce9486fbb678aab36c8a}{}\label{classtudat_1_1unit__tests_1_1TestBody_aba1f689f4257ce9486fbb678aab36c8a}
+
+
+Get current position. 
+
+Returns the internally stored current position vector. \begin{DoxyReturn}{Returns}
+Current position. 
+\end{DoxyReturn}
+\index{tudat\+::unit\+\_\+tests\+::\+Test\+Body@{tudat\+::unit\+\_\+tests\+::\+Test\+Body}!get\+Current\+Time@{get\+Current\+Time}}
+\index{get\+Current\+Time@{get\+Current\+Time}!tudat\+::unit\+\_\+tests\+::\+Test\+Body@{tudat\+::unit\+\_\+tests\+::\+Test\+Body}}
+\subsubsection[{\texorpdfstring{get\+Current\+Time()}{getCurrentTime()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int Spatial\+Dimensions = 3, typename Data\+Type  = double$>$ Time\+Data\+Type {\bf tudat\+::unit\+\_\+tests\+::\+Test\+Body}$<$ Spatial\+Dimensions, Data\+Type $>$\+::get\+Current\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1unit__tests_1_1TestBody_aa21a70459d44cf3e6f5962a1f85b1819}{}\label{classtudat_1_1unit__tests_1_1TestBody_aa21a70459d44cf3e6f5962a1f85b1819}
+
+
+Get current time. 
+
+Returns the internally stored current tome. \begin{DoxyReturn}{Returns}
+Current time. 
+\end{DoxyReturn}
+\index{tudat\+::unit\+\_\+tests\+::\+Test\+Body@{tudat\+::unit\+\_\+tests\+::\+Test\+Body}!get\+Current\+Velocity@{get\+Current\+Velocity}}
+\index{get\+Current\+Velocity@{get\+Current\+Velocity}!tudat\+::unit\+\_\+tests\+::\+Test\+Body@{tudat\+::unit\+\_\+tests\+::\+Test\+Body}}
+\subsubsection[{\texorpdfstring{get\+Current\+Velocity()}{getCurrentVelocity()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int Spatial\+Dimensions = 3, typename Data\+Type  = double$>$ Velocity\+Vector\+Type {\bf tudat\+::unit\+\_\+tests\+::\+Test\+Body}$<$ Spatial\+Dimensions, Data\+Type $>$\+::get\+Current\+Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1unit__tests_1_1TestBody_a68da07511b9cc5c88549d7cc451a2ca2}{}\label{classtudat_1_1unit__tests_1_1TestBody_a68da07511b9cc5c88549d7cc451a2ca2}
+
+
+Get current velocity. 
+
+Returns the internally stored current velocity vector. \begin{DoxyReturn}{Returns}
+Current velocity. 
+\end{DoxyReturn}
+\index{tudat\+::unit\+\_\+tests\+::\+Test\+Body@{tudat\+::unit\+\_\+tests\+::\+Test\+Body}!set\+Current\+Time\+And\+State@{set\+Current\+Time\+And\+State}}
+\index{set\+Current\+Time\+And\+State@{set\+Current\+Time\+And\+State}!tudat\+::unit\+\_\+tests\+::\+Test\+Body@{tudat\+::unit\+\_\+tests\+::\+Test\+Body}}
+\subsubsection[{\texorpdfstring{set\+Current\+Time\+And\+State(const Time\+Data\+Type a\+Time, const State\+Vector\+Type \&a\+State)}{setCurrentTimeAndState(const TimeDataType aTime, const StateVectorType &aState)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int Spatial\+Dimensions = 3, typename Data\+Type  = double$>$ void {\bf tudat\+::unit\+\_\+tests\+::\+Test\+Body}$<$ Spatial\+Dimensions, Data\+Type $>$\+::set\+Current\+Time\+And\+State (
+\begin{DoxyParamCaption}
+\item[{const Time\+Data\+Type}]{a\+Time, }
+\item[{const State\+Vector\+Type \&}]{a\+State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1unit__tests_1_1TestBody_a910de69e011ddb330d9a9019dc8f6a58}{}\label{classtudat_1_1unit__tests_1_1TestBody_a910de69e011ddb330d9a9019dc8f6a58}
+
+
+Set current time and state. 
+
+Sets the current time, position and current velocity internally based on the input arguments. The current position is taken as a segment of the input state given by the indices (0, Spatial\+Dimensions)), and the current velocity is taken as a segment of the input state given by the indices (Spatial\+Dimensions, Spatial\+Dimensions). 
+\begin{DoxyParams}{Parameters}
+{\em a\+Time} & An input time. \\
+\hline
+{\em a\+State} & An input state vector. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Basic\+Astrodynamics/\+Unit\+Tests/test\+Body.\+h\end{DoxyCompactItemize}

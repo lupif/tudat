@@ -1,10 +1,18 @@
-#include"decisionVariableSettings.h"
+/*    Copyright (c) 2010-2017, Delft University of Technology
+ *    All rigths reserved
+ *
+ *    This file is part of the Tudat. Redistribution and use in source and
+ *    binary forms, with or without modification, are permitted exclusively
+ *    under the terms of the Modified BSD license. You should have received
+ *    a copy of the license with this file. If not, please or visit:
+ *    http://tudat.tudelft.nl/LICENSE.
+ */
 
+#include"decisionVariableSettings.h"
 
 namespace tudat{
 
 namespace optimization{
-
 
 Boundaries::Boundaries( const Eigen::VectorXd lowerBoundary,
                         const Eigen::VectorXd upperBoundary ) :
@@ -47,28 +55,28 @@ int getDecisionVariableSize( DecisionVariables decisionVariable )
 
     int size = -1;
     switch( decisionVariable ){
-    case simulationTime:
+    case simulation_time_decision_variable:
         size = 1;
         break;
-    case initialStateCartesianComponents:
+    case initial_cartesian_state_decision_variable:
         size = 6;
         break;
-    case initialVelocitytateCartesianComponents:
+    case initial_cartesian_velocity_decision_variable:
         size = 3;
         break;
-    case initialPositionStateCartesianComponents:
+    case initial_cartesian_position_decision_variable:
         size = 3;
         break;
-    case singleCartesianComponentsElement:
+    case single_cartesian_component_decision_variable:
         size = 1;
         break;
-    case singleKeplerOrbitalElement:
+    case single_kepler_element_decision_variable:
         size = 1;
         break;
-    case singleSphericalOrbitalElement:
+    case single_spherical_orbital_element_decision_variable:
         size = 1;
         break;
-    case fromTerminationSettings:
+    case from_termination_settings_decision_variable:
         break;
     default:
         std::string errorMessage = "Error, did not recognize decision variable size of type: " +
@@ -82,15 +90,16 @@ int getDecisionVariableSize( DecisionVariables decisionVariable )
 
 
 SingleDecisionVariableSettings::SingleDecisionVariableSettings( DecisionVariables decisionVariable,
-                                boost::shared_ptr< Boundaries > boundaries ) :
-    decisionVariable_(decisionVariable), boundaries_( boundaries ){ }
+                                boost::shared_ptr< Boundaries > boundaries,
+                                std::string associatedBody ) :
+    decisionVariable_(decisionVariable), boundaries_( boundaries ), associatedBody_( associatedBody ){ }
 
 
 SingleDecisionVariableSettings::SingleDecisionVariableSettings( DecisionVariables decisionVariable,
-                                double lowerBoundary, double upperBoundary ) :
-    decisionVariable_(decisionVariable)
+                                double lowerBoundary, double upperBoundary, std::string associatedBody ) :
+    decisionVariable_(decisionVariable), associatedBody_( associatedBody )
 {
-    if( getDecisionVariableSize( decisionVariable ) != 1 && decisionVariable != fromTerminationSettings ){
+    if( getDecisionVariableSize( decisionVariable ) != 1 && decisionVariable != from_termination_settings_decision_variable ){
         std::string message = boost::lexical_cast< std::string >( decisionVariable ) +
                 "is a vector of " + boost::lexical_cast< std::string >( getDecisionVariableSize( decisionVariable ) ) +
                 ". Lower boundary and upper Boundary should be vectors.";
@@ -108,14 +117,15 @@ SingleDecisionVariableSettings::SingleDecisionVariableSettings( DecisionVariable
 }
 
 SingleDecisionVariableSettings::SingleDecisionVariableSettings( DecisionVariables decisionVariable,
-                                Eigen::VectorXd& lowerBoundary, Eigen::VectorXd& upperBoundary) :
-    decisionVariable_(decisionVariable)
+                                Eigen::VectorXd& lowerBoundary, Eigen::VectorXd& upperBoundary,
+                                std::string associatedBody) :
+    decisionVariable_(decisionVariable), associatedBody_( associatedBody )
 {
     if( lowerBoundary.rows() != upperBoundary.rows() ){
         throw std::runtime_error( "Lower boundary and upper boundary size mismatch" );
     }
     else if( getDecisionVariableSize( decisionVariable ) != lowerBoundary.rows()
-             && decisionVariable != fromTerminationSettings ){
+             && decisionVariable != from_termination_settings_decision_variable ){
         std::string message = "Mismatch: decision variable " + boost::lexical_cast< std::string >( decisionVariable ) +
                 " has " + boost::lexical_cast< std::string >( getDecisionVariableSize( decisionVariable ) ) +
                 " components, while defined boundaries have " + boost::lexical_cast< std::string >( lowerBoundary.rows() ) + ".";

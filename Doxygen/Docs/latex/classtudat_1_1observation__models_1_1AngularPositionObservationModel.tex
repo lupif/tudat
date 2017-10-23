@@ -1,0 +1,137 @@
+\hypertarget{classtudat_1_1observation__models_1_1AngularPositionObservationModel}{}\section{tudat\+:\+:observation\+\_\+models\+:\+:Angular\+Position\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ Class Template Reference}
+\label{classtudat_1_1observation__models_1_1AngularPositionObservationModel}\index{tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$@{tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}}
+
+
+Class for simulating angular position (right ascension/declination) observables.  
+
+
+
+
+{\ttfamily \#include $<$angular\+Position\+Observation\+Model.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:observation\+\_\+models\+:\+:Angular\+Position\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1observation__models_1_1AngularPositionObservationModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:observation\+\_\+models\+:\+:Angular\+Position\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1observation__models_1_1AngularPositionObservationModel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ {\bfseries State\+Type}\hypertarget{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a715f0e648288253a828f7945f0bfa51b}{}\label{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a715f0e648288253a828f7945f0bfa51b}
+
+\item 
+typedef Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ {\bfseries Position\+Type}\hypertarget{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a1b3f3d6b7cbb9f1016db2a8145388565}{}\label{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a1b3f3d6b7cbb9f1016db2a8145388565}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a3dfdd52bff8293d3602317aff1ee5820}{Angular\+Position\+Observation\+Model} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator}{observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ $>$ light\+Time\+Calculator, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1ObservationBias}{Observation\+Bias}$<$ 2 $>$ $>$ observation\+Bias\+Calculator=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a62b5b033b307771a9357fecf04288e52}{$\sim$\+Angular\+Position\+Observation\+Model} ()\hypertarget{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a62b5b033b307771a9357fecf04288e52}{}\label{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a62b5b033b307771a9357fecf04288e52}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ Observation\+Scalar\+Type, 2, 1 $>$ \hyperlink{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a8f4020222c0f02173eefddbaac466e07}{compute\+Ideal\+Observations\+With\+Link\+End\+Data} (const Time\+Type time, const Link\+End\+Type link\+End\+Associated\+With\+Time, std\+::vector$<$ Time\+Type $>$ \&link\+End\+Times, std\+::vector$<$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ $>$ \&link\+End\+States)
+\begin{DoxyCompactList}\small\item\em Function to compute ideal angular position observation at given time. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator}{observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ $>$ \hyperlink{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a031c5cc789cd43b703d16930eab8c550}{get\+Light\+Time\+Calculator} ()
+\begin{DoxyCompactList}\small\item\em Function to get the object to calculate light time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Observation\+Scalar\+Type = double, typename Time\+Type = double, typename State\+Scalar\+Type = Observation\+Scalar\+Type$>$\\*
+class tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}
+
+Class for simulating angular position (right ascension/declination) observables. 
+
+Class for simulating angular position (right ascension/declination), using light-\/time (with light-\/time corrections) to determine the states of the link ends (source and receiver). The user may add observation biases to model system-\/dependent deviations between measured and true observation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model}!Angular\+Position\+Observation\+Model@{Angular\+Position\+Observation\+Model}}
+\index{Angular\+Position\+Observation\+Model@{Angular\+Position\+Observation\+Model}!tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model}}
+\subsubsection[{\texorpdfstring{Angular\+Position\+Observation\+Model(const boost\+::shared\+\_\+ptr$<$ observation\+\_\+models\+::\+Light\+Time\+Calculator$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ $>$ light\+Time\+Calculator, const boost\+::shared\+\_\+ptr$<$ Observation\+Bias$<$ 2 $>$ $>$ observation\+Bias\+Calculator=\+N\+U\+L\+L)}{AngularPositionObservationModel(const boost::shared_ptr< observation_models::LightTimeCalculator< ObservationScalarType, TimeType, StateScalarType > > lightTimeCalculator, const boost::shared_ptr< ObservationBias< 2 > > observationBiasCalculator=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ {\bf tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::{\bf Angular\+Position\+Observation\+Model} (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ $>$}]{light\+Time\+Calculator, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Observation\+Bias}$<$ 2 $>$ $>$}]{observation\+Bias\+Calculator = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a3dfdd52bff8293d3602317aff1ee5820}{}\label{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a3dfdd52bff8293d3602317aff1ee5820}
+
+
+Constructor. 
+
+Constructor, 
+\begin{DoxyParams}{Parameters}
+{\em light\+Time\+Calculator} & Object to compute the light-\/time (including any corrections w.\+r.\+t. Euclidean case) between source and receiver \\
+\hline
+{\em observation\+Bias\+Calculator} & Object for calculating system-\/dependent errors in the observable, i.\+e. deviations from the physically ideal observable between reference points (default none). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model}!compute\+Ideal\+Observations\+With\+Link\+End\+Data@{compute\+Ideal\+Observations\+With\+Link\+End\+Data}}
+\index{compute\+Ideal\+Observations\+With\+Link\+End\+Data@{compute\+Ideal\+Observations\+With\+Link\+End\+Data}!tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model}}
+\subsubsection[{\texorpdfstring{compute\+Ideal\+Observations\+With\+Link\+End\+Data(const Time\+Type time, const Link\+End\+Type link\+End\+Associated\+With\+Time, std\+::vector$<$ Time\+Type $>$ \&link\+End\+Times, std\+::vector$<$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ $>$ \&link\+End\+States)}{computeIdealObservationsWithLinkEndData(const TimeType time, const LinkEndType linkEndAssociatedWithTime, std::vector< TimeType > &linkEndTimes, std::vector< Eigen::Matrix< StateScalarType, 6, 1 > > &linkEndStates)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ Eigen\+::\+Matrix$<$ Observation\+Scalar\+Type, 2, 1 $>$ {\bf tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::compute\+Ideal\+Observations\+With\+Link\+End\+Data (
+\begin{DoxyParamCaption}
+\item[{const Time\+Type}]{time, }
+\item[{const Link\+End\+Type}]{link\+End\+Associated\+With\+Time, }
+\item[{std\+::vector$<$ Time\+Type $>$ \&}]{link\+End\+Times, }
+\item[{std\+::vector$<$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ $>$ \&}]{link\+End\+States}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a8f4020222c0f02173eefddbaac466e07}{}\label{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a8f4020222c0f02173eefddbaac466e07}
+
+
+Function to compute ideal angular position observation at given time. 
+
+This function compute ideal angular position observation at a given time. The time argument can be either the reception or transmission time (defined by link\+End\+Associated\+With\+Time input). Note that this observable does include e.\+g. light-\/time corrections, which represent physically true corrections. It does not include e.\+g. system-\/dependent measurement. The times and states of the link ends are also returned in full precision (determined by class template arguments). These states and times are returned by reference. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which observation is to be simulated \\
+\hline
+{\em link\+End\+Associated\+With\+Time} & Link end at which given time is valid, i.\+e. link end for which associated time is kept constant (to input value) \\
+\hline
+{\em link\+End\+Times} & List of times at each link end during observation (returned by reference). \\
+\hline
+{\em link\+End\+States} & List of states at each link end during observation (returned by reference). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Calculated angular position observable values. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1observation__models_1_1ObservationModel_aaa82da2eb90342259242e4cf06c7e3ff}{tudat\+::observation\+\_\+models\+::\+Observation\+Model$<$ 2, Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}.
+
+\index{tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model}!get\+Light\+Time\+Calculator@{get\+Light\+Time\+Calculator}}
+\index{get\+Light\+Time\+Calculator@{get\+Light\+Time\+Calculator}!tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model@{tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model}}
+\subsubsection[{\texorpdfstring{get\+Light\+Time\+Calculator()}{getLightTimeCalculator()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ boost\+::shared\+\_\+ptr$<$ {\bf observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ $>$ {\bf tudat\+::observation\+\_\+models\+::\+Angular\+Position\+Observation\+Model}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::get\+Light\+Time\+Calculator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a031c5cc789cd43b703d16930eab8c550}{}\label{classtudat_1_1observation__models_1_1AngularPositionObservationModel_a031c5cc789cd43b703d16930eab8c550}
+
+
+Function to get the object to calculate light time. 
+
+Function to get the object to calculate light time. \begin{DoxyReturn}{Returns}
+Object to calculate light time. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Observation\+Models/angular\+Position\+Observation\+Model.\+h\end{DoxyCompactItemize}

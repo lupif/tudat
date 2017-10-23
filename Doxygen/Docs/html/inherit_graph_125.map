@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1simulation__setup_1_1EphemerisSettings.html" title="Class for providing settings for ephemeris model. " alt="" coords="5,136,163,177"/>
+<area shape="rect" id="node2" href="$classtudat_1_1simulation__setup_1_1ApproximatePlanetPositionSettings.html" title="tudat::simulation_setup\l::ApproximatePlanetPositionSettings" alt="" coords="211,5,445,47"/>
+<area shape="rect" id="node3" href="$classtudat_1_1simulation__setup_1_1ConstantEphemerisSettings.html" title="tudat::simulation_setup\l::ConstantEphemerisSettings" alt="" coords="231,71,425,112"/>
+<area shape="rect" id="node4" href="$classtudat_1_1simulation__setup_1_1DirectSpiceEphemerisSettings.html" title="EphemerisSettings derived class for defining settings of an ephemeris linked directly to Spice..." alt="" coords="224,136,432,177"/>
+<area shape="rect" id="node6" href="$classtudat_1_1simulation__setup_1_1KeplerEphemerisSettings.html" title="tudat::simulation_setup\l::KeplerEphemerisSettings" alt="" coords="239,201,417,243"/>
+<area shape="rect" id="node7" href="$classtudat_1_1simulation__setup_1_1TabulatedEphemerisSettings.html" title="tudat::simulation_setup\l::TabulatedEphemerisSettings" alt="" coords="229,267,427,308"/>
+<area shape="rect" id="node5" href="$classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings.html" title="tudat::simulation_setup\l::InterpolatedSpiceEphemeris\lSettings" alt="" coords="493,129,687,185"/>
+</map>

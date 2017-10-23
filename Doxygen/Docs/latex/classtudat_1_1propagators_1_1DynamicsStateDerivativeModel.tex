@@ -1,0 +1,281 @@
+\hypertarget{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel}{}\section{tudat\+:\+:propagators\+:\+:Dynamics\+State\+Derivative\+Model$<$ Time\+Type, State\+Scalar\+Type $>$ Class Template Reference}
+\label{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel}\index{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model$<$ Time\+Type, State\+Scalar\+Type $>$@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model$<$ Time\+Type, State\+Scalar\+Type $>$}}
+
+
+Top-\/level class responsible for single complete function evaluation of dynamics state derivative.  
+
+
+
+
+{\ttfamily \#include $<$dynamics\+State\+Derivative\+Model.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ {\bfseries State\+Type}\hypertarget{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a221ebd630673f02899062e6010793ee9}{}\label{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a221ebd630673f02899062e6010793ee9}
+
+\item 
+typedef std\+::map$<$ Integrated\+State\+Type, std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1SingleStateTypeDerivative}{Single\+State\+Type\+Derivative}$<$ State\+Scalar\+Type, Time\+Type $>$ $>$ $>$ $>$ {\bfseries State\+Derivative\+Calculator\+List}\hypertarget{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a66a1996d3a7339037f61d0d3096c1ba2}{}\label{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a66a1996d3a7339037f61d0d3096c1ba2}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a07b4ee8366a4024a352a871ddbef9c24}{Dynamics\+State\+Derivative\+Model} (const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1SingleStateTypeDerivative}{Single\+State\+Type\+Derivative}$<$ State\+Scalar\+Type, Time\+Type $>$ $>$ $>$ state\+Derivative\+Models, const boost\+::function$<$ void(const Time\+Type, const std\+::unordered\+\_\+map$<$ Integrated\+State\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \&, const std\+::vector$<$ Integrated\+State\+Type $>$) $>$ environment\+Update\+Function, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1VariationalEquations}{Variational\+Equations} $>$ variational\+Equations=boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1VariationalEquations}{Variational\+Equations} $>$())
+\begin{DoxyCompactList}\small\item\em Derivative model constructor. \end{DoxyCompactList}\item 
+State\+Type \hyperlink{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a21c8ce5580f81720dd6ddce728ec0b48}{compute\+State\+Derivative} (const Time\+Type time, const State\+Type \&state)
+\begin{DoxyCompactList}\small\item\em Function to calculate the system state derivative. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a1574f2acab780ba335cb8cbb9f6bbe85}{compute\+State\+Double\+Derivative} (const double time, const Eigen\+::\+Matrix\+Xd \&state)
+\begin{DoxyCompactList}\small\item\em Function to calculate the system state derivative with double precision, regardless of template arguments. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \hyperlink{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a1868ccb38a3ff5a7129dcf686d8aea8a}{convert\+From\+Output\+Solution} (const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&output\+State, const Time\+Type \&time)
+\begin{DoxyCompactList}\small\item\em Function to convert the state in the conventional form to the propagator-\/specific form. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \hyperlink{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a718840cf6f63a7c50db2a4fe7e51c33a}{convert\+To\+Output\+Solution} (const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&internal\+Solution, const Time\+Type \&time)
+\begin{DoxyCompactList}\small\item\em Function to convert the propagator-\/specific form of the state to the conventional form. \end{DoxyCompactList}\item 
+std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \hyperlink{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a7f811fa19bc14d40f0b4d84c0723be69}{convert\+Numerical\+State\+Solutions\+To\+Output\+Solutions} (const std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \&raw\+Solution)
+\begin{DoxyCompactList}\small\item\em Function to convert a state history from propagator-\/specific form to the conventional form. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_ad3f8ddb1649a032fc3db60b4b34cf53c}{add\+Variational\+Equations} (boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1VariationalEquations}{Variational\+Equations} $>$ variational\+Equations)
+\begin{DoxyCompactList}\small\item\em Function to add variational equations to the state derivative model. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a892a091b0906ce882f32f6dd6a202f4d}{set\+Propagation\+Settings} (const std\+::vector$<$ Integrated\+State\+Type $>$ \&state\+Types\+To\+Not\+Integrate, const bool evaluate\+Dynamics\+Equations, const bool evaluate\+Variational\+Equations)
+\begin{DoxyCompactList}\small\item\em Function to set which segments of the full state to propagate. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a1d4abdeced7b583e47be6ee78279932b}{update\+State\+Derivative\+Model\+Settings} (const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ initial\+Body\+States)
+\begin{DoxyCompactList}\small\item\em Function to update the settings of the state derivative models with new initial states. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ Integrated\+State\+Type, std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1SingleStateTypeDerivative}{Single\+State\+Type\+Derivative}$<$ State\+Scalar\+Type, Time\+Type $>$ $>$ $>$ $>$ \hyperlink{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a7c745cdbe25e01614d9900c60bbb8dca}{get\+State\+Derivative\+Models} ()
+\begin{DoxyCompactList}\small\item\em Function to get complete list of state derivative models, sorted per state type. \end{DoxyCompactList}\item 
+std\+::map$<$ Integrated\+State\+Type, int $>$ \hyperlink{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a97bc8765abade5ac2da90ef94813d649}{get\+State\+Type\+Start\+Indices} ()
+\begin{DoxyCompactList}\small\item\em Function to get state start index per state type in the complete state vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Time\+Type = double, typename State\+Scalar\+Type = double$>$\\*
+class tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model$<$ Time\+Type, State\+Scalar\+Type $>$}
+
+Top-\/level class responsible for single complete function evaluation of dynamics state derivative. 
+
+Top-\/level class responsible for single complete function evaluation of dynamics state derivative. This class contains both the \hyperlink{classtudat_1_1propagators_1_1EnvironmentUpdater}{Environment\+Updater} and list of \hyperlink{classtudat_1_1propagators_1_1SingleStateTypeDerivative}{Single\+State\+Type\+Derivative} derived classes that define the full state derivative function, which fully evaluated by calling the compute\+State\+Derivative function. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}!Dynamics\+State\+Derivative\+Model@{Dynamics\+State\+Derivative\+Model}}
+\index{Dynamics\+State\+Derivative\+Model@{Dynamics\+State\+Derivative\+Model}!tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}}
+\subsubsection[{\texorpdfstring{Dynamics\+State\+Derivative\+Model(const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ Single\+State\+Type\+Derivative$<$ State\+Scalar\+Type, Time\+Type $>$ $>$ $>$ state\+Derivative\+Models, const boost\+::function$<$ void(const Time\+Type, const std\+::unordered\+\_\+map$<$ Integrated\+State\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \&, const std\+::vector$<$ Integrated\+State\+Type $>$) $>$ environment\+Update\+Function, const boost\+::shared\+\_\+ptr$<$ Variational\+Equations $>$ variational\+Equations=boost\+::shared\+\_\+ptr$<$ Variational\+Equations $>$())}{DynamicsStateDerivativeModel(const std::vector< boost::shared_ptr< SingleStateTypeDerivative< StateScalarType, TimeType > > > stateDerivativeModels, const boost::function< void(const TimeType, const std::unordered_map< IntegratedStateType, Eigen::Matrix< StateScalarType, Eigen::Dynamic, 1 > > &, const std::vector< IntegratedStateType >) > environmentUpdateFunction, const boost::shared_ptr< VariationalEquations > variationalEquations=boost::shared_ptr< VariationalEquations >())}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double, typename State\+Scalar\+Type  = double$>$ {\bf tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}$<$ Time\+Type, State\+Scalar\+Type $>$\+::{\bf Dynamics\+State\+Derivative\+Model} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ {\bf Single\+State\+Type\+Derivative}$<$ State\+Scalar\+Type, Time\+Type $>$ $>$ $>$}]{state\+Derivative\+Models, }
+\item[{const boost\+::function$<$ void(const Time\+Type, const std\+::unordered\+\_\+map$<$ Integrated\+State\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \&, const std\+::vector$<$ Integrated\+State\+Type $>$) $>$}]{environment\+Update\+Function, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Variational\+Equations} $>$}]{variational\+Equations = {\ttfamily boost\+:\+:shared\+\_\+ptr$<$~{\bf Variational\+Equations}~$>$(~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a07b4ee8366a4024a352a871ddbef9c24}{}\label{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a07b4ee8366a4024a352a871ddbef9c24}
+
+
+Derivative model constructor. 
+
+Derivative model constructor. Takes state derivative model and environment updater. Constructor checks whether all models use the same environment updater. 
+\begin{DoxyParams}{Parameters}
+{\em state\+Derivative\+Models} & Vector of state derivative models, with one entry for each type of dynamical equation. \\
+\hline
+{\em environment\+Update\+Function} & Function which is used to update time-\/dependent environment models to current time and state, must be consistent with member environment updaters of state\+Derivative\+Models entries. \\
+\hline
+{\em variational\+Equations} & Object used for computing the state derivative in the variational equations \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}!add\+Variational\+Equations@{add\+Variational\+Equations}}
+\index{add\+Variational\+Equations@{add\+Variational\+Equations}!tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}}
+\subsubsection[{\texorpdfstring{add\+Variational\+Equations(boost\+::shared\+\_\+ptr$<$ Variational\+Equations $>$ variational\+Equations)}{addVariationalEquations(boost::shared_ptr< VariationalEquations > variationalEquations)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double, typename State\+Scalar\+Type  = double$>$ void {\bf tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}$<$ Time\+Type, State\+Scalar\+Type $>$\+::add\+Variational\+Equations (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf Variational\+Equations} $>$}]{variational\+Equations}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_ad3f8ddb1649a032fc3db60b4b34cf53c}{}\label{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_ad3f8ddb1649a032fc3db60b4b34cf53c}
+
+
+Function to add variational equations to the state derivative model. 
+
+Function to add variational equations to the state derivative model. 
+\begin{DoxyParams}{Parameters}
+{\em variational\+Equations} & Object used for computing the state derivative in the variational equations \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}!compute\+State\+Derivative@{compute\+State\+Derivative}}
+\index{compute\+State\+Derivative@{compute\+State\+Derivative}!tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}}
+\subsubsection[{\texorpdfstring{compute\+State\+Derivative(const Time\+Type time, const State\+Type \&state)}{computeStateDerivative(const TimeType time, const StateType &state)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double, typename State\+Scalar\+Type  = double$>$ State\+Type {\bf tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}$<$ Time\+Type, State\+Scalar\+Type $>$\+::compute\+State\+Derivative (
+\begin{DoxyParamCaption}
+\item[{const Time\+Type}]{time, }
+\item[{const State\+Type \&}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a21c8ce5580f81720dd6ddce728ec0b48}{}\label{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a21c8ce5580f81720dd6ddce728ec0b48}
+
+
+Function to calculate the system state derivative. 
+
+Function to calculate the system state derivative, with settings as by last call to set\+Propagation\+Settings function. Dimensions of state must be consistent with these settings. Depending on the settings, this function may calculate the dynamical equations and/or variational equations for a subset of the dynamical equation types that are set in the state\+Derivative\+Models\+\_\+ map. 
+\begin{DoxyParams}{Parameters}
+{\em time} & Current time. \\
+\hline
+{\em state} & Current complete state. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Calculated state derivative. 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}!compute\+State\+Double\+Derivative@{compute\+State\+Double\+Derivative}}
+\index{compute\+State\+Double\+Derivative@{compute\+State\+Double\+Derivative}!tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}}
+\subsubsection[{\texorpdfstring{compute\+State\+Double\+Derivative(const double time, const Eigen\+::\+Matrix\+Xd \&state)}{computeStateDoubleDerivative(const double time, const Eigen::MatrixXd &state)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double, typename State\+Scalar\+Type  = double$>$ Eigen\+::\+Matrix\+Xd {\bf tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}$<$ Time\+Type, State\+Scalar\+Type $>$\+::compute\+State\+Double\+Derivative (
+\begin{DoxyParamCaption}
+\item[{const double}]{time, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a1574f2acab780ba335cb8cbb9f6bbe85}{}\label{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a1574f2acab780ba335cb8cbb9f6bbe85}
+
+
+Function to calculate the system state derivative with double precision, regardless of template arguments. 
+
+Function to calculate the system state derivative with double precision, regardless of template arguments \begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a21c8ce5580f81720dd6ddce728ec0b48}{compute\+State\+Derivative} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Current time. \\
+\hline
+{\em state} & Current complete state. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Calculated state derivative. 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}!convert\+From\+Output\+Solution@{convert\+From\+Output\+Solution}}
+\index{convert\+From\+Output\+Solution@{convert\+From\+Output\+Solution}!tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}}
+\subsubsection[{\texorpdfstring{convert\+From\+Output\+Solution(const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&output\+State, const Time\+Type \&time)}{convertFromOutputSolution(const Eigen::Matrix< StateScalarType, Eigen::Dynamic, 1 > &outputState, const TimeType &time)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double, typename State\+Scalar\+Type  = double$>$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ {\bf tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}$<$ Time\+Type, State\+Scalar\+Type $>$\+::convert\+From\+Output\+Solution (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&}]{output\+State, }
+\item[{const Time\+Type \&}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a1868ccb38a3ff5a7129dcf686d8aea8a}{}\label{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a1868ccb38a3ff5a7129dcf686d8aea8a}
+
+
+Function to convert the state in the conventional form to the propagator-\/specific form. 
+
+Function to convert the state in the conventional form to the propagator-\/specific form. The conventional form is one that is typically used to represent the current state in the environment (e.\+g. Body class). For translational dynamics this is the Cartesian position and velocity). 
+\begin{DoxyParams}{Parameters}
+{\em output\+State} & State in \textquotesingle{}conventional form\textquotesingle{} \\
+\hline
+{\em time} & Current time at which the state is valid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State (output\+State), converted to the \textquotesingle{}propagator-\/specific form\textquotesingle{} 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}!convert\+Numerical\+State\+Solutions\+To\+Output\+Solutions@{convert\+Numerical\+State\+Solutions\+To\+Output\+Solutions}}
+\index{convert\+Numerical\+State\+Solutions\+To\+Output\+Solutions@{convert\+Numerical\+State\+Solutions\+To\+Output\+Solutions}!tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}}
+\subsubsection[{\texorpdfstring{convert\+Numerical\+State\+Solutions\+To\+Output\+Solutions(const std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \&raw\+Solution)}{convertNumericalStateSolutionsToOutputSolutions(const std::map< TimeType, Eigen::Matrix< StateScalarType, Eigen::Dynamic, 1 > > &rawSolution)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double, typename State\+Scalar\+Type  = double$>$ std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ {\bf tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}$<$ Time\+Type, State\+Scalar\+Type $>$\+::convert\+Numerical\+State\+Solutions\+To\+Output\+Solutions (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ Time\+Type, Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \&}]{raw\+Solution}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a7f811fa19bc14d40f0b4d84c0723be69}{}\label{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a7f811fa19bc14d40f0b4d84c0723be69}
+
+
+Function to convert a state history from propagator-\/specific form to the conventional form. 
+
+Function to convert a state history from propagator-\/specific form to the conventional form (not necessarily in inertial frame). \begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a718840cf6f63a7c50db2a4fe7e51c33a}{Dynamics\+State\+Derivative\+Model\+::convert\+To\+Output\+Solution} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+Solution} & State history in propagator-\/specific form (i.\+e. form that is used in numerical integration). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State history (raw\+Solution), converted to the \textquotesingle{}conventional form\textquotesingle{} 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}!convert\+To\+Output\+Solution@{convert\+To\+Output\+Solution}}
+\index{convert\+To\+Output\+Solution@{convert\+To\+Output\+Solution}!tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}}
+\subsubsection[{\texorpdfstring{convert\+To\+Output\+Solution(const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&internal\+Solution, const Time\+Type \&time)}{convertToOutputSolution(const Eigen::Matrix< StateScalarType, Eigen::Dynamic, 1 > &internalSolution, const TimeType &time)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double, typename State\+Scalar\+Type  = double$>$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ {\bf tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}$<$ Time\+Type, State\+Scalar\+Type $>$\+::convert\+To\+Output\+Solution (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&}]{internal\+Solution, }
+\item[{const Time\+Type \&}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a718840cf6f63a7c50db2a4fe7e51c33a}{}\label{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a718840cf6f63a7c50db2a4fe7e51c33a}
+
+
+Function to convert the propagator-\/specific form of the state to the conventional form. 
+
+Function to convert the propagator-\/specific form of the state to the conventional form. The conventional form is one that is typically used to represent the current state in the environment (e.\+g. Body class). For translational dynamics this is the Cartesian position and velocity). In contrast to the convert\+Current\+State\+To\+Global\+Representation function, this function does not provide the state in the inertial frame, but instead provides it in the frame in which it is propagated. 
+\begin{DoxyParams}{Parameters}
+{\em internal\+Solution} & State in propagator-\/specific form (i.\+e. form that is used in numerical integration). \\
+\hline
+{\em time} & Current time at which the state is valid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State (internal\+Solution), converted to the \textquotesingle{}conventional form\textquotesingle{} 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}!get\+State\+Derivative\+Models@{get\+State\+Derivative\+Models}}
+\index{get\+State\+Derivative\+Models@{get\+State\+Derivative\+Models}!tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}}
+\subsubsection[{\texorpdfstring{get\+State\+Derivative\+Models()}{getStateDerivativeModels()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double, typename State\+Scalar\+Type  = double$>$ std\+::unordered\+\_\+map$<$ Integrated\+State\+Type, std\+::vector$<$ boost\+::shared\+\_\+ptr $<$ {\bf Single\+State\+Type\+Derivative}$<$ State\+Scalar\+Type, Time\+Type $>$ $>$ $>$ $>$ {\bf tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}$<$ Time\+Type, State\+Scalar\+Type $>$\+::get\+State\+Derivative\+Models (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a7c745cdbe25e01614d9900c60bbb8dca}{}\label{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a7c745cdbe25e01614d9900c60bbb8dca}
+
+
+Function to get complete list of state derivative models, sorted per state type. 
+
+Function to get complete list of state derivative models, sorted per state type. \begin{DoxyReturn}{Returns}
+Complete list of state derivative models, sorted per state type. 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}!get\+State\+Type\+Start\+Indices@{get\+State\+Type\+Start\+Indices}}
+\index{get\+State\+Type\+Start\+Indices@{get\+State\+Type\+Start\+Indices}!tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}}
+\subsubsection[{\texorpdfstring{get\+State\+Type\+Start\+Indices()}{getStateTypeStartIndices()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double, typename State\+Scalar\+Type  = double$>$ std\+::map$<$ Integrated\+State\+Type, int $>$ {\bf tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}$<$ Time\+Type, State\+Scalar\+Type $>$\+::get\+State\+Type\+Start\+Indices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a97bc8765abade5ac2da90ef94813d649}{}\label{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a97bc8765abade5ac2da90ef94813d649}
+
+
+Function to get state start index per state type in the complete state vector. 
+
+Function to get state start index per state type in the complete state vector. \begin{DoxyReturn}{Returns}
+State start index per state type in the complete state vector. 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}!set\+Propagation\+Settings@{set\+Propagation\+Settings}}
+\index{set\+Propagation\+Settings@{set\+Propagation\+Settings}!tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}}
+\subsubsection[{\texorpdfstring{set\+Propagation\+Settings(const std\+::vector$<$ Integrated\+State\+Type $>$ \&state\+Types\+To\+Not\+Integrate, const bool evaluate\+Dynamics\+Equations, const bool evaluate\+Variational\+Equations)}{setPropagationSettings(const std::vector< IntegratedStateType > &stateTypesToNotIntegrate, const bool evaluateDynamicsEquations, const bool evaluateVariationalEquations)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double, typename State\+Scalar\+Type  = double$>$ void {\bf tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}$<$ Time\+Type, State\+Scalar\+Type $>$\+::set\+Propagation\+Settings (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Integrated\+State\+Type $>$ \&}]{state\+Types\+To\+Not\+Integrate, }
+\item[{const bool}]{evaluate\+Dynamics\+Equations, }
+\item[{const bool}]{evaluate\+Variational\+Equations}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a892a091b0906ce882f32f6dd6a202f4d}{}\label{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a892a091b0906ce882f32f6dd6a202f4d}
+
+
+Function to set which segments of the full state to propagate. 
+
+Function to set which segments of the full state to propagate, i.\+e. whether to propagate the variational/dynamical equations, and which types of the dynamics to propagate. 
+\begin{DoxyParams}{Parameters}
+{\em state\+Types\+To\+Not\+Integrate} & Types of dynamics to propagate \\
+\hline
+{\em evaluate\+Dynamics\+Equations} & Boolean to denote whether the dynamical equations are to be propagated or not \\
+\hline
+{\em evaluate\+Variational\+Equations} & Boolean to denote whether the variational equations are to be propagated or not \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}!update\+State\+Derivative\+Model\+Settings@{update\+State\+Derivative\+Model\+Settings}}
+\index{update\+State\+Derivative\+Model\+Settings@{update\+State\+Derivative\+Model\+Settings}!tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model@{tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}}
+\subsubsection[{\texorpdfstring{update\+State\+Derivative\+Model\+Settings(const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ initial\+Body\+States)}{updateStateDerivativeModelSettings(const Eigen::Matrix< StateScalarType, Eigen::Dynamic, 1 > initialBodyStates)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Time\+Type  = double, typename State\+Scalar\+Type  = double$>$ void {\bf tudat\+::propagators\+::\+Dynamics\+State\+Derivative\+Model}$<$ Time\+Type, State\+Scalar\+Type $>$\+::update\+State\+Derivative\+Model\+Settings (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$}]{initial\+Body\+States}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a1d4abdeced7b583e47be6ee78279932b}{}\label{classtudat_1_1propagators_1_1DynamicsStateDerivativeModel_a1d4abdeced7b583e47be6ee78279932b}
+
+
+Function to update the settings of the state derivative models with new initial states. 
+
+Function to update the settings of the state derivative models with new initial states. This function is called when using, for instance and Encke propagator for the translational dynamics, and the reference orbits are modified. 
+\begin{DoxyParams}{Parameters}
+{\em initial\+Body\+States} & New initial state for the full propagated dynamics. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Propagators/dynamics\+State\+Derivative\+Model.\+h\end{DoxyCompactItemize}

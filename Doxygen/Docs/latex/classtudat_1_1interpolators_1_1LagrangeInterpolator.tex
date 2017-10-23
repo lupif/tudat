@@ -1,0 +1,139 @@
+\hypertarget{classtudat_1_1interpolators_1_1LagrangeInterpolator}{}\section{tudat\+:\+:interpolators\+:\+:Lagrange\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$ Class Template Reference}
+\label{classtudat_1_1interpolators_1_1LagrangeInterpolator}\index{tudat\+::interpolators\+::\+Lagrange\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$@{tudat\+::interpolators\+::\+Lagrange\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$}}
+
+
+Class to perform Lagrange polynomial interpolation.  
+
+
+
+
+{\ttfamily \#include $<$lagrange\+Interpolator.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:interpolators\+:\+:Lagrange\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1interpolators_1_1LagrangeInterpolator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:interpolators\+:\+:Lagrange\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1interpolators_1_1LagrangeInterpolator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1interpolators_1_1LagrangeInterpolator_ad1fce556b4969276ef9ee2acb7e4a41a}{Lagrange\+Interpolator} (const std\+::vector$<$ Independent\+Variable\+Type $>$ \&independent\+Variables, const std\+::vector$<$ Dependent\+Variable\+Type $>$ \&dependent\+Variables, const int number\+Of\+Stages, const Available\+Lookup\+Scheme selected\+Lookup\+Scheme=hunting\+Algorithm, const Lagrange\+Interpolator\+Boundary\+Handling boundary\+Handling=lagrange\+\_\+cubic\+\_\+spline\+\_\+boundary\+\_\+interpolation)
+\begin{DoxyCompactList}\small\item\em Constructor from vectors of independent/dependent data. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1interpolators_1_1LagrangeInterpolator_a9c95512b4901363bb881483a66bd2cad}{Lagrange\+Interpolator} (const std\+::map$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$ \&data\+Map, const int number\+Of\+Stages, const Available\+Lookup\+Scheme selected\+Lookup\+Scheme=hunting\+Algorithm, const Lagrange\+Interpolator\+Boundary\+Handling boundary\+Handling=lagrange\+\_\+cubic\+\_\+spline\+\_\+boundary\+\_\+interpolation)
+\begin{DoxyCompactList}\small\item\em Constructor from map of independent/dependent data. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1interpolators_1_1LagrangeInterpolator_aa41b862da7b1ec1cb6783f65ab2634d9}{$\sim$\+Lagrange\+Interpolator} ()\hypertarget{classtudat_1_1interpolators_1_1LagrangeInterpolator_aa41b862da7b1ec1cb6783f65ab2634d9}{}\label{classtudat_1_1interpolators_1_1LagrangeInterpolator_aa41b862da7b1ec1cb6783f65ab2634d9}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+Dependent\+Variable\+Type \hyperlink{classtudat_1_1interpolators_1_1LagrangeInterpolator_ada90e5c75857ef9246d582d24c74fc85}{interpolate} (const Independent\+Variable\+Type target\+Independent\+Variable\+Value)
+\begin{DoxyCompactList}\small\item\em Function interpolates dependent variable value at given independent variable value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type, typename Scalar\+Type = Independent\+Variable\+Type$>$\\*
+class tudat\+::interpolators\+::\+Lagrange\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$}
+
+Class to perform Lagrange polynomial interpolation. 
+
+Class to perform Lagrange polynomial interpolation from a set of independent and dependent values, as well as the order of the interpolation. Note that this class is optimized for many function calls to interpolate, since the denominators for the interpolations are pre-\/computed for all interpolation intervals. See e.\+g. \href{http://mathworld.wolfram.com/LagrangeInterpolatingPolynomial.html}{\tt http\+://mathworld.\+wolfram.\+com/\+Lagrange\+Interpolating\+Polynomial.\+html} for mathematical details 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::interpolators\+::\+Lagrange\+Interpolator@{tudat\+::interpolators\+::\+Lagrange\+Interpolator}!Lagrange\+Interpolator@{Lagrange\+Interpolator}}
+\index{Lagrange\+Interpolator@{Lagrange\+Interpolator}!tudat\+::interpolators\+::\+Lagrange\+Interpolator@{tudat\+::interpolators\+::\+Lagrange\+Interpolator}}
+\subsubsection[{\texorpdfstring{Lagrange\+Interpolator(const std\+::vector$<$ Independent\+Variable\+Type $>$ \&independent\+Variables, const std\+::vector$<$ Dependent\+Variable\+Type $>$ \&dependent\+Variables, const int number\+Of\+Stages, const Available\+Lookup\+Scheme selected\+Lookup\+Scheme=hunting\+Algorithm, const Lagrange\+Interpolator\+Boundary\+Handling boundary\+Handling=lagrange\+\_\+cubic\+\_\+spline\+\_\+boundary\+\_\+interpolation)}{LagrangeInterpolator(const std::vector< IndependentVariableType > &independentVariables, const std::vector< DependentVariableType > &dependentVariables, const int numberOfStages, const AvailableLookupScheme selectedLookupScheme=huntingAlgorithm, const LagrangeInterpolatorBoundaryHandling boundaryHandling=lagrange_cubic_spline_boundary_interpolation)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type , typename Dependent\+Variable\+Type , typename Scalar\+Type  = Independent\+Variable\+Type$>$ {\bf tudat\+::interpolators\+::\+Lagrange\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$\+::{\bf Lagrange\+Interpolator} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Independent\+Variable\+Type $>$ \&}]{independent\+Variables, }
+\item[{const std\+::vector$<$ Dependent\+Variable\+Type $>$ \&}]{dependent\+Variables, }
+\item[{const int}]{number\+Of\+Stages, }
+\item[{const Available\+Lookup\+Scheme}]{selected\+Lookup\+Scheme = {\ttfamily huntingAlgorithm}, }
+\item[{const Lagrange\+Interpolator\+Boundary\+Handling}]{boundary\+Handling = {\ttfamily lagrange\+\_\+cubic\+\_\+spline\+\_\+boundary\+\_\+interpolation}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1LagrangeInterpolator_ad1fce556b4969276ef9ee2acb7e4a41a}{}\label{classtudat_1_1interpolators_1_1LagrangeInterpolator_ad1fce556b4969276ef9ee2acb7e4a41a}
+
+
+Constructor from vectors of independent/dependent data. 
+
+This constructor initializes the interpolator from two vectors containing the independent variables and dependent variables. A look-\/up scheme can be provided to override the given default. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variables} & Vector of values of independent variables that are used, must be sorted in ascending order. \\
+\hline
+{\em dependent\+Variables} & Vector of values of dependent variables that are used. \\
+\hline
+{\em number\+Of\+Stages} & Number of data points that are used to calculate the interpolating polynomial (must be even). \\
+\hline
+{\em selected\+Lookup\+Scheme} & Identifier of lookupscheme from enum. This algorithm is used to find the nearest lower data point in the independent variables when requesting interpolation. \\
+\hline
+{\em boundary\+Handling} & Boundary handling does something. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::interpolators\+::\+Lagrange\+Interpolator@{tudat\+::interpolators\+::\+Lagrange\+Interpolator}!Lagrange\+Interpolator@{Lagrange\+Interpolator}}
+\index{Lagrange\+Interpolator@{Lagrange\+Interpolator}!tudat\+::interpolators\+::\+Lagrange\+Interpolator@{tudat\+::interpolators\+::\+Lagrange\+Interpolator}}
+\subsubsection[{\texorpdfstring{Lagrange\+Interpolator(const std\+::map$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$ \&data\+Map, const int number\+Of\+Stages, const Available\+Lookup\+Scheme selected\+Lookup\+Scheme=hunting\+Algorithm, const Lagrange\+Interpolator\+Boundary\+Handling boundary\+Handling=lagrange\+\_\+cubic\+\_\+spline\+\_\+boundary\+\_\+interpolation)}{LagrangeInterpolator(const std::map< IndependentVariableType, DependentVariableType > &dataMap, const int numberOfStages, const AvailableLookupScheme selectedLookupScheme=huntingAlgorithm, const LagrangeInterpolatorBoundaryHandling boundaryHandling=lagrange_cubic_spline_boundary_interpolation)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type , typename Dependent\+Variable\+Type , typename Scalar\+Type  = Independent\+Variable\+Type$>$ {\bf tudat\+::interpolators\+::\+Lagrange\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$\+::{\bf Lagrange\+Interpolator} (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$ \&}]{data\+Map, }
+\item[{const int}]{number\+Of\+Stages, }
+\item[{const Available\+Lookup\+Scheme}]{selected\+Lookup\+Scheme = {\ttfamily huntingAlgorithm}, }
+\item[{const Lagrange\+Interpolator\+Boundary\+Handling}]{boundary\+Handling = {\ttfamily lagrange\+\_\+cubic\+\_\+spline\+\_\+boundary\+\_\+interpolation}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1LagrangeInterpolator_a9c95512b4901363bb881483a66bd2cad}{}\label{classtudat_1_1interpolators_1_1LagrangeInterpolator_a9c95512b4901363bb881483a66bd2cad}
+
+
+Constructor from map of independent/dependent data. 
+
+This constructor initializes the interpolator from a map containing independent variables as key and dependent variables as value. A look-\/up scheme can be provided to override the given default. 
+\begin{DoxyParams}{Parameters}
+{\em data\+Map} & Map containing independent variables as key and dependent variables as value. \\
+\hline
+{\em number\+Of\+Stages} & Number of data points that are used to calculate the interpolating polynomial (must be even). \\
+\hline
+{\em selected\+Lookup\+Scheme} & Identifier of lookupscheme from enum. This algorithm is used to find the nearest lower data point in the independent variables when requesting interpolation. \\
+\hline
+{\em boundary\+Handling} & Boundary Handling does something. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::interpolators\+::\+Lagrange\+Interpolator@{tudat\+::interpolators\+::\+Lagrange\+Interpolator}!interpolate@{interpolate}}
+\index{interpolate@{interpolate}!tudat\+::interpolators\+::\+Lagrange\+Interpolator@{tudat\+::interpolators\+::\+Lagrange\+Interpolator}}
+\subsubsection[{\texorpdfstring{interpolate(const Independent\+Variable\+Type target\+Independent\+Variable\+Value)}{interpolate(const IndependentVariableType targetIndependentVariableValue)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type , typename Dependent\+Variable\+Type , typename Scalar\+Type  = Independent\+Variable\+Type$>$ Dependent\+Variable\+Type {\bf tudat\+::interpolators\+::\+Lagrange\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$\+::interpolate (
+\begin{DoxyParamCaption}
+\item[{const Independent\+Variable\+Type}]{target\+Independent\+Variable\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1interpolators_1_1LagrangeInterpolator_ada90e5c75857ef9246d582d24c74fc85}{}\label{classtudat_1_1interpolators_1_1LagrangeInterpolator_ada90e5c75857ef9246d582d24c74fc85}
+
+
+Function interpolates dependent variable value at given independent variable value. 
+
+Function interpolates dependent variable value at given independent variable value. The polynomial centered on the requested interval is used for the interpolation. Note that the number of data points, not the values of the independent variables are used for determining the center (in case of a non-\/equispaced grid). If the required interpolating polynimial goes beyond the independent variable bondaries, a cubic spline with natural boundary conditions is used. 
+\begin{DoxyParams}{Parameters}
+{\em target\+Independent\+Variable\+Value} & Value of independent variable at which interpolation is to take place. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Interpolated value of dependent variable. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a1756cce160465357493e18221aa49dee}{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Interpolators/lagrange\+Interpolator.\+h\end{DoxyCompactItemize}

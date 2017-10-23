@@ -1,0 +1,76 @@
+\hypertarget{classtudat_1_1ephemerides_1_1CartesianStateExtractor}{}\section{tudat\+:\+:ephemerides\+:\+:Cartesian\+State\+Extractor Class Reference}
+\label{classtudat_1_1ephemerides_1_1CartesianStateExtractor}\index{tudat\+::ephemerides\+::\+Cartesian\+State\+Extractor@{tudat\+::ephemerides\+::\+Cartesian\+State\+Extractor}}
+
+
+Cartesian State extractor class.  
+
+
+
+
+{\ttfamily \#include $<$cartesian\+State\+Extractor.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:ephemerides\+:\+:Cartesian\+State\+Extractor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classtudat_1_1ephemerides_1_1CartesianStateExtractor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:ephemerides\+:\+:Cartesian\+State\+Extractor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classtudat_1_1ephemerides_1_1CartesianStateExtractor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::shared\+\_\+ptr$<$ Eigen\+::\+Vector6d $>$ \hyperlink{classtudat_1_1ephemerides_1_1CartesianStateExtractor_a06a0baaa4f724fd575b9ac92fec3f755}{extract} (\hyperlink{classtudat_1_1input__output_1_1Extractor_abfff04b61512a08b822cbcecb6613253}{Parsed\+Data\+Line\+Map\+Ptr} data\+Line\+Map)
+\begin{DoxyCompactList}\small\item\em Extract the Cartesian elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Cartesian State extractor class. 
+
+This class contains the functionality of extracting the Cartesian elements from a parsed data line map. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::ephemerides\+::\+Cartesian\+State\+Extractor@{tudat\+::ephemerides\+::\+Cartesian\+State\+Extractor}!extract@{extract}}
+\index{extract@{extract}!tudat\+::ephemerides\+::\+Cartesian\+State\+Extractor@{tudat\+::ephemerides\+::\+Cartesian\+State\+Extractor}}
+\subsubsection[{\texorpdfstring{extract(\+Parsed\+Data\+Line\+Map\+Ptr data\+Line\+Map)}{extract(ParsedDataLineMapPtr dataLineMap)}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ Eigen\+::\+Vector6d $>$ tudat\+::ephemerides\+::\+Cartesian\+State\+Extractor\+::extract (
+\begin{DoxyParamCaption}
+\item[{{\bf Parsed\+Data\+Line\+Map\+Ptr}}]{data\+Line\+Map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1ephemerides_1_1CartesianStateExtractor_a06a0baaa4f724fd575b9ac92fec3f755}{}\label{classtudat_1_1ephemerides_1_1CartesianStateExtractor_a06a0baaa4f724fd575b9ac92fec3f755}
+
+
+Extract the Cartesian elements. 
+
+Returns a Cartesian\+Elements object containing the cartesian elements found in the input data line map. If one of the elements is not present, the function throws an exception.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Line\+Map} & Data map corresponding to a parsed line. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Cartesian\+Elements object containing the orbital parameters found in the data map. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1input__output_1_1Extractor_a702e1c0f4ffc78cad05c1005e3755e94}{tudat\+::input\+\_\+output\+::\+Extractor$<$ Eigen\+::\+Vector6d $>$}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Ephemerides/cartesian\+State\+Extractor.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Ephemerides/cartesian\+State\+Extractor.\+cpp\end{DoxyCompactItemize}

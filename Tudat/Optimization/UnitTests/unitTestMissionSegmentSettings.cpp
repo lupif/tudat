@@ -6,38 +6,57 @@
 #include <Eigen/Core>
 #include <Eigen/Geometry>
 
-#include "Tudat/Optimization/decisionVariableSettings.h"
+#include "Tudat/Optimization/missionSegmentSettings.h"
 
 namespace tudat
 {
 namespace unit_tests
 {
 
-using namespace optimization;
 
 BOOST_AUTO_TEST_SUITE( test_decision_variable_settings )
 
-BOOST_AUTO_TEST_CASE( testSingleDecisionVariableSettings )
-{
+struct ObjectiveFunctionClass{
 
-    Eigen::VectorXd lowerBoundary;
-    lowerBoundary.resize(3);
-    lowerBoundary[0] = 20;
-    lowerBoundary[1] = 20;
-    lowerBoundary[2] = 20;
+    ObjectiveFunctionClass( boost::shared_ptr< propagators::SingleArcDynamicsSimulator< > >
+                            dynamicsSimulator, const double finalEpoch ) : dynamicsSimulator_( dynamicsSimulator ),
+                                    finalEpoch_( finalEpoch ){ }
 
-    Eigen::VectorXd upperBoundary;
-    upperBoundary.resize(3);
-    upperBoundary[0] = 25;
-    upperBoundary[1] = 25;
-    upperBoundary[2] = 25;
+    ~ObjectiveFunctionClass( ){ }
 
-    SingleDecisionVariableSettings newTestBench(
-                    initialVelocitytateCartesianComponents, lowerBoundary, upperBoundary );
+    double userDefinedObjectiveFunction()
+    {
+        std::map< double, Eigen::VectorXd >::reverse_iterator rit =
+                dynamicsSimulator_->getEquationsOfMotionNumericalSolution().rbegin();
 
-}
+        double time1 = rit->first;
+        Eigen::Vector6d state1 = rit->second.segment(0, 6);
 
-BOOST_AUTO_TEST_CASE( testDecisionVariableFromTerminationSettings )
+        ++rit;
+
+        double time2 = rit->first;
+        Eigen::Vector6d state2 = rit->second.segment(0, 6);
+
+        Eigen::Vector6d finalState = state2 + ( state1- state2)*(finalEpoch_ - time2)/(time1-time2);
+
+        Eigen::Vector6d finalSphericalState =
+                orbital_element_conversions::convertCartesianToSphericalOrbitalState(
+                    finalState);
+
+        double radius = finalSphericalState[ orbital_elements::radius ];
+        double flightPathAngle = finalSphericalState[ orbital_elements::flightPath ];
+        double globalLongitude = finalSphericalState[ orbital_elements::longitude ];
+
+        return (radius - 42000) + flightPathAngle*10000 + (globalLongitude - 1.41)*10000;
+
+    }
+
+    boost::shared_ptr< propagators::SingleArcDynamicsSimulator< > > dynamicsSimulator_;
+    double finalEpoch_;
+
+};
+
+BOOST_AUTO_TEST_CASE( testMisionSegmentSettings )
 {
 
     using namespace tudat;
@@ -118,7 +137,6 @@ BOOST_AUTO_TEST_CASE( testDecisionVariableFromTerminationSettings )
     initialStates.segment(6, 6) = convertKeplerianToCartesianElements( initialKeplerElements,
             bodyMap[ "Earth" ]->getGravityFieldModel()->getGravitationalParameter() );
 
-
     boost::shared_ptr< DependentVariableSaveSettings > depVarsaveSettings =
             boost::make_shared< DependentVariableSaveSettings >(depVarSaves, false);
 
@@ -148,56 +166,41 @@ BOOST_AUTO_TEST_CASE( testDecisionVariableFromTerminationSettings )
             SingleArcDynamicsSimulator< > >(
                 bodyMap, integratorSettings, propagatorSettings, false );
 
-    double lowerBoundary = 800;
-    double upperBoundary = 900;
+    boost::shared_ptr< SingleDecisionVariableSettings > decisionVarSettings1 = boost::make_shared<
+            SingleDecisionVariableSettings >( simulation_time_decision_variable, 4500, 5000 );
 
-    SingleDecisionVariableFromTerminationSettings testBench1( dynamicsSimulator, lowerBoundary,
-                                                              upperBoundary );
+    boost::shared_ptr< SingleDecisionVariableSettings > decisionVarSettings2 =
+            boost::make_shared< SingleSphericalOrbitalElementDecisionVariableSettings >(
+                    orbital_elements::speed, 9000, 10000, "SC1" );
 
-    BOOST_CHECK_EQUAL( *(testBench1.memoryPositionOfVariable_),
-                       1000 );
+    std::vector< boost::shared_ptr< SingleDecisionVariableSettings > >
+            multipleDecisionVariableSettings;
 
-    BOOST_CHECK_EQUAL(testBench1.decisionVariable_,
-                      fromTerminationSettings );
+    multipleDecisionVariableSettings.push_back( decisionVarSettings1 );
+    multipleDecisionVariableSettings.push_back( decisionVarSettings2 );
 
-    *(testBench1.memoryPositionOfVariable_) = 2000;
+    boost::shared_ptr< DecisionVariableSettings > decisionVariableSettings =
+            boost::make_shared< DecisionVariableSettings >( multipleDecisionVariableSettings );
 
-    boost::shared_ptr< TranslationalStatePropagatorSettings< > > propagatorSettingsRetrieve =
-            boost::dynamic_pointer_cast< TranslationalStatePropagatorSettings< > >(
-                dynamicsSimulator->getPropagatorSettings() );
-    boost::shared_ptr< PropagationHybridTerminationSettings > terminationSettingsRetrieve =
-            boost::dynamic_pointer_cast< PropagationHybridTerminationSettings >(
-                propagatorSettingsRetrieve->getTerminationSettings());
+    boost::shared_ptr< ObjectiveFunctionClass > objectiveFunctionObject =
+            boost::make_shared< ObjectiveFunctionClass >( dynamicsSimulator, 1000 );
 
-    BOOST_CHECK_EQUAL(boost::dynamic_pointer_cast< PropagationTimeTerminationSettings >(
-            terminationSettingsRetrieve->terminationSettings_[0])->terminationTime_, 2000 );
+    boost::shared_ptr< ObjectiveFunctionSettings > objectiveFunctionSettings =
+            boost::make_shared< UserDefinedObjectiveFunctionSettings >(
+                boost::bind( &ObjectiveFunctionClass::userDefinedObjectiveFunction, objectiveFunctionObject ) );
 
-    SingleKeplerElementDecisionVariableSettings testBench2( inclination, "Earth", -5, 5 );
+    MissionSegmentSettings testBench1( dynamicsSimulator, decisionVariableSettings,
+                                       objectiveFunctionSettings );
 
-    modifyKeplerElement( inclination, dynamicsSimulator, "SC2", "Earth", mathematical_constants::PI/4 );
+    MissionSegmentSettings testBench2( dynamicsSimulator );
 
-    Eigen::Vector6d modifiedCartState = propagatorSettingsRetrieve->getInitialStates().segment(6,6);
+    MissionSegmentSettings testBench3( dynamicsSimulator, decisionVarSettings1 );
 
-    Eigen::Vector6d modifiedKeplerElements = convertCartesianToKeplerianElements( modifiedCartState,
-            bodyMap["Earth"]->getGravityFieldModel()->getGravitationalParameter() );
+    MissionSegmentSettings testBench4( dynamicsSimulator, objectiveFunctionSettings );
 
-    BOOST_CHECK_CLOSE(mathematical_constants::PI/4, modifiedKeplerElements[inclinationIndex], 1e-3);
+    dynamicsSimulator->integrateEquationsOfMotion( initialStates );
 
-    SingleSphericalOrbitalElementDecisionVariableSettings testBench3( speed, 8000, 8500 );
-
-    modifySphericalComponent( speed, dynamicsSimulator, "SC1", 8250.0 );
-
-    modifiedCartState = propagatorSettingsRetrieve->getInitialStates().segment(0,6);
-
-    Eigen::Vector6d modifiedSphericalElements = convertCartesianToSphericalOrbitalState( modifiedCartState );
-
-    BOOST_CHECK_CLOSE( modifiedSphericalElements[ speedIndex ], 8250.0, 1e-3);
-
-    SingleCartesianComponentDecisionVariableSettings testBench4( zCartesianVelocity, -200, 200 );
-
-    modifyCartesianComponent( zCartesianVelocity, dynamicsSimulator, "SC2", 100.0 );
-
-    BOOST_CHECK_EQUAL( propagatorSettingsRetrieve->getInitialStates().segment(6,6)[5], 100.0 );
+    BOOST_CHECK_EQUAL( testBench4.getFinalSimulationEpoch(), 1000.0 );
 
 }
 

@@ -1,0 +1,112 @@
+\hypertarget{classtudat_1_1input__output_1_1LinearFieldTransform}{}\section{tudat\+:\+:input\+\_\+output\+:\+:Linear\+Field\+Transform Class Reference}
+\label{classtudat_1_1input__output_1_1LinearFieldTransform}\index{tudat\+::input\+\_\+output\+::\+Linear\+Field\+Transform@{tudat\+::input\+\_\+output\+::\+Linear\+Field\+Transform}}
+
+
+Linear field transform class.  
+
+
+
+
+{\ttfamily \#include $<$linear\+Field\+Transform.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:input\+\_\+output\+:\+:Linear\+Field\+Transform\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classtudat_1_1input__output_1_1LinearFieldTransform__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:input\+\_\+output\+:\+:Linear\+Field\+Transform\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classtudat_1_1input__output_1_1LinearFieldTransform__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1input__output_1_1LinearFieldTransform_a173895df536ab1093933d10b7179c1fc}{Linear\+Field\+Transform} (const double a\+Slope, const double an\+Intercept)
+\begin{DoxyCompactList}\small\item\em Constructor of the linear field transform. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1input__output_1_1LinearFieldTransform_adf9338f10e39cc585d4ef9e7e7ccd9f1}{$\sim$\+Linear\+Field\+Transform} ()\hypertarget{classtudat_1_1input__output_1_1LinearFieldTransform_adf9338f10e39cc585d4ef9e7e7ccd9f1}{}\label{classtudat_1_1input__output_1_1LinearFieldTransform_adf9338f10e39cc585d4ef9e7e7ccd9f1}
+
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ std\+::string $>$ \hyperlink{classtudat_1_1input__output_1_1LinearFieldTransform_ac4bb87a66f329fc36999f8fd78d477e4}{transform} (const std\+::string \&input)
+\begin{DoxyCompactList}\small\item\em Transform input string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \hyperlink{classtudat_1_1input__output_1_1LinearFieldTransform_a9afdff8005651fcdb2e8b2c9db21df91}{slope}\hypertarget{classtudat_1_1input__output_1_1LinearFieldTransform_a9afdff8005651fcdb2e8b2c9db21df91}{}\label{classtudat_1_1input__output_1_1LinearFieldTransform_a9afdff8005651fcdb2e8b2c9db21df91}
+
+\begin{DoxyCompactList}\small\item\em Slope of the transformation. \end{DoxyCompactList}\item 
+const double \hyperlink{classtudat_1_1input__output_1_1LinearFieldTransform_a00fb52aeff04f40dd6da39ed0bee8529}{intercept}\hypertarget{classtudat_1_1input__output_1_1LinearFieldTransform_a00fb52aeff04f40dd6da39ed0bee8529}{}\label{classtudat_1_1input__output_1_1LinearFieldTransform_a00fb52aeff04f40dd6da39ed0bee8529}
+
+\begin{DoxyCompactList}\small\item\em Intercept of the transformation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Linear field transform class. 
+
+This class can be used to linearly transform an input field (string). The linear transformation is of the form\+: result = slope $\ast$ input + intercept. This class is derived from the \hyperlink{classtudat_1_1input__output_1_1FieldTransform}{Field\+Transform} abstract base class. \begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1input__output_1_1FieldTransform}{Field\+Transform} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::input\+\_\+output\+::\+Linear\+Field\+Transform@{tudat\+::input\+\_\+output\+::\+Linear\+Field\+Transform}!Linear\+Field\+Transform@{Linear\+Field\+Transform}}
+\index{Linear\+Field\+Transform@{Linear\+Field\+Transform}!tudat\+::input\+\_\+output\+::\+Linear\+Field\+Transform@{tudat\+::input\+\_\+output\+::\+Linear\+Field\+Transform}}
+\subsubsection[{\texorpdfstring{Linear\+Field\+Transform(const double a\+Slope, const double an\+Intercept)}{LinearFieldTransform(const double aSlope, const double anIntercept)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::input\+\_\+output\+::\+Linear\+Field\+Transform\+::\+Linear\+Field\+Transform (
+\begin{DoxyParamCaption}
+\item[{const double}]{a\+Slope, }
+\item[{const double}]{an\+Intercept}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1input__output_1_1LinearFieldTransform_a173895df536ab1093933d10b7179c1fc}{}\label{classtudat_1_1input__output_1_1LinearFieldTransform_a173895df536ab1093933d10b7179c1fc}
+
+
+Constructor of the linear field transform. 
+
+Constructor of the linear field transformation. Linear transformation is of the form\+: $y=a*x+b$, where $a$ is the slope and b is the intercept. 
+\begin{DoxyParams}{Parameters}
+{\em a\+Slope} & Slope of the linear field transform. \\
+\hline
+{\em an\+Intercept} & Intercept of the linear field transform. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::input\+\_\+output\+::\+Linear\+Field\+Transform@{tudat\+::input\+\_\+output\+::\+Linear\+Field\+Transform}!transform@{transform}}
+\index{transform@{transform}!tudat\+::input\+\_\+output\+::\+Linear\+Field\+Transform@{tudat\+::input\+\_\+output\+::\+Linear\+Field\+Transform}}
+\subsubsection[{\texorpdfstring{transform(const std\+::string \&input)}{transform(const std::string &input)}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ std\+::string $>$ tudat\+::input\+\_\+output\+::\+Linear\+Field\+Transform\+::transform (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1input__output_1_1LinearFieldTransform_ac4bb87a66f329fc36999f8fd78d477e4}{}\label{classtudat_1_1input__output_1_1LinearFieldTransform_ac4bb87a66f329fc36999f8fd78d477e4}
+
+
+Transform input string. 
+
+Returns a transformed string, according to the linear transformation\+: result = slope $\ast$ input + intercept. 
+\begin{DoxyParams}{Parameters}
+{\em input} & Input string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shared-\/pointer to transformed string. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1input__output_1_1FieldTransform_ab4be93a414fa1175cbc518fffe3b912a}{tudat\+::input\+\_\+output\+::\+Field\+Transform}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Input\+Output/linear\+Field\+Transform.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Input\+Output/linear\+Field\+Transform.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,172 @@
+\hypertarget{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot}{}\section{tudat\+:\+:unit\+\_\+tests\+:\+:Test\+Function\+With\+Zero\+Root Struct Reference}
+\label{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot}\index{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root@{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root}}
+
+
+Test function for the root-\/finders.  
+
+
+
+
+{\ttfamily \#include $<$test\+Function\+With\+Zero\+Root.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:unit\+\_\+tests\+:\+:Test\+Function\+With\+Zero\+Root\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:unit\+\_\+tests\+:\+:Test\+Function\+With\+Zero\+Root\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a6c33e4dde20b4c5140187202cdb61990}{Test\+Function\+With\+Zero\+Root} (unsigned int a\+Maximum\+Derivative\+Order)\hypertarget{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a6c33e4dde20b4c5140187202cdb61990}{}\label{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a6c33e4dde20b4c5140187202cdb61990}
+
+\begin{DoxyCompactList}\small\item\em Create a function, where a\+Maximum\+Derivative\+Order is the maximum order of the derivative. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a48ea1d8818820199485e588721d198f1}{evaluate} (double input\+Value)\hypertarget{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a48ea1d8818820199485e588721d198f1}{}\label{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a48ea1d8818820199485e588721d198f1}
+
+\begin{DoxyCompactList}\small\item\em Mathematical test function. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a8fb918e0e9e380dd493683892579336a}{compute\+Derivative} (const unsigned int order, const double input\+Value)\hypertarget{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a8fb918e0e9e380dd493683892579336a}{}\label{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a8fb918e0e9e380dd493683892579336a}
+
+\begin{DoxyCompactList}\small\item\em Derivatives of mathematical test function. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a668c0a82b75c8a1edcb94bdd8f923f7e}{compute\+Definite\+Integral} (const unsigned int order, const double lower\+Bound, const double upperbound)\hypertarget{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a668c0a82b75c8a1edcb94bdd8f923f7e}{}\label{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a668c0a82b75c8a1edcb94bdd8f923f7e}
+
+\begin{DoxyCompactList}\small\item\em Crash on integration as root\+\_\+finders should not execute these. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a83bc1022cbd4b289e6758b16f14f71f9}{get\+True\+Root\+Location} ()
+\begin{DoxyCompactList}\small\item\em Get the expected true location of the root. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a32707dd266f104e4675ef2ee2f4ab19f}{get\+True\+Root\+Accuracy} ()
+\begin{DoxyCompactList}\small\item\em Get the accuracy of the true location of the root. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a3166b71d7d7940ba58f6e029514abd87}{get\+Initial\+Guess} ()
+\begin{DoxyCompactList}\small\item\em Get a reasonable initial guess of the root location. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a93f4605ef8dd6141d573c005127972f1}{get\+Lower\+Bound} ()
+\begin{DoxyCompactList}\small\item\em Get a reasonable lower boundary for the root location. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_ab46cce3a8b7b2c226e62f5f2267d4c63}{get\+Upper\+Bound} ()
+\begin{DoxyCompactList}\small\item\em Get a reasonable upper boundary for the root location. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_ab30f3e9dad0f35e6dc60143efda63df3}{maximum\+Derivative\+Order}\hypertarget{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_ab30f3e9dad0f35e6dc60143efda63df3}{}\label{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_ab30f3e9dad0f35e6dc60143efda63df3}
+
+\begin{DoxyCompactList}\small\item\em Maximum order of the derivative before throwing an exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Test function for the root-\/finders. 
+
+This struct contains functions, necessary to test if the various rootfinding methods can find roots that are equal to 0. The test function implemented in this case is\+: \[ f(x) = x^{2} \] 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root@{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root}!get\+Initial\+Guess@{get\+Initial\+Guess}}
+\index{get\+Initial\+Guess@{get\+Initial\+Guess}!tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root@{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root}}
+\subsubsection[{\texorpdfstring{get\+Initial\+Guess()}{getInitialGuess()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root\+::get\+Initial\+Guess (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a3166b71d7d7940ba58f6e029514abd87}{}\label{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a3166b71d7d7940ba58f6e029514abd87}
+
+
+Get a reasonable initial guess of the root location. 
+
+Returns a reasonable initial guess for the true location of the function root, here 2.
+
+\begin{DoxyReturn}{Returns}
+Initial guess for the true location of the function root. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{structtudat_1_1unit__tests_1_1TestFunction_ad97a92c0147206c0f4af9fc4e4ae210c}{tudat\+::unit\+\_\+tests\+::\+Test\+Function}.
+
+\index{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root@{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root}!get\+Lower\+Bound@{get\+Lower\+Bound}}
+\index{get\+Lower\+Bound@{get\+Lower\+Bound}!tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root@{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root}}
+\subsubsection[{\texorpdfstring{get\+Lower\+Bound()}{getLowerBound()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root\+::get\+Lower\+Bound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a93f4605ef8dd6141d573c005127972f1}{}\label{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a93f4605ef8dd6141d573c005127972f1}
+
+
+Get a reasonable lower boundary for the root location. 
+
+Returns a reasonable lower bound for the true location of the function root, here -\/3.
+
+\begin{DoxyReturn}{Returns}
+Lower bound for the true location of the function root. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{structtudat_1_1unit__tests_1_1TestFunction_a86026619c7617e7f216f93d31b053034}{tudat\+::unit\+\_\+tests\+::\+Test\+Function}.
+
+\index{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root@{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root}!get\+True\+Root\+Accuracy@{get\+True\+Root\+Accuracy}}
+\index{get\+True\+Root\+Accuracy@{get\+True\+Root\+Accuracy}!tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root@{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root}}
+\subsubsection[{\texorpdfstring{get\+True\+Root\+Accuracy()}{getTrueRootAccuracy()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root\+::get\+True\+Root\+Accuracy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a32707dd266f104e4675ef2ee2f4ab19f}{}\label{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a32707dd266f104e4675ef2ee2f4ab19f}
+
+
+Get the accuracy of the true location of the root. 
+
+Returns the accuracy of the true location of the function root, here 1e-\/308. \begin{DoxyReturn}{Returns}
+Accuracy of the true location of the root. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{structtudat_1_1unit__tests_1_1TestFunction_aa9098ec74b5d6ecd616ed84b41ae4c39}{tudat\+::unit\+\_\+tests\+::\+Test\+Function}.
+
+\index{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root@{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root}!get\+True\+Root\+Location@{get\+True\+Root\+Location}}
+\index{get\+True\+Root\+Location@{get\+True\+Root\+Location}!tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root@{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root}}
+\subsubsection[{\texorpdfstring{get\+True\+Root\+Location()}{getTrueRootLocation()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root\+::get\+True\+Root\+Location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a83bc1022cbd4b289e6758b16f14f71f9}{}\label{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_a83bc1022cbd4b289e6758b16f14f71f9}
+
+
+Get the expected true location of the root. 
+
+Returns the expected true location of the function root, here 0.\+0. \begin{DoxyReturn}{Returns}
+True location of the root. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{structtudat_1_1unit__tests_1_1TestFunction_abb3a0d4bf48c87d0527fb7397e354332}{tudat\+::unit\+\_\+tests\+::\+Test\+Function}.
+
+\index{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root@{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root}!get\+Upper\+Bound@{get\+Upper\+Bound}}
+\index{get\+Upper\+Bound@{get\+Upper\+Bound}!tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root@{tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root}}
+\subsubsection[{\texorpdfstring{get\+Upper\+Bound()}{getUpperBound()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::unit\+\_\+tests\+::\+Test\+Function\+With\+Zero\+Root\+::get\+Upper\+Bound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_ab46cce3a8b7b2c226e62f5f2267d4c63}{}\label{structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot_ab46cce3a8b7b2c226e62f5f2267d4c63}
+
+
+Get a reasonable upper boundary for the root location. 
+
+Returns a reasonable upper bound for the true location of the function root, here 3.
+
+\begin{DoxyReturn}{Returns}
+Upper bound for the true location of the function root. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{structtudat_1_1unit__tests_1_1TestFunction_ac7eb011b8e647185cdaf34dbddc06c27}{tudat\+::unit\+\_\+tests\+::\+Test\+Function}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Root\+Finders/\+Unit\+Tests/test\+Function\+With\+Zero\+Root.\+h\end{DoxyCompactItemize}

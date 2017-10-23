@@ -1,0 +1,95 @@
+\hypertarget{classtudat_1_1propagators_1_1FixedTimePropagationTerminationCondition}{}\section{tudat\+:\+:propagators\+:\+:Fixed\+Time\+Propagation\+Termination\+Condition Class Reference}
+\label{classtudat_1_1propagators_1_1FixedTimePropagationTerminationCondition}\index{tudat\+::propagators\+::\+Fixed\+Time\+Propagation\+Termination\+Condition@{tudat\+::propagators\+::\+Fixed\+Time\+Propagation\+Termination\+Condition}}
+
+
+Class for stopping the propagation after a fixed amount of time (i.\+e. for certain independent variable value)  
+
+
+
+
+{\ttfamily \#include $<$propagation\+Termination.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:propagators\+:\+:Fixed\+Time\+Propagation\+Termination\+Condition\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classtudat_1_1propagators_1_1FixedTimePropagationTerminationCondition__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:propagators\+:\+:Fixed\+Time\+Propagation\+Termination\+Condition\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classtudat_1_1propagators_1_1FixedTimePropagationTerminationCondition__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1propagators_1_1FixedTimePropagationTerminationCondition_abece50cbcd9790be252ce5121d5174d5}{Fixed\+Time\+Propagation\+Termination\+Condition} (const double stop\+Time, const bool propagation\+Direction\+Is\+Positive)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1propagators_1_1FixedTimePropagationTerminationCondition_abb0134403600810ccedd54e6a88e0337}{check\+Stop\+Condition} (const double time)
+\begin{DoxyCompactList}\small\item\em Function to check whether the propagation is to be be stopped. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for stopping the propagation after a fixed amount of time (i.\+e. for certain independent variable value) 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::propagators\+::\+Fixed\+Time\+Propagation\+Termination\+Condition@{tudat\+::propagators\+::\+Fixed\+Time\+Propagation\+Termination\+Condition}!Fixed\+Time\+Propagation\+Termination\+Condition@{Fixed\+Time\+Propagation\+Termination\+Condition}}
+\index{Fixed\+Time\+Propagation\+Termination\+Condition@{Fixed\+Time\+Propagation\+Termination\+Condition}!tudat\+::propagators\+::\+Fixed\+Time\+Propagation\+Termination\+Condition@{tudat\+::propagators\+::\+Fixed\+Time\+Propagation\+Termination\+Condition}}
+\subsubsection[{\texorpdfstring{Fixed\+Time\+Propagation\+Termination\+Condition(const double stop\+Time, const bool propagation\+Direction\+Is\+Positive)}{FixedTimePropagationTerminationCondition(const double stopTime, const bool propagationDirectionIsPositive)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::propagators\+::\+Fixed\+Time\+Propagation\+Termination\+Condition\+::\+Fixed\+Time\+Propagation\+Termination\+Condition (
+\begin{DoxyParamCaption}
+\item[{const double}]{stop\+Time, }
+\item[{const bool}]{propagation\+Direction\+Is\+Positive}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1FixedTimePropagationTerminationCondition_abece50cbcd9790be252ce5121d5174d5}{}\label{classtudat_1_1propagators_1_1FixedTimePropagationTerminationCondition_abece50cbcd9790be252ce5121d5174d5}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em stop\+Time} & \hyperlink{classtudat_1_1Time}{Time} at which the propagation is to stop. \\
+\hline
+{\em propagation\+Direction\+Is\+Positive} & Boolean denoting whether propagation is forward (if true) or backwards (if false) in time. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::propagators\+::\+Fixed\+Time\+Propagation\+Termination\+Condition@{tudat\+::propagators\+::\+Fixed\+Time\+Propagation\+Termination\+Condition}!check\+Stop\+Condition@{check\+Stop\+Condition}}
+\index{check\+Stop\+Condition@{check\+Stop\+Condition}!tudat\+::propagators\+::\+Fixed\+Time\+Propagation\+Termination\+Condition@{tudat\+::propagators\+::\+Fixed\+Time\+Propagation\+Termination\+Condition}}
+\subsubsection[{\texorpdfstring{check\+Stop\+Condition(const double time)}{checkStopCondition(const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::propagators\+::\+Fixed\+Time\+Propagation\+Termination\+Condition\+::check\+Stop\+Condition (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1propagators_1_1FixedTimePropagationTerminationCondition_abb0134403600810ccedd54e6a88e0337}{}\label{classtudat_1_1propagators_1_1FixedTimePropagationTerminationCondition_abb0134403600810ccedd54e6a88e0337}
+
+
+Function to check whether the propagation is to be be stopped. 
+
+Function to check whether the propagation is to be be stopped, i.\+e. whether the stop\+Time\+\_\+ has been reached or not. 
+\begin{DoxyParams}{Parameters}
+{\em time} & Current time in propagation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if propagation is to be stopped, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1propagators_1_1PropagationTerminationCondition_a2a53592475bbfb408fd12faf21c5f3be}{tudat\+::propagators\+::\+Propagation\+Termination\+Condition}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/propagation\+Termination.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/propagation\+Termination.\+cpp\end{DoxyCompactItemize}

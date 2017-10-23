@@ -1,0 +1,273 @@
+\hypertarget{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial}{}\section{tudat\+:\+:acceleration\+\_\+partials\+:\+:Cannon\+Ball\+Radiation\+Pressure\+Partial Class Reference}
+\label{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial}\index{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}}
+
+
+Class to calculate the partials of the cannnonball radiation pressure acceleration w.\+r.\+t. parameters and states.  
+
+
+
+
+{\ttfamily \#include $<$radiation\+Pressure\+Acceleration\+Partial.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:acceleration\+\_\+partials\+:\+:Cannon\+Ball\+Radiation\+Pressure\+Partial\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:acceleration\+\_\+partials\+:\+:Cannon\+Ball\+Radiation\+Pressure\+Partial\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_aae08de769beaaee21e7e4c9cc68b9000}{Cannon\+Ball\+Radiation\+Pressure\+Partial} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1electro__magnetism_1_1RadiationPressureInterface}{electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface} $>$ radiation\+Pressure\+Interface, const boost\+::function$<$ double() $>$ mass\+Function, const std\+::string \&accelerated\+Body, const std\+::string \&accelerating\+Body)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_aaf82430eca086ce0e21ed0c8b0359f24}{$\sim$\+Cannon\+Ball\+Radiation\+Pressure\+Partial} ()\hypertarget{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_aaf82430eca086ce0e21ed0c8b0359f24}{}\label{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_aaf82430eca086ce0e21ed0c8b0359f24}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_a7105f4ca7565bc0b0ffe893755ee3b26}{wrt\+Position\+Of\+Accelerated\+Body} (Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=0)
+\begin{DoxyCompactList}\small\item\em Function for calculating the partial of the acceleration w.\+r.\+t. the position of body undergoing acceleration.. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_ac7c82002af8222d1de3cf7c2a5d37341}{wrt\+Position\+Of\+Accelerating\+Body} (Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=0)
+\begin{DoxyCompactList}\small\item\em Function for calculating the partial of the acceleration w.\+r.\+t. the velocity of body undergoing acceleration.. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_aba3d2b12b38f731700103f233ab655f6}{wrt\+Non\+Translational\+State\+Of\+Additional\+Body} (Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const std\+::pair$<$ std\+::string, std\+::string $>$ \&state\+Reference\+Point, const propagators\+::\+Integrated\+State\+Type integrated\+State\+Type)
+\begin{DoxyCompactList}\small\item\em Function for calculating the partial of the acceleration w.\+r.\+t. a non-\/translational integrated state. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_afce5101fe0a206f110fda0917146bc9f}{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State} (const std\+::pair$<$ std\+::string, std\+::string $>$ \&state\+Reference\+Point, const propagators\+::\+Integrated\+State\+Type integrated\+State\+Type)
+\begin{DoxyCompactList}\small\item\em Function for determining if the acceleration is dependent on a non-\/translational integrated state. \end{DoxyCompactList}\item 
+std\+::pair$<$ boost\+::function$<$ void(Eigen\+::\+Matrix\+Xd \&) $>$, int $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_af98f948ef60241826e27489cf31d05f4}{get\+Parameter\+Partial\+Function} (boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter}{estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ double $>$ $>$ parameter)
+\begin{DoxyCompactList}\small\item\em Function for setting up and retrieving a function returning a partial w.\+r.\+t. a double parameter. \end{DoxyCompactList}\item 
+std\+::pair$<$ boost\+::function$<$ void(Eigen\+::\+Matrix\+Xd \&) $>$, int $>$ \hyperlink{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_afc1fd975481defde6acc5d10f9c38922}{get\+Parameter\+Partial\+Function} (boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1estimatable__parameters_1_1EstimatableParameter}{estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ Eigen\+::\+Vector\+Xd $>$ $>$ parameter)
+\begin{DoxyCompactList}\small\item\em Function for setting up and retrieving a function returning a partial w.\+r.\+t. a vector parameter. \end{DoxyCompactList}\item 
+void {\bfseries wrt\+Radiation\+Pressure\+Coefficient} (Eigen\+::\+Matrix\+Xd \&partial)\hypertarget{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_afe5f40aa8a37b0b7498d703a4a3355c2}{}\label{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_afe5f40aa8a37b0b7498d703a4a3355c2}
+
+\item 
+void \hyperlink{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_ac146f0ef1adda30ba9657bac6e563692}{update} (const double current\+Time=0.\+0)
+\begin{DoxyCompactList}\small\item\em Function for updating partial w.\+r.\+t. the bodies\textquotesingle{} positions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class to calculate the partials of the cannnonball radiation pressure acceleration w.\+r.\+t. parameters and states. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}!Cannon\+Ball\+Radiation\+Pressure\+Partial@{Cannon\+Ball\+Radiation\+Pressure\+Partial}}
+\index{Cannon\+Ball\+Radiation\+Pressure\+Partial@{Cannon\+Ball\+Radiation\+Pressure\+Partial}!tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}}
+\subsubsection[{\texorpdfstring{Cannon\+Ball\+Radiation\+Pressure\+Partial(const boost\+::shared\+\_\+ptr$<$ electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface $>$ radiation\+Pressure\+Interface, const boost\+::function$<$ double() $>$ mass\+Function, const std\+::string \&accelerated\+Body, const std\+::string \&accelerating\+Body)}{CannonBallRadiationPressurePartial(const boost::shared_ptr< electro_magnetism::RadiationPressureInterface > radiationPressureInterface, const boost::function< double() > massFunction, const std::string &acceleratedBody, const std::string &acceleratingBody)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf electro\+\_\+magnetism\+::\+Radiation\+Pressure\+Interface} $>$}]{radiation\+Pressure\+Interface, }
+\item[{const boost\+::function$<$ double() $>$}]{mass\+Function, }
+\item[{const std\+::string \&}]{accelerated\+Body, }
+\item[{const std\+::string \&}]{accelerating\+Body}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_aae08de769beaaee21e7e4c9cc68b9000}{}\label{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_aae08de769beaaee21e7e4c9cc68b9000}
+
+
+Constructor. 
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em radiation\+Pressure\+Interface} & Interface object for properties of radiation pressure computation (i.\+e. reference area, pressure magnitude, etc.) \\
+\hline
+{\em mass\+Function} & Function returning the mass of the body undergoing the acceleration. \\
+\hline
+{\em accelerated\+Body} & Name of the body undergoing acceleration. \\
+\hline
+{\em accelerating\+Body} & Name of the body exerting acceleration. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}!get\+Parameter\+Partial\+Function@{get\+Parameter\+Partial\+Function}}
+\index{get\+Parameter\+Partial\+Function@{get\+Parameter\+Partial\+Function}!tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}}
+\subsubsection[{\texorpdfstring{get\+Parameter\+Partial\+Function(boost\+::shared\+\_\+ptr$<$ estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ double $>$ $>$ parameter)}{getParameterPartialFunction(boost::shared_ptr< estimatable_parameters::EstimatableParameter< double > > parameter)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ boost\+::function$<$ void(Eigen\+::\+Matrix\+Xd \&) $>$, int $>$ tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial\+::get\+Parameter\+Partial\+Function (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ double $>$ $>$}]{parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_af98f948ef60241826e27489cf31d05f4}{}\label{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_af98f948ef60241826e27489cf31d05f4}
+
+
+Function for setting up and retrieving a function returning a partial w.\+r.\+t. a double parameter. 
+
+Function for setting up and retrieving a function returning a partial w.\+r.\+t. a double parameter. Function returns empty function and zero size indicator for parameters with no dependency for current acceleration. 
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Parameter w.\+r.\+t. which partial is to be taken. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair of parameter partial function and number of columns in partial (0 for no dependency, 1 otherwise). 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1orbit__determination_1_1StateDerivativePartial_a7cb295f87ba66fc5fd06f824d57a986b}{tudat\+::orbit\+\_\+determination\+::\+State\+Derivative\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}!get\+Parameter\+Partial\+Function@{get\+Parameter\+Partial\+Function}}
+\index{get\+Parameter\+Partial\+Function@{get\+Parameter\+Partial\+Function}!tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}}
+\subsubsection[{\texorpdfstring{get\+Parameter\+Partial\+Function(boost\+::shared\+\_\+ptr$<$ estimatable\+\_\+parameters\+::\+Estimatable\+Parameter$<$ Eigen\+::\+Vector\+Xd $>$ $>$ parameter)}{getParameterPartialFunction(boost::shared_ptr< estimatable_parameters::EstimatableParameter< Eigen::VectorXd > > parameter)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ boost\+::function$<$ void(Eigen\+::\+Matrix\+Xd \&) $>$, int $>$ tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial\+::get\+Parameter\+Partial\+Function (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf estimatable\+\_\+parameters\+::\+Estimatable\+Parameter}$<$ Eigen\+::\+Vector\+Xd $>$ $>$}]{parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_afc1fd975481defde6acc5d10f9c38922}{}\label{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_afc1fd975481defde6acc5d10f9c38922}
+
+
+Function for setting up and retrieving a function returning a partial w.\+r.\+t. a vector parameter. 
+
+Function for setting up and retrieving a function returning a partial w.\+r.\+t. a vector parameter. Function returns empty function and zero size indicator for parameters with no dependency for current acceleration. 
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Parameter w.\+r.\+t. which partial is to be taken. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair of parameter partial function and number of columns in partial (0 for no dependency). 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1orbit__determination_1_1StateDerivativePartial_a89ee84b266831bc4aa563f22c4afacb5}{tudat\+::orbit\+\_\+determination\+::\+State\+Derivative\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}!is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State@{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State}}
+\index{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State@{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State}!tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}}
+\subsubsection[{\texorpdfstring{is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State(const std\+::pair$<$ std\+::string, std\+::string $>$ \&state\+Reference\+Point, const propagators\+::\+Integrated\+State\+Type integrated\+State\+Type)}{isStateDerivativeDependentOnIntegratedNonTranslationalState(const std::pair< std::string, std::string > &stateReferencePoint, const propagators::IntegratedStateType integratedStateType)}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial\+::is\+State\+Derivative\+Dependent\+On\+Integrated\+Non\+Translational\+State (
+\begin{DoxyParamCaption}
+\item[{const std\+::pair$<$ std\+::string, std\+::string $>$ \&}]{state\+Reference\+Point, }
+\item[{const propagators\+::\+Integrated\+State\+Type}]{integrated\+State\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_afce5101fe0a206f110fda0917146bc9f}{}\label{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_afce5101fe0a206f110fda0917146bc9f}
+
+
+Function for determining if the acceleration is dependent on a non-\/translational integrated state. 
+
+Function for determining if the acceleration is dependent on a non-\/translational integrated state. 
+\begin{DoxyParams}{Parameters}
+{\em state\+Reference\+Point} & Reference point id of propagated state \\
+\hline
+{\em integrated\+State\+Type} & Type of propagated state for which dependency is to be determined. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if dependency exists (non-\/zero partial), false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_aac005cc281d426013544fcc77ec1b00d}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}!update@{update}}
+\index{update@{update}!tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}}
+\subsubsection[{\texorpdfstring{update(const double current\+Time=0.\+0)}{update(const double currentTime=0.0)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial\+::update (
+\begin{DoxyParamCaption}
+\item[{const double}]{current\+Time = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_ac146f0ef1adda30ba9657bac6e563692}{}\label{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_ac146f0ef1adda30ba9657bac6e563692}
+
+
+Function for updating partial w.\+r.\+t. the bodies\textquotesingle{} positions. 
+
+Function for updating common blocks of partial to current state. For the radiation pressure acceleration, position partial is computed and set. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Time} & \hyperlink{classtudat_1_1Time}{Time} at which partials are to be calculated \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1orbit__determination_1_1StateDerivativePartial_a6801a8f31cc0fcdb9679c2db6be3b157}{tudat\+::orbit\+\_\+determination\+::\+State\+Derivative\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}!wrt\+Non\+Translational\+State\+Of\+Additional\+Body@{wrt\+Non\+Translational\+State\+Of\+Additional\+Body}}
+\index{wrt\+Non\+Translational\+State\+Of\+Additional\+Body@{wrt\+Non\+Translational\+State\+Of\+Additional\+Body}!tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Non\+Translational\+State\+Of\+Additional\+Body(\+Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const std\+::pair$<$ std\+::string, std\+::string $>$ \&state\+Reference\+Point, const propagators\+::\+Integrated\+State\+Type integrated\+State\+Type)}{wrtNonTranslationalStateOfAdditionalBody(Eigen::Block< Eigen::MatrixXd > partialMatrix, const std::pair< std::string, std::string > &stateReferencePoint, const propagators::IntegratedStateType integratedStateType)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial\+::wrt\+Non\+Translational\+State\+Of\+Additional\+Body (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$}]{partial\+Matrix, }
+\item[{const std\+::pair$<$ std\+::string, std\+::string $>$ \&}]{state\+Reference\+Point, }
+\item[{const propagators\+::\+Integrated\+State\+Type}]{integrated\+State\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_aba3d2b12b38f731700103f233ab655f6}{}\label{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_aba3d2b12b38f731700103f233ab655f6}
+
+
+Function for calculating the partial of the acceleration w.\+r.\+t. a non-\/translational integrated state. 
+
+Function for calculating the partial of the acceleration w.\+r.\+t. a non-\/translational integrated state and adding it to the existing partial block. 
+\begin{DoxyParams}{Parameters}
+{\em partial\+Matrix} & Block of partial derivatives of where current partial is to be added. \\
+\hline
+{\em state\+Reference\+Point} & Reference point id of propagated state \\
+\hline
+{\em integrated\+State\+Type} & Type of propagated state for which partial is to be computed. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_aaba8dd75dd1d18289a8fc2769d333c36}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}!wrt\+Position\+Of\+Accelerated\+Body@{wrt\+Position\+Of\+Accelerated\+Body}}
+\index{wrt\+Position\+Of\+Accelerated\+Body@{wrt\+Position\+Of\+Accelerated\+Body}!tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Position\+Of\+Accelerated\+Body(\+Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=0)}{wrtPositionOfAcceleratedBody(Eigen::Block< Eigen::MatrixXd > partialMatrix, const bool addContribution=1, const int startRow=0, const int startColumn=0)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial\+::wrt\+Position\+Of\+Accelerated\+Body (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$}]{partial\+Matrix, }
+\item[{const bool}]{add\+Contribution = {\ttfamily 1}, }
+\item[{const int}]{start\+Row = {\ttfamily 0}, }
+\item[{const int}]{start\+Column = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_a7105f4ca7565bc0b0ffe893755ee3b26}{}\label{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_a7105f4ca7565bc0b0ffe893755ee3b26}
+
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the position of body undergoing acceleration.. 
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the position of body undergoing acceleration and adding it to exting partial block. Update( ) function must have been called during current time step before calling this function. 
+\begin{DoxyParams}{Parameters}
+{\em partial\+Matrix} & Block of partial derivatives of acceleration w.\+r.\+t. Cartesian position of body undergoing acceleration where current partial is to be added. \\
+\hline
+{\em add\+Contribution} & Variable denoting whether to return the partial itself (true) or the negative partial (false). \\
+\hline
+{\em start\+Row} & First row in partial\+Matrix block where the computed partial is to be added. \\
+\hline
+{\em start\+Column} & First column in partial\+Matrix block where the computed partial is to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_a629ee1ab826d64e6493d1dbf0fe7586b}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+\index{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}!wrt\+Position\+Of\+Accelerating\+Body@{wrt\+Position\+Of\+Accelerating\+Body}}
+\index{wrt\+Position\+Of\+Accelerating\+Body@{wrt\+Position\+Of\+Accelerating\+Body}!tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial@{tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial}}
+\subsubsection[{\texorpdfstring{wrt\+Position\+Of\+Accelerating\+Body(\+Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$ partial\+Matrix, const bool add\+Contribution=1, const int start\+Row=0, const int start\+Column=0)}{wrtPositionOfAcceleratingBody(Eigen::Block< Eigen::MatrixXd > partialMatrix, const bool addContribution=1, const int startRow=0, const int startColumn=0)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::acceleration\+\_\+partials\+::\+Cannon\+Ball\+Radiation\+Pressure\+Partial\+::wrt\+Position\+Of\+Accelerating\+Body (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Block$<$ Eigen\+::\+Matrix\+Xd $>$}]{partial\+Matrix, }
+\item[{const bool}]{add\+Contribution = {\ttfamily 1}, }
+\item[{const int}]{start\+Row = {\ttfamily 0}, }
+\item[{const int}]{start\+Column = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_ac7c82002af8222d1de3cf7c2a5d37341}{}\label{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_ac7c82002af8222d1de3cf7c2a5d37341}
+
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the velocity of body undergoing acceleration.. 
+
+Function for calculating the partial of the acceleration w.\+r.\+t. the velocity of body undergoing acceleration and adding it to exting partial block. The \hyperlink{classtudat_1_1acceleration__partials_1_1CannonBallRadiationPressurePartial_ac146f0ef1adda30ba9657bac6e563692}{update( )} function must have been called during current time step before calling this function. 
+\begin{DoxyParams}{Parameters}
+{\em partial\+Matrix} & Block of partial derivatives of acceleration w.\+r.\+t. Cartesian position of body exerting acceleration where current partial is to be added. \\
+\hline
+{\em add\+Contribution} & Variable denoting whether to return the partial itself (true) or the negative partial (false). \\
+\hline
+{\em start\+Row} & First row in partial\+Matrix block where the computed partial is to be added. \\
+\hline
+{\em start\+Column} & First column in partial\+Matrix block where the computed partial is to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classtudat_1_1acceleration__partials_1_1AccelerationPartial_a779c9c208d2054d8425178f4ea8f6021}{tudat\+::acceleration\+\_\+partials\+::\+Acceleration\+Partial}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Orbit\+Determination/\+Acceleration\+Partials/radiation\+Pressure\+Acceleration\+Partial.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Orbit\+Determination/\+Acceleration\+Partials/radiation\+Pressure\+Acceleration\+Partial.\+cpp\end{DoxyCompactItemize}

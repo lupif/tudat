@@ -1,0 +1,189 @@
+\hypertarget{classtudat_1_1root__finders_1_1SecantRootFinderCore}{}\section{tudat\+:\+:root\+\_\+finders\+:\+:Secant\+Root\+Finder\+Core$<$ Data\+Type $>$ Class Template Reference}
+\label{classtudat_1_1root__finders_1_1SecantRootFinderCore}\index{tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core$<$ Data\+Type $>$@{tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core$<$ Data\+Type $>$}}
+
+
+Secant root-\/finding method.  
+
+
+
+
+{\ttfamily \#include $<$secant\+Root\+Finder.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:root\+\_\+finders\+:\+:Secant\+Root\+Finder\+Core$<$ Data\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classtudat_1_1root__finders_1_1SecantRootFinderCore__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:root\+\_\+finders\+:\+:Secant\+Root\+Finder\+Core$<$ Data\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classtudat_1_1root__finders_1_1SecantRootFinderCore__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classtudat_1_1root__finders_1_1RootFinderCore}{Root\+Finder\+Core}$<$ Data\+Type $>$\+::\hyperlink{classtudat_1_1root__finders_1_1RootFinderCore_af0bb889d21fa3bc55785021381d3b4b5}{Function\+Pointer} \hyperlink{classtudat_1_1root__finders_1_1SecantRootFinderCore_a54d7869a1af372fdd2d31d58fe39a895}{Function\+Pointer}\hypertarget{classtudat_1_1root__finders_1_1SecantRootFinderCore_a54d7869a1af372fdd2d31d58fe39a895}{}\label{classtudat_1_1root__finders_1_1SecantRootFinderCore_a54d7869a1af372fdd2d31d58fe39a895}
+
+\begin{DoxyCompactList}\small\item\em Usefull type definition for the function pointer (from base class). \end{DoxyCompactList}\item 
+typedef \hyperlink{classtudat_1_1root__finders_1_1RootFinderCore}{Root\+Finder\+Core}$<$ Data\+Type $>$\+::\hyperlink{classtudat_1_1root__finders_1_1RootFinderCore_a8dd4dc4316b5e984e279816e0a2b67d5}{Termination\+Function} \hyperlink{classtudat_1_1root__finders_1_1SecantRootFinderCore_aaaecce4a5b26714ca8f700ae8529d2f4}{Termination\+Function}\hypertarget{classtudat_1_1root__finders_1_1SecantRootFinderCore_aaaecce4a5b26714ca8f700ae8529d2f4}{}\label{classtudat_1_1root__finders_1_1SecantRootFinderCore_aaaecce4a5b26714ca8f700ae8529d2f4}
+
+\begin{DoxyCompactList}\small\item\em Usefull type definition for the termination function (from base class). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1root__finders_1_1SecantRootFinderCore_a33462168eed31273e7f7d0e919911384}{Secant\+Root\+Finder\+Core} (\hyperlink{classtudat_1_1root__finders_1_1RootFinderCore_a8dd4dc4316b5e984e279816e0a2b67d5}{Termination\+Function} \hyperlink{classtudat_1_1root__finders_1_1RootFinderCore_a7a1efe7ce979318d398b4bb8574e70d6}{termination\+Function}, const Data\+Type initial\+Guess\+Of\+Root\+One=0.\+5)
+\begin{DoxyCompactList}\small\item\em Constructor taking the general termination function and the least accurate initial guess. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1root__finders_1_1SecantRootFinderCore_a868f594de638700d029e7b2d6e4c0ef6}{Secant\+Root\+Finder\+Core} (const double relative\+X\+Tolerance, const unsigned int max\+Iterations, const Data\+Type initial\+Guess\+Of\+Root\+One=0.\+5)
+\begin{DoxyCompactList}\small\item\em Constructor taking typical convergence criteria and the least accurate initial guess. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1root__finders_1_1SecantRootFinderCore_aa61f73edb9e75c273b342ac3cd2d6efb}{$\sim$\+Secant\+Root\+Finder\+Core} ()\hypertarget{classtudat_1_1root__finders_1_1SecantRootFinderCore_aa61f73edb9e75c273b342ac3cd2d6efb}{}\label{classtudat_1_1root__finders_1_1SecantRootFinderCore_aa61f73edb9e75c273b342ac3cd2d6efb}
+
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+Data\+Type \hyperlink{classtudat_1_1root__finders_1_1SecantRootFinderCore_a5d08d05f54d43f70cb59aef9cccb86c6}{execute} (const \hyperlink{classtudat_1_1root__finders_1_1RootFinderCore_af0bb889d21fa3bc55785021381d3b4b5}{Function\+Pointer} \hyperlink{classtudat_1_1root__finders_1_1RootFinderCore_afbe57f7fa3baba13128d9dc2ca41dedd}{root\+Function}, const Data\+Type initial\+Guess)
+\begin{DoxyCompactList}\small\item\em Find a root of the function provided as input. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1root__finders_1_1SecantRootFinderCore_aba0d44c3dc4823b7772f0c0e5a5deeb4}{set\+New\+Initial\+Guess} (Data\+Type new\+Initial\+Guess\+Of\+Root\+One)
+\begin{DoxyCompactList}\small\item\em Set a new value for the first point used in the Secant algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Data\+Type = double$>$\\*
+class tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core$<$ Data\+Type $>$}
+
+Secant root-\/finding method. 
+
+The secant root-\/finding method uses a succession of roots of secant lines to better aspproximate the root. The method requires a valid function (no derivatives are required), and two initial values (\$x\+\_\+0\$ and \$x\+\_\+1\$), which should ideally be chosen to lie close to the root, and where \$x\+\_\+1\$ is the most accurate guess. It is not required that the initial values bracket the root. Note that this root finder does not always converge.
+
+The algorithm is similar to the Newton-\/\+Raphson root-\/finder, but uses the slope between the two points as the value for the function derivative \mbox{[}Weisstein, 2014\mbox{]}\+:
+
+\[ x_{n+1} = x_n - F\left(x_n\right) \frac{\left(x_n - x_{n-1}\right)} {F\left(x_n\right) - F\left(x_{n-1}\right)} \]
+
+Defined shorthand notations\+: Secant\+Root\+Finder\+Core$<$ double $>$ =$>$ Secant\+Root\+Finder
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Data\+Type} & Data type used to represent floating-\/point values. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core}!Secant\+Root\+Finder\+Core@{Secant\+Root\+Finder\+Core}}
+\index{Secant\+Root\+Finder\+Core@{Secant\+Root\+Finder\+Core}!tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core}}
+\subsubsection[{\texorpdfstring{Secant\+Root\+Finder\+Core(\+Termination\+Function termination\+Function, const Data\+Type initial\+Guess\+Of\+Root\+One=0.\+5)}{SecantRootFinderCore(TerminationFunction terminationFunction, const DataType initialGuessOfRootOne=0.5)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\+Type  = double$>$ {\bf tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core}$<$ Data\+Type $>$\+::{\bf Secant\+Root\+Finder\+Core} (
+\begin{DoxyParamCaption}
+\item[{{\bf Termination\+Function}}]{termination\+Function, }
+\item[{const Data\+Type}]{initial\+Guess\+Of\+Root\+One = {\ttfamily 0.5}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1root__finders_1_1SecantRootFinderCore_a33462168eed31273e7f7d0e919911384}{}\label{classtudat_1_1root__finders_1_1SecantRootFinderCore_a33462168eed31273e7f7d0e919911384}
+
+
+Constructor taking the general termination function and the least accurate initial guess. 
+
+Constructor of the Secant root-\/finder, taking the general termination function (function determining whether to terminate the root-\/finding process), and the least accurate value of the initial guess (\$x\+\_\+0\$). (Note that although it is prefered that the least accurate guess is passed to the constructor, this is not required, as the algorithm will determine the most accurate guess and switches the values if necessary.)
+
+
+\begin{DoxyParams}{Parameters}
+{\em termination\+Function} & The function specifying the termination conditions of the root-\/finding process. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1root__finders_1_1RootFinderCore_a7a1efe7ce979318d398b4bb8574e70d6}{Root\+Finder\+Core\+::termination\+Function} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+Guess\+Of\+Root\+One} & First point used to initiate the Secant root-\/finder algorithm. (Default is 0.\+5) \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core}!Secant\+Root\+Finder\+Core@{Secant\+Root\+Finder\+Core}}
+\index{Secant\+Root\+Finder\+Core@{Secant\+Root\+Finder\+Core}!tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core}}
+\subsubsection[{\texorpdfstring{Secant\+Root\+Finder\+Core(const double relative\+X\+Tolerance, const unsigned int max\+Iterations, const Data\+Type initial\+Guess\+Of\+Root\+One=0.\+5)}{SecantRootFinderCore(const double relativeXTolerance, const unsigned int maxIterations, const DataType initialGuessOfRootOne=0.5)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\+Type  = double$>$ {\bf tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core}$<$ Data\+Type $>$\+::{\bf Secant\+Root\+Finder\+Core} (
+\begin{DoxyParamCaption}
+\item[{const double}]{relative\+X\+Tolerance, }
+\item[{const unsigned int}]{max\+Iterations, }
+\item[{const Data\+Type}]{initial\+Guess\+Of\+Root\+One = {\ttfamily 0.5}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1root__finders_1_1SecantRootFinderCore_a868f594de638700d029e7b2d6e4c0ef6}{}\label{classtudat_1_1root__finders_1_1SecantRootFinderCore_a868f594de638700d029e7b2d6e4c0ef6}
+
+
+Constructor taking typical convergence criteria and the least accurate initial guess. 
+
+Constructor of the Secant root-\/finder, taking the maximum number of iterations, the relative tolerance for the independent variable, and the least accurate value of the initial guess (\$x\+\_\+0\$). (Note that although it is prefered that the least accurate guess is passed to the constructor, this is not required, as the algorithm will determine the most accurate guess and switches the values if necessary.) If desired, a custom convergence function can be provided to the alternative constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em relative\+X\+Tolerance} & Relative difference between the root solution of two subsequent solutions below which convergence is reached. \\
+\hline
+{\em max\+Iterations} & Maximum number of iterations after which the root finder is terminated, i.\+e. convergence is assumed. \\
+\hline
+{\em initial\+Guess\+Of\+Root\+One} & First point used to initiate the Secant root-\/finder algorithm. (Default is 0.\+5) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core}!execute@{execute}}
+\index{execute@{execute}!tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core}}
+\subsubsection[{\texorpdfstring{execute(const Function\+Pointer root\+Function, const Data\+Type initial\+Guess)}{execute(const FunctionPointer rootFunction, const DataType initialGuess)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\+Type  = double$>$ Data\+Type {\bf tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core}$<$ Data\+Type $>$\+::execute (
+\begin{DoxyParamCaption}
+\item[{const {\bf Function\+Pointer}}]{root\+Function, }
+\item[{const Data\+Type}]{initial\+Guess}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1root__finders_1_1SecantRootFinderCore_a5d08d05f54d43f70cb59aef9cccb86c6}{}\label{classtudat_1_1root__finders_1_1SecantRootFinderCore_a5d08d05f54d43f70cb59aef9cccb86c6}
+
+
+Find a root of the function provided as input. 
+
+Finds a root of the function provided as input, using the termination function set by the constructor. This method takes the second initial value (\$x\+\_\+1\$), which is the most accurate guess. (Note that although it is prefered that the most accurate guess is passed to this function, this is not required, as the algorithm will determine the most accurate guess and switches the values if necessary.)
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+Function} & Function to find the root of. \\
+\hline
+{\em initial\+Guess} & The second, most accurate, initial guess of the root. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Root of the root\+Function that is found.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Convergence\+Exeption} & If the solution does not converge to a root value. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classtudat_1_1root__finders_1_1RootFinderCore_a1fcd710906f66ebea649c83f08c2ae97}{tudat\+::root\+\_\+finders\+::\+Root\+Finder\+Core$<$ Data\+Type $>$}.
+
+\index{tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core}!set\+New\+Initial\+Guess@{set\+New\+Initial\+Guess}}
+\index{set\+New\+Initial\+Guess@{set\+New\+Initial\+Guess}!tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core@{tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core}}
+\subsubsection[{\texorpdfstring{set\+New\+Initial\+Guess(\+Data\+Type new\+Initial\+Guess\+Of\+Root\+One)}{setNewInitialGuess(DataType newInitialGuessOfRootOne)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\+Type  = double$>$ void {\bf tudat\+::root\+\_\+finders\+::\+Secant\+Root\+Finder\+Core}$<$ Data\+Type $>$\+::set\+New\+Initial\+Guess (
+\begin{DoxyParamCaption}
+\item[{Data\+Type}]{new\+Initial\+Guess\+Of\+Root\+One}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1root__finders_1_1SecantRootFinderCore_aba0d44c3dc4823b7772f0c0e5a5deeb4}{}\label{classtudat_1_1root__finders_1_1SecantRootFinderCore_aba0d44c3dc4823b7772f0c0e5a5deeb4}
+
+
+Set a new value for the first point used in the Secant algorithm. 
+
+Sets a new value for least accurate value of the initial guess (\$x\+\_\+0\$) used in the Secant algorithm. (Note that although it is prefered that the least accurate guess is passed to the constructor, this is not required, as the algorithm will determine the most accurate guess and switches the values if necessary.)
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Initial\+Guess\+Of\+Root\+One} & A new value of the first point used to initiate the Secant root-\/finder algorithm. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Root\+Finders/secant\+Root\+Finder.\+h\end{DoxyCompactItemize}

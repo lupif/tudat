@@ -1,0 +1,245 @@
+\hypertarget{classtudat_1_1interpolators_1_1OneDimensionalInterpolator}{}\section{tudat\+:\+:interpolators\+:\+:One\+Dimensional\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$ Class Template Reference}
+\label{classtudat_1_1interpolators_1_1OneDimensionalInterpolator}\index{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}}
+
+
+Base class for interpolator with one independent independent variable.  
+
+
+
+
+{\ttfamily \#include $<$one\+Dimensional\+Interpolator.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:interpolators\+:\+:One\+Dimensional\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1interpolators_1_1OneDimensionalInterpolator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:interpolators\+:\+:One\+Dimensional\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1interpolators_1_1OneDimensionalInterpolator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_ad359d0d7a6f229fb9f65260cb3bd2779}{$\sim$\+One\+Dimensional\+Interpolator} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual Dependent\+Variable\+Type \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_aaf340e39d13f8b31cab6887b48427918}{interpolate} (const std\+::vector$<$ Independent\+Variable\+Type $>$ \&independent\+Variable\+Values)
+\begin{DoxyCompactList}\small\item\em Function to perform interpolation. \end{DoxyCompactList}\item 
+virtual Dependent\+Variable\+Type \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a1756cce160465357493e18221aa49dee}{interpolate} (const Independent\+Variable\+Type independent\+Variable\+Value)=0
+\begin{DoxyCompactList}\small\item\em Function to perform interpolation. \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a149d4201dc4869276bd2961d17e5acdd}{get\+Number\+Of\+Dimensions} ()
+\begin{DoxyCompactList}\small\item\em Function to return the number of independent variables of the interpolation. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1LookUpScheme}{Look\+Up\+Scheme}$<$ Independent\+Variable\+Type $>$ $>$ \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_aa26fe6cb1401a8ccb2fab17321f7f41c}{get\+Look\+Up\+Scheme} ()
+\begin{DoxyCompactList}\small\item\em Function to return the lookup scheme used by the interpolator. \end{DoxyCompactList}\item 
+std\+::vector$<$ Independent\+Variable\+Type $>$ \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_ab6b15e16220ddf2f5896c37afb1d1e05}{get\+Independent\+Values} ()
+\begin{DoxyCompactList}\small\item\em Function to return the ector with independent variables used by the interpolator. \end{DoxyCompactList}\item 
+std\+::vector$<$ Dependent\+Variable\+Type $>$ \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_ad0b73292c984422f5dd2164d3dbda3ff}{get\+Dependent\+Values} ()
+\begin{DoxyCompactList}\small\item\em Function to return the ector with dependent variables used by the interpolator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_abc218f1803c7f54fad3e0e71d625c764}{make\+Lookup\+Scheme} (const Available\+Lookup\+Scheme selected\+Scheme)
+\begin{DoxyCompactList}\small\item\em Make look-\/up scheme that is to be used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1LookUpScheme}{Look\+Up\+Scheme}$<$ Independent\+Variable\+Type $>$ $>$ \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a2a10fe6e43ac42100e4f650ab83798f5}{look\+Up\+Scheme\+\_\+}
+\begin{DoxyCompactList}\small\item\em Pointer to look up scheme. \end{DoxyCompactList}\item 
+std\+::vector$<$ Dependent\+Variable\+Type $>$ \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_aabbc1fda1543131d0e6bf62bcd377839}{dependent\+Values\+\_\+}
+\begin{DoxyCompactList}\small\item\em Vector with dependent variables. \end{DoxyCompactList}\item 
+std\+::vector$<$ Independent\+Variable\+Type $>$ \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a283eacac87aef562273161b6d42c77f6}{independent\+Values\+\_\+}
+\begin{DoxyCompactList}\small\item\em Vector with independent variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type$>$\\*
+class tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}
+
+Base class for interpolator with one independent independent variable. 
+
+Base class for the interpolators in one independent variable included in Tudat 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Independent\+Variable\+Type} & Type of independent variable(s) \\
+\hline
+{\em Independent\+Variable\+Type} & Type of dependent variable \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}!````~One\+Dimensional\+Interpolator@{$\sim$\+One\+Dimensional\+Interpolator}}
+\index{````~One\+Dimensional\+Interpolator@{$\sim$\+One\+Dimensional\+Interpolator}!tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}}
+\subsubsection[{\texorpdfstring{$\sim$\+One\+Dimensional\+Interpolator()}{~OneDimensionalInterpolator()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type$>$ virtual {\bf tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::$\sim${\bf One\+Dimensional\+Interpolator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_ad359d0d7a6f229fb9f65260cb3bd2779}{}\label{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_ad359d0d7a6f229fb9f65260cb3bd2779}
+
+
+Destructor. 
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}!get\+Dependent\+Values@{get\+Dependent\+Values}}
+\index{get\+Dependent\+Values@{get\+Dependent\+Values}!tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}}
+\subsubsection[{\texorpdfstring{get\+Dependent\+Values()}{getDependentValues()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type$>$ std\+::vector$<$ Dependent\+Variable\+Type $>$ {\bf tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::get\+Dependent\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_ad0b73292c984422f5dd2164d3dbda3ff}{}\label{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_ad0b73292c984422f5dd2164d3dbda3ff}
+
+
+Function to return the ector with dependent variables used by the interpolator. 
+
+Function to return the ector with dependent variables used by the interpolator. \begin{DoxyReturn}{Returns}
+Dependent variables used by the interpolator. 
+\end{DoxyReturn}
+\index{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}!get\+Independent\+Values@{get\+Independent\+Values}}
+\index{get\+Independent\+Values@{get\+Independent\+Values}!tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}}
+\subsubsection[{\texorpdfstring{get\+Independent\+Values()}{getIndependentValues()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type$>$ std\+::vector$<$ Independent\+Variable\+Type $>$ {\bf tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::get\+Independent\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_ab6b15e16220ddf2f5896c37afb1d1e05}{}\label{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_ab6b15e16220ddf2f5896c37afb1d1e05}
+
+
+Function to return the ector with independent variables used by the interpolator. 
+
+Function to return the ector with independent variables used by the interpolator. \begin{DoxyReturn}{Returns}
+Independent variables used by the interpolator. 
+\end{DoxyReturn}
+\index{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}!get\+Look\+Up\+Scheme@{get\+Look\+Up\+Scheme}}
+\index{get\+Look\+Up\+Scheme@{get\+Look\+Up\+Scheme}!tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}}
+\subsubsection[{\texorpdfstring{get\+Look\+Up\+Scheme()}{getLookUpScheme()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type$>$ boost\+::shared\+\_\+ptr$<$ {\bf Look\+Up\+Scheme}$<$ Independent\+Variable\+Type $>$ $>$ {\bf tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::get\+Look\+Up\+Scheme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_aa26fe6cb1401a8ccb2fab17321f7f41c}{}\label{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_aa26fe6cb1401a8ccb2fab17321f7f41c}
+
+
+Function to return the lookup scheme used by the interpolator. 
+
+Function to return the lookup scheme used by the interpolator. \begin{DoxyReturn}{Returns}
+The lookup scheme used by the interpolator. 
+\end{DoxyReturn}
+\index{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}!get\+Number\+Of\+Dimensions@{get\+Number\+Of\+Dimensions}}
+\index{get\+Number\+Of\+Dimensions@{get\+Number\+Of\+Dimensions}!tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}}
+\subsubsection[{\texorpdfstring{get\+Number\+Of\+Dimensions()}{getNumberOfDimensions()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type$>$ int {\bf tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::get\+Number\+Of\+Dimensions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a149d4201dc4869276bd2961d17e5acdd}{}\label{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a149d4201dc4869276bd2961d17e5acdd}
+
+
+Function to return the number of independent variables of the interpolation. 
+
+Function to return the number of independent variables of the interpolation, which is always equal to 1 for this class and its derived class. \begin{DoxyReturn}{Returns}
+Number of independent variables of the interpolation (1). 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1interpolators_1_1Interpolator_a2fec09b3d811b2399d9abce5c8917b5a}{tudat\+::interpolators\+::\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}.
+
+\index{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}!interpolate@{interpolate}}
+\index{interpolate@{interpolate}!tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}}
+\subsubsection[{\texorpdfstring{interpolate(const std\+::vector$<$ Independent\+Variable\+Type $>$ \&independent\+Variable\+Values)}{interpolate(const std::vector< IndependentVariableType > &independentVariableValues)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type$>$ virtual Dependent\+Variable\+Type {\bf tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::interpolate (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Independent\+Variable\+Type $>$ \&}]{independent\+Variable\+Values}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_aaf340e39d13f8b31cab6887b48427918}{}\label{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_aaf340e39d13f8b31cab6887b48427918}
+
+
+Function to perform interpolation. 
+
+This function performs the interpolation. It calls the function that takes a single independent variable value, which is to be implemented in derived classes. 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variable\+Values} & Vector of values of independent variables at which the value of the dependent variable is to be determined. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Interpolated value of dependent variable. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1interpolators_1_1Interpolator_a0b8c3f199c7a2297928936f00790f190}{tudat\+::interpolators\+::\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}.
+
+\index{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}!interpolate@{interpolate}}
+\index{interpolate@{interpolate}!tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}}
+\subsubsection[{\texorpdfstring{interpolate(const Independent\+Variable\+Type independent\+Variable\+Value)=0}{interpolate(const IndependentVariableType independentVariableValue)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type$>$ virtual Dependent\+Variable\+Type {\bf tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::interpolate (
+\begin{DoxyParamCaption}
+\item[{const Independent\+Variable\+Type}]{independent\+Variable\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a1756cce160465357493e18221aa49dee}{}\label{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a1756cce160465357493e18221aa49dee}
+
+
+Function to perform interpolation. 
+
+This function performs the interpolation 
+\begin{DoxyParams}{Parameters}
+{\em independent\+Variable\+Value} & Independent variable value at which the value of the dependent variable is to be determined. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Interpolated value of dependent variable. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classtudat_1_1interpolators_1_1CubicSplineInterpolator_a81ec99d79a07248afe3523dcf668e00b}{tudat\+::interpolators\+::\+Cubic\+Spline\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$}, \hyperlink{classtudat_1_1interpolators_1_1LagrangeInterpolator_ada90e5c75857ef9246d582d24c74fc85}{tudat\+::interpolators\+::\+Lagrange\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type, Scalar\+Type $>$}, \hyperlink{classtudat_1_1interpolators_1_1LinearInterpolator_af693119bb532933f08f1c4a813072040}{tudat\+::interpolators\+::\+Linear\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}, and \hyperlink{classtudat_1_1interpolators_1_1HermiteCubicSplineInterpolator_a3f82bb48c7218d7c7ed53ea86ad4e679}{tudat\+::interpolators\+::\+Hermite\+Cubic\+Spline\+Interpolator$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$}.
+
+\index{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}!make\+Lookup\+Scheme@{make\+Lookup\+Scheme}}
+\index{make\+Lookup\+Scheme@{make\+Lookup\+Scheme}!tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}}
+\subsubsection[{\texorpdfstring{make\+Lookup\+Scheme(const Available\+Lookup\+Scheme selected\+Scheme)}{makeLookupScheme(const AvailableLookupScheme selectedScheme)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type$>$ void {\bf tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::make\+Lookup\+Scheme (
+\begin{DoxyParamCaption}
+\item[{const Available\+Lookup\+Scheme}]{selected\+Scheme}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_abc218f1803c7f54fad3e0e71d625c764}{}\label{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_abc218f1803c7f54fad3e0e71d625c764}
+
+
+Make look-\/up scheme that is to be used. 
+
+This function creates the look-\/up scheme that is to be used in determining the interval of the independent variable grid where the interpolation is to be performed. It takes the type of lookup scheme as an enum and constructs the look-\/up scheme from the independent\+Values\+\_\+ that have been set previously. 
+\begin{DoxyParams}{Parameters}
+{\em selected\+Scheme} & Type of look-\/up scheme that is to be used \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}!dependent\+Values\+\_\+@{dependent\+Values\+\_\+}}
+\index{dependent\+Values\+\_\+@{dependent\+Values\+\_\+}!tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}}
+\subsubsection[{\texorpdfstring{dependent\+Values\+\_\+}{dependentValues_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type$>$ std\+::vector$<$ Dependent\+Variable\+Type $>$ {\bf tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::dependent\+Values\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_aabbc1fda1543131d0e6bf62bcd377839}{}\label{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_aabbc1fda1543131d0e6bf62bcd377839}
+
+
+Vector with dependent variables. 
+
+Vector with dependent variables. \index{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}!independent\+Values\+\_\+@{independent\+Values\+\_\+}}
+\index{independent\+Values\+\_\+@{independent\+Values\+\_\+}!tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}}
+\subsubsection[{\texorpdfstring{independent\+Values\+\_\+}{independentValues_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type$>$ std\+::vector$<$ Independent\+Variable\+Type $>$ {\bf tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::independent\+Values\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a283eacac87aef562273161b6d42c77f6}{}\label{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a283eacac87aef562273161b6d42c77f6}
+
+
+Vector with independent variables. 
+
+Vector with independent variables. \index{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}!look\+Up\+Scheme\+\_\+@{look\+Up\+Scheme\+\_\+}}
+\index{look\+Up\+Scheme\+\_\+@{look\+Up\+Scheme\+\_\+}!tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator@{tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}}
+\subsubsection[{\texorpdfstring{look\+Up\+Scheme\+\_\+}{lookUpScheme_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Independent\+Variable\+Type, typename Dependent\+Variable\+Type$>$ boost\+::shared\+\_\+ptr$<$ {\bf Look\+Up\+Scheme}$<$ Independent\+Variable\+Type $>$ $>$ {\bf tudat\+::interpolators\+::\+One\+Dimensional\+Interpolator}$<$ Independent\+Variable\+Type, Dependent\+Variable\+Type $>$\+::look\+Up\+Scheme\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a2a10fe6e43ac42100e4f650ab83798f5}{}\label{classtudat_1_1interpolators_1_1OneDimensionalInterpolator_a2a10fe6e43ac42100e4f650ab83798f5}
+
+
+Pointer to look up scheme. 
+
+Pointer to the lookup scheme that is used to determine in which interval the requested independent variable value falls. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Interpolators/one\+Dimensional\+Interpolator.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,170 @@
+\hypertarget{classtudat_1_1statistics_1_1SimpleLinearRegression}{}\section{tudat\+:\+:statistics\+:\+:Simple\+Linear\+Regression Class Reference}
+\label{classtudat_1_1statistics_1_1SimpleLinearRegression}\index{tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}}
+
+
+Simple linear regression class.  
+
+
+
+
+{\ttfamily \#include $<$simple\+Linear\+Regression.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ double, double $>$ \hyperlink{classtudat_1_1statistics_1_1SimpleLinearRegression_aeec88aae0a92c1f4c90c6e736111724c}{Input\+Data\+Map}
+\begin{DoxyCompactList}\small\item\em Type definition of map of input data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1statistics_1_1SimpleLinearRegression_a2d09fdde5720ce6c4dea482becbcfa9b}{Simple\+Linear\+Regression} (const \hyperlink{classtudat_1_1statistics_1_1SimpleLinearRegression_aeec88aae0a92c1f4c90c6e736111724c}{Input\+Data\+Map} \&input\+Data\+To\+Fit)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1SimpleLinearRegression_aca28e521b00a6fd12500681a9a293434}{get\+Coefficient\+Of\+Constant\+Term} () const 
+\begin{DoxyCompactList}\small\item\em Get coefficient of constant term of fit. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1SimpleLinearRegression_a8c6cfb0164e9ba254022dba22583996d}{get\+Coefficient\+Of\+Linear\+Term} () const 
+\begin{DoxyCompactList}\small\item\em Get coefficient of linear term of fit. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1SimpleLinearRegression_aca2876abac878e34ff4e6d2a1f8b733a}{get\+Chi\+Squared} () const 
+\begin{DoxyCompactList}\small\item\em Get chi-\/squared value. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1SimpleLinearRegression_ad5c826cf321432e60d74ac2809c636d7}{get\+Standard\+Deviation\+Of\+Coefficient\+Of\+Constant\+Term} () const 
+\begin{DoxyCompactList}\small\item\em Get standard deviation of coefficient of constant term of fit. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1statistics_1_1SimpleLinearRegression_a8770eb0f2432f3232bfcc5456bb9691f}{get\+Standard\+Deviation\+Of\+Coefficient\+Of\+Linear\+Term} () const 
+\begin{DoxyCompactList}\small\item\em Get standard deviation of coefficient of linear term of fit. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1statistics_1_1SimpleLinearRegression_a88a1ce64434064b374f4f8728b4705bb}{compute\+Fit} ()
+\begin{DoxyCompactList}\small\item\em Compute fit. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1statistics_1_1SimpleLinearRegression_a4df085fba924090d46037f8a60b5f8a9}{compute\+Fit\+Errors} ()
+\begin{DoxyCompactList}\small\item\em Compute fit errors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple linear regression class. 
+
+Simple linear regression class. 
+
+\subsection{Member Typedef Documentation}
+\index{tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}!Input\+Data\+Map@{Input\+Data\+Map}}
+\index{Input\+Data\+Map@{Input\+Data\+Map}!tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}}
+\subsubsection[{\texorpdfstring{Input\+Data\+Map}{InputDataMap}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$ double, double $>$ {\bf tudat\+::statistics\+::\+Simple\+Linear\+Regression\+::\+Input\+Data\+Map}}\hypertarget{classtudat_1_1statistics_1_1SimpleLinearRegression_aeec88aae0a92c1f4c90c6e736111724c}{}\label{classtudat_1_1statistics_1_1SimpleLinearRegression_aeec88aae0a92c1f4c90c6e736111724c}
+
+
+Type definition of map of input data. 
+
+Type definition of map of input data. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}!Simple\+Linear\+Regression@{Simple\+Linear\+Regression}}
+\index{Simple\+Linear\+Regression@{Simple\+Linear\+Regression}!tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}}
+\subsubsection[{\texorpdfstring{Simple\+Linear\+Regression(const Input\+Data\+Map \&input\+Data\+To\+Fit)}{SimpleLinearRegression(const InputDataMap &inputDataToFit)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::statistics\+::\+Simple\+Linear\+Regression\+::\+Simple\+Linear\+Regression (
+\begin{DoxyParamCaption}
+\item[{const {\bf Input\+Data\+Map} \&}]{input\+Data\+To\+Fit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1SimpleLinearRegression_a2d09fdde5720ce6c4dea482becbcfa9b}{}\label{classtudat_1_1statistics_1_1SimpleLinearRegression_a2d09fdde5720ce6c4dea482becbcfa9b}
+
+
+Default constructor. 
+
+Default constructor. 
+\begin{DoxyParams}{Parameters}
+{\em input\+Data\+To\+Fit} & Input data of independent (key) and dependent (value) variables to fit. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}!compute\+Fit@{compute\+Fit}}
+\index{compute\+Fit@{compute\+Fit}!tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}}
+\subsubsection[{\texorpdfstring{compute\+Fit()}{computeFit()}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::statistics\+::\+Simple\+Linear\+Regression\+::compute\+Fit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1statistics_1_1SimpleLinearRegression_a88a1ce64434064b374f4f8728b4705bb}{}\label{classtudat_1_1statistics_1_1SimpleLinearRegression_a88a1ce64434064b374f4f8728b4705bb}
+
+
+Compute fit. 
+
+Computes simple linear regression fitting with unit weights for all the observations. The equation of a straight line used here is given as\+: \[ y = a + b * x \] where $ b $ is the coefficient of the linear term, and $ a $ is the coefficient of the constant term. The algorithm implemented is based on (Press W.\+H., et al., 2002). \index{tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}!compute\+Fit\+Errors@{compute\+Fit\+Errors}}
+\index{compute\+Fit\+Errors@{compute\+Fit\+Errors}!tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}}
+\subsubsection[{\texorpdfstring{compute\+Fit\+Errors()}{computeFitErrors()}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::statistics\+::\+Simple\+Linear\+Regression\+::compute\+Fit\+Errors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1statistics_1_1SimpleLinearRegression_a4df085fba924090d46037f8a60b5f8a9}{}\label{classtudat_1_1statistics_1_1SimpleLinearRegression_a4df085fba924090d46037f8a60b5f8a9}
+
+
+Compute fit errors. 
+
+Computes the standard deviations and chi-\/squared value based on the computed linear fit. This functin must be called after the \hyperlink{classtudat_1_1statistics_1_1SimpleLinearRegression_a88a1ce64434064b374f4f8728b4705bb}{compute\+Fit( )} function. The algorithm implemented is based on (Press W.\+H., et al., 2002). \index{tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}!get\+Chi\+Squared@{get\+Chi\+Squared}}
+\index{get\+Chi\+Squared@{get\+Chi\+Squared}!tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}}
+\subsubsection[{\texorpdfstring{get\+Chi\+Squared() const }{getChiSquared() const }}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Simple\+Linear\+Regression\+::get\+Chi\+Squared (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1SimpleLinearRegression_aca2876abac878e34ff4e6d2a1f8b733a}{}\label{classtudat_1_1statistics_1_1SimpleLinearRegression_aca2876abac878e34ff4e6d2a1f8b733a}
+
+
+Get chi-\/squared value. 
+
+Returns chi-\/squared value of fit. \begin{DoxyReturn}{Returns}
+Chi-\/squared value. 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}!get\+Coefficient\+Of\+Constant\+Term@{get\+Coefficient\+Of\+Constant\+Term}}
+\index{get\+Coefficient\+Of\+Constant\+Term@{get\+Coefficient\+Of\+Constant\+Term}!tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}}
+\subsubsection[{\texorpdfstring{get\+Coefficient\+Of\+Constant\+Term() const }{getCoefficientOfConstantTerm() const }}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Simple\+Linear\+Regression\+::get\+Coefficient\+Of\+Constant\+Term (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1SimpleLinearRegression_aca28e521b00a6fd12500681a9a293434}{}\label{classtudat_1_1statistics_1_1SimpleLinearRegression_aca28e521b00a6fd12500681a9a293434}
+
+
+Get coefficient of constant term of fit. 
+
+Returns coefficient of constant term of fit. \begin{DoxyReturn}{Returns}
+Coefficient of constant term. 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}!get\+Coefficient\+Of\+Linear\+Term@{get\+Coefficient\+Of\+Linear\+Term}}
+\index{get\+Coefficient\+Of\+Linear\+Term@{get\+Coefficient\+Of\+Linear\+Term}!tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}}
+\subsubsection[{\texorpdfstring{get\+Coefficient\+Of\+Linear\+Term() const }{getCoefficientOfLinearTerm() const }}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Simple\+Linear\+Regression\+::get\+Coefficient\+Of\+Linear\+Term (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1SimpleLinearRegression_a8c6cfb0164e9ba254022dba22583996d}{}\label{classtudat_1_1statistics_1_1SimpleLinearRegression_a8c6cfb0164e9ba254022dba22583996d}
+
+
+Get coefficient of linear term of fit. 
+
+Returns coefficient of linear term of fit. \begin{DoxyReturn}{Returns}
+Coefficient of linear term. 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}!get\+Standard\+Deviation\+Of\+Coefficient\+Of\+Constant\+Term@{get\+Standard\+Deviation\+Of\+Coefficient\+Of\+Constant\+Term}}
+\index{get\+Standard\+Deviation\+Of\+Coefficient\+Of\+Constant\+Term@{get\+Standard\+Deviation\+Of\+Coefficient\+Of\+Constant\+Term}!tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}}
+\subsubsection[{\texorpdfstring{get\+Standard\+Deviation\+Of\+Coefficient\+Of\+Constant\+Term() const }{getStandardDeviationOfCoefficientOfConstantTerm() const }}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Simple\+Linear\+Regression\+::get\+Standard\+Deviation\+Of\+Coefficient\+Of\+Constant\+Term (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1SimpleLinearRegression_ad5c826cf321432e60d74ac2809c636d7}{}\label{classtudat_1_1statistics_1_1SimpleLinearRegression_ad5c826cf321432e60d74ac2809c636d7}
+
+
+Get standard deviation of coefficient of constant term of fit. 
+
+Returns standard deviation of coefficient of constant term of fit. \begin{DoxyReturn}{Returns}
+Standard deviation of coefficient of constant term. 
+\end{DoxyReturn}
+\index{tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}!get\+Standard\+Deviation\+Of\+Coefficient\+Of\+Linear\+Term@{get\+Standard\+Deviation\+Of\+Coefficient\+Of\+Linear\+Term}}
+\index{get\+Standard\+Deviation\+Of\+Coefficient\+Of\+Linear\+Term@{get\+Standard\+Deviation\+Of\+Coefficient\+Of\+Linear\+Term}!tudat\+::statistics\+::\+Simple\+Linear\+Regression@{tudat\+::statistics\+::\+Simple\+Linear\+Regression}}
+\subsubsection[{\texorpdfstring{get\+Standard\+Deviation\+Of\+Coefficient\+Of\+Linear\+Term() const }{getStandardDeviationOfCoefficientOfLinearTerm() const }}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::statistics\+::\+Simple\+Linear\+Regression\+::get\+Standard\+Deviation\+Of\+Coefficient\+Of\+Linear\+Term (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1statistics_1_1SimpleLinearRegression_a8770eb0f2432f3232bfcc5456bb9691f}{}\label{classtudat_1_1statistics_1_1SimpleLinearRegression_a8770eb0f2432f3232bfcc5456bb9691f}
+
+
+Get standard deviation of coefficient of linear term of fit. 
+
+Returns standard deviation of coefficient of linear term of fit. \begin{DoxyReturn}{Returns}
+Standard deviation of coefficient of linear term. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Statistics/simple\+Linear\+Regression.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Mathematics/\+Statistics/simple\+Linear\+Regression.\+cpp\end{DoxyCompactItemize}

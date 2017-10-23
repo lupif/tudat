@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1aerodynamics_1_1ControlSurfaceIncrementAerodynamicInterface.html" title="Base class to hold an aerodynamic coefficient interface for a vehicle control surface. " alt="" coords="5,5,256,61"/>
+<area shape="rect" id="node2" href="$classtudat_1_1aerodynamics_1_1CustomControlSurfaceIncrementAerodynamicInterface.html" title="tudat::aerodynamics\l::CustomControlSurfaceIncrement\lAerodynamicInterface" alt="" coords="304,5,525,61"/>
+</map>

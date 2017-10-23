@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1estimatable__parameters_1_1EstimatableParameter.html" title="tudat::estimatable\l_parameters::EstimatableParameter\l\&lt; double \&gt;" alt="" coords="5,85,236,141"/>
+<area shape="rect" id="node2" href="$classtudat_1_1estimatable__parameters_1_1GravitationalParameter.html" title="Interface class for the estimation of a gravitational parameter. " alt="" coords="301,5,476,61"/>
+<area shape="rect" id="node3" href="$classtudat_1_1estimatable__parameters_1_1RadiationPressureCoefficient.html" title="Interface class for the estimation of a radiation pressure coefficient. " alt="" coords="284,85,493,141"/>
+<area shape="rect" id="node4" href="$classtudat_1_1estimatable__parameters_1_1RotationRate.html" title="Interface class for estimation of a body&#39;s constant rotation rate parameter. " alt="" coords="299,165,478,206"/>
+</map>

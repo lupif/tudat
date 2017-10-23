@@ -1,0 +1,57 @@
+\hypertarget{classtudat_1_1mission__segments_1_1LambertTargeterDummy}{}\section{tudat\+:\+:mission\+\_\+segments\+:\+:Lambert\+Targeter\+Dummy Class Reference}
+\label{classtudat_1_1mission__segments_1_1LambertTargeterDummy}\index{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Dummy@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Dummy}}
+
+
+Inheritance diagram for tudat\+:\+:mission\+\_\+segments\+:\+:Lambert\+Targeter\+Dummy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classtudat_1_1mission__segments_1_1LambertTargeterDummy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:mission\+\_\+segments\+:\+:Lambert\+Targeter\+Dummy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classtudat_1_1mission__segments_1_1LambertTargeterDummy__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Lambert\+Targeter\+Dummy} (const Eigen\+::\+Vector3d \&\hyperlink{classtudat_1_1mission__segments_1_1LambertTargeter_a67d3a9e1b514c0ca2dad3f235c46941b}{cartesian\+Position\+At\+Departure}, const Eigen\+::\+Vector3d \&\hyperlink{classtudat_1_1mission__segments_1_1LambertTargeter_ab710c1fabfd56361c457449c99efd5fa}{cartesian\+Position\+At\+Arrival}, const double \&\hyperlink{classtudat_1_1mission__segments_1_1LambertTargeter_a74f0ac221b22693ba7fe0b7398007e9b}{time\+Of\+Flight}, const double \&\hyperlink{classtudat_1_1mission__segments_1_1LambertTargeter_ab22c920bfc0f13cdfee122fa2bb93ea2}{gravitational\+Parameter})\hypertarget{classtudat_1_1mission__segments_1_1LambertTargeterDummy_a9bdd3cd1b58a685490c68bd6c9b699d2}{}\label{classtudat_1_1mission__segments_1_1LambertTargeterDummy_a9bdd3cd1b58a685490c68bd6c9b699d2}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtudat_1_1mission__segments_1_1LambertTargeterDummy_a2af97bf82a51fcec65e57e0802ef7118}{execute} ()
+\begin{DoxyCompactList}\small\item\em Execute Lambert targeting algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Dummy@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Dummy}!execute@{execute}}
+\index{execute@{execute}!tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Dummy@{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Dummy}}
+\subsubsection[{\texorpdfstring{execute()}{execute()}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter\+Dummy\+::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1mission__segments_1_1LambertTargeterDummy_a2af97bf82a51fcec65e57e0802ef7118}{}\label{classtudat_1_1mission__segments_1_1LambertTargeterDummy_a2af97bf82a51fcec65e57e0802ef7118}
+
+
+Execute Lambert targeting algorithm. 
+
+Executes the Lambert targeting algorithm. Since the parameters of the Lambert routine are set directly in the constructor, the same \hyperlink{classtudat_1_1mission__segments_1_1LambertTargeter}{Lambert\+Targeter} object cannot be reused for a different problem. This makes the class more robust, as all parameters are consistent with a single problem at all times. Since each object corresponds to a unique problem, there is no need to call this function more than once. Therefore, this function is protected and run at construction. 
+
+Implements \hyperlink{classtudat_1_1mission__segments_1_1LambertTargeter_ac022ab6c8aa0d941b1d049036a7d8054}{tudat\+::mission\+\_\+segments\+::\+Lambert\+Targeter}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Mission\+Segments/\+Unit\+Tests/unit\+Test\+Lambert\+Targeter.\+cpp\end{DoxyCompactItemize}

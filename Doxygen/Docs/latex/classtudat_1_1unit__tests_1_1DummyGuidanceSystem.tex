@@ -1,0 +1,25 @@
+\hypertarget{classtudat_1_1unit__tests_1_1DummyGuidanceSystem}{}\section{tudat\+:\+:unit\+\_\+tests\+:\+:Dummy\+Guidance\+System Class Reference}
+\label{classtudat_1_1unit__tests_1_1DummyGuidanceSystem}\index{tudat\+::unit\+\_\+tests\+::\+Dummy\+Guidance\+System@{tudat\+::unit\+\_\+tests\+::\+Dummy\+Guidance\+System}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Dummy\+Guidance\+System} (const boost\+::function$<$ void(const std\+::string \&, const double) $>$ control\+Surface\+Function, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1reference__frames_1_1AerodynamicAngleCalculator}{reference\+\_\+frames\+::\+Aerodynamic\+Angle\+Calculator} $>$ angle\+Calculator)\hypertarget{classtudat_1_1unit__tests_1_1DummyGuidanceSystem_a61ffacf56005ba92e891bf0097f73c9c}{}\label{classtudat_1_1unit__tests_1_1DummyGuidanceSystem_a61ffacf56005ba92e891bf0097f73c9c}
+
+\item 
+void {\bfseries update\+Guidance} (const double current\+Time)\hypertarget{classtudat_1_1unit__tests_1_1DummyGuidanceSystem_a34863236dd43131e9bbdd95a83f9809f}{}\label{classtudat_1_1unit__tests_1_1DummyGuidanceSystem_a34863236dd43131e9bbdd95a83f9809f}
+
+\item 
+double {\bfseries get\+Current\+Angle\+Of\+Attack} ()\hypertarget{classtudat_1_1unit__tests_1_1DummyGuidanceSystem_aa2003ac5a027deba24d99a7765a0127b}{}\label{classtudat_1_1unit__tests_1_1DummyGuidanceSystem_aa2003ac5a027deba24d99a7765a0127b}
+
+\item 
+double {\bfseries get\+Current\+Surface\+Deflection} ()\hypertarget{classtudat_1_1unit__tests_1_1DummyGuidanceSystem_a7c7d364882680f01cf46f8b6f6694b82}{}\label{classtudat_1_1unit__tests_1_1DummyGuidanceSystem_a7c7d364882680f01cf46f8b6f6694b82}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dummy class used to test the use of control surface deflections in numerical propagation. In this class, a single control surface named \char`\"{}\+Test\+Surface\char`\"{} is set to a time-\/dependent deflection at each time step, as is the angle of attack. The update is performed by the Aerodynamic\+Angle\+Calculator, as linked by this class\textquotesingle{} constructor 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Aerodynamics/\+Unit\+Tests/unit\+Test\+Control\+Surface\+Increments.\+cpp\end{DoxyCompactItemize}

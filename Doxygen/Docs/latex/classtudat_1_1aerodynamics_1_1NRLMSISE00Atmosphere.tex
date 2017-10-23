@@ -1,0 +1,477 @@
+\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere}{}\section{tudat\+:\+:aerodynamics\+:\+:N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere Class Reference}
+\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere}\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+
+
+N\+R\+L\+M\+S\+I\+S\+E-\/00 atmosphere model class.  
+
+
+
+
+{\ttfamily \#include $<$nrlmsise00\+Atmosphere.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:aerodynamics\+:\+:N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:aerodynamics\+:\+:N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::function$<$ \hyperlink{structtudat_1_1aerodynamics_1_1NRLMSISE00Input}{N\+R\+L\+M\+S\+I\+S\+E00\+Input}(double, double, double, double) $>$ \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_aee0e57056d5fc68264773dd94b8b8f3b}{N\+R\+L\+M\+S\+I\+S\+E00\+Input\+Function}
+\begin{DoxyCompactList}\small\item\em N\+R\+L\+M\+S\+I\+S\+E\+Input function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a83ec6d0bb41bd6cd34dd16ac5a408195}{N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere} (const \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_aee0e57056d5fc68264773dd94b8b8f3b}{N\+R\+L\+M\+S\+I\+S\+E00\+Input\+Function} nrlmsise00\+Input\+Function, const bool use\+Ideal\+Gas\+Law=true)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_af30909b7ca9b2e925a6c62c148226df5}{N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere} (const \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_aee0e57056d5fc68264773dd94b8b8f3b}{N\+R\+L\+M\+S\+I\+S\+E00\+Input\+Function} nrlmsise00\+Input\+Function, const double specific\+Heat\+Ratio, const \hyperlink{structtudat_1_1aerodynamics_1_1GasComponentProperties}{Gas\+Component\+Properties} gas\+Properties, const bool use\+Ideal\+Gas\+Law=true)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a9c4cfe9a72d0e00b1746d85849e9e61c}{set\+Gas\+Component\+Properties} (const \hyperlink{structtudat_1_1aerodynamics_1_1GasComponentProperties}{Gas\+Component\+Properties} gas\+Component\+Properties)
+\begin{DoxyCompactList}\small\item\em Set gas component properties. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a47aa6bc2a6782701055d74ef26ef2652}{get\+Density} (const double altitude, const double longitude, const double latitude, const double time)
+\begin{DoxyCompactList}\small\item\em Get local density. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_afb3da940e795477c8f3fa112bf8dd5f5}{get\+Pressure} (const double altitude, const double longitude, const double latitude, const double time)
+\begin{DoxyCompactList}\small\item\em Get local pressure. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a16b8b8363a3b7f6759cd764ba239d8bf}{get\+Temperature} (const double altitude, const double longitude, const double latitude, const double time)
+\begin{DoxyCompactList}\small\item\em Get local temperature. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a494e42d0266f7d9fa0ebc45bf0f7d78d}{get\+Speed\+Of\+Sound} (const double altitude, const double longitude, const double latitude, const double time)
+\begin{DoxyCompactList}\small\item\em Get local speed of sound. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a0e205f917f3c2f11b148a7a7f4f9bc07}{get\+Mean\+Free\+Path} (const double altitude, const double longitude, const double latitude, const double time)
+\begin{DoxyCompactList}\small\item\em Get local mean free path. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_ac187a49f5bdbfecb523200718b3cd443}{get\+Mean\+Molar\+Mass} (const double altitude, const double longitude, const double latitude, const double time)
+\begin{DoxyCompactList}\small\item\em Get local mean molar mass. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a99b458d72a6953dca8de46f88a625df4}{get\+Number\+Densities} (const double altitude, const double longitude, const double latitude, const double time)
+\begin{DoxyCompactList}\small\item\em get local number density of the gas components. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_ac4cc8f6d6362b4ef8fa176412b623215}{get\+Average\+Number\+Density} (const double altitude, const double longitude, const double latitude, const double time)
+\begin{DoxyCompactList}\small\item\em Get local average number density. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a4af6d0c8273998f75ba8bdc4c2cc4755}{get\+Weighted\+Average\+Collision\+Diameter} (const double altitude, const double longitude, const double latitude, const double time)
+\begin{DoxyCompactList}\small\item\em Get local weighted average collision diameter. \end{DoxyCompactList}\item 
+std\+::pair$<$ std\+::vector$<$ double $>$, std\+::vector$<$ double $>$ $>$ \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_ab317008d9d94f2acf51f9fc08a03975e}{get\+Full\+Output} (const double altitude, const double longitude, const double latitude, const double time)
+\begin{DoxyCompactList}\small\item\em Get the full model output. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_afc0f053e11cb133e4821a85f810366f8}{reset\+Hash\+Key} ()
+\begin{DoxyCompactList}\small\item\em Reset the hash key. \end{DoxyCompactList}\item 
+\hyperlink{structtudat_1_1aerodynamics_1_1NRLMSISE00Input}{N\+R\+L\+M\+S\+I\+S\+E00\+Input} \hyperlink{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a00e56dcbeb048a358500a2bef4b359dd}{get\+N\+R\+L\+M\+S\+I\+S\+E00\+Input} ()
+\begin{DoxyCompactList}\small\item\em Function to get Input data to N\+R\+L\+M\+S\+I\+S\+E00 atmosphere model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+N\+R\+L\+M\+S\+I\+S\+E-\/00 atmosphere model class. 
+
+N\+R\+L\+M\+S\+I\+S\+E-\/00 atmosphere model class. This class uses the N\+R\+L\+M\+S\+I\+S\+E00 atmosphere model to calculate atmospheric density and temperature. The G\+T\+D7 function is used\+: Neutral Atmosphere Empircial Model from the surface to lower exosphere. Currently the ideal gas law is used to compute the speed of sound. The specific heat ratio is assumed to be constant and equal to 1.\+4. 
+
+\subsection{Member Typedef Documentation}
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!N\+R\+L\+M\+S\+I\+S\+E00\+Input\+Function@{N\+R\+L\+M\+S\+I\+S\+E00\+Input\+Function}}
+\index{N\+R\+L\+M\+S\+I\+S\+E00\+Input\+Function@{N\+R\+L\+M\+S\+I\+S\+E00\+Input\+Function}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{N\+R\+L\+M\+S\+I\+S\+E00\+Input\+Function}{NRLMSISE00InputFunction}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::function$<$ {\bf N\+R\+L\+M\+S\+I\+S\+E00\+Input}( double, double, double, double ) $>$ {\bf tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Input\+Function}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_aee0e57056d5fc68264773dd94b8b8f3b}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_aee0e57056d5fc68264773dd94b8b8f3b}
+
+
+N\+R\+L\+M\+S\+I\+S\+E\+Input function. 
+
+Boost function that accepts (altitude, longitude, latitude, time ) and returns N\+R\+L\+M\+S\+I\+S\+E\+Input data. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\index{N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere(const N\+R\+L\+M\+S\+I\+S\+E00\+Input\+Function nrlmsise00\+Input\+Function, const bool use\+Ideal\+Gas\+Law=true)}{NRLMSISE00Atmosphere(const NRLMSISE00InputFunction nrlmsise00InputFunction, const bool useIdealGasLaw=true)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\+R\+L\+M\+S\+I\+S\+E00\+Input\+Function}}]{nrlmsise00\+Input\+Function, }
+\item[{const bool}]{use\+Ideal\+Gas\+Law = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a83ec6d0bb41bd6cd34dd16ac5a408195}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a83ec6d0bb41bd6cd34dd16ac5a408195}
+
+
+Default constructor. 
+
+Default constructor. 
+\begin{DoxyParams}{Parameters}
+{\em nrlmsise00\+Input\+Function} & Function which provides the N\+R\+L\+M\+S\+I\+S\+E00 model input as a function of (altitude, longitude, latitude, time ). \\
+\hline
+{\em use\+Ideal\+Gas\+Law} & Variable denoting whether to use the ideal gas law for computation of pressure. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\index{N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere(const N\+R\+L\+M\+S\+I\+S\+E00\+Input\+Function nrlmsise00\+Input\+Function, const double specific\+Heat\+Ratio, const Gas\+Component\+Properties gas\+Properties, const bool use\+Ideal\+Gas\+Law=true)}{NRLMSISE00Atmosphere(const NRLMSISE00InputFunction nrlmsise00InputFunction, const double specificHeatRatio, const GasComponentProperties gasProperties, const bool useIdealGasLaw=true)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\+R\+L\+M\+S\+I\+S\+E00\+Input\+Function}}]{nrlmsise00\+Input\+Function, }
+\item[{const double}]{specific\+Heat\+Ratio, }
+\item[{const {\bf Gas\+Component\+Properties}}]{gas\+Properties, }
+\item[{const bool}]{use\+Ideal\+Gas\+Law = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_af30909b7ca9b2e925a6c62c148226df5}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_af30909b7ca9b2e925a6c62c148226df5}
+
+
+Constructor. 
+
+Constructor that sets the gas component properties and specific heat ratio. 
+\begin{DoxyParams}{Parameters}
+{\em nrlmsise00\+Input\+Function} & shared function pointer to provide all necessary input. \\
+\hline
+{\em specific\+Heat\+Ratio} & value of the specific heat ratio. \\
+\hline
+{\em gas\+Properties} & a \hyperlink{structtudat_1_1aerodynamics_1_1GasComponentProperties}{Gas\+Component\+Properties} data structure that contains the molecule collision diameters and the molar mass. \\
+\hline
+{\em use\+Ideal\+Gas\+Law} & Boolean denoting whether the ideal gas law is to be used. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!get\+Average\+Number\+Density@{get\+Average\+Number\+Density}}
+\index{get\+Average\+Number\+Density@{get\+Average\+Number\+Density}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Average\+Number\+Density(const double altitude, const double longitude, const double latitude, const double time)}{getAverageNumberDensity(const double altitude, const double longitude, const double latitude, const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::get\+Average\+Number\+Density (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude, }
+\item[{const double}]{latitude, }
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_ac4cc8f6d6362b4ef8fa176412b623215}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_ac4cc8f6d6362b4ef8fa176412b623215}
+
+
+Get local average number density. 
+
+Returns the local average number density in m$^\wedge$-\/3 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude at which density is to be computed \mbox{[}m\mbox{]}. \\
+\hline
+{\em longitude} & Longitude at which density is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em latitude} & Latitude at which density is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which density is to be computed (seconds since J2000). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+average number density. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!get\+Density@{get\+Density}}
+\index{get\+Density@{get\+Density}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Density(const double altitude, const double longitude, const double latitude, const double time)}{getDensity(const double altitude, const double longitude, const double latitude, const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::get\+Density (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude, }
+\item[{const double}]{latitude, }
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a47aa6bc2a6782701055d74ef26ef2652}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a47aa6bc2a6782701055d74ef26ef2652}
+
+
+Get local density. 
+
+Returns the local density of the atmosphere in kg per meter$^\wedge$3. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude at which density is to be computed \mbox{[}m\mbox{]}. \\
+\hline
+{\em longitude} & Longitude at which density is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em latitude} & Latitude at which density is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which density is to be computed (seconds since J2000). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Atmospheric density \mbox{[}kg/m$^\wedge$3\mbox{]}. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1aerodynamics_1_1AtmosphereModel_a167feb7925eb65a4ca59317d5fba22fb}{tudat\+::aerodynamics\+::\+Atmosphere\+Model}.
+
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!get\+Full\+Output@{get\+Full\+Output}}
+\index{get\+Full\+Output@{get\+Full\+Output}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Full\+Output(const double altitude, const double longitude, const double latitude, const double time)}{getFullOutput(const double altitude, const double longitude, const double latitude, const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ std\+::vector$<$ double $>$, std\+::vector$<$ double $>$ $>$ tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::get\+Full\+Output (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude, }
+\item[{const double}]{latitude, }
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_ab317008d9d94f2acf51f9fc08a03975e}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_ab317008d9d94f2acf51f9fc08a03975e}
+
+
+Get the full model output. 
+
+Gets the output directly from the model. This will return a pair of double vectors containing density and temperature values. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude at which output is to be computed \mbox{[}m\mbox{]}. \\
+\hline
+{\em longitude} & Longitude at which output is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em latitude} & Latitude at which output is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which output is to be computed (seconds since J2000). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Full density and temperature values 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!get\+Mean\+Free\+Path@{get\+Mean\+Free\+Path}}
+\index{get\+Mean\+Free\+Path@{get\+Mean\+Free\+Path}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Mean\+Free\+Path(const double altitude, const double longitude, const double latitude, const double time)}{getMeanFreePath(const double altitude, const double longitude, const double latitude, const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::get\+Mean\+Free\+Path (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude, }
+\item[{const double}]{latitude, }
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a0e205f917f3c2f11b148a7a7f4f9bc07}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a0e205f917f3c2f11b148a7a7f4f9bc07}
+
+
+Get local mean free path. 
+
+Returns the local mean free path in m. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude at which mean free path is to be computed \mbox{[}m\mbox{]}. \\
+\hline
+{\em longitude} & Longitude at which mean free path is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em latitude} & Latitude at which mean free path is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which mean free path is to be computed (seconds since J2000). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mean free path. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!get\+Mean\+Molar\+Mass@{get\+Mean\+Molar\+Mass}}
+\index{get\+Mean\+Molar\+Mass@{get\+Mean\+Molar\+Mass}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Mean\+Molar\+Mass(const double altitude, const double longitude, const double latitude, const double time)}{getMeanMolarMass(const double altitude, const double longitude, const double latitude, const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::get\+Mean\+Molar\+Mass (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude, }
+\item[{const double}]{latitude, }
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_ac187a49f5bdbfecb523200718b3cd443}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_ac187a49f5bdbfecb523200718b3cd443}
+
+
+Get local mean molar mass. 
+
+Returns the local mean molar mass in kg/mol. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude at which mean molar mass is to be computed \mbox{[}m\mbox{]}. \\
+\hline
+{\em longitude} & Longitude at which mean molar mass is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em latitude} & Latitude at which mean molar mass is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which mean molar mass is to be computed (seconds since J2000). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mean molar mass. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!get\+N\+R\+L\+M\+S\+I\+S\+E00\+Input@{get\+N\+R\+L\+M\+S\+I\+S\+E00\+Input}}
+\index{get\+N\+R\+L\+M\+S\+I\+S\+E00\+Input@{get\+N\+R\+L\+M\+S\+I\+S\+E00\+Input}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+N\+R\+L\+M\+S\+I\+S\+E00\+Input()}{getNRLMSISE00Input()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+R\+L\+M\+S\+I\+S\+E00\+Input} tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::get\+N\+R\+L\+M\+S\+I\+S\+E00\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a00e56dcbeb048a358500a2bef4b359dd}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a00e56dcbeb048a358500a2bef4b359dd}
+
+
+Function to get Input data to N\+R\+L\+M\+S\+I\+S\+E00 atmosphere model. 
+
+Function to get input data to N\+R\+L\+M\+S\+I\+S\+E00 atmosphere model \begin{DoxyReturn}{Returns}
+Input data to N\+R\+L\+M\+S\+I\+S\+E00 atmosphere model 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!get\+Number\+Densities@{get\+Number\+Densities}}
+\index{get\+Number\+Densities@{get\+Number\+Densities}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Number\+Densities(const double altitude, const double longitude, const double latitude, const double time)}{getNumberDensities(const double altitude, const double longitude, const double latitude, const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ double $>$ tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::get\+Number\+Densities (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude, }
+\item[{const double}]{latitude, }
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a99b458d72a6953dca8de46f88a625df4}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a99b458d72a6953dca8de46f88a625df4}
+
+
+get local number density of the gas components. 
+
+Returns the number density of each gas component in a vector. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude at which number density is to be computed \mbox{[}m\mbox{]}. \\
+\hline
+{\em longitude} & Longitude at which number density is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em latitude} & Latitude at which number density is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which number density is to be computed (seconds since J2000). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number densities of gas components 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!get\+Pressure@{get\+Pressure}}
+\index{get\+Pressure@{get\+Pressure}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Pressure(const double altitude, const double longitude, const double latitude, const double time)}{getPressure(const double altitude, const double longitude, const double latitude, const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::get\+Pressure (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude, }
+\item[{const double}]{latitude, }
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_afb3da940e795477c8f3fa112bf8dd5f5}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_afb3da940e795477c8f3fa112bf8dd5f5}
+
+
+Get local pressure. 
+
+Returns the local pressure of the atmosphere in Newton per meter$^\wedge$2. The pressure is not implemented in the current version (returns NaN). 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude at which pressure is to be computed \mbox{[}m\mbox{]}. \\
+\hline
+{\em longitude} & Longitude at which pressure is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em latitude} & Latitude at which pressure is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which pressure is to be computed (seconds since J2000). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Atmospheric pressure. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1aerodynamics_1_1AtmosphereModel_a516553ea32c89f55a5ba7abe5a417ddc}{tudat\+::aerodynamics\+::\+Atmosphere\+Model}.
+
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!get\+Speed\+Of\+Sound@{get\+Speed\+Of\+Sound}}
+\index{get\+Speed\+Of\+Sound@{get\+Speed\+Of\+Sound}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Speed\+Of\+Sound(const double altitude, const double longitude, const double latitude, const double time)}{getSpeedOfSound(const double altitude, const double longitude, const double latitude, const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::get\+Speed\+Of\+Sound (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude, }
+\item[{const double}]{latitude, }
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a494e42d0266f7d9fa0ebc45bf0f7d78d}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a494e42d0266f7d9fa0ebc45bf0f7d78d}
+
+
+Get local speed of sound. 
+
+Returns the local speed of sound in m/s. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude at which speed of sound is to be computed \mbox{[}m\mbox{]}. \\
+\hline
+{\em longitude} & Longitude at which speed of sound is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em latitude} & Latitude at whichspeed of sound is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which speed of sound is to be computed (seconds since J2000). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Speed of sound. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1aerodynamics_1_1AtmosphereModel_a815606ec0437866d6308679c6f078bce}{tudat\+::aerodynamics\+::\+Atmosphere\+Model}.
+
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!get\+Temperature@{get\+Temperature}}
+\index{get\+Temperature@{get\+Temperature}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Temperature(const double altitude, const double longitude, const double latitude, const double time)}{getTemperature(const double altitude, const double longitude, const double latitude, const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::get\+Temperature (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude, }
+\item[{const double}]{latitude, }
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a16b8b8363a3b7f6759cd764ba239d8bf}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a16b8b8363a3b7f6759cd764ba239d8bf}
+
+
+Get local temperature. 
+
+Returns the local temperature of the atmosphere parameter in Kelvin. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude at which temperature is to be computed \mbox{[}m\mbox{]}. \\
+\hline
+{\em longitude} & Longitude at which temperature is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em latitude} & Latitude at which temperature is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which temperature is to be computed (seconds since J2000). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Atmospheric temperature. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1aerodynamics_1_1AtmosphereModel_a9b6be6472481354320e2869e586be5ca}{tudat\+::aerodynamics\+::\+Atmosphere\+Model}.
+
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!get\+Weighted\+Average\+Collision\+Diameter@{get\+Weighted\+Average\+Collision\+Diameter}}
+\index{get\+Weighted\+Average\+Collision\+Diameter@{get\+Weighted\+Average\+Collision\+Diameter}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Weighted\+Average\+Collision\+Diameter(const double altitude, const double longitude, const double latitude, const double time)}{getWeightedAverageCollisionDiameter(const double altitude, const double longitude, const double latitude, const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::get\+Weighted\+Average\+Collision\+Diameter (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude, }
+\item[{const double}]{latitude, }
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a4af6d0c8273998f75ba8bdc4c2cc4755}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a4af6d0c8273998f75ba8bdc4c2cc4755}
+
+
+Get local weighted average collision diameter. 
+
+Returns the local weighted average collision diameter using the number densities as weights. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude at which average collision diameter is to be computed \mbox{[}m\mbox{]}. \\
+\hline
+{\em longitude} & Longitude at which average collision diameter is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em latitude} & Latitude at which average collision diameter is to be computed \mbox{[}rad\mbox{]}. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which average collision diameter is to be computed (seconds since J2000). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+weighted average collision diameter. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!reset\+Hash\+Key@{reset\+Hash\+Key}}
+\index{reset\+Hash\+Key@{reset\+Hash\+Key}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{reset\+Hash\+Key()}{resetHashKey()}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::reset\+Hash\+Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_afc0f053e11cb133e4821a85f810366f8}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_afc0f053e11cb133e4821a85f810366f8}
+
+
+Reset the hash key. 
+
+Resets the hash key, this allows re-\/computation even if the independent parameters haven\textquotesingle{}t changed. Such as in the case of changes to the model. \index{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}!set\+Gas\+Component\+Properties@{set\+Gas\+Component\+Properties}}
+\index{set\+Gas\+Component\+Properties@{set\+Gas\+Component\+Properties}!tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere@{tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere}}
+\subsubsection[{\texorpdfstring{set\+Gas\+Component\+Properties(const Gas\+Component\+Properties gas\+Component\+Properties)}{setGasComponentProperties(const GasComponentProperties gasComponentProperties)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::aerodynamics\+::\+N\+R\+L\+M\+S\+I\+S\+E00\+Atmosphere\+::set\+Gas\+Component\+Properties (
+\begin{DoxyParamCaption}
+\item[{const {\bf Gas\+Component\+Properties}}]{gas\+Component\+Properties}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a9c4cfe9a72d0e00b1746d85849e9e61c}{}\label{classtudat_1_1aerodynamics_1_1NRLMSISE00Atmosphere_a9c4cfe9a72d0e00b1746d85849e9e61c}
+
+
+Set gas component properties. 
+
+Sets the gas component properties. These are required for the calculation of the speed of sound and the mean free path. 
+\begin{DoxyParams}{Parameters}
+{\em gas\+Component\+Properties} & Properties of the gas components \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Aerodynamics/nrlmsise00\+Atmosphere.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Aerodynamics/nrlmsise00\+Atmosphere.\+cpp\end{DoxyCompactItemize}

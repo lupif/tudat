@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1observation__models_1_1ObservationModel.html" title="tudat::observation\l_models::ObservationModel\l\&lt; 2, ObservationScalarType,\l TimeType, StateScalarType \&gt;" alt="" coords="5,5,207,76"/>
+<area shape="rect" id="node2" href="$classtudat_1_1observation__models_1_1AngularPositionObservationModel.html" title="Class for simulating angular position (right ascension/declination) observables. " alt="" coords="255,5,495,76"/>
+</map>

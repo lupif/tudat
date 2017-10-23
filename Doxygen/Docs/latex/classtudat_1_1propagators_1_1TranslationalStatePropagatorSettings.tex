@@ -1,0 +1,156 @@
+\hypertarget{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings}{}\section{tudat\+:\+:propagators\+:\+:Translational\+State\+Propagator\+Settings$<$ State\+Scalar\+Type $>$ Class Template Reference}
+\label{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings}\index{tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings$<$ State\+Scalar\+Type $>$@{tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings$<$ State\+Scalar\+Type $>$}}
+
+
+Class for defining settings for propagating translational dynamics.  
+
+
+
+
+{\ttfamily \#include $<$propagation\+Settings.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:propagators\+:\+:Translational\+State\+Propagator\+Settings$<$ State\+Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:propagators\+:\+:Translational\+State\+Propagator\+Settings$<$ State\+Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_aeb34f5d8119a600e5f92ce56a3ec4cb9}{Translational\+State\+Propagator\+Settings} (const std\+::vector$<$ std\+::string $>$ \&central\+Bodies, const basic\+\_\+astrodynamics\+::\+Acceleration\+Map \&accelerations\+Map, const std\+::vector$<$ std\+::string $>$ \&bodies\+To\+Integrate, const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&initial\+Body\+States, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1PropagationTerminationSettings}{Propagation\+Termination\+Settings} $>$ termination\+Settings, const Translational\+Propagator\+Type propagator=cowell, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$ dependent\+Variables\+To\+Save=boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$(), const double print\+Interval=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Constructor for generic stopping conditions. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a0f603240bbc01dd29d3cdf100390fdeb}{Translational\+State\+Propagator\+Settings} (const std\+::vector$<$ std\+::string $>$ \&central\+Bodies, const basic\+\_\+astrodynamics\+::\+Acceleration\+Map \&accelerations\+Map, const std\+::vector$<$ std\+::string $>$ \&bodies\+To\+Integrate, const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&initial\+Body\+States, const double end\+Time, const Translational\+Propagator\+Type propagator=cowell, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$ dependent\+Variables\+To\+Save=boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$(), const double print\+Interval=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Constructor for fixed propagation time stopping conditions. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a4c352939e8125405eb00e900d434f12e}{$\sim$\+Translational\+State\+Propagator\+Settings} ()\hypertarget{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a4c352939e8125405eb00e900d434f12e}{}\label{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a4c352939e8125405eb00e900d434f12e}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a7ef1b42d37f93e969bb1680991f16358}{central\+Bodies\+\_\+}\hypertarget{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a7ef1b42d37f93e969bb1680991f16358}{}\label{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a7ef1b42d37f93e969bb1680991f16358}
+
+\begin{DoxyCompactList}\small\item\em List of bodies w.\+r.\+t. which the bodies in bodies\+To\+Integrate\+\_\+ are propagated. \end{DoxyCompactList}\item 
+basic\+\_\+astrodynamics\+::\+Acceleration\+Map \hyperlink{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a2c77c941e83de803bb29c4aa6ffc9090}{accelerations\+Map\+\_\+}
+\begin{DoxyCompactList}\small\item\em A map containing the list of accelerations acting on each body. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_aa5b9afdbcbc04292756abe448798037a}{bodies\+To\+Integrate\+\_\+}\hypertarget{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_aa5b9afdbcbc04292756abe448798037a}{}\label{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_aa5b9afdbcbc04292756abe448798037a}
+
+\begin{DoxyCompactList}\small\item\em List of bodies for which the translational state is to be propagated. \end{DoxyCompactList}\item 
+Translational\+Propagator\+Type \hyperlink{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a5d5b921fb25985f835926c8998c0bdc1}{propagator\+\_\+}\hypertarget{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a5d5b921fb25985f835926c8998c0bdc1}{}\label{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a5d5b921fb25985f835926c8998c0bdc1}
+
+\begin{DoxyCompactList}\small\item\em Type of translational state propagator to be used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename State\+Scalar\+Type = double$>$\\*
+class tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings$<$ State\+Scalar\+Type $>$}
+
+Class for defining settings for propagating translational dynamics. 
+
+Class for defining settings for propagating translational dynamics. The propagator defines the form of the equations of motion (i.\+e. Cowell, Encke, Gauss etc.). This base class can be used for Cowell propagator. Other propagators have dedicated derived class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings@{tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings}!Translational\+State\+Propagator\+Settings@{Translational\+State\+Propagator\+Settings}}
+\index{Translational\+State\+Propagator\+Settings@{Translational\+State\+Propagator\+Settings}!tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings@{tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{Translational\+State\+Propagator\+Settings(const std\+::vector$<$ std\+::string $>$ \&central\+Bodies, const basic\+\_\+astrodynamics\+::\+Acceleration\+Map \&accelerations\+Map, const std\+::vector$<$ std\+::string $>$ \&bodies\+To\+Integrate, const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&initial\+Body\+States, const boost\+::shared\+\_\+ptr$<$ Propagation\+Termination\+Settings $>$ termination\+Settings, const Translational\+Propagator\+Type propagator=cowell, const boost\+::shared\+\_\+ptr$<$ Dependent\+Variable\+Save\+Settings $>$ dependent\+Variables\+To\+Save=boost\+::shared\+\_\+ptr$<$ Dependent\+Variable\+Save\+Settings $>$(), const double print\+Interval=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{TranslationalStatePropagatorSettings(const std::vector< std::string > &centralBodies, const basic_astrodynamics::AccelerationMap &accelerationsMap, const std::vector< std::string > &bodiesToIntegrate, const Eigen::Matrix< StateScalarType, Eigen::Dynamic, 1 > &initialBodyStates, const boost::shared_ptr< PropagationTerminationSettings > terminationSettings, const TranslationalPropagatorType propagator=cowell, const boost::shared_ptr< DependentVariableSaveSettings > dependentVariablesToSave=boost::shared_ptr< DependentVariableSaveSettings >(), const double printInterval=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double$>$ {\bf tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings}$<$ State\+Scalar\+Type $>$\+::{\bf Translational\+State\+Propagator\+Settings} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{central\+Bodies, }
+\item[{const basic\+\_\+astrodynamics\+::\+Acceleration\+Map \&}]{accelerations\+Map, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{bodies\+To\+Integrate, }
+\item[{const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&}]{initial\+Body\+States, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Propagation\+Termination\+Settings} $>$}]{termination\+Settings, }
+\item[{const Translational\+Propagator\+Type}]{propagator = {\ttfamily cowell}, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Dependent\+Variable\+Save\+Settings} $>$}]{dependent\+Variables\+To\+Save = {\ttfamily boost\+:\+:shared\+\_\+ptr$<$~{\bf Dependent\+Variable\+Save\+Settings}~$>$(~)}, }
+\item[{const double}]{print\+Interval = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_aeb34f5d8119a600e5f92ce56a3ec4cb9}{}\label{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_aeb34f5d8119a600e5f92ce56a3ec4cb9}
+
+
+Constructor for generic stopping conditions. 
+
+Constructor for generic stopping conditions. 
+\begin{DoxyParams}{Parameters}
+{\em central\+Bodies} & List of bodies w.\+r.\+t. which the bodies in bodies\+To\+Integrate\+\_\+ are propagated. \\
+\hline
+{\em accelerations\+Map} & A map containing the list of accelerations acting on each body, identifying the body being acted on and the body acted on by an acceleration. The map has as key a string denoting the name of the body the list of accelerations, provided as the value corresponding to a key, is acting on. This map-\/value is again a map with string as key, denoting the body exerting the acceleration, and as value a pointer to an acceleration model. \\
+\hline
+{\em bodies\+To\+Integrate} & List of bodies for which the translational state is to be propagated. \\
+\hline
+{\em initial\+Body\+States} & Initial state used as input for numerical integration \\
+\hline
+{\em termination\+Settings} & Settings for creating the object that checks whether the propagation is finished. \\
+\hline
+{\em propagator} & Type of translational state propagator to be used \\
+\hline
+{\em dependent\+Variables\+To\+Save} & Settings for the dependent variables that are to be saved during propagation (default none). \\
+\hline
+{\em print\+Interval} & Variable indicating how often (once per print\+Interval\+\_\+ seconds or propagation independenty variable) the current state and time are to be printed to console (default never). \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings@{tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings}!Translational\+State\+Propagator\+Settings@{Translational\+State\+Propagator\+Settings}}
+\index{Translational\+State\+Propagator\+Settings@{Translational\+State\+Propagator\+Settings}!tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings@{tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{Translational\+State\+Propagator\+Settings(const std\+::vector$<$ std\+::string $>$ \&central\+Bodies, const basic\+\_\+astrodynamics\+::\+Acceleration\+Map \&accelerations\+Map, const std\+::vector$<$ std\+::string $>$ \&bodies\+To\+Integrate, const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&initial\+Body\+States, const double end\+Time, const Translational\+Propagator\+Type propagator=cowell, const boost\+::shared\+\_\+ptr$<$ Dependent\+Variable\+Save\+Settings $>$ dependent\+Variables\+To\+Save=boost\+::shared\+\_\+ptr$<$ Dependent\+Variable\+Save\+Settings $>$(), const double print\+Interval=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{TranslationalStatePropagatorSettings(const std::vector< std::string > &centralBodies, const basic_astrodynamics::AccelerationMap &accelerationsMap, const std::vector< std::string > &bodiesToIntegrate, const Eigen::Matrix< StateScalarType, Eigen::Dynamic, 1 > &initialBodyStates, const double endTime, const TranslationalPropagatorType propagator=cowell, const boost::shared_ptr< DependentVariableSaveSettings > dependentVariablesToSave=boost::shared_ptr< DependentVariableSaveSettings >(), const double printInterval=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double$>$ {\bf tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings}$<$ State\+Scalar\+Type $>$\+::{\bf Translational\+State\+Propagator\+Settings} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{central\+Bodies, }
+\item[{const basic\+\_\+astrodynamics\+::\+Acceleration\+Map \&}]{accelerations\+Map, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{bodies\+To\+Integrate, }
+\item[{const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&}]{initial\+Body\+States, }
+\item[{const double}]{end\+Time, }
+\item[{const Translational\+Propagator\+Type}]{propagator = {\ttfamily cowell}, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Dependent\+Variable\+Save\+Settings} $>$}]{dependent\+Variables\+To\+Save = {\ttfamily boost\+:\+:shared\+\_\+ptr$<$~{\bf Dependent\+Variable\+Save\+Settings}~$>$(~)}, }
+\item[{const double}]{print\+Interval = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a0f603240bbc01dd29d3cdf100390fdeb}{}\label{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a0f603240bbc01dd29d3cdf100390fdeb}
+
+
+Constructor for fixed propagation time stopping conditions. 
+
+Constructor for fixed propagation time stopping conditions. 
+\begin{DoxyParams}{Parameters}
+{\em central\+Bodies} & List of bodies w.\+r.\+t. which the bodies in bodies\+To\+Integrate\+\_\+ are propagated. \\
+\hline
+{\em accelerations\+Map} & A map containing the list of accelerations acting on each body, identifying the body being acted on and the body acted on by an acceleration. The map has as key a string denoting the name of the body the list of accelerations, provided as the value corresponding to a key, is acting on. This map-\/value is again a map with string as key, denoting the body exerting the acceleration, and as value a pointer to an acceleration model. \\
+\hline
+{\em bodies\+To\+Integrate} & List of bodies for which the translational state is to be propagated. \\
+\hline
+{\em initial\+Body\+States} & Initial state used as input for numerical integration \\
+\hline
+{\em end\+Time} & \hyperlink{classtudat_1_1Time}{Time} at which to stop the numerical propagation \\
+\hline
+{\em propagator} & Type of translational state propagator to be used \\
+\hline
+{\em dependent\+Variables\+To\+Save} & Settings for the dependent variables that are to be saved during propagation (default none). \\
+\hline
+{\em print\+Interval} & Variable indicating how often (once per print\+Interval\+\_\+ seconds or propagation independenty variable) the current state and time are to be printed to console (default never). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings@{tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings}!accelerations\+Map\+\_\+@{accelerations\+Map\+\_\+}}
+\index{accelerations\+Map\+\_\+@{accelerations\+Map\+\_\+}!tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings@{tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{accelerations\+Map\+\_\+}{accelerationsMap_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double$>$ basic\+\_\+astrodynamics\+::\+Acceleration\+Map {\bf tudat\+::propagators\+::\+Translational\+State\+Propagator\+Settings}$<$ State\+Scalar\+Type $>$\+::accelerations\+Map\+\_\+}\hypertarget{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a2c77c941e83de803bb29c4aa6ffc9090}{}\label{classtudat_1_1propagators_1_1TranslationalStatePropagatorSettings_a2c77c941e83de803bb29c4aa6ffc9090}
+
+
+A map containing the list of accelerations acting on each body. 
+
+A map containing the list of accelerations acting on each body, identifying the body being acted on and the body acted on by an acceleration. The map has as key a string denoting the name of the body the list of accelerations, provided as the value corresponding to a key, is acting on. This map-\/value is again a map with string as key, denoting the body exerting the acceleration, and as value a pointer to an acceleration model. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/propagation\+Settings.\+h\end{DoxyCompactItemize}

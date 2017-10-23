@@ -1,0 +1,4 @@
+<map id="tudat::simulation_setup::MassRateModelSettings" name="tudat::simulation_setup::MassRateModelSettings">
+<area shape="rect" id="node2" href="$classtudat_1_1simulation__setup_1_1CustomMassRateModelSettings.html" title="Class defining the settings for a custom (i.e. predefined function of time) mass rate model..." alt="" coords="227,5,445,47"/>
+<area shape="rect" id="node3" href="$classtudat_1_1simulation__setup_1_1FromThrustMassModelSettings.html" title="Class defining the settings of a thrust model where the thrust is directly retrieved from (a) model(s..." alt="" coords="230,71,442,112"/>
+</map>

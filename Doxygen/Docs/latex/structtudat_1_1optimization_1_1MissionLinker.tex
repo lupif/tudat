@@ -1,0 +1,78 @@
+\hypertarget{structtudat_1_1optimization_1_1MissionLinker}{}\section{tudat\+:\+:optimization\+:\+:Mission\+Linker Struct Reference}
+\label{structtudat_1_1optimization_1_1MissionLinker}\index{tudat\+::optimization\+::\+Mission\+Linker@{tudat\+::optimization\+::\+Mission\+Linker}}
+
+
+Class to integrate different mission segmen settings in a chain.  
+
+
+
+
+{\ttfamily \#include $<$mission\+Linker.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtudat_1_1optimization_1_1MissionLinker_ab0d734e238a59e107ee41adc22c22bf0}{Mission\+Linker} (std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings}{Mission\+Segment\+Settings} $>$ $>$ mission\+Segment\+Settings, boost\+::shared\+\_\+ptr$<$ \hyperlink{structtudat_1_1optimization_1_1OptimizationSettings}{Optimization\+Settings} $>$ optimization\+Settings=boost\+::make\+\_\+shared$<$ \hyperlink{structtudat_1_1optimization_1_1OptimizationSettings}{Optimization\+Settings} $>$(), const bool optimize\+Configuration=true)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{structtudat_1_1optimization_1_1MissionLinker_a438c8ba91d56002d8cb218033f6ae382}{$\sim$\+Mission\+Linker} ()\hypertarget{structtudat_1_1optimization_1_1MissionLinker_a438c8ba91d56002d8cb218033f6ae382}{}\label{structtudat_1_1optimization_1_1MissionLinker_a438c8ba91d56002d8cb218033f6ae382}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+void \hyperlink{structtudat_1_1optimization_1_1MissionLinker_a3c202f90f33f1cf63240ff91ba892159}{optimize} (void)
+\begin{DoxyCompactList}\small\item\em Function to link and optimize the different mission segments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings}{Mission\+Segment\+Settings} $>$ $>$ \hyperlink{structtudat_1_1optimization_1_1MissionLinker_a12b0cb26938522dede2a23362bddb52e}{mission\+Segment\+Settings\+\_\+}\hypertarget{structtudat_1_1optimization_1_1MissionLinker_a12b0cb26938522dede2a23362bddb52e}{}\label{structtudat_1_1optimization_1_1MissionLinker_a12b0cb26938522dede2a23362bddb52e}
+
+\begin{DoxyCompactList}\small\item\em Storage variable containing the vector of mission segment settings. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{structtudat_1_1optimization_1_1OptimizationSettings}{Optimization\+Settings} $>$ \hyperlink{structtudat_1_1optimization_1_1MissionLinker_a2d723fb40bf8d098e485696ba1ed0c7f}{optimization\+Settings\+\_\+}\hypertarget{structtudat_1_1optimization_1_1MissionLinker_a2d723fb40bf8d098e485696ba1ed0c7f}{}\label{structtudat_1_1optimization_1_1MissionLinker_a2d723fb40bf8d098e485696ba1ed0c7f}
+
+\begin{DoxyCompactList}\small\item\em Object containing information for the optimization process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to integrate different mission segmen settings in a chain. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::optimization\+::\+Mission\+Linker@{tudat\+::optimization\+::\+Mission\+Linker}!Mission\+Linker@{Mission\+Linker}}
+\index{Mission\+Linker@{Mission\+Linker}!tudat\+::optimization\+::\+Mission\+Linker@{tudat\+::optimization\+::\+Mission\+Linker}}
+\subsubsection[{\texorpdfstring{Mission\+Linker(std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ Mission\+Segment\+Settings $>$ $>$ mission\+Segment\+Settings, boost\+::shared\+\_\+ptr$<$ Optimization\+Settings $>$ optimization\+Settings=boost\+::make\+\_\+shared$<$ Optimization\+Settings $>$(), const bool optimize\+Configuration=true)}{MissionLinker(std::vector< boost::shared_ptr< MissionSegmentSettings > > missionSegmentSettings, boost::shared_ptr< OptimizationSettings > optimizationSettings=boost::make_shared< OptimizationSettings >(), const bool optimizeConfiguration=true)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::optimization\+::\+Mission\+Linker\+::\+Mission\+Linker (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ {\bf Mission\+Segment\+Settings} $>$ $>$}]{mission\+Segment\+Settings, }
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf Optimization\+Settings} $>$}]{optimization\+Settings = {\ttfamily boost\+:\+:make\+\_\+shared$<$~{\bf Optimization\+Settings}~$>$()}, }
+\item[{const bool}]{optimize\+Configuration = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structtudat_1_1optimization_1_1MissionLinker_ab0d734e238a59e107ee41adc22c22bf0}{}\label{structtudat_1_1optimization_1_1MissionLinker_ab0d734e238a59e107ee41adc22c22bf0}
+
+
+Constructor. 
+
+\hyperlink{structtudat_1_1optimization_1_1MissionLinker}{Mission\+Linker} 
+\begin{DoxyParams}{Parameters}
+{\em mission\+Segment\+Settings} & vector of \hyperlink{structtudat_1_1optimization_1_1MissionSegmentSettings}{Mission\+Segment\+Settings} objects chronologically ordered \\
+\hline
+{\em optimization\+Settings} & object to define the optimization type, the population size, whether the optimization should end at the maximum number of evolutions defined in the objective function and the verbosity \\
+\hline
+{\em optimize\+Configuration} & set to true if the user desires to perform the linking and optimization with the costruction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::optimization\+::\+Mission\+Linker@{tudat\+::optimization\+::\+Mission\+Linker}!optimize@{optimize}}
+\index{optimize@{optimize}!tudat\+::optimization\+::\+Mission\+Linker@{tudat\+::optimization\+::\+Mission\+Linker}}
+\subsubsection[{\texorpdfstring{optimize(void)}{optimize(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::optimization\+::\+Mission\+Linker\+::optimize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1MissionLinker_a3c202f90f33f1cf63240ff91ba892159}{}\label{structtudat_1_1optimization_1_1MissionLinker_a3c202f90f33f1cf63240ff91ba892159}
+
+
+Function to link and optimize the different mission segments. 
+
+Function to link and optimize the different mission segments 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Optimization/mission\+Linker.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Optimization/mission\+Linker.\+cpp\end{DoxyCompactItemize}

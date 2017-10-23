@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1basic__mathematics_1_1Function.html" title="tudat::basic_mathematics\l::Function\&lt; double, double \&gt;" alt="" coords="5,169,193,211"/>
+<area shape="rect" id="node2" href="$classtudat_1_1basic__mathematics_1_1BasicFunction.html" title="tudat::basic_mathematics\l::BasicFunction\&lt; double,\l double \&gt;" alt="" coords="264,93,436,149"/>
+<area shape="rect" id="node8" href="$classtudat_1_1aerodynamics_1_1EquilibriumTemperatureFunction.html" title="Function that is used to compute the net heat flux from a given heat input and wall temperature..." alt="" coords="241,237,459,279"/>
+<area shape="rect" id="node3" href="$structtudat_1_1unit__tests_1_1TestFunction1.html" title="Test function for the root&#45;finders. " alt="" coords="567,71,691,112"/>
+<area shape="rect" id="node4" href="$structtudat_1_1unit__tests_1_1TestFunction2.html" title="Test function for the root_finders. " alt="" coords="567,136,691,177"/>
+<area shape="rect" id="node5" href="$structtudat_1_1unit__tests_1_1TestFunction3.html" title="Test function for the root_finders. " alt="" coords="567,201,691,243"/>
+<area shape="rect" id="node6" href="$structtudat_1_1unit__tests_1_1TestFunctionWithLargeRootDifference.html" title="Test function for the root&#45;finders. " alt="" coords="507,267,752,308"/>
+<area shape="rect" id="node7" href="$structtudat_1_1unit__tests_1_1TestFunctionWithZeroRoot.html" title="Test function for the root&#45;finders. " alt="" coords="540,5,719,47"/>
+<area shape="rect" id="node9" href="$structtudat_1_1unit__tests_1_1TestFunction.html" title="Simple definition of a test function, so that it can be used by all root&#45;finder unit tests..." alt="" coords="288,172,412,213"/>
+</map>

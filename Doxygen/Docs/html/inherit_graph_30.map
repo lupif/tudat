@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1gravitation_1_1GravityFieldModel.html" title="GravityFieldModel class. " alt="" coords="5,13,140,54"/>
+<area shape="rect" id="node2" href="$classtudat_1_1gravitation_1_1SphericalHarmonicsGravityField.html" title="Class to represent a spherical harmonic gravity field expansion. " alt="" coords="188,5,377,61"/>
+<area shape="rect" id="node3" href="$classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField.html" title="Class for time dependent spherical harmonic gravity field. " alt="" coords="425,5,664,61"/>
+</map>

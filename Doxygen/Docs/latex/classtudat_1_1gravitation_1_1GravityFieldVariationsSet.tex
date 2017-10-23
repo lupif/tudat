@@ -1,0 +1,105 @@
+\hypertarget{classtudat_1_1gravitation_1_1GravityFieldVariationsSet}{}\section{tudat\+:\+:gravitation\+:\+:Gravity\+Field\+Variations\+Set Class Reference}
+\label{classtudat_1_1gravitation_1_1GravityFieldVariationsSet}\index{tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set@{tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set}}
+
+
+{\ttfamily \#include $<$gravity\+Field\+Variations.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariationsSet_a36795e6b1bbba8e453d732c4ea32bddc}{Gravity\+Field\+Variations\+Set} (const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariations}{Gravity\+Field\+Variations} $>$ $>$ variation\+Objects, const std\+::vector$<$ Body\+Deformation\+Types $>$ variation\+Type, const std\+::vector$<$ std\+::string $>$ variation\+Identifier, const std\+::map$<$ int, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings}{interpolators\+::\+Interpolator\+Settings} $>$ $>$ create\+Interpolator=std\+::map$<$ int, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings}{interpolators\+::\+Interpolator\+Settings} $>$ $>$(), const std\+::map$<$ int, double $>$ initial\+Times=std\+::map$<$ int, double $>$(), const std\+::map$<$ int, double $>$ final\+Times=std\+::map$<$ int, double $>$(), const std\+::map$<$ int, double $>$ time\+Steps=std\+::map$<$ int, double $>$())
+\begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
+std\+::pair$<$ bool, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariations}{gravitation\+::\+Gravity\+Field\+Variations} $>$ $>$ \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariationsSet_a3d04dc05f82e1007921a7ed25e6640b9}{get\+Gravity\+Field\+Variation} (const Body\+Deformation\+Types deformation\+Type, const std\+::string identifier=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Function to retrieve a variation object of given type (and name if necessary). \end{DoxyCompactList}\item 
+std\+::vector$<$ boost\+::function$<$ void(const double, Eigen\+::\+Matrix\+Xd \&, Eigen\+::\+Matrix\+Xd \&) $>$ $>$ \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariationsSet_a6528ab72696d37853ffde47a49a4c424}{get\+Variation\+Functions} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve list of variation functions. \end{DoxyCompactList}\item 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariations}{Gravity\+Field\+Variations} $>$ $>$ {\bfseries get\+Variation\+Objects} ()\hypertarget{classtudat_1_1gravitation_1_1GravityFieldVariationsSet_aa1d5966d493c2cd42489445e72313c63}{}\label{classtudat_1_1gravitation_1_1GravityFieldVariationsSet_aa1d5966d493c2cd42489445e72313c63}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Container class containing all gravity field variations for a single Body (and \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField}{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}).
+
+Container class containing all gravity field variations for a single Body (and \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField}{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field}). Also contains information on whether an interpolator is used for calculation of corrections by \hyperlink{classtudat_1_1gravitation_1_1TimeDependentSphericalHarmonicsGravityField}{Time\+Dependent\+Spherical\+Harmonics\+Gravity\+Field} and, if so, the associated interpolator settings. Multiple corrections of a single type may be contained in this class, in which case each of them must be supplied with a unique identifier (string). 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set@{tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set}!Gravity\+Field\+Variations\+Set@{Gravity\+Field\+Variations\+Set}}
+\index{Gravity\+Field\+Variations\+Set@{Gravity\+Field\+Variations\+Set}!tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set@{tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set}}
+\subsubsection[{\texorpdfstring{Gravity\+Field\+Variations\+Set(const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ Gravity\+Field\+Variations $>$ $>$ variation\+Objects, const std\+::vector$<$ Body\+Deformation\+Types $>$ variation\+Type, const std\+::vector$<$ std\+::string $>$ variation\+Identifier, const std\+::map$<$ int, boost\+::shared\+\_\+ptr$<$ interpolators\+::\+Interpolator\+Settings $>$ $>$ create\+Interpolator=std\+::map$<$ int, boost\+::shared\+\_\+ptr$<$ interpolators\+::\+Interpolator\+Settings $>$ $>$(), const std\+::map$<$ int, double $>$ initial\+Times=std\+::map$<$ int, double $>$(), const std\+::map$<$ int, double $>$ final\+Times=std\+::map$<$ int, double $>$(), const std\+::map$<$ int, double $>$ time\+Steps=std\+::map$<$ int, double $>$())}{GravityFieldVariationsSet(const std::vector< boost::shared_ptr< GravityFieldVariations > > variationObjects, const std::vector< BodyDeformationTypes > variationType, const std::vector< std::string > variationIdentifier, const std::map< int, boost::shared_ptr< interpolators::InterpolatorSettings > > createInterpolator=std::map< int, boost::shared_ptr< interpolators::InterpolatorSettings > >(), const std::map< int, double > initialTimes=std::map< int, double >(), const std::map< int, double > finalTimes=std::map< int, double >(), const std::map< int, double > timeSteps=std::map< int, double >())}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set\+::\+Gravity\+Field\+Variations\+Set (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ {\bf Gravity\+Field\+Variations} $>$ $>$}]{variation\+Objects, }
+\item[{const std\+::vector$<$ Body\+Deformation\+Types $>$}]{variation\+Type, }
+\item[{const std\+::vector$<$ std\+::string $>$}]{variation\+Identifier, }
+\item[{const std\+::map$<$ int, boost\+::shared\+\_\+ptr$<$ {\bf interpolators\+::\+Interpolator\+Settings} $>$ $>$}]{create\+Interpolator = {\ttfamily std\+:\+:map$<$~int,~boost\+:\+:shared\+\_\+ptr$<$~{\bf interpolators\+::\+Interpolator\+Settings}~$>$~$>$(~)}, }
+\item[{const std\+::map$<$ int, double $>$}]{initial\+Times = {\ttfamily std\+:\+:map$<$~int,~double~$>$(~)}, }
+\item[{const std\+::map$<$ int, double $>$}]{final\+Times = {\ttfamily std\+:\+:map$<$~int,~double~$>$(~)}, }
+\item[{const std\+::map$<$ int, double $>$}]{time\+Steps = {\ttfamily std\+:\+:map$<$~int,~double~$>$(~)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1gravitation_1_1GravityFieldVariationsSet_a36795e6b1bbba8e453d732c4ea32bddc}{}\label{classtudat_1_1gravitation_1_1GravityFieldVariationsSet_a36795e6b1bbba8e453d732c4ea32bddc}
+
+
+Class constructor. 
+
+Class contructor, requires set of correction objects (and associated properties). 
+\begin{DoxyParams}{Parameters}
+{\em variation\+Objects} & List of \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariations}{Gravity\+Field\+Variations} objects denoting the complete set of variations to take into account. \\
+\hline
+{\em variation\+Type} & List of type identifiers of variation\+Objects (prevents use of dynamic casts), must be of same size as variation\+Objects. \\
+\hline
+{\em variation\+Identifier} & Name of variation object for each entry of variation\+Objects, must be of same size as variation\+Objects. Entries only required to be non-\/empty if multiple variations objects of same type are included in variation\+Objects list. \\
+\hline
+{\em create\+Interpolator} & List of booleans denoting whether to interpolate a given entry of variation\+Objects or not, must be of same size as variation\+Objects. \\
+\hline
+{\em initial\+Times} & Initial times for interpolation, must contain an entry for each variation (map key denotes index of variation\+Objects) for which create\+Interpolator is true. \\
+\hline
+{\em final\+Times} & Final times for interpolation, must contain an entry for each variation (map key denotes index of variation\+Objects) for which create\+Interpolator is true. \\
+\hline
+{\em time\+Steps} & \hyperlink{classtudat_1_1Time}{Time} steps for interpolation, must contain an entry for each variation (map key denotes index of variation\+Objects) for which create\+Interpolator is true. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set@{tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set}!get\+Gravity\+Field\+Variation@{get\+Gravity\+Field\+Variation}}
+\index{get\+Gravity\+Field\+Variation@{get\+Gravity\+Field\+Variation}!tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set@{tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set}}
+\subsubsection[{\texorpdfstring{get\+Gravity\+Field\+Variation(const Body\+Deformation\+Types deformation\+Type, const std\+::string identifier="""")}{getGravityFieldVariation(const BodyDeformationTypes deformationType, const std::string identifier="")}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ bool, boost\+::shared\+\_\+ptr$<$ {\bf gravitation\+::\+Gravity\+Field\+Variations} $>$ $>$ tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set\+::get\+Gravity\+Field\+Variation (
+\begin{DoxyParamCaption}
+\item[{const Body\+Deformation\+Types}]{deformation\+Type, }
+\item[{const std\+::string}]{identifier = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1gravitation_1_1GravityFieldVariationsSet_a3d04dc05f82e1007921a7ed25e6640b9}{}\label{classtudat_1_1gravitation_1_1GravityFieldVariationsSet_a3d04dc05f82e1007921a7ed25e6640b9}
+
+
+Function to retrieve a variation object of given type (and name if necessary). 
+
+Function to retrieve a variation object of given type (and name if necessary). Name must be provided only if if multiple variation objects of same type are included in variation\+Objects\+\_\+ list. 
+\begin{DoxyParams}{Parameters}
+{\em deformation\+Type} & Type of gravity field variation. \\
+\hline
+{\em identifier} & Name of gravity field variation (only required if if multiple variation objects of same type are included in variation\+Objects\+\_\+ list (ignored otherwise). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair containing boolean (true if requested variation found, false otherwise) and pointer to variation object (only if requested variation found). 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set@{tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set}!get\+Variation\+Functions@{get\+Variation\+Functions}}
+\index{get\+Variation\+Functions@{get\+Variation\+Functions}!tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set@{tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set}}
+\subsubsection[{\texorpdfstring{get\+Variation\+Functions()}{getVariationFunctions()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ boost\+::function$<$ void(const double, Eigen\+::\+Matrix\+Xd \&, Eigen\+::\+Matrix\+Xd \&) $>$ $>$ tudat\+::gravitation\+::\+Gravity\+Field\+Variations\+Set\+::get\+Variation\+Functions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1gravitation_1_1GravityFieldVariationsSet_a6528ab72696d37853ffde47a49a4c424}{}\label{classtudat_1_1gravitation_1_1GravityFieldVariationsSet_a6528ab72696d37853ffde47a49a4c424}
+
+
+Function to retrieve list of variation functions. 
+
+Function to retrieve list of variation functions, entries are either created using function pointer binding to \hyperlink{classtudat_1_1gravitation_1_1PairInterpolationInterface}{Pair\+Interpolation\+Interface} (if given variation is to be interpolated) or to \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariations}{Gravity\+Field\+Variations} directly (if no interpolation requested). \begin{DoxyReturn}{Returns}
+List of gravity field coefficient variation functions, matching the interface of \hyperlink{classtudat_1_1gravitation_1_1GravityFieldVariations_aafc95a18c23948b8185502d55dce013c}{Gravity\+Field\+Variations\+::add\+Spherical\+Harmonics\+Corrections} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Gravitation/gravity\+Field\+Variations.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Gravitation/gravity\+Field\+Variations.\+cpp\end{DoxyCompactItemize}

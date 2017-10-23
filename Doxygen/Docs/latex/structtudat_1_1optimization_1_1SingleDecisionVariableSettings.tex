@@ -1,0 +1,123 @@
+\hypertarget{structtudat_1_1optimization_1_1SingleDecisionVariableSettings}{}\section{tudat\+:\+:optimization\+:\+:Single\+Decision\+Variable\+Settings Struct Reference}
+\label{structtudat_1_1optimization_1_1SingleDecisionVariableSettings}\index{tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings@{tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings}}
+
+
+Class to define the settings for a decision variable.  
+
+
+
+
+{\ttfamily \#include $<$decision\+Variable\+Settings.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:optimization\+:\+:Single\+Decision\+Variable\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structtudat_1_1optimization_1_1SingleDecisionVariableSettings__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_a288f5ffb43b7d0e110b6d8070c9b7026}{Single\+Decision\+Variable\+Settings} (Decision\+Variables decision\+Variable, boost\+::shared\+\_\+ptr$<$ \hyperlink{structtudat_1_1optimization_1_1Boundaries}{Boundaries} $>$ boundaries, std\+::string associated\+Body=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_aebb0b4ab8770b096427e239495da7237}{Single\+Decision\+Variable\+Settings} (Decision\+Variables decision\+Variable, double lower\+Boundary, double upper\+Boundary, std\+::string associated\+Body=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_a8650aa02bd66fb8e235cc23cf1d53840}{Single\+Decision\+Variable\+Settings} (Decision\+Variables decision\+Variable, Eigen\+::\+Vector\+Xd \&lower\+Boundary, Eigen\+::\+Vector\+Xd \&upper\+Boundary, std\+::string associated\+Body=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_ac51b14954a7fd9a7fc434052da532807}{$\sim$\+Single\+Decision\+Variable\+Settings} ()\hypertarget{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_ac51b14954a7fd9a7fc434052da532807}{}\label{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_ac51b14954a7fd9a7fc434052da532807}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Decision\+Variables {\bfseries decision\+Variable\+\_\+}\hypertarget{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_aaa836b395e211d6c81076ad5dbe755f5}{}\label{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_aaa836b395e211d6c81076ad5dbe755f5}
+
+\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{structtudat_1_1optimization_1_1Boundaries}{Boundaries} $>$ {\bfseries boundaries\+\_\+}\hypertarget{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_ab6ed07fd3280e575a75be2f1fe3550b8}{}\label{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_ab6ed07fd3280e575a75be2f1fe3550b8}
+
+\item 
+std\+::string {\bfseries associated\+Body\+\_\+}\hypertarget{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_a1ef94ccbcb103a399040bb3a9b659e32}{}\label{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_a1ef94ccbcb103a399040bb3a9b659e32}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to define the settings for a decision variable. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings@{tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings}!Single\+Decision\+Variable\+Settings@{Single\+Decision\+Variable\+Settings}}
+\index{Single\+Decision\+Variable\+Settings@{Single\+Decision\+Variable\+Settings}!tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings@{tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings}}
+\subsubsection[{\texorpdfstring{Single\+Decision\+Variable\+Settings(\+Decision\+Variables decision\+Variable, boost\+::shared\+\_\+ptr$<$ Boundaries $>$ boundaries, std\+::string associated\+Body="""")}{SingleDecisionVariableSettings(DecisionVariables decisionVariable, boost::shared_ptr< Boundaries > boundaries, std::string associatedBody="")}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings\+::\+Single\+Decision\+Variable\+Settings (
+\begin{DoxyParamCaption}
+\item[{Decision\+Variables}]{decision\+Variable, }
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf Boundaries} $>$}]{boundaries, }
+\item[{std\+::string}]{associated\+Body = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_a288f5ffb43b7d0e110b6d8070c9b7026}{}\label{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_a288f5ffb43b7d0e110b6d8070c9b7026}
+
+
+Constructor. 
+
+Constructor accepting boundaries as class \hyperlink{structtudat_1_1optimization_1_1Boundaries}{Boundaries}. 
+\begin{DoxyParams}{Parameters}
+{\em decision\+Variable} & type of decision variable \\
+\hline
+{\em boundaries} & boundaries \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings@{tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings}!Single\+Decision\+Variable\+Settings@{Single\+Decision\+Variable\+Settings}}
+\index{Single\+Decision\+Variable\+Settings@{Single\+Decision\+Variable\+Settings}!tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings@{tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings}}
+\subsubsection[{\texorpdfstring{Single\+Decision\+Variable\+Settings(\+Decision\+Variables decision\+Variable, double lower\+Boundary, double upper\+Boundary, std\+::string associated\+Body="""")}{SingleDecisionVariableSettings(DecisionVariables decisionVariable, double lowerBoundary, double upperBoundary, std::string associatedBody="")}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings\+::\+Single\+Decision\+Variable\+Settings (
+\begin{DoxyParamCaption}
+\item[{Decision\+Variables}]{decision\+Variable, }
+\item[{double}]{lower\+Boundary, }
+\item[{double}]{upper\+Boundary, }
+\item[{std\+::string}]{associated\+Body = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_aebb0b4ab8770b096427e239495da7237}{}\label{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_aebb0b4ab8770b096427e239495da7237}
+
+
+Constructor. 
+
+Constructor accepting scalar lower and upper boundaries 
+\begin{DoxyParams}{Parameters}
+{\em decision\+Variable} & decision variable type \\
+\hline
+{\em lower\+Boundary} & lower boundary for scalar decision variable \\
+\hline
+{\em upper\+Boundary} & upper boundary for scalar decision variable \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings@{tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings}!Single\+Decision\+Variable\+Settings@{Single\+Decision\+Variable\+Settings}}
+\index{Single\+Decision\+Variable\+Settings@{Single\+Decision\+Variable\+Settings}!tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings@{tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings}}
+\subsubsection[{\texorpdfstring{Single\+Decision\+Variable\+Settings(\+Decision\+Variables decision\+Variable, Eigen\+::\+Vector\+Xd \&lower\+Boundary, Eigen\+::\+Vector\+Xd \&upper\+Boundary, std\+::string associated\+Body="""")}{SingleDecisionVariableSettings(DecisionVariables decisionVariable, Eigen::VectorXd &lowerBoundary, Eigen::VectorXd &upperBoundary, std::string associatedBody="")}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::optimization\+::\+Single\+Decision\+Variable\+Settings\+::\+Single\+Decision\+Variable\+Settings (
+\begin{DoxyParamCaption}
+\item[{Decision\+Variables}]{decision\+Variable, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{lower\+Boundary, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{upper\+Boundary, }
+\item[{std\+::string}]{associated\+Body = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_a8650aa02bd66fb8e235cc23cf1d53840}{}\label{structtudat_1_1optimization_1_1SingleDecisionVariableSettings_a8650aa02bd66fb8e235cc23cf1d53840}
+
+
+Constructor. 
+
+Constructor accepting vectorial lower and upper boundaries 
+\begin{DoxyParams}{Parameters}
+{\em decision\+Variable} & decision variable type \\
+\hline
+{\em lower\+Boundary} & lower boundary for vectorial decision variable \\
+\hline
+{\em upper\+Boundary} & upper boundary for vectorial decision variable \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Optimization/decision\+Variable\+Settings.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Optimization/decision\+Variable\+Settings.\+cpp\end{DoxyCompactItemize}

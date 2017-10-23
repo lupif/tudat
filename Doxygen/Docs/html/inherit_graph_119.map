@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1simulation__setup_1_1AtmosphereSettings.html" title="Class for providing settings for atmosphere model. " alt="" coords="5,39,163,80"/>
+<area shape="rect" id="node2" href="$classtudat_1_1simulation__setup_1_1ExponentialAtmosphereSettings.html" title="AtmosphereSettings for defining an exponential atmosphere. " alt="" coords="211,5,427,47"/>
+<area shape="rect" id="node3" href="$classtudat_1_1simulation__setup_1_1TabulatedAtmosphereSettings.html" title="AtmosphereSettings for defining an atmosphere with tabulated data from file. " alt="" coords="216,71,421,112"/>
+</map>

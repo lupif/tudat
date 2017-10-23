@@ -1,0 +1,7 @@
+<map id="tudat::mission_segments::LambertTargeter" name="tudat::mission_segments::LambertTargeter">
+<area shape="rect" id="node2" href="$classtudat_1_1mission__segments_1_1LambertTargeterDummy.html" title="tudat::mission_segments\l::LambertTargeterDummy" alt="" coords="255,5,426,47"/>
+<area shape="rect" id="node3" href="$classtudat_1_1mission__segments_1_1LambertTargeterGooding.html" title="Gooding Lambert targeting algorithm class. " alt="" coords="254,71,427,112"/>
+<area shape="rect" id="node4" href="$classtudat_1_1mission__segments_1_1LambertTargeterIzzo.html" title="Izzo Lambert targeting algorithm class. " alt="" coords="257,136,425,177"/>
+<area shape="rect" id="node5" href="$classtudat_1_1mission__segments_1_1ZeroRevolutionLambertTargeterIzzo.html" title="Izzo Lambert targeting algorithm class (zero revolution). " alt="" coords="221,201,460,243"/>
+<area shape="rect" id="node6" href="$classtudat_1_1mission__segments_1_1MultiRevolutionLambertTargeterIzzo.html" title="Izzo Lambert targeting algorithm class (multiple revolution). " alt="" coords="508,201,748,243"/>
+</map>

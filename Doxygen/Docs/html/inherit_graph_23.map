@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1estimatable__parameters_1_1EstimatableParameter.html" title="tudat::estimatable\l_parameters::EstimatableParameter\l\&lt; Eigen::Matrix\&lt; InitialStateParameter\lType, Eigen::Dynamic, 1 \&gt; \&gt;" alt="" coords="5,5,251,76"/>
+<area shape="rect" id="node2" href="$classtudat_1_1estimatable__parameters_1_1InitialTranslationalStateParameter.html" title="Interface class for the estimation of an initial translational state. " alt="" coords="299,13,587,69"/>
+</map>

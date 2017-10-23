@@ -1,0 +1,222 @@
+\hypertarget{classtudat_1_1input__output_1_1TextParser}{}\section{tudat\+:\+:input\+\_\+output\+:\+:Text\+Parser Class Reference}
+\label{classtudat_1_1input__output_1_1TextParser}\index{tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}}
+
+
+A \hyperlink{classtudat_1_1input__output_1_1TextParser}{Text\+Parser} is a \hyperlink{classtudat_1_1input__output_1_1Parser}{Parser} that specialized in parsing text files.  
+
+
+
+
+{\ttfamily \#include $<$text\+Parser.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:input\+\_\+output\+:\+:Text\+Parser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1input__output_1_1TextParser__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:input\+\_\+output\+:\+:Text\+Parser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classtudat_1_1input__output_1_1TextParser__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1input__output_1_1TextParser_a8a2fccf83edc89ea7983523527b439d6}{Text\+Parser} ()
+\begin{DoxyCompactList}\small\item\em Create the default \hyperlink{classtudat_1_1input__output_1_1TextParser}{Text\+Parser} with process\+As\+Stream == false. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1input__output_1_1TextParser_a68d2338a4ec8741beecae9ea4559ba49}{Text\+Parser} (bool process\+As\+Stream)
+\begin{DoxyCompactList}\small\item\em Create the \hyperlink{classtudat_1_1input__output_1_1TextParser}{Text\+Parser} in the given process mode. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1input__output_1_1TextParser_aa9b9ccb909a665d5252efee839738712}{$\sim$\+Text\+Parser} ()\hypertarget{classtudat_1_1input__output_1_1TextParser_aa9b9ccb909a665d5252efee839738712}{}\label{classtudat_1_1input__output_1_1TextParser_aa9b9ccb909a665d5252efee839738712}
+
+\begin{DoxyCompactList}\small\item\em Default destructor, no new objects besides smart ones. \end{DoxyCompactList}\item 
+parsed\+\_\+data\+\_\+vector\+\_\+utilities\+::\+Parsed\+Data\+Vector\+Ptr \hyperlink{classtudat_1_1input__output_1_1TextParser_a3644442307eb67b0f2422ae3a88db7d5}{parse} (std\+::string \&string)
+\begin{DoxyCompactList}\small\item\em Implementation of parse for strings. \end{DoxyCompactList}\item 
+parsed\+\_\+data\+\_\+vector\+\_\+utilities\+::\+Parsed\+Data\+Vector\+Ptr \hyperlink{classtudat_1_1input__output_1_1TextParser_aed0200deca3a30deb07165f60c5b6229}{parse} (std\+::istream \&stream)
+\begin{DoxyCompactList}\small\item\em Implementation of parse for an istream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classtudat_1_1input__output_1_1TextParser_ac0e038fccafbb79ff2d8386f7521999c}{parse\+Line} (std\+::string \&line)
+\begin{DoxyCompactList}\small\item\em Parse the given line content and append the resulting data lines to parsed\+Data. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classtudat_1_1input__output_1_1TextParser_accbecbef478769713a2729a4a123d75c}{parse\+Stream} (std\+::istream \&stream)
+\begin{DoxyCompactList}\small\item\em Parse the given stream content and append the resulting data lines to parsed\+Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+parsed\+\_\+data\+\_\+vector\+\_\+utilities\+::\+Parsed\+Data\+Vector\+Ptr \hyperlink{classtudat_1_1input__output_1_1TextParser_aaae584bf29ac4466230bf18c976a28d7}{parsed\+Data}
+\begin{DoxyCompactList}\small\item\em Data container of the parsed data. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1input__output_1_1TextParser_a0523e93af363869e44119419880c41e4}{parse\+As\+Stream}
+\begin{DoxyCompactList}\small\item\em Flag to identify either stream parsing or line based parsing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classtudat_1_1input__output_1_1TextParser}{Text\+Parser} is a \hyperlink{classtudat_1_1input__output_1_1Parser}{Parser} that specialized in parsing text files. 
+
+A \hyperlink{classtudat_1_1input__output_1_1TextParser}{Text\+Parser} provides a set of functions to streamline parsing to simplify the parsing process. The inheriting parsers can chose there prefered way of processing by calling \hyperlink{classtudat_1_1input__output_1_1TextParser_a68d2338a4ec8741beecae9ea4559ba49}{Text\+Parser(bool)}.
+
+N\+O\+TE\+: This \hyperlink{classtudat_1_1input__output_1_1TextParser}{Text\+Parser} works with the Field\+Value/\+Field\+Type architecture. For simpler file reading, use, for instance, matrix\+Text\+File\+Reader. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}!Text\+Parser@{Text\+Parser}}
+\index{Text\+Parser@{Text\+Parser}!tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}}
+\subsubsection[{\texorpdfstring{Text\+Parser()}{TextParser()}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::input\+\_\+output\+::\+Text\+Parser\+::\+Text\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1input__output_1_1TextParser_a8a2fccf83edc89ea7983523527b439d6}{}\label{classtudat_1_1input__output_1_1TextParser_a8a2fccf83edc89ea7983523527b439d6}
+
+
+Create the default \hyperlink{classtudat_1_1input__output_1_1TextParser}{Text\+Parser} with process\+As\+Stream == false. 
+
+The default constructor for \hyperlink{classtudat_1_1input__output_1_1TextParser}{Text\+Parser} causes the parser to behave as a line based parser. \index{tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}!Text\+Parser@{Text\+Parser}}
+\index{Text\+Parser@{Text\+Parser}!tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}}
+\subsubsection[{\texorpdfstring{Text\+Parser(bool process\+As\+Stream)}{TextParser(bool processAsStream)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::input\+\_\+output\+::\+Text\+Parser\+::\+Text\+Parser (
+\begin{DoxyParamCaption}
+\item[{bool}]{process\+As\+Stream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1input__output_1_1TextParser_a68d2338a4ec8741beecae9ea4559ba49}{}\label{classtudat_1_1input__output_1_1TextParser_a68d2338a4ec8741beecae9ea4559ba49}
+
+
+Create the \hyperlink{classtudat_1_1input__output_1_1TextParser}{Text\+Parser} in the given process mode. 
+
+Create a Textparser that deligates parsing either as stream or on a line-\/by-\/line basis. 
+\begin{DoxyParams}{Parameters}
+{\em process\+As\+Stream} & Boolean that determines whether the parsing should be done as a stream (string is default). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}!parse@{parse}}
+\index{parse@{parse}!tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}}
+\subsubsection[{\texorpdfstring{parse(std\+::string \&string)}{parse(std::string &string)}}]{\setlength{\rightskip}{0pt plus 5cm}Parsed\+Data\+Vector\+Ptr tudat\+::input\+\_\+output\+::\+Text\+Parser\+::parse (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1input__output_1_1TextParser_a3644442307eb67b0f2422ae3a88db7d5}{}\label{classtudat_1_1input__output_1_1TextParser_a3644442307eb67b0f2422ae3a88db7d5}
+
+
+Implementation of parse for strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & String that is to be parsed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Parsed line data, stored in a Parsed\+Data\+Vector\+Ptr object. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1input__output_1_1Parser_a136ddd9ae7adf905c38bd60ef4138593}{Parser\+::parse(std\+::string\& string)}. 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classtudat_1_1input__output_1_1Parser_a136ddd9ae7adf905c38bd60ef4138593}{tudat\+::input\+\_\+output\+::\+Parser}.
+
+\index{tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}!parse@{parse}}
+\index{parse@{parse}!tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}}
+\subsubsection[{\texorpdfstring{parse(std\+::istream \&stream)}{parse(std::istream &stream)}}]{\setlength{\rightskip}{0pt plus 5cm}Parsed\+Data\+Vector\+Ptr tudat\+::input\+\_\+output\+::\+Text\+Parser\+::parse (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{stream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1input__output_1_1TextParser_aed0200deca3a30deb07165f60c5b6229}{}\label{classtudat_1_1input__output_1_1TextParser_aed0200deca3a30deb07165f60c5b6229}
+
+
+Implementation of parse for an istream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & Stream that is to be parsed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Parsed line data, stored in a Parsed\+Data\+Vector\+Ptr object. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classtudat_1_1input__output_1_1Parser_a896eecdb14f86e361dc9d0bdeccdc915}{Parser\+::parse(std\+::istream\& stream)}. 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classtudat_1_1input__output_1_1Parser_a896eecdb14f86e361dc9d0bdeccdc915}{tudat\+::input\+\_\+output\+::\+Parser}.
+
+\index{tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}!parse\+Line@{parse\+Line}}
+\index{parse\+Line@{parse\+Line}!tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}}
+\subsubsection[{\texorpdfstring{parse\+Line(std\+::string \&line)}{parseLine(std::string &line)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void tudat\+::input\+\_\+output\+::\+Text\+Parser\+::parse\+Line (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{line}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1input__output_1_1TextParser_ac0e038fccafbb79ff2d8386f7521999c}{}\label{classtudat_1_1input__output_1_1TextParser_ac0e038fccafbb79ff2d8386f7521999c}
+
+
+Parse the given line content and append the resulting data lines to parsed\+Data. 
+
+Parse all lines/fields from the passed string and store (append) them to parsed\+Data.
+
+Needs to be overwritten if parse\+As\+Stream==false otherwise an exception will be thrown!
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & String to parse \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classtudat_1_1input__output_1_1SeparatedParser_ada367004413e3b0a68a91975e75bdebb}{tudat\+::input\+\_\+output\+::\+Separated\+Parser}, \hyperlink{classtudat_1_1input__output_1_1FixedWidthParser_ab09cb31c9956aaacff64cb5e2228f91c}{tudat\+::input\+\_\+output\+::\+Fixed\+Width\+Parser}, and \hyperlink{classtudat_1_1input__output_1_1dummyTextParser_adfb8fed5de4d02fc47be39209f137d15}{tudat\+::input\+\_\+output\+::dummy\+Text\+Parser}.
+
+\index{tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}!parse\+Stream@{parse\+Stream}}
+\index{parse\+Stream@{parse\+Stream}!tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}}
+\subsubsection[{\texorpdfstring{parse\+Stream(std\+::istream \&stream)}{parseStream(std::istream &stream)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void tudat\+::input\+\_\+output\+::\+Text\+Parser\+::parse\+Stream (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{stream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1input__output_1_1TextParser_accbecbef478769713a2729a4a123d75c}{}\label{classtudat_1_1input__output_1_1TextParser_accbecbef478769713a2729a4a123d75c}
+
+
+Parse the given stream content and append the resulting data lines to parsed\+Data. 
+
+Parse all lines/fields from the passed stream and store (append) them to parsed\+Data.
+
+Needs to be overwritten if parse\+As\+Stream==true otherwise an exception will be thrown!
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & Stream to parse \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classtudat_1_1input__output_1_1solar__activity_1_1ParseSolarActivityData_a8f56e590afa7f4de81e729f308509d37}{tudat\+::input\+\_\+output\+::solar\+\_\+activity\+::\+Parse\+Solar\+Activity\+Data}.
+
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}!parse\+As\+Stream@{parse\+As\+Stream}}
+\index{parse\+As\+Stream@{parse\+As\+Stream}!tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}}
+\subsubsection[{\texorpdfstring{parse\+As\+Stream}{parseAsStream}}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::input\+\_\+output\+::\+Text\+Parser\+::parse\+As\+Stream\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1input__output_1_1TextParser_a0523e93af363869e44119419880c41e4}{}\label{classtudat_1_1input__output_1_1TextParser_a0523e93af363869e44119419880c41e4}
+
+
+Flag to identify either stream parsing or line based parsing. 
+
+Clients doing stream based parsing must override parse\+Stream! Clients doing line based parsing must override parse\+Line! Clients doing both parsing techniques must override parse\+Line and parse\+Stream. \index{tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}!parsed\+Data@{parsed\+Data}}
+\index{parsed\+Data@{parsed\+Data}!tudat\+::input\+\_\+output\+::\+Text\+Parser@{tudat\+::input\+\_\+output\+::\+Text\+Parser}}
+\subsubsection[{\texorpdfstring{parsed\+Data}{parsedData}}]{\setlength{\rightskip}{0pt plus 5cm}parsed\+\_\+data\+\_\+vector\+\_\+utilities\+::\+Parsed\+Data\+Vector\+Ptr tudat\+::input\+\_\+output\+::\+Text\+Parser\+::parsed\+Data\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1input__output_1_1TextParser_aaae584bf29ac4466230bf18c976a28d7}{}\label{classtudat_1_1input__output_1_1TextParser_aaae584bf29ac4466230bf18c976a28d7}
+
+
+Data container of the parsed data. 
+
+Cleared and refilled on every call to parse(string) or parse(stream). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Input\+Output/text\+Parser.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Input\+Output/text\+Parser.\+cpp\end{DoxyCompactItemize}

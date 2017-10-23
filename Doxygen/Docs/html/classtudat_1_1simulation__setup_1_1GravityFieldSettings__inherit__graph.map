@@ -1,0 +1,4 @@
+<map id="tudat::simulation_setup::GravityFieldSettings" name="tudat::simulation_setup::GravityFieldSettings">
+<area shape="rect" id="node2" href="$classtudat_1_1simulation__setup_1_1CentralGravityFieldSettings.html" title="Derived class of GravityFieldSettings defining settings of point mass gravity field. " alt="" coords="224,5,415,47"/>
+<area shape="rect" id="node3" href="$classtudat_1_1simulation__setup_1_1SphericalHarmonicsGravityFieldSettings.html" title="tudat::simulation_setup\l::SphericalHarmonicsGravityField\lSettings" alt="" coords="211,70,428,126"/>
+</map>

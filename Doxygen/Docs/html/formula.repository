@@ -1,0 +1,193 @@
+\form#0:$ \rho = \rho_0 e^{-h/H} $
+\form#1:$ \rho_0 $
+\form#2:$ h $
+\form#3:$ H $
+\form#4:$ p = \rho RT $
+\form#5:\begin{eqnarray*} x( t ) = \frac{ \dot{ x }_0 }{ n } \sin( n t ) - \left( 3 x_0 + \frac{ 2 \dot{ y }_0 } { n } \right) \cos( n t ) + \left( 4 x_0 + \frac{ 2 \dot{ y }_0 }{ n } \right) \\ y( t ) = \left( 6 x_0 + \frac{ 4 \dot{ y_0 } }{ n } \right) \sin( n t ) + \frac{ 2 \dot{ x }_0 }{ n } \cos( n t ) - ( 6 x_0 n + 3 \dot{ y_0 } ) t + \left( y_0 - \frac{ 2 \dot{ x }_0 }{ n } \right) \\ z( t ) = \frac{ \dot{ z }_0 }{ n } \sin( n t ) + z_0 \cos ( n t ) \\ \dot{ x }( t ) = ( 3 x_0 n + 2 \dot{ y }_0 ) \sin( n t ) + \dot{ x }_0 \cos( n t ) \\ \dot{ y }( t ) = - 2 \dot{ x }_0 \sin( n t ) + ( 6 x_0 n + 4 \dot{ y }_0 ) \cos( n t) - ( 6 n x_0 + 3 \dot{ y }_0 ) \\ \dot{ z }( t ) = - z_0 n \sin( n t ) + \dot{ z }_0 \cos( n t ) \end{eqnarray*}
+\form#6:$ x( t ) $
+\form#7:$ y( t ) $
+\form#8:$ z( t ) $
+\form#9:$ x_0 $
+\form#10:$ y_0 $
+\form#11:$ z_0 $
+\form#12:$ n $
+\form#13:$ t $
+\form#14:\[ f( E ) = E - e * sin( E ) - M \]
+\form#15:$ E $
+\form#16:$ e $
+\form#17:$ M $
+\form#18:\[ \frac{ df( E ) } { dE } = 1 - e * cos( E ) \]
+\form#19:\[ f( F ) = e * sinh( F ) - F - M \]
+\form#20:$ F $
+\form#21:\[ \frac{ df( F ) } { dF } = e * cosh( F ) - 1 \]
+\form#22:\[ \bar{f} = q * \bar{v} x \bar{B} \]
+\form#23:$f$
+\form#24:$q$
+\form#25:$\bar{v}$
+\form#26:$\bar{B}$
+\form#27:\[ \bar{a}_{gravity} = -\frac{G * m_{2}}{r_{12}^{3}} * \bar{r}_{12} \]
+\form#28:$G$
+\form#29:$m_{2}$
+\form#30:$\bar{r}_{12}$
+\form#31:\[ \bar{a}_{gravity} = -\frac{\mu_{2}}{r_{12}^{3}} * \bar{r}_{12} \]
+\form#32:$\mu_{2}$
+\form#33:\[ \bar{F}_{gravity} = -\frac{G * m_{1} * m_{2}}{r_{12}^{3}} * \bar{r}_{12} \]
+\form#34:$m_{1}$
+\form#35:\[ \bar{F}_{gravity} = -\frac{m_{1} * \mu_{2}}{r_{12}^{3}} * \bar{r}_{12} \]
+\form#36:\begin{eqnarray*} {a}_{gravity,x} &=& -\mu_{2}*\frac{x_{1}-x_{2}}{r^{3}} * \frac{3}{2}*J_{2} * \left(\frac{R}{r}\right)^{2} * (1-5*\hat{z}^2) \\ {a}_{gravity,y} &=& -\mu_{2}*\frac{y_{1}-y_{2}}{r^{3}} * \frac{3}{2}*J_{2} * \left(\frac{R}{r}\right)^{2} * (1-5*\hat{z}^2) \\ {a}_{gravity,z} &=& \frac{-\mu_{2}}{r^{2}} * \frac{3}{2}*J_{2} * \left(\frac{R}{r}\right)^{2} * (3-5*\hat{z}^2) * \hat{z} \\ \end{eqnarray*}
+\form#37:$\hat{z} = \frac{z}{r}$
+\form#38:$x$
+\form#39:$y$
+\form#40:$z$
+\form#41:$r$
+\form#42:$J_{2}$
+\form#43:\begin{eqnarray*} {a}_{gravity,x} &=& -\mu_{2}*\frac{x_{1}-x_{2}}{r^{3}} * \frac{5}{2}*J_{3} * \left(\frac{R}{r}\right)^{3} * (3-7*\hat{z}^2) * \hat{z} \\ {a}_{gravity,y} &=& -\mu_{2}*\frac{y_{1}-y_{2}}{r^{3}} * \frac{5}{2}*J_{3} * \left(\frac{R}{r}\right)^{3} * (3-7*\hat{z}^2) * \hat{z} \\ {a}_{gravity,z} &=& \frac{-\mu_{2}}{r^{2}} * \frac{5}{2}*J_{3} * \left(\frac{R}{r}\right)^{3} * (-\frac{3}{5}+6*\hat{z}^2-7*\hat{z}^4) \\ \end{eqnarray*}
+\form#44:$J_{3}$
+\form#45:\begin{eqnarray*} {a}_{gravity,x} &=& \mu_{2}*\frac{x_{1}-x_{2}}{r^{3}} * \frac{35}{8}*J_{4} * \left(\frac{R}{r}\right)^{4} * (\frac{3}{7}-6*\hat{z}^2+9*\hat{z}^{4}) \\ {a}_{gravity,y} &=& \mu_{2}*\frac{y_{1}-y_{2}}{r^{3}} * \frac{35}{8}*J_{4} * \left(\frac{R}{r}\right)^{4} * (\frac{3}{7}-6*\hat{z}^2+9*\hat{z}^{4}) \\ {a}_{gravity,z} &=& \frac{\mu_{2}}{r^{2}} * \frac{35}{8}*J_{4} * \left(\frac{R}{r}\right)^{4} * (\frac{15}{7}-10*\hat{z}^2+9*\hat{z}^4) * \hat{z} \\ \end{eqnarray*}
+\form#46:$J_{4}$
+\form#47:$n$
+\form#48:\begin{eqnarray*} {a}_{gravity sum,x} &=& {a}_{gravity central,x} + \sum\limits_{i=2}^{n} {a}_{gravity J_{n},x} \\ {a}_{gravity sum,y} &=& {a}_{gravity central,y} + \sum\limits_{i=2}^{n} {a}_{gravity J_{n},y} \\ {a}_{gravity sum,z} &=& {a}_{gravity central,z} + \sum\limits_{i=2}^{n} {a}_{gravity J_{n},z} \\ \end{eqnarray*}
+\form#49:$J_{n}$
+\form#50:\[ C_{J} = x^{2} + y^{2} + 2 * \left(\frac{1-\mu}{r_{1}} + \frac{\mu}{r_{2}}\right) - V^{2}, \]
+\form#51:$C_{J}$
+\form#52:$mu$
+\form#53:$r_{1}$
+\form#54:$r_{2}$
+\form#55:$V$
+\form#56:\begin{eqnarray*} \bar{ C }_{ n, m } = \Pi_{ n, m } C_{ n, m } \\ \bar{ S }_{ n, m } = \Pi_{ n, m } S_{ n, m } \end{eqnarray*}
+\form#57:$ \bar{ C }_{ n, m } $
+\form#58:$ \bar{ S }_{ n, m } $
+\form#59:$ m $
+\form#60:$ C_{ n, m } $
+\form#61:$ S_{ n, m } $
+\form#62:$ \Pi_{ n, m } $
+\form#63:\[ \Pi_{ n, m } = \sqrt{ \frac{ ( n + m )! }{ ( 2 - \delta_{ 0, m } ) ( 2 n + 1 ) ( n - m )! } } \]
+\form#64:$ \delta_{ 0, m } $
+\form#65:$ \theta $
+\form#66:\[ r ( \theta ) = \frac{ 1 } { a + b \cos( \theta + c ) + d \theta^3 + e \theta^4 + f \theta^5 + g \theta^6 } \]
+\form#67:$ r $
+\form#68:$ ( a, b, c, d, e, f, g ) $
+\form#69:$ d $
+\form#70:\[ \frac{ dr }{ d\theta } ( \theta ) = -r^2 \left( -b \sin \left( \theta + c \right) + 3 d \theta^2 + 4 e \theta^3 + 5 f \theta^4 + 6 g \theta^5 \right) \]
+\form#71:\[ \frac{ d^2 r }{ d \theta^2 } ( \theta ) = 2 r^3 \left( -b \sin \left( \theta + c \right) + 3 d \theta^2 + 4 e \theta^3 + 5 f \theta^4 + 6 g \theta^5 \right)^2 - r^2 \left( -b \cos \left( \theta + c \right) + 6 d \theta + 12 e \theta^2 + 20 f \theta^3 + 30 g \theta^4 \right) \]
+\form#72:\[ \frac{ d^2 r }{ d \theta^2 } ( \theta ) = \frac{ 2 }{ r } r^{ \prime 2 } - r^2 \left( -b \cos \left( \theta + c \right) + 6 d \theta + 12 e \theta^2 + 20 f \theta^3 + 30 g \theta^4 \right) \]
+\form#73:\[ \frac{ d^3 r }{ d \theta^3 } ( \theta ) = -6 r^4 \left( -b \sin \left( \theta + c \right) + 3 d \theta^2 + 4 e \theta^3 + 5 f \theta^4 + 6 g \theta^5 \right)^3 + 6 r^3 \left( -b \sin \left( \theta + c \right) + 3 d \theta^2 + 4 e \theta^3 + 5 f \theta^4 + 6 g \theta^5 \right) \left( -b \cos \left( \theta + c \right) + d \theta + 12 e \theta^2 + 20 f \theta^3 + 30 g \theta^4 \right) - r^2 \left( b \sin \left( \theta + c \right) + 6 d + 24 e \theta + 60 f \theta^2 + 120 g \theta^3 \right) \]
+\form#74:\[ \frac{ d^3 r }{ d \theta^3 } ( \theta ) = \frac{ 6 r^{ \prime 3 } }{ r^2 } - \frac{ 6 r^{ \prime } }{ r } \left( \frac{ 2 r^{ \prime 2 } }{ r } - r^{ \prime \prime } \right) - r^2 \left( b \sin \left( \theta + c \right) + 6 d + 24 e \theta + 60 f \theta^2 + 120 g \theta^3 \right) \]
+\form#75:$ s = \frac{ r_1 + r_2 + c }{ 2 } $
+\form#76:$ c = \sqrt{ r_1^2 + r_2^2 - 2 * r_1 * r_2 \cos( \theta ) } $
+\form#77:$ \theta > \pi $
+\form#78:$ \theta < \pi $
+\form#79:$ a_m = s / 2 $
+\form#80:$ 0 = t_f - F( x ) $
+\form#81:$ F( x ) $
+\form#82:$ x $
+\form#83:\[ \phi ( \theta ) = \left( b_0 + b_1 \theta \right) \cos \theta + \left( b_2 + b_3 \theta \right) sin \theta \]
+\form#84:$ \phi $
+\form#85:$ ( b_0 ,b_1, b_2, b_3) $
+\form#86:\[ \frac{ d \phi }{ d \theta } ( \theta ) = \left( b_1 + b_2 + b_3 \theta \right) \cos \theta - \left( b_0 + b_1 \theta - b_3 \right) \sin \theta \]
+\form#87:\[ \frac{ d^2 \phi }{ d \theta^2 } ( \theta ) = \left( - b_0 - b_1 \theta + 2 b_3 \right) \cos \theta - \left( 2 b_1 + b_2 + b_3 \theta \right) \sin \theta \]
+\form#88:\[ \frac{ d^3 \phi }{ d \theta^3 } ( \theta ) = - \left( 3 b_1 + b_2 + b_3 \theta \right) \cos \theta - \left( b_0 + b_1 \theta - 3 b_3 \right) \sin \theta \]
+\form#89:$ ( b_0 ,b_1, b_2, b_3 ) $
+\form#90:$ b_0 $
+\form#91:$ b_1 $
+\form#92:$ b_2 $
+\form#93:$ b_3 $
+\form#94:\[ \boldsymbol{a}_{apparent} = -\boldsymbol{a}_B - \dot{\boldsymbol{\omega}} \times \boldsymbol{r}_{ni} - \boldsymbol{\omega} \times (\boldsymbol{\omega} \times \boldsymbol{r}_{ni}) - 2(\boldsymbol{\omega} \times \boldsymbol{v}_{ni}) \]
+\form#95:$\boldsymbol{a}_B$
+\form#96:$\boldsymbol{\omega}$
+\form#97:$\boldsymbol{r}_{ni}$
+\form#98:$\boldsymbol{v}_{ni}$
+\form#99:\[ \boldsymbol{a}_{centripetal} = -\boldsymbol{\omega} \times (\boldsymbol{\omega} \times \boldsymbol{r}_{ni}) \]
+\form#100:\[ \boldsymbol{a}_{Coriolis} = -2(\boldsymbol{\omega} \times \boldsymbol{v}_{ni}) \]
+\form#101:\[ \boldsymbol{a}_{Euler} = - \dot{\boldsymbol{\omega}} \times \boldsymbol{r}_{ni} \]
+\form#102:$\dot{\boldsymbol{\omega}}$
+\form#103:$y=a*x+b$
+\form#104:$a$
+\form#105:\begin{eqnarray*} x &=& r\cos\theta\sin\phi \\ y &=& r\sin\theta\sin\phi \\ z &=& r\cos\phi \\ \end{eqnarray*}
+\form#106:\begin{eqnarray*} r &=& \sqrt{ x^{ 2 } + y^{ 2 } + z^{ 2 } } \\ \theta &=& \arctan\frac{ y }{ x } \\ \phi &=& \arccos\frac{ z }{ r } \\ \end{eqnarray*}
+\form#107:\begin{eqnarray*} x &=& r\cos \theta \\ y &=& r\sin \theta \\ z &=& z \\ \end{eqnarray*}
+\form#108:\begin{eqnarray*} x &=& r\cos \theta \\ y &=& r\sin \theta \\ z &=& z \\ \dot{x} &=& V_r\cos{\theta} - V_{\theta}\sin{theta} \\ \dot{y} &=& V_r\sin{\theta} + V_{\theta}\cos{theta} \\ \dot{z} &=& V_z \end{eqnarray*}
+\form#109:$ \pi $
+\form#110:\begin{eqnarray*} r &=& \sqrt{x^2+y^2} \\ \theta &=& \arctan{\frac{y}{x}} \\ z &=& z \end{eqnarray*}
+\form#111:$\pi$
+\form#112:$ V_r $
+\form#113:$ V_{\theta} $
+\form#114:$ V_z $
+\form#115:\begin{eqnarray*} r &=& \sqrt{x^2+y^2} \\ \theta &=& \arctan{\frac{y}{x}} \\ z &=& z \\ V_r = \dot{r} &=& \frac{x\dot{x}+y\dot{y}}{\sqrt{x^2+y^2}} \\ V_{\theta} = r\dot{\theta} &=& \frac{x\dot{y}-y\dot{x}}{\sqrt{x^2+y^2}} \\ V_z = \dot{z} \end{eqnarray*}
+\form#116:\begin{eqnarray*} \frac{ \partial U }{ \partial x } & = & \frac{ x }{ \sqrt{ x^2 + y^2 +z^2 } } \frac{ \partial U }{ \partial r } - \frac{ x z }{ ( x^2 + y^2 +z^2 ) \sqrt{ x^2 + y^2 } } \frac{ \partial U }{ \partial \phi } - \frac{ y }{ x^2 + y^2 } \frac{ \partial U }{ \partial \lambda } \\ \frac{ \partial U }{ \partial y } & = & \frac{ y }{ \sqrt{ x^2 + y^2 +z^2 } } \frac{ \partial U }{ \partial r } - \frac{ y z }{ ( x^2 + y^2 +z^2 ) \sqrt{ x^2 + y^2 } } \frac{ \partial U }{ \partial \phi } + \frac{ x }{ x^2 + y^2 } \frac{ \partial U }{ \partial \lambda } \\ \frac{ \partial U }{ \partial z } & = & \frac{ z }{ \sqrt{ x^2 + y^2 +z^2 } } \frac{ \partial U }{ \partial r } + \frac{ \sqrt{ x^2 + y^2 } } { x^2 + y^2 +z^2 } \frac{ \partial U }{ \partial \phi } \end{eqnarray*}
+\form#117:$ y $
+\form#118:$ z $
+\form#119:$ U $
+\form#120:$ \lambda $
+\form#121:\begin{eqnarray*} x &=& r * \cos \phi * \cos \theta\\ y &=& r * \cos \phi * \sin \theta\\ z &=& r * \sin \phi\\ CartesianVelocities = T_{cyl2cart}*T_{sph2cyl}*SphericalVelocities \end{eqnarray*}
+\form#122:\begin{eqnarray*} T_{sph2cyl} = [ \cos\phi , 0.0 , -\sin \phi ; 0.0 , 1.0 , 0.0 ; \sin\phi , 0.0 , \cos\phi ]\\ T_{cyl2cart} = [ \cos\theta , -\sin\theta , 0.0 ; \sin\theta , \cos\theta , 0.0 ; 0.0 , 0.0 , 1.0 ]\\ \end{eqnarray*}
+\form#123:\begin{eqnarray*} r &=& \sqrt{ x^{ 2 } + y^{ 2 } + z^{ 2 } } \\ \phi &=& \arcsin\frac{ z }{ r } \\ \theta &=& \arctan\frac{ y }{ x } \\ SphericalVelocities = T_{cyl2sph}*T_{cart2cyl}*CartesianVelocities \end{eqnarray*}
+\form#124:\begin{eqnarray*} T_{cyl2sph} = [ \cos\phi , 0.0 , \sin \phi ; 0.0 , 1.0 , 0.0 ; -\sin\phi , 0.0 , \cos\phi ]\\ T_{cart2cyl} = [ \cos\theta , \sin\theta , 0.0 ; -\sin\theta , \cos\theta , 0.0 ; 0.0 , 0.0 , 1.0 ]\\ \end{eqnarray*}
+\form#125:$ P _{ n, m }( u ) $
+\form#126:$ u $
+\form#127:\[ P _{ n, m } ( u ) = ( 1 - u ^ 2 ) ^ { m / 2 } \frac{ d ^ m }{ du ^ m } \left[ P_n ( u ) \right] \textrm{ for }n \geq 0, 0 \leq m \leq n \]
+\form#128:$ P_{ n, m }( u ) $
+\form#129:$ n \geq 0, m \geq n $
+\form#130:\[ P _{ n, m } ( u ) = 0 \textrm{ for }n \geq 0, m \geq n \]
+\form#131:$ \bar{ P }_{ n, m }( u ) $
+\form#132:\[ \bar{ P }_{ n, m } ( u ) = \Pi_{ n, m } P_{ n, m } ( u ) \]
+\form#133:\[ \Pi_{ n, m } = \sqrt{ \frac{ ( 2 - \delta_{ 0, m } ) ( 2 n + 1 ) ( n - m )! } { ( n + m )! } } \]
+\form#134:\[ P _{ n, m } ( u ) = ( 1 - u ^ 2 ) ^ { m / 2 } \frac{ d ^ m }{ du ^ m } \left[ P_n ( u ) \right] \]
+\form#135:\[ \frac{ \mathrm{ d } P_{ n, m } ( u ) }{ \mathrm{ d } u } = \frac{ \sqrt{ 1 - u ^ 2 } P_{ n, m + 1 }( u ) - m u P_{ n, m }( u ) }{ 1 - u ^ 2 } \]
+\form#136:$ P_{ n, m } ( u ) $
+\form#137:$ P_{ n, m + 1 } ( u ) $
+\form#138:\[ \frac{ \mathrm{ d } \bar{ P }_{ n, m } ( u ) }{ \mathrm{ d } u } = \sqrt{ \frac{ ( n + m + 1 )( n - m ) }{ ( 1 + \delta_{ 0, m } ) ( 1 - u^2 ) } } \bar{ P }_{ n, m + 1 } - \frac{ m u }{ 1 - u^2 } \bar{ P }_{ n, m } \]
+\form#139:$ P_{ n, m }(u) $
+\form#140:\begin{eqnarray*} P_{ 0, 0 }( u ) = 1 \\ P_{ 1, 0 }( u ) = u \\ P_{ 1, 1 }( u ) = \sqrt{ 1 - u^2 } \end{eqnarray*}
+\form#141:$ n = 1 $
+\form#142:$ m = 1 $
+\form#143:$ \bar{ P }_{ n, m }(u) $
+\form#144:\begin{eqnarray*} \bar{ P }_{ 0, 0 }( u ) = 1 \\ \bar{ P }_{ 1, 0 }( u ) = \sqrt{ 3 } u \\ \bar{ P }_{ 1, 1 }( u ) = \sqrt{ 3 - 3 u^2 } \end{eqnarray*}
+\form#145:\[ P_{ n, m }( u ) = ( 2 n - 1 ) P_{ 1, 1 }( u ) P_{ n - 1, m - 1 }( u ) \]
+\form#146:\[ \bar{ P }_{ n, m }( u ) = \sqrt{ \frac{ 2 n - 1 }{ 6 n } } \bar{ P }_{ 1, 1 }( u ) \bar{ P }_{ n - 1, m - 1 }( u ) \]
+\form#147:\[ P_{ n, m }( u ) = \frac{ ( 2 n - 1 ) u P_{ n - 1, m }( u ) - ( n + m - 1 ) P_{ n - 2, m }( u ) }{ n - m } \]
+\form#148:\[ \bar{ P }_{ n, m }( u ) = \sqrt{ \frac{ ( 2 n - 1 )( 2 n + 1 ) }{ ( n - m ) ( n + m ) } } u \bar{ P }_{ n - 1, m }( u ) - \sqrt{ \frac{ ( 2 n + 1 )( n + m - 1 ) ( n - m - 1 ) } { ( n - m)( n + m )( 2 n - 3 ) } } \bar{ P }_{ n - 2, m }( u ) \]
+\form#149:$\approx$
+\form#150:\[ U = A \left( \frac{ R }{ r} \right) ^{ n + 1} P _{ n, m } ( \sin \phi ) \left[ C _{ n, m } \cos( m \lambda ) + S _{ n, m } \sin( \lambda ) \right] \]
+\form#151:$ A $
+\form#152:$ R $
+\form#153:$ P _{ n, m }( \sin \phi ) $
+\form#154:$ \sin \phi $
+\form#155:$ C _{ n, m } $
+\form#156:$ S _{ n, m } $
+\form#157:\begin{eqnarray*} \frac{ \mathrm{ d } U }{ \mathrm{ d } r } = -\frac{ A }{ r } \left( \frac{ R }{ r } \right) ^{ n + 1 } ( n + 1 ) P_{ n, m }( \sin \phi )[ C_{ n, m } \cos( m \lambda ) + S_{ n,m } \sin( m \lambda ) ] \\ \frac{ \mathrm{ d } U }{ \mathrm{ d } \phi } = A \left( \frac{ R }{ r } \right)^{ n + 1 } \frac{ \mathrm{ d } [ P( \sin \phi ) ] }{ \mathrm{ d } [ \sin \phi ] } \cos \phi [ C_{ n, m } \cos( m \lambda ) + S_{ n, m } \sin( m \lambda ) ] \\ \frac{ \mathrm{ d } U }{ \mathrm{ d } \lambda } = A \left( \frac{ R }{ r } \right)^{ n + 1 } m P_{ n, m }( \sin \phi ) [ S_{ n, m } \cos( m \lambda ) - C_{ n, m } \sin( m \lambda ) ] \end{eqnarray*}
+\form#158:\[ \frac{ d^{ 3 } ( x, y, z ) } { du * dv^{ 2 } } \]
+\form#159:\[ y_{target} = x_{1} * ( 1 - mu ) + x_{2} * mu \]
+\form#160:$ mu = \frac{ x_{target} - x_{1} } { x_{2} + x_{1} } $
+\form#161:$ x_{2} > x_{1} $
+\form#162:$ \mu = \frac{ x_{target} - x_{1} } { x_{2} + x_{1} } $
+\form#163:\[ y' = y - t^{ 2 } + 1 \]
+\form#164:$ 0 \leq t \leq 2 $
+\form#165:$ y( 0 ) = 0.5 $
+\form#166:\begin{eqnarray*} \frac{ dx }{ dt }( 0 ) &=& x( 1 ) \\ \frac{ dx }{ dt }( 1 ) &=& \mu * ( 1 - x( 0 )^{ 2 } ) * x( 1 ) + x( 0 ) \\ \end{eqnarray*}
+\form#167:$\mu$
+\form#168:\begin{eqnarray*} \frac{ dx }{ dt }( 0 ) &=& -2 * t * x( 0 ) * log( x(1) ) \\ \frac{ dx }{ dt }( 0 ) &=& 2 * t * x( 1 ) * log( x(0) ) \\ \end{eqnarray*}
+\form#169:\begin{eqnarray*} x(0) = exp( cos( t^{2} ) ) \\ x(1) = exp( sin( t^{2} ) ) \\ \end{eqnarray*}
+\form#170:\begin{eqnarray*} x_{0}(0) = exp(1) \\ x_{0}(1) = 1 \end{eqnarray*}
+\form#171:\[ y' = y * ( 2 - t ) * t + t - 1 \]
+\form#172:$f''(x_i)$
+\form#173:$f(x_i)$
+\form#174:$f'(x_i)$
+\form#175:\[ x_{n+1} = x_n-\frac{2 F\left(x_n\right) F'\left(x_n\right)} {2 F'\left(x_n\right){}^2-F\left(x_n\right) F''\left(x_n\right)} \]
+\form#176:\[ x_{n+1} = x_n - \frac{F\left(x_n\right)}{F'\left(x_n\right)} \]
+\form#177:\[ x_{n+1} = x_n - F\left(x_n\right) \frac{\left(x_n - x_{n-1}\right)} {F\left(x_n\right) - F\left(x_{n-1}\right)} \]
+\form#178:\[ f(x) = x^{2} - 3 \]
+\form#179:$\sqrt{3}$
+\form#180:\[ f(x) = sin(x) \]
+\form#181:\[ f(x) = cos(x) - x \]
+\form#182:\[ f(x) = x^{2} \]
+\form#183:\[ \mu_{s} = \frac{ \sum_{i=1}^{N} X_{i} } { N } \]
+\form#184:$\mu_{s}$
+\form#185:$ N $
+\form#186:$ X $
+\form#187:\[ s^{2}_{s} = \frac{ 1 }{ N - 1 } * \sum_{i=1}^{N} X_{i} ( X_{i} - \bar{ X } )^{ 2 } ) \]
+\form#188:$ s^{2}_{s} $
+\form#189:$ \bar{ X } $
+\form#190:\[ y = a + b * x \]
+\form#191:$ b $
+\form#192:$ a $

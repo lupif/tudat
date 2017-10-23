@@ -1,0 +1,107 @@
+\hypertarget{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface}{}\section{tudat\+:\+:simulation\+\_\+setup\+:\+:Full\+Thrust\+Interpolation\+Interface Class Reference}
+\label{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface}\index{tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface@{tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface}}
+
+
+{\ttfamily \#include $<$acceleration\+Settings.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface_ab2172c5a4be94598cc770b24934af9ba}{Full\+Thrust\+Interpolation\+Interface} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator}{interpolators\+::\+One\+Dimensional\+Interpolator}$<$ double, Eigen\+::\+Vector3d $>$ $>$ thrust\+Interpolator, const boost\+::function$<$ Eigen\+::\+Matrix3d() $>$ rotation\+Function=boost\+::lambda\+::constant(Eigen\+::\+Matrix3d\+::\+Identity()))
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface_a864be539796a1546e8a3dd7c5bfb62ee}{get\+Thrust\+Magnitude} (const double time)
+\begin{DoxyCompactList}\small\item\em Function to retrieve the current thrust magnitude. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface_aa8525ab07094c5c9998f7c787f4043a4}{get\+Thrust\+Direction} (const double time)
+\begin{DoxyCompactList}\small\item\em Function to retrieve the current thrust direction (in the propagation frame). \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface_a941ea04e49a48c16e19b619f0ce44718}{reset\+Rotation\+Function} (const boost\+::function$<$ Eigen\+::\+Matrix3d() $>$ rotation\+Function)
+\begin{DoxyCompactList}\small\item\em Function to reset the function to rotate to propation frame. \end{DoxyCompactList}\item 
+void {\bfseries reset\+Time} (const double current\+Time=T\+U\+D\+A\+T\+\_\+\+N\+AN)\hypertarget{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface_a5faebff09753455845a5d783808940e5}{}\label{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface_a5faebff09753455845a5d783808940e5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface class that allows single interpolator to be used for thrust direction and magnitude (which are separated in thrust implementation) 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface@{tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface}!Full\+Thrust\+Interpolation\+Interface@{Full\+Thrust\+Interpolation\+Interface}}
+\index{Full\+Thrust\+Interpolation\+Interface@{Full\+Thrust\+Interpolation\+Interface}!tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface@{tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface}}
+\subsubsection[{\texorpdfstring{Full\+Thrust\+Interpolation\+Interface(const boost\+::shared\+\_\+ptr$<$ interpolators\+::\+One\+Dimensional\+Interpolator$<$ double, Eigen\+::\+Vector3d $>$ $>$ thrust\+Interpolator, const boost\+::function$<$ Eigen\+::\+Matrix3d() $>$ rotation\+Function=boost\+::lambda\+::constant(\+Eigen\+::\+Matrix3d\+::\+Identity()))}{FullThrustInterpolationInterface(const boost::shared_ptr< interpolators::OneDimensionalInterpolator< double, Eigen::Vector3d > > thrustInterpolator, const boost::function< Eigen::Matrix3d() > rotationFunction=boost::lambda::constant(Eigen::Matrix3d::Identity()))}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface\+::\+Full\+Thrust\+Interpolation\+Interface (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf interpolators\+::\+One\+Dimensional\+Interpolator}$<$ double, Eigen\+::\+Vector3d $>$ $>$}]{thrust\+Interpolator, }
+\item[{const boost\+::function$<$ Eigen\+::\+Matrix3d() $>$}]{rotation\+Function = {\ttfamily boost\+:\+:lambda\+:\+:constant(~Eigen\+:\+:Matrix3d\+:\+:Identity(~)~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface_ab2172c5a4be94598cc770b24934af9ba}{}\label{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface_ab2172c5a4be94598cc770b24934af9ba}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em thrust\+Interpolator} & Object that returns the total thrust vector, expressed in some reference frame B \\
+\hline
+{\em rotation\+Function} & Function that returns the rotation matrix from the frame B to teh frame in which the propagation is performed. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface@{tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface}!get\+Thrust\+Direction@{get\+Thrust\+Direction}}
+\index{get\+Thrust\+Direction@{get\+Thrust\+Direction}!tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface@{tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Thrust\+Direction(const double time)}{getThrustDirection(const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector3d tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface\+::get\+Thrust\+Direction (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface_aa8525ab07094c5c9998f7c787f4043a4}{}\label{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface_aa8525ab07094c5c9998f7c787f4043a4}
+
+
+Function to retrieve the current thrust direction (in the propagation frame). 
+
+Function to retrieve the current thrust direction (in the propagation frame)., updates thrust to current time if needed. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which thrust must be evaluated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current thrust direction in propagation frame.. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface@{tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface}!get\+Thrust\+Magnitude@{get\+Thrust\+Magnitude}}
+\index{get\+Thrust\+Magnitude@{get\+Thrust\+Magnitude}!tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface@{tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface}}
+\subsubsection[{\texorpdfstring{get\+Thrust\+Magnitude(const double time)}{getThrustMagnitude(const double time)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface\+::get\+Thrust\+Magnitude (
+\begin{DoxyParamCaption}
+\item[{const double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface_a864be539796a1546e8a3dd7c5bfb62ee}{}\label{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface_a864be539796a1546e8a3dd7c5bfb62ee}
+
+
+Function to retrieve the current thrust magnitude. 
+
+Function to retrieve the current thrust magnitude, updates thrust to current time if needed. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which thrust must be evaluated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current thrust magnitude. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface@{tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface}!reset\+Rotation\+Function@{reset\+Rotation\+Function}}
+\index{reset\+Rotation\+Function@{reset\+Rotation\+Function}!tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface@{tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface}}
+\subsubsection[{\texorpdfstring{reset\+Rotation\+Function(const boost\+::function$<$ Eigen\+::\+Matrix3d() $>$ rotation\+Function)}{resetRotationFunction(const boost::function< Eigen::Matrix3d() > rotationFunction)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Full\+Thrust\+Interpolation\+Interface\+::reset\+Rotation\+Function (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ Eigen\+::\+Matrix3d() $>$}]{rotation\+Function}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface_a941ea04e49a48c16e19b619f0ce44718}{}\label{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface_a941ea04e49a48c16e19b619f0ce44718}
+
+
+Function to reset the function to rotate to propation frame. 
+
+Function to reset the function to rotate to propation frame 
+\begin{DoxyParams}{Parameters}
+{\em rotation\+Function} & New function that returns the rotation matrix from the frame B to teh frame in which the propagation is performed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/acceleration\+Settings.\+h\end{DoxyCompactItemize}

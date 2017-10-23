@@ -1,0 +1,173 @@
+\hypertarget{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer}{}\section{tudat\+:\+:input\+\_\+output\+:\+:dictionary\+:\+:Dictionary\+Comparer Class Reference}
+\label{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer}\index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}}
+
+
+Dictionary comparer functor.  
+
+
+
+
+{\ttfamily \#include $<$dictionary\+Comparer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a8cb0e747f8ff243620d3d0f6b7a25971}{Dictionary\+Comparer} ()
+\begin{DoxyCompactList}\small\item\em Zombie constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a85948b9c9ac0a9393c587e097560ba29}{Dictionary\+Comparer} (const input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry\+Pointer a\+Dictionary\+Entry)
+\begin{DoxyCompactList}\small\item\em Constructor taking dictionary entry. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_ae9ba9b6d73c7e035a625e325d23bfe95}{Dictionary\+Comparer} (const std\+::string \&a\+Parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor taking parameter name. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a64463c274c8ad6eea9d10316cfe0fcfb}{operator()} (Dictionary\+Entry\+Pointer first\+Dictionary\+Entry, Dictionary\+Entry\+Pointer second\+Dictionary\+Entry) const 
+\begin{DoxyCompactList}\small\item\em Overload ()-\/operator to compare dictionary entries. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a905b12eb09791e699d7649967442cf0e}{operator()} (const std\+::string \&synonym) const 
+\begin{DoxyCompactList}\small\item\em Overload ()-\/operator to compare synonym with parameter name. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a1b0536cddc20359a16ae7ec2105b2109}{operator()} (Dictionary\+Entry\+Pointer dictionary\+Entry) const 
+\begin{DoxyCompactList}\small\item\em Overload ()-\/operator to compare dictionary entry with parameter name. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a3cbfac82306c8b072e26e25df6aad806}{operator()} (const input\+\_\+output\+::parsed\+\_\+data\+\_\+vector\+\_\+utilities\+::\+Parsed\+Data\+Line\+Map\+Ptr \&data\+Line) const 
+\begin{DoxyCompactList}\small\item\em Overload ()-\/operator to compare data line with dictionary entry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dictionary comparer functor. 
+
+This is a functor that implements a number of overloads of the ()-\/operator to perform various comparison operations, used in conjunction with the dictionary-\/based input system implemented in Tudat. \begin{DoxySeeAlso}{See also}
+\hyperlink{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry}{Dictionary\+Entry}. 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}!Dictionary\+Comparer@{Dictionary\+Comparer}}
+\index{Dictionary\+Comparer@{Dictionary\+Comparer}!tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}}
+\subsubsection[{\texorpdfstring{Dictionary\+Comparer()}{DictionaryComparer()}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer\+::\+Dictionary\+Comparer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a8cb0e747f8ff243620d3d0f6b7a25971}{}\label{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a8cb0e747f8ff243620d3d0f6b7a25971}
+
+
+Zombie constructor. 
+
+Constructor that initializes all members with zombie state. \index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}!Dictionary\+Comparer@{Dictionary\+Comparer}}
+\index{Dictionary\+Comparer@{Dictionary\+Comparer}!tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}}
+\subsubsection[{\texorpdfstring{Dictionary\+Comparer(const input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry\+Pointer a\+Dictionary\+Entry)}{DictionaryComparer(const input_output::dictionary::DictionaryEntryPointer aDictionaryEntry)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer\+::\+Dictionary\+Comparer (
+\begin{DoxyParamCaption}
+\item[{const input\+\_\+output\+::dictionary\+::\+Dictionary\+Entry\+Pointer}]{a\+Dictionary\+Entry}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a85948b9c9ac0a9393c587e097560ba29}{}\label{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a85948b9c9ac0a9393c587e097560ba29}
+
+
+Constructor taking dictionary entry. 
+
+Constructor that takes a dictionary entry as input and initializes the member dictionary entry. The parameter\+Name member is initialized with zombie state. 
+\begin{DoxyParams}{Parameters}
+{\em a\+Dictionary\+Entry} & Shared-\/pointer to a dictionary entry. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structtudat_1_1input__output_1_1dictionary_1_1DictionaryEntry}{Dictionary\+Entry}. 
+\end{DoxySeeAlso}
+\index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}!Dictionary\+Comparer@{Dictionary\+Comparer}}
+\index{Dictionary\+Comparer@{Dictionary\+Comparer}!tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}}
+\subsubsection[{\texorpdfstring{Dictionary\+Comparer(const std\+::string \&a\+Parameter\+Name)}{DictionaryComparer(const std::string &aParameterName)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer\+::\+Dictionary\+Comparer (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+Parameter\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_ae9ba9b6d73c7e035a625e325d23bfe95}{}\label{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_ae9ba9b6d73c7e035a625e325d23bfe95}
+
+
+Constructor taking parameter name. 
+
+Constructor that takes a parameter name as input and initializes the member parameter name. The dictionary entry is initialized with zombie state. 
+\begin{DoxyParams}{Parameters}
+{\em a\+Parameter\+Name} & Parameter-\/name. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}!operator()@{operator()}}
+\index{operator()@{operator()}!tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}}
+\subsubsection[{\texorpdfstring{operator()(\+Dictionary\+Entry\+Pointer first\+Dictionary\+Entry, Dictionary\+Entry\+Pointer second\+Dictionary\+Entry) const }{operator()(DictionaryEntryPointer firstDictionaryEntry, DictionaryEntryPointer secondDictionaryEntry) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer\+::operator() (
+\begin{DoxyParamCaption}
+\item[{Dictionary\+Entry\+Pointer}]{first\+Dictionary\+Entry, }
+\item[{Dictionary\+Entry\+Pointer}]{second\+Dictionary\+Entry}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a64463c274c8ad6eea9d10316cfe0fcfb}{}\label{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a64463c274c8ad6eea9d10316cfe0fcfb}
+
+
+Overload ()-\/operator to compare dictionary entries. 
+
+Overloads the ()-\/operator to compare dictionary entries. This allows for a sorted S\+TL container of dictionary entries to be created (e.\+g., set). 
+\begin{DoxyParams}{Parameters}
+{\em first\+Dictionary\+Entry} & Shared-\/pointer to a dictionary entry. \\
+\hline
+{\em second\+Dictionary\+Entry} & Shared-\/pointer to a dictionary entry. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parameter name of first dictionary entry should be sorted before parameter name of second dictionary entry. 
+\end{DoxyReturn}
+\index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}!operator()@{operator()}}
+\index{operator()@{operator()}!tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}}
+\subsubsection[{\texorpdfstring{operator()(const std\+::string \&synonym) const }{operator()(const std::string &synonym) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{synonym}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a905b12eb09791e699d7649967442cf0e}{}\label{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a905b12eb09791e699d7649967442cf0e}
+
+
+Overload ()-\/operator to compare synonym with parameter name. 
+
+Overloads the ()-\/operator to compare a given synonym with the set parameter name. The check is not case-\/sensitive. This allows for a list of synonyms to be checked against a specific parameter name, set through the constructor. 
+\begin{DoxyParams}{Parameters}
+{\em synonym} & Synonym to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if synonym matches parameter name (not case-\/sensitive). 
+\end{DoxyReturn}
+\index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}!operator()@{operator()}}
+\index{operator()@{operator()}!tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}}
+\subsubsection[{\texorpdfstring{operator()(\+Dictionary\+Entry\+Pointer dictionary\+Entry) const }{operator()(DictionaryEntryPointer dictionaryEntry) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer\+::operator() (
+\begin{DoxyParamCaption}
+\item[{Dictionary\+Entry\+Pointer}]{dictionary\+Entry}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a1b0536cddc20359a16ae7ec2105b2109}{}\label{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a1b0536cddc20359a16ae7ec2105b2109}
+
+
+Overload ()-\/operator to compare dictionary entry with parameter name. 
+
+Overloads the ()-\/operator to compare a given dictionary entry with the set parameter name. The check is case-\/sensitive. This allows for a set of dictionary entries to be compared against a specific parameter name, set through the constructor. 
+\begin{DoxyParams}{Parameters}
+{\em dictionary\+Entry} & Dictionary entry to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if dictionary entry matches parameter name (case-\/sensitive). 
+\end{DoxyReturn}
+\index{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}!operator()@{operator()}}
+\index{operator()@{operator()}!tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer@{tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer}}
+\subsubsection[{\texorpdfstring{operator()(const input\+\_\+output\+::parsed\+\_\+data\+\_\+vector\+\_\+utilities\+::\+Parsed\+Data\+Line\+Map\+Ptr \&data\+Line) const }{operator()(const input_output::parsed_data_vector_utilities::ParsedDataLineMapPtr &dataLine) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool tudat\+::input\+\_\+output\+::dictionary\+::\+Dictionary\+Comparer\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const input\+\_\+output\+::parsed\+\_\+data\+\_\+vector\+\_\+utilities\+::\+Parsed\+Data\+Line\+Map\+Ptr \&}]{data\+Line}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a3cbfac82306c8b072e26e25df6aad806}{}\label{classtudat_1_1input__output_1_1dictionary_1_1DictionaryComparer_a3cbfac82306c8b072e26e25df6aad806}
+
+
+Overload ()-\/operator to compare data line with dictionary entry. 
+
+Overloads the ()-\/operator to compare a given data line with the set dictionary entry. The check ensures that the paremter name and all synonyms are checked. The is\+Case\+Sensitive flag in the dictionary entry is used to ensure that the comparisons are either case-\/sensitive or not, as specified. 
+\begin{DoxyParams}{Parameters}
+{\em data\+Line} & Data line from input stream. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parameter name in data line matches dictionary entry. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Input\+Output/dictionary\+Comparer.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Input\+Output/dictionary\+Comparer.\+cpp\end{DoxyCompactItemize}

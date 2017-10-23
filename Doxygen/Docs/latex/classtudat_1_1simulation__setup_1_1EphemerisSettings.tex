@@ -1,0 +1,163 @@
+\hypertarget{classtudat_1_1simulation__setup_1_1EphemerisSettings}{}\section{tudat\+:\+:simulation\+\_\+setup\+:\+:Ephemeris\+Settings Class Reference}
+\label{classtudat_1_1simulation__setup_1_1EphemerisSettings}\index{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings}}
+
+
+Class for providing settings for ephemeris model.  
+
+
+
+
+{\ttfamily \#include $<$create\+Ephemeris.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:simulation\+\_\+setup\+:\+:Ephemeris\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1simulation__setup_1_1EphemerisSettings__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1EphemerisSettings_a7a92d768f7e34e35eb6be96f55dddd1b}{Ephemeris\+Settings} (const Ephemeris\+Type ephemeris\+Type, const std\+::string \&frame\+Origin=\char`\"{}S\+SB\char`\"{}, const std\+::string \&frame\+Orientation=\char`\"{}E\+C\+L\+I\+P\+J2000\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor, sets type of ephemeris model. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1simulation__setup_1_1EphemerisSettings_a5b9ede78f5a09f7abbefe2631bc6f4bc}{$\sim$\+Ephemeris\+Settings} ()\hypertarget{classtudat_1_1simulation__setup_1_1EphemerisSettings_a5b9ede78f5a09f7abbefe2631bc6f4bc}{}\label{classtudat_1_1simulation__setup_1_1EphemerisSettings_a5b9ede78f5a09f7abbefe2631bc6f4bc}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+Ephemeris\+Type \hyperlink{classtudat_1_1simulation__setup_1_1EphemerisSettings_a3256a2c33076cf34e070d269effa660a}{get\+Ephemeris\+Type} ()
+\begin{DoxyCompactList}\small\item\em Function to return type of gravity field model that is to be created. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1simulation__setup_1_1EphemerisSettings_ad944818e2e49e527b955b39e3d09f608}{get\+Frame\+Origin} ()
+\begin{DoxyCompactList}\small\item\em Function to return the origin of frame in which ephemeris data is defined. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1simulation__setup_1_1EphemerisSettings_a02f84b6df414e81a4f72d6a5b2aceb33}{get\+Frame\+Orientation} ()
+\begin{DoxyCompactList}\small\item\em Function to return the orientation of frame in which ephemeris data is defined. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1EphemerisSettings_a2dbcb55a4542b28610c2a389b89c4447}{reset\+Frame\+Origin} (const std\+::string \&frame\+Origin)
+\begin{DoxyCompactList}\small\item\em Function to reset the origin of the frame. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1simulation__setup_1_1EphemerisSettings_adad130efb8ba76972cb24f5787835e45}{reset\+Frame\+Orientation} (const std\+::string \&frame\+Orientation)
+\begin{DoxyCompactList}\small\item\em Function to rese the orientation of the frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ephemeris\+Type \hyperlink{classtudat_1_1simulation__setup_1_1EphemerisSettings_ac988aa57dc2068b67fcc3515489577e6}{ephemeris\+Type\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1EphemerisSettings_ac988aa57dc2068b67fcc3515489577e6}{}\label{classtudat_1_1simulation__setup_1_1EphemerisSettings_ac988aa57dc2068b67fcc3515489577e6}
+
+\begin{DoxyCompactList}\small\item\em Type of ephemeris model that is to be created. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1simulation__setup_1_1EphemerisSettings_a2a15cbc42f0a7fd548e71b05cad51ce7}{frame\+Origin\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1EphemerisSettings_a2a15cbc42f0a7fd548e71b05cad51ce7}{}\label{classtudat_1_1simulation__setup_1_1EphemerisSettings_a2a15cbc42f0a7fd548e71b05cad51ce7}
+
+\begin{DoxyCompactList}\small\item\em Origin of frame in which ephemeris data is defined. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1simulation__setup_1_1EphemerisSettings_ad492ff71210dd4d1b84275c7864cae6c}{frame\+Orientation\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1EphemerisSettings_ad492ff71210dd4d1b84275c7864cae6c}{}\label{classtudat_1_1simulation__setup_1_1EphemerisSettings_ad492ff71210dd4d1b84275c7864cae6c}
+
+\begin{DoxyCompactList}\small\item\em Orientation of frame in which ephemeris data is defined. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for providing settings for ephemeris model. 
+
+Class for providing settings for automatic ephemeris model creation. This class is a functional (base) class for settings of ephemeris models that require no information in addition to their type (and frame origin and orientation). Ephemeris model classes defining requiring additional information must be created using an object derived from this class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings}!Ephemeris\+Settings@{Ephemeris\+Settings}}
+\index{Ephemeris\+Settings@{Ephemeris\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings}}
+\subsubsection[{\texorpdfstring{Ephemeris\+Settings(const Ephemeris\+Type ephemeris\+Type, const std\+::string \&frame\+Origin=""S\+SB"", const std\+::string \&frame\+Orientation=""E\+C\+L\+I\+P\+J2000"")}{EphemerisSettings(const EphemerisType ephemerisType, const std::string &frameOrigin="SSB", const std::string &frameOrientation="ECLIPJ2000")}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings\+::\+Ephemeris\+Settings (
+\begin{DoxyParamCaption}
+\item[{const Ephemeris\+Type}]{ephemeris\+Type, }
+\item[{const std\+::string \&}]{frame\+Origin = {\ttfamily \char`\"{}SSB\char`\"{}}, }
+\item[{const std\+::string \&}]{frame\+Orientation = {\ttfamily \char`\"{}ECLIPJ2000\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1EphemerisSettings_a7a92d768f7e34e35eb6be96f55dddd1b}{}\label{classtudat_1_1simulation__setup_1_1EphemerisSettings_a7a92d768f7e34e35eb6be96f55dddd1b}
+
+
+Constructor, sets type of ephemeris model. 
+
+Constructor, sets type of ephemeris model and frame origin and orientation. Settings for ephemeris models requiring additional information should be defined in a derived class. 
+\begin{DoxyParams}{Parameters}
+{\em ephemeris\+Type} & Type of ephemeris model that is to be created. \\
+\hline
+{\em frame\+Origin} & Origin of frame in which ephemeris data is defined (optional \char`\"{}\+S\+S\+B\char`\"{} by default). \\
+\hline
+{\em frame\+Orientation} & Orientation of frame in which ephemeris data is defined (optional \char`\"{}\+E\+C\+L\+I\+P\+J2000\char`\"{} by default). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings}!get\+Ephemeris\+Type@{get\+Ephemeris\+Type}}
+\index{get\+Ephemeris\+Type@{get\+Ephemeris\+Type}!tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Ephemeris\+Type()}{getEphemerisType()}}]{\setlength{\rightskip}{0pt plus 5cm}Ephemeris\+Type tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings\+::get\+Ephemeris\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1EphemerisSettings_a3256a2c33076cf34e070d269effa660a}{}\label{classtudat_1_1simulation__setup_1_1EphemerisSettings_a3256a2c33076cf34e070d269effa660a}
+
+
+Function to return type of gravity field model that is to be created. 
+
+Function to return type of gravity field model that is to be created. \begin{DoxyReturn}{Returns}
+Type of gravity field model that is to be created. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings}!get\+Frame\+Orientation@{get\+Frame\+Orientation}}
+\index{get\+Frame\+Orientation@{get\+Frame\+Orientation}!tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Frame\+Orientation()}{getFrameOrientation()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings\+::get\+Frame\+Orientation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1EphemerisSettings_a02f84b6df414e81a4f72d6a5b2aceb33}{}\label{classtudat_1_1simulation__setup_1_1EphemerisSettings_a02f84b6df414e81a4f72d6a5b2aceb33}
+
+
+Function to return the orientation of frame in which ephemeris data is defined. 
+
+Function to return the orientation of frame in which ephemeris data is defined. \begin{DoxyReturn}{Returns}
+Orientation of frame in which ephemeris data is defined. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings}!get\+Frame\+Origin@{get\+Frame\+Origin}}
+\index{get\+Frame\+Origin@{get\+Frame\+Origin}!tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Frame\+Origin()}{getFrameOrigin()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings\+::get\+Frame\+Origin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1EphemerisSettings_ad944818e2e49e527b955b39e3d09f608}{}\label{classtudat_1_1simulation__setup_1_1EphemerisSettings_ad944818e2e49e527b955b39e3d09f608}
+
+
+Function to return the origin of frame in which ephemeris data is defined. 
+
+Function to return the origin of frame in which ephemeris data is defined. \begin{DoxyReturn}{Returns}
+Origin of frame in which ephemeris data is defined. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings}!reset\+Frame\+Orientation@{reset\+Frame\+Orientation}}
+\index{reset\+Frame\+Orientation@{reset\+Frame\+Orientation}!tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings}}
+\subsubsection[{\texorpdfstring{reset\+Frame\+Orientation(const std\+::string \&frame\+Orientation)}{resetFrameOrientation(const std::string &frameOrientation)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings\+::reset\+Frame\+Orientation (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{frame\+Orientation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1EphemerisSettings_adad130efb8ba76972cb24f5787835e45}{}\label{classtudat_1_1simulation__setup_1_1EphemerisSettings_adad130efb8ba76972cb24f5787835e45}
+
+
+Function to rese the orientation of the frame. 
+
+Function to reset the orientation of the frame. 
+\begin{DoxyParams}{Parameters}
+{\em frame\+Orientation} & New frame orientation \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings}!reset\+Frame\+Origin@{reset\+Frame\+Origin}}
+\index{reset\+Frame\+Origin@{reset\+Frame\+Origin}!tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings}}
+\subsubsection[{\texorpdfstring{reset\+Frame\+Origin(const std\+::string \&frame\+Origin)}{resetFrameOrigin(const std::string &frameOrigin)}}]{\setlength{\rightskip}{0pt plus 5cm}void tudat\+::simulation\+\_\+setup\+::\+Ephemeris\+Settings\+::reset\+Frame\+Origin (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{frame\+Origin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1EphemerisSettings_a2dbcb55a4542b28610c2a389b89c4447}{}\label{classtudat_1_1simulation__setup_1_1EphemerisSettings_a2dbcb55a4542b28610c2a389b89c4447}
+
+
+Function to reset the origin of the frame. 
+
+Function to reset the origin of the frame. 
+\begin{DoxyParams}{Parameters}
+{\em frame\+Origin} & New frame origin \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Environment\+Setup/create\+Ephemeris.\+h\end{DoxyCompactItemize}

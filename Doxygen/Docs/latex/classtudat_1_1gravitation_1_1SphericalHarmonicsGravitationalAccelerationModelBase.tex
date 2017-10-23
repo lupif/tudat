@@ -1,0 +1,308 @@
+\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase}{}\section{tudat\+:\+:gravitation\+:\+:Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base$<$ State\+Matrix $>$ Class Template Reference}
+\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase}\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base$<$ State\+Matrix $>$@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base$<$ State\+Matrix $>$}}
+
+
+Template base class for spherical harmonics gravitational acceleration models.  
+
+
+
+
+{\ttfamily \#include $<$spherical\+Harmonics\+Gravity\+Model\+Base.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:gravitation\+:\+:Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base$<$ State\+Matrix $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:gravitation\+:\+:Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base$<$ State\+Matrix $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a693001dda5e9013564542cd78b585b84}{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base} (const \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4ca706c4f941be481fc5f490e49390d8}{State\+Function} position\+Of\+Body\+Subject\+To\+Acceleration\+Function, const double a\+Gravitational\+Parameter, const \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4ca706c4f941be481fc5f490e49390d8}{State\+Function} position\+Of\+Body\+Exerting\+Acceleration\+Function, const bool is\+Mutual\+Attraction\+Used)
+\item 
+\hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a9e5565cee2aa329c7718ba1c3cc11458}{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base} (const \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4ca706c4f941be481fc5f490e49390d8}{State\+Function} position\+Of\+Body\+Subject\+To\+Acceleration\+Function, const boost\+::function$<$ double() $>$ a\+Gravitational\+Parameter\+Function, const \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4ca706c4f941be481fc5f490e49390d8}{State\+Function} position\+Of\+Body\+Exerting\+Acceleration\+Function, const bool is\+Mutual\+Attraction\+Used)
+\item 
+virtual \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4fed916f0154efda68edf6d40f4a08b8}{$\sim$\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_ac6cc02edc064e51ab02fdb5cfdea9082}{update\+Base\+Members} ()
+\begin{DoxyCompactList}\small\item\em Update base class members. \end{DoxyCompactList}\item 
+boost\+::function$<$ double() $>$ \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a7b5786da726656d9f343fe038de0526c}{get\+Gravitational\+Parameter\+Function} ()
+\begin{DoxyCompactList}\small\item\em Function to return the function returning the relevant gravitational parameter. \end{DoxyCompactList}\item 
+boost\+::function$<$ State\+Matrix() $>$ \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_ad4cf21a69755e403a8a349e52491cb21}{get\+State\+Function\+Of\+Body\+Exerting\+Acceleration} ()
+\begin{DoxyCompactList}\small\item\em Function to return the function returning position of body exerting acceleration. \end{DoxyCompactList}\item 
+boost\+::function$<$ State\+Matrix() $>$ \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4782d83bf8ee301a8022837d9cd3b28f}{get\+State\+Function\+Of\+Body\+Undergoing\+Acceleration} ()
+\begin{DoxyCompactList}\small\item\em Function to return the function returning position of body subject to acceleration. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_aab2e6ab909d87470b03ab14eb77855db}{get\+Is\+Mutual\+Attraction\+Used} ()
+\begin{DoxyCompactList}\small\item\em Function to return whether the mutual attraction is used. \end{DoxyCompactList}\item 
+State\+Matrix \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_abcf8a1d45a47a52bbcb7ddc68ac70edc}{get\+Current\+Position\+Of\+Body\+Subject\+To\+Acceleration} ()
+\begin{DoxyCompactList}\small\item\em Function to return current position vector of body exerting gravitational acceleration in inertial frame. \end{DoxyCompactList}\item 
+State\+Matrix \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_adf08c02b22b14aee63a1c5c6710245e4}{get\+Current\+Position\+Of\+Body\+Exerting\+Acceleration} ()
+\begin{DoxyCompactList}\small\item\em Function to return current position vector of body undergoing gravitational acceleration in inertial frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::function$<$ State\+Matrix() $>$ \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4ca706c4f941be481fc5f490e49390d8}{State\+Function}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4ca706c4f941be481fc5f490e49390d8}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4ca706c4f941be481fc5f490e49390d8}
+
+\begin{DoxyCompactList}\small\item\em Typedef for a position-\/returning function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+State\+Matrix \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a0e873e80f5b4654243def79fc89a8f9b}{position\+Of\+Body\+Subject\+To\+Acceleration}
+\begin{DoxyCompactList}\small\item\em Position of body subject to acceleration. \end{DoxyCompactList}\item 
+const \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4ca706c4f941be481fc5f490e49390d8}{State\+Function} \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a302efd9e7b078e67f3d475e613c96da1}{subject\+Position\+Function}
+\begin{DoxyCompactList}\small\item\em Pointer to function returning position of body subject to acceleration. \end{DoxyCompactList}\item 
+const boost\+::function$<$ double() $>$ \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a858ce486036b01aa152cea22561210ae}{gravitational\+Parameter\+Function}
+\begin{DoxyCompactList}\small\item\em Function returning a gravitational parameter \mbox{[}m$^\wedge$3 s$^\wedge$-\/2\mbox{]}. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a6324fd00981daa580fab84e579de285f}{gravitational\+Parameter}
+\begin{DoxyCompactList}\small\item\em Gravitational parameter \mbox{[}m$^\wedge$3 s$^\wedge$-\/2\mbox{]}. \end{DoxyCompactList}\item 
+State\+Matrix \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a7025348306abb91a3dd47a8583518de8}{position\+Of\+Body\+Exerting\+Acceleration}
+\begin{DoxyCompactList}\small\item\em Position of body exerting acceleration. \end{DoxyCompactList}\item 
+const \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4ca706c4f941be481fc5f490e49390d8}{State\+Function} \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a90738dd2d368872dc3ac4b163ab98ece}{source\+Position\+Function}
+\begin{DoxyCompactList}\small\item\em Pointer to function returning position of body exerting acceleration. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a103da0d449d50376af758f527bbe5131}{is\+Mutual\+Attraction\+Used\+\_\+}
+\begin{DoxyCompactList}\small\item\em Variable denoting whether mutual acceleration between bodies is included. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename State\+Matrix$>$\\*
+class tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base$<$ State\+Matrix $>$}
+
+Template base class for spherical harmonics gravitational acceleration models. 
+
+This template class serves as the base class for the \hyperlink{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModel}{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model}, \hyperlink{classtudat_1_1gravitation_1_1CentralGravitationalAccelerationModel}{Central\+Gravitational\+Acceleration\+Model}, \hyperlink{classtudat_1_1gravitation_1_1CentralJ2GravitationalAccelerationModel}{Central\+J2\+Gravitational\+Acceleration\+Model}, \hyperlink{classtudat_1_1gravitation_1_1CentralJ2J3GravitationalAccelerationModel}{Central\+J2\+J3\+Gravitational\+Acceleration\+Model}, and \hyperlink{classtudat_1_1gravitation_1_1CentralJ2J3J4GravitationalAccelerationModel}{Central\+J2\+J3\+J4\+Gravitational\+Acceleration\+Model} classes. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em State\+Matrix} & Type used to store a state matrix. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\index{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base(const State\+Function position\+Of\+Body\+Subject\+To\+Acceleration\+Function, const double a\+Gravitational\+Parameter, const State\+Function position\+Of\+Body\+Exerting\+Acceleration\+Function, const bool is\+Mutual\+Attraction\+Used)}{SphericalHarmonicsGravitationalAccelerationModelBase(const StateFunction positionOfBodySubjectToAccelerationFunction, const double aGravitationalParameter, const StateFunction positionOfBodyExertingAccelerationFunction, const bool isMutualAttractionUsed)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::{\bf Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base} (
+\begin{DoxyParamCaption}
+\item[{const {\bf State\+Function}}]{position\+Of\+Body\+Subject\+To\+Acceleration\+Function, }
+\item[{const double}]{a\+Gravitational\+Parameter, }
+\item[{const {\bf State\+Function}}]{position\+Of\+Body\+Exerting\+Acceleration\+Function, }
+\item[{const bool}]{is\+Mutual\+Attraction\+Used}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a693001dda5e9013564542cd78b585b84}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a693001dda5e9013564542cd78b585b84}
+Default constructor taking position of body subject to acceleration, variable gravitational parameter, and position of body exerting acceleration.
+
+Constructor taking a pointer to a function returning the position of the body subject to gravitational acceleration, a pointer to a function returning the gravitational parameter of the body exerting the acceleration, and a pointer to a function returning the position of the body exerting the gravitational acceleration (typically the central body). The constructor also updates all the internal members. 
+\begin{DoxyParams}{Parameters}
+{\em position\+Of\+Body\+Subject\+To\+Acceleration\+Function} & Pointer to function returning position of body subject to gravitational acceleration. \\
+\hline
+{\em a\+Gravitational\+Parameter} & Gravitational parameter of body exerting gravitational acceleration. \\
+\hline
+{\em position\+Of\+Body\+Exerting\+Acceleration\+Function} & Pointer to function returning position of body exerting gravitational acceleration. \\
+\hline
+{\em is\+Mutual\+Attraction\+Used} & Variable denoting whether attraction from body undergoing acceleration on body exerting acceleration is included (i.\+e. whether a\+Gravitational\+Parameter refers to the property of the body exerting the acceleration, if variable is false, or the sum of the gravitational parameters, if the variable is true. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\index{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base(const State\+Function position\+Of\+Body\+Subject\+To\+Acceleration\+Function, const boost\+::function$<$ double() $>$ a\+Gravitational\+Parameter\+Function, const State\+Function position\+Of\+Body\+Exerting\+Acceleration\+Function, const bool is\+Mutual\+Attraction\+Used)}{SphericalHarmonicsGravitationalAccelerationModelBase(const StateFunction positionOfBodySubjectToAccelerationFunction, const boost::function< double() > aGravitationalParameterFunction, const StateFunction positionOfBodyExertingAccelerationFunction, const bool isMutualAttractionUsed)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::{\bf Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base} (
+\begin{DoxyParamCaption}
+\item[{const {\bf State\+Function}}]{position\+Of\+Body\+Subject\+To\+Acceleration\+Function, }
+\item[{const boost\+::function$<$ double() $>$}]{a\+Gravitational\+Parameter\+Function, }
+\item[{const {\bf State\+Function}}]{position\+Of\+Body\+Exerting\+Acceleration\+Function, }
+\item[{const bool}]{is\+Mutual\+Attraction\+Used}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a9e5565cee2aa329c7718ba1c3cc11458}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a9e5565cee2aa329c7718ba1c3cc11458}
+Default constructor taking position of body subject to acceleration, variable gravitational parameter, and position of body exerting acceleration.
+
+Constructor taking a pointer to a function returning the position of the body subject to gravitational acceleration, a pointer to a function returning the gravitational parameter of the body exerting the acceleration, and a pointer to a function returning the position of the body exerting the gravitational acceleration (typically the central body). The constructor also updates all the internal members. 
+\begin{DoxyParams}{Parameters}
+{\em position\+Of\+Body\+Subject\+To\+Acceleration\+Function} & Pointer to function returning position of body subject to gravitational acceleration. \\
+\hline
+{\em a\+Gravitational\+Parameter\+Function} & Pointer to function returning gravitational parameter of body exerting gravitational acceleration. \\
+\hline
+{\em position\+Of\+Body\+Exerting\+Acceleration\+Function} & Pointer to function returning position of body exerting gravitational acceleration. \\
+\hline
+{\em is\+Mutual\+Attraction\+Used} & Variable denoting whether attraction from body undergoing acceleration on body exerting acceleration is included (i.\+e. whether a\+Gravitational\+Parameter refers to the property of the body exerting the acceleration, if variable is false, or the sum of the gravitational parameters, if the variable is true. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!````~Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{$\sim$\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\index{````~Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{$\sim$\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{$\sim$\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base()}{~SphericalHarmonicsGravitationalAccelerationModelBase()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ virtual {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::$\sim${\bf Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4fed916f0154efda68edf6d40f4a08b8}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4fed916f0154efda68edf6d40f4a08b8}
+
+
+Virtual destructor. 
+
+Base class virtual destructor. 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!get\+Current\+Position\+Of\+Body\+Exerting\+Acceleration@{get\+Current\+Position\+Of\+Body\+Exerting\+Acceleration}}
+\index{get\+Current\+Position\+Of\+Body\+Exerting\+Acceleration@{get\+Current\+Position\+Of\+Body\+Exerting\+Acceleration}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{get\+Current\+Position\+Of\+Body\+Exerting\+Acceleration()}{getCurrentPositionOfBodyExertingAcceleration()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ State\+Matrix {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::get\+Current\+Position\+Of\+Body\+Exerting\+Acceleration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_adf08c02b22b14aee63a1c5c6710245e4}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_adf08c02b22b14aee63a1c5c6710245e4}
+
+
+Function to return current position vector of body undergoing gravitational acceleration in inertial frame. 
+
+Function to return current position vector of body undergoing gravitational acceleration in inertial frame. \begin{DoxyReturn}{Returns}
+Current position vector of body undergoing gravitational acceleration in inertial frame. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!get\+Current\+Position\+Of\+Body\+Subject\+To\+Acceleration@{get\+Current\+Position\+Of\+Body\+Subject\+To\+Acceleration}}
+\index{get\+Current\+Position\+Of\+Body\+Subject\+To\+Acceleration@{get\+Current\+Position\+Of\+Body\+Subject\+To\+Acceleration}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{get\+Current\+Position\+Of\+Body\+Subject\+To\+Acceleration()}{getCurrentPositionOfBodySubjectToAcceleration()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ State\+Matrix {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::get\+Current\+Position\+Of\+Body\+Subject\+To\+Acceleration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_abcf8a1d45a47a52bbcb7ddc68ac70edc}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_abcf8a1d45a47a52bbcb7ddc68ac70edc}
+
+
+Function to return current position vector of body exerting gravitational acceleration in inertial frame. 
+
+Function to return current position vector of body exerting gravitational acceleration in inertial frame. \begin{DoxyReturn}{Returns}
+Current position vector of body exerting gravitational acceleration in inertial frame. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!get\+Gravitational\+Parameter\+Function@{get\+Gravitational\+Parameter\+Function}}
+\index{get\+Gravitational\+Parameter\+Function@{get\+Gravitational\+Parameter\+Function}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{get\+Gravitational\+Parameter\+Function()}{getGravitationalParameterFunction()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ boost\+::function$<$ double( ) $>$ {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::get\+Gravitational\+Parameter\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a7b5786da726656d9f343fe038de0526c}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a7b5786da726656d9f343fe038de0526c}
+
+
+Function to return the function returning the relevant gravitational parameter. 
+
+Function to return the function returning the relevant gravitational parameter. \begin{DoxyReturn}{Returns}
+Function returning the gravitational parameter used in the computations. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!get\+Is\+Mutual\+Attraction\+Used@{get\+Is\+Mutual\+Attraction\+Used}}
+\index{get\+Is\+Mutual\+Attraction\+Used@{get\+Is\+Mutual\+Attraction\+Used}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{get\+Is\+Mutual\+Attraction\+Used()}{getIsMutualAttractionUsed()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ bool {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::get\+Is\+Mutual\+Attraction\+Used (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_aab2e6ab909d87470b03ab14eb77855db}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_aab2e6ab909d87470b03ab14eb77855db}
+
+
+Function to return whether the mutual attraction is used. 
+
+Function to return whether the mutual attraction is used. \begin{DoxyReturn}{Returns}
+Boolean defining whether the mutual attraction is used. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!get\+State\+Function\+Of\+Body\+Exerting\+Acceleration@{get\+State\+Function\+Of\+Body\+Exerting\+Acceleration}}
+\index{get\+State\+Function\+Of\+Body\+Exerting\+Acceleration@{get\+State\+Function\+Of\+Body\+Exerting\+Acceleration}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{get\+State\+Function\+Of\+Body\+Exerting\+Acceleration()}{getStateFunctionOfBodyExertingAcceleration()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ boost\+::function$<$ State\+Matrix( ) $>$ {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::get\+State\+Function\+Of\+Body\+Exerting\+Acceleration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_ad4cf21a69755e403a8a349e52491cb21}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_ad4cf21a69755e403a8a349e52491cb21}
+
+
+Function to return the function returning position of body exerting acceleration. 
+
+Function to return the function returning position of body exerting acceleration. \begin{DoxyReturn}{Returns}
+Function returning position of body exerting acceleration. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!get\+State\+Function\+Of\+Body\+Undergoing\+Acceleration@{get\+State\+Function\+Of\+Body\+Undergoing\+Acceleration}}
+\index{get\+State\+Function\+Of\+Body\+Undergoing\+Acceleration@{get\+State\+Function\+Of\+Body\+Undergoing\+Acceleration}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{get\+State\+Function\+Of\+Body\+Undergoing\+Acceleration()}{getStateFunctionOfBodyUndergoingAcceleration()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ boost\+::function$<$ State\+Matrix( ) $>$ {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::get\+State\+Function\+Of\+Body\+Undergoing\+Acceleration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4782d83bf8ee301a8022837d9cd3b28f}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a4782d83bf8ee301a8022837d9cd3b28f}
+
+
+Function to return the function returning position of body subject to acceleration. 
+
+Function to return the function returning position of body subject to acceleration. \begin{DoxyReturn}{Returns}
+Function returning position of body subject to acceleration. 
+\end{DoxyReturn}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!update\+Base\+Members@{update\+Base\+Members}}
+\index{update\+Base\+Members@{update\+Base\+Members}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{update\+Base\+Members()}{updateBaseMembers()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ void {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::update\+Base\+Members (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_ac6cc02edc064e51ab02fdb5cfdea9082}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_ac6cc02edc064e51ab02fdb5cfdea9082}
+
+
+Update base class members. 
+
+Updates members of base class. In this case, the current position of the body subject to and exerting the gravitational acceleration, as well as the gravitational parameter are updated by calling the functions provided through the constructor. \begin{DoxyReturn}{Returns}
+True; this should be modified to return a flag indicating if the update was successful. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!gravitational\+Parameter@{gravitational\+Parameter}}
+\index{gravitational\+Parameter@{gravitational\+Parameter}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{gravitational\+Parameter}{gravitationalParameter}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ double {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::gravitational\+Parameter\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a6324fd00981daa580fab84e579de285f}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a6324fd00981daa580fab84e579de285f}
+
+
+Gravitational parameter \mbox{[}m$^\wedge$3 s$^\wedge$-\/2\mbox{]}. 
+
+Current gravitational parameter of body exerting acceleration \mbox{[}m$^\wedge$3 s$^\wedge$-\/2\mbox{]}. \index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!gravitational\+Parameter\+Function@{gravitational\+Parameter\+Function}}
+\index{gravitational\+Parameter\+Function@{gravitational\+Parameter\+Function}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{gravitational\+Parameter\+Function}{gravitationalParameterFunction}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ const boost\+::function$<$ double( ) $>$ {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::gravitational\+Parameter\+Function\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a858ce486036b01aa152cea22561210ae}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a858ce486036b01aa152cea22561210ae}
+
+
+Function returning a gravitational parameter \mbox{[}m$^\wedge$3 s$^\wedge$-\/2\mbox{]}. 
+
+Function returning current gravitational parameter of body exerting acceleration \mbox{[}m$^\wedge$3 s$^\wedge$-\/2\mbox{]}. \index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!is\+Mutual\+Attraction\+Used\+\_\+@{is\+Mutual\+Attraction\+Used\+\_\+}}
+\index{is\+Mutual\+Attraction\+Used\+\_\+@{is\+Mutual\+Attraction\+Used\+\_\+}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{is\+Mutual\+Attraction\+Used\+\_\+}{isMutualAttractionUsed_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ bool {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::is\+Mutual\+Attraction\+Used\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a103da0d449d50376af758f527bbe5131}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a103da0d449d50376af758f527bbe5131}
+
+
+Variable denoting whether mutual acceleration between bodies is included. 
+
+Variable denoting whether attraction from body undergoing acceleration on body exerting acceleration is included (i.\+e. whether a\+Gravitational\+Parameter refers to the property of the body exerting the acceleration, if variable is false, or the sum of the gravitational parameters, if the variable is true. \index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!position\+Of\+Body\+Exerting\+Acceleration@{position\+Of\+Body\+Exerting\+Acceleration}}
+\index{position\+Of\+Body\+Exerting\+Acceleration@{position\+Of\+Body\+Exerting\+Acceleration}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{position\+Of\+Body\+Exerting\+Acceleration}{positionOfBodyExertingAcceleration}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ State\+Matrix {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::position\+Of\+Body\+Exerting\+Acceleration\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a7025348306abb91a3dd47a8583518de8}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a7025348306abb91a3dd47a8583518de8}
+
+
+Position of body exerting acceleration. 
+
+Current position vector of body exerting gravitational acceleration in inertial frame. \index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!position\+Of\+Body\+Subject\+To\+Acceleration@{position\+Of\+Body\+Subject\+To\+Acceleration}}
+\index{position\+Of\+Body\+Subject\+To\+Acceleration@{position\+Of\+Body\+Subject\+To\+Acceleration}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{position\+Of\+Body\+Subject\+To\+Acceleration}{positionOfBodySubjectToAcceleration}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ State\+Matrix {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::position\+Of\+Body\+Subject\+To\+Acceleration\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a0e873e80f5b4654243def79fc89a8f9b}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a0e873e80f5b4654243def79fc89a8f9b}
+
+
+Position of body subject to acceleration. 
+
+Current position vector of body subject to gravitational acceleration in inertial frame. \index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!source\+Position\+Function@{source\+Position\+Function}}
+\index{source\+Position\+Function@{source\+Position\+Function}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{source\+Position\+Function}{sourcePositionFunction}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ const {\bf State\+Function} {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::source\+Position\+Function\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a90738dd2d368872dc3ac4b163ab98ece}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a90738dd2d368872dc3ac4b163ab98ece}
+
+
+Pointer to function returning position of body exerting acceleration. 
+
+Pointer to function that returns the current position of the body exerting the gravitational acceleration. \index{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}!subject\+Position\+Function@{subject\+Position\+Function}}
+\index{subject\+Position\+Function@{subject\+Position\+Function}!tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base@{tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}}
+\subsubsection[{\texorpdfstring{subject\+Position\+Function}{subjectPositionFunction}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Matrix$>$ const {\bf State\+Function} {\bf tudat\+::gravitation\+::\+Spherical\+Harmonics\+Gravitational\+Acceleration\+Model\+Base}$<$ State\+Matrix $>$\+::subject\+Position\+Function\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a302efd9e7b078e67f3d475e613c96da1}{}\label{classtudat_1_1gravitation_1_1SphericalHarmonicsGravitationalAccelerationModelBase_a302efd9e7b078e67f3d475e613c96da1}
+
+
+Pointer to function returning position of body subject to acceleration. 
+
+Pointer to function that returns the current position of the body subject to the gravitational acceleration. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Gravitation/spherical\+Harmonics\+Gravity\+Model\+Base.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="tudat::propagators::SingleDependentVariableSaveSettings" name="tudat::propagators::SingleDependentVariableSaveSettings">
+<area shape="rect" id="node2" href="$classtudat_1_1propagators_1_1BodyAerodynamicAngleVariableSaveSettings.html" title="Class to define settings for saving an aerodynamics orientation angle from AerodynamicsReferenceFrame..." alt="" coords="265,5,481,61"/>
+<area shape="rect" id="node3" href="$classtudat_1_1propagators_1_1IntermediateAerodynamicRotationVariableSaveSettings.html" title="Class to define settings for saving a rotation matrix between two AerodynamicsReferenceFrames. " alt="" coords="260,85,487,141"/>
+<area shape="rect" id="node4" href="$classtudat_1_1propagators_1_1SingleAccelerationDependentVariableSaveSettings.html" title="Class to define settings for saving a single acceleration (norm or vector) during propagation..." alt="" coords="273,165,474,221"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1simulation__setup_1_1AccelerationSettings.html" title="Class for providing settings for acceleration model. " alt="" coords="5,93,163,134"/>
+<area shape="rect" id="node2" href="$classtudat_1_1simulation__setup_1_1MutualSphericalHarmonicAccelerationSettings.html" title="Class for providing acceleration settings for mutual spherical harmonics acceleration model..." alt="" coords="211,5,461,61"/>
+<area shape="rect" id="node3" href="$classtudat_1_1simulation__setup_1_1SphericalHarmonicAccelerationSettings.html" title="Class for providing settings for spherical harmonics acceleration model. " alt="" coords="230,85,442,141"/>
+<area shape="rect" id="node4" href="$classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings.html" title="Class for providing acceleration settings for a thrust acceleration model. " alt="" coords="243,165,429,206"/>
+</map>

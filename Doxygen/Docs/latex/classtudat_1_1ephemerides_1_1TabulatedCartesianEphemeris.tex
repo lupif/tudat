@@ -1,0 +1,270 @@
+\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris}{}\section{tudat\+:\+:ephemerides\+:\+:Tabulated\+Cartesian\+Ephemeris$<$ State\+Scalar\+Type, Time\+Type $>$ Class Template Reference}
+\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris}\index{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris$<$ State\+Scalar\+Type, Time\+Type $>$@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris$<$ State\+Scalar\+Type, Time\+Type $>$}}
+
+
+Class that determines an ephemeris from tabulated data.  
+
+
+
+
+{\ttfamily \#include $<$tabulated\+Ephemeris.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:ephemerides\+:\+:Tabulated\+Cartesian\+Ephemeris$<$ State\+Scalar\+Type, Time\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:ephemerides\+:\+:Tabulated\+Cartesian\+Ephemeris$<$ State\+Scalar\+Type, Time\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ {\bfseries State\+Type}\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_aa73683bad12ac496b55367c6071098ad}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_aa73683bad12ac496b55367c6071098ad}
+
+\item 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator}{interpolators\+::\+One\+Dimensional\+Interpolator}$<$ Time\+Type, State\+Type $>$ $>$ \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_ac99b60b8a32901ffa73148e7d6eb557a}{State\+Interpolator\+Pointer}\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_ac99b60b8a32901ffa73148e7d6eb557a}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_ac99b60b8a32901ffa73148e7d6eb557a}
+
+\begin{DoxyCompactList}\small\item\em Typedef for state interpolator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_ad8cbe3eb57a58c172c5b4be5b96ee060}{Tabulated\+Cartesian\+Ephemeris} (const \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_ac99b60b8a32901ffa73148e7d6eb557a}{State\+Interpolator\+Pointer} interpolator, const std\+::string reference\+Frame\+Origin=\char`\"{}S\+SB\char`\"{}, const std\+::string reference\+Frame\+Orientation=\char`\"{}E\+C\+L\+I\+P\+J2000\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor, sets data interpolator and frame data. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a73ed0893d7e82f5e23487cf9c8f56b2b}{$\sim$\+Tabulated\+Cartesian\+Ephemeris} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a02a693c96a1234906361545e7efae977}{reset\+Interpolator} (const \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_ac99b60b8a32901ffa73148e7d6eb557a}{State\+Interpolator\+Pointer} interpolator)
+\begin{DoxyCompactList}\small\item\em Function to reset the state interpolator. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector6d \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_aec6aafbcce0b0fc6f4b13e4559bb96ce}{get\+Cartesian\+State} (const double seconds\+Since\+Epoch)
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a0b73d788a6c6c33954ccec06971b3491}{get\+Cartesian\+Long\+State} (const double seconds\+Since\+Epoch)
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in long double precision). \end{DoxyCompactList}\item 
+Eigen\+::\+Vector6d \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_ae85412c7f3d9925b17656d5adf45949e}{get\+Cartesian\+State\+From\+Extended\+Time} (const \hyperlink{classtudat_1_1Time}{Time} \&time)
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in double precision from \hyperlink{classtudat_1_1Time}{Time} input). \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a6243b4b5b33eaca2407df79d0032788b}{get\+Cartesian\+Long\+State\+From\+Extended\+Time} (const \hyperlink{classtudat_1_1Time}{Time} \&time)
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in long double precision from \hyperlink{classtudat_1_1Time}{Time} input). \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_ac99b60b8a32901ffa73148e7d6eb557a}{State\+Interpolator\+Pointer} \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a287b1df5480cc7fb1cbbdd02f08aab5f}{get\+Interpolator} ()
+\begin{DoxyCompactList}\small\item\em Function to return the interpolator. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\Eigen\+::\+Vector6d \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a73d4e6226a2fe278f84dc9889fad0d81}{get\+Cartesian\+State} (const double ephemeris\+Time)\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a73d4e6226a2fe278f84dc9889fad0d81}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a73d4e6226a2fe278f84dc9889fad0d81}
+
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in double precision), for double State\+Scalar\+Type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_abe3c0d7f7ad0c4c7e04006f3142f2a02}{get\+Cartesian\+Long\+State} (const double seconds\+Since\+Epoch)\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_abe3c0d7f7ad0c4c7e04006f3142f2a02}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_abe3c0d7f7ad0c4c7e04006f3142f2a02}
+
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in long double precision), for double State\+Scalar\+Type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\Eigen\+::\+Vector6d \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a6ed4d92c8dc87dc9f18c95538aa1dd30}{get\+Cartesian\+State\+From\+Extended\+Time} (const \hyperlink{classtudat_1_1Time}{Time} \&time)\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a6ed4d92c8dc87dc9f18c95538aa1dd30}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a6ed4d92c8dc87dc9f18c95538aa1dd30}
+
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in double precision from \hyperlink{classtudat_1_1Time}{Time} input), for double State\+Scalar\+Type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a07ef2071694a551c9157e7a1c9ee0319}{get\+Cartesian\+Long\+State\+From\+Extended\+Time} (const \hyperlink{classtudat_1_1Time}{Time} \&time)\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a07ef2071694a551c9157e7a1c9ee0319}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a07ef2071694a551c9157e7a1c9ee0319}
+
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in long double precision from \hyperlink{classtudat_1_1Time}{Time} input), for double State\+Scalar\+Type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\Eigen\+::\+Vector6d \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a7a24cf887cd69499572de80a5be9b57d}{get\+Cartesian\+State} (const double ephemeris\+Time)\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a7a24cf887cd69499572de80a5be9b57d}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a7a24cf887cd69499572de80a5be9b57d}
+
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in double precision), for long double State\+Scalar\+Type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a1ad7459c88b5ec8d18e4b1685f9f0636}{get\+Cartesian\+Long\+State} (const double seconds\+Since\+Epoch)\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a1ad7459c88b5ec8d18e4b1685f9f0636}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a1ad7459c88b5ec8d18e4b1685f9f0636}
+
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in long double precision), for long double State\+Scalar\+Type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\Eigen\+::\+Vector6d \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_aac5716d83a1b531a1d5aec3b4af4ca85}{get\+Cartesian\+State\+From\+Extended\+Time} (const \hyperlink{classtudat_1_1Time}{Time} \&time)\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_aac5716d83a1b531a1d5aec3b4af4ca85}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_aac5716d83a1b531a1d5aec3b4af4ca85}
+
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in double precision from \hyperlink{classtudat_1_1Time}{Time} input), for double State\+Scalar\+Type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_afe9b0674df3fb95fea4481eb66b3ee44}{get\+Cartesian\+Long\+State\+From\+Extended\+Time} (const \hyperlink{classtudat_1_1Time}{Time} \&time)\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_afe9b0674df3fb95fea4481eb66b3ee44}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_afe9b0674df3fb95fea4481eb66b3ee44}
+
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in long double precision from \hyperlink{classtudat_1_1Time}{Time} input), for double State\+Scalar\+Type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\Eigen\+::\+Vector6d \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a5ff805936be5cbac09509772948d9765}{get\+Cartesian\+State} (const double ephemeris\+Time)\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a5ff805936be5cbac09509772948d9765}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a5ff805936be5cbac09509772948d9765}
+
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in double precision), for long double State\+Scalar\+Type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a81f8d1e4c5133fd7d3cae7e73a80b74e}{get\+Cartesian\+Long\+State} (const double seconds\+Since\+Epoch)\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a81f8d1e4c5133fd7d3cae7e73a80b74e}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a81f8d1e4c5133fd7d3cae7e73a80b74e}
+
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in long double precision), for long double State\+Scalar\+Type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\Eigen\+::\+Vector6d \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a714c87550efb01972cce14d1b5720389}{get\+Cartesian\+State\+From\+Extended\+Time} (const \hyperlink{classtudat_1_1Time}{Time} \&time)\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a714c87550efb01972cce14d1b5720389}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a714c87550efb01972cce14d1b5720389}
+
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in double precision from \hyperlink{classtudat_1_1Time}{Time} input). \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ \hyperlink{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a4c744c1424da9db9b01e4339d5e2d378}{get\+Cartesian\+Long\+State\+From\+Extended\+Time} (const \hyperlink{classtudat_1_1Time}{Time} \&time)\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a4c744c1424da9db9b01e4339d5e2d378}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a4c744c1424da9db9b01e4339d5e2d378}
+
+\begin{DoxyCompactList}\small\item\em Get cartesian state from ephemeris (in long double precision from \hyperlink{classtudat_1_1Time}{Time} input). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename State\+Scalar\+Type = double, typename Time\+Type = double$>$\\*
+class tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris$<$ State\+Scalar\+Type, Time\+Type $>$}
+
+Class that determines an ephemeris from tabulated data. 
+
+Class that determines an ephemeris from tabulated data, by using numerical interpolation of this data. Required input to this class is a One\+Dimensional\+Interpolator, which may be reset. This class may for instance be used for setting the numerically integrated state of a body as its \textquotesingle{}new\textquotesingle{} ephemeris 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}!Tabulated\+Cartesian\+Ephemeris@{Tabulated\+Cartesian\+Ephemeris}}
+\index{Tabulated\+Cartesian\+Ephemeris@{Tabulated\+Cartesian\+Ephemeris}!tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}}
+\subsubsection[{\texorpdfstring{Tabulated\+Cartesian\+Ephemeris(const State\+Interpolator\+Pointer interpolator, const std\+::string reference\+Frame\+Origin=""S\+SB"", const std\+::string reference\+Frame\+Orientation=""E\+C\+L\+I\+P\+J2000"")}{TabulatedCartesianEphemeris(const StateInterpolatorPointer interpolator, const std::string referenceFrameOrigin="SSB", const std::string referenceFrameOrientation="ECLIPJ2000")}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ {\bf tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}$<$ State\+Scalar\+Type, Time\+Type $>$\+::{\bf Tabulated\+Cartesian\+Ephemeris} (
+\begin{DoxyParamCaption}
+\item[{const {\bf State\+Interpolator\+Pointer}}]{interpolator, }
+\item[{const std\+::string}]{reference\+Frame\+Origin = {\ttfamily \char`\"{}SSB\char`\"{}}, }
+\item[{const std\+::string}]{reference\+Frame\+Orientation = {\ttfamily \char`\"{}ECLIPJ2000\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_ad8cbe3eb57a58c172c5b4be5b96ee060}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_ad8cbe3eb57a58c172c5b4be5b96ee060}
+
+
+Constructor, sets data interpolator and frame data. 
+
+Constructor, sets data interpolator and frame data. 
+\begin{DoxyParams}{Parameters}
+{\em interpolator} & Interpolator that returns the interpolated state as a function of time. \\
+\hline
+{\em reference\+Frame\+Origin} & Origin of reference frame in which state is defined. \\
+\hline
+{\em reference\+Frame\+Orientation} & Orientation of reference frame in which state is defined. \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}!````~Tabulated\+Cartesian\+Ephemeris@{$\sim$\+Tabulated\+Cartesian\+Ephemeris}}
+\index{````~Tabulated\+Cartesian\+Ephemeris@{$\sim$\+Tabulated\+Cartesian\+Ephemeris}!tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}}
+\subsubsection[{\texorpdfstring{$\sim$\+Tabulated\+Cartesian\+Ephemeris()}{~TabulatedCartesianEphemeris()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ {\bf tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}$<$ State\+Scalar\+Type, Time\+Type $>$\+::$\sim${\bf Tabulated\+Cartesian\+Ephemeris} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a73ed0893d7e82f5e23487cf9c8f56b2b}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a73ed0893d7e82f5e23487cf9c8f56b2b}
+
+
+Destructor. 
+
+Destructor 
+
+\subsection{Member Function Documentation}
+\index{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}!get\+Cartesian\+Long\+State@{get\+Cartesian\+Long\+State}}
+\index{get\+Cartesian\+Long\+State@{get\+Cartesian\+Long\+State}!tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}}
+\subsubsection[{\texorpdfstring{get\+Cartesian\+Long\+State(const double seconds\+Since\+Epoch)}{getCartesianLongState(const double secondsSinceEpoch)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ {\bf tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}$<$ State\+Scalar\+Type, Time\+Type $>$\+::get\+Cartesian\+Long\+State (
+\begin{DoxyParamCaption}
+\item[{const double}]{seconds\+Since\+Epoch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a0b73d788a6c6c33954ccec06971b3491}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a0b73d788a6c6c33954ccec06971b3491}
+
+
+Get cartesian state from ephemeris (in long double precision). 
+
+Returns cartesian state from ephemeris (in long double precision), as calculated from interpolator\+\_\+. For double State\+Scalar\+Type class template argument, this function returns the double precision interpolated values, cast to long double. Only for long double State\+Scalar\+Type argument is this function used to its fullest. 
+\begin{DoxyParams}{Parameters}
+{\em seconds\+Since\+Epoch} & Seconds since epoch. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State in Cartesian elements from ephemeris. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1ephemerides_1_1Ephemeris_a2b4485db49528e74903e2448e9a277ea}{tudat\+::ephemerides\+::\+Ephemeris}.
+
+\index{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}!get\+Cartesian\+Long\+State\+From\+Extended\+Time@{get\+Cartesian\+Long\+State\+From\+Extended\+Time}}
+\index{get\+Cartesian\+Long\+State\+From\+Extended\+Time@{get\+Cartesian\+Long\+State\+From\+Extended\+Time}!tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}}
+\subsubsection[{\texorpdfstring{get\+Cartesian\+Long\+State\+From\+Extended\+Time(const Time \&time)}{getCartesianLongStateFromExtendedTime(const Time &time)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ Eigen\+::\+Matrix$<$ long double, 6, 1 $>$ {\bf tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}$<$ State\+Scalar\+Type, Time\+Type $>$\+::get\+Cartesian\+Long\+State\+From\+Extended\+Time (
+\begin{DoxyParamCaption}
+\item[{const {\bf Time} \&}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a6243b4b5b33eaca2407df79d0032788b}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a6243b4b5b33eaca2407df79d0032788b}
+
+
+Get cartesian state from ephemeris (in long double precision from \hyperlink{classtudat_1_1Time}{Time} input). 
+
+Returns cartesian state from ephemeris (in long double precision from \hyperlink{classtudat_1_1Time}{Time} input), as calculated from interpolator\+\_\+. For double State\+Scalar\+Type class template argument, this function returns the double precision interpolated values, cast to long double. Only for long double State\+Scalar\+Type argument is this function used to its fullest. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which ephemeris is to be evaluated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State in Cartesian elements from ephemeris. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1ephemerides_1_1Ephemeris_a0dc15b6ec16fea02fa3af1a7ffbdeefe}{tudat\+::ephemerides\+::\+Ephemeris}.
+
+\index{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}!get\+Cartesian\+State@{get\+Cartesian\+State}}
+\index{get\+Cartesian\+State@{get\+Cartesian\+State}!tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}}
+\subsubsection[{\texorpdfstring{get\+Cartesian\+State(const double seconds\+Since\+Epoch)}{getCartesianState(const double secondsSinceEpoch)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ Eigen\+::\+Vector6d {\bf tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}$<$ State\+Scalar\+Type, Time\+Type $>$\+::get\+Cartesian\+State (
+\begin{DoxyParamCaption}
+\item[{const double}]{seconds\+Since\+Epoch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_aec6aafbcce0b0fc6f4b13e4559bb96ce}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_aec6aafbcce0b0fc6f4b13e4559bb96ce}
+
+
+Get cartesian state from ephemeris. 
+
+Returns cartesian state from ephemeris, as calculated from interpolator\+\_\+. 
+\begin{DoxyParams}{Parameters}
+{\em seconds\+Since\+Epoch} & Seconds since epoch. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State in Cartesian elements from ephemeris. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1ephemerides_1_1Ephemeris_a9ffa2e6b00aa190385d87266bc6ca091}{tudat\+::ephemerides\+::\+Ephemeris}.
+
+\index{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}!get\+Cartesian\+State\+From\+Extended\+Time@{get\+Cartesian\+State\+From\+Extended\+Time}}
+\index{get\+Cartesian\+State\+From\+Extended\+Time@{get\+Cartesian\+State\+From\+Extended\+Time}!tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}}
+\subsubsection[{\texorpdfstring{get\+Cartesian\+State\+From\+Extended\+Time(const Time \&time)}{getCartesianStateFromExtendedTime(const Time &time)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ Eigen\+::\+Vector6d {\bf tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}$<$ State\+Scalar\+Type, Time\+Type $>$\+::get\+Cartesian\+State\+From\+Extended\+Time (
+\begin{DoxyParamCaption}
+\item[{const {\bf Time} \&}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_ae85412c7f3d9925b17656d5adf45949e}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_ae85412c7f3d9925b17656d5adf45949e}
+
+
+Get cartesian state from ephemeris (in double precision from \hyperlink{classtudat_1_1Time}{Time} input). 
+
+Returns cartesian state from ephemeris (in double precision from \hyperlink{classtudat_1_1Time}{Time} input), as calculated from interpolator\+\_\+. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which ephemeris is to be evaluated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State in Cartesian elements from ephemeris. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classtudat_1_1ephemerides_1_1Ephemeris_a4953c48335220b8c1b46fcd6c408b2d3}{tudat\+::ephemerides\+::\+Ephemeris}.
+
+\index{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}!get\+Interpolator@{get\+Interpolator}}
+\index{get\+Interpolator@{get\+Interpolator}!tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}}
+\subsubsection[{\texorpdfstring{get\+Interpolator()}{getInterpolator()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ {\bf State\+Interpolator\+Pointer} {\bf tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}$<$ State\+Scalar\+Type, Time\+Type $>$\+::get\+Interpolator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a287b1df5480cc7fb1cbbdd02f08aab5f}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a287b1df5480cc7fb1cbbdd02f08aab5f}
+
+
+Function to return the interpolator. 
+
+Function to return the interpolator that is to be used to calculate the state. \begin{DoxyReturn}{Returns}
+Interpolator that is to be used to calculate the state. 
+\end{DoxyReturn}
+\index{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}!reset\+Interpolator@{reset\+Interpolator}}
+\index{reset\+Interpolator@{reset\+Interpolator}!tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris@{tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}}
+\subsubsection[{\texorpdfstring{reset\+Interpolator(const State\+Interpolator\+Pointer interpolator)}{resetInterpolator(const StateInterpolatorPointer interpolator)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double, typename Time\+Type  = double$>$ void {\bf tudat\+::ephemerides\+::\+Tabulated\+Cartesian\+Ephemeris}$<$ State\+Scalar\+Type, Time\+Type $>$\+::reset\+Interpolator (
+\begin{DoxyParamCaption}
+\item[{const {\bf State\+Interpolator\+Pointer}}]{interpolator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a02a693c96a1234906361545e7efae977}{}\label{classtudat_1_1ephemerides_1_1TabulatedCartesianEphemeris_a02a693c96a1234906361545e7efae977}
+
+
+Function to reset the state interpolator. 
+
+Function to reset the state interpolator, for instance following an update of the states of the body after a new numerical integration. 
+\begin{DoxyParams}{Parameters}
+{\em interpolator} & New interpolator that returns the interpolated state as a function of time. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Ephemerides/tabulated\+Ephemeris.\+h\end{DoxyCompactItemize}

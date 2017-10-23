@@ -1,0 +1,225 @@
+\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings}{}\section{tudat\+:\+:propagators\+:\+:Propagator\+Settings$<$ State\+Scalar\+Type $>$ Class Template Reference}
+\label{classtudat_1_1propagators_1_1PropagatorSettings}\index{tudat\+::propagators\+::\+Propagator\+Settings$<$ State\+Scalar\+Type $>$@{tudat\+::propagators\+::\+Propagator\+Settings$<$ State\+Scalar\+Type $>$}}
+
+
+Base class for defining setting of a propagator.  
+
+
+
+
+{\ttfamily \#include $<$propagation\+Settings.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:propagators\+:\+:Propagator\+Settings$<$ State\+Scalar\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtudat_1_1propagators_1_1PropagatorSettings__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_ad4b64ceaf84f1f636ea8effd5f0ff50d}{Propagator\+Settings} (const Integrated\+State\+Type state\+Type, const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ initial\+Body\+States, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1PropagationTerminationSettings}{Propagation\+Termination\+Settings} $>$ termination\+Settings, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$ dependent\+Variables\+To\+Save=boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$(), const double print\+Interval=T\+U\+D\+A\+T\+\_\+\+N\+AN)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_a65e44fea8537b9cc68d1e3d9b1fee714}{$\sim$\+Propagator\+Settings} ()\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_a65e44fea8537b9cc68d1e3d9b1fee714}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_a65e44fea8537b9cc68d1e3d9b1fee714}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_aabfec82eede276a2fd1151176e43d25d}{get\+Initial\+States} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve the initial state used as input for numerical integration. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_a372bd085a2032236531536f5d8c46fb3}{reset\+Initial\+States} (const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&initial\+Body\+States)
+\begin{DoxyCompactList}\small\item\em Function to reset the initial state used as input for numerical integration. \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_a8d46d660668cc4c6401966f5089d3550}{get\+State\+Size} ()
+\begin{DoxyCompactList}\small\item\em Get total size of the propagated state. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1PropagationTerminationSettings}{Propagation\+Termination\+Settings} $>$ \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_a3e8b6688bcf664efef6c5db56c3d9640}{get\+Termination\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve settings for creating the object that checks whether the propagation is finished. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$ \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_ab8f3f9c5ea7c20cbed6f3ec6b9d52c50}{get\+Dependent\+Variables\+To\+Save} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve settings for the dependent variables that are to be saved during propagation (default none). \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_a283ece0684174a4aff3d34df60f062a1}{get\+Print\+Interval} ()
+\begin{DoxyCompactList}\small\item\em Function to retrieve how often the current state and time are to be printed to console. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_ad7ec7e935fbdb5f211eb624d14234f5c}{set\+Termination\+Settings} (boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1PropagationTerminationSettings}{Propagation\+Termination\+Settings} $>$ termination\+Settings)
+\begin{DoxyCompactList}\small\item\em Function to modify settings for creating the object that checks whether the propagation is finished. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Integrated\+State\+Type \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_adc6ec246092e6428117bc630fa2a84e7}{state\+Type\+\_\+}\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_adc6ec246092e6428117bc630fa2a84e7}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_adc6ec246092e6428117bc630fa2a84e7}
+
+\begin{DoxyCompactList}\small\item\em T ype of state being propagated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_a76fe3605ffe32130c5343601125188b4}{initial\+States\+\_\+}\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_a76fe3605ffe32130c5343601125188b4}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_a76fe3605ffe32130c5343601125188b4}
+
+\begin{DoxyCompactList}\small\item\em Initial state used as input for numerical integration. \end{DoxyCompactList}\item 
+int \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_a7325c41d712d7bbeeb12ef8969b235c3}{state\+Size\+\_\+}\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_a7325c41d712d7bbeeb12ef8969b235c3}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_a7325c41d712d7bbeeb12ef8969b235c3}
+
+\begin{DoxyCompactList}\small\item\em Total size of the propagated state. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1PropagationTerminationSettings}{Propagation\+Termination\+Settings} $>$ \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_ae7f409af6d3e5841a2244ec15f440984}{termination\+Settings\+\_\+}\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_ae7f409af6d3e5841a2244ec15f440984}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_ae7f409af6d3e5841a2244ec15f440984}
+
+\begin{DoxyCompactList}\small\item\em Settings for creating the object that checks whether the propagation is finished. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1propagators_1_1DependentVariableSaveSettings}{Dependent\+Variable\+Save\+Settings} $>$ \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_a728be568d26f10b8eb8f97da695e6f83}{dependent\+Variables\+To\+Save\+\_\+}\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_a728be568d26f10b8eb8f97da695e6f83}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_a728be568d26f10b8eb8f97da695e6f83}
+
+\begin{DoxyCompactList}\small\item\em Settings for the dependent variables that are to be saved during propagation (default none). \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1propagators_1_1PropagatorSettings_a9bc60706ee9ab673ed2caec05e716847}{print\+Interval\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename State\+Scalar\+Type = double$>$\\*
+class tudat\+::propagators\+::\+Propagator\+Settings$<$ State\+Scalar\+Type $>$}
+
+Base class for defining setting of a propagator. 
+
+Base class for defining setting of a propagator. This class is non-\/functional, and each state type requires its own derived class (which may have multiple derived classes of its own). 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}!Propagator\+Settings@{Propagator\+Settings}}
+\index{Propagator\+Settings@{Propagator\+Settings}!tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{Propagator\+Settings(const Integrated\+State\+Type state\+Type, const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ initial\+Body\+States, const boost\+::shared\+\_\+ptr$<$ Propagation\+Termination\+Settings $>$ termination\+Settings, const boost\+::shared\+\_\+ptr$<$ Dependent\+Variable\+Save\+Settings $>$ dependent\+Variables\+To\+Save=boost\+::shared\+\_\+ptr$<$ Dependent\+Variable\+Save\+Settings $>$(), const double print\+Interval=\+T\+U\+D\+A\+T\+\_\+\+N\+A\+N)}{PropagatorSettings(const IntegratedStateType stateType, const Eigen::Matrix< StateScalarType, Eigen::Dynamic, 1 > initialBodyStates, const boost::shared_ptr< PropagationTerminationSettings > terminationSettings, const boost::shared_ptr< DependentVariableSaveSettings > dependentVariablesToSave=boost::shared_ptr< DependentVariableSaveSettings >(), const double printInterval=TUDAT_NAN)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double$>$ {\bf tudat\+::propagators\+::\+Propagator\+Settings}$<$ State\+Scalar\+Type $>$\+::{\bf Propagator\+Settings} (
+\begin{DoxyParamCaption}
+\item[{const Integrated\+State\+Type}]{state\+Type, }
+\item[{const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$}]{initial\+Body\+States, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Propagation\+Termination\+Settings} $>$}]{termination\+Settings, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Dependent\+Variable\+Save\+Settings} $>$}]{dependent\+Variables\+To\+Save = {\ttfamily boost\+:\+:shared\+\_\+ptr$<$~{\bf Dependent\+Variable\+Save\+Settings}~$>$(~)}, }
+\item[{const double}]{print\+Interval = {\ttfamily TUDAT\+\_\+NAN}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_ad4b64ceaf84f1f636ea8effd5f0ff50d}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_ad4b64ceaf84f1f636ea8effd5f0ff50d}
+
+
+Constructor. 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em state\+Type} & Type of state being propagated \\
+\hline
+{\em initial\+Body\+States} & Initial state used as input for numerical integration \\
+\hline
+{\em termination\+Settings} & Settings for creating the object that checks whether the propagation is finished. \\
+\hline
+{\em dependent\+Variables\+To\+Save} & Settings for the dependent variables that are to be saved during propagation (default none). \\
+\hline
+{\em print\+Interval} & Variable indicating how often (once per print\+Interval\+\_\+ seconds or propagation independenty variable) the current state and time are to be printed to console (default never). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}!get\+Dependent\+Variables\+To\+Save@{get\+Dependent\+Variables\+To\+Save}}
+\index{get\+Dependent\+Variables\+To\+Save@{get\+Dependent\+Variables\+To\+Save}!tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Dependent\+Variables\+To\+Save()}{getDependentVariablesToSave()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double$>$ boost\+::shared\+\_\+ptr$<$ {\bf Dependent\+Variable\+Save\+Settings} $>$ {\bf tudat\+::propagators\+::\+Propagator\+Settings}$<$ State\+Scalar\+Type $>$\+::get\+Dependent\+Variables\+To\+Save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_ab8f3f9c5ea7c20cbed6f3ec6b9d52c50}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_ab8f3f9c5ea7c20cbed6f3ec6b9d52c50}
+
+
+Function to retrieve settings for the dependent variables that are to be saved during propagation (default none). 
+
+Function to retrieve settings for the dependent variables that are to be saved during propagation (default none). \begin{DoxyReturn}{Returns}
+Settings for the dependent variables that are to be saved during propagation (default none). 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}!get\+Initial\+States@{get\+Initial\+States}}
+\index{get\+Initial\+States@{get\+Initial\+States}!tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Initial\+States()}{getInitialStates()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double$>$ Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ {\bf tudat\+::propagators\+::\+Propagator\+Settings}$<$ State\+Scalar\+Type $>$\+::get\+Initial\+States (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_aabfec82eede276a2fd1151176e43d25d}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_aabfec82eede276a2fd1151176e43d25d}
+
+
+Function to retrieve the initial state used as input for numerical integration. 
+
+Function to retrieve the initial state used as input for numerical integration \begin{DoxyReturn}{Returns}
+Initial state used as input for numerical integration 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}!get\+Print\+Interval@{get\+Print\+Interval}}
+\index{get\+Print\+Interval@{get\+Print\+Interval}!tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Print\+Interval()}{getPrintInterval()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double$>$ double {\bf tudat\+::propagators\+::\+Propagator\+Settings}$<$ State\+Scalar\+Type $>$\+::get\+Print\+Interval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_a283ece0684174a4aff3d34df60f062a1}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_a283ece0684174a4aff3d34df60f062a1}
+
+
+Function to retrieve how often the current state and time are to be printed to console. 
+
+Function to retrieve how often the current state and time are to be printed to console \begin{DoxyReturn}{Returns}
+\hyperlink{classtudat_1_1Time}{Time} intercal with which the current state and time are to be printed to console (default NaN, meaning never). 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}!get\+State\+Size@{get\+State\+Size}}
+\index{get\+State\+Size@{get\+State\+Size}!tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{get\+State\+Size()}{getStateSize()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double$>$ int {\bf tudat\+::propagators\+::\+Propagator\+Settings}$<$ State\+Scalar\+Type $>$\+::get\+State\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_a8d46d660668cc4c6401966f5089d3550}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_a8d46d660668cc4c6401966f5089d3550}
+
+
+Get total size of the propagated state. 
+
+Get total size of the propagated state. \begin{DoxyReturn}{Returns}
+Total size of the propagated state. 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}!get\+Termination\+Settings@{get\+Termination\+Settings}}
+\index{get\+Termination\+Settings@{get\+Termination\+Settings}!tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Termination\+Settings()}{getTerminationSettings()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double$>$ boost\+::shared\+\_\+ptr$<$ {\bf Propagation\+Termination\+Settings} $>$ {\bf tudat\+::propagators\+::\+Propagator\+Settings}$<$ State\+Scalar\+Type $>$\+::get\+Termination\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_a3e8b6688bcf664efef6c5db56c3d9640}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_a3e8b6688bcf664efef6c5db56c3d9640}
+
+
+Function to retrieve settings for creating the object that checks whether the propagation is finished. 
+
+Function to retrieve settings for creating the object that checks whether the propagation is finished. \begin{DoxyReturn}{Returns}
+Settings for creating the object that checks whether the propagation is finished. 
+\end{DoxyReturn}
+\index{tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}!reset\+Initial\+States@{reset\+Initial\+States}}
+\index{reset\+Initial\+States@{reset\+Initial\+States}!tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{reset\+Initial\+States(const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&initial\+Body\+States)}{resetInitialStates(const Eigen::Matrix< StateScalarType, Eigen::Dynamic, 1 > &initialBodyStates)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double$>$ virtual void {\bf tudat\+::propagators\+::\+Propagator\+Settings}$<$ State\+Scalar\+Type $>$\+::reset\+Initial\+States (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix$<$ State\+Scalar\+Type, Eigen\+::\+Dynamic, 1 $>$ \&}]{initial\+Body\+States}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_a372bd085a2032236531536f5d8c46fb3}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_a372bd085a2032236531536f5d8c46fb3}
+
+
+Function to reset the initial state used as input for numerical integration. 
+
+Function to reset the initial state used as input for numerical integration 
+\begin{DoxyParams}{Parameters}
+{\em initial\+Body\+States} & New initial state used as input for numerical integration \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classtudat_1_1propagators_1_1MultiTypePropagatorSettings_a146eb15064b1931e1dbe22abce89dfd5}{tudat\+::propagators\+::\+Multi\+Type\+Propagator\+Settings$<$ State\+Scalar\+Type $>$}.
+
+\index{tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}!set\+Termination\+Settings@{set\+Termination\+Settings}}
+\index{set\+Termination\+Settings@{set\+Termination\+Settings}!tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{set\+Termination\+Settings(boost\+::shared\+\_\+ptr$<$ Propagation\+Termination\+Settings $>$ termination\+Settings)}{setTerminationSettings(boost::shared_ptr< PropagationTerminationSettings > terminationSettings)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double$>$ void {\bf tudat\+::propagators\+::\+Propagator\+Settings}$<$ State\+Scalar\+Type $>$\+::set\+Termination\+Settings (
+\begin{DoxyParamCaption}
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf Propagation\+Termination\+Settings} $>$}]{termination\+Settings}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_ad7ec7e935fbdb5f211eb624d14234f5c}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_ad7ec7e935fbdb5f211eb624d14234f5c}
+
+
+Function to modify settings for creating the object that checks whether the propagation is finished. 
+
+Function to modify settings for creating the object that checks whether the propagation is finished. 
+\begin{DoxyParams}{Parameters}
+{\em termination\+Settings} & new settings for creating the object that checks whether the propagation is finished. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}!print\+Interval\+\_\+@{print\+Interval\+\_\+}}
+\index{print\+Interval\+\_\+@{print\+Interval\+\_\+}!tudat\+::propagators\+::\+Propagator\+Settings@{tudat\+::propagators\+::\+Propagator\+Settings}}
+\subsubsection[{\texorpdfstring{print\+Interval\+\_\+}{printInterval_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename State\+Scalar\+Type  = double$>$ double {\bf tudat\+::propagators\+::\+Propagator\+Settings}$<$ State\+Scalar\+Type $>$\+::print\+Interval\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1propagators_1_1PropagatorSettings_a9bc60706ee9ab673ed2caec05e716847}{}\label{classtudat_1_1propagators_1_1PropagatorSettings_a9bc60706ee9ab673ed2caec05e716847}
+Variable indicating how often (once per print\+Interval\+\_\+ seconds or propagation independenty variable) the current state and time are to be printed to console (default never). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/propagation\+Settings.\+h\end{DoxyCompactItemize}

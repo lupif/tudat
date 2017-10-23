@@ -1,0 +1,5 @@
+<map id="tudat::unit_tests::test_separated_parser_fixture" name="tudat::unit_tests::test_separated_parser_fixture">
+<area shape="rect" id="node2" href="$classtudat_1_1input__output_1_1SeparatedParser.html" title="Separated parser class. " alt="" coords="15,187,146,228"/>
+<area shape="rect" id="node3" href="$classtudat_1_1input__output_1_1TextParser.html" title="A TextParser is a Parser that specialized in parsing text files. " alt="" coords="15,96,146,137"/>
+<area shape="rect" id="node4" href="$classtudat_1_1input__output_1_1Parser.html" title="Parser interface, indicates that the class can parse passed string and stream data. " alt="" coords="15,5,146,47"/>
+</map>

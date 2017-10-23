@@ -1,0 +1,5 @@
+<map id="tudat::propulsion::ThrustMagnitudeWrapper" name="tudat::propulsion::ThrustMagnitudeWrapper">
+<area shape="rect" id="node2" href="$classtudat_1_1propulsion_1_1CustomThrustMagnitudeWrapper.html" title="Class for custom computations of thrust magnitude and mass rate. " alt="" coords="233,5,448,47"/>
+<area shape="rect" id="node3" href="$classtudat_1_1propulsion_1_1ParameterizedThrustMagnitudeWrapper.html" title="tudat::propulsion::\lParameterizedThrustMagnitude\lWrapper" alt="" coords="239,70,442,126"/>
+<area shape="rect" id="node4" href="$classtudat_1_1propulsion_1_1ThrustMagnitudeFromEngineWrapper.html" title="Class to compute the engine thrust and mass rate from EngineModel object(s). " alt="" coords="221,149,460,191"/>
+</map>

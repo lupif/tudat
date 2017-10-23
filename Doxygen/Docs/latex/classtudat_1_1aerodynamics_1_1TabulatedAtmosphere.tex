@@ -1,0 +1,259 @@
+\hypertarget{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere}{}\section{tudat\+:\+:aerodynamics\+:\+:Tabulated\+Atmosphere Class Reference}
+\label{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere}\index{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}}
+
+
+Tabulated atmosphere class.  
+
+
+
+
+{\ttfamily \#include $<$tabulated\+Atmosphere.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:aerodynamics\+:\+:Tabulated\+Atmosphere\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:aerodynamics\+:\+:Tabulated\+Atmosphere\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_aa15a453668c8ef9612de36cec985d34a}{Tabulated\+Atmosphere} (const std\+::string \&atmosphere\+Table\+File, const double specific\+Gas\+Constant=physical\+\_\+constants\+::\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+G\+A\+S\+\_\+\+C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+A\+IR, const double ratio\+Of\+Specific\+Heats=1.\+4)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_a804bfc3e038c22daf5f05637916504fd}{get\+Atmosphere\+Table\+File} ()
+\begin{DoxyCompactList}\small\item\em Get atmosphere table file name. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_a3c0c4cee0c28f9d65274d670d2ebd5cc}{get\+Specific\+Gas\+Constant} ()
+\begin{DoxyCompactList}\small\item\em Get specific gas constant. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_af9b86a6ff7676ac08a194f51070a1793}{get\+Ratio\+Of\+Specific\+Heats} ()
+\begin{DoxyCompactList}\small\item\em Get ratio of specific heats. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_a6185309cb023348803588eed3d80398b}{get\+Density} (const double altitude, const double longitude=0.\+0, const double latitude=0.\+0, const double time=0.\+0)
+\begin{DoxyCompactList}\small\item\em Get local density. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_a10a02961cbbf78570db466eee69d3778}{get\+Pressure} (const double altitude, const double longitude=0.\+0, const double latitude=0.\+0, const double time=0.\+0)
+\begin{DoxyCompactList}\small\item\em Get local pressure. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_afdf6a072bd4c4d876ba2323f5955b441}{get\+Temperature} (const double altitude, const double longitude=0.\+0, const double latitude=0.\+0, const double time=0.\+0)
+\begin{DoxyCompactList}\small\item\em Get local temperature. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_ae644bf870445c03d007984d946ceaee4}{get\+Speed\+Of\+Sound} (const double altitude, const double longitude=0.\+0, const double latitude=0.\+0, const double time=0.\+0)
+\begin{DoxyCompactList}\small\item\em Get local speed of sound in the atmosphere. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Tabulated atmosphere class. 
+
+Tabulated atmospheres class, for example U\+S1976. The default path from which the files are obtained is\+: /\+External/\+Atmosphere\+Tables N\+O\+TE\+: for the moment it only works for tables with 4 columns\+: altitude, density, pressure and temperature. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}!Tabulated\+Atmosphere@{Tabulated\+Atmosphere}}
+\index{Tabulated\+Atmosphere@{Tabulated\+Atmosphere}!tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}}
+\subsubsection[{\texorpdfstring{Tabulated\+Atmosphere(const std\+::string \&atmosphere\+Table\+File, const double specific\+Gas\+Constant=physical\+\_\+constants\+::\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+G\+A\+S\+\_\+\+C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+A\+I\+R, const double ratio\+Of\+Specific\+Heats=1.\+4)}{TabulatedAtmosphere(const std::string &atmosphereTableFile, const double specificGasConstant=physical_constants::SPECIFIC_GAS_CONSTANT_AIR, const double ratioOfSpecificHeats=1.4)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere\+::\+Tabulated\+Atmosphere (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{atmosphere\+Table\+File, }
+\item[{const double}]{specific\+Gas\+Constant = {\ttfamily physical\+\_\+constants\+:\+:SPECIFIC\+\_\+GAS\+\_\+CONSTANT\+\_\+AIR}, }
+\item[{const double}]{ratio\+Of\+Specific\+Heats = {\ttfamily 1.4}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_aa15a453668c8ef9612de36cec985d34a}{}\label{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_aa15a453668c8ef9612de36cec985d34a}
+
+
+Default constructor. 
+
+Default constructor. 
+\begin{DoxyParams}{Parameters}
+{\em atmosphere\+Table\+File} & File containing atmospheric properties. The file name of the atmosphere table. The file should contain four columns of data, containing altitude (first column), and the associated density, pressure and density values in the second, third and fourth columns \\
+\hline
+{\em specific\+Gas\+Constant} & The constant specific gas constant of the air \\
+\hline
+{\em ratio\+Of\+Specific\+Heats} & The constant ratio of specific heats of the air \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}!get\+Atmosphere\+Table\+File@{get\+Atmosphere\+Table\+File}}
+\index{get\+Atmosphere\+Table\+File@{get\+Atmosphere\+Table\+File}!tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Atmosphere\+Table\+File()}{getAtmosphereTableFile()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere\+::get\+Atmosphere\+Table\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_a804bfc3e038c22daf5f05637916504fd}{}\label{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_a804bfc3e038c22daf5f05637916504fd}
+
+
+Get atmosphere table file name. 
+
+Returns atmosphere table file name. \begin{DoxyReturn}{Returns}
+The atmosphere table file. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}!get\+Density@{get\+Density}}
+\index{get\+Density@{get\+Density}!tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Density(const double altitude, const double longitude=0.\+0, const double latitude=0.\+0, const double time=0.\+0)}{getDensity(const double altitude, const double longitude=0.0, const double latitude=0.0, const double time=0.0)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere\+::get\+Density (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude = {\ttfamily 0.0}, }
+\item[{const double}]{latitude = {\ttfamily 0.0}, }
+\item[{const double}]{time = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_a6185309cb023348803588eed3d80398b}{}\label{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_a6185309cb023348803588eed3d80398b}
+
+
+Get local density. 
+
+Returns the local density parameter of the atmosphere in kg per meter$^\wedge$3. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude at which density is to be computed. \\
+\hline
+{\em longitude} & Longitude at which density is to be computed (not used but included for consistency with base class interface). \\
+\hline
+{\em latitude} & Latitude at which density is to be computed (not used but included for consistency with base class interface). \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which density is to be computed (not used but included for consistency with base class interface). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Atmospheric density at specified altitude. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1aerodynamics_1_1StandardAtmosphere_a85b7e8803277496e8f5abc9bb36d5bf6}{tudat\+::aerodynamics\+::\+Standard\+Atmosphere}.
+
+\index{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}!get\+Pressure@{get\+Pressure}}
+\index{get\+Pressure@{get\+Pressure}!tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Pressure(const double altitude, const double longitude=0.\+0, const double latitude=0.\+0, const double time=0.\+0)}{getPressure(const double altitude, const double longitude=0.0, const double latitude=0.0, const double time=0.0)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere\+::get\+Pressure (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude = {\ttfamily 0.0}, }
+\item[{const double}]{latitude = {\ttfamily 0.0}, }
+\item[{const double}]{time = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_a10a02961cbbf78570db466eee69d3778}{}\label{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_a10a02961cbbf78570db466eee69d3778}
+
+
+Get local pressure. 
+
+Returns the local pressure of the atmosphere in Newton per meter$^\wedge$2. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude at which pressure is to be computed. \\
+\hline
+{\em longitude} & Longitude at which pressure is to be computed (not used but included for consistency with base class interface). \\
+\hline
+{\em latitude} & Latitude at which pressure is to be computed (not used but included for consistency with base class interface). \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which pressure is to be computed (not used but included for consistency with base class interface). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Atmospheric pressure at specified altitude. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1aerodynamics_1_1StandardAtmosphere_aedd2b6b8824cebea8dea628bfec0e236}{tudat\+::aerodynamics\+::\+Standard\+Atmosphere}.
+
+\index{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}!get\+Ratio\+Of\+Specific\+Heats@{get\+Ratio\+Of\+Specific\+Heats}}
+\index{get\+Ratio\+Of\+Specific\+Heats@{get\+Ratio\+Of\+Specific\+Heats}!tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Ratio\+Of\+Specific\+Heats()}{getRatioOfSpecificHeats()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere\+::get\+Ratio\+Of\+Specific\+Heats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_af9b86a6ff7676ac08a194f51070a1793}{}\label{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_af9b86a6ff7676ac08a194f51070a1793}
+
+
+Get ratio of specific heats. 
+
+Returns the ratio of specific hears of the air, its value is assumed constant,. \begin{DoxyReturn}{Returns}
+Ratio of specific heats exponential atmosphere. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}!get\+Specific\+Gas\+Constant@{get\+Specific\+Gas\+Constant}}
+\index{get\+Specific\+Gas\+Constant@{get\+Specific\+Gas\+Constant}!tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Specific\+Gas\+Constant()}{getSpecificGasConstant()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere\+::get\+Specific\+Gas\+Constant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_a3c0c4cee0c28f9d65274d670d2ebd5cc}{}\label{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_a3c0c4cee0c28f9d65274d670d2ebd5cc}
+
+
+Get specific gas constant. 
+
+Returns the specific gas constant of the air in J/(kg K), its value is assumed constant. \begin{DoxyReturn}{Returns}
+specific\+Gas\+Constant Specific gas constant in exponential atmosphere. 
+\end{DoxyReturn}
+\index{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}!get\+Speed\+Of\+Sound@{get\+Speed\+Of\+Sound}}
+\index{get\+Speed\+Of\+Sound@{get\+Speed\+Of\+Sound}!tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Speed\+Of\+Sound(const double altitude, const double longitude=0.\+0, const double latitude=0.\+0, const double time=0.\+0)}{getSpeedOfSound(const double altitude, const double longitude=0.0, const double latitude=0.0, const double time=0.0)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere\+::get\+Speed\+Of\+Sound (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude = {\ttfamily 0.0}, }
+\item[{const double}]{latitude = {\ttfamily 0.0}, }
+\item[{const double}]{time = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_ae644bf870445c03d007984d946ceaee4}{}\label{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_ae644bf870445c03d007984d946ceaee4}
+
+
+Get local speed of sound in the atmosphere. 
+
+Returns the speed of sound in the atmosphere in m/s. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude at which speed of sound is to be computed. \\
+\hline
+{\em longitude} & Longitude at which speed of sound is to be computed (not used but included for consistency with base class interface). \\
+\hline
+{\em latitude} & Latitude at which speed of sound is to be computed (not used but included for consistency with base class interface). \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which speed of sound is to be computed (not used but included for consistency with base class interface). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Atmospheric speed of sound at specified altitude. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1aerodynamics_1_1StandardAtmosphere_a9992c99f7994882307b05161e19fc298}{tudat\+::aerodynamics\+::\+Standard\+Atmosphere}.
+
+\index{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}!get\+Temperature@{get\+Temperature}}
+\index{get\+Temperature@{get\+Temperature}!tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere@{tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere}}
+\subsubsection[{\texorpdfstring{get\+Temperature(const double altitude, const double longitude=0.\+0, const double latitude=0.\+0, const double time=0.\+0)}{getTemperature(const double altitude, const double longitude=0.0, const double latitude=0.0, const double time=0.0)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::aerodynamics\+::\+Tabulated\+Atmosphere\+::get\+Temperature (
+\begin{DoxyParamCaption}
+\item[{const double}]{altitude, }
+\item[{const double}]{longitude = {\ttfamily 0.0}, }
+\item[{const double}]{latitude = {\ttfamily 0.0}, }
+\item[{const double}]{time = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_afdf6a072bd4c4d876ba2323f5955b441}{}\label{classtudat_1_1aerodynamics_1_1TabulatedAtmosphere_afdf6a072bd4c4d876ba2323f5955b441}
+
+
+Get local temperature. 
+
+Returns the local temperature of the atmosphere in Kelvin. 
+\begin{DoxyParams}{Parameters}
+{\em altitude} & Altitude at which temperature is to be computed \\
+\hline
+{\em longitude} & Longitude at which temperature is to be computed (not used but included for consistency with base class interface). \\
+\hline
+{\em latitude} & Latitude at which temperature is to be computed (not used but included for consistency with base class interface). \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at which temperature is to be computed (not used but included for consistency with base class interface). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+constant\+Temperature Atmospheric temperature at specified altitude. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classtudat_1_1aerodynamics_1_1StandardAtmosphere_ac5b9a16a96cbb496a4ee76b3dc495543}{tudat\+::aerodynamics\+::\+Standard\+Atmosphere}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Aerodynamics/tabulated\+Atmosphere.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Aerodynamics/tabulated\+Atmosphere.\+cpp\end{DoxyCompactItemize}

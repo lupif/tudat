@@ -1,0 +1,103 @@
+\hypertarget{classtudat_1_1mission__segments_1_1EccentricityFindingFunctions}{}\section{tudat\+:\+:mission\+\_\+segments\+:\+:Eccentricity\+Finding\+Functions Class Reference}
+\label{classtudat_1_1mission__segments_1_1EccentricityFindingFunctions}\index{tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions@{tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions}}
+
+
+Eccentricity finding functions class.  
+
+
+
+
+{\ttfamily \#include $<$gravity\+Assist.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1mission__segments_1_1EccentricityFindingFunctions_a2181e6c239706a5b6ee73e1c0ac8d97c}{Eccentricity\+Finding\+Functions} (const double incoming\+Semi\+Major\+Axis, const double outgoing\+Semi\+Major\+Axis, const double bending\+Angle)
+\begin{DoxyCompactList}\small\item\em Constructor with immediate definition of parameters. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1mission__segments_1_1EccentricityFindingFunctions_ab9b00ad2fe6116a3eba3fb89317fb5b5}{compute\+Incoming\+Eccentricity\+Function} (const double incoming\+Eccentricity)
+\begin{DoxyCompactList}\small\item\em Compute incoming eccentricity function. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1mission__segments_1_1EccentricityFindingFunctions_a772c89f5575b47e6b8de0ff23a6eceb7}{compute\+First\+Derivative\+Incoming\+Eccentricity\+Function} (const double incoming\+Eccentricity)
+\begin{DoxyCompactList}\small\item\em Compute first-\/derivative of the incoming eccentricity function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Eccentricity finding functions class. 
+
+This class contains the functions required by the root-\/finders to find the incoming eccentricity in the gravity assist function to find the deltaV. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions@{tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions}!Eccentricity\+Finding\+Functions@{Eccentricity\+Finding\+Functions}}
+\index{Eccentricity\+Finding\+Functions@{Eccentricity\+Finding\+Functions}!tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions@{tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions}}
+\subsubsection[{\texorpdfstring{Eccentricity\+Finding\+Functions(const double incoming\+Semi\+Major\+Axis, const double outgoing\+Semi\+Major\+Axis, const double bending\+Angle)}{EccentricityFindingFunctions(const double incomingSemiMajorAxis, const double outgoingSemiMajorAxis, const double bendingAngle)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions\+::\+Eccentricity\+Finding\+Functions (
+\begin{DoxyParamCaption}
+\item[{const double}]{incoming\+Semi\+Major\+Axis, }
+\item[{const double}]{outgoing\+Semi\+Major\+Axis, }
+\item[{const double}]{bending\+Angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1mission__segments_1_1EccentricityFindingFunctions_a2181e6c239706a5b6ee73e1c0ac8d97c}{}\label{classtudat_1_1mission__segments_1_1EccentricityFindingFunctions_a2181e6c239706a5b6ee73e1c0ac8d97c}
+
+
+Constructor with immediate definition of parameters. 
+
+Constructor that sets all the parameters in the eccentricity finding functions for use in the Newton Raphson rootfinder. 
+\begin{DoxyParams}{Parameters}
+{\em incoming\+Semi\+Major\+Axis} & The semi-\/major axis of the incomming hyperbolic leg. \mbox{[}m\mbox{]} \\
+\hline
+{\em outgoing\+Semi\+Major\+Axis} & The semi-\/major axis of the outgoing hyperbolic leg. \mbox{[}m\mbox{]} \\
+\hline
+{\em bending\+Angle} & The bending angle between the excess velocities. \mbox{[}rad\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions@{tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions}!compute\+First\+Derivative\+Incoming\+Eccentricity\+Function@{compute\+First\+Derivative\+Incoming\+Eccentricity\+Function}}
+\index{compute\+First\+Derivative\+Incoming\+Eccentricity\+Function@{compute\+First\+Derivative\+Incoming\+Eccentricity\+Function}!tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions@{tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions}}
+\subsubsection[{\texorpdfstring{compute\+First\+Derivative\+Incoming\+Eccentricity\+Function(const double incoming\+Eccentricity)}{computeFirstDerivativeIncomingEccentricityFunction(const double incomingEccentricity)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions\+::compute\+First\+Derivative\+Incoming\+Eccentricity\+Function (
+\begin{DoxyParamCaption}
+\item[{const double}]{incoming\+Eccentricity}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1mission__segments_1_1EccentricityFindingFunctions_a772c89f5575b47e6b8de0ff23a6eceb7}{}\label{classtudat_1_1mission__segments_1_1EccentricityFindingFunctions_a772c89f5575b47e6b8de0ff23a6eceb7}
+
+
+Compute first-\/derivative of the incoming eccentricity function. 
+
+Computes the first-\/derivative of the incoming eccentricity function. This function is used by the Newton-\/\+Raphson root-\/finder to find the incoming eccentricity that matches the bending angle required in the gravity assist. 
+\begin{DoxyParams}{Parameters}
+{\em incoming\+Eccentricity} & Incoming eccentricity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Incoming eccentricity root finding function first-\/derivative value. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Newton\+Rapshon(). 
+\end{DoxySeeAlso}
+\index{tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions@{tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions}!compute\+Incoming\+Eccentricity\+Function@{compute\+Incoming\+Eccentricity\+Function}}
+\index{compute\+Incoming\+Eccentricity\+Function@{compute\+Incoming\+Eccentricity\+Function}!tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions@{tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions}}
+\subsubsection[{\texorpdfstring{compute\+Incoming\+Eccentricity\+Function(const double incoming\+Eccentricity)}{computeIncomingEccentricityFunction(const double incomingEccentricity)}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::mission\+\_\+segments\+::\+Eccentricity\+Finding\+Functions\+::compute\+Incoming\+Eccentricity\+Function (
+\begin{DoxyParamCaption}
+\item[{const double}]{incoming\+Eccentricity}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1mission__segments_1_1EccentricityFindingFunctions_ab9b00ad2fe6116a3eba3fb89317fb5b5}{}\label{classtudat_1_1mission__segments_1_1EccentricityFindingFunctions_ab9b00ad2fe6116a3eba3fb89317fb5b5}
+
+
+Compute incoming eccentricity function. 
+
+Computes incoming eccentricity function. This function is used by the Newton-\/\+Raphson root-\/ finder to find the incoming eccentricity that matches the bending angle required in the gravity assist. 
+\begin{DoxyParams}{Parameters}
+{\em incoming\+Eccentricity} & Incoming eccentricity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Incoming eccentricity root finding function value. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Newton\+Raphson(). 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Mission\+Segments/gravity\+Assist.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Mission\+Segments/gravity\+Assist.\+cpp\end{DoxyCompactItemize}

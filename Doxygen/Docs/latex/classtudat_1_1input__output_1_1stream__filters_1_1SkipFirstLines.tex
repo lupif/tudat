@@ -1,0 +1,93 @@
+\hypertarget{classtudat_1_1input__output_1_1stream__filters_1_1SkipFirstLines}{}\section{tudat\+:\+:input\+\_\+output\+:\+:stream\+\_\+filters\+:\+:Skip\+First\+Lines Class Reference}
+\label{classtudat_1_1input__output_1_1stream__filters_1_1SkipFirstLines}\index{tudat\+::input\+\_\+output\+::stream\+\_\+filters\+::\+Skip\+First\+Lines@{tudat\+::input\+\_\+output\+::stream\+\_\+filters\+::\+Skip\+First\+Lines}}
+
+
+Filter for skipping the first several lines in a stream.  
+
+
+
+
+{\ttfamily \#include $<$stream\+Filters.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:input\+\_\+output\+:\+:stream\+\_\+filters\+:\+:Skip\+First\+Lines\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classtudat_1_1input__output_1_1stream__filters_1_1SkipFirstLines__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:input\+\_\+output\+:\+:stream\+\_\+filters\+:\+:Skip\+First\+Lines\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classtudat_1_1input__output_1_1stream__filters_1_1SkipFirstLines__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1input__output_1_1stream__filters_1_1SkipFirstLines_aa5afe3401fd4348b9840504ab346e40b}{Skip\+First\+Lines} (unsigned int lines\+To\+Skip=0, bool is\+Omit\+If\+Empty=true)
+\begin{DoxyCompactList}\small\item\em Create a filter to skip a given amount of lines. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1input__output_1_1stream__filters_1_1SkipFirstLines_a39193974df3b34e1618e51cca1070cb4}{do\+\_\+filter} (const std\+::string \&line)
+\begin{DoxyCompactList}\small\item\em Execute filter on the input line by skipping if required. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Filter for skipping the first several lines in a stream. 
+
+This class allows for a data stream to be filtered by skipping a given number of lines from the start of the stream. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::input\+\_\+output\+::stream\+\_\+filters\+::\+Skip\+First\+Lines@{tudat\+::input\+\_\+output\+::stream\+\_\+filters\+::\+Skip\+First\+Lines}!Skip\+First\+Lines@{Skip\+First\+Lines}}
+\index{Skip\+First\+Lines@{Skip\+First\+Lines}!tudat\+::input\+\_\+output\+::stream\+\_\+filters\+::\+Skip\+First\+Lines@{tudat\+::input\+\_\+output\+::stream\+\_\+filters\+::\+Skip\+First\+Lines}}
+\subsubsection[{\texorpdfstring{Skip\+First\+Lines(unsigned int lines\+To\+Skip=0, bool is\+Omit\+If\+Empty=true)}{SkipFirstLines(unsigned int linesToSkip=0, bool isOmitIfEmpty=true)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::input\+\_\+output\+::stream\+\_\+filters\+::\+Skip\+First\+Lines\+::\+Skip\+First\+Lines (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{lines\+To\+Skip = {\ttfamily 0}, }
+\item[{bool}]{is\+Omit\+If\+Empty = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1input__output_1_1stream__filters_1_1SkipFirstLines_aa5afe3401fd4348b9840504ab346e40b}{}\label{classtudat_1_1input__output_1_1stream__filters_1_1SkipFirstLines_aa5afe3401fd4348b9840504ab346e40b}
+
+
+Create a filter to skip a given amount of lines. 
+
+Creates a filter to skip a given amount of lines by passing in the number of lines to skip and the action for empty lines. Note that the variable \char`\"{}line\+\_\+filter\char`\"{} is set to true, to indicate to Boost not to append newline characters. 
+\begin{DoxyParams}{Parameters}
+{\em lines\+To\+Skip} & Number of lines (counted sequentially from the stream head) to discard. \\
+\hline
+{\em is\+Omit\+If\+Empty} & True if a line should be removed when a complete line is filtered away. (If false, there will be \textquotesingle{}lines\+To\+Skip\textquotesingle{} newline characters is the start of the stream.) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::input\+\_\+output\+::stream\+\_\+filters\+::\+Skip\+First\+Lines@{tudat\+::input\+\_\+output\+::stream\+\_\+filters\+::\+Skip\+First\+Lines}!do\+\_\+filter@{do\+\_\+filter}}
+\index{do\+\_\+filter@{do\+\_\+filter}!tudat\+::input\+\_\+output\+::stream\+\_\+filters\+::\+Skip\+First\+Lines@{tudat\+::input\+\_\+output\+::stream\+\_\+filters\+::\+Skip\+First\+Lines}}
+\subsubsection[{\texorpdfstring{do\+\_\+filter(const std\+::string \&line)}{do_filter(const std::string &line)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::input\+\_\+output\+::stream\+\_\+filters\+::\+Skip\+First\+Lines\+::do\+\_\+filter (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{line}
+\end{DoxyParamCaption}
+)}\hypertarget{classtudat_1_1input__output_1_1stream__filters_1_1SkipFirstLines_a39193974df3b34e1618e51cca1070cb4}{}\label{classtudat_1_1input__output_1_1stream__filters_1_1SkipFirstLines_a39193974df3b34e1618e51cca1070cb4}
+
+
+Execute filter on the input line by skipping if required. 
+
+This object will ignore the first \textquotesingle{}lines\+To\+Skip\+\_\+\textquotesingle{} number of passed in lines before returning the same line. For more information see boost\+::iostreams\+::line\+\_\+filter (overrides definition of line\+\_\+filter to enable chaining of filters). 
+\begin{DoxyParams}{Parameters}
+{\em line} & Unfiltered line. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Filtered line. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Input\+Output/stream\+Filters.\+h\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Input\+Output/stream\+Filters.\+cpp\end{DoxyCompactItemize}

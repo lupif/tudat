@@ -22,6 +22,7 @@ set(OPTIMIZATION_HEADERS
   "${SRCROOT}${OPTIMIZATIONDIR}/missionLinker.h"
   "${SRCROOT}${OPTIMIZATIONDIR}/objectiveFunction.h"
   "${SRCROOT}${OPTIMIZATIONDIR}/missionSegmentSettings.h"
+  "${SRCROOT}${OPTIMIZATIONDIR}/simplePlanetaryTargeter.h"
 )
 
 # Add unit test files.
@@ -32,6 +33,7 @@ set(OPTIMIZATION_UNITTESTS
 # Add static libraries.
 add_library(tudat_optimization STATIC ${OPTIMIZATION_SOURCES} ${OPTIMIZATION_HEADERS})
 setup_tudat_library_target(tudat_optimization "${SRCROOT}${OPTIMIZATIONDIR}")
+target_link_libraries(tudat_optimization tudat_basic_astrodynamics)
 
 # Add unit tests.
 add_executable(test_DecisionVariableSettings "${SRCROOT}${OPTIMIZATIONDIR}/UnitTests/unitTestDecisionVariableSettings.cpp")
@@ -53,4 +55,13 @@ add_executable(test_MissionLinker "${SRCROOT}${OPTIMIZATIONDIR}/UnitTests/unitTe
 setup_custom_test_program(test_MissionLinker "${SRCROOT}${OPTIMIZATIONDIR}")
 target_link_libraries(test_MissionLinker ${TUDAT_PROPAGATION_LIBRARIES}
     tudat_basic_astrodynamics pthread ${Boost_LIBRARIES} tudat_optimization )
+
+add_executable(test_PlanetaryTargeter "${SRCROOT}${OPTIMIZATIONDIR}/UnitTests/unitTestPlanetaryTargeter.cpp")
+setup_custom_test_program(test_PlanetaryTargeter "${SRCROOT}${OPTIMIZATIONDIR}")
+target_link_libraries(test_PlanetaryTargeter ${TUDAT_PROPAGATION_LIBRARIES}
+    tudat_basic_astrodynamics pthread ${Boost_LIBRARIES} tudat_optimization )
+
+
+
+
 

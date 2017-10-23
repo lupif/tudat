@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtudat_1_1statistics_1_1ContinuousProbabilityDistribution.html" title="tudat::statistics::\lContinuousProbabilityDistribution\l\&lt; Eigen::VectorXd \&gt;" alt="" coords="5,63,220,119"/>
+<area shape="rect" id="node2" href="$classtudat_1_1statistics_1_1GaussianCopulaDistributionXd.html" title="Implementation of Gaussian Copula Distribution. " alt="" coords="268,5,468,47"/>
+<area shape="rect" id="node3" href="$classtudat_1_1statistics_1_1GaussianDistributionXd.html" title="Implementation of multi&#45;dimensional Gaussian Probability Distribution. " alt="" coords="289,71,447,112"/>
+<area shape="rect" id="node4" href="$classtudat_1_1statistics_1_1KernelDensityDistribution.html" title="Class that uses random samples to generate a multivariate probability distribution using Kernel Densi..." alt="" coords="283,136,453,177"/>
+</map>

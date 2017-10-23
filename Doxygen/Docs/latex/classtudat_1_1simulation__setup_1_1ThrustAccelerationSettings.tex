@@ -1,0 +1,131 @@
+\hypertarget{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings}{}\section{tudat\+:\+:simulation\+\_\+setup\+:\+:Thrust\+Acceleration\+Settings Class Reference}
+\label{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings}\index{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings}}
+
+
+Class for providing acceleration settings for a thrust acceleration model.  
+
+
+
+
+{\ttfamily \#include $<$acceleration\+Settings.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:simulation\+\_\+setup\+:\+:Thrust\+Acceleration\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:simulation\+\_\+setup\+:\+:Thrust\+Acceleration\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_ade483b5bce614156367b642cf5fe6947}{Thrust\+Acceleration\+Settings} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1simulation__setup_1_1ThrustDirectionGuidanceSettings}{Thrust\+Direction\+Guidance\+Settings} $>$ thrust\+Direction\+Guidance\+Settings, const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1simulation__setup_1_1ThrustEngineSettings}{Thrust\+Engine\+Settings} $>$ thrust\+Magnitude\+Settings)
+\begin{DoxyCompactList}\small\item\em Constructor from separate magnitude and diretion settings. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_af43db3815c573db4cad4573f3cf96274}{Thrust\+Acceleration\+Settings} (const boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1OneDimensionalInterpolator}{interpolators\+::\+One\+Dimensional\+Interpolator}$<$ double, Eigen\+::\+Vector3d $>$ $>$ full\+Thrust\+Interpolator, const boost\+::function$<$ double(const double) $>$ specific\+Impulse\+Function, const Thrust\+Frames thrust\+Frame=unspecified\+\_\+thurst\+\_\+frame, const std\+::string central\+Body=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor used for defining total thrust vector (in local or inertial frame) from interpolator. \end{DoxyCompactList}\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_a8454a64ad1922663d0e7ab1e19aa4860}{$\sim$\+Thrust\+Acceleration\+Settings} ()\hypertarget{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_a8454a64ad1922663d0e7ab1e19aa4860}{}\label{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_a8454a64ad1922663d0e7ab1e19aa4860}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1simulation__setup_1_1ThrustDirectionGuidanceSettings}{Thrust\+Direction\+Guidance\+Settings} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_a4990124cce8534183db087d9aa42863a}{thrust\+Direction\+Guidance\+Settings\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_a4990124cce8534183db087d9aa42863a}{}\label{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_a4990124cce8534183db087d9aa42863a}
+
+\begin{DoxyCompactList}\small\item\em Settings for the direction of the thrust. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1simulation__setup_1_1ThrustEngineSettings}{Thrust\+Engine\+Settings} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_af4539aa18a67b166bd5ea5362fd713fd}{thrust\+Magnitude\+Settings\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_af4539aa18a67b166bd5ea5362fd713fd}{}\label{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_af4539aa18a67b166bd5ea5362fd713fd}
+
+\begin{DoxyCompactList}\small\item\em Settings for the magnitude of the thrust. \end{DoxyCompactList}\item 
+Thrust\+Frames \hyperlink{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_a769892c0ff68a3a332aee38e5395790b}{thrust\+Frame\+\_\+}
+\begin{DoxyCompactList}\small\item\em Identifier of frame in which thrust returned by full\+Thrust\+Interpolator is expressed. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_ad5c45c7305e18e1decb708f122cb7b70}{central\+Body\+\_\+}
+\begin{DoxyCompactList}\small\item\em Central body identifier for thrust\+Frame. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1simulation__setup_1_1FullThrustInterpolationInterface}{Full\+Thrust\+Interpolation\+Interface} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_a279e108bba5fbde40e939c54278691f5}{interpolator\+Interface\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_a279e108bba5fbde40e939c54278691f5}{}\label{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_a279e108bba5fbde40e939c54278691f5}
+
+\begin{DoxyCompactList}\small\item\em Interface object used when full thrust (direction and magnitude) are defined by a single user-\/supplied interpolation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for providing acceleration settings for a thrust acceleration model. 
+
+Class for providing acceleration settings for a thrust acceleration model. Settings for the direction and magnitude guidance of the thrust are provided/ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings}!Thrust\+Acceleration\+Settings@{Thrust\+Acceleration\+Settings}}
+\index{Thrust\+Acceleration\+Settings@{Thrust\+Acceleration\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings}}
+\subsubsection[{\texorpdfstring{Thrust\+Acceleration\+Settings(const boost\+::shared\+\_\+ptr$<$ Thrust\+Direction\+Guidance\+Settings $>$ thrust\+Direction\+Guidance\+Settings, const boost\+::shared\+\_\+ptr$<$ Thrust\+Engine\+Settings $>$ thrust\+Magnitude\+Settings)}{ThrustAccelerationSettings(const boost::shared_ptr< ThrustDirectionGuidanceSettings > thrustDirectionGuidanceSettings, const boost::shared_ptr< ThrustEngineSettings > thrustMagnitudeSettings)}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings\+::\+Thrust\+Acceleration\+Settings (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Thrust\+Direction\+Guidance\+Settings} $>$}]{thrust\+Direction\+Guidance\+Settings, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Thrust\+Engine\+Settings} $>$}]{thrust\+Magnitude\+Settings}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_ade483b5bce614156367b642cf5fe6947}{}\label{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_ade483b5bce614156367b642cf5fe6947}
+
+
+Constructor from separate magnitude and diretion settings. 
+
+Constructor from separate magnitude and diretion settings. 
+\begin{DoxyParams}{Parameters}
+{\em thrust\+Direction\+Guidance\+Settings} & Settings for the direction of the thrust \\
+\hline
+{\em thrust\+Magnitude\+Settings} & Settings for the magnitude of the thrust \\
+\hline
+\end{DoxyParams}
+\index{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings}!Thrust\+Acceleration\+Settings@{Thrust\+Acceleration\+Settings}}
+\index{Thrust\+Acceleration\+Settings@{Thrust\+Acceleration\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings}}
+\subsubsection[{\texorpdfstring{Thrust\+Acceleration\+Settings(const boost\+::shared\+\_\+ptr$<$ interpolators\+::\+One\+Dimensional\+Interpolator$<$ double, Eigen\+::\+Vector3d $>$ $>$ full\+Thrust\+Interpolator, const boost\+::function$<$ double(const double) $>$ specific\+Impulse\+Function, const Thrust\+Frames thrust\+Frame=unspecified\+\_\+thurst\+\_\+frame, const std\+::string central\+Body="""")}{ThrustAccelerationSettings(const boost::shared_ptr< interpolators::OneDimensionalInterpolator< double, Eigen::Vector3d > > fullThrustInterpolator, const boost::function< double(const double) > specificImpulseFunction, const ThrustFrames thrustFrame=unspecified_thurst_frame, const std::string centralBody="")}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings\+::\+Thrust\+Acceleration\+Settings (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf interpolators\+::\+One\+Dimensional\+Interpolator}$<$ double, Eigen\+::\+Vector3d $>$ $>$}]{full\+Thrust\+Interpolator, }
+\item[{const boost\+::function$<$ double(const double) $>$}]{specific\+Impulse\+Function, }
+\item[{const Thrust\+Frames}]{thrust\+Frame = {\ttfamily unspecified\+\_\+thurst\+\_\+frame}, }
+\item[{const std\+::string}]{central\+Body = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_af43db3815c573db4cad4573f3cf96274}{}\label{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_af43db3815c573db4cad4573f3cf96274}
+
+
+Constructor used for defining total thrust vector (in local or inertial frame) from interpolator. 
+
+Constructor used for defining total thrust vector (in local or inertial frame) from interpolator 
+\begin{DoxyParams}{Parameters}
+{\em full\+Thrust\+Interpolator} & Interpolator that returns the thrust as a function of time in frame defined by thrust\+Frame \\
+\hline
+{\em specific\+Impulse\+Function} & Function returning the specific impulse as a function of time \\
+\hline
+{\em thrust\+Frame} & Identifier of frame in which thrust returned by full\+Thrust\+Interpolator is expressed \\
+\hline
+{\em central\+Body} & Central body identifier for thrust\+Frame (if needed; empty by default). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings}!central\+Body\+\_\+@{central\+Body\+\_\+}}
+\index{central\+Body\+\_\+@{central\+Body\+\_\+}!tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings}}
+\subsubsection[{\texorpdfstring{central\+Body\+\_\+}{centralBody_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings\+::central\+Body\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_ad5c45c7305e18e1decb708f122cb7b70}{}\label{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_ad5c45c7305e18e1decb708f122cb7b70}
+
+
+Central body identifier for thrust\+Frame. 
+
+Central body identifier for thrust\+Frame. Empty by default, only used if interpolator\+Interface\+\_\+ is set \index{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings}!thrust\+Frame\+\_\+@{thrust\+Frame\+\_\+}}
+\index{thrust\+Frame\+\_\+@{thrust\+Frame\+\_\+}!tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings}}
+\subsubsection[{\texorpdfstring{thrust\+Frame\+\_\+}{thrustFrame_}}]{\setlength{\rightskip}{0pt plus 5cm}Thrust\+Frames tudat\+::simulation\+\_\+setup\+::\+Thrust\+Acceleration\+Settings\+::thrust\+Frame\+\_\+}\hypertarget{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_a769892c0ff68a3a332aee38e5395790b}{}\label{classtudat_1_1simulation__setup_1_1ThrustAccelerationSettings_a769892c0ff68a3a332aee38e5395790b}
+
+
+Identifier of frame in which thrust returned by full\+Thrust\+Interpolator is expressed. 
+
+Identifier of frame in which thrust returned by full\+Thrust\+Interpolator is expressed. Unspecifief by default, only used if interpolator\+Interface\+\_\+ is set 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Propagation\+Setup/acceleration\+Settings.\+h\end{DoxyCompactItemize}

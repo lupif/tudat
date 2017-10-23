@@ -1,0 +1,149 @@
+\hypertarget{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings}{}\section{tudat\+:\+:simulation\+\_\+setup\+:\+:Interpolated\+Spice\+Ephemeris\+Settings Class Reference}
+\label{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings}\index{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings}}
+
+
+{\ttfamily \#include $<$create\+Ephemeris.\+h$>$}
+
+
+
+Inheritance diagram for tudat\+:\+:simulation\+\_\+setup\+:\+:Interpolated\+Spice\+Ephemeris\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tudat\+:\+:simulation\+\_\+setup\+:\+:Interpolated\+Spice\+Ephemeris\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_afc1dcfeb27f1073bcff03d1bfd2ba15e}{Interpolated\+Spice\+Ephemeris\+Settings} (double initial\+Time, double final\+Time, double time\+Step, std\+::string frame\+Origin=\char`\"{}S\+SB\char`\"{}, std\+::string frame\+Orientation=\char`\"{}E\+C\+L\+I\+P\+J2000\char`\"{}, boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings}{interpolators\+::\+Interpolator\+Settings} $>$ interpolator\+Settings=boost\+::make\+\_\+shared$<$ \hyperlink{classtudat_1_1interpolators_1_1LagrangeInterpolatorSettings}{interpolators\+::\+Lagrange\+Interpolator\+Settings} $>$(6))
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_a7d09a1e6f575d87c7f7f33bb9d7f28a4}{get\+Initial\+Time} ()
+\begin{DoxyCompactList}\small\item\em Function to return initial time from which interpolated data from Spice should be created. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_a32d620aa07d6e723ed1084cfef9a5a9e}{get\+Final\+Time} ()
+\begin{DoxyCompactList}\small\item\em Function to return final time from which interpolated data from Spice should be created. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_a462ed5fc8d752e3b39f2624e0b6520e4}{get\+Time\+Step} ()
+\begin{DoxyCompactList}\small\item\em Function to return time step with which interpolated data from Spice should be created. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1interpolators_1_1InterpolatorSettings}{interpolators\+::\+Interpolator\+Settings} $>$ \hyperlink{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_ab2fa9fe08dde3660a5503e3b3852b4af}{get\+Interpolator\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Function to return settings to be used for the state interpolation. \end{DoxyCompactList}\item 
+bool {\bfseries get\+Use\+Long\+Double\+States} ()\hypertarget{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_a2d445496b349d60706ad2ac0e5e27e91}{}\label{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_a2d445496b349d60706ad2ac0e5e27e91}
+
+\item 
+void {\bfseries set\+Use\+Long\+Double\+States} (const bool use\+Long\+Double\+States)\hypertarget{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_a486fa22993d27966420123d91c9d69c9}{}\label{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_a486fa22993d27966420123d91c9d69c9}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classtudat_1_1simulation__setup_1_1EphemerisSettings}{Ephemeris\+Settings} derived class for defining settings of a ephemeris interpolated from Spice data.
+
+\hyperlink{classtudat_1_1simulation__setup_1_1EphemerisSettings}{Ephemeris\+Settings} derived class for defining settings of a ephemeris interpolated from Spice data. Retrieving a state from Spice can be very computationally intensive. Using the settings of this class, ephemeris data for a body is pre-\/computed using a limited number of calls to Spice, which is then used to create an interpolator (6th order Lagrange). For many numerical integration scenarios, this approach may be faster than using \hyperlink{classtudat_1_1simulation__setup_1_1DirectSpiceEphemerisSettings}{Direct\+Spice\+Ephemeris\+Settings}, with negligible influence on accuracy. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings}!Interpolated\+Spice\+Ephemeris\+Settings@{Interpolated\+Spice\+Ephemeris\+Settings}}
+\index{Interpolated\+Spice\+Ephemeris\+Settings@{Interpolated\+Spice\+Ephemeris\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings}}
+\subsubsection[{\texorpdfstring{Interpolated\+Spice\+Ephemeris\+Settings(double initial\+Time, double final\+Time, double time\+Step, std\+::string frame\+Origin=""S\+SB"", std\+::string frame\+Orientation=""E\+C\+L\+I\+P\+J2000"", boost\+::shared\+\_\+ptr$<$ interpolators\+::\+Interpolator\+Settings $>$ interpolator\+Settings=boost\+::make\+\_\+shared$<$ interpolators\+::\+Lagrange\+Interpolator\+Settings $>$(6))}{InterpolatedSpiceEphemerisSettings(double initialTime, double finalTime, double timeStep, std::string frameOrigin="SSB", std::string frameOrientation="ECLIPJ2000", boost::shared_ptr< interpolators::InterpolatorSettings > interpolatorSettings=boost::make_shared< interpolators::LagrangeInterpolatorSettings >(6))}}]{\setlength{\rightskip}{0pt plus 5cm}tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings\+::\+Interpolated\+Spice\+Ephemeris\+Settings (
+\begin{DoxyParamCaption}
+\item[{double}]{initial\+Time, }
+\item[{double}]{final\+Time, }
+\item[{double}]{time\+Step, }
+\item[{std\+::string}]{frame\+Origin = {\ttfamily \char`\"{}SSB\char`\"{}}, }
+\item[{std\+::string}]{frame\+Orientation = {\ttfamily \char`\"{}ECLIPJ2000\char`\"{}}, }
+\item[{boost\+::shared\+\_\+ptr$<$ {\bf interpolators\+::\+Interpolator\+Settings} $>$}]{interpolator\+Settings = {\ttfamily boost\+:\+:make\+\_\+shared$<$~{\bf interpolators\+::\+Lagrange\+Interpolator\+Settings}~$>$(~6~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_afc1dcfeb27f1073bcff03d1bfd2ba15e}{}\label{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_afc1dcfeb27f1073bcff03d1bfd2ba15e}
+
+
+Constructor. 
+
+Constructor, sets the properties from which the tabulated spice data is to be created from which an ephemeris is to be created. 
+\begin{DoxyParams}{Parameters}
+{\em initial\+Time} & Initial time from which interpolated data from Spice should be created. \\
+\hline
+{\em final\+Time} & Final time from which interpolated data from Spice should be created. \\
+\hline
+{\em time\+Step} & \hyperlink{classtudat_1_1Time}{Time} step with which interpolated data from Spice should be created. \\
+\hline
+{\em frame\+Origin} & Name of body relative to which the ephemeris is to be calculated (optional \char`\"{}\+S\+S\+B\char`\"{} by default). \\
+\hline
+{\em frame\+Orientation} & Orientatioan of the reference frame in which the epehemeris is to be calculated (optional \char`\"{}\+E\+C\+L\+I\+P\+J2000\char`\"{} by default). \\
+\hline
+{\em interpolator\+Settings} & Settings to be used for the state interpolation. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings}!get\+Final\+Time@{get\+Final\+Time}}
+\index{get\+Final\+Time@{get\+Final\+Time}!tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Final\+Time()}{getFinalTime()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings\+::get\+Final\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_a32d620aa07d6e723ed1084cfef9a5a9e}{}\label{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_a32d620aa07d6e723ed1084cfef9a5a9e}
+
+
+Function to return final time from which interpolated data from Spice should be created. 
+
+Function to return final time from which interpolated data from Spice should be created. \begin{DoxyReturn}{Returns}
+Final time from which interpolated data from Spice should be created. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings}!get\+Initial\+Time@{get\+Initial\+Time}}
+\index{get\+Initial\+Time@{get\+Initial\+Time}!tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Initial\+Time()}{getInitialTime()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings\+::get\+Initial\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_a7d09a1e6f575d87c7f7f33bb9d7f28a4}{}\label{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_a7d09a1e6f575d87c7f7f33bb9d7f28a4}
+
+
+Function to return initial time from which interpolated data from Spice should be created. 
+
+Function to return initial time from which interpolated data from Spice should be created. \begin{DoxyReturn}{Returns}
+Initial time from which interpolated data from Spice should be created. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings}!get\+Interpolator\+Settings@{get\+Interpolator\+Settings}}
+\index{get\+Interpolator\+Settings@{get\+Interpolator\+Settings}!tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Interpolator\+Settings()}{getInterpolatorSettings()}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ {\bf interpolators\+::\+Interpolator\+Settings} $>$ tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings\+::get\+Interpolator\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_ab2fa9fe08dde3660a5503e3b3852b4af}{}\label{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_ab2fa9fe08dde3660a5503e3b3852b4af}
+
+
+Function to return settings to be used for the state interpolation. 
+
+Function to return settings to be used for the state interpolation. \begin{DoxyReturn}{Returns}
+Settings to be used for the state interpolation. 
+\end{DoxyReturn}
+\index{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings}!get\+Time\+Step@{get\+Time\+Step}}
+\index{get\+Time\+Step@{get\+Time\+Step}!tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings@{tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings}}
+\subsubsection[{\texorpdfstring{get\+Time\+Step()}{getTimeStep()}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::simulation\+\_\+setup\+::\+Interpolated\+Spice\+Ephemeris\+Settings\+::get\+Time\+Step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_a462ed5fc8d752e3b39f2624e0b6520e4}{}\label{classtudat_1_1simulation__setup_1_1InterpolatedSpiceEphemerisSettings_a462ed5fc8d752e3b39f2624e0b6520e4}
+
+
+Function to return time step with which interpolated data from Spice should be created. 
+
+Function to return time step with which interpolated data from Spice should be created. \begin{DoxyReturn}{Returns}
+\hyperlink{classtudat_1_1Time}{Time} step with which interpolated data from Spice should be created. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Simulation\+Setup/\+Environment\+Setup/create\+Ephemeris.\+h\end{DoxyCompactItemize}

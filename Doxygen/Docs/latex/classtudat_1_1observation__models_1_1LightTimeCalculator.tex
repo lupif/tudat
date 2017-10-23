@@ -1,0 +1,261 @@
+\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator}{}\section{tudat\+:\+:observation\+\_\+models\+:\+:Light\+Time\+Calculator$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$ Class Template Reference}
+\label{classtudat_1_1observation__models_1_1LightTimeCalculator}\index{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}}
+
+
+Class to calculate the light time between two points.  
+
+
+
+
+{\ttfamily \#include $<$light\+Time\+Solution.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 6, 1 $>$ {\bfseries State\+Type}\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_a24eaf4926caf8da0081c23ccf605d494}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_a24eaf4926caf8da0081c23ccf605d494}
+
+\item 
+typedef Eigen\+::\+Matrix$<$ State\+Scalar\+Type, 3, 1 $>$ {\bfseries Position\+Type}\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_a4331a5cf40cb479f7768bf21e08126fa}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_a4331a5cf40cb479f7768bf21e08126fa}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator_a5b9f4a7828a0f833a7aa758e036caec2}{Light\+Time\+Calculator} (const boost\+::function$<$ State\+Type(const Time\+Type) $>$ position\+Function\+Of\+Transmitting\+Body, const boost\+::function$<$ State\+Type(const Time\+Type) $>$ position\+Function\+Of\+Receiving\+Body, const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1LightTimeCorrection}{Light\+Time\+Correction} $>$ $>$ correction\+Functions=std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1LightTimeCorrection}{Light\+Time\+Correction} $>$ $>$(), const bool iterate\+Corrections=false)
+\begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
+{\bfseries Light\+Time\+Calculator} (const boost\+::function$<$ State\+Type(const Time\+Type) $>$ position\+Function\+Of\+Transmitting\+Body, const boost\+::function$<$ State\+Type(const Time\+Type) $>$ position\+Function\+Of\+Receiving\+Body, const std\+::vector$<$ Light\+Time\+Correction\+Function $>$ correction\+Functions, const bool iterate\+Corrections=false)\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_af94da0e8329d528ca233ed16216ace4a}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_af94da0e8329d528ca233ed16216ace4a}
+
+\item 
+Observation\+Scalar\+Type \hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator_a443e7780033bad235680d09302998f27}{calculate\+Light\+Time} (const Time\+Type time, const bool is\+Time\+At\+Reception=true, const Observation\+Scalar\+Type tolerance=get\+Default\+Light\+Time\+Tolerance$<$ Observation\+Scalar\+Type, State\+Scalar\+Type $>$())
+\begin{DoxyCompactList}\small\item\em Function to calculate the light time. \end{DoxyCompactList}\item 
+Position\+Type \hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator_abd00b7606d11aa0b97a308dfada2fb1f}{calculate\+Relative\+Range\+Vector} (const Time\+Type time, const bool is\+Time\+At\+Reception=1, const Observation\+Scalar\+Type tolerance=get\+Default\+Light\+Time\+Tolerance$<$ Observation\+Scalar\+Type, State\+Scalar\+Type $>$())
+\begin{DoxyCompactList}\small\item\em Function to calculate the \textquotesingle{}measured\textquotesingle{} vector from transmitter to receiver. \end{DoxyCompactList}\item 
+Observation\+Scalar\+Type \hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator_a17d3bd4cb3f317531efba5880669b5d5}{calculate\+Light\+Time\+With\+Link\+Ends\+States} (State\+Type \&receiver\+State\+Output, State\+Type \&transmitter\+State\+Output, const Time\+Type time, const bool is\+Time\+At\+Reception=1, const Observation\+Scalar\+Type tolerance=(get\+Default\+Light\+Time\+Tolerance$<$ Observation\+Scalar\+Type, State\+Scalar\+Type $>$()))
+\begin{DoxyCompactList}\small\item\em Function to calculate the light time and link-\/ends states. \end{DoxyCompactList}\item 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1LightTimeCorrection}{Light\+Time\+Correction} $>$ $>$ {\bfseries get\+Light\+Time\+Correction} ()\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_a1300c14861c693a6601927df22c78380}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_a1300c14861c693a6601927df22c78380}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Observation\+Scalar\+Type \hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator_a209aabee665a259cd66d3da7561a0029}{calculate\+New\+Light\+Time\+Estime} (const State\+Type \&receiver\+State, const State\+Type \&transmitter\+State) const 
+\begin{DoxyCompactList}\small\item\em Function to calculate a new light-\/time estimate from the link-\/ends states. \end{DoxyCompactList}\item 
+void \hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator_a37931071dd66c8d99db80fd917fec67c}{set\+Total\+Light\+Time\+Correction} (const State\+Type \&transmitter\+State, const State\+Type \&receiver\+State, const Time\+Type transmission\+Time, const Time\+Type reception\+Time)
+\begin{DoxyCompactList}\small\item\em Function to reset the current\+Correction\+\_\+ variable during current iteration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::function$<$ State\+Type(const double) $>$ \hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator_af259e010986b119ed8792a70aea82553}{state\+Function\+Of\+Transmitting\+Body\+\_\+}
+\begin{DoxyCompactList}\small\item\em Transmitter state function. \end{DoxyCompactList}\item 
+boost\+::function$<$ State\+Type(const double) $>$ \hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator_a14e286292e8443509fb55c29668b063b}{state\+Function\+Of\+Receiving\+Body\+\_\+}
+\begin{DoxyCompactList}\small\item\em Receiver state function. \end{DoxyCompactList}\item 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \hyperlink{classtudat_1_1observation__models_1_1LightTimeCorrection}{Light\+Time\+Correction} $>$ $>$ \hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator_a588c0ec0d95dd20dec85f65e8234cea8}{correction\+Functions\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of light-\/time correction functions. \end{DoxyCompactList}\item 
+bool \hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator_a585fe91b5f74288844fc855771f73dff}{iterate\+Corrections\+\_\+}
+\begin{DoxyCompactList}\small\item\em Boolean deciding whether to recalculate the correction during each iteration. \end{DoxyCompactList}\item 
+double \hyperlink{classtudat_1_1observation__models_1_1LightTimeCalculator_a09cedc2fa76a64a4c07e4e5c77f39c36}{current\+Correction\+\_\+}\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_a09cedc2fa76a64a4c07e4e5c77f39c36}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_a09cedc2fa76a64a4c07e4e5c77f39c36}
+
+\begin{DoxyCompactList}\small\item\em Current light-\/time correction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Observation\+Scalar\+Type = double, typename Time\+Type = double, typename State\+Scalar\+Type = Observation\+Scalar\+Type$>$\\*
+class tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$}
+
+Class to calculate the light time between two points. 
+
+This class calculates the light time between two points, of which the state functions have to be provided. Additionally, light-\/time corrections (such as tropospheric or relatvistic corrections) can be applied. The motion of the ends of the link during the light time is taken into account in the calculations. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}!Light\+Time\+Calculator@{Light\+Time\+Calculator}}
+\index{Light\+Time\+Calculator@{Light\+Time\+Calculator}!tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}}
+\subsubsection[{\texorpdfstring{Light\+Time\+Calculator(const boost\+::function$<$ State\+Type(const Time\+Type) $>$ position\+Function\+Of\+Transmitting\+Body, const boost\+::function$<$ State\+Type(const Time\+Type) $>$ position\+Function\+Of\+Receiving\+Body, const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ Light\+Time\+Correction $>$ $>$ correction\+Functions=std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ Light\+Time\+Correction $>$ $>$(), const bool iterate\+Corrections=false)}{LightTimeCalculator(const boost::function< StateType(const TimeType) > positionFunctionOfTransmittingBody, const boost::function< StateType(const TimeType) > positionFunctionOfReceivingBody, const std::vector< boost::shared_ptr< LightTimeCorrection > > correctionFunctions=std::vector< boost::shared_ptr< LightTimeCorrection > >(), const bool iterateCorrections=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ {\bf tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::{\bf Light\+Time\+Calculator} (
+\begin{DoxyParamCaption}
+\item[{const boost\+::function$<$ State\+Type(const Time\+Type) $>$}]{position\+Function\+Of\+Transmitting\+Body, }
+\item[{const boost\+::function$<$ State\+Type(const Time\+Type) $>$}]{position\+Function\+Of\+Receiving\+Body, }
+\item[{const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ {\bf Light\+Time\+Correction} $>$ $>$}]{correction\+Functions = {\ttfamily std\+:\+:vector$<$~boost\+:\+:shared\+\_\+ptr$<$~{\bf Light\+Time\+Correction}~$>$~$>$(~)}, }
+\item[{const bool}]{iterate\+Corrections = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_a5b9f4a7828a0f833a7aa758e036caec2}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_a5b9f4a7828a0f833a7aa758e036caec2}
+
+
+Class constructor. 
+
+This constructor is used to initialize the state functions and light-\/time correction functions. 
+\begin{DoxyParams}{Parameters}
+{\em position\+Function\+Of\+Transmitting\+Body} & State function of transmitter. \\
+\hline
+{\em position\+Function\+Of\+Receiving\+Body} & State function of receiver. \\
+\hline
+{\em correction\+Functions} & List of light-\/time correction functions. \\
+\hline
+{\em iterate\+Corrections} & Boolean determining whether to recalculate the light-\/time correction during each iteration. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}!calculate\+Light\+Time@{calculate\+Light\+Time}}
+\index{calculate\+Light\+Time@{calculate\+Light\+Time}!tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}}
+\subsubsection[{\texorpdfstring{calculate\+Light\+Time(const Time\+Type time, const bool is\+Time\+At\+Reception=true, const Observation\+Scalar\+Type tolerance=get\+Default\+Light\+Time\+Tolerance$<$ Observation\+Scalar\+Type, State\+Scalar\+Type $>$())}{calculateLightTime(const TimeType time, const bool isTimeAtReception=true, const ObservationScalarType tolerance=getDefaultLightTimeTolerance< ObservationScalarType, StateScalarType >())}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ Observation\+Scalar\+Type {\bf tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::calculate\+Light\+Time (
+\begin{DoxyParamCaption}
+\item[{const Time\+Type}]{time, }
+\item[{const bool}]{is\+Time\+At\+Reception = {\ttfamily true}, }
+\item[{const Observation\+Scalar\+Type}]{tolerance = {\ttfamily getDefaultLightTimeTolerance$<$~ObservationScalarType,~StateScalarType~$>$(~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_a443e7780033bad235680d09302998f27}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_a443e7780033bad235680d09302998f27}
+
+
+Function to calculate the light time. 
+
+This function calculates the light time between the link ends defined in the constructor. The input time can be either at transmission or at reception (default) time. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at reception or transmission. \\
+\hline
+{\em is\+Time\+At\+Reception} & True if input time is at reception, false if at transmission. \\
+\hline
+{\em tolerance} & Maximum allowed light-\/time difference between two subsequent iterations for which solution is accepted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the light time between the link ends. 
+\end{DoxyReturn}
+\index{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}!calculate\+Light\+Time\+With\+Link\+Ends\+States@{calculate\+Light\+Time\+With\+Link\+Ends\+States}}
+\index{calculate\+Light\+Time\+With\+Link\+Ends\+States@{calculate\+Light\+Time\+With\+Link\+Ends\+States}!tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}}
+\subsubsection[{\texorpdfstring{calculate\+Light\+Time\+With\+Link\+Ends\+States(\+State\+Type \&receiver\+State\+Output, State\+Type \&transmitter\+State\+Output, const Time\+Type time, const bool is\+Time\+At\+Reception=1, const Observation\+Scalar\+Type tolerance=(get\+Default\+Light\+Time\+Tolerance$<$ Observation\+Scalar\+Type, State\+Scalar\+Type $>$()))}{calculateLightTimeWithLinkEndsStates(StateType &receiverStateOutput, StateType &transmitterStateOutput, const TimeType time, const bool isTimeAtReception=1, const ObservationScalarType tolerance=(getDefaultLightTimeTolerance< ObservationScalarType, StateScalarType >()))}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ Observation\+Scalar\+Type {\bf tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::calculate\+Light\+Time\+With\+Link\+Ends\+States (
+\begin{DoxyParamCaption}
+\item[{State\+Type \&}]{receiver\+State\+Output, }
+\item[{State\+Type \&}]{transmitter\+State\+Output, }
+\item[{const Time\+Type}]{time, }
+\item[{const bool}]{is\+Time\+At\+Reception = {\ttfamily 1}, }
+\item[{const Observation\+Scalar\+Type}]{tolerance = {\ttfamily (~getDefaultLightTimeTolerance$<$~ObservationScalarType,~StateScalarType~$>$(~)~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_a17d3bd4cb3f317531efba5880669b5d5}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_a17d3bd4cb3f317531efba5880669b5d5}
+
+
+Function to calculate the light time and link-\/ends states. 
+
+Function to calculate the transmitter state at transmission time, the receiver state at reception time, and the light time. The input time can be either at transmission or reception (default) time. 
+\begin{DoxyParams}{Parameters}
+{\em receiver\+State\+Output} & Output by reference of receiver state. \\
+\hline
+{\em transmitter\+State\+Output} & Output by reference of transmitter state. \\
+\hline
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at reception or transmission. \\
+\hline
+{\em is\+Time\+At\+Reception} & True if input time is at reception, false if at transmission. \\
+\hline
+{\em tolerance} & Maximum allowed light-\/time difference between two subsequent iterations for which solution is accepted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the light time between the reciever state and the transmitter state. 
+\end{DoxyReturn}
+\index{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}!calculate\+New\+Light\+Time\+Estime@{calculate\+New\+Light\+Time\+Estime}}
+\index{calculate\+New\+Light\+Time\+Estime@{calculate\+New\+Light\+Time\+Estime}!tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}}
+\subsubsection[{\texorpdfstring{calculate\+New\+Light\+Time\+Estime(const State\+Type \&receiver\+State, const State\+Type \&transmitter\+State) const }{calculateNewLightTimeEstime(const StateType &receiverState, const StateType &transmitterState) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ Observation\+Scalar\+Type {\bf tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::calculate\+New\+Light\+Time\+Estime (
+\begin{DoxyParamCaption}
+\item[{const State\+Type \&}]{receiver\+State, }
+\item[{const State\+Type \&}]{transmitter\+State}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_a209aabee665a259cd66d3da7561a0029}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_a209aabee665a259cd66d3da7561a0029}
+
+
+Function to calculate a new light-\/time estimate from the link-\/ends states. 
+
+Function to calculate a new light-\/time estimate from the states of the two ends of the link. This function recalculates the light time each iteration from the assumed receiver/transmitter state, as well as the current\+Correction\+\_\+ variable. 
+\begin{DoxyParams}{Parameters}
+{\em receiver\+State} & Assumed state of receiver. \\
+\hline
+{\em transmitter\+State} & Assumed state of transmitter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New value of the light-\/time estimate. 
+\end{DoxyReturn}
+\index{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}!calculate\+Relative\+Range\+Vector@{calculate\+Relative\+Range\+Vector}}
+\index{calculate\+Relative\+Range\+Vector@{calculate\+Relative\+Range\+Vector}!tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}}
+\subsubsection[{\texorpdfstring{calculate\+Relative\+Range\+Vector(const Time\+Type time, const bool is\+Time\+At\+Reception=1, const Observation\+Scalar\+Type tolerance=get\+Default\+Light\+Time\+Tolerance$<$ Observation\+Scalar\+Type, State\+Scalar\+Type $>$())}{calculateRelativeRangeVector(const TimeType time, const bool isTimeAtReception=1, const ObservationScalarType tolerance=getDefaultLightTimeTolerance< ObservationScalarType, StateScalarType >())}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ Position\+Type {\bf tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::calculate\+Relative\+Range\+Vector (
+\begin{DoxyParamCaption}
+\item[{const Time\+Type}]{time, }
+\item[{const bool}]{is\+Time\+At\+Reception = {\ttfamily 1}, }
+\item[{const Observation\+Scalar\+Type}]{tolerance = {\ttfamily getDefaultLightTimeTolerance$<$~ObservationScalarType,~StateScalarType~$>$(~)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_abd00b7606d11aa0b97a308dfada2fb1f}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_abd00b7606d11aa0b97a308dfada2fb1f}
+
+
+Function to calculate the \textquotesingle{}measured\textquotesingle{} vector from transmitter to receiver. 
+
+Function to calculate the vector from transmitter at transmitter time to receiver at reception time. The input time can be either at transmission or reception (default) time. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \hyperlink{classtudat_1_1Time}{Time} at reception or transmission. \\
+\hline
+{\em is\+Time\+At\+Reception} & True if input time is at reception, false if at transmission. \\
+\hline
+{\em tolerance} & Maximum allowed light-\/time difference between two subsequent iterations for which solution is accepted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The vector from the transmitter to the reciever. 
+\end{DoxyReturn}
+\index{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}!set\+Total\+Light\+Time\+Correction@{set\+Total\+Light\+Time\+Correction}}
+\index{set\+Total\+Light\+Time\+Correction@{set\+Total\+Light\+Time\+Correction}!tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}}
+\subsubsection[{\texorpdfstring{set\+Total\+Light\+Time\+Correction(const State\+Type \&transmitter\+State, const State\+Type \&receiver\+State, const Time\+Type transmission\+Time, const Time\+Type reception\+Time)}{setTotalLightTimeCorrection(const StateType &transmitterState, const StateType &receiverState, const TimeType transmissionTime, const TimeType receptionTime)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ void {\bf tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::set\+Total\+Light\+Time\+Correction (
+\begin{DoxyParamCaption}
+\item[{const State\+Type \&}]{transmitter\+State, }
+\item[{const State\+Type \&}]{receiver\+State, }
+\item[{const Time\+Type}]{transmission\+Time, }
+\item[{const Time\+Type}]{reception\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_a37931071dd66c8d99db80fd917fec67c}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_a37931071dd66c8d99db80fd917fec67c}
+
+
+Function to reset the current\+Correction\+\_\+ variable during current iteration. 
+
+Function to reset the current\+Correction\+\_\+ variable during current iteration, representing the sum of all corrections causing the light time to deviate from the Euclidean value. 
+\begin{DoxyParams}{Parameters}
+{\em transmitter\+State} & State of transmitter. \\
+\hline
+{\em receiver\+State} & State of receiver. \\
+\hline
+{\em transmission\+Time} & \hyperlink{classtudat_1_1Time}{Time} at transmission. \\
+\hline
+{\em reception\+Time} & \hyperlink{classtudat_1_1Time}{Time} at reception. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}!correction\+Functions\+\_\+@{correction\+Functions\+\_\+}}
+\index{correction\+Functions\+\_\+@{correction\+Functions\+\_\+}!tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}}
+\subsubsection[{\texorpdfstring{correction\+Functions\+\_\+}{correctionFunctions_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ {\bf Light\+Time\+Correction} $>$ $>$ {\bf tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::correction\+Functions\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_a588c0ec0d95dd20dec85f65e8234cea8}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_a588c0ec0d95dd20dec85f65e8234cea8}
+
+
+List of light-\/time correction functions. 
+
+List of light-\/time correction functions, i.\+e. tropospheric, relativistic, etc. \index{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}!iterate\+Corrections\+\_\+@{iterate\+Corrections\+\_\+}}
+\index{iterate\+Corrections\+\_\+@{iterate\+Corrections\+\_\+}!tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}}
+\subsubsection[{\texorpdfstring{iterate\+Corrections\+\_\+}{iterateCorrections_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ bool {\bf tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::iterate\+Corrections\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_a585fe91b5f74288844fc855771f73dff}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_a585fe91b5f74288844fc855771f73dff}
+
+
+Boolean deciding whether to recalculate the correction during each iteration. 
+
+Boolean deciding whether to recalculate the correction during each iteration. If it is set true, the corrections are calculated during each iteration of the light-\/time calculations. If it is set to false, it is calculated once at the begining. Additionally, when convergence is reached, it is recalculated to check whether the light time with new correction violates the convergence. If so, another iteration is performed. \index{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}!state\+Function\+Of\+Receiving\+Body\+\_\+@{state\+Function\+Of\+Receiving\+Body\+\_\+}}
+\index{state\+Function\+Of\+Receiving\+Body\+\_\+@{state\+Function\+Of\+Receiving\+Body\+\_\+}!tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}}
+\subsubsection[{\texorpdfstring{state\+Function\+Of\+Receiving\+Body\+\_\+}{stateFunctionOfReceivingBody_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ boost\+::function$<$ State\+Type( const double ) $>$ {\bf tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::state\+Function\+Of\+Receiving\+Body\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_a14e286292e8443509fb55c29668b063b}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_a14e286292e8443509fb55c29668b063b}
+
+
+Receiver state function. 
+
+Receiver state function. \index{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}!state\+Function\+Of\+Transmitting\+Body\+\_\+@{state\+Function\+Of\+Transmitting\+Body\+\_\+}}
+\index{state\+Function\+Of\+Transmitting\+Body\+\_\+@{state\+Function\+Of\+Transmitting\+Body\+\_\+}!tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator@{tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}}
+\subsubsection[{\texorpdfstring{state\+Function\+Of\+Transmitting\+Body\+\_\+}{stateFunctionOfTransmittingBody_}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Observation\+Scalar\+Type  = double, typename Time\+Type  = double, typename State\+Scalar\+Type  = Observation\+Scalar\+Type$>$ boost\+::function$<$ State\+Type( const double ) $>$ {\bf tudat\+::observation\+\_\+models\+::\+Light\+Time\+Calculator}$<$ Observation\+Scalar\+Type, Time\+Type, State\+Scalar\+Type $>$\+::state\+Function\+Of\+Transmitting\+Body\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtudat_1_1observation__models_1_1LightTimeCalculator_af259e010986b119ed8792a70aea82553}{}\label{classtudat_1_1observation__models_1_1LightTimeCalculator_af259e010986b119ed8792a70aea82553}
+
+
+Transmitter state function. 
+
+Transmitter state function. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Observation\+Models/light\+Time\+Solution.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="tudat::simulation_setup::BodyShapeSettings" name="tudat::simulation_setup::BodyShapeSettings">
+<area shape="rect" id="node2" href="$classtudat_1_1simulation__setup_1_1OblateSphericalBodyShapeSettings.html" title="tudat::simulation_setup\l::OblateSphericalBodyShapeSettings" alt="" coords="211,5,448,47"/>
+<area shape="rect" id="node3" href="$classtudat_1_1simulation__setup_1_1SphericalBodyShapeSettings.html" title="BodyShapeSettings derived class for defining settings of a spherical shape model. ..." alt="" coords="230,71,429,112"/>
+</map>

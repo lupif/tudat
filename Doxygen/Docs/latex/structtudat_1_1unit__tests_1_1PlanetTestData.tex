@@ -1,0 +1,111 @@
+\hypertarget{structtudat_1_1unit__tests_1_1PlanetTestData}{}\section{tudat\+:\+:unit\+\_\+tests\+:\+:Planet\+Test\+Data Struct Reference}
+\label{structtudat_1_1unit__tests_1_1PlanetTestData}\index{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}}
+
+
+Structure containing test data for a given planet.  
+
+
+
+
+{\ttfamily \#include $<$planet\+Test\+Data.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ Eigen\+::\+Vector3d $>$ \hyperlink{structtudat_1_1unit__tests_1_1PlanetTestData_a8c5d3fe2116951da135781145becea40}{Vector\+Of\+Vector3ds}\hypertarget{structtudat_1_1unit__tests_1_1PlanetTestData_a8c5d3fe2116951da135781145becea40}{}\label{structtudat_1_1unit__tests_1_1PlanetTestData_a8c5d3fe2116951da135781145becea40}
+
+\begin{DoxyCompactList}\small\item\em Definition of useful typedefs. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ int, double $>$ {\bfseries Key\+Int\+Value\+Double\+Map}\hypertarget{structtudat_1_1unit__tests_1_1PlanetTestData_a6c27f16e62ef5c96cb2a8f785c3a2ac5}{}\label{structtudat_1_1unit__tests_1_1PlanetTestData_a6c27f16e62ef5c96cb2a8f785c3a2ac5}
+
+\item 
+typedef std\+::map$<$ int, std\+::map$<$ int, std\+::map$<$ int, Eigen\+::\+Vector3d $>$ $>$ $>$ {\bfseries Indexed\+Vector3d}\hypertarget{structtudat_1_1unit__tests_1_1PlanetTestData_afa5fcb5844eb994a7c7b0102df3451c1}{}\label{structtudat_1_1unit__tests_1_1PlanetTestData_afa5fcb5844eb994a7c7b0102df3451c1}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtudat_1_1unit__tests_1_1PlanetTestData_ab0d782820c85c5fa513749f48af8fde5}{Planet\+Test\+Data} (const std\+::string \&a\+Planet\+Name, const double a\+Gravitational\+Parameter, const double an\+Equatorial\+Radius, const Key\+Int\+Value\+Double\+Map \&some\+Zonal\+Coefficients, const std\+::vector$<$ Eigen\+::\+Vector3d $>$ \&positions\+Of\+Body\+Exerting\+Acceleration, const std\+::vector$<$ Eigen\+::\+Vector3d $>$ \&positions\+Of\+Body\+Subject\+To\+Acceleration)\hypertarget{structtudat_1_1unit__tests_1_1PlanetTestData_ab0d782820c85c5fa513749f48af8fde5}{}\label{structtudat_1_1unit__tests_1_1PlanetTestData_ab0d782820c85c5fa513749f48af8fde5}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{structtudat_1_1unit__tests_1_1PlanetTestData_a2cf7902a6d1d724a578b05cdae480603}{Planet\+Test\+Data} ()\hypertarget{structtudat_1_1unit__tests_1_1PlanetTestData_a2cf7902a6d1d724a578b05cdae480603}{}\label{structtudat_1_1unit__tests_1_1PlanetTestData_a2cf7902a6d1d724a578b05cdae480603}
+
+\begin{DoxyCompactList}\small\item\em Empty constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{structtudat_1_1unit__tests_1_1PlanetTestData_a965d857e9cf3fece2fd54f555fb29c47}{planet\+Name}
+\begin{DoxyCompactList}\small\item\em Planet name. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1PlanetTestData_a11fb9d4b33ce68a46380392cc81839ad}{gravitational\+Parameter}
+\begin{DoxyCompactList}\small\item\em Gravitational parameter \mbox{[}m s$^\wedge$3\mbox{]}. \end{DoxyCompactList}\item 
+double \hyperlink{structtudat_1_1unit__tests_1_1PlanetTestData_a3c4fec8841ffc942e797d9f9904719b3}{equatorial\+Radius}
+\begin{DoxyCompactList}\small\item\em Equatorial radius \mbox{[}m\mbox{]}. \end{DoxyCompactList}\item 
+Key\+Int\+Value\+Double\+Map \hyperlink{structtudat_1_1unit__tests_1_1PlanetTestData_aefcb3b33844b59812d284e741c6602ab}{zonal\+Coefficients}
+\begin{DoxyCompactList}\small\item\em Zonal gravity field coefficients. \end{DoxyCompactList}\item 
+\hyperlink{structtudat_1_1unit__tests_1_1PlanetTestData_a8c5d3fe2116951da135781145becea40}{Vector\+Of\+Vector3ds} \hyperlink{structtudat_1_1unit__tests_1_1PlanetTestData_ab5a35deb6d7ffb8802b21240014c4e5a}{body1\+Positions}
+\begin{DoxyCompactList}\small\item\em Positions of body exerting acceleration. \end{DoxyCompactList}\item 
+\hyperlink{structtudat_1_1unit__tests_1_1PlanetTestData_a8c5d3fe2116951da135781145becea40}{Vector\+Of\+Vector3ds} \hyperlink{structtudat_1_1unit__tests_1_1PlanetTestData_a148b840cb4f45b9c3499a7f3d1bf193d}{body2\+Positions}
+\begin{DoxyCompactList}\small\item\em Positions of body subject to acceleration. \end{DoxyCompactList}\item 
+Indexed\+Vector3d \hyperlink{structtudat_1_1unit__tests_1_1PlanetTestData_a573ed4ab5516514b60d9da01a1d097f3}{expected\+Acceleration}
+\begin{DoxyCompactList}\small\item\em Expected gravitational accelerations \mbox{[}m s$^\wedge$-\/2\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure containing test data for a given planet. 
+
+This structure contains test data for a given planet. The data is used for unit testing of Tudat\textquotesingle{}s gravitational acceleration computation free functions. 
+
+\subsection{Member Data Documentation}
+\index{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}!body1\+Positions@{body1\+Positions}}
+\index{body1\+Positions@{body1\+Positions}!tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}}
+\subsubsection[{\texorpdfstring{body1\+Positions}{body1Positions}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector\+Of\+Vector3ds} tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data\+::body1\+Positions}\hypertarget{structtudat_1_1unit__tests_1_1PlanetTestData_ab5a35deb6d7ffb8802b21240014c4e5a}{}\label{structtudat_1_1unit__tests_1_1PlanetTestData_ab5a35deb6d7ffb8802b21240014c4e5a}
+
+
+Positions of body exerting acceleration. 
+
+Positions of body exerting acceleration (the cases run are for the planets and the Moon). For each body, two positions are taken\+: one located at the origin and one offset from the origin. \index{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}!body2\+Positions@{body2\+Positions}}
+\index{body2\+Positions@{body2\+Positions}!tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}}
+\subsubsection[{\texorpdfstring{body2\+Positions}{body2Positions}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector\+Of\+Vector3ds} tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data\+::body2\+Positions}\hypertarget{structtudat_1_1unit__tests_1_1PlanetTestData_a148b840cb4f45b9c3499a7f3d1bf193d}{}\label{structtudat_1_1unit__tests_1_1PlanetTestData_a148b840cb4f45b9c3499a7f3d1bf193d}
+
+
+Positions of body subject to acceleration. 
+
+Position of the body subject to acceleration. Currently, two positions are included per planet. \index{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}!equatorial\+Radius@{equatorial\+Radius}}
+\index{equatorial\+Radius@{equatorial\+Radius}!tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}}
+\subsubsection[{\texorpdfstring{equatorial\+Radius}{equatorialRadius}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data\+::equatorial\+Radius}\hypertarget{structtudat_1_1unit__tests_1_1PlanetTestData_a3c4fec8841ffc942e797d9f9904719b3}{}\label{structtudat_1_1unit__tests_1_1PlanetTestData_a3c4fec8841ffc942e797d9f9904719b3}
+
+
+Equatorial radius \mbox{[}m\mbox{]}. 
+
+The equatorial radius, is part of the spherical harmonics expansion and is given in the documentation of M\+A\+T\+L\+AB\textquotesingle{}s gravityzonal() function (Mathworks, 2012). \index{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}!expected\+Acceleration@{expected\+Acceleration}}
+\index{expected\+Acceleration@{expected\+Acceleration}!tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}}
+\subsubsection[{\texorpdfstring{expected\+Acceleration}{expectedAcceleration}}]{\setlength{\rightskip}{0pt plus 5cm}Indexed\+Vector3d tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data\+::expected\+Acceleration}\hypertarget{structtudat_1_1unit__tests_1_1PlanetTestData_a573ed4ab5516514b60d9da01a1d097f3}{}\label{structtudat_1_1unit__tests_1_1PlanetTestData_a573ed4ab5516514b60d9da01a1d097f3}
+
+
+Expected gravitational accelerations \mbox{[}m s$^\wedge$-\/2\mbox{]}. 
+
+Expected gravitational accelerations generated using M\+A\+T\+L\+AB\textquotesingle{}s gravityzonal() function (Mathworks, 2012). They are indexed by the position of the body exerting the acceleration, the position of the body subject to the acceleration, and finally the maximum zonal gravity term included. \index{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}!gravitational\+Parameter@{gravitational\+Parameter}}
+\index{gravitational\+Parameter@{gravitational\+Parameter}!tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}}
+\subsubsection[{\texorpdfstring{gravitational\+Parameter}{gravitationalParameter}}]{\setlength{\rightskip}{0pt plus 5cm}double tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data\+::gravitational\+Parameter}\hypertarget{structtudat_1_1unit__tests_1_1PlanetTestData_a11fb9d4b33ce68a46380392cc81839ad}{}\label{structtudat_1_1unit__tests_1_1PlanetTestData_a11fb9d4b33ce68a46380392cc81839ad}
+
+
+Gravitational parameter \mbox{[}m s$^\wedge$3\mbox{]}. 
+
+The gravitational parameter of the central body, taken from the documentation for M\+A\+T\+L\+AB\textquotesingle{}s gravityzonal() function (Mathworks, 2012). \index{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}!planet\+Name@{planet\+Name}}
+\index{planet\+Name@{planet\+Name}!tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}}
+\subsubsection[{\texorpdfstring{planet\+Name}{planetName}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data\+::planet\+Name}\hypertarget{structtudat_1_1unit__tests_1_1PlanetTestData_a965d857e9cf3fece2fd54f555fb29c47}{}\label{structtudat_1_1unit__tests_1_1PlanetTestData_a965d857e9cf3fece2fd54f555fb29c47}
+
+
+Planet name. 
+
+The planet\textquotesingle{}s name, given as string, used for verification purposes. Note, that the Moon is considered a \char`\"{}planet\char`\"{} in this context. \index{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}!zonal\+Coefficients@{zonal\+Coefficients}}
+\index{zonal\+Coefficients@{zonal\+Coefficients}!tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data@{tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data}}
+\subsubsection[{\texorpdfstring{zonal\+Coefficients}{zonalCoefficients}}]{\setlength{\rightskip}{0pt plus 5cm}Key\+Int\+Value\+Double\+Map tudat\+::unit\+\_\+tests\+::\+Planet\+Test\+Data\+::zonal\+Coefficients}\hypertarget{structtudat_1_1unit__tests_1_1PlanetTestData_aefcb3b33844b59812d284e741c6602ab}{}\label{structtudat_1_1unit__tests_1_1PlanetTestData_aefcb3b33844b59812d284e741c6602ab}
+
+
+Zonal gravity field coefficients. 
+
+Map that indexes the zonal gravity coefficients available for a given central body. These are taken from the documentation for M\+A\+T\+L\+AB\textquotesingle{}s gravityzonal() function (Mathworks, 2012). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/lupi/\+Tudat/tudat\+Bundle/tudat/\+Tudat/\+Astrodynamics/\+Gravitation/\+Unit\+Tests/planet\+Test\+Data.\+h\end{DoxyCompactItemize}
