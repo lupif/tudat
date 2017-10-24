@@ -33,7 +33,7 @@ BOOST_AUTO_TEST_CASE( testSingleDecisionVariableSettings )
     upperBoundary[2] = 25;
 
     SingleDecisionVariableSettings newTestBench(
-                    initialVelocitytateCartesianComponents, lowerBoundary, upperBoundary );
+                    initial_cartesian_velocity_decision_variable, lowerBoundary, upperBoundary );
 
 }
 
@@ -158,7 +158,7 @@ BOOST_AUTO_TEST_CASE( testDecisionVariableFromTerminationSettings )
                        1000 );
 
     BOOST_CHECK_EQUAL(testBench1.decisionVariable_,
-                      fromTerminationSettings );
+                      from_termination_settings_decision_variable );
 
     *(testBench1.memoryPositionOfVariable_) = 2000;
 

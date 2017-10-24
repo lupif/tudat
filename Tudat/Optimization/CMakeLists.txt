@@ -28,7 +28,14 @@ set(OPTIMIZATION_HEADERS
 # Add unit test files.
 set(OPTIMIZATION_UNITTESTS
   "${SRCROOT}${OPTIMIZATIONDIR}/UnitTests/unitTestDecisionVariableSettings.cpp"
+  "${SRCROOT}${OPTIMIZATIONDIR}/UnitTests/unitTestMissionLinker.cpp"
+  "${SRCROOT}${OPTIMIZATIONDIR}/UnitTests/unitTestMissionSegmentSettings.cpp"
+  "${SRCROOT}${OPTIMIZATIONDIR}/UnitTests/unitTestObjectiveFunctionSettings.cpp"
+  "${SRCROOT}${OPTIMIZATIONDIR}/UnitTests/unitTestPlanetaryTargeter.cpp"
 )
+
+find_package(PaGMO2)
+INCLUDE_DIRECTORIES( "${PAGMO_INCLUDE_DIR}" )
 
 # Add static libraries.
 add_library(tudat_optimization STATIC ${OPTIMIZATION_SOURCES} ${OPTIMIZATION_HEADERS})
