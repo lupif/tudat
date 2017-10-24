@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Basics &mdash; TU Delft Astrodynamic Toolbox  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="TU Delft Astrodynamic Toolbox  documentation" href="../../index.html"/>
+        <link rel="up" title="Extending the optimization namespace" href="index.html"/>
+        <link rel="next" title="Objective Function Settings" href="objectiveFunction.html"/>
+        <link rel="prev" title="Extending the optimization namespace" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> TU Delft Astrodynamic Toolbox
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Start Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials and Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../githubBasics.html">Github Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extendingJSON/index.html">Extending the JSON Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extendingMATLAB/index.html">Extending the MATLAB Interface</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Extending the optimization namespace</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Basics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#linear-interpolation">Linear interpolation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dynamic-pointer-cast">Dynamic pointer cast</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="objectiveFunction.html">Objective Function Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="missionSegment.html">Mission Segment Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="missionLinker.html">Mission Linker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="necessaryFeatures.html">Ideas for future development</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../guideToDebugging.html">Guide To Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cppTutorials.html">C++ Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howToWriteTheWiki.html">How to Write the Wiki</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TU Delft Astrodynamic Toolbox</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Developer Guide</a> &raquo;</li>
+        
+          <li><a href="index.html">Extending the optimization namespace</a> &raquo;</li>
+        
+      <li>Basics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/developerGuide/extendingOptimization/basics.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basics">
+<span id="optimization-basics"></span><h1>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="linear-interpolation">
+<span id="optimization-linearinterpolation"></span><h2>Linear interpolation<a class="headerlink" href="#linear-interpolation" title="Permalink to this headline">¶</a></h2>
+<p>The interpolation used by the linking methods is linear. Assume we have two available epochs
+<span class="math">\(t_0\)</span> and <span class="math">\(t_1\)</span> and the respective function values <span class="math">\(f(t_0)\)</span> and <span class="math">\(f(t_1)\)</span>.
+If we want to retrieve the value of <span class="math">\(f\)</span> at <span class="math">\(t_e\)</span>, with</p>
+<blockquote>
+<div><div class="math">
+\[t_0 &lt; t_e &lt; t_1\]</div>
+</div></blockquote>
+<p>then, assuming that <span class="math">\(e = t_1 - t_0\)</span> is small enough, the value can be retrieved as following:</p>
+<blockquote>
+<div><div class="math">
+\[f(t_e) = f(t_0) + (f(t_1) - f(t_0))(t_e - t_0)/(t_1 - t_0)\]</div>
+</div></blockquote>
+</div>
+<div class="section" id="dynamic-pointer-cast">
+<span id="optimization-dynamicpointercast"></span><h2>Dynamic pointer cast<a class="headerlink" href="#dynamic-pointer-cast" title="Permalink to this headline">¶</a></h2>
+<p>Let us consider the class <code class="docutils literal"><span class="pre">DecisionVariableSettings</span></code>:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="decisionvariablesettings-h">
+<div class="code-block-caption"><span class="caption-text"><code class="xref py py-class docutils literal"><span class="pre">Tudat/Optimization/decisionVariableSettings.h</span></code></span><a class="headerlink" href="#decisionvariablesettings-h" title="Permalink to this code">¶</a></div>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">DecisionVariableSettings</span><span class="p">{</span>
+
+    <span class="n">DecisionVariableSettings</span><span class="p">(</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">SingleDecisionVariableSettings</span> <span class="o">&gt;</span> <span class="o">&gt;</span>
+            <span class="n">multiDecisionVariableSettings</span> <span class="p">)</span> <span class="o">:</span> <span class="n">decisionVariableSettings_</span><span class="p">(</span> <span class="n">multiDecisionVariableSettings</span> <span class="p">)</span>
+    <span class="p">{</span> <span class="p">}</span>
+
+    <span class="n">DecisionVariableSettings</span><span class="p">(</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">SingleDecisionVariableSettings</span> <span class="o">&gt;</span>
+            <span class="n">singleDecisionVariableSettings</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">decisionVariableSettings_</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">singleDecisionVariableSettings</span> <span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">SingleDecisionVariableSettings</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">decisionVariableSettings_</span><span class="p">;</span>
+
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<p>The member <code class="docutils literal"><span class="pre">decisionVariableSettings_</span></code> is a vector of <code class="docutils literal"><span class="pre">boost::shared_ptr&lt;</span> <span class="pre">SingleDecisionVariableSettings</span> <span class="pre">&gt;</span></code>,
+but any index can be as well initialized as <code class="docutils literal"><span class="pre">boost::shared_ptr&lt;</span> <span class="pre">&gt;</span></code> of any of the
+<code class="docutils literal"><span class="pre">SingleDecisionVariableSettings</span></code> derived classes.</p>
+<p>For example, if the first member of the constructor parameter <code class="docutils literal"><span class="pre">multiDecisionVariableSettings</span></code> is of the type
+<code class="docutils literal"><span class="pre">boost::shared_ptr&lt;</span> <span class="pre">SingleKeplerElementDecisionVariableSettings</span> <span class="pre">&gt;</span></code> the value is accepted and stored as
+<code class="docutils literal"><span class="pre">boost::shared_ptr&lt;</span> <span class="pre">SingleDecisionVariableSettings</span> <span class="pre">&gt;</span></code>.</p>
+<p><code class="docutils literal"><span class="pre">SingleKeplerElementDecisionVariableSettings</span></code> contains methods and members that do not belong to
+<code class="docutils literal"><span class="pre">SingleDecisionVariableSettings</span></code>. In order to access these methods one has to perform a <strong>dynamic pointer cast</strong>.</p>
+<p>Let us stick to the example above. That means that <code class="docutils literal"><span class="pre">decisionVariableSettings_[0]</span></code> is stored as
+<code class="docutils literal"><span class="pre">boost::shared_ptr&lt;</span> <span class="pre">SingleDecisionVariableSettings</span> <span class="pre">&gt;</span></code> but contains information of <code class="docutils literal"><span class="pre">SingleKeplerElementDecisionVariableSettings</span></code>.</p>
+<p>This can be accertained with the flag <code class="docutils literal"><span class="pre">SingleDecisionVariableSettings::decisionVariable_</span></code>, which in this case is set
+automatically by the constructor of <code class="docutils literal"><span class="pre">SingleKeplerElementDecisionVariableSettings</span></code> to be:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="n">decisionVariableSettings_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">decisionVariable_</span> <span class="o">==</span> <span class="n">single_kepler_element_decision_variable</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The dynamic cast to retrieve the information of the derived class is then performed as following:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">SingleKeplerElementDecisionVariableSettings</span> <span class="o">&gt;</span> <span class="n">dynamicCastDecisionVariable</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">dynamic_pointer_cast</span><span class="o">&lt;</span> <span class="n">SingleKeplerElementDecisionVariableSettings</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">decisionVariableSettings_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Now all the <code class="docutils literal"><span class="pre">SingleKeplerElementDecisionVariableSettings</span></code> are available inside <code class="docutils literal"><span class="pre">dynamicCastDecisionVariable</span></code>.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="objectiveFunction.html" class="btn btn-neutral float-right" title="Objective Function Settings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Extending the optimization namespace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Delft University of Technology.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header .arrow").click(function() {
+            $(this).closest('.toggle').children().not(".header").toggle(400);
+            $(this).toggleClass("open");
+            // $(this).html() == "More" ? $(this).html('Less') : $(this).html('More');
+        });
+        $(".showall").click(function() {
+            $(".toggle > *").show(400);
+            $(".toggle .header .arrow").addClass("open");
+        });
+        $(".hideall").click(function() {
+            $(".toggle > *").hide(400);
+            $(".toggle .header").show(400);
+            $(".toggle .header .arrow").removeClass("open");
+        });
+    });
+</script>
+
+
+</body>
+</html>

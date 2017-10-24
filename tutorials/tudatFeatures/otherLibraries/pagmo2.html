@@ -1,0 +1,516 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7.4. External Libraries: PaGMO 2 &mdash; TU Delft Astrodynamic Toolbox  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="TU Delft Astrodynamic Toolbox  documentation" href="../../../index.html"/>
+        <link rel="up" title="7. Other Libraries" href="index.html"/>
+        <link rel="next" title="8. Optimization tools" href="../optimizationTools/index.html"/>
+        <link rel="prev" title="7.3. External Libraries: JSONCPP" href="jsoncpp.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> TU Delft Astrodynamic Toolbox
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Start Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation/index.html">Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Tutorials and Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../prerequiredKnowledge/index.html">Getting Started with Tudat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../applicationWalkthroughs/index.html">Application Walkthroughs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Tudat Libraries</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../astroTools/index.html">1. Basic Astrodynamics Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mathTools/index.html">2. Basic Mathematics Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../environmentSetup/index.html">3. Environment Set-up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../accelerationSetup/index.html">4. Acceleration Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../propagationSetup/index.html">5. Simulator Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../estimationSetup/index.html">6. Estimation Set-Up</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">7. Other Libraries</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="inputOutput.html">7.1. Input/Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spice.html">7.2. External Libraries: SPICE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="jsoncpp.html">7.3. External Libraries: JSONCPP</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">7.4. External Libraries: PaGMO 2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../optimizationTools/index.html">8. Optimization tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../jsonInterface/index.html">JSON Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matlabInterface/index.html">MATLAB Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developerGuide/index.html">Developer Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">TU Delft Astrodynamic Toolbox</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Tutorials and Documentation</a> &raquo;</li>
+        
+          <li><a href="../index.html">Tudat Libraries</a> &raquo;</li>
+        
+          <li><a href="index.html">7. Other Libraries</a> &raquo;</li>
+        
+      <li>7.4. External Libraries: PaGMO 2</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/tutorials/tudatFeatures/otherLibraries/pagmo2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="external-libraries-pagmo-2">
+<span id="tudatfeaturespagmo2"></span><h1>7.4. External Libraries: PaGMO 2<a class="headerlink" href="#external-libraries-pagmo-2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="download-and-build-pagmo-2">
+<h2>7.4.1. Download and build PaGMO 2<a class="headerlink" href="#download-and-build-pagmo-2" title="Permalink to this headline">¶</a></h2>
+<p>Clone or download PaGMO 2 from:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">esa</span><span class="o">/</span><span class="n">pagmo2</span>
+</pre></div>
+</div>
+<p>Make sure to name the source folder <code class="docutils literal"><span class="pre">pagmo2/</span></code>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You need Boost version 1.55 or higher in order to build PaGMO 2.</p>
+</div>
+<p>The PaGMO project contains its own CMakeLists.txt. In order to build PaGMO as a standalone release version simply run CMake in the folder.
+In order to include PaGMO in your project you will need to specify whether you want to build PaGMO or PyGMO (Python interface for PaGMO).
+You can either set either of the two options <code class="docutils literal"><span class="pre">PAGMO_BUILD_PAGMO</span></code> or <code class="docutils literal"><span class="pre">PAGMO_BUILD_PYGMO</span></code> according to your needs in the CMakeLists.txt file.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Only one of the two flags can be set to ON at anytime, so make sure to switch the other to OFF (by default PAGMO_BUILD_PAGMO is set to ON).</p>
+</div>
+<p>If you are building PaGMO inside your project, you can override the two options using the command <code class="docutils literal"><span class="pre">-option()</span></code></p>
+<blockquote>
+<div><div class="highlight-cmake"><div class="highlight"><pre><span></span><span class="nb">option</span><span class="p">(</span><span class="s">PAGMO_BUILD_PAGMO</span> <span class="s">ON</span><span class="p">)</span>
+<span class="nb">option</span><span class="p">(</span><span class="s">PAGMO_BUILD_PYGMO</span> <span class="s">OFF</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>You can simply include PaGMO 2 by adding the source folder as a subdirectory.</p>
+<blockquote>
+<div><div class="highlight-cmake"><div class="highlight"><pre><span></span><span class="nb">unset</span><span class="p">(</span><span class="s">pagmo_LIB_DEPENDS</span> <span class="s">CACHE</span><span class="p">)</span>
+<span class="nb">add_subdirectory</span><span class="p">(</span> <span class="s2">&quot;my_path/pagmo2/&quot;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The command <code class="docutils literal"><span class="pre">unset(pagmo_LIB_DEPENDS</span> <span class="pre">CACHE)</span></code> makes sure to eliminate residual dependencies in the cache in case of re-build of the package.</p>
+</div>
+<div class="section" id="create-an-optimization-problem-with-pagmo">
+<h2>7.4.2. Create an optimization problem with PaGMO<a class="headerlink" href="#create-an-optimization-problem-with-pagmo" title="Permalink to this headline">¶</a></h2>
+<p>Let us define the Himmelblau’s function as a PaGMO problem.
+The Himmelblau’s function is defined as: <span class="math">\(f(x)=(x^2+y-11)^2 + (x+y^2-7)^2\)</span> and has</p>
+<blockquote>
+<div><ul>
+<li><p class="first">one local maximum <span class="math">\(f(− 0.270845, − 0.923039) = 181.617\)</span>;</p>
+</li>
+<li><p class="first">four local minima:</p>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math">\(f( 3.0 , 2.0 ) = 0.0\)</span>;</li>
+<li><span class="math">\(f ( − 2.805118 , 3.131312 ) = 0.0\)</span>;</li>
+<li><span class="math">\(f ( − 3.779310 , − 3.283186 ) = 0.0\)</span>;</li>
+<li><span class="math">\(f ( 3.584428 , − 1.848126 ) = 0.0\)</span>.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>A PaGMO problem in C++ is defined as a <code class="docutils literal"><span class="pre">struct</span></code> with the following mandatory methods:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">std::vector&lt;</span> <span class="pre">double</span> <span class="pre">&gt;</span> <span class="pre">fitness(</span> <span class="pre">const</span> <span class="pre">std::vector&lt;</span> <span class="pre">double</span> <span class="pre">&gt;</span> <span class="pre">&amp;x</span> <span class="pre">)</span> <span class="pre">const</span></code></li>
+<li><code class="docutils literal"><span class="pre">std::pair&lt;</span> <span class="pre">std::vector&lt;</span> <span class="pre">double</span> <span class="pre">&gt;,</span> <span class="pre">std::vector&lt;</span> <span class="pre">double</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span> <span class="pre">get_bounds(</span> <span class="pre">)</span> <span class="pre">const</span></code></li>
+</ul>
+</div></blockquote>
+<p>In a file <code class="docutils literal"><span class="pre">himmelblaus.h</span></code> let us combine the himmelblau’s function and the problem and allow the user to define the <strong>box-boundaries</strong> for the optimization search.</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">//File: himmelblaus.h</span>
+
+<span class="k">struct</span> <span class="n">my_problem</span> <span class="p">{</span>
+
+    <span class="c1">//Empty constructor</span>
+    <span class="n">my_problem</span><span class="p">(</span> <span class="p">){</span> <span class="p">}</span>
+
+    <span class="c1">//Actual constructor allowing the user to define the boundaries</span>
+    <span class="n">my_problem</span><span class="p">(</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">x_min</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">x_max</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">y_min</span><span class="p">,</span>
+            <span class="k">const</span> <span class="kt">double</span> <span class="n">y_max</span> <span class="p">)</span> <span class="o">:</span>
+        <span class="n">x_min_</span><span class="p">(</span> <span class="n">x_min</span> <span class="p">),</span> <span class="n">x_max_</span><span class="p">(</span> <span class="n">x_max</span> <span class="p">),</span> <span class="n">y_min_</span><span class="p">(</span> <span class="n">y_min</span> <span class="p">),</span> <span class="n">y_max</span><span class="p">(</span> <span class="n">y_max_</span> <span class="p">)</span>
+    <span class="p">{</span> <span class="p">}</span>
+
+    <span class="c1">// Mandatory, computes the fitness, i.e. the Himmelblau&#39;s function</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="n">fitness</span><span class="p">(</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">x</span> <span class="p">)</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">vetor</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="n">return_value</span><span class="p">;</span>
+
+        <span class="n">return_value</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">pow</span><span class="p">(</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">pow</span><span class="p">(</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span> <span class="p">)</span> <span class="p">);</span>
+
+        <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span>
+
+    <span class="p">}</span>
+
+    <span class="c1">// Mandatory, returns the box-bounds</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">get_bounds</span><span class="p">(</span> <span class="p">)</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">box_bounds</span><span class="p">;</span>
+
+        <span class="n">box_bounds</span><span class="p">.</span><span class="n">first</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">x_min_</span> <span class="p">);</span>
+        <span class="n">box_bounds</span><span class="p">.</span><span class="n">first</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">y_min_</span> <span class="p">);</span>
+
+        <span class="n">box_bounds</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">x_max_</span> <span class="p">);</span>
+        <span class="n">box_bounds</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">y_max_</span> <span class="p">);</span>
+
+        <span class="k">return</span> <span class="n">box_bounds</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+
+    <span class="c1">//Storage members</span>
+    <span class="kt">double</span> <span class="n">x_min_</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">x_max_</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">y_min_</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">y_max_</span><span class="p">;</span>
+
+<span class="p">};</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The <strong>empty constructor</strong> used in the example above will avoid multi-threading identity related problems associated with the <code class="docutils literal"><span class="pre">pthread</span></code> library.</p>
+<p>The use of PaGMO enbedded alghorithms and the user-defined problem is demonstrated in the following code block. Let us define a file called <code class="docutils literal"><span class="pre">main.cpp</span></code>.</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">//File: main.cpp</span>
+
+<span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="cpf">&quot;pagmo/algorithms/sade.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="cpf">&quot;pagmo/island.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="cpf">&quot;pagmo/problem.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="cpf">&quot;himmelblaus.h&quot;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="p">)</span>
+<span class="p">{</span>
+
+    <span class="c1">// Create a PaGMO problem from the user-defined Himmelblau&#39;s problem</span>
+    <span class="c1">// Search within 0&lt;x&lt;5 and 0&lt;y&lt;5</span>
+    <span class="n">pagmo</span><span class="o">::</span><span class="n">problem</span> <span class="n">prob</span><span class="p">{</span> <span class="n">my_problem</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">};</span>
+
+    <span class="c1">// Use the self-adaptive differential evolutionary algorithm</span>
+    <span class="n">pagmo</span><span class="o">::</span><span class="n">algorithm</span> <span class="n">algo</span><span class="p">{</span> <span class="n">pagmo</span><span class="o">::</span><span class="n">sade</span><span class="p">(</span> <span class="p">)</span> <span class="p">};</span>
+
+    <span class="c1">// Define a PaGMO island with a population of 8 individuals</span>
+    <span class="n">pagmo</span><span class="o">::</span><span class="n">island</span> <span class="n">isl</span> <span class="o">=</span> <span class="n">pagmo</span><span class="o">::</span><span class="n">island</span><span class="p">{</span> <span class="n">algo</span><span class="p">,</span> <span class="n">prob</span><span class="p">,</span> <span class="mi">8</span> <span class="p">};</span>
+
+    <span class="c1">// Evolve the algorithm 20 times</span>
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+    <span class="p">{</span>
+
+        <span class="n">isl</span><span class="p">.</span><span class="n">evolve</span><span class="p">(</span> <span class="p">);</span>
+
+        <span class="c1">// Check for the status of the island before iterating</span>
+        <span class="k">while</span><span class="p">(</span> <span class="n">isl</span><span class="p">.</span><span class="n">status</span><span class="p">()</span><span class="o">!=</span><span class="n">pagmo</span><span class="o">::</span><span class="n">evolve_status</span><span class="o">::</span><span class="n">idle</span> <span class="p">)</span>
+            <span class="n">isl</span><span class="p">.</span><span class="n">wait</span><span class="p">();</span>
+
+    <span class="p">}</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Best x: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">isl</span><span class="p">.</span><span class="n">get_population</span><span class="p">().</span><span class="n">champion_x</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Best y: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">isl</span><span class="p">.</span><span class="n">get_population</span><span class="p">().</span><span class="n">champion_x</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Minimum: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">isl</span><span class="p">.</span><span class="n">get_population</span><span class="p">().</span><span class="n">champion_f</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>If no operation between evolutions need to be performed, the for-loop can be simply replaced with <code class="docutils literal"><span class="pre">isl.evolve(20)</span></code>. Because of the parallel computing nature of the island, the
+alghorithm is evolved in a different thread, therefore a check on the island status is needed while using a for-loop.</p>
+</div>
+<div class="section" id="including-pagmo-in-your-application">
+<h2>7.4.3. Including PaGMO in your application<a class="headerlink" href="#including-pagmo-in-your-application" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Copy <code class="docutils literal"><span class="pre">FindPaGMO2.cmake</span></code> and <code class="docutils literal"><span class="pre">FindBoost.cmake</span></code> into your <code class="docutils literal"><span class="pre">CMAKE_MODULE_PATH</span></code>.</p>
+</li>
+<li><p class="first">Include the following lines in your CMakeLists.txt file to add Boost and PaGMO2 header only library:</p>
+<blockquote>
+<div><div class="highlight-cmake"><div class="highlight"><pre><span></span><span class="c"># Configure Boost libraries.</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">NOT</span> <span class="s">Boost_USE_STATIC_LIBS</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">Boost_USE_STATIC_LIBS</span> <span class="s">ON</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">NOT</span> <span class="s">Boost_USE_MULTITHREADED</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">Boost_USE_MULTITHREADED</span> <span class="s">ON</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">NOT</span> <span class="s">Boost_USE_STATIC_RUNTIME</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">Boost_USE_STATIC_RUNTIME</span> <span class="s">ON</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="c"># Find Boost libraries on local system.</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">Boost</span> <span class="s">1.55.0</span> <span class="s">COMPONENTS</span> <span class="s">thread</span> <span class="s">date_time</span> <span class="s">system</span> <span class="s">unit_test_framework</span>
+    <span class="s">serialization</span> <span class="s">filesystem</span> <span class="s">regex</span> <span class="s">REQUIRED</span><span class="p">)</span>
+
+<span class="c"># Include Boost directories.</span>
+<span class="c"># Set CMake flag to suppress Boost warnings (platform-dependent solution).</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">NOT</span> <span class="s">APPLE</span><span class="p">)</span>
+  <span class="nb">include_directories</span><span class="p">(</span><span class="s">SYSTEM</span> <span class="s">AFTER</span> <span class="s2">&quot;${Boost_INCLUDE_DIRS}&quot;</span><span class="p">)</span>
+<span class="nb">else</span><span class="p">()</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_FLAGS</span> <span class="s2">&quot;${CMAKE_CXX_FLAGS} -isystem \&quot;</span><span class="o">${</span><span class="nv">Boost_INCLUDE_DIRS</span><span class="o">}</span><span class="s">\&quot;&quot;)</span>
+<span class="s">endif(</span><span class="p">)</span>
+
+<span class="c"># Find PaGMO library on local system.</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">PaGMO2</span><span class="p">)</span>
+
+<span class="c"># Include PaGMO directories.</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">NOT</span> <span class="s">APPLE</span><span class="p">)</span>
+  <span class="nb">include_directories</span><span class="p">(</span><span class="s">SYSTEM</span> <span class="s">AFTER</span> <span class="s2">&quot;${PAGMO_INCLUDE_DIR}&quot;</span><span class="p">)</span>
+<span class="nb">else</span><span class="p">(</span> <span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_FLAGS</span> <span class="s2">&quot;${CMAKE_CXX_FLAGS} -isystem \&quot;</span><span class="o">${</span><span class="nv">PAGMO_INCLUDE_DIR</span><span class="o">}</span><span class="s">\&quot;&quot;)</span>
+<span class="s">endif(</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Include the following lines to set-up the bin application:</p>
+<blockquote>
+<div><div class="highlight-cmake"><div class="highlight"><pre><span></span><span class="c"># Add application.</span>
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">application_PagmoHimmelblausExample</span> <span class="s2">&quot;../my_path/main.cpp&quot;</span><span class="p">)</span>
+
+
+<span class="c"># Set PaGMO debug and release flags</span>
+<span class="nb">target_compile_options</span><span class="p">(</span><span class="s">application_PagmoHimmelblausExample</span> <span class="s">PRIVATE</span> <span class="s2">&quot;$&lt;$&lt;CONFIG:DEBUG&gt;:${PAGMO_CXX_FLAGS_DEBUG}&gt;&quot;</span> <span class="s2">&quot;$&lt;$&lt;CONFIG:RELEASE&gt;:${PAGMO_CXX_FLAGS_RELEASE}&gt;&quot;</span><span class="p">)</span>
+
+<span class="c"># Set C++ standard to C++11</span>
+<span class="nb">set_property</span><span class="p">(</span><span class="s">TARGET</span> <span class="s">application_PagmoHimmelblausExample</span> <span class="s">PROPERTY</span> <span class="s">CXX_STANDARD</span> <span class="s">11</span><span class="p">)</span>
+<span class="nb">set_property</span><span class="p">(</span><span class="s">TARGET</span> <span class="s">application_PagmoHimmelblausExample</span> <span class="s">PROPERTY</span> <span class="s">CXX_STANDARD_REQUIRED</span> <span class="s">YES</span><span class="p">)</span>
+<span class="nb">set_property</span><span class="p">(</span><span class="s">TARGET</span> <span class="s">application_PagmoHimmelblausExample</span> <span class="s">PROPERTY</span> <span class="s">CXX_EXTENSIONS</span> <span class="s">NO</span><span class="p">)</span>
+
+<span class="c"># Link Boost libraries and pthread</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">application_PagmoHimmelblausExample</span> <span class="o">${</span><span class="nv">Boost_LIBRARIES</span><span class="o">}</span> <span class="s">pthread</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../optimizationTools/index.html" class="btn btn-neutral float-right" title="8. Optimization tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="jsoncpp.html" class="btn btn-neutral" title="7.3. External Libraries: JSONCPP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Delft University of Technology.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header .arrow").click(function() {
+            $(this).closest('.toggle').children().not(".header").toggle(400);
+            $(this).toggleClass("open");
+            // $(this).html() == "More" ? $(this).html('Less') : $(this).html('More');
+        });
+        $(".showall").click(function() {
+            $(".toggle > *").show(400);
+            $(".toggle .header .arrow").addClass("open");
+        });
+        $(".hideall").click(function() {
+            $(".toggle > *").hide(400);
+            $(".toggle .header").show(400);
+            $(".toggle .header .arrow").removeClass("open");
+        });
+    });
+</script>
+
+
+</body>
+</html>

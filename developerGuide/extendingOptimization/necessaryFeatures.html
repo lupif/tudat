@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ideas for future development &mdash; TU Delft Astrodynamic Toolbox  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="TU Delft Astrodynamic Toolbox  documentation" href="../../index.html"/>
+        <link rel="up" title="Extending the optimization namespace" href="index.html"/>
+        <link rel="next" title="Guide To Debugging" href="../guideToDebugging.html"/>
+        <link rel="prev" title="Mission Linker" href="missionLinker.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> TU Delft Astrodynamic Toolbox
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Start Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials and Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../githubBasics.html">Github Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extendingJSON/index.html">Extending the JSON Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extendingMATLAB/index.html">Extending the MATLAB Interface</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Extending the optimization namespace</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="basics.html">Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="objectiveFunction.html">Objective Function Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="missionSegment.html">Mission Segment Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="missionLinker.html">Mission Linker</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Ideas for future development</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#linkage-between-different-reference-frames">Linkage between different reference frames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#centre-of-frame-for-orbital-element-decision-variables">Centre of frame for orbital element decision variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pareto-front-multi-objective-optimization">Pareto front multi-objective optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-optimization-settings">Other optimization settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../guideToDebugging.html">Guide To Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cppTutorials.html">C++ Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howToWriteTheWiki.html">How to Write the Wiki</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TU Delft Astrodynamic Toolbox</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Developer Guide</a> &raquo;</li>
+        
+          <li><a href="index.html">Extending the optimization namespace</a> &raquo;</li>
+        
+      <li>Ideas for future development</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/developerGuide/extendingOptimization/necessaryFeatures.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="optimizationnecessaryfeatures">
+<span id="ideas-for-future-development"></span><h1>Ideas for future development<a class="headerlink" href="#optimizationnecessaryfeatures" title="Permalink to this headline">¶</a></h1>
+<p>At the moment several features are missing from the optimization package, which should be included to
+provide the best Tudat experience for the users.</p>
+<div class="section" id="linkage-between-different-reference-frames">
+<h2>Linkage between different reference frames<a class="headerlink" href="#linkage-between-different-reference-frames" title="Permalink to this headline">¶</a></h2>
+<p>The linking of two mission segments in the <a class="reference internal" href="missionLinker.html#extendmissionlinker"><span class="std std-ref">Mission Linker</span></a> does not take care to recognize the two reference frames are
+centered at the same body. The program should recognize whether the two reference frames are the same, and, if not,
+perform the due translations, maybe aided by the <code class="docutils literal"><span class="pre">ReferenceFrameManager</span></code> class. This part should be implemented in the
+<code class="docutils literal"><span class="pre">optimize()</span></code> method of the <code class="docutils literal"><span class="pre">MissionLinker</span></code> class. See file <code class="docutils literal"><span class="pre">Tudat/Optimization/missionLinker.cpp</span></code>.
+Beware that at the moment <strong>Tudat do not support different frame orientations</strong>, therefore only the centre of propagation can be
+modified.</p>
+</div>
+<div class="section" id="centre-of-frame-for-orbital-element-decision-variables">
+<h2>Centre of frame for orbital element decision variables<a class="headerlink" href="#centre-of-frame-for-orbital-element-decision-variables" title="Permalink to this headline">¶</a></h2>
+<p>The classes <code class="docutils literal"><span class="pre">SingleCartesianComponentDecisionVariableSettings</span></code>, <code class="docutils literal"><span class="pre">SingleKeplerElementDecisionVariableSettings</span></code> and
+<code class="docutils literal"><span class="pre">SingleSphericalOrbitalElementDecisionVariableSettings</span></code>, as well as <code class="docutils literal"><span class="pre">SingleDecisionVariableSettings</span></code> using the flags
+<code class="docutils literal"><span class="pre">initial_cartesian_state_decision_variable</span></code>, <code class="docutils literal"><span class="pre">initial_cartesian_velocity_decision_variable</span></code> and
+<code class="docutils literal"><span class="pre">initial_cartesian_position_decision_variable</span></code> allow to use the initial orbital states of a body as decision variables.</p>
+<p>At the moment the centre of the reference frame around which these orbital states are defined is the current <code class="docutils literal"><span class="pre">centralBodies</span></code> vector
+associated index in the propagator settings, although the user should be able to define its own reference frame centre.</p>
+<p>These modifications should be implemented both in the structures of the above mentioned classes, in the files
+<code class="docutils literal"><span class="pre">Tudat/Optimization/decisionVariableSettings.h</span></code> and <code class="docutils literal"><span class="pre">Tudat/Optimization/decisionVariableSettings.cpp</span></code> and in the methods
+<code class="docutils literal"><span class="pre">MissionLinker::getInitialOrbitalState(</span> <span class="pre">)</span></code>, <code class="docutils literal"><span class="pre">MissionLinker::resetOrbitalState(</span> <span class="pre">)</span></code>, <code class="docutils literal"><span class="pre">MissionLinker::modifyCartesianComponent(</span> <span class="pre">)</span></code>,
+<code class="docutils literal"><span class="pre">MissionLinker::modifyKeplerElement(</span> <span class="pre">)</span></code> and <code class="docutils literal"><span class="pre">MissionLinker::modifySphericalComponent(</span> <span class="pre">)</span></code>, found in the file <code class="docutils literal"><span class="pre">Tudat/Optimization/missionSegmentSettings.cpp</span></code>.
+Also here the challenges are mainly about the frames in which each body is centered. The developer can use the <code class="docutils literal"><span class="pre">ReferenceFrameManager</span></code> class for this purpose.</p>
+</div>
+<div class="section" id="pareto-front-multi-objective-optimization">
+<h2>Pareto front multi-objective optimization<a class="headerlink" href="#pareto-front-multi-objective-optimization" title="Permalink to this headline">¶</a></h2>
+<p>Despite PaGMO allows some methods to create a multi-objective optimization problem, at the moment this option is not yet introduced in
+the optimization namespace. The two options allowed in the <code class="docutils literal"><span class="pre">OptimizationSettings</span></code> class are <code class="docutils literal"><span class="pre">local_optimization</span></code> and <code class="docutils literal"><span class="pre">global_optimization</span></code>,
+each referencing to only one optimization alghorithm provided by PaGMO.</p>
+</div>
+<div class="section" id="other-optimization-settings">
+<h2>Other optimization settings<a class="headerlink" href="#other-optimization-settings" title="Permalink to this headline">¶</a></h2>
+<p>At the moment the <code class="docutils literal"><span class="pre">OptimizationSettings</span></code> class, defined in the file <code class="docutils literal"><span class="pre">Tudat/Optimization/missionLinker.h</span></code> allows for a sparse number of optimization
+settings. Some more options should be introduced to allow the user a more flexible optimization capability.</p>
+</div>
+<div class="section" id="miscellaneous">
+<h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>An exact Lambert targeter, starting at a certain orbit around a departure Planet and ending at a certain orbit around a target Planet. This can only be implemented with an optimization process.</li>
+<li>Other?</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../guideToDebugging.html" class="btn btn-neutral float-right" title="Guide To Debugging" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="missionLinker.html" class="btn btn-neutral" title="Mission Linker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Delft University of Technology.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header .arrow").click(function() {
+            $(this).closest('.toggle').children().not(".header").toggle(400);
+            $(this).toggleClass("open");
+            // $(this).html() == "More" ? $(this).html('Less') : $(this).html('More');
+        });
+        $(".showall").click(function() {
+            $(".toggle > *").show(400);
+            $(".toggle .header .arrow").addClass("open");
+        });
+        $(".hideall").click(function() {
+            $(".toggle > *").hide(400);
+            $(".toggle .header").show(400);
+            $(".toggle .header .arrow").removeClass("open");
+        });
+    });
+</script>
+
+
+</body>
+</html>

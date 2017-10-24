@@ -1,0 +1,693 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>10. Mission Linking and Optimization &mdash; TU Delft Astrodynamic Toolbox  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="TU Delft Astrodynamic Toolbox  documentation" href="../../index.html"/>
+        <link rel="up" title="Application Walkthroughs" href="index.html"/>
+        <link rel="next" title="Tudat Libraries" href="../tudatFeatures/index.html"/>
+        <link rel="prev" title="9. Orbit Determination and Parameter Estimation" href="earthOrbiterStateEstimation.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> TU Delft Astrodynamic Toolbox
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Start Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials and Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../prerequiredKnowledge/index.html">Getting Started with Tudat</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Application Walkthroughs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#preparation">Preparation</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#example-tutorials">Example tutorials</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="unperturbedEarthOrbitingSatellite.html">1. Unperturbed Earth-orbiting Satellite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="perturbedEarthOrbitingSatellite.html">2. Perturbed Earth-orbiting Satellite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unguidedCapsuleEntry.html">3. Un-guided Capsule Entry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="innerSolarSystemPropagation.html">4. Inner Solar System Propagation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="useOfThrustThrustForceAlongVelocityVector.html">5. Use of Thrust: Thrust Force Along Velocity Vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="useOfThrustUserDefinedThrustVector.html">6. Use of Thrust: User-defined Thrust Vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="variationalEquationsPropagation.html">7. Variational Equations Propagation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="earthOrbiterBasicStateEstimation.html">8. Orbit Determination and Parameter Estimation (Basic)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="earthOrbiterStateEstimation.html">9. Orbit Determination and Parameter Estimation</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">10. Mission Linking and Optimization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tudatFeatures/index.html">Tudat Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jsonInterface/index.html">JSON Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../matlabInterface/index.html">MATLAB Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../developerGuide/index.html">Developer Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TU Delft Astrodynamic Toolbox</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Tutorials and Documentation</a> &raquo;</li>
+        
+          <li><a href="index.html">Application Walkthroughs</a> &raquo;</li>
+        
+      <li>10. Mission Linking and Optimization</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/tutorials/applicationWalkthroughs/satelliteRendezVous.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mission-linking-and-optimization">
+<span id="satelliterendezvous"></span><h1>10. Mission Linking and Optimization<a class="headerlink" href="#mission-linking-and-optimization" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial we introduce the features of the Optimization package, including the MissionLinker class and how to set up an optimization problem in Tudat.</p>
+<blockquote>
+<div><p>The code for this tutorial is given on GitHub and is also located in the tudatBundle at:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="n">tudatBundle</span><span class="o">/</span><span class="n">tudatExampleApplications</span><span class="o">/</span><span class="n">satellitePropagatorExamples</span><span class="o">/</span><span class="n">SatellitePropagatorExamples</span><span class="o">/</span><span class="n">satelliteRendezVousExample</span><span class="p">.</span><span class="n">cpp</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The code follows the following example: two satellites are approximately on the same orbit around Earth. The two are separated by a small angle, with the Chaser
+falling behind the Target. We need to optimize the initial burn time for the chaser in order to rendez-vous with the target.</p>
+<p>These are the initial orbital values for the two satellites:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="64%" />
+<col width="18%" />
+<col width="18%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Target</strong></td>
+<td><strong>Chaser</strong></td>
+</tr>
+<tr class="row-even"><td>Semi-major axis <span class="math">\(a\)</span> [m]</td>
+<td>6782650.0</td>
+<td>6782650.0</td>
+</tr>
+<tr class="row-odd"><td>Eccentricity <span class="math">\(e\)</span></td>
+<td>0.00050</td>
+<td>0.00025</td>
+</tr>
+<tr class="row-even"><td>Inclination <span class="math">\(i\)</span> [°]</td>
+<td>51.640</td>
+<td>51.635</td>
+</tr>
+<tr class="row-odd"><td>Argument of perigee <span class="math">\(\omega\)</span> [°]</td>
+<td>235.700</td>
+<td>84.100</td>
+</tr>
+<tr class="row-even"><td>RAAN <span class="math">\(\Omega\)</span> [°]</td>
+<td>23.400</td>
+<td>23.400</td>
+</tr>
+<tr class="row-odd"><td>Initial true anomaly <span class="math">\(\theta_0\)</span> [°]</td>
+<td>139.800</td>
+<td>290.500</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>From the table one can discern that, since the two spacecraft have approximately the same inclination and exactly the same RAAN, the angular separation between the two is</p>
+<blockquote>
+<div><div class="math">
+\[\Delta u_0 = \omega_T + (\theta_0)_T - (\omega_C + (\theta_0)_C) = 0.9 [^\circ]\]</div>
+</div></blockquote>
+<p>which makes up for an arc distance of</p>
+<blockquote>
+<div><div class="math">
+\[\Delta y_0 = a \cdot \Delta \theta_0 \approx 106.604 [\text{km}]\]</div>
+</div></blockquote>
+<p>In order to rendez-vous, the Chaser needs to gain velocity w.r.t. the Target. Because of the geometry of the problem, the needed impulse and velocity direction can be approximated
+using the Clohessy Whiltshire equations. The approximation sees the Chaser on the line of the velocity vector, in delay w.r.t. the Target:</p>
+<blockquote>
+<div><div class="math">
+\[y_0 = -\Delta y_0\]</div>
+</div></blockquote>
+<p>We decide to perform a burn parallel to the direction of motion, i.e., all the parameters except for <span class="math">\(y_0\)</span> and <span class="math">\(\dot y_0\)</span> are set to 0:</p>
+<blockquote>
+<div><div class="math">
+\[\dot y_0 = \dfrac{y_0 n}{6 \pi}\]</div>
+</div></blockquote>
+<p>where <span class="math">\(n = \sqrt{\mu / a^3 }\)</span> with <span class="math">\(\mu\)</span> being the orbital parameter of Earth. The fact that <span class="math">\(y_0 &lt; 0\)</span> means that <strong>the required burn is retrograde</strong>.</p>
+<p>The total impulse required is</p>
+<blockquote>
+<div><div class="math">
+\[\Delta V = | \dot y_0 | \approx 6.39207 [\text{m/s}]\]</div>
+</div></blockquote>
+<p>The propulsion system of the Chaser is modelled on the Orbital Maneouvering System of the STS. The values are given in the following table:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Initial mass <span class="math">\(M_0 = 90116.4\)</span> [kg]</td>
+</tr>
+<tr class="row-even"><td>Thrust magnitude <span class="math">\(T = 26700.0\)</span> [N]</td>
+</tr>
+<tr class="row-odd"><td>Specific impulse <span class="math">\(I_{sp} = 316.0\)</span> [s]</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>The initial mass represents an empty space-shuttle with enough fuel for orbital maneouver, de-orbiting and a small margin.</p>
+<p>Using the Tsiolkowsky equation:</p>
+<blockquote>
+<div><div class="math">
+\[\Delta V = I_{sp} g_0 ln( \Lambda )\]</div>
+</div></blockquote>
+<p>and the relation with a constant thrust:</p>
+<blockquote>
+<div><div class="math">
+\[t_b =  \dfrac {I_{sp} g_0 M_0}{T} \left( 1 - \dfrac{1}{\Lambda} \right)\]</div>
+</div></blockquote>
+<p>The total burn time can be estimated to be <span class="math">\(t_b \approx 21.552\)</span> [s].</p>
+<p>The objetive of this example is to optimize this value to minimize the final separation between the spacecraft. In order to do so we have to set-up two simulations in Tudat: one with a thrust acceleration
+model for the chaser and one with only the gravitational accelerations due to Earth, to represent the coasting phase. We will use the MissionLinker class
+to link the two simulations and define the decision variable and the objective function.</p>
+<div class="section" id="creating-the-first-mission-segment">
+<h2>10.1. Creating the first mission segment<a class="headerlink" href="#creating-the-first-mission-segment" title="Permalink to this headline">¶</a></h2>
+<p>For the first simulation we need to define the acceleration model in order to include a thrust in the opposite direction of motion for the Chaser.
+After defining the accelerations of the target, which only include the spherical armonics of Earth up to degree and order 4, the accelerations of
+the Chaser are defined in the following piece of code:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Space shuttle OMS thrust (AJ10-190 engine)</span>
+<span class="kt">double</span> <span class="n">thrustMagnitude</span> <span class="o">=</span> <span class="mf">26700.0</span><span class="p">;</span> <span class="c1">//N</span>
+<span class="kt">double</span> <span class="n">specificImpulse</span> <span class="o">=</span> <span class="mf">316.0</span><span class="p">;</span> <span class="c1">//s</span>
+
+<span class="c1">// Thrust opposite to direction of motion</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">ThrustDirectionGuidanceSettings</span> <span class="o">&gt;</span> <span class="n">thrustDirectionGuidanceSettings</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">ThrustDirectionFromStateGuidanceSettings</span> <span class="o">&gt;</span><span class="p">(</span>
+            <span class="s">&quot;Earth&quot;</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">ThrustEngineSettings</span> <span class="o">&gt;</span> <span class="n">thrustMagnitudeSettings</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">ConstantThrustEngineSettings</span> <span class="o">&gt;</span><span class="p">(</span>
+            <span class="n">thrustMagnitude</span><span class="p">,</span> <span class="n">specificImpulse</span> <span class="p">);</span>
+
+<span class="c1">// Define chaser acceleration model settings.</span>
+<span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">AccelerationSettings</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">accelerationsOfChaser_1</span><span class="p">;</span>
+<span class="n">accelerationsOfChaser_1</span><span class="p">[</span> <span class="s">&quot;Earth&quot;</span> <span class="p">].</span><span class="n">push_back</span><span class="p">(</span> <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">SphericalHarmonicAccelerationSettings</span> <span class="o">&gt;</span><span class="p">(</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">);</span>
+<span class="n">accelerationsOfChaser_1</span><span class="p">[</span> <span class="s">&quot;Chaser&quot;</span> <span class="p">].</span><span class="n">push_back</span><span class="p">(</span>
+            <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">ThrustAccelerationSettings</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">thrustDirectionGuidanceSettings</span><span class="p">,</span> <span class="n">thrustMagnitudeSettings</span><span class="p">)</span> <span class="p">);</span>
+<span class="n">accelerationMap_1</span><span class="p">[</span>  <span class="s">&quot;Chaser&quot;</span> <span class="p">]</span> <span class="o">=</span> <span class="n">accelerationsOfChaser_1</span><span class="p">;</span>
+<span class="n">bodiesToPropagate_1</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="s">&quot;Chaser&quot;</span> <span class="p">);</span>
+<span class="n">centralBodies_1</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="s">&quot;Earth&quot;</span> <span class="p">);</span>
+
+<span class="c1">// Create acceleration models and propagation settings.</span>
+<span class="n">basic_astrodynamics</span><span class="o">::</span><span class="n">AccelerationMap</span> <span class="n">accelerationModelMap_1</span> <span class="o">=</span> <span class="n">createAccelerationModelsMap</span><span class="p">(</span>
+            <span class="n">bodyMap_1</span><span class="p">,</span> <span class="n">accelerationMap_1</span><span class="p">,</span> <span class="n">bodiesToPropagate_1</span><span class="p">,</span> <span class="n">centralBodies_1</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The initial Cartesian states are translated from the initial orbital parameters in the table.</p>
+<p>A mass propagator for the Chaser is included in the propagator settings:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Preliminary time termination settings for first simulation</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">PropagationTimeTerminationSettings</span> <span class="o">&gt;</span> <span class="n">timeTerminationSettings_1</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">propagators</span><span class="o">::</span><span class="n">PropagationTimeTerminationSettings</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">estimatedBurnTime</span> <span class="p">);</span>
+
+<span class="c1">// State propagator for first simulation</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">TranslationalStatePropagatorSettings</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">translationalPropagatorSettings</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">TranslationalStatePropagatorSettings</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&gt;</span>
+        <span class="p">(</span> <span class="n">centralBodies_1</span><span class="p">,</span> <span class="n">accelerationModelMap_1</span><span class="p">,</span> <span class="n">bodiesToPropagate_1</span><span class="p">,</span> <span class="n">systemInitialState</span><span class="p">,</span> <span class="n">timeTerminationSettings_1</span> <span class="p">);</span>
+
+<span class="c1">// Create mass rate model for the chaser</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">MassRateModelSettings</span> <span class="o">&gt;</span> <span class="n">massRateModelSettings</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">FromThrustMassModelSettings</span> <span class="o">&gt;</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">basic_astrodynamics</span><span class="o">::</span><span class="n">MassRateModel</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">massRateModels</span><span class="p">;</span>
+<span class="n">massRateModels</span><span class="p">[</span> <span class="s">&quot;Chaser&quot;</span> <span class="p">]</span> <span class="o">=</span> <span class="n">createMassRateModel</span><span class="p">(</span>
+        <span class="s">&quot;Chaser&quot;</span><span class="p">,</span> <span class="n">massRateModelSettings</span><span class="p">,</span> <span class="n">bodyMap_1</span><span class="p">,</span> <span class="n">accelerationModelMap_1</span> <span class="p">);</span>
+
+<span class="c1">// Create mass propagator settings for the chaser</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&gt;</span> <span class="n">bodiesWithMassToPropagate</span><span class="p">;</span>
+<span class="n">bodiesWithMassToPropagate</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="s">&quot;Chaser&quot;</span> <span class="p">);</span>
+
+<span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="n">initialBodyMasses</span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+<span class="n">initialBodyMasses</span><span class="p">(</span> <span class="mi">0</span> <span class="p">)</span> <span class="o">=</span> <span class="n">chaserMass</span><span class="p">;</span>
+
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">MassPropagatorSettings</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">massPropagatorSettings</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">MassPropagatorSettings</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&gt;</span><span class="p">(</span>
+                <span class="n">bodiesWithMassToPropagate</span><span class="p">,</span> <span class="n">massRateModels</span><span class="p">,</span> <span class="n">initialBodyMasses</span><span class="p">,</span> <span class="n">timeTerminationSettings_1</span> <span class="p">);</span>
+
+<span class="c1">// Create multi-type propagator settings (state + chaser mass propagator)</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">PropagatorSettings</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">propagatorSettingsVector</span><span class="p">;</span>
+                <span class="n">propagatorSettingsVector</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">translationalPropagatorSettings</span><span class="p">);</span>
+                <span class="n">propagatorSettingsVector</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">massPropagatorSettings</span> <span class="p">);</span>
+
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">MultiTypePropagatorSettings</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">propagatorSettings_1</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">MultiTypePropagatorSettings</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&gt;</span><span class="p">(</span>
+                                <span class="n">propagatorSettingsVector</span><span class="p">,</span> <span class="n">timeTerminationSettings_1</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The time termination settings are just preliminary, as we want to define the time of this part of the simulation as the decision variable. Nevertheless,
+they need to be included, as the optimizer does not create one by itself.</p>
+<p>Afterwards, the integrator settings and the dynamics simulator are created. The chosen fixed step size is very small, so to augment the focus of the time decision variable:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">const</span> <span class="kt">double</span> <span class="n">fixedStepSize</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">;</span> <span class="c1">//s</span>
+
+<span class="c1">// Create integrator settings for first simulation</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">IntegratorSettings</span><span class="o">&lt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">integratorSettings_1</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">IntegratorSettings</span><span class="o">&lt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span>
+        <span class="p">(</span> <span class="n">rungeKutta4</span><span class="p">,</span> <span class="n">simulationStartEpoch</span><span class="p">,</span> <span class="n">fixedStepSize</span> <span class="p">);</span>
+
+<span class="c1">// Create dynamics simulator for first simulation</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">SingleArcDynamicsSimulator</span><span class="o">&lt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">dynamicsSimulator_1</span>
+        <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">SingleArcDynamicsSimulator</span><span class="o">&lt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span><span class="p">(</span>
+            <span class="n">bodyMap_1</span><span class="p">,</span> <span class="n">integratorSettings_1</span><span class="p">,</span> <span class="n">propagatorSettings_1</span><span class="p">,</span> <span class="nb">false</span><span class="p">,</span> <span class="nb">false</span><span class="p">,</span> <span class="nb">false</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>We now proceed to create the decision variable. In this case we want to optimize the burn time, i.e. the simulation time.
+The boundaries are set to search for the optimum time in a 10 seconds interval <span class="math">\(t_b - 5 \text{ s} &lt; t &lt; t_b + 5 \text{ s}\)</span> :</p>
+<blockquote>
+<div></div></blockquote>
+<p>Since the start epoch is set to 0, we coud also use the option <code class="docutils literal"><span class="pre">optimization::SingleDecisionVariableFromTerminationSettings</span></code>, which includes the time
+termination settings. It would be set as following:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">optimization</span><span class="o">::</span><span class="n">SingleDecisionVariableFromTerminationSettings</span> <span class="o">&gt;</span> <span class="n">decisionVariable_1</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">optimization</span><span class="o">::</span><span class="n">SingleDecisionVariableFromTerminationSettings</span> <span class="o">&gt;</span><span class="p">(</span>
+                <span class="n">dynamicsSimulator_1</span><span class="p">,</span> <span class="n">estimatedBurnTime</span> <span class="o">-</span> <span class="mf">5.0</span><span class="p">,</span> <span class="n">estimatedBurnTime</span> <span class="o">+</span> <span class="mf">5.0</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>In order to link the dynamics simulator and the decision variable, we use the class MissionSegment:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Create first mission segment with the dynamics simulator and the decision variable</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">optimization</span><span class="o">::</span><span class="n">MissionSegmentSettings</span> <span class="o">&gt;</span> <span class="n">missionSegment_1</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">optimization</span><span class="o">::</span><span class="n">MissionSegmentSettings</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">dynamicsSimulator_1</span><span class="p">,</span>
+                <span class="n">decisionVariable_1</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="creating-the-second-mission-segment">
+<h2>10.2. Creating the second mission segment<a class="headerlink" href="#creating-the-second-mission-segment" title="Permalink to this headline">¶</a></h2>
+<p>Now we proceed to create the second simulation.</p>
+<p>Both the Target and the Chaser have as acceleration the spherical armonics gravitational field of Earth up to order and degree 4.</p>
+<p>Since we want to minimize the separation between the two spacecraft we are going to need to save the distance between the two bodies as
+a dependent variable:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Create dependent variable save settings to retrieve</span>
+<span class="c1">// the distance between the two spacecraft</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">SingleDependentVariableSaveSettings</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">dependentVariableSaveSettingsVector</span><span class="p">;</span>
+
+<span class="n">dependentVariableSaveSettingsVector</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">SingleDependentVariableSaveSettings</span> <span class="o">&gt;</span> <span class="p">(</span>
+        <span class="n">relative_distance_dependent_variable</span><span class="p">,</span> <span class="s">&quot;Chaser&quot;</span><span class="p">,</span> <span class="s">&quot;Target&quot;</span> <span class="p">)</span> <span class="p">);</span>
+
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">DependentVariableSaveSettings</span> <span class="o">&gt;</span> <span class="n">dependentVariableSaveSettings</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">DependentVariableSaveSettings</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">dependentVariableSaveSettingsVector</span><span class="p">,</span> <span class="nb">false</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>We also want to propagate the simulation until the separation of the two spacecraft is at least 1000 m. We create, therefore, hibrid termination settings, in order to
+include a stop at the minimum required separation or at an adeguate amount of time, here defined as the estimated rendez-vous time plus a small margin:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Create hybrid termination settings to simulate until estimated</span>
+<span class="c1">// rendez vous + margin or until minimum separation</span>
+
+<span class="k">const</span> <span class="kt">double</span> <span class="n">minimumSeparation</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span> <span class="c1">//m</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">propagators</span><span class="o">::</span><span class="n">PropagationTerminationSettings</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">multiTerminationSettings</span><span class="p">;</span>
+
+<span class="n">multiTerminationSettings</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">propagators</span><span class="o">::</span><span class="n">PropagationTimeTerminationSettings</span> <span class="o">&gt;</span><span class="p">(</span>
+                                        <span class="n">estimatedBurnTime</span> <span class="o">+</span> <span class="n">estimatedRendezVousTime</span> <span class="o">+</span> <span class="mi">10</span><span class="o">*</span><span class="n">fixedStepSize</span><span class="p">)</span> <span class="p">);</span>
+
+<span class="n">multiTerminationSettings</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span>
+        <span class="n">propagators</span><span class="o">::</span><span class="n">PropagationDependentVariableTerminationSettings</span> <span class="o">&gt;</span><span class="p">(</span>
+                <span class="n">dependentVariableSaveSettingsVector</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">minimumSeparation</span><span class="p">,</span> <span class="nb">true</span> <span class="p">)</span> <span class="p">);</span>
+
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">propagators</span><span class="o">::</span><span class="n">PropagationHybridTerminationSettings</span> <span class="o">&gt;</span> <span class="n">hybridTerminationSettings</span> <span class="o">=</span>
+    <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">propagators</span><span class="o">::</span><span class="n">PropagationHybridTerminationSettings</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">multiTerminationSettings</span><span class="p">,</span> <span class="nb">true</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The estimated rendez-vous time is calculated using the Clohessy-Wiltshire equations as: <span class="math">\(t_r = 2 \pi / n\)</span>, i.e. the orbital period of the target.</p>
+<p>We then proceed to finalize the simulation with the propagator settings, integrator settings and the dynamics simulator:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Create propagator settings for second simulation</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">TranslationalStatePropagatorSettings</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">propagatorSettings_2</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">TranslationalStatePropagatorSettings</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&gt;</span>
+                <span class="p">(</span> <span class="n">centralBodies_2</span><span class="p">,</span> <span class="n">accelerationModelMap_2</span><span class="p">,</span> <span class="n">bodiesToPropagate_2</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="o">::</span><span class="n">Zero</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span>
+                        <span class="n">hybridTerminationSettings</span><span class="p">,</span> <span class="n">cowell</span><span class="p">,</span> <span class="n">dependentVariableSaveSettings</span> <span class="p">);</span>
+
+<span class="n">fixedStepSize</span> <span class="o">=</span> <span class="mf">5.0</span><span class="p">;</span> <span class="c1">//s</span>
+
+<span class="c1">// Create integrator settings for second simulation</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">IntegratorSettings</span><span class="o">&lt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">integratorSettings_2</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">IntegratorSettings</span><span class="o">&lt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">rungeKutta4</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">fixedStepSize</span> <span class="p">);</span>
+
+<span class="c1">// Create dynamics simulator for second simulation</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">SingleArcDynamicsSimulator</span><span class="o">&lt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">dynamicsSimulator_2</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">SingleArcDynamicsSimulator</span><span class="o">&lt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">bodyMap_2</span><span class="p">,</span> <span class="n">integratorSettings_2</span><span class="p">,</span>
+                <span class="n">propagatorSettings_2</span><span class="p">,</span> <span class="nb">false</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The initial state is defined as a vector of zeros (<code class="docutils literal"><span class="pre">Eigen::VectorXd::Zero(12)</span></code>) and the initial time is set to 0, since, during the optimization process, they will be automatically set to the (interpolated) final values of the
+previous mission segment. For the second simulation we are allowed to use a larger step size of 5 s, since the simulation is less sensitive (there is no thrust this time).</p>
+<p>It is convenient to set the <strong>objective function</strong> as the minimum separation between the two spacecraft, since the defined simulation time is arbitrary it is unlikely that the distance between spacecraft
+will reach its minimum value at the final entry. We use the <span class="xref std std-ref">ObjectiveFunction</span> class as following:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Use the minimum separation between spacecraft as objective function</span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">maxNumberOfEvolutions</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">double</span> <span class="n">objectiveValue</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">optimization</span><span class="o">::</span><span class="n">ObjectiveFunctionFromMinOrMaxDependentVariableSettings</span> <span class="o">&gt;</span> <span class="n">objectiveFunction</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">optimization</span><span class="o">::</span><span class="n">ObjectiveFunctionFromMinOrMaxDependentVariableSettings</span> <span class="o">&gt;</span><span class="p">(</span>
+                <span class="n">dependentVariableSaveSettingsVector</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">objectiveValue</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span>
+                        <span class="n">minimumSeparation</span><span class="p">,</span> <span class="n">maxNumberOfEvolutions</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>We used the previously defined <code class="docutils literal"><span class="pre">dependentVariableSaveSettingsVector[0]</span></code> to get the dependent variable save settings of the distance between spacecraft.
+The objective value is 0, so that the objective function will trend to converge to that value, but we set the tolerance to <code class="docutils literal"><span class="pre">minimumSeparation</span></code>, so that
+the optimization process stops when the minimum distance between spacecraft is inferior to 1000 m. Finally, we want to have a maximum of 30 evolutions.</p>
+<p>We then define the <span class="xref std std-ref">MissionSegment</span> object of this second simulation to link the dynamics simulator with the objective function:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Create mission segment for second simulation containing the second</span>
+<span class="c1">// dynamics simulator and the objective function</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">optimization</span><span class="o">::</span><span class="n">MissionSegmentSettings</span> <span class="o">&gt;</span> <span class="n">missionSegment_2</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">optimization</span><span class="o">::</span><span class="n">MissionSegmentSettings</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">dynamicsSimulator_2</span><span class="p">,</span>
+                <span class="n">objectiveFunction</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="linkage-and-optimization">
+<h2>10.3. Linkage and optimization<a class="headerlink" href="#linkage-and-optimization" title="Permalink to this headline">¶</a></h2>
+<p>Finally, we link together the two mission segments in a chronological order with the <a class="reference internal" href="../tudatFeatures/optimizationTools/missionLinker.html#missionlinker"><span class="std std-ref">Mission linker</span></a> class:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Create object to link the two mission segments and optimize the mission constraint</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">optimization</span><span class="o">::</span><span class="n">MissionSegmentSettings</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">missionSegments</span><span class="p">;</span>
+
+<span class="n">missionSegments</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">missionSegment_1</span> <span class="p">);</span>
+<span class="n">missionSegments</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">missionSegment_2</span> <span class="p">);</span>
+
+<span class="n">optimization</span><span class="o">::</span><span class="n">MissionLinker</span> <span class="n">missionLinker</span><span class="p">(</span><span class="n">missionSegments</span><span class="p">,</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">optimization</span><span class="o">::</span><span class="n">OptimizationSettings</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">optimization</span><span class="o">::</span><span class="n">global_optimization</span><span class="p">,</span>
+                <span class="mi">32</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="mi">1</span> <span class="p">),</span> <span class="nb">false</span>  <span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>As <span class="xref std std-ref">OptimizationSettings</span>, we are going to use a global optimization with a population of 32 individuals, set the flag that
+stops the simulation at the maximum number of evolutions to <code class="docutils literal"><span class="pre">true</span></code> and the verbosity to 1, as to visualize the results of each
+iteration.</p>
+<p>You could either set the last flag to <code class="docutils literal"><span class="pre">true</span></code> or use the statement</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Start optimization</span>
+<span class="n">missionLinker</span><span class="p">.</span><span class="n">optimize</span><span class="p">();</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>to optimize the configuration.</p>
+<p>Since the decision variable is the simulation time of the first mission segment, in order to retrieve the optimum,
+which is set automatically at the end of each simulation, you can directly scout the termination settings of the first dynamics simulator:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s"> Calculated burn time = &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">timeTerminationSettings_1</span><span class="o">-&gt;</span><span class="n">terminationTime_</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The same is done with the optimized results of the two simulations:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span> <span class="kt">double</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="o">&gt;</span> <span class="n">integrationResult_1</span> <span class="o">=</span> <span class="n">dynamicsSimulator_1</span><span class="o">-&gt;</span><span class="n">getEquationsOfMotionNumericalSolution</span><span class="p">();</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span> <span class="kt">double</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="o">&gt;</span> <span class="n">integrationResult_2</span> <span class="o">=</span> <span class="n">dynamicsSimulator_2</span><span class="o">-&gt;</span><span class="n">getEquationsOfMotionNumericalSolution</span><span class="p">();</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="results">
+<h2>10.4. Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<p>The output for this configuration is:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="n">Initial</span> <span class="n">spacecraft</span> <span class="n">seaparation</span> <span class="o">=</span> <span class="mf">106.604</span><span class="n">km</span>
+
+<span class="n">Required</span> <span class="n">impulse</span> <span class="o">=</span> <span class="mf">6.39207</span><span class="n">m</span><span class="o">/</span><span class="n">s</span>
+
+<span class="n">Estimated</span> <span class="n">burn</span> <span class="n">time</span> <span class="o">=</span> <span class="mf">21.5519</span><span class="n">s</span>
+
+<span class="n">Evolution</span> <span class="nl">n</span><span class="p">:</span> <span class="mi">1</span> <span class="n">Objective</span> <span class="nl">Function</span><span class="p">:</span> <span class="mf">2806.44</span>
+<span class="n">Evolution</span> <span class="nl">n</span><span class="p">:</span> <span class="mi">2</span> <span class="n">Objective</span> <span class="nl">Function</span><span class="p">:</span> <span class="mf">2323.05</span>
+<span class="p">[...]</span>
+<span class="n">Evolution</span> <span class="nl">n</span><span class="p">:</span> <span class="mi">6</span> <span class="n">Objective</span> <span class="nl">Function</span><span class="p">:</span> <span class="mf">2316.05</span>
+<span class="n">Evolution</span> <span class="nl">n</span><span class="p">:</span> <span class="mi">7</span> <span class="n">Objective</span> <span class="nl">Function</span><span class="p">:</span> <span class="mf">2315.48</span>
+<span class="p">[...]</span>
+<span class="n">Evolution</span> <span class="nl">n</span><span class="p">:</span> <span class="mi">11</span> <span class="n">Objective</span> <span class="nl">Function</span><span class="p">:</span> <span class="mf">2315.48</span>
+<span class="n">Evolution</span> <span class="nl">n</span><span class="p">:</span> <span class="mi">12</span> <span class="n">Objective</span> <span class="nl">Function</span><span class="p">:</span> <span class="mf">2315.3</span>
+<span class="p">[...]</span>
+<span class="n">Evolution</span> <span class="nl">n</span><span class="p">:</span> <span class="mi">30</span> <span class="n">Objective</span> <span class="nl">Function</span><span class="p">:</span> <span class="mf">2315.3</span>
+
+ <span class="n">Calculated</span> <span class="n">burn</span> <span class="n">time</span> <span class="o">=</span> <span class="mf">21.3993</span><span class="n">s</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The calculated burn time is the optimized value. As you can see it is very much similar to the estimated one. Moreover, due to the geometry of the
+problem the optimizer fails to reach a value of 1000 m of separation, stopping at about 2315.3 m.</p>
+<p>An image of the simulation shows the problem with our assumptions:</p>
+<blockquote>
+<div><div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../_images/RendezVousXY.svg"><img alt="x-y visualization of rendez-vous in target frame." src="../../_images/RendezVousXY.svg" /></a>
+<p class="caption"><span class="caption-text">Path of chaser in the target-frame after retrograde burn, planar visualization</span></p>
+</div>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../_images/RendezVousXZ.svg"><img alt="x-z visualization of rendez-vous in target frame." src="../../_images/RendezVousXZ.svg" /></a>
+<p class="caption"><span class="caption-text">Path of chaser in the target-frame after retrograde burn, x-z visualization.</span></p>
+</div>
+</div></blockquote>
+<p>The picures above show the path of the Chaser in the Target frame, where the x-direction is the radial direction from the centre of Earth,
+the z-direction is the direction of the angular momentum of the target w.r.t. the centre of Earth and the y-direction completes the
+right-hand rule of thumb frame.</p>
+<p>One can see that even if the two orbits are similar, the two spacecraft are separated initially in the radial direction
+by some 60 km. The burn, opposite to the direction of motion of the Chaser, has also a radial component. Nevertheless, the calculated burn
+brings the orbit at just 2315.3 meters from the target at its minimum separation.</p>
+<p>See also: <a class="reference external" href="http://www.ae.utexas.edu/courses/ase366k/cw_equations.pdf">“Clohessy-Wiltshire equations” (PDF). University of Texas at Austin. Retrieved 23 October 2017.</a></p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tudatFeatures/index.html" class="btn btn-neutral float-right" title="Tudat Libraries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="earthOrbiterStateEstimation.html" class="btn btn-neutral" title="9. Orbit Determination and Parameter Estimation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Delft University of Technology.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header .arrow").click(function() {
+            $(this).closest('.toggle').children().not(".header").toggle(400);
+            $(this).toggleClass("open");
+            // $(this).html() == "More" ? $(this).html('Less') : $(this).html('More');
+        });
+        $(".showall").click(function() {
+            $(".toggle > *").show(400);
+            $(".toggle .header .arrow").addClass("open");
+        });
+        $(".hideall").click(function() {
+            $(".toggle > *").hide(400);
+            $(".toggle .header").show(400);
+            $(".toggle .header .arrow").removeClass("open");
+        });
+    });
+</script>
+
+
+</body>
+</html>

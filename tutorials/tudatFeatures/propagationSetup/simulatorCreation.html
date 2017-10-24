@@ -112,6 +112,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../estimationSetup/index.html">6. Estimation Set-Up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../otherLibraries/index.html">7. Other Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../optimizationTools/index.html">8. Optimization tools</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../jsonInterface/index.html">JSON Interface</a></li>
@@ -190,7 +191,7 @@
             
   <div class="section" id="create-a-dynamics-simulator-object">
 <span id="tudatfeaturessimulatorcreation"></span><h1>5.5. Create a Dynamics Simulator Object<a class="headerlink" href="#create-a-dynamics-simulator-object" title="Permalink to this headline">¶</a></h1>
-<p>At the moment, the following <code class="xref py py-class docutils literal"><span class="pre">DynamicsSimulator</span></code> options are available or under development in Tudat:</p>
+<p>At the moment, the following <a class="reference internal" href="#DynamicsSimulator" title="DynamicsSimulator"><code class="xref py py-class docutils literal"><span class="pre">DynamicsSimulator</span></code></a> options are available or under development in Tudat:</p>
 <ul class="simple">
 <li>Single-arc dynamics simulator.</li>
 <li>Multi-arc dynamics simulator.</li>
@@ -263,7 +264,7 @@
 </div>
 </dd></dl>
 
-<p>By default, the equations of motion are integrated once the object is created. This can be changed by adding additional arguments to the cosntructors of the <code class="xref py py-class docutils literal"><span class="pre">DynamicsSimulator</span></code>, as shown below for the <code class="xref py py-class docutils literal"><span class="pre">SingleArcDynamicsSimulator</span></code>:</p>
+<p>By default, the equations of motion are integrated once the object is created. This can be changed by adding additional arguments to the cosntructors of the <a class="reference internal" href="#DynamicsSimulator" title="DynamicsSimulator"><code class="xref py py-class docutils literal"><span class="pre">DynamicsSimulator</span></code></a>, as shown below for the <a class="reference internal" href="#SingleArcDynamicsSimulator" title="SingleArcDynamicsSimulator"><code class="xref py py-class docutils literal"><span class="pre">SingleArcDynamicsSimulator</span></code></a>:</p>
 <div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Create simulation object and propagate dynamics.</span>
 <span class="n">SingleArcDynamicsSimulator</span><span class="o">&lt;</span> <span class="o">&gt;</span> <span class="n">dynamicsSimulator</span><span class="p">(</span>
             <span class="n">bodyMap</span><span class="p">,</span> <span class="n">integratorSettings</span><span class="p">,</span> <span class="n">propagatorSettings</span> <span class="p">,</span> <span class="n">areEquationsOfMotionToBeIntegrated</span> <span class="p">,</span> <span class="n">clearNumericalSolutions</span> <span class="p">,</span> <span class="n">setIntegratedResult</span> <span class="p">);</span>
@@ -293,8 +294,8 @@
 </div>
 <div class="section" id="retrieving-the-propagation-history">
 <h2>5.5.1. Retrieving the propagation history<a class="headerlink" href="#retrieving-the-propagation-history" title="Permalink to this headline">¶</a></h2>
-<p>Once the <code class="xref py py-class docutils literal"><span class="pre">DynamicsSimulator</span></code> object has been created and the equations of motion have been integrated, the propagation history of the selected bodies is stored within the <code class="xref py py-class docutils literal"><span class="pre">DynamicsSimulator</span></code>. To make use of it using software, such history needs to be retrieved and saved to a file.</p>
-<p>If the state propagation history needs to be saved, the following code needs to be placed after the <code class="xref py py-class docutils literal"><span class="pre">DynamicsSimulator</span></code> object creation:</p>
+<p>Once the <a class="reference internal" href="#DynamicsSimulator" title="DynamicsSimulator"><code class="xref py py-class docutils literal"><span class="pre">DynamicsSimulator</span></code></a> object has been created and the equations of motion have been integrated, the propagation history of the selected bodies is stored within the <a class="reference internal" href="#DynamicsSimulator" title="DynamicsSimulator"><code class="xref py py-class docutils literal"><span class="pre">DynamicsSimulator</span></code></a>. To make use of it using software, such history needs to be retrieved and saved to a file.</p>
+<p>If the state propagation history needs to be saved, the following code needs to be placed after the <a class="reference internal" href="#DynamicsSimulator" title="DynamicsSimulator"><code class="xref py py-class docutils literal"><span class="pre">DynamicsSimulator</span></code></a> object creation:</p>
 <div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Write body propagation history to file.</span>
 <span class="n">writeDataMapToTextFile</span><span class="p">(</span> <span class="n">dynamicsSimulator</span><span class="p">.</span><span class="n">getEquationsOfMotionNumericalSolution</span><span class="p">(</span> <span class="p">),</span>
                         <span class="s">&quot;bodyPropagationHistory.dat&quot;</span><span class="p">,</span>
@@ -305,7 +306,7 @@
                         <span class="s">&quot;,&quot;</span> <span class="p">);</span>
 </pre></div>
 </div>
-<p>If the dependent variable history needs to be saved, the following code needs to be placed after the <code class="xref py py-class docutils literal"><span class="pre">DynamicsSimulator</span></code> object creation:</p>
+<p>If the dependent variable history needs to be saved, the following code needs to be placed after the <a class="reference internal" href="#DynamicsSimulator" title="DynamicsSimulator"><code class="xref py py-class docutils literal"><span class="pre">DynamicsSimulator</span></code></a> object creation:</p>
 <div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Write body dependent variable history to file.</span>
 <span class="n">writeDataMapToTextFile</span><span class="p">(</span> <span class="n">dynamicsSimulator</span><span class="p">.</span><span class="n">getDependentVariableHistory</span><span class="p">(</span> <span class="p">),</span>
                         <span class="s">&quot;bodyDependentVariableHistory.dat&quot;</span><span class="p">,</span>

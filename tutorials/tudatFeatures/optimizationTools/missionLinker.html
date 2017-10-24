@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.4. Mission linker &mdash; TU Delft Astrodynamic Toolbox  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="TU Delft Astrodynamic Toolbox  documentation" href="../../../index.html"/>
+        <link rel="up" title="8. Optimization tools" href="index.html"/>
+        <link rel="next" title="JSON Interface" href="../../jsonInterface/index.html"/>
+        <link rel="prev" title="8.3. Mission segment settings" href="missionSegmentSettings.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> TU Delft Astrodynamic Toolbox
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Start Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation/index.html">Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Tutorials and Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../prerequiredKnowledge/index.html">Getting Started with Tudat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../applicationWalkthroughs/index.html">Application Walkthroughs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Tudat Libraries</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../astroTools/index.html">1. Basic Astrodynamics Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mathTools/index.html">2. Basic Mathematics Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../environmentSetup/index.html">3. Environment Set-up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../accelerationSetup/index.html">4. Acceleration Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../propagationSetup/index.html">5. Simulator Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../estimationSetup/index.html">6. Estimation Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../otherLibraries/index.html">7. Other Libraries</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">8. Optimization tools</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="decisionVariableSettings.html">8.1. Decision variable settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="objectiveFunctionSettings.html">8.2. Objective function settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="missionSegmentSettings.html">8.3. Mission segment settings</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">8.4. Mission linker</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../jsonInterface/index.html">JSON Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matlabInterface/index.html">MATLAB Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developerGuide/index.html">Developer Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">TU Delft Astrodynamic Toolbox</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Tutorials and Documentation</a> &raquo;</li>
+        
+          <li><a href="../index.html">Tudat Libraries</a> &raquo;</li>
+        
+          <li><a href="index.html">8. Optimization tools</a> &raquo;</li>
+        
+      <li>8.4. Mission linker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/tutorials/tudatFeatures/optimizationTools/missionLinker.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <blockquote>
+<div></div></blockquote>
+<div class="section" id="mission-linker">
+<span id="missionlinker"></span><h1>8.4. Mission linker<a class="headerlink" href="#mission-linker" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>mission linker</strong> is the tool that allows to link together and optimize a chain of <strong>mission segments</strong>.
+Here it is represented by the class <code class="docutils literal"><span class="pre">MissionLinker</span></code></p>
+<div class="section" id="id1">
+<h2>8.4.1. MissionLinker<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Constructor</strong></dt>
+<dd><div class="first highlight-cpp"><div class="highlight"><pre><span></span><span class="n">MissionLinker</span><span class="p">(</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">MissionSegmentSettings</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">missionSegmentSettings</span><span class="p">,</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">OptimizationSettings</span> <span class="o">&gt;</span> <span class="n">optimizationSettings</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">OptimizationSettings</span> <span class="o">&gt;</span><span class="p">(),</span>
+        <span class="k">const</span> <span class="kt">bool</span> <span class="n">optimizeConfiguration</span> <span class="o">=</span> <span class="nb">true</span> <span class="p">)</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>The <code class="docutils literal"><span class="pre">missionSegmentSettings</span></code> is the vector of <code class="docutils literal"><span class="pre">MissionSegmentSettings</span></code> objects defining the chain of mission segments to optimize.</li>
+<li>The <code class="docutils literal"><span class="pre">optimizationSettings</span></code> is a user defined object which allows some degrees of freedom over the optimization process.</li>
+<li>The <code class="docutils literal"><span class="pre">optimizeConfiguration</span></code> flag can be set to <code class="docutils literal"><span class="pre">true</span></code> to start the optimization right after creating the
+MissionLinker object.</li>
+</ul>
+</dd>
+<dt><strong>Methods</strong></dt>
+<dd><div class="first last highlight-cpp"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">optimize</span><span class="p">(</span> <span class="kt">void</span> <span class="p">);</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>This is the method to call if you want to optimize the configuration. All the optimum values as well as the results
+of the optimal propagation are subsequently stored in the dynamics simulators of each mission segment.</p>
+</div>
+<div class="section" id="optimizationsettings">
+<h2>8.4.2. OptimizationSettings<a class="headerlink" href="#optimizationsettings" title="Permalink to this headline">¶</a></h2>
+<p>This class allows the user some degrees of freedom over the optimization process.</p>
+<dl class="docutils">
+<dt><strong>Constructor</strong></dt>
+<dd><div class="first highlight-cpp"><div class="highlight"><pre><span></span><span class="n">OptimizationSettings</span><span class="p">(</span> <span class="n">OptimizationTypes</span> <span class="n">optimizationType</span> <span class="o">=</span> <span class="n">global_optimization</span><span class="p">,</span>
+                      <span class="k">const</span> <span class="kt">int</span> <span class="n">populationSize</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span>
+                      <span class="k">const</span> <span class="kt">bool</span> <span class="n">stopAtMaxNumberOfEvolutions</span> <span class="o">=</span> <span class="nb">true</span><span class="p">,</span>
+                      <span class="k">const</span> <span class="kt">int</span> <span class="n">verbosity</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">)</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>The <code class="docutils literal"><span class="pre">optimizationType</span></code> can be set to either of the following enumerations:<ul>
+<li><code class="docutils literal"><span class="pre">global_optimization</span></code> will use an evolutionary algorithm to find the optimum value (generally slower, but reliable),</li>
+<li><code class="docutils literal"><span class="pre">local_optimization</span></code> will use a local derivative algorithm to find the optimum value (faster, less accurate);</li>
+</ul>
+</li>
+<li>The <code class="docutils literal"><span class="pre">populationSize</span></code> determines the number of individual in a population. The larger the number, the larger the possibilities;
+to converge in less iterations to the target value, although the optimization takes a proportional amount of time;</li>
+<li>The <code class="docutils literal"><span class="pre">stopAtMaxNumberOfEvolutions</span></code> flag can be set to <code class="docutils literal"><span class="pre">false</span></code> if you want your optimization to only stop if convergence is reached (not advisable);</li>
+<li>The <code class="docutils literal"><span class="pre">verbosity</span></code> can be set to:<ul>
+<li>0: no message will be shown during the optimization,</li>
+<li>n &gt; 0: it will show the value of the objective function in a message every n iterations.</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="example">
+<h2>8.4.3. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>See an example that uses the <code class="docutils literal"><span class="pre">MissionLinker</span></code> at the page <a class="reference internal" href="../../applicationWalkthroughs/satelliteRendezVous.html#satelliterendezvous"><span class="std std-ref">Mission Linking and Optimization</span></a>.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../jsonInterface/index.html" class="btn btn-neutral float-right" title="JSON Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="missionSegmentSettings.html" class="btn btn-neutral" title="8.3. Mission segment settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Delft University of Technology.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header .arrow").click(function() {
+            $(this).closest('.toggle').children().not(".header").toggle(400);
+            $(this).toggleClass("open");
+            // $(this).html() == "More" ? $(this).html('Less') : $(this).html('More');
+        });
+        $(".showall").click(function() {
+            $(".toggle > *").show(400);
+            $(".toggle .header .arrow").addClass("open");
+        });
+        $(".hideall").click(function() {
+            $(".toggle > *").hide(400);
+            $(".toggle .header").show(400);
+            $(".toggle .header .arrow").removeClass("open");
+        });
+    });
+</script>
+
+
+</body>
+</html>

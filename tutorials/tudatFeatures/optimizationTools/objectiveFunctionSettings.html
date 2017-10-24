@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.2. Objective function settings &mdash; TU Delft Astrodynamic Toolbox  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="TU Delft Astrodynamic Toolbox  documentation" href="../../../index.html"/>
+        <link rel="up" title="8. Optimization tools" href="index.html"/>
+        <link rel="next" title="8.3. Mission segment settings" href="missionSegmentSettings.html"/>
+        <link rel="prev" title="8.1. Decision variable settings" href="decisionVariableSettings.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> TU Delft Astrodynamic Toolbox
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Start Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation/index.html">Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Tutorials and Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../prerequiredKnowledge/index.html">Getting Started with Tudat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../applicationWalkthroughs/index.html">Application Walkthroughs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Tudat Libraries</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../astroTools/index.html">1. Basic Astrodynamics Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mathTools/index.html">2. Basic Mathematics Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../environmentSetup/index.html">3. Environment Set-up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../accelerationSetup/index.html">4. Acceleration Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../propagationSetup/index.html">5. Simulator Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../estimationSetup/index.html">6. Estimation Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../otherLibraries/index.html">7. Other Libraries</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">8. Optimization tools</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="decisionVariableSettings.html">8.1. Decision variable settings</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">8.2. Objective function settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="missionSegmentSettings.html">8.3. Mission segment settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="missionLinker.html">8.4. Mission linker</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../jsonInterface/index.html">JSON Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matlabInterface/index.html">MATLAB Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developerGuide/index.html">Developer Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">TU Delft Astrodynamic Toolbox</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Tutorials and Documentation</a> &raquo;</li>
+        
+          <li><a href="../index.html">Tudat Libraries</a> &raquo;</li>
+        
+          <li><a href="index.html">8. Optimization tools</a> &raquo;</li>
+        
+      <li>8.2. Objective function settings</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/tutorials/tudatFeatures/optimizationTools/objectiveFunctionSettings.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="objective-function-settings">
+<span id="objectivefunctionsettings"></span><h1>8.2. Objective function settings<a class="headerlink" href="#objective-function-settings" title="Permalink to this headline">¶</a></h1>
+<p>The objective function settings allows to define what is the objective function of the optimization process. Several classes can be
+used, each focused on a certain type of objective function.</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">At the moment only single objective function optimization is allowed.</p>
+</div>
+</div></blockquote>
+<div class="section" id="finalcartesiancomponentobjectivefunctionsettings">
+<h2>8.2.1. FinalCartesianComponentObjectiveFunctionSettings<a class="headerlink" href="#finalcartesiancomponentobjectivefunctionsettings" title="Permalink to this headline">¶</a></h2>
+<p>This class allows to use one of the final cartesian components of a propagated body as objective function.</p>
+<dl class="docutils">
+<dt><strong>Constructor:</strong></dt>
+<dd><div class="first last highlight-cpp"><div class="highlight"><pre><span></span><span class="n">FinalCartesianComponentObjectiveFunctionSettings</span><span class="p">(</span>
+        <span class="n">orbital_elements</span><span class="o">::</span><span class="n">CartesianElements</span> <span class="n">cartesianComponent</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">associatedBody</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">double</span> <span class="n">objectiveValue</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">double</span> <span class="n">tolerance</span> <span class="o">=</span> <span class="mf">1e-3</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">maxNumberOfEvolutions</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">)</span>
+
+
+<span class="n">FinalCartesianComponentObjectiveFunctionSettings</span><span class="p">(</span>
+        <span class="n">orbital_elements</span><span class="o">::</span><span class="n">CartesianElements</span> <span class="n">cartesianComponent</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">associatedBody</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">bool</span> <span class="n">minimizeOrMaximize</span> <span class="o">=</span> <span class="nb">true</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">maxNumberOfEvolutions</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>The first constructor allows to define an objective value towards which the objective function converges. The second constructor will
+continue to optimize the configuration until the maximum number of evolutions is reached.</p>
+<blockquote>
+<div><ul class="simple">
+<li>The <code class="docutils literal"><span class="pre">cartesianComponent</span></code> can be chosed as either of the following enumerations:<ul>
+<li><code class="docutils literal"><span class="pre">xCartesianPosition</span></code></li>
+<li><code class="docutils literal"><span class="pre">yCartesianPosition</span></code></li>
+<li><code class="docutils literal"><span class="pre">zCartesianPosition</span></code></li>
+<li><code class="docutils literal"><span class="pre">xCartesianVelocity</span></code></li>
+<li><code class="docutils literal"><span class="pre">yCartesianVelocity</span></code></li>
+<li><code class="docutils literal"><span class="pre">zCartesianVelocity</span></code></li>
+</ul>
+</li>
+<li>The <code class="docutils literal"><span class="pre">associatedBody</span></code> is the name of the propagated body, as determined in the <code class="docutils literal"><span class="pre">bodyMap</span></code> of the dynamics simulator to which the
+final cartesian component belongs.</li>
+<li>The <code class="docutils literal"><span class="pre">objectiveValue</span></code> is the value towards which the optimization converges.</li>
+<li>The <code class="docutils literal"><span class="pre">tolerance</span></code> is the error between the final value and the objective function for which the optimization is allowed to stop.</li>
+<li>The <code class="docutils literal"><span class="pre">maxNumberOfEvolutions</span></code> is the maximum number of iterations allowed in the optimization process if the convergence is not reached.</li>
+<li>The <code class="docutils literal"><span class="pre">minimizeOrMaximize</span></code> flag is set to:<ul>
+<li><code class="docutils literal"><span class="pre">true</span></code> if you want to minimize the objective function,</li>
+<li><code class="docutils literal"><span class="pre">false</span></code> if you want to maximize the objective function.</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="finalkeplerelementobjectivefunctionsettings">
+<h2>8.2.2. FinalKeplerElementObjectiveFunctionSettings<a class="headerlink" href="#finalkeplerelementobjectivefunctionsettings" title="Permalink to this headline">¶</a></h2>
+<p>This class allows to use one of the final Kepler orbital elements of a propagated body as objective function.</p>
+<dl class="docutils">
+<dt><strong>Constructor:</strong></dt>
+<dd><div class="first last highlight-cpp"><div class="highlight"><pre><span></span><span class="n">FinalKeplerElementObjectiveFunctionSettings</span><span class="p">(</span>
+        <span class="n">orbital_elements</span><span class="o">::</span><span class="n">KeplerianElements</span> <span class="n">keplerElement</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">associatedBody</span><span class="p">,</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">centralBody</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">double</span> <span class="n">objectiveValue</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">double</span> <span class="n">tolerance</span> <span class="o">=</span> <span class="mf">1e-3</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">maxNumberOfEvolutions</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">)</span>
+
+<span class="n">FinalKeplerElementObjectiveFunctionSettings</span><span class="p">(</span>
+        <span class="n">orbital_elements</span><span class="o">::</span><span class="n">KeplerianElements</span> <span class="n">keplerElement</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">associatedBody</span><span class="p">,</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">centralBody</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">bool</span> <span class="n">minimizeOrMaximize</span> <span class="o">=</span> <span class="nb">true</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">maxNumberOfEvolutions</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>The first constructor allows to define an objective value towards which the objective function converges. The second constructor will
+continue to optimize the configuration until the maximum number of evolutions is reached.</p>
+<blockquote>
+<div><ul class="simple">
+<li>The <code class="docutils literal"><span class="pre">keplerElement</span></code> can be chosen as either of the following enumerations:<ul>
+<li><code class="docutils literal"><span class="pre">semiMajorAxis</span></code></li>
+<li><code class="docutils literal"><span class="pre">eccentricity</span></code></li>
+<li><code class="docutils literal"><span class="pre">inclination</span></code></li>
+<li><code class="docutils literal"><span class="pre">argumentOfPeriapsis</span></code></li>
+<li><code class="docutils literal"><span class="pre">longitudeOfAscendingNode</span></code></li>
+<li><code class="docutils literal"><span class="pre">trueAnomaly</span></code></li>
+</ul>
+</li>
+<li>The <code class="docutils literal"><span class="pre">associatedBody</span></code> is the name of the propagated body, as determined in the <code class="docutils literal"><span class="pre">bodyMap</span></code> of the dynamics simulator to which the
+final cartesian component belongs.</li>
+<li>The <code class="docutils literal"><span class="pre">centralBody</span></code> is the name of the massive body containing the orbital parameter used to calculated the
+Kepler elements. Beware that at the moment there is no option to use a different reference frame than the one used in
+the simulation, therefore the <code class="docutils literal"><span class="pre">centralBody</span></code> should be the name of the associated central body of the
+<code class="docutils literal"><span class="pre">associatedBody</span></code> in the propagator settings.</li>
+<li>The <code class="docutils literal"><span class="pre">objectiveValue</span></code> is the value towards which the optimization converges.</li>
+<li>The <code class="docutils literal"><span class="pre">tolerance</span></code> is the error between the final value and the objective function for which the optimization is allowed to stop.</li>
+<li>The <code class="docutils literal"><span class="pre">maxNumberOfEvolutions</span></code> is the maximum number of iterations allowed in the optimization process if the convergence is not reached.</li>
+<li>The <code class="docutils literal"><span class="pre">minimizeOrMaximize</span></code> flag is set to:<ul>
+<li><code class="docutils literal"><span class="pre">true</span></code> if you want to minimize the objective function,</li>
+<li><code class="docutils literal"><span class="pre">false</span></code> if you want to maximize the objective function.</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="finalsphericalorbitalelementobjectivefunctionsettings">
+<h2>8.2.3. FinalSphericalOrbitalElementObjectiveFunctionSettings<a class="headerlink" href="#finalsphericalorbitalelementobjectivefunctionsettings" title="Permalink to this headline">¶</a></h2>
+<p>This class allows to use one of the final spherical orbital elements of a propagated body as objective function.</p>
+<dl class="docutils">
+<dt><strong>Constructor:</strong></dt>
+<dd><div class="first last highlight-cpp"><div class="highlight"><pre><span></span><span class="n">FinalSphericalOrbitalElementObjectiveFunctionSettings</span><span class="p">(</span>
+        <span class="n">orbital_elements</span><span class="o">::</span><span class="n">SphericalOrbitalStateElements</span> <span class="n">spericalOrbitalElement</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">associatedBody</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">double</span> <span class="n">objectiveValue</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">double</span> <span class="n">tolerance</span> <span class="o">=</span> <span class="mf">1e-3</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">maxNumberOfEvolutions</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">)</span>
+
+<span class="n">FinalSphericalOrbitalElementObjectiveFunctionSettings</span><span class="p">(</span>
+        <span class="n">orbital_elements</span><span class="o">::</span><span class="n">SphericalOrbitalStateElements</span> <span class="n">spericalOrbitalElement</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">associatedBody</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">bool</span> <span class="n">minimizeOrMaximize</span> <span class="o">=</span> <span class="nb">true</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">maxNumberOfEvolutions</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>The first constructor allows to define an objective value towards which the objective function converges. The second constructor will
+continue to optimize the configuration until the maximum number of evolutions is reached.</p>
+<blockquote>
+<div><ul class="simple">
+<li>The <code class="docutils literal"><span class="pre">sphericalOrbitalElement</span></code> can be chosen as either of the following enumerations:<ul>
+<li><code class="docutils literal"><span class="pre">radius</span></code></li>
+<li><code class="docutils literal"><span class="pre">latitude</span></code></li>
+<li><code class="docutils literal"><span class="pre">longitude</span></code></li>
+<li><code class="docutils literal"><span class="pre">speed</span></code></li>
+<li><code class="docutils literal"><span class="pre">flightPath</span></code></li>
+<li><code class="docutils literal"><span class="pre">headingAngle</span></code></li>
+</ul>
+</li>
+<li>The <code class="docutils literal"><span class="pre">associatedBody</span></code> is the name of the propagated body, as determined in the <code class="docutils literal"><span class="pre">bodyMap</span></code> of the dynamics simulator to which the
+final cartesian component belongs.</li>
+<li>The <code class="docutils literal"><span class="pre">objectiveValue</span></code> is the value towards which the optimization converges.</li>
+<li>The <code class="docutils literal"><span class="pre">tolerance</span></code> is the error between the final value and the objective function for which the optimization is allowed to stop.</li>
+<li>The <code class="docutils literal"><span class="pre">maxNumberOfEvolutions</span></code> is the maximum number of iterations allowed in the optimization process if the convergence is not reached.</li>
+<li>The <code class="docutils literal"><span class="pre">minimizeOrMaximize</span></code> flag is set to:<ul>
+<li><code class="docutils literal"><span class="pre">true</span></code> if you want to minimize the objective function,</li>
+<li><code class="docutils literal"><span class="pre">false</span></code> if you want to maximize the objective function.</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="objectivefunctionfromfinaldependentvariablesettings">
+<h2>8.2.4. ObjectiveFunctionFromFinalDependentVariableSettings<a class="headerlink" href="#objectivefunctionfromfinaldependentvariablesettings" title="Permalink to this headline">¶</a></h2>
+<p>This class allows to use the final value of one of the dependent variables saved by the propagator as objective function.</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You need to have set the DependentVariableSaveSettings inside the PropagatorSettings in order to use this class!</p>
+</div>
+</div></blockquote>
+<dl class="docutils">
+<dt><strong>Constructor:</strong></dt>
+<dd><div class="first last highlight-cpp"><div class="highlight"><pre><span></span><span class="n">ObjectiveFunctionFromFinalDependentVariableSettings</span><span class="p">(</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">propagators</span><span class="o">::</span><span class="n">SingleDependentVariableSaveSettings</span> <span class="o">&gt;</span> <span class="n">dependentVariableSaveSettings</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">double</span> <span class="n">objectiveValue</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">int</span> <span class="n">indexInVectorialVariable</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">double</span> <span class="n">tolerance</span> <span class="o">=</span> <span class="mf">1e-3</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">maxNumberOfEvolutions</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">)</span>
+
+<span class="n">ObjectiveFunctionFromFinalDependentVariableSettings</span><span class="p">(</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">propagators</span><span class="o">::</span><span class="n">SingleDependentVariableSaveSettings</span> <span class="o">&gt;</span> <span class="n">dependentVariableSaveSettings</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">bool</span> <span class="n">minimizeOrMaximize</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">int</span> <span class="n">indexInVectorialVariable</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">maxNumberOfEvolutions</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>The first constructor allows to define an objective value towards which the objective function converges. The second constructor will
+continue to optimize the configuration until the maximum number of evolutions is reached.</p>
+<blockquote>
+<div><ul class="simple">
+<li>The <code class="docutils literal"><span class="pre">dependentVariableSettings</span></code> is the <code class="docutils literal"><span class="pre">SingleDependentVariableSaveSettings</span></code> object belonging to the saved variable whose final value
+you want to use as objective function.</li>
+<li>The <code class="docutils literal"><span class="pre">objectiveValue</span></code> is the value towards which the optimization converges.</li>
+<li>The <code class="docutils literal"><span class="pre">indexInVectorialVariable</span></code> is the index pointing to the position that you need in the dependent variable in case the latter
+is not scalar.</li>
+<li>The <code class="docutils literal"><span class="pre">tolerance</span></code> is the error between the final value and the objective function for which the optimization is allowed to stop.</li>
+<li>The <code class="docutils literal"><span class="pre">maxNumberOfEvolutions</span></code> is the maximum number of iterations allowed in the optimization process if the convergence is not reached.</li>
+<li>The <code class="docutils literal"><span class="pre">minimizeOrMaximize</span></code> flag is set to:<ul>
+<li><code class="docutils literal"><span class="pre">true</span></code> if you want to minimize the objective function,</li>
+<li><code class="docutils literal"><span class="pre">false</span></code> if you want to maximize the objective function.</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="objectivefunctionfromminormaxdependentvariablesettings">
+<h2>8.2.5. ObjectiveFunctionFromMinOrMaxDependentVariableSettings<a class="headerlink" href="#objectivefunctionfromminormaxdependentvariablesettings" title="Permalink to this headline">¶</a></h2>
+<p>This class allows to use the minimum or maximum value in the propagation history of one of the dependent variables saved by the propagator as objective function.</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You need to have set the DependentVariableSaveSettings inside the PropagatorSettings in order to use this class!</p>
+</div>
+</div></blockquote>
+<dl class="docutils">
+<dt><strong>Constructor:</strong></dt>
+<dd><div class="first last highlight-cpp"><div class="highlight"><pre><span></span><span class="n">ObjectiveFunctionFromMinOrMaxDependentVariableSettings</span><span class="p">(</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">propagators</span><span class="o">::</span><span class="n">SingleDependentVariableSaveSettings</span> <span class="o">&gt;</span> <span class="n">dependentVariableSaveSettings</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">double</span> <span class="n">objectiveValue</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">int</span> <span class="n">indexInVectorialVariable</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">bool</span> <span class="n">minimumOrMaximum</span> <span class="o">=</span> <span class="nb">true</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">double</span> <span class="n">tolerance</span> <span class="o">=</span> <span class="mf">1e-3</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">maxNumberOfEvolutions</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">)</span>
+
+<span class="n">ObjectiveFunctionFromMinOrMaxDependentVariableSettings</span><span class="p">(</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">propagators</span><span class="o">::</span><span class="n">SingleDependentVariableSaveSettings</span> <span class="o">&gt;</span> <span class="n">dependentVariableSaveSettings</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">int</span> <span class="n">indexInVectorialVariable</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">bool</span> <span class="n">minimizeOrMaximize</span> <span class="o">=</span> <span class="nb">true</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">bool</span> <span class="n">minimumOrMaximum</span> <span class="o">=</span> <span class="nb">true</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">maxNumberOfEvolutions</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>The first constructor allows to define an objective value towards which the objective function converges. The second constructor will
+continue to optimize the configuration until the maximum number of evolutions is reached.</p>
+<blockquote>
+<div><ul class="simple">
+<li>The <code class="docutils literal"><span class="pre">dependentVariableSettings</span></code> is the <code class="docutils literal"><span class="pre">SingleDependentVariableSaveSettings</span></code> object belonging to the saved variable whose final value
+you want to use as objective function.</li>
+<li>The <code class="docutils literal"><span class="pre">objectiveValue</span></code> is the value towards which the optimization converges.</li>
+<li>The <code class="docutils literal"><span class="pre">indexInVectorialVariable</span></code> is the index pointing to the position that you need in the dependent variable in case the latter
+is not scalar.</li>
+<li>The <code class="docutils literal"><span class="pre">minimumOrMaximum</span></code> flag is set to:<ul>
+<li><code class="docutils literal"><span class="pre">true</span></code> if you want to use the <strong>minimum</strong> in the propagation history of the variable,</li>
+<li><code class="docutils literal"><span class="pre">false</span></code> if you want to use the <strong>maximum</strong> in the propagation history of the variable.</li>
+</ul>
+</li>
+<li>The <code class="docutils literal"><span class="pre">tolerance</span></code> is the error between the final value and the objective function for which the optimization is allowed to stop.</li>
+<li>The <code class="docutils literal"><span class="pre">maxNumberOfEvolutions</span></code> is the maximum number of iterations allowed in the optimization process if the convergence is not reached.</li>
+<li>The <code class="docutils literal"><span class="pre">minimizeOrMaximize</span></code> flag is set to:<ul>
+<li><code class="docutils literal"><span class="pre">true</span></code> if you want to minimize the objective function,</li>
+<li><code class="docutils literal"><span class="pre">false</span></code> if you want to maximize the objective function.</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="userdefinedobjectivefunctionsettings">
+<h2>8.2.6. UserDefinedObjectiveFunctionSettings<a class="headerlink" href="#userdefinedobjectivefunctionsettings" title="Permalink to this headline">¶</a></h2>
+<p>This class allows to setup an objective function which is not available among the above. It could also be used to define
+a weighted multi-objective optimization problem.</p>
+<p>See the paragraph on <a class="reference internal" href="#howtosetupuserdefinedobjectivefunction"><span class="std std-ref">How to set up a user defined objective function</span></a> for information on how to use this class.</p>
+<dl class="docutils">
+<dt><strong>Constructor:</strong></dt>
+<dd><div class="first last highlight-cpp"><div class="highlight"><pre><span></span><span class="n">UserDefinedObjectiveFunctionSettings</span><span class="p">(</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="p">()</span> <span class="o">&gt;</span> <span class="n">userDefinedFunction</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">double</span> <span class="n">objectiveValue</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">double</span> <span class="n">tolerance</span> <span class="o">=</span> <span class="mf">1e-3</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">maxNumberOfEvolutions</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">)</span>
+
+<span class="n">UserDefinedObjectiveFunctionSettings</span><span class="p">(</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="p">()</span> <span class="o">&gt;</span> <span class="n">userDefinedFunction</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">bool</span> <span class="n">minimizeOrMaximize</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">maxNumberOfEvolutions</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>The first constructor allows to define an objective value towards which the objective function converges. The second constructor will
+continue to optimize the configuration until the maximum number of evolutions is reached.</p>
+<blockquote>
+<div><ul class="simple">
+<li>The <code class="docutils literal"><span class="pre">maxNumberOfEvolutions</span></code> is the maximum number of iterations allowed in the optimization process if the convergence is not reached.</li>
+<li>The <code class="docutils literal"><span class="pre">minimizeOrMaximize</span></code> flag is set to:<ul>
+<li><code class="docutils literal"><span class="pre">true</span></code> if you want to minimize the objective function,</li>
+<li><code class="docutils literal"><span class="pre">false</span></code> if you want to maximize the objective function.</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="how-to-set-up-a-user-defined-objective-function">
+<span id="howtosetupuserdefinedobjectivefunction"></span><h2>8.2.7. How to set up a user defined objective function<a class="headerlink" href="#how-to-set-up-a-user-defined-objective-function" title="Permalink to this headline">¶</a></h2>
+<p>You might have noticed the use of <code class="docutils literal"><span class="pre">boost::function&lt;</span> <span class="pre">double</span> <span class="pre">()</span> <span class="pre">&gt;</span></code> and the fact that the <code class="docutils literal"><span class="pre">UserDefinedObjectiveFunction</span></code> class does not allow
+an objective function with parameters. How do you setup an objective function without parameters?</p>
+<p>First of all you will need a support class that takes all the parameters that you need, possibly as pointers, and a <code class="docutils literal"><span class="pre">double</span></code> method that does
+not accept parameters. You can store in this object pointers to e.g. your dynamics simulator or propagator settings or whatever.</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">ClassToDefineFunction</span><span class="p">{</span>
+
+    <span class="c1">//Constructor. Make sure to input all the needed values</span>
+    <span class="c1">//as pointers or boost::shared_ptr</span>
+    <span class="n">ClassToDefineFunction</span><span class="p">(</span> <span class="n">argsType</span> <span class="n">args</span> <span class="p">)</span> <span class="o">:</span>
+        <span class="n">members_</span><span class="p">(</span> <span class="n">args</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="p">...</span>
+    <span class="p">}</span>
+
+    <span class="o">~</span><span class="n">ClassToDefineFunction</span><span class="p">(</span> <span class="p">){</span> <span class="p">}</span>
+
+    <span class="c1">//This is the function that provides the calculated</span>
+    <span class="c1">//value of the objective function.</span>
+    <span class="kt">double</span> <span class="n">myFunction</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">double</span> <span class="n">value</span><span class="p">;</span>
+
+        <span class="p">...</span>
+
+        <span class="k">return</span> <span class="n">value</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">memberType</span> <span class="n">members_</span>
+
+ <span class="p">};</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Afterwards, when creating your objective function from <code class="docutils literal"><span class="pre">UserDefinedObjectiveFunction</span></code> you will need to use the <code class="docutils literal"><span class="pre">boost::bind()</span></code> statement to bind the method to a
+<code class="docutils literal"><span class="pre">boost::function&lt;</span> <span class="pre">double</span> <span class="pre">()</span> <span class="pre">&gt;</span></code> object. All you need to know is the following sintax, which is the only sintax that you are allowed to use in such a case:</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">//Create object from class to define function and input all</span>
+<span class="c1">//the needed arguments</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">ClassToDefineFunction</span> <span class="o">&gt;</span> <span class="n">objectToDefineFunction</span> <span class="o">=</span>
+    <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">ClassToDefineFunction</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">args</span> <span class="p">);</span>
+
+<span class="c1">//Create boost::function object from the above object</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="p">()</span> <span class="o">&gt;</span> <span class="n">myObjectiveFunction</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span> <span class="o">&amp;</span><span class="n">ClassToDefineFunction</span><span class="o">::</span><span class="n">myFunction</span><span class="p">,</span>
+                <span class="n">objectToDefineFunction</span> <span class="p">)</span>
+
+<span class="c1">//Create object to retrieve objective function from simulation</span>
+<span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">UserDefinedObjectiveFunction</span> <span class="o">&gt;</span> <span class="n">myObjectiveFunctionObject</span> <span class="o">=</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">UserDefinedObjectiveFunction</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">myObjectiveFunction</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Et voilà. The user defined objective function is set.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="missionSegmentSettings.html" class="btn btn-neutral float-right" title="8.3. Mission segment settings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="decisionVariableSettings.html" class="btn btn-neutral" title="8.1. Decision variable settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Delft University of Technology.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header .arrow").click(function() {
+            $(this).closest('.toggle').children().not(".header").toggle(400);
+            $(this).toggleClass("open");
+            // $(this).html() == "More" ? $(this).html('Less') : $(this).html('More');
+        });
+        $(".showall").click(function() {
+            $(".toggle > *").show(400);
+            $(".toggle .header .arrow").addClass("open");
+        });
+        $(".hideall").click(function() {
+            $(".toggle > *").hide(400);
+            $(".toggle .header").show(400);
+            $(".toggle .header .arrow").removeClass("open");
+        });
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Mission Segment Settings &mdash; TU Delft Astrodynamic Toolbox  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="TU Delft Astrodynamic Toolbox  documentation" href="../../index.html"/>
+        <link rel="up" title="Extending the optimization namespace" href="index.html"/>
+        <link rel="next" title="Mission Linker" href="missionLinker.html"/>
+        <link rel="prev" title="Objective Function Settings" href="objectiveFunction.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> TU Delft Astrodynamic Toolbox
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Start Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials and Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../githubBasics.html">Github Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extendingJSON/index.html">Extending the JSON Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extendingMATLAB/index.html">Extending the MATLAB Interface</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Extending the optimization namespace</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="basics.html">Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="objectiveFunction.html">Objective Function Settings</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Mission Segment Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-it">What is it</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linkage-aiding-methods">Linkage aiding methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#decision-variable-settings">Decision variable settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-method-getobjectivefunctionvalue">The method getObjectiveFunctionValue()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="missionLinker.html">Mission Linker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="necessaryFeatures.html">Ideas for future development</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../guideToDebugging.html">Guide To Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cppTutorials.html">C++ Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howToWriteTheWiki.html">How to Write the Wiki</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TU Delft Astrodynamic Toolbox</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Developer Guide</a> &raquo;</li>
+        
+          <li><a href="index.html">Extending the optimization namespace</a> &raquo;</li>
+        
+      <li>Mission Segment Settings</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/developerGuide/extendingOptimization/missionSegment.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mission-segment-settings">
+<span id="extendmissionsegment"></span><h1>Mission Segment Settings<a class="headerlink" href="#mission-segment-settings" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-it">
+<h2>What is it<a class="headerlink" href="#what-is-it" title="Permalink to this headline">¶</a></h2>
+<p>A <strong>mission segment</strong> in this framework is defined by a <code class="docutils literal"><span class="pre">SingleArcDynamicsSimulator</span></code>,
+a <code class="docutils literal"><span class="pre">DecisionVariableSettings</span></code> object which establishes what variables in the dynamics simulator
+have to be tuned in order to optimize the mission and an <code class="docutils literal"><span class="pre">ObjectiveFunctionSettings</span></code> (or derived classes)
+object used to define the function to optimize.</p>
+<p>The class is <code class="docutils literal"><span class="pre">MissionSegmentSettings</span></code>. See the file <code class="docutils literal"><span class="pre">missionSegmentSettings.h</span></code> to visualize the code.</p>
+</div>
+<div class="section" id="linkage-aiding-methods">
+<h2>Linkage aiding methods<a class="headerlink" href="#linkage-aiding-methods" title="Permalink to this headline">¶</a></h2>
+<p>Most of the methods used to link together two consecutive mission segments can be found in the
+<code class="docutils literal"><span class="pre">MissionSegmentSettings</span></code> class. Their codes can be found in the file <code class="docutils literal"><span class="pre">missionSegmentSettings.cpp</span></code>.</p>
+<p>They all use <a class="reference internal" href="basics.html#optimization-linearinterpolation"><span class="std std-ref">Linear interpolation</span></a> to retrieve the final states.</p>
+<p>Their implementation is pretty straightforward. I will leave the developer to explore the code by their own.</p>
+</div>
+<div class="section" id="decision-variable-settings">
+<h2>Decision variable settings<a class="headerlink" href="#decision-variable-settings" title="Permalink to this headline">¶</a></h2>
+<p>Most of the methods to modify decision variables are also found in <code class="docutils literal"><span class="pre">missionSegmentSettings.cpp</span></code>.
+Their implementation is also pretty straightforward. The developer must have a previous knowledge of Tudat and
+<a class="reference internal" href="basics.html#optimization-dynamicpointercast"><span class="std std-ref">Dynamic pointer cast</span></a>.</p>
+</div>
+<div class="section" id="the-method-getobjectivefunctionvalue">
+<span id="getobjectivefunctionvalue"></span><h2>The method getObjectiveFunctionValue()<a class="headerlink" href="#the-method-getobjectivefunctionvalue" title="Permalink to this headline">¶</a></h2>
+<p>The retrieval of the value is performed in the class <code class="docutils literal"><span class="pre">MissionSegmentSettings</span></code> using the function</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">getObjectiveFunctionValue</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The objective function based on final integration values must always be interpolated to the final conditions imposed by the user in the termination settings.</p>
+</div>
+</div></blockquote>
+<p>Let us take into consideration the case where the objective function is of the type <code class="docutils literal"><span class="pre">FinalSphericalOrbitalElementObjectiveFunctionSettings</span></code>.
+In this case the code is going to retrieve, after the propagation, the final spherical orbital element defined by the user in the objective function settings
+in the state map of the desired body.
+Here’s the code:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="missionsegmentsettings-cpp">
+<div class="code-block-caption"><span class="caption-text"><code class="xref py py-class docutils literal"><span class="pre">Tudat/Optimization/missionSegmentSettings.cpp</span></code></span><a class="headerlink" href="#missionsegmentsettings-cpp" title="Permalink to this code">¶</a></div>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">MissionSegmentSettings</span><span class="o">::</span><span class="n">getObjectiveFunctionValue</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+
+    <span class="kt">double</span> <span class="n">finalTime</span> <span class="o">=</span> <span class="n">getFinalSimulationEpoch</span><span class="p">();</span>
+
+    <span class="kt">double</span> <span class="n">objectiveFunctionValue</span><span class="p">;</span>
+
+    <span class="p">...</span>
+
+    <span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="n">objectiveFunctionSettings_</span><span class="o">-&gt;</span><span class="n">objectiveVariable_</span> <span class="o">==</span> <span class="n">final_spherical_orbital_element_objective_function</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">FinalSphericalOrbitalElementObjectiveFunctionSettings</span> <span class="o">&gt;</span> <span class="n">objectiveFunctionSettings</span> <span class="o">=</span>
+                <span class="n">boost</span><span class="o">::</span><span class="n">dynamic_pointer_cast</span><span class="o">&lt;</span> <span class="n">FinalSphericalOrbitalElementObjectiveFunctionSettings</span> <span class="o">&gt;</span><span class="p">(</span>
+                     <span class="n">objectiveFunctionSettings_</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector6d</span> <span class="o">&gt;</span> <span class="n">finalStates</span> <span class="o">=</span> <span class="n">getFinalOrbitalStates</span><span class="p">(</span> <span class="n">finalTime</span> <span class="p">);</span>
+        <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector6d</span> <span class="n">sphericalState</span> <span class="o">=</span> <span class="n">orbital_element_conversions</span><span class="o">::</span><span class="n">convertCartesianToSphericalOrbitalState</span><span class="p">(</span>
+                <span class="n">finalStates</span><span class="p">[</span><span class="n">objectiveFunctionSettings</span><span class="o">-&gt;</span><span class="n">associatedBody_</span><span class="p">]</span> <span class="p">);</span>
+        <span class="n">objectiveFunctionValue</span> <span class="o">=</span> <span class="n">sphericalState</span><span class="p">[</span><span class="n">objectiveFunctionSettings</span><span class="o">-&gt;</span><span class="n">sphericalOrbitalElement_</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="p">...</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<p>First of all notice that the method <code class="docutils literal"><span class="pre">getFinalSimulationEpoch()</span></code> has been used to retrieve the variable finalTime. This is a method of the <code class="docutils literal"><span class="pre">MissionSegmentSettings</span></code> class,
+which calculates the final epoch according to the user defined termination settings. Please visit the relative documentation for more information.
+The member <code class="docutils literal"><span class="pre">objectiveFunctionSettings_</span></code> in <code class="docutils literal"><span class="pre">MissionSegmentSettings</span></code> is stored as a <code class="docutils literal"><span class="pre">boost::shared_ptr&lt;</span> <span class="pre">ObjectiveFunctionSettings</span> <span class="pre">&gt;</span></code> object.
+In order to retrieve it as a <code class="docutils literal"><span class="pre">FinalSphericalOrbitalElementObjectiveFunctionSettings</span></code>, which is a derived class, a dynamic pointer cast of the
+member is performed, after constatating that</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="n">objectiveFunctionSettings_</span><span class="o">-&gt;</span><span class="n">objectiveVariable_</span> <span class="o">==</span> <span class="n">final_spherical_orbital_element_objective_function</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The rest of the code is pretty straightforward. The final orbital state is recovered with the <code class="docutils literal"><span class="pre">MissionSegmentSettings``method</span>
+<span class="pre">``getFinalOrbitalStates(</span> <span class="pre">double</span> <span class="pre">)</span></code> which accepts the epoch to which the states are interpolated.</p>
+<blockquote>
+<div><div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector6d</span> <span class="o">&gt;</span> <span class="n">finalStates</span> <span class="o">=</span> <span class="n">getFinalOrbitalStates</span><span class="p">(</span> <span class="n">finalTime</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>conveniently the method maps the orbital states in a map with the name of the body as key.</p>
+<p>All the methods shown above to retrieve the final states are based on linear interpolation. In some cases there is not a method directly
+defined, in any case the final result must always be interpolated to the user defined final conditions. For example, for the case of
+<code class="docutils literal"><span class="pre">ObjectiveFunctionFromFinalDependentVariableSettings</span></code>, the code is the following:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><code class="xref py py-class docutils literal"><span class="pre">Tudat/Optimization/missionSegmentSettings.cpp</span></code></span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">MissionSegmentSettings</span><span class="o">::</span><span class="n">getObjectiveFunctionValue</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+
+    <span class="kt">double</span> <span class="n">finalTime</span> <span class="o">=</span> <span class="n">getFinalSimulationEpoch</span><span class="p">();</span>
+
+    <span class="kt">double</span> <span class="n">objectiveFunctionValue</span><span class="p">;</span>
+    <span class="p">...</span>
+
+    <span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="n">objectiveFunctionSettings_</span><span class="o">-&gt;</span><span class="n">objectiveVariable_</span> <span class="o">==</span> <span class="n">final_dependent_variable_objective_function</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">ObjectiveFunctionFromFinalDependentVariableSettings</span> <span class="o">&gt;</span> <span class="n">objectiveFunctionSettings</span> <span class="o">=</span>
+                 <span class="n">boost</span><span class="o">::</span><span class="n">dynamic_pointer_cast</span><span class="o">&lt;</span> <span class="n">ObjectiveFunctionFromFinalDependentVariableSettings</span> <span class="o">&gt;</span><span class="p">(</span>
+                    <span class="n">objectiveFunctionSettings_</span> <span class="p">);</span>
+        <span class="kt">int</span> <span class="n">positionInVector</span> <span class="o">=</span> <span class="n">objectiveFunctionSettings</span><span class="o">-&gt;</span><span class="n">getPositionInDependentVariablesSaveVector</span><span class="p">(</span>
+                    <span class="n">dynamicsSimulator_</span> <span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span> <span class="kt">double</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="o">&gt;</span> <span class="n">dependentVariableHistory</span>
+                <span class="o">=</span> <span class="n">dynamicsSimulator_</span><span class="o">-&gt;</span><span class="n">getDependentVariableHistory</span><span class="p">();</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span> <span class="kt">double</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="o">&gt;::</span><span class="n">reverse_iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">dependentVariableHistory</span><span class="p">.</span><span class="n">rbegin</span><span class="p">();</span>
+
+        <span class="kt">double</span> <span class="n">time1</span> <span class="o">=</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">value1</span> <span class="o">=</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">[</span><span class="n">positionInVector</span><span class="p">];</span>
+
+        <span class="n">it</span><span class="o">++</span><span class="p">;</span>
+
+        <span class="kt">double</span> <span class="n">time2</span> <span class="o">=</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">value2</span> <span class="o">=</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">[</span><span class="n">positionInVector</span><span class="p">];</span>
+
+        <span class="c1">// If the last two epochs do not contain the final time in their boundaries</span>
+        <span class="c1">// scout all the epochs</span>
+        <span class="k">while</span><span class="p">(</span> <span class="o">!</span><span class="p">(</span> <span class="n">time2</span> <span class="o">&lt;=</span> <span class="n">finalTime</span> <span class="o">&amp;&amp;</span> <span class="n">time1</span> <span class="o">&gt;=</span> <span class="n">finalTime</span><span class="p">)</span> <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">time1</span> <span class="o">=</span> <span class="n">time2</span><span class="p">;</span>
+            <span class="n">value1</span> <span class="o">=</span> <span class="n">value2</span><span class="p">;</span>
+
+            <span class="n">it</span><span class="o">++</span><span class="p">;</span>
+
+            <span class="n">time2</span> <span class="o">=</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span><span class="p">;</span>
+            <span class="n">value2</span> <span class="o">=</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">[</span><span class="n">positionInVector</span><span class="p">];</span>
+
+        <span class="p">}</span>
+
+        <span class="n">objectiveFunctionValue</span> <span class="o">=</span> <span class="n">value2</span> <span class="o">+</span> <span class="p">(</span> <span class="n">value1</span> <span class="o">-</span> <span class="n">value2</span> <span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">finalTime</span> <span class="o">-</span> <span class="n">time2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">time1</span> <span class="o">-</span> <span class="n">time2</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<p>The method <code class="docutils literal"><span class="pre">ObjectiveFunctionFromFinalDependentVariableSettings::getPositionInDependentVariablesSaveVector()</span></code> is used in this case
+to retrieve the position of the dependent variable settings defined in the objective function object from the dynamics simulator.</p>
+<p>The method ends with the lines:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><code class="xref py py-class docutils literal"><span class="pre">Tudat/Optimization/missionSegmentSettings.cpp</span></code></span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="p">...</span>
+
+<span class="k">if</span><span class="p">(</span> <span class="n">objectiveFunctionSettings_</span><span class="o">-&gt;</span><span class="n">objectiveValueIsSet_</span> <span class="o">==</span> <span class="nb">true</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="n">fabs</span><span class="p">(</span> <span class="n">objectiveFunctionSettings_</span><span class="o">-&gt;</span><span class="n">objectiveValue_</span> <span class="o">-</span> <span class="n">objectiveFunctionValue</span> <span class="p">);</span>
+<span class="k">else</span> <span class="nf">if</span><span class="p">(</span> <span class="n">objectiveFunctionSettings_</span><span class="o">-&gt;</span><span class="n">minimizeOrMaximize_</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="n">objectiveFunctionValue</span><span class="p">;</span>
+<span class="k">else</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">objectiveFunctionValue</span><span class="p">;</span>
+
+<span class="p">...</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<p>The first if-case is for an objective function settings defined with the first constructor, in which case the return value is the
+absolute difference of the retrieved value and the objective value. The other two cases are for an objective function settings defined
+with the second constructor: for the second if-case (minimize) simply the retrieved value is returned, otherwise (maximize) the
+negative retrieved values is retrieved. That’s because PaGMO is set to minimize the function.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="missionLinker.html" class="btn btn-neutral float-right" title="Mission Linker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="objectiveFunction.html" class="btn btn-neutral" title="Objective Function Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Delft University of Technology.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header .arrow").click(function() {
+            $(this).closest('.toggle').children().not(".header").toggle(400);
+            $(this).toggleClass("open");
+            // $(this).html() == "More" ? $(this).html('Less') : $(this).html('More');
+        });
+        $(".showall").click(function() {
+            $(".toggle > *").show(400);
+            $(".toggle .header .arrow").addClass("open");
+        });
+        $(".hideall").click(function() {
+            $(".toggle > *").hide(400);
+            $(".toggle .header").show(400);
+            $(".toggle .header .arrow").removeClass("open");
+        });
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Mission Linker &mdash; TU Delft Astrodynamic Toolbox  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="TU Delft Astrodynamic Toolbox  documentation" href="../../index.html"/>
+        <link rel="up" title="Extending the optimization namespace" href="index.html"/>
+        <link rel="next" title="Ideas for future development" href="necessaryFeatures.html"/>
+        <link rel="prev" title="Mission Segment Settings" href="missionSegment.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> TU Delft Astrodynamic Toolbox
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Start Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials and Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../githubBasics.html">Github Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extendingJSON/index.html">Extending the JSON Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extendingMATLAB/index.html">Extending the MATLAB Interface</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Extending the optimization namespace</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="basics.html">Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="objectiveFunction.html">Objective Function Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="missionSegment.html">Mission Segment Settings</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Mission Linker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-the-mission-linker">What is the Mission Linker?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#optimization-style">Optimization style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#introduction-of-pagmo-problem">Introduction of PaGMO problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#optimization-process">Optimization process</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="necessaryFeatures.html">Ideas for future development</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../guideToDebugging.html">Guide To Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cppTutorials.html">C++ Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../howToWriteTheWiki.html">How to Write the Wiki</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TU Delft Astrodynamic Toolbox</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Developer Guide</a> &raquo;</li>
+        
+          <li><a href="index.html">Extending the optimization namespace</a> &raquo;</li>
+        
+      <li>Mission Linker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/developerGuide/extendingOptimization/missionLinker.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mission-linker">
+<span id="extendmissionlinker"></span><h1>Mission Linker<a class="headerlink" href="#mission-linker" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-the-mission-linker">
+<h2>What is the Mission Linker?<a class="headerlink" href="#what-is-the-mission-linker" title="Permalink to this headline">¶</a></h2>
+<p>The mission linker, here represented by the class <code class="docutils literal"><span class="pre">MissionLinker</span></code> is a tool by whih a number of
+of mission segments (class <code class="docutils literal"><span class="pre">MissionSegmentSettings</span></code>) are linked together in a chronological fashion.</p>
+<p>The structure to define such an object is the following:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="missionlinker-h">
+<div class="code-block-caption"><span class="caption-text"><code class="xref py py-class docutils literal"><span class="pre">Tudat/Optimization/missionLinker.h</span></code></span><a class="headerlink" href="#missionlinker-h" title="Permalink to this code">¶</a></div>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span>  <span class="k">struct</span> <span class="n">MissionLinker</span>
+  <span class="p">{</span>
+
+      <span class="n">MissionLinker</span><span class="p">(</span>  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">MissionSegmentSettings</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">missionSegmentSettings</span><span class="p">,</span>
+              <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">OptimizationSettings</span> <span class="o">&gt;</span> <span class="n">optimizationSettings</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span> <span class="n">OptimizationSettings</span> <span class="o">&gt;</span><span class="p">(),</span>
+              <span class="k">const</span> <span class="kt">bool</span> <span class="n">optimizeConfiguration</span> <span class="o">=</span> <span class="nb">true</span> <span class="p">)</span>
+          <span class="o">:</span> <span class="n">missionSegmentSettings_</span><span class="p">(</span> <span class="n">missionSegmentSettings</span> <span class="p">),</span> <span class="n">optimizationSettings_</span><span class="p">(</span><span class="n">optimizationSettings</span><span class="p">)</span>
+      <span class="p">{</span>
+
+          <span class="k">if</span><span class="p">(</span> <span class="n">optimizeConfiguration</span> <span class="p">)</span>
+              <span class="n">optimize</span><span class="p">();</span>
+      <span class="p">}</span>
+
+      <span class="o">~</span><span class="n">MissionLinker</span><span class="p">(</span> <span class="p">){</span> <span class="p">}</span>
+
+      <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">MissionSegmentSettings</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">missionSegmentSettings_</span><span class="p">;</span>
+
+      <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">OptimizationSettings</span> <span class="o">&gt;</span> <span class="n">optimizationSettings_</span><span class="p">;</span>
+
+      <span class="kt">void</span> <span class="nf">optimize</span><span class="p">(</span> <span class="kt">void</span> <span class="p">);</span>
+
+  <span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<p>Briefly, the <code class="docutils literal"><span class="pre">missionSegmentSettings_</span></code> object is the vector of mission segment settings to be otpimized. The vector represents a series of <strong>blocks</strong>,
+defined in the following section. <code class="docutils literal"><span class="pre">optimizationSettings_</span></code> contains some useful information for the optimization process, which is performed by
+the <code class="docutils literal"><span class="pre">optimize()</span></code> method, explained in details in the section <a class="reference internal" href="#optimizationprocess"><span class="std std-ref">Optimization process</span></a>.</p>
+</div>
+<div class="section" id="optimization-style">
+<span id="optimizationstyle"></span><h2>Optimization style<a class="headerlink" href="#optimization-style" title="Permalink to this headline">¶</a></h2>
+<p>Optimization is performed in blocks. Several <code class="docutils literal"><span class="pre">MissionSegmentSettings</span></code> objects are loaded inside
+<code class="docutils literal"><span class="pre">MissionLinker</span></code> in a vector. Because of the current state of the art of the tool, multi-objective optimization
+has not been introduced yet, this means that several objective functions cannot be optimized at the same
+time. The software prevents this issue by optimizing a set of mission segments at a time, as shown in the following
+picture:</p>
+<blockquote>
+<div><div class="figure align-center" id="id3">
+<span id="figure-missionsegmentblock"></span><img alt="../../_images/Missionsegmentblock.svg" src="../../_images/Missionsegmentblock.svg" /><p class="caption"><span class="caption-text">Division of optimization blocks in a chain of mission segments</span></p>
+</div>
+</div></blockquote>
+<p>As you can see, the first mission segment does not contain either a decision variable or an objective function, therefore
+it is not incuded in any block. The software will propagate this mission segment and just keep it out of the optimization process.
+Each of the two blocks starts at the first mission segment containing a decision variable and
+ends at the first mission segment with an objective function.
+Block 1 is optimized independently from Block 2, but before performing the optimization on each block, the starting mission
+segment is linked to the previous in the chain.
+Linking is also performed inside the block, between the contiguous mission segments.
+See the section on the <a class="reference internal" href="#optimizationprocess"><span class="std std-ref">Optimization process</span></a> for information on the code.</p>
+</div>
+<div class="section" id="introduction-of-pagmo-problem">
+<span id="intropagmoproblem"></span><h2>Introduction of PaGMO problem<a class="headerlink" href="#introduction-of-pagmo-problem" title="Permalink to this headline">¶</a></h2>
+<p>Of course, there is a PaGMO problem involved: the <code class="docutils literal"><span class="pre">LinkingProblem</span></code> class. You may find it in the file <code class="docutils literal"><span class="pre">missionLinker.cpp</span></code>.
+See the page <a class="reference internal" href="../../tutorials/tudatFeatures/otherLibraries/pagmo2.html#tudatfeaturespagmo2"><span class="std std-ref">External Libraries: PaGMO 2</span></a> for more information about PaGMO problems and procedures.
+In a PaGMO fashion, the problem is defined as following:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="missionlinker-cpp">
+<div class="code-block-caption"><span class="caption-text"><code class="xref py py-class docutils literal"><span class="pre">Tudat/Optimization/missionLinker.cpp</span></code></span><a class="headerlink" href="#missionlinker-cpp" title="Permalink to this code">¶</a></div>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">LinkingProblem</span><span class="p">{</span>
+
+   <span class="n">LinkingProblem</span><span class="p">(</span> <span class="p">){</span> <span class="p">}</span>
+
+   <span class="n">LinkingProblem</span><span class="p">(</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">MissionSegmentSettings</span> <span class="o">&gt;</span> <span class="o">&gt;&amp;</span> <span class="n">missionSegments</span> <span class="p">)</span> <span class="o">:</span>
+        <span class="n">missionSegments_</span><span class="p">(</span> <span class="n">missionSegments</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">nOfDecisionVariables_</span> <span class="o">=</span> <span class="n">getNumberOfDecisionVariables</span><span class="p">(</span> <span class="n">missionSegments_</span> <span class="p">);</span>
+        <span class="n">boundaries_</span> <span class="o">=</span> <span class="n">getBoundariesPair</span><span class="p">(</span> <span class="n">missionSegments_</span> <span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="o">~</span><span class="n">LinkingProblem</span><span class="p">(</span> <span class="p">){</span> <span class="p">}</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="n">fitness</span><span class="p">(</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">decisionVariables</span> <span class="p">)</span> <span class="k">const</span>
+    <span class="p">{</span>
+
+        <span class="p">...</span>
+
+    <span class="p">}</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">get_bounds</span><span class="p">(</span> <span class="p">)</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">boundaries_</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">MissionSegmentSettings</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">missionSegments_</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">boundaries_</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">nOfDecisionVariables_</span><span class="p">;</span>
+
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<p>The <code class="docutils literal"><span class="pre">missionSegments_</span></code> vector, in this case, can contain <strong>one and only one block</strong> of mission segments, as defined in the previous
+section <a class="reference internal" href="#optimizationstyle"><span class="std std-ref">Optimization style</span></a>.
+<code class="docutils literal"><span class="pre">nOfDecisionVariables_</span></code> is a vector of integer containing the total number of scalar decision variables in each  mission segment in the block,
+while <code class="docutils literal"><span class="pre">boundaries_</span></code> are, of course, the pair of boundary vectors in PaGMO style retrieved from the <code class="docutils literal"><span class="pre">decisionVariableSettings_</span></code> objects in each
+mission segment containing a non-<code class="docutils literal"><span class="pre">NULL</span></code> <code class="docutils literal"><span class="pre">decisionVariableSettings_</span></code> member.
+The functions <code class="docutils literal"><span class="pre">getNumberOfDecisionVariables()</span></code> and <code class="docutils literal"><span class="pre">getBoundariesPair()</span></code> have been written and employed to extrapolate the information
+from the block of mission segments. You may find them in the file <code class="docutils literal"><span class="pre">missionLinker.cpp</span></code>.</p>
+<p>The <code class="docutils literal"><span class="pre">fitness()</span></code> method has, obviously, the purpose of retrieving the value of the objective function at the end of the block.
+The code is separately shown below:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><code class="xref py py-class docutils literal"><span class="pre">Tudat/Optimization/missionLinker.cpp</span></code></span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="p">...</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="n">fitness</span><span class="p">(</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">decisionVariables</span> <span class="p">)</span> <span class="k">const</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">accumulator</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="n">newValues</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">missionSegments_</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+
+        <span class="c1">// Set the (interpolated) final states of the previous mission segment</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">){</span>
+
+            <span class="c1">// get the interpolated end of simulation&#39;s epoch</span>
+            <span class="kt">double</span> <span class="n">prevFinalTime</span> <span class="o">=</span> <span class="n">missionSegments_</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">getFinalSimulationEpoch</span><span class="p">();</span>
+
+            <span class="c1">// get the interpolated final state of the simulation&#39;s epoch</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector6d</span> <span class="o">&gt;</span> <span class="n">prevFinalStates</span> <span class="o">=</span> <span class="n">missionSegments_</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-&gt;</span>
+                    <span class="n">getFinalOrbitalStates</span><span class="p">(</span> <span class="n">prevFinalTime</span> <span class="p">);</span>
+
+            <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="n">prevFinalMasses</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="kt">double</span> <span class="o">&gt;</span><span class="p">();</span>
+
+            <span class="k">if</span><span class="p">(</span> <span class="n">missionSegments_</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">hasPropagatorSettings</span><span class="p">(</span> <span class="n">propagators</span><span class="o">::</span><span class="n">body_mass_state</span> <span class="p">)</span> <span class="p">)</span>
+                <span class="n">prevFinalMasses</span> <span class="o">=</span> <span class="n">missionSegments_</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">getFinalBodyMasses</span><span class="p">(</span> <span class="n">prevFinalTime</span> <span class="p">);</span>
+
+            <span class="c1">// reset the initial time and states of the dynamics simulator</span>
+            <span class="n">missionSegments_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">setPreliminaryConditions</span><span class="p">(</span> <span class="n">prevFinalTime</span><span class="p">,</span> <span class="n">prevFinalStates</span><span class="p">,</span>
+                                                           <span class="n">prevFinalMasses</span> <span class="p">);</span>
+
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">(</span> <span class="n">nOfDecisionVariables_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">newValues</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span> <span class="n">nOfDecisionVariables_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">);</span>
+
+            <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">nOfDecisionVariables_</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">newValues</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">decisionVariables</span><span class="p">[</span><span class="n">accumulator</span><span class="p">];</span>
+                <span class="n">accumulator</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="n">missionSegments_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">setPropagationConditions</span><span class="p">(</span> <span class="n">newValues</span> <span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">missionSegments_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">dynamicsSimulator_</span><span class="o">-&gt;</span><span class="n">integrateEquationsOfMotion</span><span class="p">(</span>
+                    <span class="n">boost</span><span class="o">::</span><span class="n">dynamic_pointer_cast</span><span class="o">&lt;</span> <span class="n">propagators</span><span class="o">::</span><span class="n">TranslationalStatePropagatorSettings</span><span class="o">&lt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span><span class="p">(</span>
+                        <span class="n">missionSegments_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">dynamicsSimulator_</span><span class="o">-&gt;</span><span class="n">getPropagatorSettings</span><span class="p">()</span> <span class="p">)</span><span class="o">-&gt;</span><span class="n">getInitialStates</span><span class="p">()</span> <span class="p">);</span>
+
+    <span class="p">}</span>
+
+    <span class="p">...</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<p>The following figure shows an example on how the problem works:</p>
+<blockquote id="figure-fitnessexample">
+<div><div class="figure align-center" id="id4">
+<img alt="../../_images/MissionLinker.svg" src="../../_images/MissionLinker.svg" /><p class="caption"><span class="caption-text">Visual example of fitness() function in the case of a block of 3 mission segments with
+different numbers of decision variables.</span></p>
+</div>
+</div></blockquote>
+<p>Basically, PaGMO needs to optimize the whole block in each iteration. This means that all the decision variables of all the mission segments in the
+block are to be passed to the <code class="docutils literal"><span class="pre">fitness()</span></code> function. The partition of these values to the different mission segments must then be performed inside <code class="docutils literal"><span class="pre">fitness()</span></code>.
+In this example a block with three mission segments, in which the first contains 3 decision variables, the second none and the third one.</p>
+<p>Using the function <code class="docutils literal"><span class="pre">getBoundariesPair()</span></code> all the 4 boundaries are packed together into the <code class="docutils literal"><span class="pre">boundaries_</span></code> member. PaGMO uses these boundaries
+to generate values for the decision variables. In this case 4 decision variable values are generated by PaGMO and passed as vector
+<code class="docutils literal"><span class="pre">decisionVariables</span></code> into <code class="docutils literal"><span class="pre">fitness()</span></code>. The fitness uses the information stored in <code class="docutils literal"><span class="pre">nOfDecisionVariables_</span></code> to decide to which
+mission segments these values belong.</p>
+<p>After the propagation of the first mission segment, <strong>linkage</strong> to the next mission segment is performed: this involves retrieving the final
+simulation epoch, states and masses of the propagated objects of the current mission segment and passing them to the next as initial conditions.
+<code class="docutils literal"><span class="pre">MissionSegmentSettings::</span></code> built-in methods <code class="docutils literal"><span class="pre">getFinalSimulationEpoch()</span></code>, <code class="docutils literal"><span class="pre">getFinalOrbitalstates()</span></code>, <code class="docutils literal"><span class="pre">getFinalBodyMasses()</span></code> and
+<code class="docutils literal"><span class="pre">setPreliminaryConditions()</span></code> come in handy here.</p>
+<p>The PaGMO generated values of the decision variables are then passed to the next mission segment. The code scouts all the items in the <code class="docutils literal"><span class="pre">decisionVariables</span></code> vector and
+groups them in <code class="docutils literal"><span class="pre">Eigen::VectorXd</span></code> objects called <code class="docutils literal"><span class="pre">newValues</span></code>, sized accordingly to the number of scalar decision variables in the segment.
+The propagation is then set by using the method <code class="docutils literal"><span class="pre">MissionSegmentSettings::setPropagationConditions</span></code>, which uses the information provided
+by the <code class="docutils literal"><span class="pre">decisionVariableSettings_</span></code> member to modify the mission segment’s <code class="docutils literal"><span class="pre">dynamicsSimulator_</span></code> accordingly.</p>
+</div>
+<div class="section" id="optimization-process">
+<span id="optimizationprocess"></span><h2>Optimization process<a class="headerlink" href="#optimization-process" title="Permalink to this headline">¶</a></h2>
+<p>Optimization is performed by the method <code class="docutils literal"><span class="pre">optimize()</span></code>:</p>
+<blockquote>
+<div><div class="figure align-center" id="id5">
+<span id="figure-optimizefluxdiagram"></span><img alt="../../_images/fluxDiagram.svg" src="../../_images/fluxDiagram.svg" /><p class="caption"><span class="caption-text">Flux diagram of the optimize() method</span></p>
+</div>
+</div></blockquote>
+<p>Most of the above alghorithm works to ensure the <a class="reference internal" href="#figure-missionsegmentblock"><span class="std std-ref">Division of optimization blocks in a chain of mission segments</span></a> defined in the section on the <a class="reference internal" href="#optimizationstyle"><span class="std std-ref">Optimization style</span></a>.</p>
+<p>The focus of a potential developer, as well as the heart of the process, is the <strong>Optimize block</strong> block on the rightmost diagram branch.
+In here the call for PaGMO procedures is performed.
+Let us dive into the code, found in the file <code class="docutils literal"><span class="pre">missionLinker.cpp</span></code>, in the <code class="docutils literal"><span class="pre">MissionLinker::optimize()</span></code> method declaration:</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><code class="xref py py-class docutils literal"><span class="pre">Tudat/Optimization/missionLinker.cpp</span></code></span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="p">...</span>
+
+<span class="k">if</span><span class="p">(</span> <span class="n">start_series</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">)</span>
+<span class="p">{</span>
+
+    <span class="c1">// PAGMO TAKEOVER</span>
+
+    <span class="c1">// Create LinkingProblem</span>
+    <span class="n">pagmo</span><span class="o">::</span><span class="n">problem</span> <span class="n">optimizationProblem</span> <span class="o">=</span> <span class="n">pagmo</span><span class="o">::</span><span class="n">problem</span><span class="p">{</span>
+            <span class="n">LinkingProblem</span><span class="p">(</span> <span class="n">missionSegmentsBlock</span> <span class="p">)</span> <span class="p">};</span>
+    <span class="n">pagmo</span><span class="o">::</span><span class="n">algorithm</span> <span class="n">algo</span><span class="p">;</span>
+
+    <span class="c1">// Set the right algorithm according to the opimization settings</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">optimizationSettings_</span><span class="o">-&gt;</span><span class="n">optimizationType_</span> <span class="o">==</span> <span class="n">global_optimization</span> <span class="p">)</span>
+        <span class="n">algo</span> <span class="o">=</span> <span class="n">pagmo</span><span class="o">::</span><span class="n">algorithm</span><span class="p">{</span> <span class="n">pagmo</span><span class="o">::</span><span class="n">de1220</span><span class="p">()</span> <span class="p">};</span>
+    <span class="k">else</span>
+        <span class="n">algo</span> <span class="o">=</span> <span class="n">pagmo</span><span class="o">::</span><span class="n">algorithm</span><span class="p">{</span> <span class="n">pagmo</span><span class="o">::</span><span class="n">compass_search</span><span class="p">()</span> <span class="p">};</span>
+
+    <span class="c1">// Set population according to the optimization settings</span>
+    <span class="n">pagmo</span><span class="o">::</span><span class="n">population</span><span class="o">::</span><span class="n">size_type</span> <span class="n">populationSize</span> <span class="o">=</span> <span class="n">optimizationSettings_</span><span class="o">-&gt;</span><span class="n">populationSize_</span><span class="p">;</span>
+    <span class="n">pagmo</span><span class="o">::</span><span class="n">island</span> <span class="n">isl</span> <span class="o">=</span> <span class="n">pagmo</span><span class="o">::</span><span class="n">island</span><span class="p">{</span> <span class="n">algo</span><span class="p">,</span> <span class="n">optimizationProblem</span><span class="p">,</span>
+            <span class="n">populationSize</span> <span class="p">};</span>
+
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="c1">//Start evolving</span>
+    <span class="k">while</span><span class="p">(</span> <span class="nb">true</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">counter</span> <span class="o">++</span><span class="p">;</span>
+        <span class="n">isl</span><span class="p">.</span><span class="n">evolve</span><span class="p">();</span>
+        <span class="k">for</span><span class="p">(</span> <span class="p">;</span> <span class="n">isl</span><span class="p">.</span><span class="n">status</span><span class="p">()</span><span class="o">!=</span><span class="n">pagmo</span><span class="o">::</span><span class="n">evolve_status</span><span class="o">::</span><span class="n">idle</span><span class="p">;</span> <span class="p">)</span>
+            <span class="n">isl</span><span class="p">.</span><span class="n">wait</span><span class="p">();</span>
+
+        <span class="k">if</span><span class="p">(</span> <span class="n">optimizationSettings_</span><span class="o">-&gt;</span><span class="n">verbosity_</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// Show results according to verbosity</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">counter</span> <span class="o">%</span> <span class="n">optimizationSettings_</span><span class="o">-&gt;</span><span class="n">verbosity_</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Evolution n: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">counter</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; Objective Function: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">isl</span><span class="p">.</span><span class="n">get_population</span><span class="p">().</span><span class="n">champion_f</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+                <span class="n">fflush</span><span class="p">(</span><span class="n">stdout</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="c1">// Stop if tolerance has been reached</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">missionSegmentsBlock</span><span class="p">.</span><span class="n">back</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">objectiveFunctionSettings_</span><span class="o">-&gt;</span><span class="n">objectiveValueIsSet_</span> <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">isl</span><span class="p">.</span><span class="n">get_population</span><span class="p">().</span><span class="n">champion_f</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">missionSegmentsBlock</span><span class="p">.</span><span class="n">back</span><span class="p">()</span>
+                    <span class="o">-&gt;</span><span class="n">objectiveFunctionSettings_</span><span class="o">-&gt;</span><span class="n">tolerance_</span> <span class="p">)</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">// Stop if max number of evolutions has been reached</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">optimizationSettings_</span><span class="o">-&gt;</span><span class="n">stopAtMaxNumberOfEvolutions_</span> <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="n">counter</span> <span class="o">==</span> <span class="n">missionSegmentsBlock</span><span class="p">.</span><span class="n">back</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">objectiveFunctionSettings_</span><span class="o">-&gt;</span>
+                         <span class="n">maxNumberOfEvolutions_</span> <span class="p">)</span> <span class="p">)</span>
+                <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// END OF PAGMO TAKEOVER</span>
+
+
+    <span class="c1">// Perform the propagation with the optimum values</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">accumulator</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="n">optimizedVariables</span> <span class="o">=</span> <span class="n">isl</span><span class="p">.</span><span class="n">get_population</span><span class="p">().</span><span class="n">champion_x</span><span class="p">();</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">nOfDecisionVariables</span> <span class="o">=</span> <span class="n">getNumberOfDecisionVariables</span><span class="p">(</span> <span class="n">missionSegmentsBlock</span> <span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">missionSegmentsBlock</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">j</span><span class="o">++</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">nOfDecisionVariables</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span>
+        <span class="p">{</span>
+
+            <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="n">newValues</span><span class="p">;</span>
+            <span class="n">newValues</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span> <span class="n">nOfDecisionVariables</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="p">);</span>
+
+            <span class="c1">// Partition the optimum values for each missionSegment</span>
+            <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">nOfDecisionVariables</span><span class="p">[</span><span class="n">j</span><span class="p">];</span> <span class="n">k</span><span class="o">++</span> <span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">newValues</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">optimizedVariables</span><span class="p">[</span><span class="n">accumulator</span><span class="p">];</span>
+                <span class="n">accumulator</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="c1">// Set the optimum values as propagation conditions</span>
+            <span class="n">missionSegmentsBlock</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">decisionVariableValues_</span> <span class="o">=</span> <span class="n">newValues</span><span class="p">;</span>
+            <span class="n">missionSegmentsBlock</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">setPropagationConditions</span><span class="p">(</span><span class="n">newValues</span><span class="p">);</span>
+
+            <span class="c1">// Integrate the mission segment</span>
+            <span class="n">missionSegmentsBlock</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">dynamicsSimulator_</span><span class="o">-&gt;</span><span class="n">integrateEquationsOfMotion</span><span class="p">(</span>
+                    <span class="n">boost</span><span class="o">::</span><span class="n">dynamic_pointer_cast</span><span class="o">&lt;</span>
+                            <span class="n">propagators</span><span class="o">::</span><span class="n">TranslationalStatePropagatorSettings</span><span class="o">&lt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span><span class="p">(</span>
+                                    <span class="n">missionSegmentsBlock</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">selectPropagatorSettings</span><span class="p">(</span>
+                                <span class="n">propagators</span><span class="o">::</span><span class="n">transational_state</span> <span class="p">)</span> <span class="p">)</span><span class="o">-&gt;</span><span class="n">getInitialStates</span><span class="p">()</span> <span class="p">);</span>
+
+        <span class="p">}</span>
+
+        <span class="c1">// Perform the linkage with the next mission segment</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">missionSegmentsBlock</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// Get the final epoch</span>
+            <span class="kt">double</span> <span class="n">prevFinalTime</span> <span class="o">=</span> <span class="n">missionSegmentsBlock</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">getFinalSimulationEpoch</span><span class="p">();</span>
+
+            <span class="c1">// Get the final states</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector6d</span> <span class="o">&gt;</span> <span class="n">prevFinalStates</span> <span class="o">=</span> <span class="n">missionSegmentsBlock</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-&gt;</span>
+                    <span class="n">getFinalOrbitalStates</span><span class="p">(</span> <span class="n">prevFinalTime</span> <span class="p">);</span>
+
+            <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="n">prevFinalMasses</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="kt">double</span> <span class="o">&gt;</span><span class="p">();</span>
+
+            <span class="c1">// Get the final masses</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">missionSegmentsBlock</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">hasPropagatorSettings</span><span class="p">(</span> <span class="n">propagators</span><span class="o">::</span><span class="n">body_mass_state</span> <span class="p">)</span> <span class="p">)</span>
+                <span class="n">prevFinalMasses</span> <span class="o">=</span> <span class="n">missionSegmentsBlock</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">getFinalBodyMasses</span><span class="p">(</span> <span class="n">prevFinalTime</span> <span class="p">);</span>
+
+            <span class="c1">// Reset the initial time and states of the dynamics simulator</span>
+            <span class="n">missionSegmentsBlock</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">setPreliminaryConditions</span><span class="p">(</span> <span class="n">prevFinalTime</span><span class="p">,</span> <span class="n">prevFinalStates</span><span class="p">,</span>
+                                                               <span class="n">prevFinalMasses</span>  <span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// End of block</span>
+    <span class="n">start_series</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">...</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<p>Although it seems a lot is happening here, there is no need to fear. The code starts right after the non-<code class="docutils literal"><span class="pre">NULL</span></code> <code class="docutils literal"><span class="pre">objectiveFunction_</span></code> object has
+been found inside a mission segment, which triggers the flag <code class="docutils literal"><span class="pre">start_series</span></code> to be set to 2. You can find the rest of the code in
+<code class="docutils literal"><span class="pre">missionLinker.cpp</span></code>.</p>
+<p>The code inside the <strong>PAGMO TAKEOVER</strong> tags is where the optimization occurs. The <code class="docutils literal"><span class="pre">LinkingProblem</span></code> described in the section on the <a class="reference internal" href="#intropagmoproblem"><span class="std std-ref">Introduction of PaGMO problem</span></a>
+is here constructed, passing the block of mission segments, the <code class="docutils literal"><span class="pre">std::vector&lt;</span> <span class="pre">boost::share_ptr&lt;</span> <span class="pre">MissionSegmentSettings</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></code> type object
+<code class="docutils literal"><span class="pre">missionSegmentsBlock</span></code>, which has been created in the process described in the <a class="reference internal" href="#figure-optimizefluxdiagram"><span class="std std-ref">Flux diagram of the optimize() method</span></a>.
+The <code class="docutils literal"><span class="pre">optimizationSettings-&gt;optimizationType_</span></code> object contains the type of optimization chosen by the user:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">global_optimization</span></code> calls the PaGMO alghorithm <code class="docutils literal"><span class="pre">de1220()</span></code>, which is a kind of differential evolutionary alghorithm;</li>
+<li><code class="docutils literal"><span class="pre">local_optimization</span></code> (implicitly checked in the <code class="docutils literal"><span class="pre">else</span></code> statement) calls the PaGMO alghorithm <code class="docutils literal"><span class="pre">compass_search()</span></code>.</li>
+</ul>
+</div></blockquote>
+<p>At the moment these are the only two types of optimization integrated in Tudat. As you can see, adding more optimization options can be as
+simple as adding an if-case and an enumeration to the <code class="docutils literal"><span class="pre">enum</span> <span class="pre">OptimizationTypes</span></code> in the file <code class="docutils literal"><span class="pre">missionLinker.h</span></code>.</p>
+<p>Despite the fact that the propagation would automatically update the dynamics simulator, this does not happen in this case:
+<strong>PaGMO</strong> creates copies of all the objects involved and performs the propagation in separate threads. As a result, the mission
+segments in our <code class="docutils literal"><span class="pre">missionSegmentBlock</span></code> do not get modified! That is why a final propagation and linking must be performed, which is the purpose
+of the code outside the <strong>PAGMO TAKEOVER</strong> tags.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="necessaryFeatures.html" class="btn btn-neutral float-right" title="Ideas for future development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="missionSegment.html" class="btn btn-neutral" title="Mission Segment Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Delft University of Technology.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header .arrow").click(function() {
+            $(this).closest('.toggle').children().not(".header").toggle(400);
+            $(this).toggleClass("open");
+            // $(this).html() == "More" ? $(this).html('Less') : $(this).html('More');
+        });
+        $(".showall").click(function() {
+            $(".toggle > *").show(400);
+            $(".toggle .header .arrow").addClass("open");
+        });
+        $(".hideall").click(function() {
+            $(".toggle > *").hide(400);
+            $(".toggle .header").show(400);
+            $(".toggle .header .arrow").removeClass("open");
+        });
+    });
+</script>
+
+
+</body>
+</html>

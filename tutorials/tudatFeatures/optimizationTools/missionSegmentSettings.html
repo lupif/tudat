@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.3. Mission segment settings &mdash; TU Delft Astrodynamic Toolbox  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="TU Delft Astrodynamic Toolbox  documentation" href="../../../index.html"/>
+        <link rel="up" title="8. Optimization tools" href="index.html"/>
+        <link rel="next" title="8.4. Mission linker" href="missionLinker.html"/>
+        <link rel="prev" title="8.2. Objective function settings" href="objectiveFunctionSettings.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> TU Delft Astrodynamic Toolbox
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Start Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation/index.html">Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Tutorials and Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../prerequiredKnowledge/index.html">Getting Started with Tudat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../applicationWalkthroughs/index.html">Application Walkthroughs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Tudat Libraries</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../astroTools/index.html">1. Basic Astrodynamics Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mathTools/index.html">2. Basic Mathematics Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../environmentSetup/index.html">3. Environment Set-up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../accelerationSetup/index.html">4. Acceleration Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../propagationSetup/index.html">5. Simulator Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../estimationSetup/index.html">6. Estimation Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../otherLibraries/index.html">7. Other Libraries</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">8. Optimization tools</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="decisionVariableSettings.html">8.1. Decision variable settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="objectiveFunctionSettings.html">8.2. Objective function settings</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">8.3. Mission segment settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="missionLinker.html">8.4. Mission linker</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../jsonInterface/index.html">JSON Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matlabInterface/index.html">MATLAB Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developerGuide/index.html">Developer Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">TU Delft Astrodynamic Toolbox</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Tutorials and Documentation</a> &raquo;</li>
+        
+          <li><a href="../index.html">Tudat Libraries</a> &raquo;</li>
+        
+          <li><a href="index.html">8. Optimization tools</a> &raquo;</li>
+        
+      <li>8.3. Mission segment settings</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/tutorials/tudatFeatures/optimizationTools/missionSegmentSettings.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <blockquote>
+<div></div></blockquote>
+<div class="section" id="mission-segment-settings">
+<span id="missionsegmentsettings"></span><h1>8.3. Mission segment settings<a class="headerlink" href="#mission-segment-settings" title="Permalink to this headline">¶</a></h1>
+<p>A <strong>mission segment</strong> in this framework is a piece of simulation placed in a chain with other pieces of simulation.
+Each simulation from the secon on in the chain starts at the end point of the previous simulation.</p>
+<p>The simulation is defined by a <code class="docutils literal"><span class="pre">SingleArcDynamicsSimulator&lt;</span> <span class="pre">double</span> <span class="pre">&gt;</span></code> object, and the mission segment can also have a <strong>decision variable</strong>
+and an <strong>objective function</strong>, which allow to optimize the chain using a <a class="reference internal" href="missionLinker.html#missionlinker"><span class="std std-ref">Mission linker</span></a>.</p>
+<p>The mission segment is here defined by the object <code class="docutils literal"><span class="pre">MissionSegmentSettings</span></code>.</p>
+<div class="section" id="id1">
+<h2>8.3.1. MissionSegmentSettings<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">MissionSegmentSettings</span></code> class allows to link a decision variable or an objective function to a dynamics simulator.</p>
+<dl class="docutils">
+<dt><strong>Constructor:</strong></dt>
+<dd><div class="first highlight-cpp"><div class="highlight"><pre><span></span><span class="n">MissionSegmentSettings</span><span class="p">(</span>
+         <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">propagators</span><span class="o">::</span><span class="n">SingleArcDynamicsSimulator</span><span class="o">&lt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">dynamicsSimulator</span><span class="p">,</span>
+         <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">DecisionVariableSettings</span> <span class="o">&gt;</span> <span class="n">decisionVariableSettings</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">,</span>
+         <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">ObjectiveFunctionSettings</span> <span class="o">&gt;</span> <span class="n">objectiveFunctionSettings</span> <span class="o">=</span> <span class="nb">NULL</span> <span class="p">)</span>
+
+
+<span class="n">MissionSegmentSettings</span><span class="p">(</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">propagators</span><span class="o">::</span><span class="n">SingleArcDynamicsSimulator</span><span class="o">&lt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">dynamicsSimulator</span><span class="p">,</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">SingleDecisionVariableSettings</span> <span class="o">&gt;</span> <span class="n">singleDecisionVariableSettings</span><span class="p">,</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">ObjectiveFunctionSettings</span> <span class="o">&gt;</span> <span class="n">objectiveFunctionSettings</span> <span class="o">=</span> <span class="nb">NULL</span> <span class="p">)</span>
+
+
+<span class="n">MissionSegmentSettings</span><span class="p">(</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">propagators</span><span class="o">::</span><span class="n">SingleArcDynamicsSimulator</span><span class="o">&lt;</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">dynamicsSimulator</span><span class="p">,</span>
+        <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span> <span class="n">ObjectiveFunctionSettings</span> <span class="o">&gt;</span> <span class="n">objectiveFunctionSettings</span> <span class="p">)</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>The <code class="docutils literal"><span class="pre">dynamicsSimulator</span></code> is a <code class="docutils literal"><span class="pre">SingleArcDynamicsSimulator&lt;</span> <span class="pre">double</span> <span class="pre">&gt;</span></code> object containing the pre-assembled features
+of the simulation;</li>
+<li>The <code class="docutils literal"><span class="pre">decisionVariableSettings</span></code> is a <code class="docutils literal"><span class="pre">DecisionVariableSettings</span></code> object containing multiple decision variables retrievable from
+the <code class="docutils literal"><span class="pre">dynamicsSimulator</span></code>;</li>
+<li>The <code class="docutils literal"><span class="pre">singleDecisionVariableSettings</span></code> can be used alternatively is only one decision variable is needed;</li>
+<li>The <code class="docutils literal"><span class="pre">objectiveFunctionSettings</span></code> is the objective function. A mission segment containing this object must
+be placed at the end of the chain.</li>
+</ul>
+</dd>
+</dl>
+<p>Following the provided constructors one can create mission segments with the following combinations:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Mission segment with <strong>only a dynamics simulator</strong>: if placed at the beginning or at the end of the chain this
+mission segment is not involved in the optimization. It will anyway be linked to the other mission segments and
+propagated in the optimizaton process if placed between a mission segment with a decision variable and a mission segment
+with an objective function;</li>
+<li>Mission segment with a <code class="docutils literal"><span class="pre">singleDecisionVariableSettings</span></code>: this mission segment cannot be placed at the end of the chain.
+It contains only one decision variable;</li>
+<li>Mission segment with a <code class="docutils literal"><span class="pre">singleDecisionVariableSettings</span></code> and a <code class="docutils literal"><span class="pre">objectiveFunctionSettings</span></code>: this mission segment can be
+placed anywhere in the chain and it is sufficient for the optimization process. It contains only one decision variable;</li>
+<li>Mission segment with a <code class="docutils literal"><span class="pre">decisionVariableSettings</span></code>: this mission segment cannot be placed at the end of the chain.
+It can have multiple decision variables;</li>
+<li>Mission segment with a <code class="docutils literal"><span class="pre">decisionVariableSettings</span></code> and a <code class="docutils literal"><span class="pre">objectiveFunctionSettings</span></code>: this mission segment can be
+placed anywhere in the chain and it is sufficient for the optimization process. It can have multiple decision variables;</li>
+<li>Mission segment with an <code class="docutils literal"><span class="pre">objectiveFunctionSettings</span></code>: this mission segment must be preceded by at least one
+mission segment with a <code class="docutils literal"><span class="pre">singleDecisionVariableSettings</span></code> or a <code class="docutils literal"><span class="pre">decisionVariableSettings</span></code> and without
+an <code class="docutils literal"><span class="pre">objectiveFunctionSettings</span></code>.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="missionLinker.html" class="btn btn-neutral float-right" title="8.4. Mission linker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="objectiveFunctionSettings.html" class="btn btn-neutral" title="8.2. Objective function settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Delft University of Technology.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header .arrow").click(function() {
+            $(this).closest('.toggle').children().not(".header").toggle(400);
+            $(this).toggleClass("open");
+            // $(this).html() == "More" ? $(this).html('Less') : $(this).html('More');
+        });
+        $(".showall").click(function() {
+            $(".toggle > *").show(400);
+            $(".toggle .header .arrow").addClass("open");
+        });
+        $(".hideall").click(function() {
+            $(".toggle > *").hide(400);
+            $(".toggle .header").show(400);
+            $(".toggle .header .arrow").removeClass("open");
+        });
+    });
+</script>
+
+
+</body>
+</html>
